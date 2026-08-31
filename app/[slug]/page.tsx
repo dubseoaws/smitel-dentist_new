@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import MembershipBanner from "@/components/MembershipBanner";
+import TreatmentBlocks from "@/components/TreatmentBlocks";
 import TreatmentCard from "@/components/TreatmentCard";
 import {
   ALL_TREATMENTS,
@@ -12,6 +13,7 @@ import {
   SITE,
   YASHA_FULL_BIO,
 } from "@/lib/site-data";
+import { TREATMENT_CONTENT } from "@/lib/treatment-content";
 
 type Params = { slug: string };
 
@@ -59,17 +61,33 @@ function TreatmentDetail({ slug }: { slug: string }) {
     c.treatments.some((t) => t.slug === slug)
   )!;
   const related = category.treatments.filter((t) => t.slug !== slug).slice(0, 3);
+  const content = TREATMENT_CONTENT[slug];
 
   return (
     <>
       <section className="bg-cream py-16 lg:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 grid gap-12 lg:grid-cols-2 lg:items-center">
           <div className="space-y-6">
-            <p className="eyebrow">{category.title}</p>
+            <p className="eyebrow">{content?.kicker ?? category.title}</p>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl tracking-tight">
-              {treatment.name}
+              {content?.h1 ?? treatment.name}
             </h1>
-            <p className="text-lg text-ink-soft leading-relaxed">{treatment.description}</p>
+            <p className="text-lg text-ink-soft leading-relaxed">
+              {content?.intro ?? treatment.description}
+            </p>
+
+            {content?.badges && (
+              <div className="flex flex-wrap gap-3">
+                {content.badges.map((badge) => (
+                  <span
+                    key={badge}
+                    className="border border-ink/15 px-4 py-2 font-label text-[10px] font-semibold tracking-[0.18em] uppercase text-ink-soft"
+                  >
+                    {badge}
+                  </span>
+                ))}
+              </div>
+            )}
 
             <div className="flex gap-8 border-t border-ink/10 pt-6">
               <div>
@@ -111,6 +129,8 @@ function TreatmentDetail({ slug }: { slug: string }) {
           />
         </div>
       </section>
+
+      {content && <TreatmentBlocks blocks={content.blocks} />}
 
       <section className="py-16 lg:py-20">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 text-center space-y-5">
