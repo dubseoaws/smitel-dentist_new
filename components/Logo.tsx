@@ -3,8 +3,8 @@ export function LogoMark({ className = "h-10 w-10" }: { className?: string }) {
     <svg viewBox="0 0 44 44" fill="none" className={className} aria-hidden>
       <defs>
         <linearGradient id="sd-grad" x1="0" y1="0" x2="44" y2="44">
-          <stop offset="0%" stopColor="#4E9EFF" />
-          <stop offset="100%" stopColor="#1D5FD0" />
+          <stop offset="0%" stopColor="#1B3A63" />
+          <stop offset="100%" stopColor="#0C2340" />
         </linearGradient>
       </defs>
       <circle cx="22" cy="22" r="22" fill="url(#sd-grad)" />
@@ -16,7 +16,7 @@ export function LogoMark({ className = "h-10 w-10" }: { className?: string }) {
       {/* Sparkle */}
       <path
         d="M33.2 6.2l.9 2.3 2.3.9-2.3.9-.9 2.3-.9-2.3-2.3-.9 2.3-.9.9-2.3z"
-        fill="#BFDBFF"
+        fill="#C9A24E"
       />
     </svg>
   );
@@ -34,7 +34,7 @@ export default function Logo({
       <LogoMark />
       <span className="leading-none">
         <span
-          className={`block font-display text-[1.2rem] font-extrabold tracking-tight ${
+          className={`block font-display text-[1.35rem] font-semibold tracking-[0.06em] uppercase ${
             light ? "text-ivory" : "text-ink"
           }`}
         >

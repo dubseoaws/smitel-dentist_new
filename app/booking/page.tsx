@@ -20,7 +20,7 @@ export default function BookingPage() {
         <div className="flex flex-wrap justify-center gap-4">
           <a
             href={SITE.phoneHref}
-            className="rounded-full bg-ink text-ivory px-9 py-4 text-sm font-semibold hover:bg-gold-deep transition-colors"
+            className="btn-primary"
           >
             Call {SITE.phone}
           </a>

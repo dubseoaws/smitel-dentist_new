@@ -97,7 +97,7 @@ export default function ReviewsSection() {
       <div className="mx-auto max-w-6xl px-5 sm:px-10">
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-8 mb-10">
           <div className="space-y-3">
-            <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight">
+            <h2 className="font-display text-3xl sm:text-4xl">
               What Our Patients Say
             </h2>
             <div className="flex items-center gap-3">

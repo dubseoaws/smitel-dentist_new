@@ -15,7 +15,7 @@ export default function TeamGrid({ limit }: { limit?: number }) {
         <Link
           key={member.slug}
           href={`/${member.slug}`}
-          className="group relative block rounded-[2rem] overflow-hidden bg-white border border-ink/6 hover:-translate-y-1 hover:shadow-2xl hover:shadow-ink/8 transition-all duration-300"
+          className="group relative block overflow-hidden bg-white border border-ink/10 hover:-translate-y-1 hover:shadow-2xl hover:shadow-ink/8 hover:border-gold/50 transition-all duration-300"
         >
           {member.image ? (
             <div className="relative h-80 overflow-hidden">
@@ -58,12 +58,12 @@ export default function TeamGrid({ limit }: { limit?: number }) {
           <div className="p-6 space-y-2.5">
             <div className="flex items-start justify-between gap-3">
               <div>
-                <h3 className="font-display text-xl font-bold">{member.name}</h3>
+                <h3 className="font-display text-xl font-semibold">{member.name}</h3>
                 <p className="font-label text-[10px] tracking-[0.18em] uppercase text-gold-deep mt-1">
                   {member.role}
                 </p>
               </div>
-              <span className="mt-1 flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-ink/10 transition-all group-hover:bg-gold group-hover:border-gold">
+              <span className="mt-1 flex h-9 w-9 shrink-0 items-center justify-center border border-ink/15 transition-all group-hover:bg-gold group-hover:border-gold">
                 ↗
               </span>
             </div>

@@ -13,8 +13,8 @@ export default function ContactSection() {
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 mb-12">
           <div className="max-w-xl space-y-4">
             <p className="eyebrow">Get In Touch</p>
-            <h2 className="font-display text-4xl sm:text-5xl font-bold tracking-tight">
-              Contact us<span className="text-gold">.</span>
+            <h2 className="font-display text-4xl sm:text-5xl">
+              Contact us
             </h2>
             <p className="text-ink-soft leading-relaxed">
               Two clinics across Central London. Same team, same prices, same exceptional
@@ -24,13 +24,13 @@ export default function ContactSection() {
           <div className="flex flex-wrap gap-3">
             <a
               href={SITE.phoneHref}
-              className="rounded-full bg-ink text-ivory px-7 py-3.5 text-sm font-semibold hover:bg-gold-deep transition-colors"
+              className="bg-ink text-ivory px-7 py-3.5 font-label text-[11px] font-bold tracking-[0.16em] uppercase hover:bg-gold hover:text-ink transition-colors"
             >
               {SITE.phone}
             </a>
             <a
               href={`mailto:${SITE.email}`}
-              className="rounded-full border border-ink/15 bg-white px-7 py-3.5 text-sm font-semibold hover:border-gold-deep hover:text-gold-deep transition-colors"
+              className="border border-ink/20 bg-white px-7 py-3.5 font-label text-[11px] font-bold tracking-[0.16em] uppercase hover:border-gold-deep hover:text-gold-deep transition-colors"
             >
               {SITE.email}
             </a>
@@ -41,9 +41,9 @@ export default function ContactSection() {
           {CLINICS.map((clinic) => (
             <article
               key={clinic.slug}
-              className="rounded-[2rem] bg-white border border-ink/6 p-3 shadow-sm shadow-ink/5 hover:shadow-xl hover:shadow-ink/10 transition-shadow duration-300"
+              className="bg-white border border-ink/10 p-3 shadow-sm shadow-ink/5 hover:shadow-xl hover:shadow-ink/10 hover:border-gold/50 transition-all duration-300"
             >
-              <div className="relative h-64 rounded-[1.6rem] overflow-hidden">
+              <div className="relative h-64 overflow-hidden">
                 <iframe
                   src={`https://www.google.com/maps?q=${encodeURIComponent(
                     MAP_QUERIES[clinic.slug]
@@ -58,7 +58,7 @@ export default function ContactSection() {
               <div className="px-5 pt-6 pb-5 space-y-4">
                 <div className="flex items-start justify-between gap-4">
                   <div>
-                    <h3 className="font-display text-2xl font-bold">{clinic.name}</h3>
+                    <h3 className="font-display text-2xl font-semibold">{clinic.name}</h3>
                     <p className="text-sm text-ink-soft mt-1">
                       {clinic.address.join(", ")}
                     </p>
@@ -72,7 +72,7 @@ export default function ContactSection() {
                     )}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="shrink-0 rounded-full border border-ink/10 px-5 py-2.5 text-xs font-bold hover:bg-gold hover:border-gold hover:text-ink transition-colors"
+                    className="shrink-0 border border-ink/15 px-5 py-2.5 text-xs font-bold hover:bg-gold hover:border-gold hover:text-ink transition-colors"
                   >
                     Directions ↗
                   </a>

@@ -23,15 +23,15 @@ export default function Header() {
 
   return (
     <>
-      <div className="bg-ink text-ivory/90 text-center py-2 px-4 font-label text-[11px] tracking-[0.18em]">
-        <Link href="/membership" className="hover:text-gold transition-colors">
+      <div className="bg-ink text-ivory text-center py-2.5 px-4 font-label text-[11px] tracking-[0.24em] uppercase">
+        <Link href="/membership" className="text-gold hover:text-ivory transition-colors">
           MEMBERS: 50% OFF · £20/MONTH
         </Link>
       </div>
 
-      <header className="sticky top-3 z-50 px-3 sm:px-5">
-        <div className="mx-auto max-w-6xl glass rounded-[2rem] lg:rounded-full shadow-lg shadow-ink/5">
-          <div className="flex items-center justify-between pl-4 pr-2 py-2">
+      <header className="sticky top-0 z-50 bg-ivory/95 backdrop-blur border-b border-ink/10 shadow-sm shadow-ink/5">
+        <div className="mx-auto max-w-7xl">
+          <div className="flex items-center justify-between px-4 sm:px-8 py-3">
             <Link href="/" onClick={closeAll} aria-label="Smile Dentist home">
               <Logo />
             </Link>
@@ -39,13 +39,13 @@ export default function Header() {
             <nav className="hidden lg:flex items-center">
               <Link
                 href="/"
-                className="rounded-full px-3.5 py-2 text-sm font-medium text-ink-soft hover:text-ink hover:bg-ink/5 transition-colors"
+                className="px-3.5 py-2 font-label text-[11px] font-semibold tracking-[0.16em] uppercase text-ink hover:text-gold-deep transition-colors"
               >
                 Home
               </Link>
               <Link
                 href="/team"
-                className="rounded-full px-3.5 py-2 text-sm font-medium text-ink-soft hover:text-ink hover:bg-ink/5 transition-colors"
+                className="px-3.5 py-2 font-label text-[11px] font-semibold tracking-[0.16em] uppercase text-ink hover:text-gold-deep transition-colors"
               >
                 Your Dentists
               </Link>
@@ -54,7 +54,7 @@ export default function Header() {
               <div className="group relative">
                 <Link
                   href="/treatments"
-                  className="rounded-full px-3.5 py-2 text-sm font-medium text-ink-soft hover:text-ink hover:bg-ink/5 transition-colors inline-flex items-center gap-1.5"
+                  className="px-3.5 py-2 font-label text-[11px] font-semibold tracking-[0.16em] uppercase text-ink hover:text-gold-deep transition-colors inline-flex items-center gap-1.5"
                 >
                   Treatments
                   <svg
@@ -123,7 +123,7 @@ export default function Header() {
               <div className="group/loc relative">
                 <Link
                   href="/contact"
-                  className="rounded-full px-3.5 py-2 text-sm font-medium text-ink-soft hover:text-ink hover:bg-ink/5 transition-colors inline-flex items-center gap-1.5"
+                  className="px-3.5 py-2 font-label text-[11px] font-semibold tracking-[0.16em] uppercase text-ink hover:text-gold-deep transition-colors inline-flex items-center gap-1.5"
                 >
                   Locations
                   <svg
@@ -160,14 +160,14 @@ export default function Header() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="rounded-full px-3.5 py-2 text-sm font-medium text-ink-soft hover:text-ink hover:bg-ink/5 transition-colors"
+                  className="px-3.5 py-2 font-label text-[11px] font-semibold tracking-[0.16em] uppercase text-ink hover:text-gold-deep transition-colors"
                 >
                   {link.label}
                 </Link>
               ))}
             </nav>
 
-            <div className="hidden lg:flex items-center gap-2">
+            <div className="hidden lg:flex items-center gap-3">
               <a
                 href={SITE.phoneHref}
                 className="font-label text-xs tracking-wider text-ink-soft hover:text-ink transition-colors px-2"
@@ -176,7 +176,7 @@ export default function Header() {
               </a>
               <Link
                 href="/booking"
-                className="rounded-full bg-ink text-ivory px-6 py-3 text-sm font-semibold hover:bg-gold-deep transition-colors"
+                className="bg-gold text-ink px-7 py-3 font-label text-[11px] font-bold tracking-[0.2em] uppercase hover:bg-ink hover:text-ivory transition-colors"
               >
                 Book Online
               </Link>
@@ -210,7 +210,7 @@ export default function Header() {
         </div>
 
         {open && (
-          <nav className="lg:hidden mx-auto max-w-6xl mt-2 glass rounded-3xl p-5 space-y-1 shadow-xl shadow-ink/10 max-h-[70vh] overflow-y-auto">
+          <nav className="lg:hidden mx-auto max-w-6xl bg-ivory border-t border-ink/10 p-5 space-y-1 shadow-xl shadow-ink/10 max-h-[70vh] overflow-y-auto">
             <Link
               href="/"
               onClick={closeAll}
@@ -307,14 +307,14 @@ export default function Header() {
             <div className="pt-3 grid grid-cols-2 gap-2">
               <a
                 href={SITE.phoneHref}
-                className="rounded-full border border-ink/15 text-center px-4 py-3 text-sm font-semibold"
+                className="border border-ink/20 text-center px-4 py-3 font-label text-[11px] font-bold tracking-[0.18em] uppercase"
               >
                 Call us
               </a>
               <Link
                 href="/booking"
                 onClick={closeAll}
-                className="rounded-full bg-ink text-ivory text-center px-4 py-3 text-sm font-semibold"
+                className="bg-gold text-ink text-center px-4 py-3 font-label text-[11px] font-bold tracking-[0.18em] uppercase"
               >
                 Book Online
               </Link>

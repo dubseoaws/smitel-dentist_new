@@ -158,7 +158,7 @@ export default function MembershipPage() {
           </div>
           <Link
             href="/booking"
-            className="inline-block rounded-full bg-ink text-ivory px-8 py-3.5 text-sm font-semibold hover:bg-gold-deep transition-colors"
+            className="btn-primary"
           >
             Book Now
           </Link>

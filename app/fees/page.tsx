@@ -26,7 +26,7 @@ export default function FeesPage() {
             href={SITE.membershipUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-8 inline-block rounded-full bg-ink text-ivory px-8 py-3.5 text-xs font-bold tracking-widest hover:bg-gold-deep transition-colors"
+            className="mt-8 btn-primary"
           >
             JOIN MEMBERSHIP NOW
           </a>

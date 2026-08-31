@@ -68,7 +68,7 @@ export default function TeamPage() {
               </Link>
               <Link
                 href="/booking"
-                className="rounded-full bg-ink text-ivory px-7 py-3 text-xs font-bold tracking-widest hover:bg-gold-deep transition-colors"
+                className="btn-primary"
               >
                 BOOK MY APPOINTMENT
               </Link>

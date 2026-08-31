@@ -1,15 +1,15 @@
 @import "tailwindcss";
 
 @theme {
-  /* Blue-on-navy palette */
-  --color-ivory: #f5f8fc;
-  --color-cream: #e7eef7;
-  --color-ink: #0a1b2e;
-  --color-ink-soft: #4a5a6e;
-  --color-gold: #4e9eff;
-  --color-gold-deep: #1d5fd0;
-  --color-sage: #93a9c4;
-  --font-display: var(--font-jakarta), system-ui, sans-serif;
+  /* Classic navy & gold luxury palette */
+  --color-ivory: #faf8f3;
+  --color-cream: #f2ede1;
+  --color-ink: #0c2340;
+  --color-ink-soft: #5a6478;
+  --color-gold: #c9a24e;
+  --color-gold-deep: #a07f35;
+  --color-sage: #9fa9ba;
+  --font-display: var(--font-cormorant), Georgia, serif;
   --font-body: var(--font-inter), system-ui, sans-serif;
   --font-label: var(--font-inter), system-ui, sans-serif;
 
@@ -31,7 +31,17 @@ body {
 
 h1, h2, h3, .font-display {
   font-family: var(--font-display);
-  letter-spacing: -0.02em;
+}
+
+/* Classic uppercase display headings */
+h1, h2 {
+  text-transform: uppercase;
+  letter-spacing: 0.05em !important;
+  font-weight: 600;
+}
+
+h3 {
+  letter-spacing: 0.01em;
 }
 
 .font-label {
@@ -43,11 +53,59 @@ h1, h2, h3, .font-display {
   color: var(--color-ink);
 }
 
+/* Gold ornament divider */
+.ornament {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+.ornament::before,
+.ornament::after {
+  content: "";
+  width: 3.5rem;
+  height: 1px;
+  background: var(--color-gold);
+}
+
+/* Classic squared buttons */
+.btn-primary {
+  display: inline-block;
+  background: var(--color-ink);
+  color: var(--color-ivory);
+  padding: 0.875rem 2rem;
+  font-family: var(--font-label);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  transition: background-color 0.2s, color 0.2s;
+}
+.btn-primary:hover {
+  background: var(--color-gold);
+  color: var(--color-ink);
+}
+.btn-outline {
+  display: inline-block;
+  border: 1px solid rgba(12, 35, 64, 0.25);
+  padding: 0.875rem 2rem;
+  font-family: var(--font-label);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  transition: border-color 0.2s, color 0.2s;
+}
+.btn-outline:hover {
+  border-color: var(--color-gold-deep);
+  color: var(--color-gold-deep);
+}
+
 /* Kicker label */
 .eyebrow {
   font-family: var(--font-label);
   font-size: 0.6875rem;
-  letter-spacing: 0.28em;
+  letter-spacing: 0.32em;
   text-transform: uppercase;
   font-weight: 600;
   color: var(--color-gold-deep);
@@ -57,40 +115,40 @@ h1, h2, h3, .font-display {
 }
 .eyebrow::before {
   content: "";
-  width: 1.75rem;
+  width: 2.5rem;
   height: 1px;
-  background: var(--color-gold-deep);
+  background: var(--color-gold);
 }
 
 /* Glass surface */
 .glass {
-  background: rgba(245, 248, 252, 0.72);
+  background: rgba(250, 248, 243, 0.85);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
-  border: 1px solid rgba(10, 27, 46, 0.08);
+  border: 1px solid rgba(12, 35, 64, 0.08);
 }
 
-/* Blue radial glow for dark sections */
+/* Gold radial glow for dark navy sections */
 .glow-dark {
   background:
-    radial-gradient(60rem 30rem at 80% -10%, rgba(78, 158, 255, 0.18), transparent 60%),
-    radial-gradient(40rem 24rem at 10% 110%, rgba(78, 158, 255, 0.1), transparent 60%),
+    radial-gradient(60rem 30rem at 80% -10%, rgba(201, 162, 78, 0.16), transparent 60%),
+    radial-gradient(40rem 24rem at 10% 110%, rgba(201, 162, 78, 0.09), transparent 60%),
     var(--color-ink);
 }
 
-/* Soft blue glow for light full-bleed bands */
+/* Soft warm glow for light full-bleed bands */
 .glow-light {
   background:
-    radial-gradient(56rem 28rem at 88% -6%, rgba(78, 158, 255, 0.12), transparent 62%),
-    radial-gradient(44rem 24rem at 2% 106%, rgba(78, 158, 255, 0.09), transparent 62%),
+    radial-gradient(56rem 28rem at 88% -6%, rgba(201, 162, 78, 0.12), transparent 62%),
+    radial-gradient(44rem 24rem at 2% 106%, rgba(201, 162, 78, 0.08), transparent 62%),
     var(--color-cream);
 }
 
 /* Hero ambience */
 .hero-shade {
   background:
-    radial-gradient(50rem 30rem at 92% -8%, rgba(78, 158, 255, 0.14), transparent 60%),
-    radial-gradient(36rem 22rem at -6% 30%, rgba(78, 158, 255, 0.08), transparent 55%),
+    radial-gradient(50rem 30rem at 92% -8%, rgba(201, 162, 78, 0.12), transparent 60%),
+    radial-gradient(36rem 22rem at -6% 30%, rgba(201, 162, 78, 0.07), transparent 55%),
     linear-gradient(to bottom, var(--color-cream), var(--color-ivory) 70%);
 }
 

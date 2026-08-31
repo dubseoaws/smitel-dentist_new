@@ -12,8 +12,11 @@ export default function Footer() {
     <footer className="glow-dark text-ivory">
       {/* CTA band */}
       <div className="mx-auto max-w-6xl px-5 sm:px-8 pt-20 pb-14 text-center space-y-6 border-b border-ivory/10">
-        <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight">
-          Book your consultation<span className="text-gold">.</span>
+        <p className="ornament font-label text-[11px] font-semibold tracking-[0.32em] uppercase text-gold">
+          Become a patient
+        </p>
+        <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl">
+          Book your consultation
         </h2>
         <p className="text-ivory/60 max-w-xl mx-auto">
           Book your consultation today and experience dentistry without fear.
@@ -21,13 +24,13 @@ export default function Footer() {
         <div className="flex flex-wrap justify-center gap-3">
           <Link
             href="/booking"
-            className="rounded-full bg-gold text-ink px-8 py-4 text-sm font-bold hover:bg-ivory transition-colors"
+            className="bg-gold text-ink px-8 py-4 font-label text-[11px] font-bold tracking-[0.18em] uppercase hover:bg-ivory transition-colors"
           >
             Book my appointment
           </Link>
           <a
             href={SITE.phoneHref}
-            className="rounded-full border border-ivory/25 px-8 py-4 text-sm font-semibold hover:border-gold hover:text-gold transition-colors"
+            className="border border-ivory/30 px-8 py-4 font-label text-[11px] font-bold tracking-[0.18em] uppercase hover:border-gold hover:text-gold transition-colors"
           >
             {SITE.phone}
           </a>

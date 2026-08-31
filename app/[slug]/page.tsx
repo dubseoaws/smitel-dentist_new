@@ -89,13 +89,13 @@ function TreatmentDetail({ slug }: { slug: string }) {
             <div className="flex flex-wrap gap-4">
               <Link
                 href="/booking"
-                className="rounded-full bg-ink text-ivory px-8 py-3.5 text-sm font-semibold hover:bg-gold-deep transition-colors"
+                className="btn-primary"
               >
                 Book My Appointment
               </Link>
               <a
                 href={SITE.phoneHref}
-                className="rounded-full border border-ink/25 px-8 py-3.5 text-sm font-semibold hover:border-gold hover:text-gold-deep transition-colors"
+                className="btn-outline"
               >
                 Call {SITE.phone}
               </a>
@@ -121,7 +121,7 @@ function TreatmentDetail({ slug }: { slug: string }) {
           </p>
           <Link
             href="/booking"
-            className="inline-block rounded-full bg-ink text-ivory px-8 py-3.5 text-sm font-semibold hover:bg-gold-deep transition-colors"
+            className="btn-primary"
           >
             Book Consultation: £95
           </Link>
@@ -222,13 +222,13 @@ function TeamDetail({ slug }: { slug: string }) {
             <div className="flex flex-wrap gap-4">
               <Link
                 href="/booking"
-                className="rounded-full bg-ink text-ivory px-8 py-3.5 text-sm font-semibold hover:bg-gold-deep transition-colors"
+                className="btn-primary"
               >
                 Book My Appointment
               </Link>
               <Link
                 href="/team"
-                className="rounded-full border border-ink/25 px-8 py-3.5 text-sm font-semibold hover:border-gold hover:text-gold-deep transition-colors"
+                className="btn-outline"
               >
                 Meet Full Team
               </Link>
@@ -306,13 +306,13 @@ function ClinicDetail({ slug }: { slug: string }) {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 mt-10 flex flex-wrap gap-4">
           <Link
             href="/booking"
-            className="rounded-full bg-ink text-ivory px-8 py-3.5 text-sm font-semibold hover:bg-gold-deep transition-colors"
+            className="btn-primary"
           >
             Book My Appointment
           </Link>
           <a
             href={SITE.phoneHref}
-            className="rounded-full border border-ink/25 px-8 py-3.5 text-sm font-semibold hover:border-gold hover:text-gold-deep transition-colors"
+            className="btn-outline"
           >
             Call {SITE.phone}
           </a>
