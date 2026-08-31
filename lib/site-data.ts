@@ -22,6 +22,8 @@ export const IMAGES = {
   heroAfter: `${CLOUDINARY}/v1767564170/Dr_kamran_from_composite_bonding_after_g08wod.webp`,
   heroMain: `${CLOUDINARY}/v1765805825/adobeStock_420986909-min_knbigb.jpg`,
   heroVeneers: `${CLOUDINARY}/v1765871030/Full-Smile-Transformation-with-20-Porcelain-Veneers-after_gnkzev.jpg`,
+  heroAligners: `${CLOUDINARY}/v1765805892/proaligners-home_xasqw8.jpg`,
+  heroImplant: `${CLOUDINARY}/v1765805822/dental-implant-home_gulsc0.jpg`,
 };
 
 export type Treatment = {

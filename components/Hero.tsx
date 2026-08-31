@@ -1,6 +1,31 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import { SITE, IMAGES } from "@/lib/site-data";
+
+// Headline split into a gold lead and an ivory tail, mirroring the two-tone hero treatment.
+const SLIDES = [
+  {
+    image: IMAGES.heroMain,
+    alt: "Smile Makeover - dental treatment at Smile Dentist South Kensington",
+    lead: "The New Standard",
+    tail: "For Cosmetic Dentistry",
+  },
+  {
+    image: IMAGES.heroAligners,
+    alt: "Invisalign clear aligners - dental treatment at Smile Dentist South Kensington",
+    lead: "Changing The Face",
+    tail: "Of Modern Dentistry",
+  },
+  {
+    image: IMAGES.heroImplant,
+    alt: "Dental Implants - dental treatment at Smile Dentist South Kensington",
+    lead: "Affordable Luxury",
+    tail: "Across Central London",
+  },
+];
 
 const USP_ITEMS = [
   { top: `${SITE.rating} Google Rating`, bottom: `${SITE.reviewCount} Patient Reviews` },
@@ -9,72 +34,163 @@ const USP_ITEMS = [
   { top: "Nervous Patients", bottom: "Very Welcome" },
 ];
 
+function GoogleG({ className = "h-8 w-8" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 48 48" className={className} aria-hidden>
+      <path
+        fill="#4285F4"
+        d="M45.1 24.5c0-1.6-.1-3.1-.4-4.5H24v8.5h11.8c-.5 2.8-2.1 5.1-4.4 6.7v5.6h7.1c4.2-3.9 6.6-9.6 6.6-16.3z"
+      />
+      <path
+        fill="#34A853"
+        d="M24 46c6 0 11-2 14.6-5.3l-7.1-5.6c-2 1.3-4.5 2.1-7.5 2.1-5.8 0-10.7-3.9-12.4-9.2H4.2v5.8C7.8 40.9 15.3 46 24 46z"
+      />
+      <path
+        fill="#FBBC05"
+        d="M11.6 28c-.4-1.3-.7-2.6-.7-4s.3-2.7.7-4v-5.8H4.2C2.8 17.1 2 20.4 2 24s.8 6.9 2.2 9.8L11.6 28z"
+      />
+      <path
+        fill="#EA4335"
+        d="M24 10.8c3.3 0 6.2 1.1 8.5 3.3l6.3-6.3C35 4.3 30 2 24 2 15.3 2 7.8 7.1 4.2 14.2l7.4 5.8c1.7-5.3 6.6-9.2 12.4-9.2z"
+      />
+    </svg>
+  );
+}
+
 export default function Hero() {
+  const [active, setActive] = useState(0);
+
+  useEffect(() => {
+    const id = setInterval(() => setActive((i) => (i + 1) % SLIDES.length), 7000);
+    return () => clearInterval(id);
+  }, []);
+
+  const go = (dir: number) =>
+    setActive((i) => (i + dir + SLIDES.length) % SLIDES.length);
+
   return (
     <>
-      {/* Full-bleed hero */}
-      <section className="relative min-h-[82vh] flex items-center justify-center overflow-hidden bg-ink">
-        <Image
-          src={IMAGES.heroMain}
-          alt="Smile Makeover - dental treatment at Smile Dentist South Kensington"
-          fill
-          priority
-          className="object-cover opacity-45"
-          sizes="100vw"
-        />
-        <div
-          className="absolute inset-0 bg-gradient-to-b from-ink/70 via-ink/40 to-ink/80"
-          aria-hidden
-        />
+      <section className="relative bg-ink text-ivory overflow-hidden min-h-[86vh] flex items-center">
+        {/* Slide imagery, anchored left and dissolving into the navy field */}
+        {SLIDES.map((slide, i) => (
+          <div
+            key={slide.lead}
+            className={`absolute inset-y-0 left-0 w-full lg:w-[62%] transition-opacity duration-1000 ${
+              i === active ? "opacity-100" : "opacity-0"
+            }`}
+            aria-hidden={i !== active}
+          >
+            <Image
+              src={slide.image}
+              alt={slide.alt}
+              fill
+              priority={i === 0}
+              className="object-cover object-top"
+              sizes="(max-width: 1024px) 100vw, 62vw"
+            />
+          </div>
+        ))}
+        <div className="hero-fade absolute inset-0" aria-hidden />
 
-        <div className="relative z-10 mx-auto max-w-4xl px-5 sm:px-10 py-28 text-center text-ivory">
-          <p className="fade-up font-label text-[11px] sm:text-xs font-semibold tracking-[0.42em] uppercase text-gold">
-            Dentist in London
-          </p>
+        {/* Copy block sits in the right half, as on a classic split hero */}
+        <div className="relative z-10 mx-auto w-full max-w-7xl px-6 sm:px-10 py-20">
+          <div className="lg:ml-[52%] lg:max-w-lg">
+            <p
+              key={`eyebrow-${active}`}
+              className="fade-up font-display text-xl sm:text-2xl uppercase tracking-[0.12em] text-ivory"
+            >
+              {SITE.name}
+            </p>
 
-          <h1 className="fade-up fade-up-1 mt-6 font-display text-4xl sm:text-6xl lg:text-7xl leading-[1.08]">
-            The New Standard for
-            <br />
-            <span className="text-gold">Cosmetic Dentistry</span>
-          </h1>
+            <h1
+              key={`head-${active}`}
+              className="fade-up fade-up-1 mt-2 font-display text-3xl sm:text-4xl lg:text-5xl leading-[1.14]"
+            >
+              <span className="text-gold">{SLIDES[active].lead}</span>{" "}
+              {SLIDES[active].tail}
+            </h1>
 
-          <p className="fade-up fade-up-2 ornament mt-8 mx-auto max-w-xl font-label text-[11px] tracking-[0.3em] uppercase text-ivory/80">
-            Affordable Luxury Across Central London
-          </p>
+            <Link
+              href="/results-london"
+              className="fade-up fade-up-2 mt-6 flex items-center gap-3.5 group w-fit"
+            >
+              <GoogleG className="h-9 w-9 shrink-0" />
+              <span>
+                <span className="block font-display text-lg sm:text-xl uppercase tracking-[0.05em] group-hover:text-gold transition-colors">
+                  {SITE.rating} Google Rating With {SITE.reviewCount}+ Reviews
+                </span>
+                <span className="block text-gold text-lg leading-none mt-1" aria-hidden>
+                  ★★★★★
+                </span>
+              </span>
+            </Link>
 
-          <p className="fade-up fade-up-2 mt-5 mx-auto max-w-xl text-sm sm:text-base text-ivory/70 leading-relaxed">
-            Changing the face of modern dentistry — clinics in South Kensington and the
-            City of London.
-          </p>
-
-          <div className="fade-up fade-up-3 mt-10 flex flex-wrap items-center justify-center gap-4">
             <Link
               href="/booking"
-              className="bg-gold text-ink px-9 py-4 font-label text-xs font-bold tracking-[0.22em] uppercase hover:bg-ivory transition-colors"
+              className="btn-gold fade-up fade-up-3 mt-8 inline-block"
             >
               Book Online
             </Link>
-            <Link
-              href="/fees"
-              className="border border-ivory/40 px-9 py-4 font-label text-xs font-bold tracking-[0.22em] uppercase text-ivory hover:border-gold hover:text-gold transition-colors"
-            >
-              View Fee Guide
-            </Link>
-          </div>
 
-          <div className="fade-up fade-up-3 mt-12 inline-flex items-center gap-3 border border-ivory/20 bg-ink/40 backdrop-blur px-6 py-3">
-            <span className="text-gold text-base leading-none" aria-hidden>
-              ★★★★★
-            </span>
-            <span className="font-label text-[11px] tracking-[0.2em] uppercase text-ivory/85">
-              {SITE.rating} Google Rating · {SITE.reviewCount}+ Reviews
-            </span>
+            {/* Slide controls */}
+            <div className="fade-up fade-up-3 mt-9 flex items-center gap-5">
+              <button
+                onClick={() => go(-1)}
+                aria-label="Previous slide"
+                className="text-2xl leading-none text-ivory/50 hover:text-gold transition-colors"
+              >
+                ‹
+              </button>
+              <div className="flex gap-2">
+                {SLIDES.map((slide, i) => (
+                  <button
+                    key={slide.lead}
+                    onClick={() => setActive(i)}
+                    aria-label={`Go to slide ${i + 1}`}
+                    aria-current={i === active}
+                    className={`h-8 w-10 border font-label text-xs transition-colors ${
+                      i === active
+                        ? "border-gold text-gold"
+                        : "border-ivory/25 text-ivory/40 hover:border-ivory/50"
+                    }`}
+                  >
+                    {String(i + 1).padStart(2, "0")}
+                  </button>
+                ))}
+              </div>
+              <button
+                onClick={() => go(1)}
+                aria-label="Next slide"
+                className="text-2xl leading-none text-ivory/50 hover:text-gold transition-colors"
+              >
+                ›
+              </button>
+            </div>
           </div>
         </div>
+
+        {/* Scroll cue */}
+        <a
+          href="#main-content"
+          aria-label="Scroll to content"
+          className="hidden lg:flex absolute bottom-8 left-1/2 -translate-x-1/2 z-10 h-12 w-12 items-center justify-center rounded-full border border-ivory/50 text-ivory hover:border-gold hover:text-gold transition-colors"
+        >
+          <svg viewBox="0 0 16 16" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden>
+            <path d="M3 6l5 5 5-5" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+        </a>
+
+        {/* Vertical booking tab */}
+        <Link
+          href="/booking"
+          className="btn-gold hidden lg:block absolute right-0 top-1/2 -translate-y-1/2 z-20 [writing-mode:vertical-rl] py-8 px-3.5"
+        >
+          Book Online
+        </Link>
       </section>
 
       {/* USP strip */}
-      <section className="bg-ink border-t border-ivory/10 text-ivory">
+      <section id="main-content" className="bg-ink border-t border-ivory/10 text-ivory">
         <div className="mx-auto max-w-6xl grid grid-cols-2 lg:grid-cols-4 divide-x divide-ivory/10">
           {USP_ITEMS.map((item) => (
             <div key={item.top} className="px-4 py-7 text-center">
