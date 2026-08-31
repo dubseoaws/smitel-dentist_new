@@ -176,7 +176,7 @@ export default function Header() {
               </a>
               <Link
                 href="/booking"
-                className="bg-gold text-ink px-7 py-3 font-label text-[11px] font-bold tracking-[0.2em] uppercase hover:bg-ink hover:text-ivory transition-colors"
+                className="bg-gold text-ink whitespace-nowrap px-6 py-3 font-label text-[11px] font-semibold tracking-[0.12em] uppercase hover:bg-ink hover:text-ivory transition-colors"
               >
                 Book Online
               </Link>
@@ -314,7 +314,7 @@ export default function Header() {
               <Link
                 href="/booking"
                 onClick={closeAll}
-                className="bg-gold text-ink text-center px-4 py-3 font-label text-[11px] font-bold tracking-[0.18em] uppercase"
+                className="bg-gold text-ink text-center px-4 py-3 font-label text-[11px] font-semibold tracking-[0.12em] uppercase"
               >
                 Book Online
               </Link>

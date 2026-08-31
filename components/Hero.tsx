@@ -97,14 +97,14 @@ export default function Hero() {
           <div className="lg:ml-[52%] lg:max-w-lg">
             <p
               key={`eyebrow-${active}`}
-              className="fade-up font-display text-xl sm:text-2xl uppercase tracking-[0.12em] text-ivory"
+              className="fade-up font-label text-[11px] font-semibold tracking-[0.22em] uppercase text-gold"
             >
               {SITE.name}
             </p>
 
             <h1
               key={`head-${active}`}
-              className="fade-up fade-up-1 mt-2 font-display text-3xl sm:text-4xl lg:text-5xl leading-[1.14]"
+              className="fade-up fade-up-1 mt-4 font-display text-3xl sm:text-4xl lg:text-5xl leading-[1.14]"
             >
               <span className="text-gold">{SLIDES[active].lead}</span>{" "}
               {SLIDES[active].tail}
@@ -112,15 +112,15 @@ export default function Hero() {
 
             <Link
               href="/results-london"
-              className="fade-up fade-up-2 mt-6 flex items-center gap-3.5 group w-fit"
+              className="fade-up fade-up-2 mt-7 flex items-center gap-3.5 group w-fit"
             >
-              <GoogleG className="h-9 w-9 shrink-0" />
+              <GoogleG className="h-8 w-8 shrink-0" />
               <span>
-                <span className="block font-display text-lg sm:text-xl uppercase tracking-[0.05em] group-hover:text-gold transition-colors">
-                  {SITE.rating} Google Rating With {SITE.reviewCount}+ Reviews
-                </span>
-                <span className="block text-gold text-lg leading-none mt-1" aria-hidden>
+                <span className="block text-gold text-sm leading-none tracking-[0.15em]" aria-hidden>
                   ★★★★★
+                </span>
+                <span className="mt-1.5 block text-sm text-ivory/85 group-hover:text-gold transition-colors">
+                  {SITE.rating} Google rating with {SITE.reviewCount}+ reviews
                 </span>
               </span>
             </Link>
@@ -183,7 +183,7 @@ export default function Hero() {
         {/* Vertical booking tab */}
         <Link
           href="/booking"
-          className="btn-gold hidden lg:block absolute right-0 top-1/2 -translate-y-1/2 z-20 [writing-mode:vertical-rl] py-8 px-3.5"
+          className="btn-gold hidden lg:block absolute right-0 top-1/2 -translate-y-1/2 z-20 [writing-mode:vertical-rl] py-6 px-2.5"
         >
           Book Online
         </Link>
