@@ -4256,4 +4256,933 @@ export const TREATMENT_CONTENT: Record<string, TreatmentContent> = {
       smileGallery(),
     ],
   },
+
+  "maryland-bridge-london": {
+    h1: "Maryland Bridge London",
+    intro:
+      "A Maryland bridge — also known as a resin-bonded bridge — is a minimally invasive fixed option for replacing a single missing tooth. At our London practice, we provide carefully planned Maryland bridges as part of a personalised treatment plan.",
+    badges: [
+      "4.9/5 from Google Reviews",
+      "South Kensington • Next to South Ken Station",
+      "City of London • Ave Maria Lane, EC4",
+      "Standard From £1,030",
+      "Member (50% off) From £515",
+      "Personalised treatment plan with full costs provided before treatment",
+    ],
+    hero: {
+      src: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1777304825/AdobeStock_308192942_kuyxof.jpg",
+      alt: "Maryland bridge treatment at Smile Dentist London",
+    },
+    blocks: [
+      {
+        kind: "cards",
+        eyebrow: "Understanding the Treatment",
+        heading: "What Is a Maryland Bridge?",
+        intro:
+          "A Maryland bridge is a type of fixed dental bridge used to replace a missing tooth. It consists of a false tooth (pontic) with thin wings on one or both sides, which are bonded to the back surfaces of the adjacent natural teeth. It forms part of our wider range of dental bridge treatments and is particularly suitable where a conservative, minimally invasive approach is preferred.",
+        items: [
+          {
+            title: "Minimally Invasive",
+            body: "Maryland bridges typically require little or no preparation of the supporting natural teeth, making them one of the more conservative bridge options available.",
+          },
+          {
+            title: "Fixed Tooth Replacement",
+            body: "Unlike a removable denture, a Maryland bridge is cemented in place, helping to restore appearance and chewing function without the need to remove it for cleaning.",
+          },
+          {
+            title: "Largely Reversible",
+            body: "Because the supporting teeth are only minimally modified, Maryland bridges are generally considered a largely reversible treatment compared with conventional bridges.",
+          },
+        ],
+      },
+      {
+        kind: "steps",
+        eyebrow: "Is This Treatment for You?",
+        heading: "Who Are Maryland Bridges Suitable For?",
+        sub: "Maryland bridges may be considered in specific clinical situations. Your dentist will always confirm suitability through a clinical assessment, and alternatives such as dental implants or conventional bridges will be discussed where appropriate.",
+        items: [
+          {
+            title: "Single Missing Front Tooth",
+            meta: "1",
+            body: "Most commonly used for replacing a single missing tooth in the front of the mouth, where aesthetics and minimal preparation are priorities.",
+          },
+          {
+            title: "Healthy Supporting Teeth",
+            meta: "2",
+            body: "Requires the adjacent teeth used for support to be healthy, structurally sound, and suitable for bonding the bridge wings.",
+          },
+          {
+            title: "Conservative Preference",
+            meta: "3",
+            body: "Suitable for patients who prefer a more conservative option that avoids significant preparation of their natural teeth.",
+          },
+          {
+            title: "Not Suitable for Implants",
+            meta: "4",
+            body: "Can be considered where dental implants are not an option due to bone quality, general health, timing, or personal preference.",
+          },
+        ],
+        note: {
+          title: "Important",
+          body: "Maryland bridges are not suitable in every situation. Factors such as bite forces, tooth grinding, and the health of the supporting teeth all affect suitability. Your dentist will discuss all suitable options — including bridges, implants, and dentures — during your consultation.",
+        },
+      },
+      {
+        kind: "cards",
+        eyebrow: "Why Consider a Maryland Bridge",
+        heading: "Benefits of Maryland Bridges",
+        intro:
+          "Maryland bridges offer several potential benefits for suitable patients. The outcome depends on individual clinical factors.",
+        items: [
+          {
+            title: "Minimal Tooth Preparation",
+            body: "Maryland bridges typically require little or no preparation of the natural teeth used for support, which can be an important advantage for patients who want to preserve tooth structure.",
+          },
+          {
+            title: "Fewer Appointments",
+            body: "Treatment is usually completed over two appointments — impressions and fitting — making it a relatively efficient option where suitable.",
+          },
+          {
+            title: "Natural Aesthetic Potential",
+            body: "The false tooth is shaped and shaded to match your adjacent teeth, which can help restore a natural-looking appearance to your smile.",
+          },
+          {
+            title: "Non-Surgical Option",
+            body: "A Maryland bridge is a non-surgical option for replacing a missing tooth, which may be particularly relevant for patients who are not suitable for, or do not wish to pursue, implant surgery.",
+          },
+        ],
+      },
+      {
+        kind: "steps",
+        eyebrow: "What to Expect",
+        heading: "The Maryland Bridge Process",
+        sub: "The process typically involves a small number of carefully planned appointments. Each stage is designed to help achieve a result that supports comfort, function, and appearance.",
+        items: [
+          {
+            title: "Consultation & Assessment",
+            meta: "Step 1",
+            body: "Detailed examination of the missing-tooth area, adjacent teeth, gums, and bite to confirm suitability.",
+          },
+          {
+            title: "Planning & Impressions",
+            meta: "Step 2",
+            body: "Shade selection and detailed impressions or digital scans are taken so the bridge can be custom-made in a dental laboratory.",
+          },
+          {
+            title: "Bridge Fabrication",
+            meta: "Step 3",
+            body: "The bridge is crafted in the laboratory. This stage usually takes a short period of time while you continue with everyday life.",
+          },
+          {
+            title: "Fitting & Bonding",
+            meta: "Step 4",
+            body: "The bridge is checked for fit, shade, and bite, then carefully bonded to the back of the adjacent teeth. Final polishing and a bite check complete the appointment.",
+          },
+        ],
+      },
+      {
+        kind: "cards",
+        eyebrow: "Longevity",
+        heading: "How Long Do Maryland Bridges Last?",
+        intro:
+          "Longevity varies between individuals and depends on bite forces, habits, oral hygiene, and the health of the supporting teeth.",
+        items: [
+          {
+            title: "Individual Variation",
+            body: "Some patients keep a Maryland bridge in place for many years, while others may experience occasional debonding that requires re-cementing. Outcomes cannot be predicted with certainty in advance.",
+          },
+          {
+            title: "Daily Care",
+            body: "Good oral hygiene — including careful brushing and flossing around the bridge — is important. Avoiding habits such as biting hard objects can help protect the bond.",
+          },
+          {
+            title: "Regular Review",
+            body: "Regular dental and hygiene visits allow the bridge, supporting teeth, and gums to be monitored, and any issues addressed early.",
+          },
+        ],
+      },
+      {
+        kind: "callout",
+        label: "Please note",
+        body: "Longevity varies between individuals and cannot be guaranteed. Debonding or the need for re-cementing is a known possibility with resin-bonded bridges. Your dentist will discuss expected outcomes and maintenance during your consultation.",
+      },
+      {
+        kind: "pricing",
+        eyebrow: "Pricing",
+        heading: "Maryland Bridge Cost London",
+        intro:
+          "The cost of a Maryland bridge depends on the case and the laboratory materials selected. A written treatment plan with full costs is always provided before treatment begins.",
+        columns: ["Treatment", "Standard", "Member"],
+        rows: [
+          { label: "Maryland Bridge (Resin-Bonded)", standard: "From £1,030", member: "From £515" },
+          { label: "Conventional Bridge (per unit)", standard: "From £995", member: "From £497.50" },
+          { label: "Dental Implant (inc. crown)", standard: "From £2,950", member: "Not eligible" },
+        ],
+        notes: [
+          {
+            title: "View Our Full Fee Guide",
+            body: "A transparent breakdown of our treatment fees is available on our pricing page.",
+          },
+        ],
+        footnote:
+          "Final costs depend on case complexity and the materials used. A written treatment plan is provided before treatment begins.",
+      },
+      {
+        kind: "list",
+        eyebrow: "Our Approach",
+        heading: "Why Choose Smile Dentist",
+        sub: "Dr. Yasha Y Shirazi — GDC: 195843",
+        items: [
+          "Experienced in restorative and minimally invasive dentistry",
+          "Careful clinical assessment before any bridge treatment is planned",
+          "Clear explanation of all suitable tooth-replacement options",
+          "Transparent written treatment plans and costs",
+          "GDC-registered dentists at a CQC-registered practice",
+        ],
+      },
+      {
+        kind: "prose",
+        eyebrow: "Visit Our London Practice",
+        heading: "Maryland Bridges in South Kensington",
+        paragraphs: [
+          "Our South Kensington practice welcomes patients from across London and surrounding areas who are considering options for replacing a single missing tooth. Whether you are comparing a Maryland bridge with an implant or a conventional bridge, our team is here to provide clear, balanced information.",
+          "20 Old Brompton Road, South Kensington, London SW7 3DL",
+        ],
+      },
+      {
+        kind: "faq",
+        heading: "Frequently Asked Questions",
+        items: [
+          {
+            q: "What is a Maryland bridge?",
+            a: "A Maryland bridge (also known as a resin-bonded bridge) is a type of fixed dental bridge used to replace a missing tooth. It consists of a false tooth with thin wings on each side, which are bonded to the inner surface of the adjacent natural teeth. Because little to no preparation of the supporting teeth is typically required, it is considered a minimally invasive bridge option.",
+          },
+          {
+            q: "Who are Maryland bridges suitable for?",
+            a: "Maryland bridges may be considered for patients missing a single tooth — most commonly front teeth — where the adjacent teeth are healthy and strong enough to support the bridge. Suitability depends on a clinical assessment of your bite, gum health, and the condition of the supporting teeth. Not every patient or clinical situation is suitable.",
+          },
+          {
+            q: "How is a Maryland bridge different from a conventional bridge?",
+            a: "A conventional bridge typically requires crowns to be placed on the supporting teeth, which involves more preparation of the natural tooth. A Maryland bridge uses thin resin-bonded wings instead, which usually requires little or no tooth preparation. Your dentist will explain the differences and help determine which option may be more appropriate for your situation.",
+          },
+          {
+            q: "How long do Maryland bridges last?",
+            a: "The lifespan of a Maryland bridge varies between individuals and depends on bite forces, the health of the supporting teeth, oral hygiene, and habits such as grinding. With appropriate care, Maryland bridges may typically last several years. Occasional re-cementing or replacement may be needed over time.",
+          },
+          {
+            q: "Is the Maryland bridge treatment reversible?",
+            a: "Maryland bridges are generally considered a conservative, largely reversible option, as little or no natural tooth structure is typically removed. If a bridge debonds, it can often be re-bonded. Where long-term stability becomes a concern, alternative treatments such as a conventional bridge or dental implant may be discussed.",
+          },
+          {
+            q: "Can a Maryland bridge replace more than one tooth?",
+            a: "Maryland bridges are most commonly used to replace a single missing tooth. Replacing multiple teeth with a resin-bonded approach is possible in some cases but is less common, as longer spans may place more stress on the bonded wings. Your dentist will assess whether this is a suitable option for you.",
+          },
+          {
+            q: "What are the alternatives to a Maryland bridge?",
+            a: "Alternatives to replace a missing tooth may include a conventional bridge, a dental implant, or in some cases a removable partial denture. Each option has different benefits, risks, and costs. Your dentist will discuss the options that may be appropriate for you based on clinical assessment.",
+          },
+          {
+            q: "Is the treatment painful?",
+            a: "The Maryland bridge process is typically comfortable. Because little or no tooth preparation is usually required, local anaesthetic is often not needed. Some mild sensitivity may be noticed for a short time after fitting, which usually settles.",
+          },
+        ],
+      },
+    ],
+  },
+
+  "dentures-london": {
+    h1: "Dentures London: Modern, Comfortable, Natural-Looking.",
+    intro:
+      "Whether you need to replace a few teeth or a full arch, modern dentures are designed to be lightweight, well-fitting, and natural in appearance. We offer four distinct types to suit every situation and budget.",
+    badges: [
+      "4.9/5 from Google Reviews",
+      "South Kensington • Next to South Ken Station",
+      "City of London • Ave Maria Lane, EC4",
+      "Acrylic Dentures From £397.50",
+      "Valplast Flexible From £447.50",
+      "Cobalt-Chrome From £697.50",
+      "Membership £20/month",
+    ],
+    hero: {
+      src: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1765805793/acrylic-_-flexi-dentures_caf2u4.jpg",
+      alt: "Modern dentures at Smile Dentist London",
+    },
+    blocks: [
+      {
+        kind: "cards",
+        eyebrow: "Understanding Dentures",
+        heading: "What Are Modern Dentures?",
+        intro:
+          "Dentures are removable prosthetic devices that replace missing teeth and the surrounding tissue. Modern dentures are designed with precision materials and digital scanning to achieve a comfortable fit and a natural appearance. At Smile Dentist, we offer four types of denture — each with distinct characteristics — so we can match the solution to your specific needs, lifestyle, and budget.",
+        items: [
+          {
+            title: "Natural Appearance",
+            body: "Teeth are shade-matched to your natural colour, and the gum base is hand-tinted to blend with your tissue.",
+          },
+          {
+            title: "Precision Fit",
+            body: "Multiple impressions and a try-in stage ensure the denture fits accurately and comfortably.",
+          },
+          {
+            title: "Multiple Options",
+            body: "From affordable acrylic to implant-retained solutions — we tailor the approach to your needs.",
+          },
+        ],
+      },
+      {
+        kind: "cards",
+        heading: "Your Denture Options",
+        intro: "We offer four types of denture. Your dentist will help you decide which is most suitable.",
+        items: [
+          {
+            title: "Valplast (Flexible)",
+            meta: "1",
+            bullets: [
+              "Material: Flexible, medical-grade nylon resin.",
+              "Benefits: Lightweight, flexible, and virtually unbreakable. No visible metal clasps — the hooks blend with your gum colour.",
+              "Best For: Partial dentures replacing 1 to 3 teeth where aesthetics are a priority.",
+              "Member Price From £447.50",
+            ],
+          },
+          {
+            title: "Cobalt-Chrome",
+            meta: "2",
+            bullets: [
+              "Material: Custom-cast cobalt-chrome metal framework with acrylic teeth.",
+              "Benefits: Thinner and stronger than acrylic. Often palate-free design for upper dentures, allowing better taste sensation.",
+              "Best For: Patients missing multiple teeth who want a strong, thin, comfortable denture.",
+              "Member Price From £697.50",
+            ],
+          },
+          {
+            title: "Acrylic",
+            meta: "3",
+            bullets: [
+              "Material: Gum-coloured acrylic (plastic) base with resin or ceramic teeth.",
+              "Benefits: The most affordable option. Easy to repair and adjust. A new tooth can be added if needed.",
+              "Best For: Full dentures, immediate dentures, or when budget is a primary consideration.",
+              "Member Price From £397.50",
+            ],
+          },
+          {
+            title: "Implant-Retained",
+            meta: "4",
+            bullets: [
+              "Concept: 2 to 4 dental implants are placed in the jaw. The denture has attachments that clip onto the implants.",
+              "Benefits: Significantly improved stability and chewing function. No adhesive needed. Helps preserve jawbone.",
+              "Best For: Patients who want denture security without the movement or looseness of conventional dentures.",
+            ],
+          },
+        ],
+      },
+      {
+        kind: "pricing",
+        eyebrow: "Transparent Pricing",
+        heading: "Denture Costs",
+        intro:
+          "A full written estimate is provided after your consultation so you know exactly what to expect before treatment begins.",
+        columns: ["Treatment", "Standard", "Member"],
+        rows: [
+          { label: "Acrylic Denture (Partial)", standard: "From £795", member: "From £397.50" },
+          { label: "Acrylic Denture (Full)", standard: "From £1,095", member: "From £547.50" },
+          { label: "Valplast Flexible Denture", standard: "From £895", member: "From £447.50" },
+          { label: "Cobalt-Chrome Denture", standard: "From £1,395", member: "From £697.50" },
+          { label: "Denture Repair", standard: "From £202", member: "From £101" },
+          { label: "Denture Reline", standard: "From £254", member: "From £127" },
+        ],
+        notes: [
+          {
+            title: "Membership Savings",
+            body: "Join our membership for £20/month and receive 50% off all treatment fees.",
+          },
+        ],
+        footnote: "A full written estimate is provided before treatment begins.",
+      },
+      {
+        kind: "doAvoid",
+        heading: "Caring for Your Dentures",
+        sub: "Proper care will extend the life of your dentures and protect your oral health.",
+        dos: [
+          "Remove and rinse dentures after eating",
+          "Brush daily with a soft denture brush and plain water",
+          "Soak overnight in denture cleaning solution",
+          "Remove dentures at night to rest your gums",
+          "Handle over a soft surface in case of drops",
+          "Attend regular dental check-ups",
+        ],
+        avoids: [
+          "Regular toothpaste (too abrasive for denture surfaces)",
+          "Hot or boiling water (can warp the material)",
+          "Bleach-based cleaners",
+          "DIY repairs with superglue",
+          "Very hard or sticky foods",
+          "Sleeping with dentures in place",
+        ],
+      },
+      {
+        kind: "stories",
+        heading: "Patient Experiences",
+        items: [
+          {
+            title: "Discreet Partial Denture",
+            concern: "Patient had lost a visible tooth and was worried about a denture looking obvious.",
+            treatment: "Valplast flexible partial denture with gum-coloured clasps.",
+            outcome:
+              "The patient found the denture comfortable and was pleased that the clasps were not visible when smiling.",
+          },
+          {
+            title: "Palate-Free Comfort",
+            concern:
+              "Patient found their existing upper acrylic denture bulky and complained of reduced taste sensation due to palate coverage.",
+            treatment: "Cobalt-chrome denture with a palate-free design.",
+            outcome:
+              "The patient reported improved comfort, better taste sensation, and a more secure fit compared to their previous denture.",
+          },
+        ],
+        disclaimer:
+          "Individual results may vary. A clinical assessment is required to determine suitability.",
+      },
+      {
+        kind: "faq",
+        heading: "Frequently Asked Questions",
+        items: [
+          {
+            q: "Will I need denture adhesive?",
+            a: "A well-fitting denture should rely primarily on suction and muscle control. However, full lower dentures have less surface area for suction, and some patients find a small amount of adhesive helpful for added confidence. Implant-retained dentures clip onto implants and do not require adhesive.",
+          },
+          {
+            q: "How many appointments does it take?",
+            a: "Dentures typically require 3 to 4 appointments over 2 to 4 weeks: impressions, bite registration, try-in (where you preview the teeth in wax), and final fitting. The exact number depends on the type of denture and any adjustments needed.",
+          },
+          {
+            q: "Can I sleep with my dentures in?",
+            a: "We recommend removing dentures at night to allow your gum tissue to rest and to maintain good oral hygiene. Leaving dentures in overnight can promote fungal infections and gum irritation. Soak them in a denture cleaning solution while you sleep.",
+          },
+          {
+            q: "Will my dentures look natural?",
+            a: "Modern dentures are designed to look very natural. We select the tooth shape, size, and shade with you, and hand-tint the acrylic gum base to match your natural tissue colour. The goal is a result that looks like healthy natural teeth.",
+          },
+          {
+            q: "Which type of denture is right for me?",
+            a: "The best type depends on how many teeth you are missing, the condition of your remaining teeth and gums, your lifestyle, and your budget. Your dentist will discuss all options during your consultation and recommend the most suitable type for your situation.",
+          },
+          {
+            q: "How do I clean my dentures?",
+            a: "Remove your dentures and brush them daily with a soft denture brush and plain water or denture cleaning paste (not regular toothpaste, which can be too abrasive). Soak overnight in a denture cleaning solution. Rinse thoroughly before placing them back in your mouth. Also brush your gums, tongue, and any remaining teeth.",
+          },
+          {
+            q: "Will I be able to eat normally?",
+            a: "Most patients adjust to eating with dentures within a few weeks. Start with softer foods and gradually reintroduce firmer textures as you gain confidence. Very hard or sticky foods should be avoided as they can damage or dislodge the denture. Chrome and implant-retained dentures generally offer better chewing stability.",
+          },
+          {
+            q: "What if my denture becomes loose over time?",
+            a: "The jawbone naturally changes shape after teeth are lost, which can cause dentures to become loose over time. We can often reline (refit) the denture to restore a snug fit. In some cases, a new denture may be needed. Implant-retained dentures are less affected by bone changes.",
+          },
+        ],
+      },
+      smileGallery(),
+      {
+        kind: "prose",
+        heading: "Explore Our Full Range of Denture Solutions",
+        paragraphs: [
+          "We offer a comprehensive range of denture types to suit different needs, including acrylic dentures for an affordable and effective solution, chrome dentures for a thinner and stronger fit, Valplast flexible dentures for discreet, clasp-free comfort, and implant-retained dentures for maximum stability without adhesive.",
+          "If you are considering a fixed alternative to removable dentures, we also provide dental implants and dental bridges, which can permanently replace missing teeth without the need for a removable appliance. Your dentist will discuss all suitable options during your consultation.",
+          "All denture treatments at Smile Dentist are provided by GDC-registered dentists at our CQC-registered practice. We follow strict CQC standards for infection control, patient safety, and clinical governance to ensure you receive the highest quality of care.",
+        ],
+      },
+    ],
+  },
+
+  "full-dentures": {
+    h1: "Full Dentures London",
+    intro:
+      "Full dentures are removable prosthetic appliances designed to replace all of the natural teeth in the upper or lower jaw. At our London practice, we provide carefully fitted full dentures as part of a personalised treatment plan tailored to your comfort, function, and appearance.",
+    badges: [
+      "4.9/5 from Google Reviews",
+      "South Kensington • Next to South Ken Station",
+      "City of London • Ave Maria Lane, EC4",
+      "Standard From £1,095",
+      "Member (50% off) From £547.50",
+      "Personalised treatment plan with full costs provided before treatment",
+    ],
+    hero: {
+      src: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1765805793/acrylic-_-flexi-dentures_caf2u4.jpg",
+      alt: "Full dentures treatment at Smile Dentist London",
+    },
+    blocks: [
+      {
+        kind: "cards",
+        eyebrow: "Understanding the Treatment",
+        heading: "What Are Full Dentures?",
+        intro:
+          "Full dentures (also known as complete dentures) are custom-made removable prosthetics used when all of the natural teeth in the upper or lower jaw are missing. Each denture consists of artificial teeth set into a gum-coloured acrylic base, designed to rest comfortably on the gums and supporting bone. Full dentures form part of our wider range of denture treatments available at the practice.",
+        items: [
+          {
+            title: "Custom-Made",
+            body: "Each full denture is individually designed using detailed impressions, bite records, and tooth selection, so the result is tailored to the shape of your mouth and facial features.",
+          },
+          {
+            title: "Restores Appearance",
+            body: "Full dentures can help restore the appearance of a complete smile and support the lips and cheeks, which may improve facial profile following long-term tooth loss.",
+          },
+          {
+            title: "Supports Function",
+            body: "Well-fitted full dentures may help support chewing and speech. Outcomes vary between individuals and can improve further as you adjust to wearing them.",
+          },
+        ],
+      },
+      {
+        kind: "steps",
+        eyebrow: "Is This Treatment for You?",
+        heading: "Who Are Full Dentures Suitable For?",
+        sub: "Full dentures may be considered in a range of clinical situations. A thorough assessment is always carried out to confirm whether dentures, or an alternative such as implant-supported dentures, may be more appropriate for you.",
+        items: [
+          {
+            title: "Loss of All Teeth in One or Both Jaws",
+            meta: "1",
+            body: "Full dentures are designed for patients who have lost, or will soon lose, all of the natural teeth in the upper jaw, lower jaw, or both.",
+          },
+          {
+            title: "Replacing Older Dentures",
+            meta: "2",
+            body: "Existing dentures that have become loose, worn, or uncomfortable can sometimes be replaced with a new set that is better fitted to the current shape of your mouth.",
+          },
+          {
+            title: "Patients Not Suitable for Implants",
+            meta: "3",
+            body: "For patients where dental implants are not a suitable option due to bone quality, general health, or personal preference, conventional full dentures remain a well-established alternative.",
+          },
+          {
+            title: "Following Multiple Extractions",
+            meta: "4",
+            body: "Where remaining teeth have a poor long-term outlook and require removal, full dentures — or an immediate denture approach — can form part of the planned treatment.",
+          },
+        ],
+        note: {
+          title: "Important",
+          body: "Suitability for full dentures depends on a clinical assessment of your gums, bone, oral tissues, and general health. Your dentist will discuss all suitable options during your consultation.",
+        },
+      },
+      {
+        kind: "cards",
+        eyebrow: "Options Available",
+        heading: "Types of Full Dentures",
+        intro:
+          "Full dentures are available in different forms depending on your clinical needs, timing preferences, and the approach your dentist recommends after assessment.",
+        items: [
+          {
+            title: "Conventional Full Dentures",
+            body: "Made and fitted after any remaining teeth have been removed and the gums have healed. This allows for accurate impressions and careful fitting based on the final shape of the ridge.",
+          },
+          {
+            title: "Immediate Full Dentures",
+            body: "Prepared in advance and fitted on the same day any remaining teeth are removed, so you are not without a denture during healing. Relining or replacement may be needed as the gums settle.",
+          },
+          {
+            title: "Implant-Supported Dentures",
+            body: "Where clinically appropriate, implant-supported dentures use dental implants to help stabilise the denture. Suitability depends on bone quality, general health, and clinical assessment.",
+          },
+        ],
+      },
+      {
+        kind: "cards",
+        eyebrow: "Why Consider Full Dentures",
+        heading: "Benefits of Full Dentures",
+        intro:
+          "Full dentures are a long-established treatment option for complete tooth loss. The outcome depends on your individual clinical situation and personal goals.",
+        items: [
+          {
+            title: "Restored Smile Appearance",
+            body: "Full dentures can help restore the appearance of a complete smile and provide support to the lips and cheeks, which may positively influence facial appearance.",
+          },
+          {
+            title: "Non-Surgical Option",
+            body: "Full dentures are a removable, non-surgical option for replacing missing teeth, which can be an important consideration for patients who are not suitable for, or do not wish to undergo, implant surgery.",
+          },
+          {
+            title: "Customisable Aesthetics",
+            body: "Tooth shade, shape, and positioning can be selected during the try-in stage, allowing the denture to be adjusted to suit your preferences before the final fit.",
+          },
+          {
+            title: "Adjustable and Repairable",
+            body: "Full dentures can usually be adjusted, relined, or repaired over time as the mouth changes, which can help extend their comfort and useful life.",
+          },
+        ],
+      },
+      {
+        kind: "steps",
+        eyebrow: "What to Expect",
+        heading: "The Full Dentures Process",
+        sub: "Making well-fitting full dentures typically involves several carefully planned appointments. Each stage helps ensure a result that supports comfort, function, and appearance.",
+        items: [
+          {
+            title: "Consultation & Assessment",
+            meta: "Step 1",
+            body: "Your dentist will review your dental and medical history, examine your mouth, and discuss your goals and expectations.",
+          },
+          {
+            title: "Impressions & Records",
+            meta: "Step 2",
+            body: "Detailed impressions of your gums are taken, along with bite records, to capture how your upper and lower jaws meet.",
+          },
+          {
+            title: "Try-In Stage",
+            meta: "Step 3",
+            body: "A wax version of the denture is tried in so that fit, tooth position, shade, and overall appearance can be reviewed and adjusted.",
+          },
+          {
+            title: "Fitting Appointment",
+            meta: "Step 4",
+            body: "The finished denture is carefully fitted, and your bite and comfort are checked. Minor adjustments may be made at this stage.",
+          },
+          {
+            title: "Review & Adjustments",
+            meta: "Step 5",
+            body: "Follow-up visits allow your dentist to fine-tune the fit and address any sore spots as your mouth adjusts to the new denture.",
+          },
+        ],
+      },
+      {
+        kind: "cards",
+        eyebrow: "Living With Full Dentures",
+        heading: "Adjustment, Care & Longevity",
+        intro:
+          "Adapting to new full dentures takes time. Most patients notice gradual improvement in comfort, speech, and eating as the tissues and muscles adjust.",
+        items: [
+          {
+            title: "Initial Adjustment",
+            body: "Speech, eating, and comfort may feel different at first. This is normal and typically improves over the following weeks with practice and any minor adjustments.",
+          },
+          {
+            title: "Daily Care",
+            body: "Dentures should be cleaned daily using a denture brush and non-abrasive cleaner, and removed at night to allow the gums to rest.",
+          },
+          {
+            title: "Longevity & Review",
+            body: "Gums and bone gradually change shape over the years. Regular review appointments help monitor fit and oral health, and relining or replacement may be needed over time.",
+          },
+        ],
+      },
+      {
+        kind: "callout",
+        label: "Please note",
+        body: "Longevity and comfort vary between individuals and cannot be guaranteed. Your dentist will discuss expected outcomes and care guidance during your consultation.",
+      },
+      {
+        kind: "pricing",
+        eyebrow: "Pricing",
+        heading: "Full Dentures Cost London",
+        intro:
+          "The cost of full dentures depends on the material selected, whether an upper, lower, or both arches are being treated, and the complexity of your case. A written treatment plan with full costs is provided before treatment begins.",
+        columns: ["Treatment", "Standard", "Member"],
+        rows: [
+          { label: "Acrylic Full Denture", standard: "From £1,095", member: "From £547.50" },
+          { label: "Valplast / Flexi Denture", standard: "From £895", member: "From £447.50" },
+          { label: "Cobalt-Chrome Denture", standard: "From £1,395", member: "From £697.50" },
+        ],
+        notes: [
+          {
+            title: "View Our Full Fee Guide",
+            body: "A transparent breakdown of our treatment fees is available on our pricing page.",
+          },
+        ],
+        footnote:
+          "Final costs depend on case complexity and the materials used. A full written treatment plan is provided before treatment begins.",
+      },
+      {
+        kind: "list",
+        eyebrow: "Our Approach",
+        heading: "Why Choose Smile Dentist",
+        sub: "Dr. Yasha Y Shirazi — GDC: 195843",
+        items: [
+          "London practice with experience in restorative and prosthetic dentistry",
+          "Carefully planned denture construction with dedicated try-in stage",
+          "Personalised, patient-centred approach to comfort and appearance",
+          "GDC-registered dentists at a CQC-registered practice",
+        ],
+      },
+      {
+        kind: "prose",
+        eyebrow: "Visit Our London Practice",
+        heading: "Full Dentures in South Kensington",
+        paragraphs: [
+          "Our South Kensington practice welcomes patients from across London and surrounding areas who are considering full dentures or exploring treatment options for complete tooth loss. Our team is here to provide clear, balanced information and a personalised plan based on clinical assessment.",
+          "20 Old Brompton Road, South Kensington, London SW7 3DL",
+        ],
+      },
+      {
+        kind: "faq",
+        heading: "Frequently Asked Questions",
+        items: [
+          {
+            q: "What are full dentures?",
+            a: "Full dentures — sometimes called complete dentures — are removable prosthetic appliances that replace all of the natural teeth in the upper jaw, the lower jaw, or both. They consist of artificial teeth set into a gum-coloured acrylic base, which rests on the gums and underlying ridge.",
+          },
+          {
+            q: "Who are full dentures suitable for?",
+            a: "Full dentures may be considered for patients who have lost all of their natural teeth in one or both jaws, or for patients whose remaining teeth have a poor long-term outlook and need to be removed. Suitability depends on a full clinical assessment of your oral health, bone levels, and personal preferences.",
+          },
+          {
+            q: "How long does it take to get used to full dentures?",
+            a: "An adjustment period is normal with new full dentures. Many patients find speech, eating, and comfort improve over the first few weeks as the oral tissues and muscles adapt. Small adjustments may be needed during follow-up appointments to help the denture fit and function well.",
+          },
+          {
+            q: "How long do full dentures last?",
+            a: "Full dentures typically last several years with appropriate care. Over time, the gums and underlying bone gradually change shape, and the denture may need adjusting, relining, or eventually replacing. Your dentist will discuss expected timelines and maintenance during your consultation.",
+          },
+          {
+            q: "Can I eat normally with full dentures?",
+            a: "Most patients can return to a varied diet with full dentures, though it often helps to start with softer foods and smaller pieces during the initial adjustment period. Some harder or very sticky foods may remain more challenging. Your dentist can offer practical guidance at review appointments.",
+          },
+          {
+            q: "Are there alternatives to full dentures?",
+            a: "Alternatives may include implant-supported or implant-retained dentures, which use dental implants to help stabilise the denture. Suitability for implants depends on bone quality, general health, and clinical assessment. Your dentist will explain all appropriate options and their relative benefits, risks, and costs.",
+          },
+          {
+            q: "How should I care for my full dentures?",
+            a: "Full dentures should be cleaned daily with a denture brush and non-abrasive cleaner, and removed at night to allow the gums to rest. Regular dental check-ups are important so your dentist can monitor your oral tissues and the fit of your denture.",
+          },
+        ],
+      },
+    ],
+  },
+
+  "root-canal-london": {
+    h1: "Root Canal Treatment London",
+    intro:
+      "Root canal treatment is designed to address infection inside a tooth, helping to relieve symptoms and preserve your natural tooth. At our London practice, we provide a calm and supportive environment throughout the process.",
+    badges: [
+      "4.9/5 from Google Reviews",
+      "South Kensington • Next to South Ken Station",
+      "City of London • Ave Maria Lane, EC4",
+      "Standard From £695",
+      "Member (50% off) From £347.50",
+      "Personalised treatment plan with full costs provided",
+    ],
+    hero: {
+      src: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1765805806/root-canal-treatment_t6kqrj.jpg",
+      alt: "Root canal treatment at Smile Dentist London",
+    },
+    blocks: [
+      {
+        kind: "cards",
+        eyebrow: "Understanding the Treatment",
+        heading: "What Is Root Canal Treatment?",
+        intro:
+          "Root canal treatment — also known as endodontic treatment — is a procedure to remove infected or damaged tissue from inside a tooth. The root canals are then carefully cleaned and sealed to help preserve the natural tooth structure.",
+        items: [
+          {
+            title: "Removing Infection",
+            body: "The infected or damaged tissue (pulp) inside the tooth is carefully removed, and the internal surfaces are cleaned and disinfected to address the source of the problem.",
+          },
+          {
+            title: "Cleaning & Sealing",
+            body: "Once cleaned, the root canals are shaped and sealed with a filling material to help prevent further infection and support the remaining tooth structure.",
+          },
+          {
+            title: "Preserving Your Tooth",
+            body: "The aim of root canal treatment is to help preserve the natural tooth where possible, allowing it to continue functioning for biting and chewing.",
+          },
+        ],
+      },
+      {
+        kind: "steps",
+        eyebrow: "Recognising the Signs",
+        heading: "Signs You May Need Root Canal Treatment",
+        sub: "A number of symptoms may indicate a problem with the tissue inside a tooth. If you are experiencing any of the following, it is important to seek a professional assessment.",
+        items: [
+          {
+            title: "Persistent Tooth Pain",
+            meta: "1",
+            body: "Ongoing or recurring pain in a tooth — particularly if it comes on spontaneously — may indicate a problem with the tissue inside the tooth that requires assessment.",
+          },
+          {
+            title: "Sensitivity to Hot or Cold",
+            meta: "2",
+            body: "Prolonged sensitivity to temperature that lingers after the stimulus is removed can sometimes be a sign that the nerve inside the tooth has been affected.",
+          },
+          {
+            title: "Swelling or Tenderness",
+            meta: "3",
+            body: "Swelling in the gum near a tooth, or tenderness when biting, may suggest infection that warrants clinical investigation.",
+          },
+          {
+            title: "Discolouration of the Tooth",
+            meta: "4",
+            body: "A tooth that has noticeably darkened may indicate changes to the tissue inside. This can sometimes occur gradually following an injury.",
+          },
+        ],
+        note: {
+          title: "Important",
+          body: "Symptoms vary between individuals, and a clinical examination with X-rays is needed for an accurate diagnosis. If you are experiencing severe pain or swelling, our emergency dentist service is available for urgent assessment.",
+        },
+      },
+      {
+        kind: "cards",
+        eyebrow: "When Treatment Is Needed",
+        heading: "Why Root Canal Treatment May Be Needed",
+        intro:
+          "There are several reasons why the tissue inside a tooth may become damaged or infected. Root canal treatment aims to address the underlying cause and help preserve the natural tooth.",
+        items: [
+          {
+            title: "Tooth Decay",
+            body: "When decay extends deep enough to reach the pulp — the soft tissue inside the tooth — it can introduce bacteria that lead to infection. Treatment aims to remove the infected tissue and seal the tooth.",
+          },
+          {
+            title: "Cracks or Damage",
+            body: "A crack or fracture in a tooth can allow bacteria to reach the pulp, potentially leading to infection. Root canal treatment may be recommended to help save the affected tooth.",
+          },
+          {
+            title: "Infection Inside the Tooth",
+            body: "Infection within the tooth can cause pain, swelling, and sensitivity. By removing the infected tissue, root canal treatment aims to relieve symptoms and help preserve the natural tooth.",
+          },
+        ],
+      },
+      {
+        kind: "steps",
+        eyebrow: "What to Expect",
+        heading: "The Root Canal Treatment Process",
+        sub: "Root canal treatment follows a structured approach, with each stage carefully planned to address the infection and help restore the tooth.",
+        items: [
+          {
+            title: "Consultation & Diagnosis",
+            meta: "Step 1",
+            body: "Your dentist will examine the tooth, take any necessary X-rays, and discuss the findings with you to confirm whether root canal treatment is appropriate.",
+          },
+          {
+            title: "Local Anaesthetic",
+            meta: "Step 2",
+            body: "Local anaesthetic is used to help keep you comfortable throughout the procedure. Your dentist will ensure you are settled before beginning.",
+          },
+          {
+            title: "Removal of Infected Tissue",
+            meta: "Step 3",
+            body: "The damaged or infected pulp tissue is carefully removed from inside the tooth using specialised instruments.",
+          },
+          {
+            title: "Cleaning & Sealing",
+            meta: "Step 4",
+            body: "The root canals are cleaned, shaped, and sealed with a filling material to help prevent further infection.",
+          },
+          {
+            title: "Restoration",
+            meta: "Step 5",
+            body: "The tooth is restored with a filling or, where recommended, a dental crown to help protect and strengthen it.",
+          },
+        ],
+      },
+      {
+        kind: "cards",
+        eyebrow: "After Treatment",
+        heading: "Aftercare and Recovery",
+        intro:
+          "Understanding what to expect after root canal treatment can help you support your recovery and care for the treated tooth.",
+        items: [
+          {
+            title: "Mild Discomfort",
+            body: "Some patients may experience mild discomfort or tenderness after treatment. This is a normal response and typically improves over the following days.",
+          },
+          {
+            title: "Symptoms Typically Improve",
+            body: "The symptoms that led to treatment — such as pain or sensitivity — typically improve over time following the procedure. Your dentist will advise on what to expect.",
+          },
+          {
+            title: "Following Aftercare Advice",
+            body: "Your dentist will provide specific aftercare guidance. Following this advice — including attending any follow-up appointments — is an important part of supporting your recovery.",
+          },
+        ],
+      },
+      {
+        kind: "pricing",
+        eyebrow: "Pricing",
+        heading: "Root Canal Cost London",
+        intro:
+          "The cost of root canal treatment varies depending on the tooth involved, the complexity of the case, and whether additional restoration is required. A personalised treatment plan with full costs is provided following your consultation.",
+        columns: ["Treatment", "Standard", "Member"],
+        rows: [
+          { label: "Root Canal — Front Tooth", standard: "From £695", member: "From £347.50" },
+          { label: "Root Canal — Molar", standard: "From £895", member: "From £447.50" },
+          { label: "Crown (if required)", standard: "From £995", member: "From £497.50" },
+        ],
+        notes: [
+          {
+            title: "View Our Full Fee Guide",
+            body: "A transparent breakdown of treatment fees is available on our pricing page.",
+          },
+        ],
+        footnote:
+          "Final costs depend on the complexity of the case. A written treatment plan with full costs is provided before treatment begins.",
+      },
+      {
+        kind: "cards",
+        eyebrow: "Your Options",
+        heading: "Alternatives to Root Canal Treatment",
+        intro:
+          "Your dentist will discuss all suitable options with you. In some cases, an alternative approach may be more appropriate depending on your individual clinical situation.",
+        items: [
+          {
+            title: "Tooth Extraction",
+            body: "If a tooth cannot be saved, extraction may be recommended. Your dentist will discuss replacement options — such as an implant, bridge, or denture — to restore function and appearance.",
+          },
+          {
+            title: "Preserving Your Natural Tooth",
+            body: "Where clinically possible, preserving the natural tooth is generally considered a favourable outcome. Root canal treatment aims to achieve this by addressing the infection while keeping the tooth in place.",
+          },
+        ],
+      },
+      {
+        kind: "callout",
+        label: "Important",
+        body: "The most appropriate treatment for you can only be determined through a thorough clinical assessment. Your dentist will explain all suitable options and provide a personalised recommendation.",
+      },
+      {
+        kind: "list",
+        eyebrow: "Our Approach",
+        heading: "Why Choose Smile Dentist",
+        sub: "Dr. Yasha Y Shirazi — GDC: 195843",
+        items: [
+          "London practice with experience in restorative treatments",
+          "Calm and supportive approach for patients who may feel anxious",
+          "Personalised treatment planning for every patient",
+          "GDC-registered dentists at a CQC-registered practice",
+        ],
+      },
+      {
+        kind: "prose",
+        eyebrow: "Serving London",
+        heading: "Root Canal Treatment Near You",
+        paragraphs: [
+          "Our London practice welcomes patients from across the city and surrounding areas who are seeking root canal treatment or assessment for tooth pain. Whether you are searching for root canal treatment near you or need help with dental discomfort, we are here to support you.",
+          "Conveniently located in London with excellent transport links",
+        ],
+      },
+      {
+        kind: "faq",
+        heading: "Frequently Asked Questions",
+        items: [
+          {
+            q: "What is root canal treatment?",
+            a: "Root canal treatment is a procedure to remove infected or damaged tissue from inside a tooth. The root canals are then cleaned and sealed to help preserve the natural tooth. It is carried out under local anaesthetic to help keep you comfortable.",
+          },
+          {
+            q: "Is root canal treatment painful?",
+            a: "Local anaesthetic is used during the procedure to help keep you comfortable. Some patients may experience mild discomfort afterwards, which typically settles within a few days. Your dentist will discuss what to expect and how to manage any post-treatment sensitivity.",
+          },
+          {
+            q: "How long does a root canal take?",
+            a: "The length of treatment depends on the tooth involved and the complexity of the case. Treatment may be completed in one or more appointments. Your dentist will provide an estimated timeline as part of your personalised treatment plan.",
+          },
+          {
+            q: "Can a root canal save my tooth?",
+            a: "Root canal treatment aims to preserve the natural tooth by removing infection from inside it. In many cases, treatment can help retain a tooth that might otherwise need to be extracted. Outcomes depend on the individual clinical situation.",
+          },
+          {
+            q: "What happens if I delay treatment?",
+            a: "If an infection inside a tooth is left untreated, it may worsen over time and could affect the surrounding tissues. Early assessment allows your dentist to discuss the most appropriate options for your situation before the condition progresses.",
+          },
+        ],
+      },
+      smileGallery(),
+    ],
+  },
 };
