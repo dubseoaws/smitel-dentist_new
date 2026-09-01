@@ -10,15 +10,23 @@ import {
   SITE,
 } from "@/lib/site-data";
 
-const RIGHT_LINKS = ["Membership", "Contact Us", "Fees", "Results", "Blog"];
+const RIGHT_LINKS = ["Fees", "Results", "Blog"];
+
+const ABOUT_LINKS = [
+  { label: "Your Dentists", href: "/team" },
+  { label: "Contact Us", href: "/contact" },
+  { label: "Membership", href: "/membership" },
+];
 
 export default function Header() {
   const [open, setOpen] = useState(false);
   const [mobileTreatments, setMobileTreatments] = useState(false);
+  const [mobileAbout, setMobileAbout] = useState(false);
 
   const closeAll = () => {
     setOpen(false);
     setMobileTreatments(false);
+    setMobileAbout(false);
   };
 
   return (
@@ -43,12 +51,42 @@ export default function Header() {
               >
                 Home
               </Link>
-              <Link
-                href="/team"
-                className="px-3.5 py-2 font-label text-[11px] font-semibold tracking-[0.16em] uppercase text-ink hover:text-gold-deep transition-colors"
-              >
-                Your Dentists
-              </Link>
+              {/* About Us dropdown */}
+              <div className="group/about relative">
+                <Link
+                  href="/team"
+                  className="px-3.5 py-2 font-label text-[11px] font-semibold tracking-[0.16em] uppercase text-ink hover:text-gold-deep transition-colors inline-flex items-center gap-1.5"
+                >
+                  About Us
+                  <svg
+                    viewBox="0 0 12 12"
+                    className="h-3 w-3 transition-transform group-hover/about:rotate-180"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.6"
+                    aria-hidden
+                  >
+                    <path
+                      d="M2.5 4.5 6 8l3.5-3.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </Link>
+                <div className="invisible opacity-0 translate-y-2 group-hover/about:visible group-hover/about:opacity-100 group-hover/about:translate-y-0 transition-all duration-200 absolute left-1/2 -translate-x-1/2 top-full pt-4 z-50">
+                  <div className="w-60 rounded-3xl bg-white shadow-2xl shadow-ink/15 border border-ink/6 p-3">
+                    {ABOUT_LINKS.map((l) => (
+                      <Link
+                        key={l.href}
+                        href={l.href}
+                        className="block rounded-2xl px-4 py-3 text-sm font-medium text-ink hover:bg-cream transition-colors"
+                      >
+                        {l.label}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              </div>
 
               {/* Treatments mega dropdown */}
               <div className="group relative">
@@ -218,13 +256,34 @@ export default function Header() {
             >
               Home
             </Link>
-            <Link
-              href="/team"
-              onClick={closeAll}
-              className="block rounded-2xl px-4 py-3 text-base font-medium text-ink hover:bg-ink/5"
+            <button
+              onClick={() => setMobileAbout(!mobileAbout)}
+              aria-expanded={mobileAbout}
+              className="flex w-full items-center justify-between rounded-2xl px-4 py-3 text-base font-medium text-ink hover:bg-ink/5"
             >
-              Your Dentists
-            </Link>
+              About Us
+              <span
+                className={`transition-transform text-ink-soft ${
+                  mobileAbout ? "rotate-180" : ""
+                }`}
+              >
+                ▾
+              </span>
+            </button>
+            {mobileAbout && (
+              <div className="ml-3 pl-4 border-l border-ink/10 space-y-1 py-2">
+                {ABOUT_LINKS.map((l) => (
+                  <Link
+                    key={l.href}
+                    href={l.href}
+                    onClick={closeAll}
+                    className="block py-1.5 text-sm text-ink-soft hover:text-gold-deep"
+                  >
+                    {l.label}
+                  </Link>
+                ))}
+              </div>
+            )}
 
             <button
               onClick={() => setMobileTreatments(!mobileTreatments)}
