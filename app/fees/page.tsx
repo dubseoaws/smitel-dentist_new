@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { FEE_SECTIONS, SITE, IMAGES } from "@/lib/site-data";
+import MeetExperts from "@/components/MeetExperts";
 
 export const metadata: Metadata = {
   title: "Fees",
@@ -26,7 +27,7 @@ export default function FeesPage() {
             href={SITE.membershipUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-8 inline-block rounded-full bg-ink text-ivory px-8 py-3.5 text-xs font-bold tracking-widest hover:bg-gold-deep transition-colors"
+            className="mt-8 btn-primary"
           >
             JOIN MEMBERSHIP NOW
           </a>
@@ -62,13 +63,19 @@ export default function FeesPage() {
             </p>
             <div className="flex justify-between text-sm border-b border-ivory/10 pb-3">
               <span className="text-ivory/70">Non-Member Price</span>
-              <span>From £1,095.00</span>
+              <span className="font-display text-xl line-through decoration-ivory/40">
+                From £1,095.00
+              </span>
             </div>
-            <div className="flex justify-between text-sm border-b border-ivory/10 pb-3">
-              <span className="text-ivory/70">Member&rsquo;s Price</span>
-              <span className="text-gold font-semibold">From £547.50</span>
+            <div className="flex items-baseline justify-between border-b border-ivory/10 pb-3">
+              <span className="text-sm text-ivory/70">Member&rsquo;s Price</span>
+              <span className="font-display text-4xl sm:text-5xl font-semibold text-gold">
+                From £547.50
+              </span>
             </div>
-            <p className="font-display text-2xl pt-2">You Save £547.50 Instantly</p>
+            <p className="inline-block bg-gold px-4 py-2 font-display text-2xl font-semibold text-ink">
+              You Save £547.50 Instantly
+            </p>
             <p className="text-xs text-ivory/60">
               That savings alone pays for over 2 years of membership!
             </p>
@@ -82,7 +89,7 @@ export default function FeesPage() {
           <div className="grid grid-cols-3 px-6 py-4 bg-ink text-ivory text-[11px] font-bold tracking-widest rounded-xl">
             <span>TREATMENT</span>
             <span className="text-right">NON-MEMBER</span>
-            <span className="text-right">MEMBER (50% OFF)</span>
+            <span className="text-right text-gold">MEMBER (50% OFF)</span>
           </div>
           {FEE_SECTIONS.map((section) => (
             <div key={section.title} className="rounded-2xl bg-white border border-ink/8 overflow-hidden">
@@ -90,13 +97,17 @@ export default function FeesPage() {
               {section.rows.map((row) => (
                 <div
                   key={row.name}
-                  className="grid grid-cols-3 px-6 py-3.5 text-sm border-t border-ink/6"
+                  className="grid grid-cols-3 items-baseline px-6 py-3.5 text-sm border-t border-ink/6"
                 >
-                  <span>{row.name}</span>
-                  <span className="text-right text-ink-soft">{row.standard}</span>
+                  <span className="font-medium">{row.name}</span>
+                  <span className="text-right font-display text-lg text-ink-soft">
+                    {row.standard}
+                  </span>
                   <span
-                    className={`text-right font-semibold ${
-                      row.member === "Not eligible" ? "text-ink-soft" : "text-gold-deep"
+                    className={`text-right ${
+                      row.member === "Not eligible"
+                        ? "text-ink-soft"
+                        : "font-display text-2xl font-semibold text-gold-deep"
                     }`}
                   >
                     {row.member}
@@ -172,6 +183,8 @@ export default function FeesPage() {
           </div>
         </div>
       </section>
+
+      <MeetExperts limit={3} tone="cream" />
     </>
   );
 }

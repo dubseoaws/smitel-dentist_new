@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import TreatmentCard from "@/components/TreatmentCard";
 import MembershipBanner from "@/components/MembershipBanner";
+import MeetExperts from "@/components/MeetExperts";
 import { TREATMENT_CATEGORIES } from "@/lib/site-data";
 
 export const metadata: Metadata = {
@@ -64,12 +65,14 @@ export default function TreatmentsPage() {
           </p>
           <Link
             href="/booking"
-            className="inline-block rounded-full bg-ink text-ivory px-8 py-3.5 text-sm font-semibold hover:bg-gold-deep transition-colors"
+            className="btn-primary"
           >
             Book Consultation: £95
           </Link>
         </div>
       </section>
+
+      <MeetExperts limit={3} tone="cream" />
 
       <MembershipBanner />
     </>

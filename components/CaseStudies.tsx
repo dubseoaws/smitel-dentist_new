@@ -9,8 +9,8 @@ export default function CaseStudies() {
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-14">
           <div className="max-w-xl space-y-4">
             <p className="eyebrow">Transformations</p>
-            <h2 className="font-display text-4xl sm:text-5xl font-bold tracking-tight">
-              Real people, real smiles<span className="text-gold">.</span>
+            <h2 className="font-display text-4xl sm:text-5xl">
+              Real people, real smiles
             </h2>
             <p className="text-ink-soft leading-relaxed">
               We take pride in changing lives, one smile at a time. Browse our gallery of
@@ -19,7 +19,7 @@ export default function CaseStudies() {
           </div>
           <Link
             href="/results-london"
-            className="rounded-full border border-ink/15 px-7 py-3.5 text-sm font-semibold hover:border-gold-deep hover:text-gold-deep transition-colors whitespace-nowrap self-start lg:self-auto"
+            className="border border-ink/20 px-7 py-3.5 font-label text-[11px] font-bold tracking-[0.18em] uppercase hover:border-gold-deep hover:text-gold-deep transition-colors whitespace-nowrap self-start lg:self-auto"
           >
             View all case studies →
           </Link>
@@ -29,10 +29,10 @@ export default function CaseStudies() {
           {CASE_STUDIES.map((cs) => (
             <article
               key={cs.title}
-              className="rounded-[2rem] bg-white border border-ink/6 p-3"
+              className="bg-white border border-ink/10 p-3"
             >
               <div className="grid grid-cols-2 gap-2">
-                <figure className="relative h-52 sm:h-64 rounded-[1.6rem] overflow-hidden">
+                <figure className="relative h-52 sm:h-64 overflow-hidden">
                   <Image
                     src={cs.before}
                     alt={`Before ${cs.title} - patient presentation`}
@@ -40,11 +40,11 @@ export default function CaseStudies() {
                     className="object-cover"
                     sizes="(max-width: 1024px) 50vw, 25vw"
                   />
-                  <figcaption className="absolute bottom-3 left-3 rounded-full bg-ink/80 backdrop-blur text-ivory font-label text-[10px] font-bold tracking-[0.2em] px-3.5 py-1.5">
+                  <figcaption className="absolute bottom-3 left-3 bg-ink/85 backdrop-blur text-ivory font-label text-[10px] font-bold tracking-[0.2em] px-3.5 py-1.5">
                     BEFORE
                   </figcaption>
                 </figure>
-                <figure className="relative h-52 sm:h-64 rounded-[1.6rem] overflow-hidden">
+                <figure className="relative h-52 sm:h-64 overflow-hidden">
                   <Image
                     src={cs.after}
                     alt={`After ${cs.title} - dental transformation result`}
@@ -52,13 +52,13 @@ export default function CaseStudies() {
                     className="object-cover"
                     sizes="(max-width: 1024px) 50vw, 25vw"
                   />
-                  <figcaption className="absolute bottom-3 left-3 rounded-full bg-gold text-ink font-label text-[10px] font-bold tracking-[0.2em] px-3.5 py-1.5">
+                  <figcaption className="absolute bottom-3 left-3 bg-gold text-ink font-label text-[10px] font-bold tracking-[0.2em] px-3.5 py-1.5">
                     AFTER
                   </figcaption>
                 </figure>
               </div>
               <div className="px-4 pt-5 pb-4 space-y-2.5">
-                <h3 className="font-display text-xl font-bold">{cs.title}</h3>
+                <h3 className="font-display text-xl font-semibold">{cs.title}</h3>
                 <p className="text-sm text-ink-soft leading-relaxed line-clamp-3">
                   {cs.description}
                 </p>

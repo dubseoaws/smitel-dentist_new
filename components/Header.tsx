@@ -10,28 +10,52 @@ import {
   SITE,
 } from "@/lib/site-data";
 
-const RIGHT_LINKS = ["Membership", "Contact Us", "Fees", "Results", "Blog"];
+const RIGHT_LINKS = ["Fees", "Results", "Blog"];
+
+const ABOUT_LINKS = [
+  { label: "Your Dentists", href: "/team" },
+  { label: "Contact Us", href: "/contact" },
+  { label: "Membership", href: "/membership" },
+];
+
+const NAV_LINK =
+  "px-4 py-2.5 font-label text-[13px] font-bold tracking-[0.08em] uppercase text-ink hover:text-gold-deep transition-colors";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
   const [mobileTreatments, setMobileTreatments] = useState(false);
+  const [mobileAbout, setMobileAbout] = useState(false);
+  const [desktopMenu, setDesktopMenu] = useState<string | null>(null);
 
   const closeAll = () => {
     setOpen(false);
     setMobileTreatments(false);
+    setMobileAbout(false);
+    setDesktopMenu(null);
   };
+
+  // Hover opens the panel; clicking a link closes it so it doesn't linger under the cursor.
+  const hoverProps = (key: string) => ({
+    onMouseEnter: () => setDesktopMenu(key),
+    onMouseLeave: () => setDesktopMenu(null),
+  });
+
+  const panelState = (key: string) =>
+    desktopMenu === key
+      ? "visible opacity-100 translate-y-0"
+      : "invisible opacity-0 translate-y-2";
 
   return (
     <>
-      <div className="bg-ink text-ivory/90 text-center py-2 px-4 font-label text-[11px] tracking-[0.18em]">
-        <Link href="/membership" className="hover:text-gold transition-colors">
+      <div className="bg-ink text-ivory text-center py-2.5 px-4 font-label text-[11px] tracking-[0.24em] uppercase">
+        <Link href="/membership" className="text-gold hover:text-ivory transition-colors">
           MEMBERS: 50% OFF · £20/MONTH
         </Link>
       </div>
 
-      <header className="sticky top-3 z-50 px-3 sm:px-5">
-        <div className="mx-auto max-w-6xl glass rounded-[2rem] lg:rounded-full shadow-lg shadow-ink/5">
-          <div className="flex items-center justify-between pl-4 pr-2 py-2">
+      <header className="sticky top-0 z-50 bg-ivory/95 backdrop-blur border-b border-ink/10 shadow-sm shadow-ink/5">
+        <div className="mx-auto max-w-7xl">
+          <div className="flex items-center justify-between px-4 sm:px-8 py-3">
             <Link href="/" onClick={closeAll} aria-label="Smile Dentist home">
               <Logo />
             </Link>
@@ -39,27 +63,68 @@ export default function Header() {
             <nav className="hidden lg:flex items-center">
               <Link
                 href="/"
-                className="rounded-full px-3.5 py-2 text-sm font-medium text-ink-soft hover:text-ink hover:bg-ink/5 transition-colors"
+                className={NAV_LINK}
               >
                 Home
               </Link>
-              <Link
-                href="/team"
-                className="rounded-full px-3.5 py-2 text-sm font-medium text-ink-soft hover:text-ink hover:bg-ink/5 transition-colors"
-              >
-                Your Dentists
-              </Link>
+              {/* About Us dropdown */}
+              <div className="relative" {...hoverProps("about")}>
+                <Link
+                  href="/team"
+                  onClick={closeAll}
+                  className={`${NAV_LINK} inline-flex items-center gap-1.5`}
+                >
+                  About Us
+                  <svg
+                    viewBox="0 0 12 12"
+                    className={`h-3 w-3 transition-transform ${
+                      desktopMenu === "about" ? "rotate-180" : ""
+                    }`}
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.6"
+                    aria-hidden
+                  >
+                    <path
+                      d="M2.5 4.5 6 8l3.5-3.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </Link>
+                <div
+                  className={`transition-all duration-200 absolute left-1/2 -translate-x-1/2 top-full pt-4 z-50 ${panelState(
+                    "about",
+                  )}`}
+                >
+                  <div className="w-60 rounded-3xl bg-white shadow-2xl shadow-ink/15 border border-ink/6 p-3">
+                    {ABOUT_LINKS.map((l) => (
+                      <Link
+                        key={l.href}
+                        href={l.href}
+                        onClick={closeAll}
+                        className="block rounded-2xl px-4 py-3 text-sm font-medium text-ink hover:bg-cream transition-colors"
+                      >
+                        {l.label}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              </div>
 
               {/* Treatments mega dropdown */}
-              <div className="group relative">
+              <div className="relative" {...hoverProps("treatments")}>
                 <Link
                   href="/treatments"
-                  className="rounded-full px-3.5 py-2 text-sm font-medium text-ink-soft hover:text-ink hover:bg-ink/5 transition-colors inline-flex items-center gap-1.5"
+                  onClick={closeAll}
+                  className={`${NAV_LINK} inline-flex items-center gap-1.5`}
                 >
                   Treatments
                   <svg
                     viewBox="0 0 12 12"
-                    className="h-3 w-3 transition-transform group-hover:rotate-180"
+                    className={`h-3 w-3 transition-transform ${
+                      desktopMenu === "treatments" ? "rotate-180" : ""
+                    }`}
                     fill="none"
                     stroke="currentColor"
                     strokeWidth="1.6"
@@ -73,7 +138,11 @@ export default function Header() {
                   </svg>
                 </Link>
 
-                <div className="invisible opacity-0 translate-y-2 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-200 absolute left-1/2 -translate-x-1/2 top-full pt-4 z-50">
+                <div
+                  className={`transition-all duration-200 absolute left-1/2 -translate-x-1/2 top-full pt-4 z-50 ${panelState(
+                    "treatments",
+                  )}`}
+                >
                   <div className="w-[820px] rounded-[2rem] bg-white shadow-2xl shadow-ink/15 border border-ink/6 p-8">
                     <div className="grid grid-cols-3 gap-x-10 gap-y-7">
                       {TREATMENT_CATEGORIES.map((cat) => (
@@ -86,6 +155,7 @@ export default function Header() {
                               <li key={t.slug}>
                                 <Link
                                   href={`/${t.slug}`}
+                                  onClick={closeAll}
                                   className="block text-[13px] text-ink-soft hover:text-gold-deep py-0.5 transition-colors"
                                 >
                                   {t.name}
@@ -102,6 +172,7 @@ export default function Header() {
                           <Link
                             key={c.href}
                             href={c.href}
+                            onClick={closeAll}
                             className="rounded-full bg-cream px-4 py-2 text-xs font-semibold text-ink hover:bg-gold transition-colors"
                           >
                             {c.label}
@@ -110,6 +181,7 @@ export default function Header() {
                       </div>
                       <Link
                         href="/treatments"
+                        onClick={closeAll}
                         className="rounded-full bg-ink text-ivory px-5 py-2.5 text-xs font-bold hover:bg-gold-deep transition-colors"
                       >
                         View All Treatments →
@@ -120,15 +192,18 @@ export default function Header() {
               </div>
 
               {/* Locations dropdown */}
-              <div className="group/loc relative">
+              <div className="relative" {...hoverProps("locations")}>
                 <Link
                   href="/contact"
-                  className="rounded-full px-3.5 py-2 text-sm font-medium text-ink-soft hover:text-ink hover:bg-ink/5 transition-colors inline-flex items-center gap-1.5"
+                  onClick={closeAll}
+                  className={`${NAV_LINK} inline-flex items-center gap-1.5`}
                 >
                   Locations
                   <svg
                     viewBox="0 0 12 12"
-                    className="h-3 w-3 transition-transform group-hover/loc:rotate-180"
+                    className={`h-3 w-3 transition-transform ${
+                      desktopMenu === "locations" ? "rotate-180" : ""
+                    }`}
                     fill="none"
                     stroke="currentColor"
                     strokeWidth="1.6"
@@ -141,12 +216,17 @@ export default function Header() {
                     />
                   </svg>
                 </Link>
-                <div className="invisible opacity-0 translate-y-2 group-hover/loc:visible group-hover/loc:opacity-100 group-hover/loc:translate-y-0 transition-all duration-200 absolute left-1/2 -translate-x-1/2 top-full pt-4 z-50">
+                <div
+                  className={`transition-all duration-200 absolute left-1/2 -translate-x-1/2 top-full pt-4 z-50 ${panelState(
+                    "locations",
+                  )}`}
+                >
                   <div className="w-72 rounded-3xl bg-white shadow-2xl shadow-ink/15 border border-ink/6 p-3">
                     {NAV_CLINIC_LINKS.map((c) => (
                       <Link
                         key={c.href}
                         href={c.href}
+                        onClick={closeAll}
                         className="block rounded-2xl px-4 py-3 text-sm font-medium text-ink hover:bg-cream transition-colors"
                       >
                         {c.label}
@@ -160,23 +240,31 @@ export default function Header() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="rounded-full px-3.5 py-2 text-sm font-medium text-ink-soft hover:text-ink hover:bg-ink/5 transition-colors"
+                  className={NAV_LINK}
                 >
                   {link.label}
                 </Link>
               ))}
             </nav>
 
-            <div className="hidden lg:flex items-center gap-2">
+            <div className="hidden lg:flex items-center gap-4">
               <a
                 href={SITE.phoneHref}
-                className="font-label text-xs tracking-wider text-ink-soft hover:text-ink transition-colors px-2"
+                className="flex items-center gap-2 font-label text-[15px] font-bold tracking-[0.02em] text-ink hover:text-gold-deep transition-colors px-2"
               >
+                <svg
+                  viewBox="0 0 24 24"
+                  className="h-4 w-4 text-gold-deep"
+                  fill="currentColor"
+                  aria-hidden
+                >
+                  <path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.58 3.6a1 1 0 0 1-.25 1l-2.23 2.2Z" />
+                </svg>
                 {SITE.phone}
               </a>
               <Link
                 href="/booking"
-                className="rounded-full bg-ink text-ivory px-6 py-3 text-sm font-semibold hover:bg-gold-deep transition-colors"
+                className="bg-gold text-ink whitespace-nowrap px-7 py-3.5 font-label text-[13px] font-bold tracking-[0.1em] uppercase shadow-[0_8px_20px_-10px_rgba(12,35,64,0.6)] hover:bg-ink hover:text-ivory transition-colors"
               >
                 Book Online
               </Link>
@@ -210,7 +298,7 @@ export default function Header() {
         </div>
 
         {open && (
-          <nav className="lg:hidden mx-auto max-w-6xl mt-2 glass rounded-3xl p-5 space-y-1 shadow-xl shadow-ink/10 max-h-[70vh] overflow-y-auto">
+          <nav className="lg:hidden mx-auto max-w-6xl bg-ivory border-t border-ink/10 p-5 space-y-1 shadow-xl shadow-ink/10 max-h-[70vh] overflow-y-auto">
             <Link
               href="/"
               onClick={closeAll}
@@ -218,13 +306,34 @@ export default function Header() {
             >
               Home
             </Link>
-            <Link
-              href="/team"
-              onClick={closeAll}
-              className="block rounded-2xl px-4 py-3 text-base font-medium text-ink hover:bg-ink/5"
+            <button
+              onClick={() => setMobileAbout(!mobileAbout)}
+              aria-expanded={mobileAbout}
+              className="flex w-full items-center justify-between rounded-2xl px-4 py-3 text-base font-medium text-ink hover:bg-ink/5"
             >
-              Your Dentists
-            </Link>
+              About Us
+              <span
+                className={`transition-transform text-ink-soft ${
+                  mobileAbout ? "rotate-180" : ""
+                }`}
+              >
+                ▾
+              </span>
+            </button>
+            {mobileAbout && (
+              <div className="ml-3 pl-4 border-l border-ink/10 space-y-1 py-2">
+                {ABOUT_LINKS.map((l) => (
+                  <Link
+                    key={l.href}
+                    href={l.href}
+                    onClick={closeAll}
+                    className="block py-1.5 text-sm text-ink-soft hover:text-gold-deep"
+                  >
+                    {l.label}
+                  </Link>
+                ))}
+              </div>
+            )}
 
             <button
               onClick={() => setMobileTreatments(!mobileTreatments)}
@@ -307,14 +416,14 @@ export default function Header() {
             <div className="pt-3 grid grid-cols-2 gap-2">
               <a
                 href={SITE.phoneHref}
-                className="rounded-full border border-ink/15 text-center px-4 py-3 text-sm font-semibold"
+                className="border border-ink/20 text-center px-4 py-3 font-label text-[11px] font-bold tracking-[0.18em] uppercase"
               >
                 Call us
               </a>
               <Link
                 href="/booking"
                 onClick={closeAll}
-                className="rounded-full bg-ink text-ivory text-center px-4 py-3 text-sm font-semibold"
+                className="bg-gold-bright text-ink text-center px-4 py-3.5 font-label text-xs font-bold tracking-[0.1em] uppercase"
               >
                 Book Online
               </Link>

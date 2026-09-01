@@ -20,8 +20,10 @@ export const IMAGES = {
   signature: `${CLOUDINARY}/v1767202746/signature_1_dbtcsj.png`,
   heroBefore: `${CLOUDINARY}/v1767564169/Dr_kamran_from_composite_bonding_before_mnfazs.webp`,
   heroAfter: `${CLOUDINARY}/v1767564170/Dr_kamran_from_composite_bonding_after_g08wod.webp`,
-  heroMain: `${CLOUDINARY}/v1765805825/adobeStock_420986909-min_knbigb.jpg`,
+  heroMain: "/hero/periodontal-treatment.jpg",
   heroVeneers: `${CLOUDINARY}/v1765871030/Full-Smile-Transformation-with-20-Porcelain-Veneers-after_gnkzev.jpg`,
+  heroAligners: `${CLOUDINARY}/v1765805892/proaligners-home_xasqw8.jpg`,
+  heroImplant: "/hero/gum-contouring.jpg",
 };
 
 export type Treatment = {
@@ -53,7 +55,7 @@ export const TREATMENT_CATEGORIES: TreatmentCategory[] = [
           "A comprehensive, bespoke treatment plan designed to address multiple aesthetic and functional issues simultaneously.",
         standard: "POA",
         member: "POA",
-        image: `${CLOUDINARY}/v1765805825/adobeStock_420986909-min_knbigb.jpg`,
+        image: "/treatments/smile-makeover.jpg",
       },
       {
         slug: "teeth-whitening-london",

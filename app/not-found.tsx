@@ -8,7 +8,7 @@ export default function NotFound() {
         <h1 className="text-4xl tracking-tight">Page not found</h1>
         <Link
           href="/"
-          className="inline-block rounded-full bg-ink text-ivory px-8 py-3.5 text-sm font-semibold hover:bg-gold-deep transition-colors"
+          className="btn-primary"
         >
           Back to Home
         </Link>

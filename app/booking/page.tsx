@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { SITE } from "@/lib/site-data";
+import MeetExperts from "@/components/MeetExperts";
 
 export const metadata: Metadata = {
   title: "Book an Appointment",
@@ -9,6 +10,7 @@ export const metadata: Metadata = {
 
 export default function BookingPage() {
   return (
+    <>
     <section className="py-20 lg:py-28">
       <div className="mx-auto max-w-2xl px-4 sm:px-6 text-center space-y-7">
         <p className="eyebrow">Book My Appointment</p>
@@ -20,7 +22,7 @@ export default function BookingPage() {
         <div className="flex flex-wrap justify-center gap-4">
           <a
             href={SITE.phoneHref}
-            className="rounded-full bg-ink text-ivory px-9 py-4 text-sm font-semibold hover:bg-gold-deep transition-colors"
+            className="btn-primary"
           >
             Call {SITE.phone}
           </a>
@@ -36,5 +38,7 @@ export default function BookingPage() {
         </p>
       </div>
     </section>
+    <MeetExperts limit={3} tone="cream" />
+    </>
   );
 }

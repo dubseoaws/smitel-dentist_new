@@ -14,7 +14,7 @@ function PlayButton({ large = false }: { large?: boolean }) {
       <svg
         viewBox="0 0 24 24"
         className={large ? "h-8 w-8 ml-1" : "h-5 w-5 ml-0.5"}
-        fill="#1D5FD0"
+        fill="#0C2340"
         aria-hidden
       >
         <path d="M8 5.5v13l11-6.5-11-6.5z" />
@@ -85,8 +85,8 @@ export default function VideoSection() {
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-12">
           <div className="max-w-xl space-y-4">
             <p className="eyebrow !text-gold before:!bg-gold">From Our Clinic</p>
-            <h2 className="font-display text-4xl sm:text-5xl font-bold tracking-tight">
-              Watch real stories<span className="text-gold">.</span>
+            <h2 className="font-display text-4xl sm:text-5xl">
+              Watch real stories
             </h2>
             <p className="text-ivory/60 leading-relaxed">
               Patient reviews, treatment explainers and behind-the-scenes from Dr. Yasha

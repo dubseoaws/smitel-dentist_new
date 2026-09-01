@@ -3,6 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import MembershipBanner from "@/components/MembershipBanner";
+import MeetExperts from "@/components/MeetExperts";
+import TreatmentBlocks from "@/components/TreatmentBlocks";
 import TreatmentCard from "@/components/TreatmentCard";
 import {
   ALL_TREATMENTS,
@@ -12,6 +14,7 @@ import {
   SITE,
   YASHA_FULL_BIO,
 } from "@/lib/site-data";
+import { TREATMENT_CONTENT } from "@/lib/treatment-content";
 
 type Params = { slug: string };
 
@@ -59,60 +62,95 @@ function TreatmentDetail({ slug }: { slug: string }) {
     c.treatments.some((t) => t.slug === slug)
   )!;
   const related = category.treatments.filter((t) => t.slug !== slug).slice(0, 3);
+  const content = TREATMENT_CONTENT[slug];
 
   return (
     <>
       <section className="bg-cream py-16 lg:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 grid gap-12 lg:grid-cols-2 lg:items-center">
           <div className="space-y-6">
-            <p className="eyebrow">{category.title}</p>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl tracking-tight">
-              {treatment.name}
+            <p className="eyebrow">{content?.kicker ?? category.title}</p>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl leading-[1.08] tracking-tight">
+              {content?.h1 ?? treatment.name}
             </h1>
-            <p className="text-lg text-ink-soft leading-relaxed">{treatment.description}</p>
+            <span className="block h-px w-20 bg-gold" aria-hidden />
+            <p className="text-lg sm:text-xl text-ink-soft leading-[1.7]">
+              {content?.intro ?? treatment.description}
+            </p>
 
-            <div className="flex gap-8 border-t border-ink/10 pt-6">
-              <div>
-                <p className="text-[10px] font-bold tracking-widest uppercase text-ink-soft">
+            {content?.badges && (
+              <div className="flex flex-wrap gap-3">
+                {content.badges.map((badge) => (
+                  <span
+                    key={badge}
+                    className={`px-4 py-2 font-label text-[11px] font-bold tracking-[0.16em] uppercase ${
+                      badge.includes("£")
+                        ? "border border-gold/60 bg-gold/10 text-gold-deep"
+                        : "border border-ink/15 text-ink-soft"
+                    }`}
+                  >
+                    {badge}
+                  </span>
+                ))}
+              </div>
+            )}
+
+            <div className="flex flex-wrap items-stretch gap-px border border-gold/40 bg-gold/25">
+              <div className="flex-1 min-w-[150px] bg-ivory px-6 py-5">
+                <p className="text-[11px] font-bold tracking-widest uppercase text-ink-soft">
                   Standard
                 </p>
-                <p className="font-display text-2xl">{treatment.standard}</p>
-              </div>
-              <div>
-                <p className="text-[10px] font-bold tracking-widest uppercase text-gold-deep">
-                  Member&rsquo;s Price
+                <p className="mt-1.5 font-display text-3xl text-ink-soft">
+                  {treatment.standard}
                 </p>
-                <p className="font-display text-2xl text-gold-deep">{treatment.member}</p>
+              </div>
+              <div className="flex-1 min-w-[180px] bg-gold/10 px-6 py-5">
+                <p className="flex items-center gap-2 text-[11px] font-bold tracking-widest uppercase text-gold-deep">
+                  Member&rsquo;s Price
+                  <span className="bg-gold-deep px-1.5 py-0.5 text-[9px] tracking-[0.12em] text-ivory">
+                    50% Off
+                  </span>
+                </p>
+                <p className="mt-1.5 font-display text-4xl sm:text-5xl font-semibold text-gold-deep">
+                  {treatment.member}
+                </p>
               </div>
             </div>
 
             <div className="flex flex-wrap gap-4">
               <Link
                 href="/booking"
-                className="rounded-full bg-ink text-ivory px-8 py-3.5 text-sm font-semibold hover:bg-gold-deep transition-colors"
+                className="btn-primary"
               >
                 Book My Appointment
               </Link>
               <a
                 href={SITE.phoneHref}
-                className="rounded-full border border-ink/25 px-8 py-3.5 text-sm font-semibold hover:border-gold hover:text-gold-deep transition-colors"
+                className="btn-outline"
               >
                 Call {SITE.phone}
               </a>
             </div>
           </div>
           <Image
-            src={treatment.image}
-            alt={`${treatment.name} - professional dental treatment in South Kensington`}
+            src={content?.hero?.src ?? treatment.image}
+            alt={
+              content?.hero?.alt ??
+              `${treatment.name} - professional dental treatment in South Kensington`
+            }
             width={720}
             height={560}
-            className="rounded-2xl object-cover w-full h-80 lg:h-[460px]"
+            className="object-cover w-full h-80 lg:h-[460px] shadow-2xl shadow-ink/15"
             priority
           />
         </div>
       </section>
 
-      <section className="py-16 lg:py-20">
+      {content && <TreatmentBlocks blocks={content.blocks} />}
+
+      <MeetExperts limit={3} />
+
+      <section className="bg-cream py-16 lg:py-20">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 text-center space-y-5">
           <h2 className="text-2xl sm:text-3xl tracking-tight">Not sure what you need?</h2>
           <p className="text-ink-soft leading-relaxed">
@@ -121,7 +159,7 @@ function TreatmentDetail({ slug }: { slug: string }) {
           </p>
           <Link
             href="/booking"
-            className="inline-block rounded-full bg-ink text-ivory px-8 py-3.5 text-sm font-semibold hover:bg-gold-deep transition-colors"
+            className="btn-primary"
           >
             Book Consultation: £95
           </Link>
@@ -129,7 +167,7 @@ function TreatmentDetail({ slug }: { slug: string }) {
       </section>
 
       {related.length > 0 && (
-        <section className="bg-cream py-16 lg:py-20">
+        <section className="py-16 lg:py-20">
           <div className="mx-auto max-w-7xl px-4 sm:px-6">
             <div className="flex items-end justify-between gap-6 mb-10">
               <h2 className="text-3xl tracking-tight">More {category.title}</h2>
@@ -222,13 +260,13 @@ function TeamDetail({ slug }: { slug: string }) {
             <div className="flex flex-wrap gap-4">
               <Link
                 href="/booking"
-                className="rounded-full bg-ink text-ivory px-8 py-3.5 text-sm font-semibold hover:bg-gold-deep transition-colors"
+                className="btn-primary"
               >
                 Book My Appointment
               </Link>
               <Link
                 href="/team"
-                className="rounded-full border border-ink/25 px-8 py-3.5 text-sm font-semibold hover:border-gold hover:text-gold-deep transition-colors"
+                className="btn-outline"
               >
                 Meet Full Team
               </Link>
@@ -236,6 +274,7 @@ function TeamDetail({ slug }: { slug: string }) {
           </div>
         </div>
       </section>
+      <MeetExperts limit={3} tone="cream" />
       <MembershipBanner />
     </>
   );
@@ -306,18 +345,20 @@ function ClinicDetail({ slug }: { slug: string }) {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 mt-10 flex flex-wrap gap-4">
           <Link
             href="/booking"
-            className="rounded-full bg-ink text-ivory px-8 py-3.5 text-sm font-semibold hover:bg-gold-deep transition-colors"
+            className="btn-primary"
           >
             Book My Appointment
           </Link>
           <a
             href={SITE.phoneHref}
-            className="rounded-full border border-ink/25 px-8 py-3.5 text-sm font-semibold hover:border-gold hover:text-gold-deep transition-colors"
+            className="btn-outline"
           >
             Call {SITE.phone}
           </a>
         </div>
       </section>
+
+      <MeetExperts limit={3} tone="cream" />
 
       <MembershipBanner />
     </>

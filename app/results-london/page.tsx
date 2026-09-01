@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import CaseStudies from "@/components/CaseStudies";
 import MembershipBanner from "@/components/MembershipBanner";
+import MeetExperts from "@/components/MeetExperts";
 
 export const metadata: Metadata = {
   title: "Real People, Real Smiles",
@@ -24,6 +25,7 @@ export default function ResultsPage() {
         </div>
       </section>
       <CaseStudies />
+      <MeetExperts limit={3} tone="cream" />
       <MembershipBanner />
     </>
   );
