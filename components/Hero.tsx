@@ -141,20 +141,25 @@ export default function Hero() {
               >
                 ‹
               </button>
-              <div className="flex gap-2">
+              <div className="flex gap-3">
                 {SLIDES.map((slide, i) => (
                   <button
                     key={slide.lead}
                     onClick={() => setActive(i)}
-                    aria-label={`Go to slide ${i + 1}`}
+                    aria-label={`${slide.lead} ${slide.tail}`}
                     aria-current={i === active}
-                    className={`h-8 w-10 border font-label text-xs transition-colors ${
-                      i === active
-                        ? "border-gold text-gold"
-                        : "border-ivory/25 text-ivory/40 hover:border-ivory/50"
-                    }`}
+                    className="group py-3"
                   >
-                    {String(i + 1).padStart(2, "0")}
+                    <span className="block h-[3px] w-12 bg-ivory/25 overflow-hidden">
+                      {i === active ? (
+                        <span
+                          key={`bar-${active}`}
+                          className="slide-bar block h-full bg-gold-bright"
+                        />
+                      ) : (
+                        <span className="block h-full w-0 bg-gold-bright transition-[width] duration-300 group-hover:w-full" />
+                      )}
+                    </span>
                   </button>
                 ))}
               </div>
@@ -183,7 +188,7 @@ export default function Hero() {
         {/* Vertical booking tab */}
         <Link
           href="/booking"
-          className="btn-gold hidden lg:block absolute right-0 top-1/2 -translate-y-1/2 z-20 [writing-mode:vertical-rl] py-6 px-2.5"
+          className="btn-gold btn-gold-tab hidden lg:block absolute right-0 top-1/2 -translate-y-1/2 z-20 [writing-mode:vertical-rl]"
         >
           Book Online
         </Link>

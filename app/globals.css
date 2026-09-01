@@ -7,6 +7,7 @@
   --color-ink: #0c2340;
   --color-ink-soft: #5a6478;
   --color-gold: #bfa168;
+  --color-gold-bright: #dcb976;
   --color-gold-deep: #8a6f3c;
   --color-sage: #9fa9ba;
   --font-display: var(--font-cormorant), Georgia, serif;
@@ -104,19 +105,55 @@ h3 {
 /* Solid gold CTA */
 .btn-gold {
   display: inline-block;
-  background: var(--color-gold);
+  background: var(--color-gold-bright);
   color: var(--color-ink);
-  padding: 0.9375rem 2.5rem;
+  padding: 1.0625rem 2.75rem;
   font-family: var(--font-label);
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  transition: background-color 0.2s, color 0.2s;
+  box-shadow: 0 8px 24px -10px rgba(0, 0, 0, 0.65);
+  transition: background-color 0.2s, transform 0.2s, box-shadow 0.2s;
 }
 .btn-gold:hover {
-  background: var(--color-ivory);
-  color: var(--color-ink);
+  background: #e8c884;
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px -12px rgba(0, 0, 0, 0.75);
+}
+.btn-gold:active {
+  transform: translateY(0);
+}
+
+.btn-gold-tab {
+  padding: 1.75rem 0.75rem;
+  font-size: 0.6875rem;
+  letter-spacing: 0.16em;
+}
+.btn-gold-tab:hover {
+  transform: translateX(-2px);
+}
+
+.btn-primary:focus-visible,
+.btn-outline:focus-visible,
+.btn-gold:focus-visible {
+  outline: 2px solid var(--color-gold-bright);
+  outline-offset: 3px;
+}
+
+/* Hero slide timing bar */
+.slide-bar {
+  width: 100%;
+  transform-origin: left;
+  animation: slide-bar 7s linear forwards;
+}
+@keyframes slide-bar {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
 }
 
 /* Hero image dissolving left-to-right into the navy field */
