@@ -9,7 +9,7 @@ import { SITE, IMAGES } from "@/lib/site-data";
 const SLIDES = [
   {
     image: IMAGES.heroMain,
-    alt: "Smile Makeover - dental treatment at Smile Dentist South Kensington",
+    alt: "Periodontal treatment - dental treatment at Smile Dentist South Kensington",
     lead: "The New Standard",
     tail: "For Cosmetic Dentistry",
   },
@@ -21,7 +21,7 @@ const SLIDES = [
   },
   {
     image: IMAGES.heroImplant,
-    alt: "Dental Implants - dental treatment at Smile Dentist South Kensington",
+    alt: "Gum contouring - dental treatment at Smile Dentist South Kensington",
     lead: "Affordable Luxury",
     tail: "Across Central London",
   },

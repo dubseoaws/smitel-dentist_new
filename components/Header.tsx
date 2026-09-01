@@ -22,12 +22,25 @@ export default function Header() {
   const [open, setOpen] = useState(false);
   const [mobileTreatments, setMobileTreatments] = useState(false);
   const [mobileAbout, setMobileAbout] = useState(false);
+  const [desktopMenu, setDesktopMenu] = useState<string | null>(null);
 
   const closeAll = () => {
     setOpen(false);
     setMobileTreatments(false);
     setMobileAbout(false);
+    setDesktopMenu(null);
   };
+
+  // Hover opens the panel; clicking a link closes it so it doesn't linger under the cursor.
+  const hoverProps = (key: string) => ({
+    onMouseEnter: () => setDesktopMenu(key),
+    onMouseLeave: () => setDesktopMenu(null),
+  });
+
+  const panelState = (key: string) =>
+    desktopMenu === key
+      ? "visible opacity-100 translate-y-0"
+      : "invisible opacity-0 translate-y-2";
 
   return (
     <>
@@ -52,15 +65,18 @@ export default function Header() {
                 Home
               </Link>
               {/* About Us dropdown */}
-              <div className="group/about relative">
+              <div className="relative" {...hoverProps("about")}>
                 <Link
                   href="/team"
+                  onClick={closeAll}
                   className="px-3.5 py-2 font-label text-[11px] font-semibold tracking-[0.16em] uppercase text-ink hover:text-gold-deep transition-colors inline-flex items-center gap-1.5"
                 >
                   About Us
                   <svg
                     viewBox="0 0 12 12"
-                    className="h-3 w-3 transition-transform group-hover/about:rotate-180"
+                    className={`h-3 w-3 transition-transform ${
+                      desktopMenu === "about" ? "rotate-180" : ""
+                    }`}
                     fill="none"
                     stroke="currentColor"
                     strokeWidth="1.6"
@@ -73,12 +89,17 @@ export default function Header() {
                     />
                   </svg>
                 </Link>
-                <div className="invisible opacity-0 translate-y-2 group-hover/about:visible group-hover/about:opacity-100 group-hover/about:translate-y-0 transition-all duration-200 absolute left-1/2 -translate-x-1/2 top-full pt-4 z-50">
+                <div
+                  className={`transition-all duration-200 absolute left-1/2 -translate-x-1/2 top-full pt-4 z-50 ${panelState(
+                    "about",
+                  )}`}
+                >
                   <div className="w-60 rounded-3xl bg-white shadow-2xl shadow-ink/15 border border-ink/6 p-3">
                     {ABOUT_LINKS.map((l) => (
                       <Link
                         key={l.href}
                         href={l.href}
+                        onClick={closeAll}
                         className="block rounded-2xl px-4 py-3 text-sm font-medium text-ink hover:bg-cream transition-colors"
                       >
                         {l.label}
@@ -89,15 +110,18 @@ export default function Header() {
               </div>
 
               {/* Treatments mega dropdown */}
-              <div className="group relative">
+              <div className="relative" {...hoverProps("treatments")}>
                 <Link
                   href="/treatments"
+                  onClick={closeAll}
                   className="px-3.5 py-2 font-label text-[11px] font-semibold tracking-[0.16em] uppercase text-ink hover:text-gold-deep transition-colors inline-flex items-center gap-1.5"
                 >
                   Treatments
                   <svg
                     viewBox="0 0 12 12"
-                    className="h-3 w-3 transition-transform group-hover:rotate-180"
+                    className={`h-3 w-3 transition-transform ${
+                      desktopMenu === "treatments" ? "rotate-180" : ""
+                    }`}
                     fill="none"
                     stroke="currentColor"
                     strokeWidth="1.6"
@@ -111,7 +135,11 @@ export default function Header() {
                   </svg>
                 </Link>
 
-                <div className="invisible opacity-0 translate-y-2 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-200 absolute left-1/2 -translate-x-1/2 top-full pt-4 z-50">
+                <div
+                  className={`transition-all duration-200 absolute left-1/2 -translate-x-1/2 top-full pt-4 z-50 ${panelState(
+                    "treatments",
+                  )}`}
+                >
                   <div className="w-[820px] rounded-[2rem] bg-white shadow-2xl shadow-ink/15 border border-ink/6 p-8">
                     <div className="grid grid-cols-3 gap-x-10 gap-y-7">
                       {TREATMENT_CATEGORIES.map((cat) => (
@@ -124,6 +152,7 @@ export default function Header() {
                               <li key={t.slug}>
                                 <Link
                                   href={`/${t.slug}`}
+                                  onClick={closeAll}
                                   className="block text-[13px] text-ink-soft hover:text-gold-deep py-0.5 transition-colors"
                                 >
                                   {t.name}
@@ -140,6 +169,7 @@ export default function Header() {
                           <Link
                             key={c.href}
                             href={c.href}
+                            onClick={closeAll}
                             className="rounded-full bg-cream px-4 py-2 text-xs font-semibold text-ink hover:bg-gold transition-colors"
                           >
                             {c.label}
@@ -148,6 +178,7 @@ export default function Header() {
                       </div>
                       <Link
                         href="/treatments"
+                        onClick={closeAll}
                         className="rounded-full bg-ink text-ivory px-5 py-2.5 text-xs font-bold hover:bg-gold-deep transition-colors"
                       >
                         View All Treatments →
@@ -158,15 +189,18 @@ export default function Header() {
               </div>
 
               {/* Locations dropdown */}
-              <div className="group/loc relative">
+              <div className="relative" {...hoverProps("locations")}>
                 <Link
                   href="/contact"
+                  onClick={closeAll}
                   className="px-3.5 py-2 font-label text-[11px] font-semibold tracking-[0.16em] uppercase text-ink hover:text-gold-deep transition-colors inline-flex items-center gap-1.5"
                 >
                   Locations
                   <svg
                     viewBox="0 0 12 12"
-                    className="h-3 w-3 transition-transform group-hover/loc:rotate-180"
+                    className={`h-3 w-3 transition-transform ${
+                      desktopMenu === "locations" ? "rotate-180" : ""
+                    }`}
                     fill="none"
                     stroke="currentColor"
                     strokeWidth="1.6"
@@ -179,12 +213,17 @@ export default function Header() {
                     />
                   </svg>
                 </Link>
-                <div className="invisible opacity-0 translate-y-2 group-hover/loc:visible group-hover/loc:opacity-100 group-hover/loc:translate-y-0 transition-all duration-200 absolute left-1/2 -translate-x-1/2 top-full pt-4 z-50">
+                <div
+                  className={`transition-all duration-200 absolute left-1/2 -translate-x-1/2 top-full pt-4 z-50 ${panelState(
+                    "locations",
+                  )}`}
+                >
                   <div className="w-72 rounded-3xl bg-white shadow-2xl shadow-ink/15 border border-ink/6 p-3">
                     {NAV_CLINIC_LINKS.map((c) => (
                       <Link
                         key={c.href}
                         href={c.href}
+                        onClick={closeAll}
                         className="block rounded-2xl px-4 py-3 text-sm font-medium text-ink hover:bg-cream transition-colors"
                       >
                         {c.label}

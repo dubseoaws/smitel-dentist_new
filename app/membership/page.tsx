@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { SITE, MEMBERSHIP } from "@/lib/site-data";
+import MeetExperts from "@/components/MeetExperts";
 
 export const metadata: Metadata = {
   title: "Membership",
@@ -139,20 +140,20 @@ export default function MembershipPage() {
               <p className="text-[11px] font-bold tracking-widest text-ink-soft mb-3">
                 STANDARD FEES
               </p>
-              <div className="flex justify-between text-sm border-b border-ink/6 pb-2 mb-2">
-                <span>Dental Check ups</span>
-                <span className="font-semibold">£95</span>
+              <div className="flex items-baseline justify-between border-b border-ink/6 pb-2 mb-2">
+                <span className="text-sm">Dental Check ups</span>
+                <span className="font-display text-xl">£95</span>
               </div>
-              <div className="flex justify-between text-sm">
-                <span>Hygienist</span>
-                <span className="font-semibold">£89</span>
+              <div className="flex items-baseline justify-between">
+                <span className="text-sm">Hygienist</span>
+                <span className="font-display text-xl">£89</span>
               </div>
             </div>
             <div className="rounded-2xl bg-ink text-ivory p-6 flex flex-col justify-center">
               <p className="text-[11px] font-bold tracking-widest text-gold mb-2">
                 MEMBER PRICE
               </p>
-              <p className="font-display text-2xl">50% OFF</p>
+              <p className="font-display text-4xl text-gold">50% OFF</p>
               <p className="text-xs text-ivory/60 mt-1">The Prices Above</p>
             </div>
           </div>
@@ -193,6 +194,8 @@ export default function MembershipPage() {
           </p>
         </div>
       </section>
+
+      <MeetExperts limit={3} tone="cream" />
     </>
   );
 }

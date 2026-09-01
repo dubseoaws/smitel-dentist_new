@@ -369,6 +369,7 @@ export const TREATMENT_CONTENT: Record<string, TreatmentContent> = {
           "All whitening treatments are provided by General Dental Council (GDC)-registered dentists at our Care Quality Commission (CQC)-registered practice.",
         ],
       },
+      smileGallery(),
     ],
   },
 
@@ -662,6 +663,7 @@ export const TREATMENT_CONTENT: Record<string, TreatmentContent> = {
           "All treatments are provided by General Dental Council (GDC)-registered dentists at our Care Quality Commission (CQC)-registered practice.",
         ],
       },
+      smileGallery(),
     ],
   },
 
@@ -905,6 +907,7 @@ export const TREATMENT_CONTENT: Record<string, TreatmentContent> = {
           },
         ],
       },
+      smileGallery(),
     ],
   },
 
@@ -919,7 +922,7 @@ export const TREATMENT_CONTENT: Record<string, TreatmentContent> = {
       "City of London • Ave Maria Lane, EC4",
     ],
     hero: {
-      src: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1765805825/adobeStock_420986909-min_knbigb.jpg",
+      src: "/treatments/smile-makeover.jpg",
       alt: "Smile Makeover at Smile Dentist London",
     },
     blocks: [
@@ -1162,6 +1165,7 @@ export const TREATMENT_CONTENT: Record<string, TreatmentContent> = {
           },
         ],
       },
+      smileGallery(),
     ],
   },
 
@@ -1379,6 +1383,7 @@ export const TREATMENT_CONTENT: Record<string, TreatmentContent> = {
           },
         ],
       },
+      smileGallery(),
     ],
   },
 
@@ -1592,6 +1597,7 @@ export const TREATMENT_CONTENT: Record<string, TreatmentContent> = {
           },
         ],
       },
+      smileGallery(),
     ],
   },
 
@@ -1850,6 +1856,7 @@ export const TREATMENT_CONTENT: Record<string, TreatmentContent> = {
           },
         ],
       },
+      smileGallery(),
     ],
   },
 
@@ -2100,6 +2107,7 @@ export const TREATMENT_CONTENT: Record<string, TreatmentContent> = {
           },
         ],
       },
+      smileGallery(),
     ],
   },
 
@@ -4487,6 +4495,7 @@ export const TREATMENT_CONTENT: Record<string, TreatmentContent> = {
           },
         ],
       },
+      smileGallery(),
     ],
   },
 
@@ -4944,6 +4953,7 @@ export const TREATMENT_CONTENT: Record<string, TreatmentContent> = {
           },
         ],
       },
+      smileGallery(),
     ],
   },
 
@@ -5691,6 +5701,7 @@ export const TREATMENT_CONTENT: Record<string, TreatmentContent> = {
           },
         ],
       },
+      smileGallery(),
     ],
   },
 

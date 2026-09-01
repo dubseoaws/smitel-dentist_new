@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { SITE, CLINICS } from "@/lib/site-data";
+import MeetExperts from "@/components/MeetExperts";
 
 export const metadata: Metadata = {
   title: "Contact Us",
@@ -180,6 +181,8 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
+
+      <MeetExperts limit={3} />
 
       <section className="bg-ink text-ivory py-16 text-center">
         <div className="mx-auto max-w-2xl px-4 sm:px-6 space-y-6">

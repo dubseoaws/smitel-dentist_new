@@ -31,9 +31,12 @@ export default function TreatmentCard({ treatment }: { treatment: Treatment }) {
         <p className="text-sm text-ink-soft leading-relaxed line-clamp-2">
           {treatment.description}
         </p>
-        <p className="font-label text-[11px] tracking-[0.14em] uppercase text-ink-soft pt-1">
-          Standard <span className="text-ink font-bold">{treatment.standard}</span>
-        </p>
+        <div className="flex items-baseline justify-between gap-3 border-t border-ink/10 pt-3">
+          <span className="font-label text-[10px] tracking-[0.14em] uppercase text-ink-soft">
+            Standard <span className="text-ink">{treatment.standard}</span>
+          </span>
+          <span className="font-display text-lg text-gold-deep">{treatment.member}</span>
+        </div>
       </div>
     </Link>
   );

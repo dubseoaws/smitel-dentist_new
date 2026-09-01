@@ -9,22 +9,31 @@ function Eyebrow({ children }: { children?: string }) {
 
 function Heading({ children }: { children?: string }) {
   if (!children) return null;
-  return <h2 className="text-3xl sm:text-4xl">{children}</h2>;
+  return (
+    <h2 className="text-3xl sm:text-4xl lg:text-[2.75rem] leading-[1.15] tracking-tight text-ink">
+      {children}
+    </h2>
+  );
 }
 
 function Sub({ children }: { children?: string }) {
   if (!children) return null;
-  return <p className="text-ink-soft">{children}</p>;
+  return <p className="text-lg text-ink-soft leading-relaxed">{children}</p>;
+}
+
+function Rule() {
+  return <span className="block h-px w-16 bg-gold" aria-hidden />;
 }
 
 function Prose({ block }: { block: Extract<ContentBlock, { kind: "prose" }> }) {
   return (
-    <div className="mx-auto max-w-3xl space-y-4">
+    <div className="mx-auto max-w-3xl space-y-5">
       <Eyebrow>{block.eyebrow}</Eyebrow>
       <Heading>{block.heading}</Heading>
+      <Rule />
       <Sub>{block.sub}</Sub>
       {block.paragraphs.map((p) => (
-        <p key={p} className="text-ink-soft leading-relaxed">
+        <p key={p} className="text-[17px] text-ink-soft leading-[1.8]">
           {p}
         </p>
       ))}
@@ -34,42 +43,69 @@ function Prose({ block }: { block: Extract<ContentBlock, { kind: "prose" }> }) {
 
 function Cards({ block }: { block: Extract<ContentBlock, { kind: "cards" }> }) {
   return (
-    <div className="space-y-10">
-      <div className="max-w-3xl space-y-4">
+    <div className="space-y-12">
+      <div className="max-w-3xl space-y-5">
         <Eyebrow>{block.eyebrow}</Eyebrow>
         <Heading>{block.heading}</Heading>
+        <Rule />
         <Sub>{block.sub}</Sub>
         {block.intro && (
-          <p className="text-ink-soft leading-relaxed">{block.intro}</p>
+          <p className="text-[17px] text-ink-soft leading-[1.8]">{block.intro}</p>
         )}
       </div>
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {block.items.map((item) => (
-          <div key={item.title} className="border border-ink/10 bg-ivory p-7">
-            <h3 className="font-semibold text-lg">{item.title}</h3>
+          <div
+            key={item.title}
+            className="group relative border border-ink/10 bg-ivory p-8 transition-all duration-300 hover:-translate-y-1 hover:border-gold/60 hover:shadow-xl hover:shadow-ink/5"
+          >
+            <span
+              className="absolute inset-x-0 top-0 h-0.5 origin-left scale-x-0 bg-gold transition-transform duration-300 group-hover:scale-x-100"
+              aria-hidden
+            />
+            <h3 className="font-display text-xl font-semibold leading-snug text-ink">
+              {item.title}
+            </h3>
             {item.meta && (
-              <p className="mt-1 font-label text-[10px] font-bold tracking-[0.2em] uppercase text-gold-deep">
+              <p className="mt-2 font-label text-[10px] font-bold tracking-[0.2em] uppercase text-gold-deep">
                 {item.meta}
               </p>
             )}
             {item.body && (
-              <p className="mt-3 text-sm text-ink-soft leading-relaxed">{item.body}</p>
+              <p className="mt-4 text-[15px] text-ink-soft leading-[1.75]">{item.body}</p>
             )}
             {item.bullets && (
               <ul className="mt-4 space-y-2">
-                {item.bullets.map((bullet) => (
-                  <li key={bullet} className="flex gap-3 text-sm text-ink-soft leading-relaxed">
-                    <span className="mt-2 h-1 w-1 shrink-0 bg-gold" aria-hidden />
-                    {bullet}
-                  </li>
-                ))}
+                {item.bullets.map((bullet) =>
+                  bullet.includes("£") ? (
+                    <li
+                      key={bullet}
+                      className="flex items-baseline justify-between gap-3 border-t border-ink/10 pt-2 text-sm first:border-t-0 first:pt-0"
+                    >
+                      <span className="font-label text-[10px] font-bold tracking-[0.18em] uppercase text-ink-soft">
+                        {bullet.slice(0, bullet.indexOf("£")).trim()}
+                      </span>
+                      <span className="font-display text-lg text-gold-deep">
+                        {bullet.slice(bullet.indexOf("£"))}
+                      </span>
+                    </li>
+                  ) : (
+                    <li
+                      key={bullet}
+                      className="flex gap-3 text-[15px] text-ink-soft leading-[1.75]"
+                    >
+                      <span className="mt-2.5 h-1 w-1 shrink-0 bg-gold" aria-hidden />
+                      {bullet}
+                    </li>
+                  ),
+                )}
               </ul>
             )}
           </div>
         ))}
       </div>
       {block.footer && (
-        <p className="max-w-3xl text-ink-soft leading-relaxed">{block.footer}</p>
+        <p className="max-w-3xl text-[17px] text-ink-soft leading-[1.8]">{block.footer}</p>
       )}
     </div>
   );
@@ -77,31 +113,37 @@ function Cards({ block }: { block: Extract<ContentBlock, { kind: "cards" }> }) {
 
 function Steps({ block }: { block: Extract<ContentBlock, { kind: "steps" }> }) {
   return (
-    <div className="space-y-10">
-      <div className="max-w-3xl space-y-4">
+    <div className="space-y-12">
+      <div className="max-w-3xl space-y-5">
         <Eyebrow>{block.eyebrow}</Eyebrow>
         <Heading>{block.heading}</Heading>
+        <Rule />
         <Sub>{block.sub}</Sub>
       </div>
       <ol className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {block.items.map((item, i) => (
-          <li key={item.title} className="border border-ink/10 bg-ivory p-7">
-            <span className="inline-flex h-9 w-9 items-center justify-center border border-gold/50 font-display text-sm text-gold-deep">
+          <li
+            key={item.title}
+            className="group border border-ink/10 bg-ivory p-8 transition-all duration-300 hover:-translate-y-1 hover:border-gold/60 hover:shadow-xl hover:shadow-ink/5"
+          >
+            <span className="inline-flex min-h-11 min-w-11 items-center justify-center whitespace-nowrap border border-gold/50 bg-gold/10 px-3.5 py-2 font-display text-base text-gold-deep transition-colors group-hover:bg-gold group-hover:text-ink">
               {item.meta ?? String(i + 1).padStart(2, "0")}
             </span>
-            <h3 className="mt-4 font-semibold text-lg">{item.title}</h3>
-            <p className="mt-3 text-sm text-ink-soft leading-relaxed">{item.body}</p>
+            <h3 className="mt-5 font-display text-xl font-semibold leading-snug text-ink">
+              {item.title}
+            </h3>
+            <p className="mt-3 text-[15px] text-ink-soft leading-[1.75]">{item.body}</p>
           </li>
         ))}
       </ol>
       {block.note && (
-        <p className="border border-gold/30 bg-cream p-6 text-sm text-ink-soft leading-relaxed">
+        <p className="border-l-2 border-gold bg-gold/[0.08] px-7 py-6 text-[15px] text-ink-soft leading-[1.75]">
           <span className="font-semibold text-ink">{block.note.title}: </span>
           {block.note.body}
         </p>
       )}
       {block.footer && (
-        <p className="max-w-3xl text-ink-soft leading-relaxed">{block.footer}</p>
+        <p className="max-w-3xl text-[17px] text-ink-soft leading-[1.8]">{block.footer}</p>
       )}
     </div>
   );
@@ -113,27 +155,50 @@ function DoAvoid({ block }: { block: Extract<ContentBlock, { kind: "doAvoid" }> 
     ["Avoid", block.avoids],
   ];
   return (
-    <div className="space-y-10">
-      <div className="max-w-3xl space-y-4">
+    <div className="space-y-12">
+      <div className="max-w-3xl space-y-5">
         <Heading>{block.heading}</Heading>
+        <Rule />
         <Sub>{block.sub}</Sub>
       </div>
       <div className="grid gap-6 md:grid-cols-2">
-        {columns.map(([label, items]) => (
-          <div key={label} className="border border-ink/10 bg-ivory p-7">
-            <h3 className="font-label text-[11px] font-bold tracking-[0.2em] uppercase text-gold-deep">
-              {label}
-            </h3>
-            <ul className="mt-5 space-y-3">
-              {items.map((item) => (
-                <li key={item} className="flex gap-3 text-sm text-ink-soft leading-relaxed">
-                  <span className="mt-2 h-1 w-1 shrink-0 bg-gold" aria-hidden />
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
+        {columns.map(([label, items]) => {
+          const isDo = label === "Do";
+          return (
+            <div
+              key={label}
+              className={`border p-8 ${
+                isDo ? "border-gold/40 bg-gold/[0.06]" : "border-ink/12 bg-ivory"
+              }`}
+            >
+              <h3
+                className={`font-label text-[11px] font-bold tracking-[0.2em] uppercase ${
+                  isDo ? "text-gold-deep" : "text-ink-soft"
+                }`}
+              >
+                {label}
+              </h3>
+              <ul className="mt-6 space-y-4">
+                {items.map((item) => (
+                  <li
+                    key={item}
+                    className="flex gap-3.5 text-[15px] text-ink-soft leading-[1.75]"
+                  >
+                    <span
+                      className={`mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center text-[11px] font-bold ${
+                        isDo ? "bg-gold text-ink" : "bg-ink/10 text-ink"
+                      }`}
+                      aria-hidden
+                    >
+                      {isDo ? "✓" : "✕"}
+                    </span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          );
+        })}
       </div>
     </div>
   );
@@ -141,18 +206,22 @@ function DoAvoid({ block }: { block: Extract<ContentBlock, { kind: "doAvoid" }> 
 
 function Stories({ block }: { block: Extract<ContentBlock, { kind: "stories" }> }) {
   return (
-    <div className="space-y-10">
-      <div className="max-w-3xl space-y-4">
+    <div className="space-y-12">
+      <div className="max-w-3xl space-y-5">
         <Eyebrow>{block.eyebrow}</Eyebrow>
         <Heading>{block.heading}</Heading>
+        <Rule />
         <Sub>{block.sub}</Sub>
         {block.note && (
-          <p className="text-sm text-ink-soft leading-relaxed">{block.note}</p>
+          <p className="text-[15px] text-ink-soft leading-[1.75]">{block.note}</p>
         )}
       </div>
       <div className="grid gap-6 md:grid-cols-2">
         {block.items.map((item) => (
-          <article key={item.title} className="border border-ink/10 bg-ivory">
+          <article
+            key={item.title}
+            className="group overflow-hidden border border-ink/10 bg-ivory transition-all duration-300 hover:border-gold/60 hover:shadow-xl hover:shadow-ink/5"
+          >
             {item.before && item.after && (
               <div className="grid grid-cols-2">
                 {(
@@ -166,7 +235,7 @@ function Stories({ block }: { block: Extract<ContentBlock, { kind: "stories" }> 
                       src={img.src}
                       alt={img.alt}
                       fill
-                      className="object-cover"
+                      className="object-cover transition-transform duration-700 group-hover:scale-[1.04]"
                       sizes="(max-width: 768px) 50vw, 25vw"
                     />
                     <span className="absolute left-3 top-3 bg-ink/85 text-ivory px-2.5 py-1 font-label text-[10px] font-bold tracking-[0.2em] uppercase">
@@ -176,13 +245,15 @@ function Stories({ block }: { block: Extract<ContentBlock, { kind: "stories" }> 
                 ))}
               </div>
             )}
-            <div className="p-7 space-y-4">
+            <div className="p-8 space-y-4">
               {item.meta && (
                 <p className="font-label text-[10px] font-bold tracking-[0.2em] uppercase text-gold-deep">
                   {item.meta}
                 </p>
               )}
-              <h3 className="font-semibold text-lg">{item.title}</h3>
+              <h3 className="font-display text-xl font-semibold leading-snug text-ink">
+                {item.title}
+              </h3>
               {(
                 [
                   ["Patient Concern", item.concern],
@@ -195,7 +266,7 @@ function Stories({ block }: { block: Extract<ContentBlock, { kind: "stories" }> 
                     <p className="font-label text-[10px] font-bold tracking-[0.2em] uppercase text-gold-deep">
                       {label}
                     </p>
-                    <p className="mt-1 text-sm text-ink-soft leading-relaxed">{body}</p>
+                    <p className="mt-1 text-[15px] text-ink-soft leading-[1.75]">{body}</p>
                   </div>
                 ) : null,
               )}
@@ -216,14 +287,15 @@ function ComparisonTable({
   block: Extract<ContentBlock, { kind: "table" }>;
 }) {
   return (
-    <div className="space-y-10">
-      <div className="max-w-3xl space-y-4">
+    <div className="space-y-12">
+      <div className="max-w-3xl space-y-5">
         <Eyebrow>{block.eyebrow}</Eyebrow>
         <Heading>{block.heading}</Heading>
+        <Rule />
         <Sub>{block.sub}</Sub>
       </div>
       <div className="overflow-x-auto border border-ink/10">
-        <table className="w-full min-w-[600px] text-sm">
+        <table className="w-full min-w-[600px] text-[15px]">
           <thead>
             <tr className="bg-ink text-ivory">
               {block.columns.map((c) => (
@@ -255,22 +327,27 @@ function ComparisonTable({
 
 function Pricing({ block }: { block: Extract<ContentBlock, { kind: "pricing" }> }) {
   return (
-    <div className="space-y-10">
-      <div className="max-w-3xl space-y-4">
+    <div className="space-y-12">
+      <div className="max-w-3xl space-y-5">
         <Eyebrow>{block.eyebrow}</Eyebrow>
         <Heading>{block.heading}</Heading>
-        {block.intro && <p className="text-ink-soft leading-relaxed">{block.intro}</p>}
+        <Rule />
+        {block.intro && (
+          <p className="text-[17px] text-ink-soft leading-[1.8]">{block.intro}</p>
+        )}
       </div>
 
       {block.rows && block.rows.length > 0 && (
         <div className="overflow-x-auto border border-gold/30">
           <table className="w-full text-left text-sm">
-            <thead className="bg-cream">
+            <thead className="bg-ink text-ivory">
               <tr>
-                {(block.columns ?? ["Treatment", "Standard", "Member"]).map((c) => (
+                {(block.columns ?? ["Treatment", "Standard", "Member"]).map((c, i) => (
                   <th
                     key={c}
-                    className="px-5 py-4 font-label text-[10px] font-bold tracking-[0.2em] uppercase"
+                    className={`px-5 py-4 font-label text-[10px] font-bold tracking-[0.2em] uppercase ${
+                      i === 2 ? "text-gold-bright" : ""
+                    }`}
                   >
                     {c}
                   </th>
@@ -280,9 +357,11 @@ function Pricing({ block }: { block: Extract<ContentBlock, { kind: "pricing" }> 
             <tbody>
               {block.rows.map((row) => (
                 <tr key={row.label} className="border-t border-ink/10">
-                  <td className="px-5 py-4">{row.label}</td>
-                  <td className="px-5 py-4 font-display text-base">{row.standard}</td>
-                  <td className="px-5 py-4 font-display text-base text-gold-deep">
+                  <td className="px-5 py-4 font-medium">{row.label}</td>
+                  <td className="px-5 py-4 font-display text-base text-ink-soft">
+                    {row.standard}
+                  </td>
+                  <td className="bg-gold/10 px-5 py-4 font-display text-xl text-gold-deep">
                     {row.member}
                   </td>
                 </tr>
@@ -299,10 +378,18 @@ function Pricing({ block }: { block: Extract<ContentBlock, { kind: "pricing" }> 
               {block.includesTitle && (
                 <h3 className="font-semibold text-lg">{block.includesTitle}</h3>
               )}
-              <ul className="mt-5 space-y-3">
+              <ul className="mt-6 space-y-4">
                 {block.includes.map((item) => (
-                  <li key={item} className="flex gap-3 text-sm text-ink-soft">
-                    <span className="mt-2 h-1 w-1 shrink-0 bg-gold" aria-hidden />
+                  <li
+                    key={item}
+                    className="flex gap-3.5 text-[15px] text-ink-soft leading-[1.7]"
+                  >
+                    <span
+                      className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center bg-gold text-[11px] font-bold text-ink"
+                      aria-hidden
+                    >
+                      ✓
+                    </span>
                     {item}
                   </li>
                 ))}
@@ -311,19 +398,24 @@ function Pricing({ block }: { block: Extract<ContentBlock, { kind: "pricing" }> 
           )}
           {block.standard && (
             <div className="flex flex-col justify-center gap-6">
-              <div className="flex flex-wrap gap-10">
-                <div>
+              <div className="flex flex-wrap items-stretch gap-px border border-gold/40 bg-gold/25">
+                <div className="flex-1 min-w-[140px] bg-ivory px-6 py-5">
                   <p className="font-label text-[10px] font-bold tracking-[0.2em] uppercase text-ink-soft">
                     {block.standard.label}
                   </p>
-                  <p className="font-display text-2xl">{block.standard.value}</p>
+                  <p className="mt-1 font-display text-2xl text-ink-soft">
+                    {block.standard.value}
+                  </p>
                 </div>
                 {block.member && (
-                  <div>
-                    <p className="font-label text-[10px] font-bold tracking-[0.2em] uppercase text-gold-deep">
+                  <div className="flex-1 min-w-[160px] bg-gold/10 px-6 py-5">
+                    <p className="flex items-center gap-2 font-label text-[10px] font-bold tracking-[0.2em] uppercase text-gold-deep">
                       {block.member.label}
+                      <span className="bg-gold-deep px-1.5 py-0.5 text-[9px] tracking-[0.12em] text-ivory">
+                        50% Off
+                      </span>
                     </p>
-                    <p className="font-display text-2xl text-gold-deep">
+                    <p className="mt-1 font-display text-3xl text-gold-deep">
                       {block.member.value}
                     </p>
                   </div>
@@ -342,9 +434,12 @@ function Pricing({ block }: { block: Extract<ContentBlock, { kind: "pricing" }> 
       {block.notes && (
         <div className="grid gap-6 md:grid-cols-2">
           {block.notes.map((note) => (
-            <div key={note.title} className="border border-ink/10 bg-ivory p-7">
-              <h3 className="font-semibold">{note.title}</h3>
-              <p className="mt-2 text-sm text-ink-soft leading-relaxed">{note.body}</p>
+            <div
+              key={note.title}
+              className="border border-ink/10 bg-ivory p-8 transition-colors hover:border-gold/60"
+            >
+              <h3 className="font-display text-lg font-semibold text-ink">{note.title}</h3>
+              <p className="mt-3 text-[15px] text-ink-soft leading-[1.75]">{note.body}</p>
             </div>
           ))}
         </div>
@@ -358,11 +453,20 @@ function List({ block }: { block: Extract<ContentBlock, { kind: "list" }> }) {
     <div className="mx-auto max-w-3xl space-y-6">
       <Eyebrow>{block.eyebrow}</Eyebrow>
       <Heading>{block.heading}</Heading>
+      <Rule />
       <Sub>{block.sub}</Sub>
-      <ul className="space-y-3">
+      <ul className="grid gap-3 sm:grid-cols-2">
         {block.items.map((item) => (
-          <li key={item} className="flex gap-3 text-ink-soft leading-relaxed">
-            <span className="mt-2.5 h-1 w-1 shrink-0 bg-gold" aria-hidden />
+          <li
+            key={item}
+            className="flex gap-3.5 border border-ink/10 bg-ivory p-5 text-[15px] text-ink-soft leading-[1.7]"
+          >
+            <span
+              className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center bg-gold text-[11px] font-bold text-ink"
+              aria-hidden
+            >
+              ✓
+            </span>
             {item}
           </li>
         ))}
@@ -374,18 +478,27 @@ function List({ block }: { block: Extract<ContentBlock, { kind: "list" }> }) {
 function Faq({ block }: { block: Extract<ContentBlock, { kind: "faq" }> }) {
   return (
     <div className="mx-auto max-w-3xl space-y-8">
-      <Eyebrow>{block.eyebrow}</Eyebrow>
-      <Heading>{block.heading}</Heading>
-      <div className="divide-y divide-ink/10 border-y border-ink/10">
+      <div className="space-y-5">
+        <Eyebrow>{block.eyebrow}</Eyebrow>
+        <Heading>{block.heading}</Heading>
+        <Rule />
+      </div>
+      <div className="space-y-3">
         {block.items.map((item) => (
-          <details key={item.q} className="group py-5">
-            <summary className="flex cursor-pointer items-center justify-between gap-4 font-semibold list-none">
+          <details
+            key={item.q}
+            className="group border border-ink/10 bg-ivory px-6 py-5 transition-colors open:border-gold/50 open:bg-cream/60 hover:border-gold/40"
+          >
+            <summary className="flex cursor-pointer items-center justify-between gap-5 text-[17px] font-semibold text-ink list-none">
               {item.q}
-              <span className="text-gold-deep transition-transform group-open:rotate-45" aria-hidden>
+              <span
+                className="flex h-7 w-7 shrink-0 items-center justify-center border border-gold/50 text-gold-deep transition-transform group-open:rotate-45"
+                aria-hidden
+              >
                 +
               </span>
             </summary>
-            <p className="mt-3 text-sm text-ink-soft leading-relaxed">{item.a}</p>
+            <p className="mt-4 text-[15px] text-ink-soft leading-[1.8]">{item.a}</p>
           </details>
         ))}
       </div>
@@ -399,7 +512,7 @@ export default function TreatmentBlocks({ blocks }: { blocks: ContentBlock[] }) 
       {blocks.map((block, i) => (
         <section
           key={i}
-          className={`py-14 lg:py-20 ${i % 2 === 1 ? "bg-cream" : ""}`}
+          className={`py-16 lg:py-24 ${i % 2 === 1 ? "bg-cream" : ""}`}
         >
           <div className="mx-auto max-w-7xl px-4 sm:px-6">
             {block.kind === "prose" && <Prose block={block} />}
@@ -412,10 +525,12 @@ export default function TreatmentBlocks({ blocks }: { blocks: ContentBlock[] }) 
             {block.kind === "list" && <List block={block} />}
             {block.kind === "faq" && <Faq block={block} />}
             {block.kind === "callout" && (
-              <p className="mx-auto max-w-3xl border border-gold/40 bg-cream p-6 text-sm text-ink-soft leading-relaxed">
-                <span className="font-semibold text-ink">{block.label}: </span>
-                {block.body}
-              </p>
+              <div className="mx-auto max-w-3xl border-l-2 border-gold bg-gold/[0.08] px-8 py-7">
+                <p className="font-label text-[10px] font-bold tracking-[0.2em] uppercase text-gold-deep">
+                  {block.label}
+                </p>
+                <p className="mt-3 text-[17px] text-ink-soft leading-[1.8]">{block.body}</p>
+              </div>
             )}
           </div>
         </section>

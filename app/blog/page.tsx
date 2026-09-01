@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { BLOG_POSTS } from "@/lib/site-data";
+import MeetExperts from "@/components/MeetExperts";
 
 export const metadata: Metadata = {
   title: "Dental Health Blog",
@@ -8,6 +9,7 @@ export const metadata: Metadata = {
 
 export default function BlogPage() {
   return (
+    <>
     <section className="hero-shade py-16 lg:py-24">
       <div className="mx-auto max-w-6xl px-5 sm:px-10">
         <p className="eyebrow mb-4">Blog</p>
@@ -46,5 +48,7 @@ export default function BlogPage() {
         </div>
       </div>
     </section>
+    <MeetExperts limit={3} tone="cream" />
+    </>
   );
 }
