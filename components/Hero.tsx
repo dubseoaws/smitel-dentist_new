@@ -85,7 +85,7 @@ export default function Hero() {
               alt={slide.alt}
               fill
               priority={i === 0}
-              className="object-cover object-top brightness-[1.1] contrast-[1.1] saturate-[1.15]"
+              className="object-cover object-top brightness-[1.02] contrast-[1.06] saturate-[1.08]"
               sizes="(max-width: 1024px) 100vw, 62vw"
             />
           </div>

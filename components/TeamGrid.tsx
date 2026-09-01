@@ -18,17 +18,17 @@ export default function TeamGrid({ limit }: { limit?: number }) {
           className="group relative block overflow-hidden bg-white border border-ink/10 hover:-translate-y-1 hover:shadow-2xl hover:shadow-ink/8 hover:border-gold/50 transition-all duration-300"
         >
           {member.image ? (
-            <div className="relative aspect-[4/5] overflow-hidden bg-cream">
+            <div className="relative aspect-[3/4] overflow-hidden bg-cream">
               <Image
                 src={member.image}
                 alt={`${member.name} - ${member.role} at Smile Dentist South Kensington`}
                 fill
-                className="object-contain object-bottom group-hover:scale-[1.03] transition-transform duration-700"
+                className="object-cover object-[center_15%] group-hover:scale-[1.03] transition-transform duration-700"
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
               />
             </div>
           ) : member.video ? (
-            <div className="relative aspect-[4/5] overflow-hidden bg-cream">
+            <div className="relative aspect-[3/4] overflow-hidden bg-cream">
               <video
                 autoPlay
                 muted
@@ -36,14 +36,14 @@ export default function TeamGrid({ limit }: { limit?: number }) {
                 playsInline
                 preload="metadata"
                 aria-label={`${member.name} - ${member.role} at Smile Dentist South Kensington`}
-                className="absolute inset-0 h-full w-full object-contain object-bottom group-hover:scale-[1.03] transition-transform duration-700"
+                className="absolute inset-0 h-full w-full object-cover object-[center_15%] group-hover:scale-[1.03] transition-transform duration-700"
               >
                 <source src={mp4Of(member.video)} type="video/mp4" />
                 <source src={member.video} type="video/webm" />
               </video>
             </div>
           ) : (
-            <div className="aspect-[4/5] bg-cream flex items-center justify-center">
+            <div className="aspect-[3/4] bg-cream flex items-center justify-center">
               <span className="font-display text-6xl font-bold text-gold-deep/30">
                 {member.name
                   .split(" ")

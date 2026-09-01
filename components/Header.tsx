@@ -18,6 +18,9 @@ const ABOUT_LINKS = [
   { label: "Membership", href: "/membership" },
 ];
 
+const NAV_LINK =
+  "px-4 py-2.5 font-label text-[13px] font-bold tracking-[0.08em] uppercase text-ink hover:text-gold-deep transition-colors";
+
 export default function Header() {
   const [open, setOpen] = useState(false);
   const [mobileTreatments, setMobileTreatments] = useState(false);
@@ -60,7 +63,7 @@ export default function Header() {
             <nav className="hidden lg:flex items-center">
               <Link
                 href="/"
-                className="px-3.5 py-2 font-label text-[11px] font-semibold tracking-[0.16em] uppercase text-ink hover:text-gold-deep transition-colors"
+                className={NAV_LINK}
               >
                 Home
               </Link>
@@ -69,7 +72,7 @@ export default function Header() {
                 <Link
                   href="/team"
                   onClick={closeAll}
-                  className="px-3.5 py-2 font-label text-[11px] font-semibold tracking-[0.16em] uppercase text-ink hover:text-gold-deep transition-colors inline-flex items-center gap-1.5"
+                  className={`${NAV_LINK} inline-flex items-center gap-1.5`}
                 >
                   About Us
                   <svg
@@ -114,7 +117,7 @@ export default function Header() {
                 <Link
                   href="/treatments"
                   onClick={closeAll}
-                  className="px-3.5 py-2 font-label text-[11px] font-semibold tracking-[0.16em] uppercase text-ink hover:text-gold-deep transition-colors inline-flex items-center gap-1.5"
+                  className={`${NAV_LINK} inline-flex items-center gap-1.5`}
                 >
                   Treatments
                   <svg
@@ -193,7 +196,7 @@ export default function Header() {
                 <Link
                   href="/contact"
                   onClick={closeAll}
-                  className="px-3.5 py-2 font-label text-[11px] font-semibold tracking-[0.16em] uppercase text-ink hover:text-gold-deep transition-colors inline-flex items-center gap-1.5"
+                  className={`${NAV_LINK} inline-flex items-center gap-1.5`}
                 >
                   Locations
                   <svg
@@ -237,23 +240,31 @@ export default function Header() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="px-3.5 py-2 font-label text-[11px] font-semibold tracking-[0.16em] uppercase text-ink hover:text-gold-deep transition-colors"
+                  className={NAV_LINK}
                 >
                   {link.label}
                 </Link>
               ))}
             </nav>
 
-            <div className="hidden lg:flex items-center gap-3">
+            <div className="hidden lg:flex items-center gap-4">
               <a
                 href={SITE.phoneHref}
-                className="font-label text-xs tracking-wider text-ink-soft hover:text-ink transition-colors px-2"
+                className="flex items-center gap-2 font-label text-[15px] font-bold tracking-[0.02em] text-ink hover:text-gold-deep transition-colors px-2"
               >
+                <svg
+                  viewBox="0 0 24 24"
+                  className="h-4 w-4 text-gold-deep"
+                  fill="currentColor"
+                  aria-hidden
+                >
+                  <path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.58 3.6a1 1 0 0 1-.25 1l-2.23 2.2Z" />
+                </svg>
                 {SITE.phone}
               </a>
               <Link
                 href="/booking"
-                className="bg-gold-bright text-ink whitespace-nowrap px-7 py-3.5 font-label text-xs font-bold tracking-[0.1em] uppercase shadow-[0_8px_20px_-10px_rgba(12,35,64,0.6)] hover:bg-ink hover:text-ivory transition-colors"
+                className="bg-gold text-ink whitespace-nowrap px-7 py-3.5 font-label text-[13px] font-bold tracking-[0.1em] uppercase shadow-[0_8px_20px_-10px_rgba(12,35,64,0.6)] hover:bg-ink hover:text-ivory transition-colors"
               >
                 Book Online
               </Link>
