@@ -16,8 +16,11 @@ export default function TreatmentCard({ treatment }: { treatment: Treatment }) {
           className="object-cover group-hover:scale-[1.05] transition-transform duration-700"
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
         />
-        <span className="absolute top-3 right-3 bg-ink/85 backdrop-blur font-label text-[10px] font-bold tracking-[0.14em] px-3.5 py-1.5 text-gold">
-          MEMBER {treatment.member.toUpperCase()}
+        <span className="absolute top-3 right-3 flex items-baseline gap-1.5 bg-ink/85 backdrop-blur px-3.5 py-2 text-gold">
+          <span className="font-label text-[10px] font-bold tracking-[0.14em]">MEMBER</span>
+          <span className="font-display text-lg font-semibold leading-none">
+            {treatment.member}
+          </span>
         </span>
       </div>
 
@@ -32,10 +35,12 @@ export default function TreatmentCard({ treatment }: { treatment: Treatment }) {
           {treatment.description}
         </p>
         <div className="flex items-baseline justify-between gap-3 border-t border-ink/10 pt-3">
-          <span className="font-label text-[10px] tracking-[0.14em] uppercase text-ink-soft">
-            Standard <span className="text-ink">{treatment.standard}</span>
+          <span className="font-label text-[11px] tracking-[0.12em] uppercase text-ink-soft">
+            Standard <span className="text-ink font-semibold">{treatment.standard}</span>
           </span>
-          <span className="font-display text-lg text-gold-deep">{treatment.member}</span>
+          <span className="font-display text-2xl font-semibold text-gold-deep">
+            {treatment.member}
+          </span>
         </div>
       </div>
     </Link>

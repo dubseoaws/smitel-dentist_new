@@ -85,7 +85,7 @@ function Cards({ block }: { block: Extract<ContentBlock, { kind: "cards" }> }) {
                       <span className="font-label text-[10px] font-bold tracking-[0.18em] uppercase text-ink-soft">
                         {bullet.slice(0, bullet.indexOf("£")).trim()}
                       </span>
-                      <span className="font-display text-lg text-gold-deep">
+                      <span className="font-display text-2xl font-semibold text-gold-deep">
                         {bullet.slice(bullet.indexOf("£"))}
                       </span>
                     </li>
@@ -358,10 +358,10 @@ function Pricing({ block }: { block: Extract<ContentBlock, { kind: "pricing" }> 
               {block.rows.map((row) => (
                 <tr key={row.label} className="border-t border-ink/10">
                   <td className="px-5 py-4 font-medium">{row.label}</td>
-                  <td className="px-5 py-4 font-display text-base text-ink-soft">
+                  <td className="px-5 py-4 font-display text-xl text-ink-soft">
                     {row.standard}
                   </td>
-                  <td className="bg-gold/10 px-5 py-4 font-display text-xl text-gold-deep">
+                  <td className="bg-gold/10 px-5 py-4 font-display text-3xl font-semibold text-gold-deep">
                     {row.member}
                   </td>
                 </tr>
@@ -399,23 +399,23 @@ function Pricing({ block }: { block: Extract<ContentBlock, { kind: "pricing" }> 
           {block.standard && (
             <div className="flex flex-col justify-center gap-6">
               <div className="flex flex-wrap items-stretch gap-px border border-gold/40 bg-gold/25">
-                <div className="flex-1 min-w-[140px] bg-ivory px-6 py-5">
-                  <p className="font-label text-[10px] font-bold tracking-[0.2em] uppercase text-ink-soft">
+                <div className="flex-1 min-w-[150px] bg-ivory px-6 py-5">
+                  <p className="font-label text-[11px] font-bold tracking-[0.18em] uppercase text-ink-soft">
                     {block.standard.label}
                   </p>
-                  <p className="mt-1 font-display text-2xl text-ink-soft">
+                  <p className="mt-1.5 font-display text-3xl text-ink-soft">
                     {block.standard.value}
                   </p>
                 </div>
                 {block.member && (
-                  <div className="flex-1 min-w-[160px] bg-gold/10 px-6 py-5">
-                    <p className="flex items-center gap-2 font-label text-[10px] font-bold tracking-[0.2em] uppercase text-gold-deep">
+                  <div className="flex-1 min-w-[180px] bg-gold/10 px-6 py-5">
+                    <p className="flex items-center gap-2 font-label text-[11px] font-bold tracking-[0.18em] uppercase text-gold-deep">
                       {block.member.label}
                       <span className="bg-gold-deep px-1.5 py-0.5 text-[9px] tracking-[0.12em] text-ivory">
                         50% Off
                       </span>
                     </p>
-                    <p className="mt-1 font-display text-3xl text-gold-deep">
+                    <p className="mt-1.5 font-display text-4xl sm:text-5xl font-semibold text-gold-deep">
                       {block.member.value}
                     </p>
                   </div>

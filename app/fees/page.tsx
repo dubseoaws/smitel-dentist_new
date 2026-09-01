@@ -63,13 +63,17 @@ export default function FeesPage() {
             </p>
             <div className="flex justify-between text-sm border-b border-ivory/10 pb-3">
               <span className="text-ivory/70">Non-Member Price</span>
-              <span className="line-through decoration-ivory/40">From £1,095.00</span>
+              <span className="font-display text-xl line-through decoration-ivory/40">
+                From £1,095.00
+              </span>
             </div>
             <div className="flex items-baseline justify-between border-b border-ivory/10 pb-3">
               <span className="text-sm text-ivory/70">Member&rsquo;s Price</span>
-              <span className="font-display text-3xl text-gold">From £547.50</span>
+              <span className="font-display text-4xl sm:text-5xl font-semibold text-gold">
+                From £547.50
+              </span>
             </div>
-            <p className="inline-block bg-gold px-4 py-2 font-display text-xl text-ink">
+            <p className="inline-block bg-gold px-4 py-2 font-display text-2xl font-semibold text-ink">
               You Save £547.50 Instantly
             </p>
             <p className="text-xs text-ivory/60">
@@ -96,12 +100,14 @@ export default function FeesPage() {
                   className="grid grid-cols-3 items-baseline px-6 py-3.5 text-sm border-t border-ink/6"
                 >
                   <span className="font-medium">{row.name}</span>
-                  <span className="text-right text-ink-soft">{row.standard}</span>
+                  <span className="text-right font-display text-lg text-ink-soft">
+                    {row.standard}
+                  </span>
                   <span
                     className={`text-right ${
                       row.member === "Not eligible"
                         ? "text-ink-soft"
-                        : "font-display text-lg text-gold-deep"
+                        : "font-display text-2xl font-semibold text-gold-deep"
                     }`}
                   >
                     {row.member}

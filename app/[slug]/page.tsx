@@ -83,7 +83,7 @@ function TreatmentDetail({ slug }: { slug: string }) {
                 {content.badges.map((badge) => (
                   <span
                     key={badge}
-                    className={`px-4 py-2 font-label text-[10px] font-semibold tracking-[0.18em] uppercase ${
+                    className={`px-4 py-2 font-label text-[11px] font-bold tracking-[0.16em] uppercase ${
                       badge.includes("£")
                         ? "border border-gold/60 bg-gold/10 text-gold-deep"
                         : "border border-ink/15 text-ink-soft"
@@ -96,22 +96,22 @@ function TreatmentDetail({ slug }: { slug: string }) {
             )}
 
             <div className="flex flex-wrap items-stretch gap-px border border-gold/40 bg-gold/25">
-              <div className="flex-1 min-w-[140px] bg-ivory px-6 py-5">
-                <p className="text-[10px] font-bold tracking-widest uppercase text-ink-soft">
+              <div className="flex-1 min-w-[150px] bg-ivory px-6 py-5">
+                <p className="text-[11px] font-bold tracking-widest uppercase text-ink-soft">
                   Standard
                 </p>
-                <p className="mt-1 font-display text-2xl text-ink-soft">
+                <p className="mt-1.5 font-display text-3xl text-ink-soft">
                   {treatment.standard}
                 </p>
               </div>
-              <div className="flex-1 min-w-[160px] bg-gold/10 px-6 py-5">
-                <p className="flex items-center gap-2 text-[10px] font-bold tracking-widest uppercase text-gold-deep">
+              <div className="flex-1 min-w-[180px] bg-gold/10 px-6 py-5">
+                <p className="flex items-center gap-2 text-[11px] font-bold tracking-widest uppercase text-gold-deep">
                   Member&rsquo;s Price
                   <span className="bg-gold-deep px-1.5 py-0.5 text-[9px] tracking-[0.12em] text-ivory">
                     50% Off
                   </span>
                 </p>
-                <p className="mt-1 font-display text-3xl text-gold-deep">
+                <p className="mt-1.5 font-display text-4xl sm:text-5xl font-semibold text-gold-deep">
                   {treatment.member}
                 </p>
               </div>

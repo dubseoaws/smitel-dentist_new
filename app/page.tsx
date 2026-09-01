@@ -345,16 +345,20 @@ export default function HomePage() {
             <div className="grid grid-cols-[1.4fr_1fr_1fr] px-7 py-4 bg-ink text-ivory font-label text-[10px] tracking-[0.18em]">
               <span>TREATMENT</span>
               <span className="text-right">NON-MEMBER</span>
-              <span className="text-right">MEMBER (50% OFF)</span>
+              <span className="text-right text-gold-bright">MEMBER (50% OFF)</span>
             </div>
             {HOME_FEE_SECTION.rows.map((row) => (
               <div
                 key={row.name}
-                className="grid grid-cols-[1.4fr_1fr_1fr] px-7 py-4 text-sm border-t border-ink/5 hover:bg-cream/50 transition-colors"
+                className="grid grid-cols-[1.4fr_1fr_1fr] items-baseline px-7 py-4 text-sm border-t border-ink/5 hover:bg-cream/50 transition-colors"
               >
                 <span className="font-medium">{row.name}</span>
-                <span className="text-right text-ink-soft">{row.standard}</span>
-                <span className="text-right font-bold text-gold-deep">{row.member}</span>
+                <span className="text-right font-display text-lg text-ink-soft">
+                  {row.standard}
+                </span>
+                <span className="text-right font-display text-2xl font-semibold text-gold-deep">
+                  {row.member}
+                </span>
               </div>
             ))}
             <p className="px-7 py-4 text-xs text-ink-soft bg-cream/40">
