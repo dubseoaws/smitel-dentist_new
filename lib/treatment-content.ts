@@ -858,4 +858,261 @@ export const TREATMENT_CONTENT: Record<string, TreatmentContent> = {
       },
     ],
   },
+
+  "smile-makeover-london": {
+    h1: "Smile Makeover in London",
+    kicker: "Comprehensive Cosmetic Rehabilitation",
+    intro:
+      "A Smile Makeover is a bespoke combination of cosmetic and restorative treatments, carefully planned to address multiple concerns simultaneously. We analyse your facial features, tooth proportions, and personal goals to create a treatment plan tailored to you.",
+    badges: [
+      "4.9/5 from Google Reviews",
+      "South Kensington • Next to South Ken Station",
+      "City of London • Ave Maria Lane, EC4",
+    ],
+    hero: {
+      src: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1765805825/adobeStock_420986909-min_knbigb.jpg",
+      alt: "Smile Makeover at Smile Dentist London",
+    },
+    blocks: [
+      {
+        kind: "callout",
+        label: "Membership Advantage",
+        body: "Members receive 50% off every treatment included in their makeover plan.",
+      },
+      {
+        kind: "cards",
+        eyebrow: "Bespoke Treatment Planning",
+        heading: "What Is a Smile Makeover?",
+        intro:
+          "A Smile Makeover is not a single treatment — it is a comprehensive, personalised treatment plan designed to address multiple aesthetic and functional concerns simultaneously. At Smile Dentist, we analyse your facial features, skin tone, lip line, and tooth proportions to design a smile that looks natural and harmonious. Every plan is unique to the individual.",
+        items: [
+          { title: "Porcelain Veneers", body: "To refine shape and shade." },
+          { title: "Dental Implants", body: "To replace missing teeth." },
+          { title: "Gum Contouring", body: "To correct uneven gum lines." },
+          { title: "Teeth Whitening", body: "To lift baseline colour." },
+          { title: "Clear Aligners", body: "To align foundations." },
+        ],
+      },
+      {
+        kind: "cards",
+        heading: "Who May Benefit from a Smile Makeover?",
+        items: [
+          {
+            title: "Age-Related Wear",
+            body: "As we age, teeth naturally wear down and darken. Restoring tooth length and brightness can help rejuvenate the overall appearance of the smile and face.",
+          },
+          {
+            title: "Outdated Dental Work",
+            body: "A mix of old crowns, mismatched fillings, and grey lines at the gum level from old metal-bonded restorations can be replaced with modern, natural-looking materials.",
+          },
+          {
+            title: "Self-Consciousness",
+            body: "Many patients who cover their mouth when laughing due to gaps, crowding, or severe discolouration find that comprehensive treatment addresses the root causes of their concerns.",
+          },
+          {
+            title: "Erosion or Grinding Damage",
+            body: "Teeth that have become short and flat due to acid erosion or bruxism can be rebuilt to restore proper function, bite balance, and aesthetics.",
+          },
+        ],
+      },
+      {
+        kind: "steps",
+        heading: "Your Smile Makeover Journey",
+        sub: "A Structured, Step-by-Step Process",
+        items: [
+          {
+            title: "Discovery",
+            body: "We listen to your concerns and goals. We take digital scans, photographs, and X-rays to assess your dental health comprehensively.",
+          },
+          {
+            title: "Digital Design",
+            body: "Using advanced imaging, we design your new smile digitally. You see a preview of the proposed result before any treatment begins.",
+          },
+          {
+            title: "Trial Smile",
+            body: "We place temporary restorations that replicate the proposed design. You can assess the look and feel before committing to permanent ceramics.",
+          },
+          {
+            title: "Transformation",
+            body: "Your custom porcelain restorations are hand-crafted by a skilled dental technician and bonded securely in place. We check your bite meticulously.",
+          },
+        ],
+        note: {
+          title: "Written Treatment Plan",
+          body: "Before any treatment begins, you will receive a detailed written treatment plan outlining all proposed procedures, costs, expected timelines, and alternative options. This is provided for your consideration with no obligation to proceed.",
+        },
+      },
+      {
+        kind: "stories",
+        heading: "Real Patient Stories",
+        sub: "See how comprehensive treatment plans have helped real patients.",
+        items: [
+          {
+            title: "Comprehensive Rehabilitation",
+            concern:
+              "A lady in her late 50s felt her smile no longer reflected how she felt. Her old crowns were chipping and she was unhappy with their appearance.",
+            treatment:
+              "Full rehabilitation involving upper and lower porcelain restorations. A lighter, more natural shade was selected and edges were refined for improved aesthetics.",
+            outcome:
+              "The patient reported being very pleased with the overall improvement in her smile and facial appearance.",
+          },
+          {
+            title: "Closing Gaps and Restoring Confidence",
+            concern:
+              "A patient was unhappy with gaps between teeth, previous failed bonding, and uneven shades across her smile.",
+            treatment:
+              "A comprehensive makeover using porcelain veneers. The bite was carefully aligned, gaps were closed, and a uniform, natural shade was selected.",
+            outcome:
+              "The patient was delighted with the symmetry and uniformity of her new smile.",
+          },
+        ],
+        disclaimer:
+          "Individual results may vary. A consultation is required to determine suitability.",
+      },
+      {
+        kind: "doAvoid",
+        heading: "Aftercare for Your Smile Makeover",
+        sub: "Protecting Your Investment",
+        dos: [
+          "Brush twice daily with a non-abrasive fluoride toothpaste",
+          "Floss daily — interdental brushes work well around restorations",
+          "Wear your night guard if one has been provided",
+          "Attend regular check-ups and hygiene appointments",
+          "Use a mouthguard for contact sports",
+        ],
+        avoids: [
+          "Biting directly into very hard foods (ice, hard sweets, bones)",
+          "Using teeth as tools (opening packages, biting nails)",
+          "Abrasive whitening toothpastes on porcelain",
+          "Smoking — stains restorations and affects gum health",
+          "Skipping follow-up appointments",
+        ],
+      },
+      {
+        kind: "cards",
+        heading: "Understanding the Risks",
+        intro: "Balanced Information for Informed Decisions",
+        items: [
+          {
+            title: "Irreversibility of Preparation",
+            body: "If veneers or crowns are part of your plan, tooth preparation involves removing a layer of enamel. This process cannot be reversed. We discuss this thoroughly before proceeding and always aim for minimally invasive approaches where clinically appropriate.",
+          },
+          {
+            title: "Sensitivity",
+            body: "Some patients experience temporary sensitivity to hot and cold after tooth preparation. This typically resolves within a few weeks as the teeth adapt to their new restorations. Your dentist will advise on management strategies.",
+          },
+          {
+            title: "Maintenance Commitment",
+            body: "A smile makeover is a long-term commitment. Porcelain restorations require ongoing care including regular hygiene visits, potential night guard use, and careful oral hygiene. Without proper maintenance, the lifespan of restorations may be reduced.",
+          },
+          {
+            title: "Future Replacement",
+            body: "No dental restoration lasts forever. Veneers and crowns may need replacement after 10–20 years depending on wear, care, and individual factors. We plan for long-term maintainability and discuss realistic expectations during your consultation.",
+          },
+        ],
+      },
+      {
+        kind: "callout",
+        label: "Our Commitment",
+        body: "We provide comprehensive information about all treatment options, including alternatives, risks, and expected outcomes, so you can make a fully informed decision. A detailed written treatment plan is provided before any work begins.",
+      },
+      {
+        kind: "pricing",
+        eyebrow: "Transparent Pricing",
+        heading: "Smile Makeover Pricing",
+        intro:
+          "Every smile makeover is unique, so pricing depends on the specific treatments involved. Below are the individual treatment fees that may form part of your personalised plan. Members receive 50% off most treatment fees; dental implants are not included in the membership discount.",
+        columns: ["Treatment Component", "Standard Price", "Member Price"],
+        rows: [
+          {
+            label: "Consultation & Digital Scan",
+            standard: "From £95.00",
+            member: "From £47.50",
+          },
+          {
+            label: "Porcelain Veneer (per tooth)",
+            standard: "From £1,095.00",
+            member: "From £547.50",
+          },
+          {
+            label: "Zirconia Crown (per tooth)",
+            standard: "From £995.00",
+            member: "From £497.50",
+          },
+          {
+            label: "Dental Implant (per tooth)",
+            standard: "From £2,950.00",
+            member: "Not eligible †",
+          },
+          {
+            label: "Gum Contouring (per tooth)",
+            standard: "From £200.00",
+            member: "From £100.00",
+          },
+          {
+            label: "Boutique Teeth Whitening",
+            standard: "From £399.00",
+            member: "From £199.50",
+          },
+        ],
+        notes: [
+          {
+            title: "Membership Plan",
+            body: "Join for £20/month and receive 50% off most treatment fees, two check-ups and two hygiene visits per year. † Dental implants, bone grafting, sinus lift and full-mouth rehabilitation are excluded from the membership discount.",
+          },
+          {
+            title: "Finance Options",
+            body: "We offer finance plans to help spread the cost of your smile makeover. Finance is subject to status; terms and conditions apply. Ask at your consultation for details and a personalised quote.",
+          },
+        ],
+      },
+      {
+        kind: "prose",
+        heading: "Dr. Yasha Y Shirazi",
+        sub: "Principal Dentist — GDC: 195843",
+        paragraphs: [
+          "“A comprehensive smile makeover involves careful planning of both aesthetics and function. We ensure your bite is balanced so your new restorations are comfortable and long-lasting. Every case is unique, and we take the time to understand what matters most to you.”",
+          "Views expressed are those of the individual clinician.",
+        ],
+      },
+      {
+        kind: "faq",
+        heading: "Frequently Asked Questions",
+        items: [
+          {
+            q: "How long does a smile makeover take?",
+            a: "Typically 3–6 weeks depending on the treatments involved. Visit 1: Records, scans and digital design. Visit 2: Preparation and placement of temporary restorations. Visit 3: Final bonding of permanent ceramics. More complex cases involving implants or orthodontics may take longer. Your dentist will provide a detailed timeline during your consultation.",
+          },
+          {
+            q: "Does a smile makeover hurt?",
+            a: "We use local anaesthetic to ensure comfort during any preparatory work. Some patients experience mild sensitivity for a few days afterwards, which can typically be managed with over-the-counter painkillers. Individual experiences vary, and we discuss all aspects of comfort before beginning treatment.",
+          },
+          {
+            q: "Can I finance my smile makeover?",
+            a: "Yes. We offer finance plans to help spread the cost of treatment. Finance is subject to status and terms apply. Our Membership Plan also gives 50% off most treatment fees; please note that dental implants, bone grafting, sinus lift and full-mouth rehabilitation are excluded from the membership discount. We provide a full written breakdown of costs before you commit to any treatment.",
+          },
+          {
+            q: "How long will my results last?",
+            a: "With good care, porcelain veneers and crowns can last 10–20 years or more. Longevity depends on factors including oral hygiene, diet, and whether you grind your teeth. We provide detailed aftercare guidance and recommend regular check-ups to help maintain your results. Individual outcomes vary.",
+          },
+          {
+            q: "Will my teeth look natural?",
+            a: "Natural-looking results are our primary goal. We use digital smile design to preview your new smile before any treatment begins. We analyse your facial proportions, lip line, skin tone, and tooth characteristics to design restorations that harmonise with your features. You will have the opportunity to approve the design before we proceed.",
+          },
+          {
+            q: "Am I too old for a smile makeover?",
+            a: "There is no upper age limit. Many patients in their 50s, 60s, and beyond benefit from comprehensive smile rehabilitation. As teeth naturally wear down with age, restoring proper tooth length and function can have a significant positive impact. We assess each patient individually to determine suitability.",
+          },
+          {
+            q: "What if I need teeth extracted first?",
+            a: "We plan comprehensively. If extractions are needed, we incorporate them into the overall treatment plan. In some cases, we can place dental implants at the time of extraction. The goal is to minimise the number of appointments and ensure you are never left without teeth during the process.",
+          },
+          {
+            q: "Do I need a night guard afterwards?",
+            a: "We often recommend a custom night guard (occlusal splint) to protect your investment, particularly if you grind or clench your teeth. Bruxism is one of the leading causes of damage to dental restorations. A night guard is a small investment that can significantly extend the life of your new smile.",
+          },
+        ],
+      },
+    ],
+  },
 };
