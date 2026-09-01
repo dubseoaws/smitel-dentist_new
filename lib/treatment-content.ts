@@ -6177,4 +6177,419 @@ export const TREATMENT_CONTENT: Record<string, TreatmentContent> = {
       smileGallery(),
     ],
   },
+
+  "childrens-dentistry-london": {
+    h1: "Children's Dentistry in London",
+    kicker: "Gentle Care for Growing Smiles",
+    intro:
+      "We believe a visit to the dentist should be a positive experience for children. Our team uses a patient, child-friendly approach to build confidence and establish healthy habits that last a lifetime.",
+    badges: [
+      "4.9/5 from Google Reviews",
+      "South Kensington • Next to South Ken Station",
+      "City of London • Ave Maria Lane, EC4",
+      "Standard Exam From £95.00",
+      "Member (50% off) From £47.50",
+      "New Patient (Under 16) From £30.00",
+    ],
+    hero: {
+      src: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1765805801/children-dentistry_uc22fn.jpg",
+      alt: "Children's Dentistry at Smile Dentist London",
+    },
+    blocks: [
+      {
+        kind: "callout",
+        label: "New Patient (Under 16) From £30.00",
+        body: "First visit only. Includes full examination and oral health advice.",
+      },
+      {
+        kind: "cards",
+        eyebrow: "Building Confidence for Life",
+        heading: "Our Child-Friendly Approach",
+        intro:
+          "Dental anxiety often starts in childhood. At Smile Dentist, our goal is to break that cycle by introducing your child to the dental environment gradually, at their own pace.",
+        items: [
+          {
+            title: "Tell-Show-Do",
+            body: "We explain each step in child-friendly language, show the tools, and then proceed gently. No surprises.",
+          },
+          {
+            title: "Positive Reinforcement",
+            body: "Every patient receives praise and encouragement to build confidence and create positive associations with dental visits.",
+          },
+          {
+            title: "No Forced Treatment",
+            body: "We never force treatment. If a child is not ready, we take a step back and try again at the next visit.",
+          },
+        ],
+      },
+      {
+        kind: "cards",
+        heading: "Preventive Treatments",
+        intro: "Protecting your child's teeth before problems develop.",
+        items: [
+          {
+            title: "Fissure Sealants",
+            body: "A thin, invisible protective coating painted over deep molar grooves to seal them against decay. Quick, painless, and requires no drilling.",
+            bullets: ["Standard From £65.00", "Member From £32.50"],
+          },
+          {
+            title: "Fluoride Varnish",
+            body: "A high-concentration fluoride varnish applied to tooth surfaces to strengthen enamel and help protect against sugar and acid attacks.",
+            bullets: ["Standard From £40.00", "Member From £20.00"],
+          },
+          {
+            title: "Orthodontic Screening",
+            body: "We monitor jaw growth and tooth development. Early detection of crowding or bite issues allows for timely intervention.",
+            bullets: ["Included in Examination"],
+          },
+        ],
+      },
+      {
+        kind: "cards",
+        heading: "When Should My Child First Visit?",
+        items: [
+          {
+            title: "\u201CFirst Tooth, First Visit\u201D",
+            body: "The British Society of Paediatric Dentistry (BSPD) recommends seeing a dentist as soon as the first milk tooth appears (usually around 6 months), or by their first birthday.",
+          },
+          {
+            title: "Why so early?",
+            body: "It allows us to check for early signs of decay (such as \u201CBaby Bottle Decay\u201D) and helps your child get used to the sights, sounds, and smells of the dental clinic before they ever need treatment.",
+          },
+        ],
+      },
+      {
+        kind: "doAvoid",
+        heading: "Oral Health Tips for Parents",
+        sub: "Simple steps to protect your child's smile at home.",
+        dos: [
+          "Brush twice daily with a fluoride toothpaste appropriate for their age",
+          "Supervise brushing until at least age 7",
+          "Encourage drinking water and milk rather than sugary drinks",
+          "Book regular dental check-ups every 6 months",
+          "Use a mouthguard for contact sports",
+        ],
+        avoids: [
+          "Putting babies to bed with bottles of milk or juice (can cause decay)",
+          "Frequent snacking on sugary foods between meals",
+          "Sharing spoons or cutlery (cavity-causing bacteria can be transferred)",
+          "Using adult toothpaste for children under 3 (too much fluoride)",
+          "Rinsing with water immediately after brushing (let the fluoride work)",
+        ],
+      },
+      {
+        kind: "pricing",
+        eyebrow: "Transparent Pricing",
+        heading: "Children's Dental Fees",
+        intro:
+          "We believe quality dental care should be accessible for families. Members receive 50% off all treatments.",
+        columns: ["Treatment", "Standard", "Member"],
+        rows: [
+          { label: "Child Examination (Under 16)", standard: "From £95.00", member: "From £47.50" },
+          { label: "New Patient First Visit (Under 16)", standard: "From £30.00", member: "" },
+          { label: "Fissure Sealant (per tooth)", standard: "From £65.00", member: "From £32.50" },
+          { label: "Fluoride Treatment", standard: "From £40.00", member: "From £20.00" },
+          { label: "Emergency Appointment", standard: "From £95.00", member: "From £47.50" },
+        ],
+        notes: [
+          {
+            title: "Family Membership",
+            body: "Adult membership: £20/month. Add a child: just £10/month. Members receive 50% off all treatment fees, plus two check-ups and two hygiene visits per year.",
+          },
+        ],
+        footnote:
+          "A written treatment plan with exact costs is provided before any treatment begins.",
+      },
+      {
+        kind: "callout",
+        label: "Dr. Yasha Y Shirazi — GDC: 195843",
+        body: "\u201COur goal is for children to feel comfortable and safe at the dentist. By taking our time and making visits as positive as possible, we aim to help them develop good oral health habits that last a lifetime.\u201D This reflects the clinical team's approach. Individual experiences may vary.",
+      },
+      {
+        kind: "faq",
+        heading: "Frequently Asked Questions",
+        items: [
+          {
+            q: "My child is terrified of the dentist. Can you help?",
+            a: "Yes. We allow extra time for nervous children and use a gentle, step-by-step approach. For very young or anxious children, we can perform the check-up while they sit on your lap (a 'Knee-to-Knee' exam). We never force treatment — building trust comes first.",
+          },
+          {
+            q: "When should my child first visit the dentist?",
+            a: "The British Society of Paediatric Dentistry (BSPD) recommends seeing a dentist as soon as the first milk tooth appears (usually around 6 months), or by their first birthday. Early visits help your child become familiar with the dental environment before they ever need treatment.",
+          },
+          {
+            q: "Why do baby teeth matter if they fall out?",
+            a: "Baby teeth act as 'pathfinders' for adult teeth. If they are lost too early due to decay, the adult teeth can come in crooked. Toothache also affects a child's eating, sleep, and school performance. Keeping baby teeth healthy is essential for overall development.",
+          },
+          {
+            q: "Do you treat teenagers?",
+            a: "Yes. We offer clear aligners and cosmetic bonding for older children and teenagers who may be self-conscious about their smile. We discuss all options with both the patient and parent.",
+          },
+          {
+            q: "What are fissure sealants?",
+            a: "Fissure sealants are thin, invisible protective coatings painted over the deep grooves of molar teeth. They seal off areas where bacteria and food can become trapped, helping to prevent decay. The procedure is quick, painless, and requires no drilling.",
+          },
+          {
+            q: "Is fluoride varnish safe for children?",
+            a: "Yes. Fluoride varnish is widely recommended by dental professionals and NHS guidelines for children. It is applied in a very thin layer to the surface of teeth and helps strengthen enamel, making it more resistant to decay from sugar and acid.",
+          },
+          {
+            q: "How often should my child visit the dentist?",
+            a: "We generally recommend check-ups every 6 months for children, though some children may benefit from more frequent visits depending on their risk of decay. Regular visits help us monitor development and catch any issues early.",
+          },
+          {
+            q: "How much does a children's dental check-up cost?",
+            a: "A children's examination is £95 (£47.50 for members). New patients under 16 can book a first visit from £30, which includes a full examination and oral health advice. A written treatment plan is provided before any additional treatment.",
+          },
+        ],
+      },      smileGallery(),
+      {
+        kind: "prose",
+        heading: "Children's Dentist London — Gentle Family Care",
+        paragraphs: [
+          "At Smile Dentist in London, with clinics in South Kensington and the City of London, we provide gentle, child-friendly dental care for children of all ages. From first visits and preventive treatments like fissure sealants and fluoride varnish, through to extractions and orthodontic screening, our GDC-registered team is experienced in caring for young patients.",
+          "We welcome families from across Kensington, Chelsea, Fulham, Knightsbridge, and Central London. Our goal is to make dental visits a positive experience so that children grow up with healthy teeth and a confident attitude towards dental care.",
+          "All treatments are provided by General Dental Council (GDC)-registered dentists at our Care Quality Commission (CQC)-registered practice.",
+        ],
+      },
+    ],
+  },
+
+  "emergency-dental-london": {
+    h1: "Emergency Dentist London",
+    intro:
+      "If you are experiencing dental pain, injury, or another urgent concern, our London practice is here to help. We offer prompt assessment and care in a calm, supportive environment — so you can get the attention you need when it matters most.",
+    badges: [
+      "4.9/5 from Google Reviews",
+      "South Kensington • Next to South Ken Station",
+      "City of London • Ave Maria Lane, EC4",
+      "Treatment costs explained before proceeding",
+    ],
+    hero: {
+      src: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1765805792/emergency-dental_selpql.jpg",
+      alt: "Emergency dentist at Smile Dentist London",
+    },
+    blocks: [
+      {
+        kind: "callout",
+        label: "Urgent Care",
+        body: "Same-day appointments may be available for urgent dental concerns. Contact us so we can assess your situation and arrange appropriate care.",
+      },
+      {
+        kind: "cards",
+        eyebrow: "Understanding Urgent Care",
+        heading: "What Is a Dental Emergency?",
+        intro:
+          "A dental emergency is any situation involving significant dental pain, infection, trauma, or damage that requires prompt professional attention. This may include sudden toothache, swelling, a broken or knocked-out tooth, or other concerns that affect your comfort or oral health.",
+        items: [
+          {
+            title: "Pain-Related Concerns",
+            body: "Severe or persistent toothache, throbbing pain, or sensitivity that does not improve with over-the-counter relief may indicate an underlying issue that requires clinical assessment.",
+          },
+          {
+            title: "Trauma or Injury",
+            body: "Accidents, falls, or impacts that result in a broken, chipped, or knocked-out tooth should be assessed promptly. Quick action can sometimes make a significant difference to the outcome.",
+          },
+        ],
+      },
+      {
+        kind: "steps",
+        eyebrow: "Common Concerns",
+        heading: "Common Dental Emergencies",
+        items: [
+          {
+            title: "Severe Toothache",
+            meta: "1",
+            body: "Persistent or intense tooth pain can have a number of causes, including decay, infection, or damage to the tooth. A clinical assessment helps identify the source and determine the appropriate treatment. In some cases, root canal treatment may be recommended.",
+          },
+          {
+            title: "Broken or Chipped Tooth",
+            meta: "2",
+            body: "A tooth that has been broken or chipped through trauma or biting can often be treated to restore its shape and function. Saving any tooth fragments and contacting us promptly is advisable.",
+          },
+          {
+            title: "Knocked-Out Tooth",
+            meta: "3",
+            body: "If a permanent tooth has been knocked out, handle it by the crown, keep it moist, and contact us as soon as possible. Prompt attention may improve the chance of saving the tooth.",
+          },
+          {
+            title: "Swelling or Infection",
+            meta: "4",
+            body: "Facial swelling, a dental abscess, or signs of infection should be assessed promptly. Your dentist will examine the area and discuss the most appropriate course of action.",
+          },
+          {
+            title: "Lost Filling or Crown",
+            meta: "5",
+            body: "A lost filling or crown can leave the tooth exposed and sensitive. Contact us to arrange an assessment — the tooth may be protected with a temporary or permanent restoration.",
+          },
+        ],
+        note: {
+          title: "Not sure if it's urgent?",
+          body: "Call us on 020 7183 2362 and our team will advise you.",
+        },
+      },
+      {
+        kind: "cards",
+        eyebrow: "Knowing When to Act",
+        heading: "When Should You See an Emergency Dentist?",
+        intro:
+          "If you are unsure whether your situation requires urgent attention, the following indicators may help. A clinical assessment will determine the appropriate level of care.",
+        items: [
+          {
+            title: "Persistent or Worsening Pain",
+            body: "Dental pain that does not settle or continues to worsen may indicate an issue that benefits from prompt assessment rather than waiting for a routine appointment.",
+          },
+          {
+            title: "Signs of Infection",
+            body: "Swelling, an unpleasant taste, or a raised temperature alongside dental pain may suggest an infection. Contacting us allows your dentist to assess and advise on the most suitable next steps.",
+          },
+          {
+            title: "Dental Trauma",
+            body: "If a tooth has been knocked out, loosened, or broken due to an impact or fall, seeking prompt dental attention is important. Quick assessment can sometimes improve the outcome.",
+          },
+        ],
+      },
+      {
+        kind: "cards",
+        eyebrow: "Practical Guidance",
+        heading: "What to Do in a Dental Emergency",
+        intro:
+          "While every situation is different, the following general guidance may help while you arrange an appointment with us.",
+        items: [
+          {
+            title: "Contact Us Promptly",
+            body: "Call 020 7183 2362 or book online so we can understand your concern and arrange an appropriate appointment as soon as possible.",
+          },
+          {
+            title: "Manage Discomfort",
+            body: "Over-the-counter pain relief, taken as directed, may help manage discomfort while you wait for your appointment. A cold compress can help with swelling.",
+          },
+          {
+            title: "Preserve Any Fragments",
+            body: "If a tooth has broken, save any pieces. For a knocked-out tooth, keep it moist — ideally in milk — and bring it with you to the appointment.",
+          },
+          {
+            title: "Avoid Self-Treatment",
+            body: "Avoid applying medications directly to the gums or attempting to repair dental work at home. Professional assessment ensures the most appropriate care for your situation.",
+          },
+        ],
+      },
+      {
+        kind: "cards",
+        eyebrow: "Treatments Available",
+        heading: "Emergency Dental Treatments",
+        intro:
+          "The treatment recommended will depend on the nature and severity of your dental concern. Your dentist will explain all options and costs before any treatment begins.",
+        items: [
+          {
+            title: "Pain Management",
+            body: "The initial priority is to address your discomfort. This may involve assessment, local anaesthetic, or other appropriate measures to help you feel more comfortable.",
+          },
+          {
+            title: "Temporary or Definitive Treatment",
+            body: "Depending on the issue, treatment may involve a temporary dressing, a filling, or a more definitive restoration. In some cases, tooth extraction may be discussed as part of the treatment plan.",
+          },
+          {
+            title: "Stabilising Dental Issues",
+            body: "Where immediate full treatment is not possible, your dentist may stabilise the issue and arrange follow-up care to complete the treatment at a subsequent appointment.",
+          },
+        ],
+      },
+      {
+        kind: "cards",
+        eyebrow: "Availability",
+        heading: "Same-Day Appointments",
+        intro:
+          "We understand that dental emergencies do not always happen at convenient times. Same-day appointments may be available depending on your circumstances and current clinic availability.",
+        items: [
+          {
+            title: "Priority for Urgent Cases",
+            body: "We prioritise patients with urgent dental concerns and aim to see you as quickly as possible. Contacting us early in the day can help with same-day availability.",
+          },
+          {
+            title: "Call to Arrange",
+            body: "Please call 020 7183 2362 or book online so our team can understand your concern and arrange the most appropriate appointment time for you.",
+          },
+        ],
+      },
+      {
+        kind: "cards",
+        eyebrow: "Pricing",
+        heading: "Emergency Dentist Cost London",
+        intro:
+          "The cost of emergency dental treatment varies depending on the nature and complexity of the issue. Your dentist will carry out an assessment and explain all costs before any treatment begins.",
+        sub: "What Determines the Cost?",
+        items: [
+          {
+            title: "Nature of the Concern",
+            body: "The type of dental emergency — whether it involves pain relief, infection management, or trauma repair — will influence the treatment and associated cost.",
+          },
+          {
+            title: "Treatment Required",
+            body: "Some emergencies can be resolved in a single visit, while others may require follow-up treatment. Costs are explained at each stage of your care.",
+          },
+          {
+            title: "Assessment First",
+            body: "A thorough assessment is carried out to understand the issue before any treatment costs are discussed. You will know what to expect before proceeding.",
+          },
+          {
+            title: "Membership Benefits",
+            body: "Members of our dental plan receive reduced fees across all treatments, including emergency care. Membership is available for £20 per month.",
+          },
+          {
+            title: "View Our Full Fee Guide",
+            body: "A transparent breakdown of treatment fees is available on our pricing page.",
+          },
+        ],
+      },
+      {
+        kind: "list",
+        eyebrow: "Our Approach",
+        heading: "Why Choose Smile Dentist",
+        sub: "Dr. Yasha Y Shirazi — GDC: 195843",
+        items: [
+          "London practice offering calm, responsive urgent dental care",
+          "Focus on patient comfort and reassurance throughout your visit",
+          "Full treatment plan with costs explained before any treatment begins",
+          "GDC-registered dentists at a CQC-registered practice",
+        ],
+      },
+      {
+        kind: "prose",
+        eyebrow: "Serving London",
+        heading: "Emergency Dentist Near You",
+        paragraphs: [
+          "Our London practice welcomes patients from across the city and surrounding areas who need urgent dental care. Whether you are searching for an emergency dentist near you or same-day dental care in London, we are here to help.",
+          "Conveniently located in London with excellent transport links",
+        ],
+      },
+      {
+        kind: "faq",
+        heading: "Frequently Asked Questions",
+        items: [
+          {
+            q: "What is considered a dental emergency?",
+            a: "A dental emergency includes severe toothache, dental infection or swelling, a broken or knocked-out tooth, or a lost filling or crown. If you are in significant discomfort or have experienced dental trauma, we recommend contacting us promptly for an assessment.",
+          },
+          {
+            q: "Can I see a dentist the same day?",
+            a: "Same-day appointments may be available depending on the nature of your concern and current availability. We prioritise urgent cases and aim to see patients as quickly as possible. Please contact us so we can assess your situation and arrange an appointment.",
+          },
+          {
+            q: "What should I do if I have severe tooth pain?",
+            a: "If you are experiencing severe tooth pain, contact us as soon as possible to arrange an assessment. Over-the-counter pain relief taken as directed may help manage discomfort in the meantime. Avoid very hot or cold foods on the affected area until you are seen.",
+          },
+          {
+            q: "How quickly should I seek treatment?",
+            a: "This depends on the nature of the issue. Dental infections, knocked-out teeth, and uncontrolled bleeding should be assessed promptly. For other concerns, contacting us at your earliest convenience allows us to advise on the appropriate urgency of your appointment.",
+          },
+          {
+            q: "Can a knocked-out tooth be saved?",
+            a: "In some cases, a knocked-out permanent tooth can be replanted if treated quickly. Handle the tooth by the crown, keep it moist in milk if possible, and contact us immediately. The outcome depends on factors including time elapsed and the condition of the tooth.",
+          },
+        ],
+      },
+      smileGallery(),
+    ],
+  },
 };
