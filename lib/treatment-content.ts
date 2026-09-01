@@ -17,7 +17,7 @@ export type ContentBlock =
       heading?: string;
       sub?: string;
       intro?: string;
-      items: { title: string; meta?: string; body: string }[];
+      items: { title: string; meta?: string; body: string; bullets?: string[] }[];
       footer?: string;
     }
   | {
@@ -38,13 +38,21 @@ export type ContentBlock =
       items: {
         title: string;
         meta?: string;
-        concern: string;
-        treatment: string;
-        outcome: string;
+        concern?: string;
+        treatment?: string;
+        outcome?: string;
         before?: ContentImage;
         after?: ContentImage;
       }[];
       disclaimer?: string;
+      note?: string;
+    }
+  | {
+      kind: "list";
+      eyebrow?: string;
+      heading?: string;
+      sub?: string;
+      items: string[];
     }
   | {
       kind: "table";
@@ -2051,6 +2059,1169 @@ export const TREATMENT_CONTENT: Record<string, TreatmentContent> = {
             q: "What should I do after wisdom tooth extraction?",
             a: "Following your aftercare instructions carefully is important for recovery. This typically includes resting, avoiding vigorous rinsing, and eating soft foods initially. Your dentist will provide detailed guidance specific to your treatment to help support the healing process.",
           },
+        ],
+      },
+    ],
+  },
+
+  "composite-veneers-london": {
+    h1: "Composite Veneers London",
+    intro:
+      "Composite veneers are a minimally invasive cosmetic treatment in which tooth-coloured resin is hand-sculpted onto the front surface of the teeth to improve shape, colour, and overall smile appearance. At our London practice, every veneer is individually crafted to suit your smile.",
+    badges: [
+      "4.9/5 from Google Reviews",
+      "South Kensington • Next to South Ken Station",
+      "City of London • Ave Maria Lane, EC4",
+      "Standard From £595 / tooth",
+      "Member (50% off) From £297.50",
+      "Personalised treatment plan with full costs provided",
+    ],
+    hero: {
+      src: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1765871030/Full-Smile-Transformation-with-20-Porcelain-Veneers-after_gnkzev.jpg",
+      alt: "Composite veneers cosmetic dentistry at Smile Dentist London",
+    },
+    blocks: [
+      {
+        kind: "cards",
+        eyebrow: "Understanding the Treatment",
+        heading: "What Are Composite Veneers?",
+        intro:
+          "Composite veneers are a cosmetic dental treatment in which tooth-coloured composite resin is layered and shaped directly onto the front of the teeth. They are used in cosmetic dentistry to help address concerns such as discolouration, minor chips, small gaps, and uneven tooth shape — typically without the need to alter significant natural tooth structure.",
+        items: [
+          {
+            title: "Hand-Sculpted",
+            body: "Each composite veneer is individually shaped and contoured by your dentist directly on the tooth, allowing fine adjustments to suit your facial features and smile line.",
+          },
+          {
+            title: "Minimally Invasive",
+            body: "Composite veneers typically require little or no removal of natural tooth structure, making them a more conservative cosmetic option for many patients.",
+          },
+          {
+            title: "Often Single Visit",
+            body: "Composite veneers can usually be completed in one appointment, as the resin is applied and shaped chair-side rather than being made in a laboratory.",
+          },
+        ],
+      },
+      {
+        kind: "steps",
+        eyebrow: "Is This Treatment for You?",
+        heading: "Who Are Composite Veneers Suitable For?",
+        sub: "Composite veneers may be considered for patients seeking a minimally invasive way to enhance the appearance of their smile. Common cosmetic concerns that composite veneers can help address include:",
+        items: [
+          {
+            title: "Discoloured or Stained Teeth",
+            meta: "1",
+            body: "Teeth with surface staining or discolouration that may not respond fully to whitening can sometimes be improved with composite veneers, which can be colour-matched to a brighter shade.",
+          },
+          {
+            title: "Chipped or Worn Edges",
+            meta: "2",
+            body: "Composite veneers can be used to rebuild small chips and worn biting edges, helping to restore a more even tooth shape and overall smile line.",
+          },
+          {
+            title: "Small Gaps Between Teeth",
+            meta: "3",
+            body: "Minor spaces between teeth can sometimes be reduced or closed using composite veneers, depending on the size and position of the gaps.",
+          },
+          {
+            title: "Uneven Tooth Shape",
+            meta: "4",
+            body: "Composite resin can be sculpted to refine tooth proportions and improve symmetry, often as part of a wider smile makeover approach.",
+          },
+        ],
+        note: {
+          title: "Important",
+          body: "Suitability for composite veneers depends on a clinical assessment of your teeth, gums, and bite. Your dentist will discuss all suitable options during your consultation.",
+        },
+      },
+      {
+        kind: "cards",
+        eyebrow: "Why Consider Composite Veneers",
+        heading: "Benefits of Composite Veneers",
+        intro:
+          "Composite veneers offer a number of potential benefits as a cosmetic treatment option. The outcome depends on your individual clinical situation and personal goals.",
+        items: [
+          {
+            title: "Conservative Approach",
+            body: "Composite veneers typically require little to no preparation of the natural tooth, making them one of the more conservative cosmetic options available.",
+          },
+          {
+            title: "Treatment in One Visit",
+            body: "Because the resin is applied and shaped at the chairside, composite veneers can usually be completed in a single appointment, with no laboratory wait.",
+          },
+          {
+            title: "Tailored Aesthetics",
+            body: "The composite material is hand-sculpted in layers and colour-matched to your natural teeth, allowing the dentist to refine shape, shade, and translucency in real time.",
+          },
+          {
+            title: "Repairable and Adjustable",
+            body: "Composite veneers can usually be polished, repaired, or adjusted as needed over time, which can be a practical advantage compared with some alternative treatments.",
+          },
+        ],
+      },
+      {
+        kind: "steps",
+        eyebrow: "What to Expect",
+        heading: "The Composite Veneers Process",
+        sub: "The composite veneer process follows a structured approach. Each stage is carefully planned to help achieve a result that is appropriate for your individual smile.",
+        items: [
+          {
+            title: "Consultation & Smile Assessment",
+            meta: "Step 1",
+            body: "Your dentist will examine your teeth and gums, discuss your goals, and confirm whether composite veneers are a suitable option for you.",
+          },
+          {
+            title: "Treatment Planning",
+            meta: "Step 2",
+            body: "A personalised treatment plan is developed, including shade selection, the number of teeth to be treated, and the expected approach.",
+          },
+          {
+            title: "Tooth Preparation",
+            meta: "Step 3",
+            body: "The tooth surface is gently cleaned and conditioned. Little or no removal of natural tooth structure is typically required.",
+          },
+          {
+            title: "Layering & Sculpting",
+            meta: "Step 4",
+            body: "Composite resin is applied in thin layers, with each layer carefully shaped and hardened using a curing light to recreate natural tooth anatomy.",
+          },
+          {
+            title: "Polishing & Final Check",
+            meta: "Step 5",
+            body: "The veneers are refined, contoured, and polished to a natural-looking finish, and your bite is checked to ensure comfort.",
+          },
+        ],
+      },
+      {
+        kind: "table",
+        eyebrow: "Compare Your Options",
+        heading: "Composite vs Porcelain Veneers",
+        sub: "Both composite and porcelain veneers can help improve smile appearance. The most appropriate option depends on your clinical situation, goals, and preferences. Your dentist can help you compare both during your consultation.",
+        columns: ["Consideration", "Composite Veneers", "Porcelain Veneers"],
+        rows: [
+          ["Material", "Tooth-coloured composite resin", "Custom-made ceramic shells"],
+          [
+            "Tooth Preparation",
+            "Little to no preparation typically required",
+            "Some enamel preparation usually required",
+          ],
+          ["Treatment Time", "Often a single visit", "Usually two or more visits"],
+          [
+            "Longevity",
+            "May typically last several years with care",
+            "Generally tend to last longer than composite",
+          ],
+          [
+            "Stain Resistance",
+            "Can stain over time with certain habits",
+            "Tends to be more stain-resistant",
+          ],
+          [
+            "Reversibility",
+            "Largely reversible in most cases",
+            "Less reversible due to enamel preparation",
+          ],
+          ["Indicative Cost (per tooth)", "From £595", "From £1,095"],
+        ],
+      },
+      {
+        kind: "cards",
+        eyebrow: "Longevity",
+        heading: "How Long Do Composite Veneers Last?",
+        intro:
+          "The lifespan of composite veneers varies between individuals and is influenced by oral habits, oral hygiene, and routine maintenance. With appropriate care, composite veneers may typically last several years.",
+        items: [
+          {
+            title: "Individual Variation",
+            body: "Longevity differs from patient to patient. Bite forces, grinding habits, diet, and the location of the veneers all influence how long composite veneers last.",
+          },
+          {
+            title: "Daily Care",
+            body: "Good oral hygiene, gentle brushing, and limiting heavily staining substances such as coffee, tea, and red wine can help maintain the appearance of composite veneers.",
+          },
+          {
+            title: "Regular Maintenance",
+            body: "Routine dental visits and professional polishing can help support the long-term appearance of composite veneers and identify any maintenance needs early.",
+          },
+        ],
+      },
+      {
+        kind: "callout",
+        label: "Please note",
+        body: "Longevity varies between individuals and cannot be guaranteed. Your dentist will discuss expected outcomes and care guidance during your consultation.",
+      },
+      {
+        kind: "cards",
+        eyebrow: "Pricing",
+        heading: "Composite Veneers Cost London",
+        intro:
+          "The cost of composite veneers depends on the number of teeth being treated, the complexity of the case, and your personalised treatment plan. Full costs are provided in writing before treatment begins.",
+        sub: "What Affects the Cost?",
+        items: [
+          {
+            title: "Number of Teeth Treated",
+            body: "Whether one or several teeth are being treated influences the overall cost of your composite veneer treatment.",
+          },
+          {
+            title: "Complexity of the Case",
+            body: "More extensive sculpting or smile-design considerations may affect the time and cost involved.",
+          },
+          {
+            title: "Personalised Treatment Plan",
+            body: "An itemised written treatment plan is provided after consultation, so you have full clarity on costs before agreeing to treatment.",
+          },
+          {
+            title: "Membership Benefits",
+            body: "Our membership plan offers reduced treatment fees for patients who wish to benefit from ongoing savings across all treatments.",
+          },
+        ],
+      },
+      {
+        kind: "pricing",
+        columns: ["Treatment", "Standard", "Member"],
+        rows: [
+          { label: "Composite Veneer (per tooth)", standard: "From £595", member: "From £297.50" },
+          { label: "Composite Bonding (per tooth)", standard: "From £395", member: "From £197.50" },
+          { label: "Porcelain Veneer (per tooth)", standard: "From £1,095", member: "From £547.50" },
+        ],
+        footnote:
+          "Final costs depend on the number of veneers and complexity. A written treatment plan with full costs is provided before treatment begins.",
+        notes: [
+          {
+            title: "View Our Full Fee Guide",
+            body: "A transparent breakdown of treatment fees is available on our pricing page.",
+          },
+        ],
+      },
+      {
+        kind: "list",
+        eyebrow: "Our Approach",
+        heading: "Why Choose Smile Dentist",
+        sub: "Dr. Yasha Y Shirazi — GDC: 195843",
+        items: [
+          "London practice with experience in cosmetic and minimally invasive dentistry",
+          "Hand-sculpted, individually crafted composite veneers",
+          "Personalised smile design approach for every patient",
+          "GDC-registered dentists at a CQC-registered practice",
+        ],
+      },
+      {
+        kind: "prose",
+        eyebrow: "Visit Our London Practice",
+        heading: "Composite Veneers in South Kensington",
+        paragraphs: [
+          "Our South Kensington practice welcomes patients from across London and surrounding areas who are considering composite veneers as a minimally invasive cosmetic option. Whether you are exploring veneer treatment for the first time or comparing it with other cosmetic options, our team is here to provide clear, balanced information.",
+          "20 Old Brompton Road, South Kensington, London SW7 3DL",
+        ],
+      },
+      {
+        kind: "faq",
+        heading: "Frequently Asked Questions",
+        items: [
+          {
+            q: "What are composite veneers?",
+            a: "Composite veneers are a cosmetic dental treatment in which tooth-coloured composite resin is applied directly to the front surface of the teeth and carefully sculpted by hand. They may be used to improve the shape, colour, or appearance of teeth, and are typically completed in a single appointment.",
+          },
+          {
+            q: "How are composite veneers different from porcelain veneers?",
+            a: "Composite veneers are made from layered resin material applied directly to the tooth, while porcelain veneers are custom-made ceramic shells crafted in a dental laboratory. Composite veneers are generally a more conservative and reversible option, while porcelain veneers tend to offer greater longevity. Suitability depends on individual clinical assessment.",
+          },
+          {
+            q: "Are composite veneers painful?",
+            a: "The composite veneer process is typically comfortable. Because little to no removal of natural tooth structure is usually required, local anaesthetic is often unnecessary. Some patients may notice mild sensitivity afterwards, which generally settles in a short time. Your dentist will discuss what to expect during your consultation.",
+          },
+          {
+            q: "How long do composite veneers last?",
+            a: "The longevity of composite veneers varies between individuals and is influenced by oral hygiene, dietary habits, bite forces, and general care. With appropriate maintenance and regular dental visits, composite veneers may typically last several years. Your dentist will discuss expected outcomes and care guidance during your consultation.",
+          },
+          {
+            q: "Can composite veneers stain?",
+            a: "Composite resin can be more susceptible to surface staining than porcelain over time, particularly with frequent consumption of staining substances such as coffee, tea, red wine, or tobacco. Good oral hygiene, regular hygiene appointments, and limiting staining habits can help maintain their appearance.",
+          },
+          {
+            q: "Is the composite veneer treatment reversible?",
+            a: "Composite veneers are generally considered a minimally invasive and largely reversible treatment, as little or no natural tooth structure is typically removed. They can also usually be repaired, polished, or replaced as needed over time. Suitability and the most appropriate option for your situation will be confirmed at clinical assessment.",
+          },
+        ],
+      },
+      {
+        kind: "stories",
+        eyebrow: "Patient Results",
+        heading: "Smile Gallery",
+        sub: "Examples of treatments we have provided for our patients.",
+        note: "About these cases: Composite veneers and composite bonding use the same tooth-coloured composite resin and similar hand-sculpting techniques. The cases below are examples of composite work completed at our practice. Individual results vary and depend on clinical assessment.",
+        items: [
+          {
+            title: "Restoring a Chipped Front Tooth",
+            meta: "Composite Bonding",
+            before: {
+              src: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1765871029/Composite-Bonding-for-Chipped-Maxillary-Incisors-before_n04xwg.jpg",
+              alt: "Before Restoring a Chipped Front Tooth",
+            },
+            after: {
+              src: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1765871045/WhatsApp_Image_2025-12-03_at_4.51.44_PM_1_y8s5dj.jpg",
+              alt: "After Restoring a Chipped Front Tooth",
+            },
+          },
+          {
+            title: "Transforming Discoloured & Chipped Teeth",
+            meta: "Composite Bonding",
+            before: {
+              src: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1765871039/Transforming-Discoloured-and-Chipped-Front-Teeth-with-Composite-Bonding-before_zmahqo.jpg",
+              alt: "Before Transforming Discoloured & Chipped Teeth",
+            },
+            after: {
+              src: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1765871039/Transforming-Discoloured-and-Chipped-Front-Teeth-with-Composite-Bonding-after_h9lpac.jpg",
+              alt: "After Transforming Discoloured & Chipped Teeth",
+            },
+          },
+        ],
+        disclaimer:
+          "Individual results may vary. These images show actual patients who consented to their photos being used. A clinical assessment is required to determine suitability for any treatment.",
+      },
+    ],
+  },
+
+  "dental-veneers-london": {
+    h1: "Dental Veneers London",
+    intro:
+      "Dental veneers are a cosmetic treatment used to help improve the appearance of healthy teeth. At our London practice we provide both composite and porcelain veneers, tailored to your individual clinical assessment and smile goals.",
+    badges: [
+      "4.9/5 from Google Reviews",
+      "South Kensington • Next to South Ken Station",
+      "City of London • Ave Maria Lane, EC4",
+      "Composite Veneer From £595 / tooth",
+      "Porcelain Veneer From £1,095",
+      "Personalised treatment plan with full costs provided before treatment",
+    ],
+    hero: {
+      src: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1765871030/Full-Smile-Transformation-with-20-Porcelain-Veneers-after_gnkzev.jpg",
+      alt: "Dental veneers cosmetic dentistry at Smile Dentist London",
+    },
+    blocks: [
+      {
+        kind: "cards",
+        eyebrow: "Understanding the Treatment",
+        heading: "What Are Dental Veneers?",
+        intro:
+          "Dental veneers are thin, tooth-coloured coverings bonded to the visible front surface of the teeth. They form part of our cosmetic dentistry treatments and are used to help address concerns such as discolouration, minor chips, small gaps, and uneven tooth shape. Veneers are available in different materials to suit different clinical situations and preferences.",
+        items: [
+          {
+            title: "Individually Designed",
+            body: "Each veneer is individually shaped, shaded, and positioned to blend with your natural teeth and suit your facial features.",
+          },
+          {
+            title: "Material Choice",
+            body: "Veneers can be made from composite resin or porcelain. Each material has different characteristics in terms of preparation, treatment time, and longevity.",
+          },
+          {
+            title: "Clinical Assessment First",
+            body: "Veneers are not suitable for every patient or every situation. A full clinical assessment is always carried out before treatment is planned or recommended.",
+          },
+        ],
+      },
+      {
+        kind: "cards",
+        eyebrow: "Our Veneer Options",
+        heading: "Types of Dental Veneers",
+        intro:
+          "We offer two main types of veneers at our London practice. Your dentist will explain the differences in detail and help you decide which option is most appropriate for your situation.",
+        items: [
+          {
+            title: "Composite Veneers",
+            body: "Tooth-coloured composite resin is hand-sculpted and layered directly onto the front of the teeth, typically in a single visit. Often a minimally invasive option, with little to no preparation of natural tooth structure usually required.",
+            bullets: [
+              "Often completed in a single appointment",
+              "Typically minimally invasive",
+              "Usually repairable and adjustable over time",
+              "Generally lower initial cost — from £595 per tooth",
+            ],
+          },
+          {
+            title: "Porcelain Veneers",
+            body: "Custom-made ceramic shells are crafted in a dental laboratory and bonded to the front surface of the teeth. Some enamel preparation is usually required, and treatment typically takes two or more visits.",
+            bullets: [
+              "Custom-crafted ceramic material",
+              "Tend to be more stain-resistant",
+              "Generally tend to last longer than composite",
+              "From £1,095 per tooth",
+            ],
+          },
+        ],
+      },
+      {
+        kind: "table",
+        eyebrow: "Compare at a Glance",
+        heading: "Composite vs Porcelain Veneers",
+        sub: "Both options can help improve smile appearance in suitable cases. The most appropriate choice depends on individual clinical assessment.",
+        columns: ["Consideration", "Composite Veneers", "Porcelain Veneers"],
+        rows: [
+          ["Material", "Tooth-coloured composite resin", "Custom-made ceramic shells"],
+          [
+            "Tooth Preparation",
+            "Little to none typically required",
+            "Some enamel preparation usually required",
+          ],
+          ["Treatment Time", "Often single visit", "Usually two or more visits"],
+          ["Longevity", "May typically last several years", "Generally tend to last longer"],
+          [
+            "Stain Resistance",
+            "Can stain with certain habits",
+            "Tends to be more stain-resistant",
+          ],
+          [
+            "Reversibility",
+            "Largely reversible in most cases",
+            "Less reversible due to preparation",
+          ],
+          ["Indicative Cost", "From £595 / tooth", "From £1,095 / tooth"],
+        ],
+      },
+      {
+        kind: "steps",
+        eyebrow: "Is This Treatment for You?",
+        heading: "Who Are Dental Veneers Suitable For?",
+        sub: "Veneers may be considered for patients seeking to improve the appearance of healthy teeth with specific cosmetic concerns. Common reasons to explore veneers include:",
+        items: [
+          {
+            title: "Discolouration",
+            meta: "1",
+            body: "Teeth with staining or discolouration that may not respond fully to whitening treatments.",
+          },
+          {
+            title: "Small Chips or Worn Edges",
+            meta: "2",
+            body: "Minor chips or worn biting edges that affect the overall smile line.",
+          },
+          {
+            title: "Small Gaps Between Teeth",
+            meta: "3",
+            body: "Minor spacing between teeth that you would like to reduce or close cosmetically.",
+          },
+          {
+            title: "Uneven Tooth Shape",
+            meta: "4",
+            body: "Teeth that appear uneven, irregular, or out of proportion, often as part of a wider smile plan.",
+          },
+        ],
+        note: {
+          title: "Important",
+          body: "Veneers are only suitable for patients with healthy teeth and gums. Underlying issues such as decay, gum disease, or significant bite problems should be addressed first. Suitability is always confirmed by clinical assessment. Alternatives may include whitening, composite bonding, or orthodontic treatment where appropriate.",
+        },
+      },
+      {
+        kind: "steps",
+        eyebrow: "What to Expect",
+        heading: "The Dental Veneers Process",
+        sub: "The exact process depends on the type of veneers chosen. In general, the pathway includes these key stages:",
+        items: [
+          {
+            title: "Consultation",
+            meta: "Step 1",
+            body: "Discussion of your smile goals, clinical examination, and assessment of suitability.",
+          },
+          {
+            title: "Treatment Planning",
+            meta: "Step 2",
+            body: "Personalised plan covering material choice, number of teeth, shade, and written costs.",
+          },
+          {
+            title: "Tooth Preparation",
+            meta: "Step 3",
+            body: "Little or no preparation for composite; some enamel reduction is typically required for porcelain.",
+          },
+          {
+            title: "Placement",
+            meta: "Step 4",
+            body: "Composite is layered and sculpted chairside; porcelain veneers are bonded after being made in a dental laboratory.",
+          },
+          {
+            title: "Review & Polishing",
+            meta: "Step 5",
+            body: "Final polishing, bite check, and guidance on care and maintenance.",
+          },
+        ],
+      },
+      {
+        kind: "cards",
+        eyebrow: "Longevity",
+        heading: "How Long Do Veneers Last?",
+        intro:
+          "The lifespan of veneers varies between individuals and depends on the material, habits, oral hygiene, and maintenance.",
+        items: [
+          {
+            title: "Material Matters",
+            body: "Porcelain veneers generally tend to last longer than composite veneers, though both can provide good service with appropriate care. Outcomes vary between individuals.",
+          },
+          {
+            title: "Daily Care",
+            body: "Good oral hygiene, gentle brushing, limiting staining foods and drinks, and avoiding habits such as nail-biting can help preserve the appearance of your veneers.",
+          },
+          {
+            title: "Regular Review",
+            body: "Regular dental and hygiene visits allow your veneers to be monitored, polished, and any maintenance needs identified early.",
+          },
+        ],
+      },
+      {
+        kind: "callout",
+        label: "Please note",
+        body: "Longevity varies between individuals and cannot be guaranteed. Your dentist will discuss expected outcomes and care guidance during your consultation.",
+      },
+      {
+        kind: "pricing",
+        eyebrow: "Pricing",
+        heading: "Dental Veneers Cost London",
+        intro:
+          "The overall cost of veneers depends on the material chosen, the number of teeth treated, and the complexity of the case. A written treatment plan with full costs is provided before treatment begins.",
+        columns: ["Treatment", "Standard", "Member"],
+        rows: [
+          { label: "Composite Bonding (per tooth)", standard: "From £395", member: "From £197.50" },
+          { label: "Composite Veneer (per tooth)", standard: "From £595", member: "From £297.50" },
+          { label: "Porcelain Veneer (per tooth)", standard: "From £1,095", member: "From £547.50" },
+        ],
+        footnote:
+          "Final costs depend on the number of veneers and case complexity. A written treatment plan is provided before treatment begins.",
+        notes: [
+          {
+            title: "View Our Full Fee Guide",
+            body: "A transparent breakdown of our treatment fees is available on our pricing page.",
+          },
+        ],
+      },
+      {
+        kind: "list",
+        eyebrow: "Our Approach",
+        heading: "Why Choose Smile Dentist",
+        sub: "Dr. Yasha Y Shirazi — GDC: 195843",
+        items: [
+          "Experienced in cosmetic and minimally invasive dentistry",
+          "Both composite and porcelain veneer options available",
+          "Personalised smile design approach based on clinical assessment",
+          "Transparent written treatment plans and costs",
+          "GDC-registered dentists at a CQC-registered practice",
+        ],
+      },
+      {
+        kind: "prose",
+        eyebrow: "Visit Our London Practice",
+        heading: "Dental Veneers in South Kensington",
+        paragraphs: [
+          "Our South Kensington practice welcomes patients from across London and surrounding areas who are considering dental veneers. Whether you are comparing composite and porcelain options for the first time, or exploring veneers as part of a wider smile plan, our team is here to provide clear, balanced information.",
+          "20 Old Brompton Road, South Kensington, London SW7 3DL",
+        ],
+      },
+      {
+        kind: "faq",
+        heading: "Frequently Asked Questions",
+        items: [
+          {
+            q: "What are dental veneers?",
+            a: "Dental veneers are thin, tooth-coloured coverings bonded to the front surface of the teeth. They are used in cosmetic dentistry to help improve the shape, colour, or appearance of teeth. Veneers are most commonly made from composite resin or porcelain, each with its own characteristics.",
+          },
+          {
+            q: "What is the difference between composite and porcelain veneers?",
+            a: "Composite veneers are hand-sculpted directly onto the teeth using tooth-coloured resin, typically in a single visit. Porcelain veneers are custom-made ceramic shells crafted in a dental laboratory and usually require two or more visits. The most appropriate option depends on your clinical situation, goals, and preferences, and will be discussed during consultation.",
+          },
+          {
+            q: "Who is suitable for veneers?",
+            a: "Veneers may be considered for patients seeking to improve the appearance of healthy teeth with cosmetic concerns such as discolouration, small chips, minor gaps, or uneven shape. Suitability depends on a clinical assessment of your teeth, gums, and bite, and not every patient is a suitable candidate.",
+          },
+          {
+            q: "How long do dental veneers last?",
+            a: "The lifespan of veneers varies between individuals and is influenced by the material chosen, oral hygiene, habits such as grinding, and regular maintenance. Composite and porcelain veneers typically last several years with appropriate care. Your dentist will discuss expected outcomes and care guidance during your consultation.",
+          },
+          {
+            q: "Do veneers damage your natural teeth?",
+            a: "Veneers can involve minimal to moderate preparation of the natural tooth surface, depending on the type chosen. Composite veneers typically require little or no preparation, while porcelain veneers usually involve some enamel reduction. Your dentist will explain what is involved before treatment begins.",
+          },
+          {
+            q: "Are veneers painful?",
+            a: "The veneer process is typically comfortable. Local anaesthetic may be used where preparation of the tooth is required. Some patients may notice mild sensitivity for a short time afterwards, which usually settles. Your dentist will discuss what to expect at your consultation.",
+          },
+          {
+            q: "Can veneers stain over time?",
+            a: "Porcelain veneers tend to be more stain-resistant, while composite veneers can be more susceptible to surface staining over time, particularly with heavy consumption of staining substances such as coffee, tea, red wine, or tobacco. Good oral hygiene, regular hygiene appointments, and limiting staining habits can help maintain appearance.",
+          },
+          {
+            q: "How do I choose between composite and porcelain veneers?",
+            a: "The choice depends on several factors, including your cosmetic goals, clinical situation, budget, and preferences around preparation and longevity. During consultation, your dentist will compare the options in detail and help you make an informed decision based on your individual assessment.",
+          },
+        ],
+      },
+      {
+        kind: "stories",
+        eyebrow: "Patient Results",
+        heading: "Smile Gallery",
+        sub: "Examples of treatments we have provided for our patients.",
+        note: "About these cases: The cases below show examples of cosmetic work completed at our practice. Individual results vary and depend on clinical assessment.",
+        items: [
+          {
+            title: "Restoring a Chipped Front Tooth",
+            meta: "Composite Bonding",
+            before: {
+              src: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1765871029/Composite-Bonding-for-Chipped-Maxillary-Incisors-before_n04xwg.jpg",
+              alt: "Before Restoring a Chipped Front Tooth",
+            },
+            after: {
+              src: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1765871045/WhatsApp_Image_2025-12-03_at_4.51.44_PM_1_y8s5dj.jpg",
+              alt: "After Restoring a Chipped Front Tooth",
+            },
+          },
+          {
+            title: "Transforming Discoloured & Chipped Teeth",
+            meta: "Composite Bonding",
+            before: {
+              src: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1765871039/Transforming-Discoloured-and-Chipped-Front-Teeth-with-Composite-Bonding-before_zmahqo.jpg",
+              alt: "Before Transforming Discoloured & Chipped Teeth",
+            },
+            after: {
+              src: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1765871039/Transforming-Discoloured-and-Chipped-Front-Teeth-with-Composite-Bonding-after_h9lpac.jpg",
+              alt: "After Transforming Discoloured & Chipped Teeth",
+            },
+          },
+        ],
+        disclaimer:
+          "Individual results may vary. These images show actual patients who consented to their photos being used. A clinical assessment is required to determine suitability for any treatment.",
+      },
+    ],
+  },
+
+  "gum-contouring-london": {
+    h1: "Gum Contouring London",
+    intro:
+      "Gum contouring is a cosmetic procedure designed to reshape the gum line and improve the balance between your teeth and gums. At our London practice, treatment is carefully planned to create a more harmonious, natural-looking smile.",
+    badges: [
+      "4.9/5 from Google Reviews",
+      "South Kensington • Next to South Ken Station",
+      "City of London • Ave Maria Lane, EC4",
+      "Gum Contouring (Per Tooth) From £200",
+      "Member (50% off) From £100",
+      "Membership £20/month",
+    ],
+    hero: {
+      src: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1765805808/gum-contouring_k46rrb.jpg",
+      alt: "Gum contouring treatment at Smile Dentist London",
+    },
+    blocks: [
+      {
+        kind: "cards",
+        eyebrow: "Understanding the Procedure",
+        heading: "What Is Gum Contouring?",
+        intro:
+          "Gum contouring is a cosmetic dental procedure that involves carefully reshaping the gum line by removing small amounts of excess gum tissue. The goal is to reveal more of the natural tooth structure, creating a more balanced and proportionate appearance.",
+        items: [
+          {
+            title: "Reshaping the Gum Line",
+            body: "Excess gum tissue is gently removed to expose more of your natural tooth, helping to create a smoother, more even gum line.",
+          },
+          {
+            title: "Revealing Natural Teeth",
+            body: "Many patients have healthy tooth structure hidden beneath excess gum tissue. Gum contouring can help reveal this, improving the visible proportions of your smile.",
+          },
+          {
+            title: "Patient-Friendly Approach",
+            body: "Treatment is carried out under local anaesthetic to improve comfort, and the procedure is typically completed in a single appointment.",
+          },
+        ],
+      },
+      {
+        kind: "cards",
+        eyebrow: "Gummy Smile",
+        heading: "Gummy Smile Treatment",
+        items: [
+          {
+            title: "What Is a Gummy Smile?",
+            body: "A gummy smile refers to excessive gum tissue being visible when you smile. This can make the teeth appear shorter or less prominent, even when the underlying tooth structure is a healthy size.",
+          },
+          {
+            title: "How It Affects Appearance",
+            body: "Excess gum display can affect the overall balance and symmetry of your smile. Many patients feel self-conscious about the proportion of gum tissue visible, which may influence their confidence when smiling.",
+          },
+        ],
+        footer:
+          "Gum contouring may help improve the appearance of a gummy smile by carefully reshaping the gum line. It can also be part of a broader smile makeover approach when combined with other cosmetic treatments. Suitability depends on your gum and bone structure, which is assessed during a consultation.",
+      },
+      {
+        kind: "steps",
+        eyebrow: "Suitability",
+        heading: "Who Is Gum Contouring Suitable For?",
+        sub: "Gum contouring may be suitable for patients who feel their gum line affects the appearance of their smile. A clinical assessment is required to determine whether this treatment is the right approach for you.",
+        items: [
+          {
+            title: "Excessive Gum Display",
+            body: "Patients who show a significant amount of gum tissue when smiling and wish to improve the balance between their teeth and gums.",
+          },
+          {
+            title: "Uneven Gum Line",
+            body: "An asymmetrical gum line can make teeth appear different sizes. Contouring can help create a more even, balanced appearance across the smile.",
+          },
+          {
+            title: "Teeth Appearing Short",
+            body: "When excess gum tissue covers part of the tooth, the teeth can appear shorter than they are. Contouring reveals more of the natural tooth structure.",
+          },
+          {
+            title: "Preparation for Other Treatments",
+            body: "Gum contouring is sometimes carried out before treatments such as composite bonding or veneers to create a symmetrical foundation for the best possible result.",
+          },
+        ],
+        note: {
+          title: "Important",
+          body: "Suitability for gum contouring depends on the relationship between the gum tissue and underlying bone structure. A clinical assessment is required before treatment can be recommended.",
+        },
+      },
+      {
+        kind: "cards",
+        eyebrow: "Potential Benefits",
+        heading: "Benefits of Gum Contouring",
+        intro:
+          "For suitable patients, gum contouring can offer a number of aesthetic improvements. Results vary depending on individual factors and are discussed during your consultation.",
+        items: [
+          {
+            title: "Improved Smile Balance",
+            body: "By reshaping the gum line, gum contouring can help create a more balanced and proportionate appearance between teeth and gums, contributing to a more harmonious smile.",
+          },
+          {
+            title: "More Visible Tooth Structure",
+            body: "Removing excess gum tissue reveals more of your natural tooth, which can make the teeth appear longer and more proportionate within your smile.",
+          },
+          {
+            title: "Subtle Aesthetic Enhancement",
+            body: "Gum contouring is a refined cosmetic procedure that can make a noticeable difference to the appearance of your smile, while maintaining a natural, understated result.",
+          },
+          {
+            title: "Supporting Other Treatments",
+            body: "When combined with treatments such as veneers or bonding, gum contouring can provide a more symmetrical foundation, helping to improve the overall result of your cosmetic treatment plan.",
+          },
+        ],
+      },
+      {
+        kind: "steps",
+        eyebrow: "Your Journey",
+        heading: "The Gum Contouring Process",
+        sub: "Each stage is carefully managed to support a comfortable experience and the best possible outcome for your treatment.",
+        items: [
+          {
+            title: "Consultation & Assessment",
+            meta: "01",
+            body: "Your dentist examines your gum line, assesses the underlying structure, and discusses your goals. Suitability for treatment is determined at this stage.",
+          },
+          {
+            title: "Planning the Gum Line",
+            meta: "02",
+            body: "The new gum line shape is carefully planned, taking into account symmetry, proportion, and the relationship between your teeth and gums.",
+          },
+          {
+            title: "Local Anaesthetic",
+            meta: "03",
+            body: "The treatment area is numbed with local anaesthetic to improve your comfort throughout the procedure.",
+          },
+          {
+            title: "Careful Reshaping",
+            meta: "04",
+            body: "Excess gum tissue is gently and precisely removed to reveal more of the natural tooth structure, following the planned design.",
+          },
+          {
+            title: "Review & Follow-Up",
+            meta: "05",
+            body: "The result is reviewed, and a follow-up appointment is arranged to monitor healing and ensure you are happy with the outcome.",
+          },
+        ],
+      },
+      {
+        kind: "cards",
+        eyebrow: "Recovery",
+        heading: "Recovery & Healing",
+        intro:
+          "Recovery following gum contouring varies between individuals. Your dentist will provide personalised aftercare guidance to support your healing.",
+        items: [
+          {
+            title: "Recovery Varies",
+            body: "Healing times differ from person to person. Many patients find that initial tenderness settles within a few days, though full healing continues over the following weeks.",
+          },
+          {
+            title: "Mild Tenderness",
+            body: "Some patients experience mild tenderness or sensitivity in the treated area. This can usually be managed with appropriate aftercare and over-the-counter pain relief if needed.",
+          },
+          {
+            title: "Resuming Normal Activities",
+            body: "Many patients are able to resume normal activities shortly after treatment. Your dentist will advise on any temporary precautions during the initial healing period.",
+          },
+          {
+            title: "Ongoing Healing",
+            body: "Healing continues over time, and your dentist will review your progress at a follow-up appointment. Maintaining good oral hygiene supports the healing process.",
+          },
+        ],
+      },
+      {
+        kind: "cards",
+        eyebrow: "Pricing",
+        heading: "Gum Contouring Cost London",
+        intro:
+          "The cost of gum contouring depends on a number of factors, including the number of teeth being treated and the complexity of the procedure. A personalised treatment plan with costs is provided following your consultation.",
+        sub: "What Affects the Cost?",
+        items: [
+          {
+            title: "Number of Teeth",
+            body: "The cost is influenced by how many teeth require gum reshaping. Treating a single tooth will differ from a full smile gum line adjustment.",
+          },
+          {
+            title: "Complexity of Treatment",
+            body: "The extent of gum tissue to be reshaped and any additional planning required will be reflected in the overall cost of your treatment.",
+          },
+          {
+            title: "Personalised Plan",
+            body: "A full written treatment plan with itemised costs is provided following your consultation, so you know what to expect before treatment begins.",
+          },
+          {
+            title: "Membership Plan",
+            body: "Our membership plan is available for patients who wish to benefit from reduced treatment fees. Details are provided during your consultation.",
+          },
+          {
+            title: "View Our Full Fee Guide",
+            body: "A transparent breakdown of treatment fees is available on our pricing page.",
+          },
+        ],
+      },
+      {
+        kind: "list",
+        eyebrow: "Our Approach",
+        heading: "Why Choose Smile Dentist",
+        sub: "Dr. Yasha Y Shirazi — GDC: 195843",
+        items: [
+          "London practice with experience in cosmetic and gum treatments",
+          "Focus on natural-looking, balanced results",
+          "Personalised treatment planning for every patient",
+          "GDC-registered dentists at a CQC-registered practice",
+        ],
+      },
+      {
+        kind: "prose",
+        eyebrow: "Serving London",
+        heading: "Gum Contouring Near You",
+        paragraphs: [
+          "Our London practice welcomes patients from across the city and surrounding areas who are considering gum contouring or gummy smile treatment. Whether you are searching for gum contouring near you or an experienced cosmetic dentist in London, we are here to help.",
+          "Conveniently located in London with excellent transport links",
+        ],
+      },
+      {
+        kind: "faq",
+        heading: "Frequently Asked Questions",
+        items: [
+          {
+            q: "What is gum contouring?",
+            a: "Gum contouring is a cosmetic dental procedure that reshapes the gum line by carefully removing small amounts of excess gum tissue. It is designed to reveal more of the natural tooth structure and improve the balance between teeth and gums. Suitability is determined by clinical assessment.",
+          },
+          {
+            q: "Is gum contouring painful?",
+            a: "The procedure is carried out under local anaesthetic, so you should not feel discomfort during treatment. Some patients experience mild tenderness or sensitivity afterwards, which typically settles within a few days. Your dentist will provide aftercare guidance to support your recovery.",
+          },
+          {
+            q: "How long does gum contouring take to heal?",
+            a: "Recovery varies between individuals. Many patients find that tenderness settles within a few days, with healing continuing over the following weeks. Your dentist will monitor your progress at a follow-up appointment and advise on care during the recovery period.",
+          },
+          {
+            q: "Can gum contouring fix a gummy smile?",
+            a: "Gum contouring may help improve the appearance of a gummy smile by removing excess gum tissue and revealing more of the natural tooth. However, suitability depends on the underlying gum and bone structure, which is assessed during your consultation.",
+          },
+          {
+            q: "Is gum contouring permanent?",
+            a: "In most cases, the results of gum contouring are long-lasting, as the removed tissue does not typically regrow. However, maintaining good oral hygiene is important to support the health of the treated area. Your dentist will discuss expected outcomes during your consultation.",
+          },
+        ],
+      },
+      {
+        kind: "stories",
+        eyebrow: "Patient Results",
+        heading: "Smile Gallery",
+        sub: "Examples of treatments we have provided for our patients.",
+        items: [
+          {
+            title: "Restoring a Chipped Front Tooth",
+            meta: "Composite Bonding",
+            before: {
+              src: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1765871029/Composite-Bonding-for-Chipped-Maxillary-Incisors-before_n04xwg.jpg",
+              alt: "Before Restoring a Chipped Front Tooth",
+            },
+            after: {
+              src: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1765871045/WhatsApp_Image_2025-12-03_at_4.51.44_PM_1_y8s5dj.jpg",
+              alt: "After Restoring a Chipped Front Tooth",
+            },
+          },
+          {
+            title: "Transforming Discoloured & Chipped Teeth",
+            meta: "Composite Bonding",
+            before: {
+              src: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1765871039/Transforming-Discoloured-and-Chipped-Front-Teeth-with-Composite-Bonding-before_zmahqo.jpg",
+              alt: "Before Transforming Discoloured & Chipped Teeth",
+            },
+            after: {
+              src: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1765871039/Transforming-Discoloured-and-Chipped-Front-Teeth-with-Composite-Bonding-after_h9lpac.jpg",
+              alt: "After Transforming Discoloured & Chipped Teeth",
+            },
+          },
+        ],
+        disclaimer:
+          "Individual results may vary. These images show actual patients who consented to their photos being used. A clinical assessment is required to determine suitability for any treatment.",
+      },
+    ],
+  },
+
+  "pro-aligners-london": {
+    h1: "Pro-Aligners London",
+    intro:
+      "Clear, removable aligners for straightening teeth discreetly. Custom-made trays that gently guide teeth into alignment without traditional metal braces.",
+    badges: [
+      "4.9/5 from Google Reviews",
+      "South Kensington • Next to South Ken Station",
+      "City of London • Ave Maria Lane, EC4",
+      "Standard From £2,000",
+      "Member (50% off) From £1,000",
+      "Finance options available (subject to status)",
+    ],
+    hero: {
+      src: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1765805892/proaligners-home_xasqw8.jpg",
+      alt: "Pro-Aligners clear invisible braces at Smile Dentist",
+    },
+    blocks: [
+      {
+        kind: "cards",
+        eyebrow: "Clear Aligner Orthodontics",
+        heading: "What Are Pro-Aligners?",
+        intro:
+          "Pro-aligners are a series of custom-made, clear plastic trays that fit over your teeth to gradually move them into the desired position. Each set is worn for approximately 1–2 weeks before progressing to the next. All treatment is planned using digital 3D scanning and supervised by your dentist with regular in-person check-ups.",
+        items: [
+          {
+            title: "Discreet",
+            body: "Clear plastic trays that are difficult to notice during conversation.",
+          },
+          {
+            title: "Removable",
+            body: "Take them out to eat, brush, and floss normally.",
+          },
+          {
+            title: "Digital Planning",
+            body: "3D intraoral scanning — no traditional putty impressions.",
+          },
+          {
+            title: "Clinically Supervised",
+            body: "Regular check-ups every 4–6 weeks at our practice.",
+          },
+        ],
+      },
+      {
+        kind: "steps",
+        heading: "The Treatment Process",
+        sub: "Three stages from consultation to completion.",
+        items: [
+          {
+            title: "Digital Scan & Planning",
+            meta: "1",
+            body: "We use a 3D intraoral scanner to create a detailed digital model of your teeth. This is used to plan your treatment and show you a simulation of the expected outcome.",
+          },
+          {
+            title: "Wearing Your Aligners",
+            meta: "2",
+            body: "You wear each set of custom aligners for approximately 1–2 weeks, for around 22 hours per day. Each set applies gentle pressure to gradually move your teeth.",
+          },
+          {
+            title: "Monitoring & Retention",
+            meta: "3",
+            body: "We monitor your progress every 4–6 weeks. Once treatment is complete, retainers are provided to help maintain your results long-term.",
+          },
+        ],
+      },
+      {
+        kind: "doAvoid",
+        heading: "Aftercare & Retention",
+        sub: "Retainers are essential to maintain your results.",
+        dos: [
+          "Wear aligners for approximately 22 hours per day",
+          "Clean aligners daily with lukewarm water and a soft brush",
+          "Brush and floss teeth before reinserting aligners",
+          "Wear retainers as instructed after treatment is complete",
+          "Attend all scheduled monitoring appointments",
+        ],
+        avoids: [
+          "Eating or drinking (other than cool water) with aligners in",
+          "Hot drinks with aligners in (can warp the plastic)",
+          "Skipping aligners for extended periods (can slow progress)",
+          "Cleaning aligners with hot water or abrasive products",
+          "Stopping retainer use without consulting your dentist",
+        ],
+      },
+      {
+        kind: "cards",
+        items: [
+          {
+            title: "Removable Retainers",
+            body: "Clear trays worn at night to maintain alignment. From £300 / From £150 member (per arch)",
+          },
+          {
+            title: "Fixed Bonded Retainers",
+            body: "A thin wire bonded to the back of the front teeth. From £350 / From £175 member (per arch)",
+          },
+        ],
+      },
+      {
+        kind: "cards",
+        heading: "Risks & Considerations",
+        sub: "Important information to consider before treatment.",
+        items: [
+          {
+            title: "Compliance Required",
+            body: "Aligners must be worn ~22 hours daily. Non-compliance can delay treatment or affect outcomes.",
+          },
+          {
+            title: "Discomfort",
+            body: "Some pressure and mild discomfort is normal with each new aligner, usually resolving within 1–2 days.",
+          },
+          {
+            title: "Limitations",
+            body: "Not suitable for all orthodontic cases. Severe malocclusion may require alternative treatment approaches.",
+          },
+          {
+            title: "Relapse Risk",
+            body: "Teeth may move back without long-term retainer wear. Retention is a lifelong commitment.",
+          },
+        ],
+      },
+      {
+        kind: "cards",
+        heading: "Why Clinical Supervision Matters",
+        sub: "The importance of in-person dental oversight during orthodontic treatment.",
+        items: [
+          {
+            title: "Dental Health Monitoring",
+            body: "Moving teeth involves bone remodelling. We monitor gum health and tooth roots via X-rays throughout treatment.",
+          },
+          {
+            title: "IPR When Needed",
+            body: "Interproximal reduction creates small spaces (0.2mm) to help unravel crowded teeth safely. This requires in-person dental care.",
+          },
+          {
+            title: "Attachments",
+            body: 'Tooth-coloured composite "buttons" help aligners grip teeth for more complex movements. These are placed and removed in the practice.',
+          },
+        ],
+      },
+      {
+        kind: "pricing",
+        eyebrow: "Transparent Pricing",
+        heading: "Pro-Aligner Costs",
+        intro:
+          "Members receive 50% off all treatment fees. A written treatment plan with full costs is provided before treatment begins.",
+        columns: ["Treatment", "Standard", "Member"],
+        rows: [
+          { label: "Pro-Aligners (Mild/Moderate)", standard: "From £2,000", member: "From £1,000" },
+          { label: "Removable Retainers (Per Arch)", standard: "From £300", member: "From £150" },
+          { label: "Fixed Bonded Retainer (Per Arch)", standard: "From £350", member: "From £175" },
+          { label: "Consultation", standard: "From £95", member: "From £47.50" },
+        ],
+        footnote:
+          "Final costs depend on the complexity and duration of treatment. A written treatment plan with full costs is provided before treatment begins. Finance available subject to status.",
+        notes: [
+          {
+            title: "Membership",
+            body: "Join for £20/month and receive 50% off all treatments.",
+          },
+        ],
+      },
+      {
+        kind: "stories",
+        heading: "Patient Experiences",
+        items: [
+          {
+            title: "Addressing Crowding",
+            outcome:
+              "A patient with mild crowding in the lower arch completed a course of Pro-aligners over 5 months. Following treatment, fixed and removable retainers were fitted to help maintain the result. Individual results may vary. Treatment duration depends on the complexity of the case.",
+          },
+          {
+            title: "Relapse Correction",
+            outcome:
+              "A patient who had orthodontic treatment as a teenager experienced relapse after not wearing retainers. Pro-aligners were used to re-align the teeth over 4 months, with bonded retainers placed to help maintain the correction. Individual results may vary. Retainer wear is essential for long-term stability.",
+          },
+        ],
+      },
+      {
+        kind: "stories",
+        eyebrow: "Patient Results",
+        heading: "Smile Gallery",
+        sub: "Examples of treatments we have provided for our patients.",
+        items: [
+          {
+            title: "Restoring a Chipped Front Tooth",
+            meta: "Composite Bonding",
+            before: {
+              src: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1765871029/Composite-Bonding-for-Chipped-Maxillary-Incisors-before_n04xwg.jpg",
+              alt: "Before Restoring a Chipped Front Tooth",
+            },
+            after: {
+              src: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1765871045/WhatsApp_Image_2025-12-03_at_4.51.44_PM_1_y8s5dj.jpg",
+              alt: "After Restoring a Chipped Front Tooth",
+            },
+          },
+          {
+            title: "Transforming Discoloured & Chipped Teeth",
+            meta: "Composite Bonding",
+            before: {
+              src: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1765871039/Transforming-Discoloured-and-Chipped-Front-Teeth-with-Composite-Bonding-before_zmahqo.jpg",
+              alt: "Before Transforming Discoloured & Chipped Teeth",
+            },
+            after: {
+              src: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1765871039/Transforming-Discoloured-and-Chipped-Front-Teeth-with-Composite-Bonding-after_h9lpac.jpg",
+              alt: "After Transforming Discoloured & Chipped Teeth",
+            },
+          },
+        ],
+        disclaimer:
+          "Individual results may vary. These images show actual patients who consented to their photos being used. A clinical assessment is required to determine suitability for any treatment.",
+      },
+      {
+        kind: "faq",
+        heading: "Frequently Asked Questions",
+        items: [
+          {
+            q: "Am I a candidate for Pro-aligners?",
+            a: "Pro-aligners are suitable for mild to moderate crowding, spacing, and relapse cases. For more complex bite issues, we will assess your suitability during a consultation and discuss whether a referral may be appropriate.",
+          },
+          {
+            q: "How many hours a day must I wear them?",
+            a: "Aligners should be worn for approximately 22 hours a day for effective results. They should only be removed for eating, drinking (anything other than cool water), and brushing.",
+          },
+          {
+            q: "Is the treatment uncomfortable?",
+            a: "You may feel a sensation of pressure or tightness for the first 1–2 days of each new aligner. This is normal and indicates the aligners are working. Most patients find this manageable and less uncomfortable than traditional braces.",
+          },
+          {
+            q: "Will it affect my speech?",
+            a: "You may notice a very slight lisp for the first 24 hours as your tongue adjusts. After that, speech typically returns to normal.",
+          },
+          {
+            q: "Can I eat and drink with them in?",
+            a: "You can drink cool water with aligners in. For all other food and drinks, including hot beverages, remove the aligners to prevent warping the plastic or trapping sugar against your teeth.",
+          },
+          {
+            q: "How long does treatment take?",
+            a: "Treatment duration varies depending on the complexity of the case. Mild to moderate cases typically take 6–9 months. Your dentist will provide an estimated timeline during your consultation.",
+          },
+          {
+            q: "Do I need retainers afterwards?",
+            a: "Yes. Retainers are essential to maintain your results. Teeth have a natural tendency to move back towards their original position. We recommend both fixed and removable retainers for long-term stability.",
+          },
+          {
+            q: "How does this compare to other aligner brands?",
+            a: "Pro-aligners follow the same principles as other clear aligner systems. The key difference is clinical supervision — all treatment is planned and monitored in-person by your dentist, with regular check-ups every 4–6 weeks.",
+          },
+        ],
+      },
+      {
+        kind: "prose",
+        heading: "Complete Your Smile Transformation",
+        paragraphs: [
+          "Many patients choose to combine Pro-aligners with other cosmetic treatments for a comprehensive result. Composite bonding can refine tooth shape and close minor gaps after alignment, while teeth whitening is often carried out once aligners are removed for a brighter, fresher finish.",
+          "For patients seeking a more dramatic change, our smile makeover service combines multiple treatments into a single coordinated plan. Porcelain veneers may also be considered for teeth that cannot be fully corrected with alignment alone. Your dentist will discuss all options during your consultation.",
+          "All orthodontic and cosmetic treatments at Smile Dentist are delivered by GDC-registered dentists at our CQC-registered practice. We follow CQC guidelines for clinical governance, patient consent, and ongoing treatment monitoring to ensure safe, effective results.",
         ],
       },
     ],

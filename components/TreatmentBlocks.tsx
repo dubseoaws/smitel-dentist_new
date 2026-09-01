@@ -53,6 +53,16 @@ function Cards({ block }: { block: Extract<ContentBlock, { kind: "cards" }> }) {
               </p>
             )}
             <p className="mt-3 text-sm text-ink-soft leading-relaxed">{item.body}</p>
+            {item.bullets && (
+              <ul className="mt-4 space-y-2">
+                {item.bullets.map((bullet) => (
+                  <li key={bullet} className="flex gap-3 text-sm text-ink-soft leading-relaxed">
+                    <span className="mt-2 h-1 w-1 shrink-0 bg-gold" aria-hidden />
+                    {bullet}
+                  </li>
+                ))}
+              </ul>
+            )}
           </div>
         ))}
       </div>
@@ -134,6 +144,9 @@ function Stories({ block }: { block: Extract<ContentBlock, { kind: "stories" }> 
         <Eyebrow>{block.eyebrow}</Eyebrow>
         <Heading>{block.heading}</Heading>
         <Sub>{block.sub}</Sub>
+        {block.note && (
+          <p className="text-sm text-ink-soft leading-relaxed">{block.note}</p>
+        )}
       </div>
       <div className="grid gap-6 md:grid-cols-2">
         {block.items.map((item) => (
@@ -174,14 +187,16 @@ function Stories({ block }: { block: Extract<ContentBlock, { kind: "stories" }> 
                   ["Treatment", item.treatment],
                   ["Outcome", item.outcome],
                 ] as const
-              ).map(([label, body]) => (
-                <div key={label}>
-                  <p className="font-label text-[10px] font-bold tracking-[0.2em] uppercase text-gold-deep">
-                    {label}
-                  </p>
-                  <p className="mt-1 text-sm text-ink-soft leading-relaxed">{body}</p>
-                </div>
-              ))}
+              ).map(([label, body]) =>
+                body ? (
+                  <div key={label}>
+                    <p className="font-label text-[10px] font-bold tracking-[0.2em] uppercase text-gold-deep">
+                      {label}
+                    </p>
+                    <p className="mt-1 text-sm text-ink-soft leading-relaxed">{body}</p>
+                  </div>
+                ) : null,
+              )}
             </div>
           </article>
         ))}
@@ -336,6 +351,24 @@ function Pricing({ block }: { block: Extract<ContentBlock, { kind: "pricing" }> 
   );
 }
 
+function List({ block }: { block: Extract<ContentBlock, { kind: "list" }> }) {
+  return (
+    <div className="mx-auto max-w-3xl space-y-6">
+      <Eyebrow>{block.eyebrow}</Eyebrow>
+      <Heading>{block.heading}</Heading>
+      <Sub>{block.sub}</Sub>
+      <ul className="space-y-3">
+        {block.items.map((item) => (
+          <li key={item} className="flex gap-3 text-ink-soft leading-relaxed">
+            <span className="mt-2.5 h-1 w-1 shrink-0 bg-gold" aria-hidden />
+            {item}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
 function Faq({ block }: { block: Extract<ContentBlock, { kind: "faq" }> }) {
   return (
     <div className="mx-auto max-w-3xl space-y-8">
@@ -373,6 +406,7 @@ export default function TreatmentBlocks({ blocks }: { blocks: ContentBlock[] }) 
             {block.kind === "stories" && <Stories block={block} />}
             {block.kind === "table" && <ComparisonTable block={block} />}
             {block.kind === "pricing" && <Pricing block={block} />}
+            {block.kind === "list" && <List block={block} />}
             {block.kind === "faq" && <Faq block={block} />}
             {block.kind === "callout" && (
               <p className="mx-auto max-w-3xl border border-gold/40 bg-cream p-6 text-sm text-ink-soft leading-relaxed">
