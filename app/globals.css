@@ -6,9 +6,9 @@
   --color-cream: #f2ede1;
   --color-ink: #0c2340;
   --color-ink-soft: #5a6478;
-  --color-gold: #bfa168;
-  --color-gold-bright: #dcb976;
-  --color-gold-deep: #8a6f3c;
+  --color-gold: #d4af37;
+  --color-gold-bright: #e6c458;
+  --color-gold-deep: #8a6c1c;
   --color-sage: #9fa9ba;
   --font-display: var(--font-cormorant), Georgia, serif;
   --font-body: var(--font-inter), system-ui, sans-serif;
@@ -105,7 +105,7 @@ h3 {
 /* Solid gold CTA */
 .btn-gold {
   display: inline-block;
-  background: var(--color-gold-bright);
+  background: linear-gradient(135deg, #e2c04d 0%, #d4af37 45%, #b8912a 100%);
   color: var(--color-ink);
   padding: 1.0625rem 2.75rem;
   font-family: var(--font-label);
@@ -117,7 +117,7 @@ h3 {
   transition: background-color 0.2s, transform 0.2s, box-shadow 0.2s;
 }
 .btn-gold:hover {
-  background: #e8c884;
+  background: linear-gradient(135deg, #eecc5e 0%, #dfbb42 45%, #c69c2f 100%);
   transform: translateY(-2px);
   box-shadow: 0 14px 30px -12px rgba(0, 0, 0, 0.75);
 }
@@ -161,11 +161,11 @@ h3 {
   background:
     linear-gradient(
       to right,
-      rgba(12, 35, 64, 0.3) 0%,
-      rgba(12, 35, 64, 0.16) 18%,
-      rgba(12, 35, 64, 0.5) 38%,
-      rgba(12, 35, 64, 0.92) 55%,
-      var(--color-ink) 62%,
+      rgba(12, 35, 64, 0.06) 0%,
+      rgba(12, 35, 64, 0) 20%,
+      rgba(12, 35, 64, 0.28) 40%,
+      rgba(12, 35, 64, 0.85) 55%,
+      var(--color-ink) 63%,
       var(--color-ink) 100%
     );
 }
@@ -173,9 +173,9 @@ h3 {
   .hero-fade {
     background: linear-gradient(
       to bottom,
-      rgba(12, 35, 64, 0.6) 0%,
-      rgba(12, 35, 64, 0.86) 45%,
-      rgba(12, 35, 64, 0.97) 100%
+      rgba(12, 35, 64, 0.35) 0%,
+      rgba(12, 35, 64, 0.78) 45%,
+      rgba(12, 35, 64, 0.95) 100%
     );
   }
 }
