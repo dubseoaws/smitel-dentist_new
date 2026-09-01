@@ -36,7 +36,7 @@ export default function TreatmentCard({ treatment }: { treatment: Treatment }) {
         </p>
         <div className="flex items-baseline justify-between gap-3 border-t border-ink/10 pt-3">
           <span className="font-label text-[11px] tracking-[0.12em] uppercase text-ink-soft">
-            Standard <span className="text-ink font-semibold">{treatment.standard}</span>
+            Standard <span className="text-ink font-display text-base font-semibold">{treatment.standard}</span>
           </span>
           <span className="font-display text-2xl font-semibold text-gold-deep">
             {treatment.member}
