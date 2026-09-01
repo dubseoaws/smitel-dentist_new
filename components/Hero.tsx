@@ -125,12 +125,20 @@ export default function Hero() {
               </span>
             </Link>
 
-            <Link
-              href="/booking"
-              className="btn-gold fade-up fade-up-3 mt-8 inline-block"
-            >
-              Book Online
-            </Link>
+            <div className="fade-up fade-up-3 mt-8 flex flex-wrap items-center gap-4">
+              <Link href="/booking" className="btn-gold inline-block">
+                Book Online
+              </Link>
+              <a
+                href={SITE.phoneHref}
+                className="inline-flex items-center gap-2.5 border border-gold/70 bg-ink/30 backdrop-blur px-6 py-3.5 font-label text-[13px] font-bold tracking-[0.1em] uppercase text-ivory hover:bg-gold hover:text-ink transition-colors"
+              >
+                <svg viewBox="0 0 24 24" className="h-4 w-4 shrink-0" fill="currentColor" aria-hidden>
+                  <path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.4 21 3 13.6 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.24.2 2.45.57 3.57a1 1 0 0 1-.25 1.02l-2.2 2.2Z" />
+                </svg>
+                Call Now {SITE.phone}
+              </a>
+            </div>
 
             {/* Slide controls */}
             <div className="fade-up fade-up-3 mt-9 flex items-center gap-5">
