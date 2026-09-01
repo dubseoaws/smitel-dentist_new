@@ -52,7 +52,9 @@ function Cards({ block }: { block: Extract<ContentBlock, { kind: "cards" }> }) {
                 {item.meta}
               </p>
             )}
-            <p className="mt-3 text-sm text-ink-soft leading-relaxed">{item.body}</p>
+            {item.body && (
+              <p className="mt-3 text-sm text-ink-soft leading-relaxed">{item.body}</p>
+            )}
             {item.bullets && (
               <ul className="mt-4 space-y-2">
                 {item.bullets.map((bullet) => (
@@ -372,6 +374,7 @@ function List({ block }: { block: Extract<ContentBlock, { kind: "list" }> }) {
 function Faq({ block }: { block: Extract<ContentBlock, { kind: "faq" }> }) {
   return (
     <div className="mx-auto max-w-3xl space-y-8">
+      <Eyebrow>{block.eyebrow}</Eyebrow>
       <Heading>{block.heading}</Heading>
       <div className="divide-y divide-ink/10 border-y border-ink/10">
         {block.items.map((item) => (

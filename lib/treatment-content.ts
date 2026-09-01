@@ -17,7 +17,7 @@ export type ContentBlock =
       heading?: string;
       sub?: string;
       intro?: string;
-      items: { title: string; meta?: string; body: string; bullets?: string[] }[];
+      items: { title: string; meta?: string; body?: string; bullets?: string[] }[];
       footer?: string;
     }
   | {
@@ -76,7 +76,7 @@ export type ContentBlock =
       footnote?: string;
       notes?: { title: string; body: string }[];
     }
-  | { kind: "faq"; heading?: string; items: { q: string; a: string }[] }
+  | { kind: "faq"; eyebrow?: string; heading?: string; items: { q: string; a: string }[] }
   | { kind: "callout"; label: string; body: string };
 
 export type TreatmentContent = {
@@ -87,6 +87,45 @@ export type TreatmentContent = {
   hero?: ContentImage;
   blocks: ContentBlock[];
 };
+
+// The Smile Gallery section appears verbatim on several live treatment pages.
+function smileGallery(note?: string): ContentBlock {
+  return {
+    kind: "stories",
+    eyebrow: "Patient Results",
+    heading: "Smile Gallery",
+    sub: "Examples of treatments we have provided for our patients.",
+    note,
+    items: [
+      {
+        title: "Restoring a Chipped Front Tooth",
+        meta: "Composite Bonding",
+        before: {
+          src: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1765871029/Composite-Bonding-for-Chipped-Maxillary-Incisors-before_n04xwg.jpg",
+          alt: "Before Restoring a Chipped Front Tooth",
+        },
+        after: {
+          src: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1765871045/WhatsApp_Image_2025-12-03_at_4.51.44_PM_1_y8s5dj.jpg",
+          alt: "After Restoring a Chipped Front Tooth",
+        },
+      },
+      {
+        title: "Transforming Discoloured & Chipped Teeth",
+        meta: "Composite Bonding",
+        before: {
+          src: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1765871039/Transforming-Discoloured-and-Chipped-Front-Teeth-with-Composite-Bonding-before_zmahqo.jpg",
+          alt: "Before Transforming Discoloured & Chipped Teeth",
+        },
+        after: {
+          src: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1765871039/Transforming-Discoloured-and-Chipped-Front-Teeth-with-Composite-Bonding-after_h9lpac.jpg",
+          alt: "After Transforming Discoloured & Chipped Teeth",
+        },
+      },
+    ],
+    disclaimer:
+      "Individual results may vary. These images show actual patients who consented to their photos being used. A clinical assessment is required to determine suitability for any treatment.",
+  };
+}
 
 export const TREATMENT_CONTENT: Record<string, TreatmentContent> = {
   "teeth-whitening-london": {
@@ -3224,6 +3263,997 @@ export const TREATMENT_CONTENT: Record<string, TreatmentContent> = {
           "All orthodontic and cosmetic treatments at Smile Dentist are delivered by GDC-registered dentists at our CQC-registered practice. We follow CQC guidelines for clinical governance, patient consent, and ongoing treatment monitoring to ensure safe, effective results.",
         ],
       },
+    ],
+  },
+
+  "missing-teeth-london": {
+    h1: "Missing Teeth Solutions London",
+    intro:
+      "Replacing missing teeth can help restore both function and appearance. At our London practice, we offer a range of treatment options tailored to your individual needs, helping you eat, speak, and smile with confidence once again.",
+    badges: [
+      "4.9/5 from Google Reviews",
+      "South Kensington • Next to South Ken Station",
+      "City of London • Ave Maria Lane, EC4",
+      "Personalised treatment plan with costs provided",
+    ],
+    hero: {
+      src: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1765805735/solutions-for-missing-teeth_z3layk.jpg",
+      alt: "Missing teeth solutions at Smile Dentist London",
+    },
+    blocks: [
+      {
+        kind: "callout",
+        label: "Treatment Options",
+        body: "We offer several approaches to replacing missing teeth, including dental implants, bridges, and other suitable options. The right solution depends on your clinical needs, which are assessed during a consultation.",
+      },
+      {
+        kind: "cards",
+        eyebrow: "Understanding the Impact",
+        heading: "Why Replacing Missing Teeth Is Important",
+        intro:
+          "Missing teeth can affect more than your smile. Without replacement, a number of changes may occur over time that can impact your oral health and daily comfort.",
+        items: [
+          {
+            title: "Chewing & Speech",
+            body: "Missing teeth can make it more difficult to chew certain foods effectively and may affect speech clarity, particularly when front teeth are involved.",
+          },
+          {
+            title: "Shifting of Teeth",
+            body: "When a tooth is missing, the surrounding teeth may gradually shift into the gap. This can affect your bite alignment and create further dental concerns over time.",
+          },
+          {
+            title: "Bone Changes",
+            body: "The jawbone in the area of a missing tooth may begin to change over time without stimulation from a tooth root. This can affect facial structure and future treatment options.",
+          },
+        ],
+      },
+      {
+        kind: "steps",
+        eyebrow: "Your Options",
+        heading: "Treatment Options for Missing Teeth",
+        sub: "There are several effective approaches to replacing missing teeth. The most suitable option depends on your individual clinical situation, which is assessed during a consultation.",
+        items: [
+          {
+            title: "Dental Implants",
+            meta: "1",
+            body: "A long-term option where a small post is placed in the jawbone to support a replacement tooth. Dental implants are designed to function similarly to natural teeth and do not affect neighbouring teeth.",
+          },
+          {
+            title: "Dental Bridges",
+            meta: "2",
+            body: "A fixed restoration where a replacement tooth is supported by the teeth on either side of the gap. Bridges do not require surgery and can be completed over a shorter timeframe.",
+          },
+          {
+            title: "Other Suitable Options",
+            meta: "3",
+            body: "Depending on your clinical needs, other restorative options may be discussed during your consultation. Your dentist will explain all available approaches and help you understand which may be most appropriate.",
+          },
+        ],
+      },
+      {
+        kind: "cards",
+        eyebrow: "Implant Option",
+        heading: "Dental Implants for Missing Teeth",
+        items: [
+          {
+            title: "What Are Dental Implants?",
+            body: "Dental implants involve placing a small post into the jawbone, which acts as a foundation for a replacement tooth. Over time, the implant integrates with the bone to provide a secure, stable base.",
+          },
+          {
+            title: "When May They Be Suitable?",
+            body: "Implants may be suitable for patients with one or more missing teeth who have sufficient bone support and good general oral health. Suitability is determined through a thorough clinical assessment.",
+          },
+          {
+            title: "General Benefits",
+            bullets: [
+              "Designed to function similarly to natural teeth for eating and speaking",
+              "Do not require preparation of neighbouring healthy teeth",
+              "May help maintain jawbone in the area of the missing tooth",
+            ],
+          },
+        ],
+      },
+      {
+        kind: "cards",
+        eyebrow: "Bridge Option",
+        heading: "Dental Bridges for Missing Teeth",
+        items: [
+          {
+            title: "What Are Dental Bridges?",
+            body: "A dental bridge is a fixed restoration that fills the gap left by a missing tooth. The replacement tooth is supported by crowns placed on the teeth either side, creating a stable, natural-looking result.",
+          },
+          {
+            title: "When May They Be Suitable?",
+            body: "Bridges may be suitable when the teeth on either side of the gap are strong enough to support the restoration. They are a fixed option that does not require surgery, making them appropriate for a range of clinical situations.",
+          },
+          {
+            title: "General Benefits",
+            bullets: [
+              "Fixed in place — no need to remove for cleaning",
+              "Does not require surgical placement",
+              "Can typically be completed over a shorter timeframe",
+            ],
+          },
+        ],
+      },
+      {
+        kind: "cards",
+        eyebrow: "Choosing Your Treatment",
+        heading: "How to Choose the Right Treatment",
+        intro:
+          "The most suitable treatment for replacing missing teeth depends on a number of individual factors. A professional assessment is the best way to understand your options.",
+        items: [
+          {
+            title: "Number of Missing Teeth",
+            body: "Whether you are replacing a single tooth or several teeth will influence which treatment approaches are most appropriate for your situation.",
+          },
+          {
+            title: "Bone Support & Oral Health",
+            body: "The condition of your jawbone, gum health, and surrounding teeth all play an important role in determining which options are clinically viable for you.",
+          },
+          {
+            title: "Personal Preferences",
+            body: "Your goals, lifestyle, and preferences are important considerations. Your dentist will discuss all options so you can make an informed decision about your care.",
+          },
+        ],
+      },
+      {
+        kind: "callout",
+        label: "Important",
+        body: "The right treatment for you can only be determined through a thorough clinical assessment. Your dentist will explain all suitable options and provide a personalised recommendation.",
+      },
+      {
+        kind: "cards",
+        eyebrow: "Pricing",
+        heading: "Cost of Missing Teeth Solutions London",
+        intro:
+          "The cost of replacing missing teeth varies depending on the type of treatment, the number of teeth involved, and the complexity of your individual case. A personalised treatment plan with full costs is provided following your consultation.",
+        sub: "What Affects the Cost?",
+        items: [
+          {
+            title: "Treatment Type",
+            body: "Different approaches to replacing missing teeth carry different costs. Your dentist will explain the pricing for each suitable option during your consultation.",
+          },
+          {
+            title: "Complexity & Number of Teeth",
+            body: "The number of teeth being replaced and the overall complexity of your case will influence the treatment plan and associated costs.",
+          },
+          {
+            title: "Personalised Planning",
+            body: "A full written treatment plan with itemised costs is provided following your consultation, so you know exactly what to expect before treatment begins.",
+          },
+          {
+            title: "Membership Benefits",
+            body: "Our membership plan offers reduced treatment fees for patients who wish to benefit from ongoing savings across all treatments.",
+          },
+          {
+            title: "View Our Full Fee Guide",
+            body: "A transparent breakdown of treatment fees is available on our pricing page.",
+          },
+        ],
+      },
+      {
+        kind: "list",
+        eyebrow: "Our Approach",
+        heading: "Why Choose Smile Dentist",
+        sub: "Dr. Yasha Y Shirazi — GDC: 195843",
+        items: [
+          "London practice with experience in restorative dentistry",
+          "Personalised treatment planning for every patient",
+          "Focus on natural-looking, long-lasting results",
+          "GDC-registered dentists at a CQC-registered practice",
+        ],
+      },
+      {
+        kind: "prose",
+        eyebrow: "Serving London",
+        heading: "Missing Teeth Solutions Near You",
+        paragraphs: [
+          "Our London practice welcomes patients from across the city and surrounding areas who are looking for solutions for missing teeth. Whether you are searching for missing teeth treatment near you or exploring your replacement options, we are here to help.",
+          "Conveniently located in London with excellent transport links",
+        ],
+      },
+      {
+        kind: "faq",
+        heading: "Frequently Asked Questions",
+        items: [
+          {
+            q: "What are the options for replacing missing teeth?",
+            a: "The main options include dental implants, dental bridges, and dentures. Each approach has different characteristics, and the most suitable option depends on factors such as the number of missing teeth, bone support, and your overall oral health. Your dentist will discuss all options during a consultation.",
+          },
+          {
+            q: "Are dental implants better than bridges?",
+            a: "Both dental implants and bridges are effective solutions for replacing missing teeth. Implants do not require preparation of neighbouring teeth, while bridges can be completed without surgery. The most appropriate option depends on your individual clinical situation and preferences, which your dentist will assess.",
+          },
+          {
+            q: "How long do tooth replacement options last?",
+            a: "The longevity of any tooth replacement varies between individuals and depends on factors such as oral hygiene, dietary habits, and regular dental care. Your dentist will discuss the expected lifespan of each option and advise on how to care for your restoration.",
+          },
+          {
+            q: "Can I leave a missing tooth untreated?",
+            a: "While it is possible to leave a gap, missing teeth can lead to changes over time, including shifting of surrounding teeth, bite alterations, and bone changes in the jaw. A clinical assessment can help you understand the potential implications and explore your options.",
+          },
+          {
+            q: "Which option is right for me?",
+            a: "The most suitable treatment depends on a number of factors including the number and position of missing teeth, your bone support, oral health, and personal preferences. A thorough clinical assessment is the best way to determine which approach is right for your individual situation.",
+          },
+        ],
+      },
+      smileGallery(),
+    ],
+  },
+
+  "dental-implants-london": {
+    h1: "Dental Implants London",
+    intro:
+      "Dental implants offer a long-term solution for replacing missing teeth, designed to restore both function and appearance. At our London practice, each implant treatment is carefully planned and tailored to the individual patient.",
+    badges: [
+      "4.9/5 from Google Reviews",
+      "South Kensington • Next to South Ken Station",
+      "City of London • Ave Maria Lane, EC4",
+      "Standard Price From £2,950",
+    ],
+    hero: {
+      src: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1765805822/dental-implant-home_gulsc0.jpg",
+      alt: "Dental implant treatment at Smile Dentist London",
+    },
+    blocks: [
+      {
+        kind: "callout",
+        label: "Investment",
+        body: "Cost depends on the number of implants, complexity of treatment, and any additional procedures required. A full treatment plan with costs is provided following your consultation. Our £20/month dental membership does not apply to dental implant treatment. Implant fees are the same whether or not you are a member.",
+      },
+      {
+        kind: "cards",
+        eyebrow: "Understanding Implants",
+        heading: "What Are Dental Implants?",
+        intro:
+          "Dental implants are a long-term solution for replacing missing teeth. Small posts are placed into the jawbone to act as a secure foundation for replacement teeth. Over time, the implant integrates with the bone, providing a stable base that is designed to function similarly to a natural tooth root.",
+        items: [
+          {
+            title: "Designed for Longevity",
+            body: "Implants are designed as a long-term solution. Longevity varies depending on individual factors including oral hygiene, bone health, and regular dental care.",
+          },
+          {
+            title: "Natural Function",
+            body: "Replacement teeth supported by implants are designed to function similarly to natural teeth, allowing you to eat, speak, and smile with confidence.",
+          },
+          {
+            title: "Fixed in Place",
+            body: "Unlike removable options, implant-supported teeth are securely fixed and do not need to be taken out. They become a part of your everyday smile.",
+          },
+        ],
+      },
+      {
+        kind: "cards",
+        eyebrow: "The Importance of Replacement",
+        heading: "Why Replace Missing Teeth?",
+        items: [
+          {
+            title: "Chewing & Speech",
+            body: "Missing teeth can affect the ability to chew food properly and may impact speech clarity. Replacing missing teeth can help restore normal function and comfort.",
+          },
+          {
+            title: "Bite & Alignment",
+            body: "When teeth are missing, surrounding teeth may gradually shift, leading to changes in bite alignment. This can create further dental concerns over time if left untreated.",
+          },
+          {
+            title: "Bone Loss",
+            body: "The jawbone in the area of a missing tooth may begin to recede over time. Dental implants are one option that may help maintain bone density in the treatment area.",
+          },
+          {
+            title: "Confidence & Appearance",
+            body: "Gaps in the smile can affect self-confidence and facial appearance. Replacing missing teeth helps restore a natural-looking smile and overall facial structure.",
+          },
+        ],
+        footer:
+          "If you are living with missing teeth, dental implants are one of several treatment options that may be suitable. A clinical assessment will help determine the most appropriate approach for you.",
+      },
+      {
+        kind: "cards",
+        eyebrow: "Suitability",
+        heading: "Who Are Dental Implants Suitable For?",
+        intro:
+          "Dental implants may be suitable for adults who are missing one or more teeth and have sufficient bone support in the jaw. Suitability is always determined through a thorough clinical assessment.",
+        items: [
+          {
+            title: "Missing Teeth",
+            body: "Patients with one or more missing teeth who are looking for a fixed, long-term replacement option may benefit from implant treatment.",
+          },
+          {
+            title: "Adequate Bone Support",
+            body: "Sufficient jawbone is needed to support an implant. If bone levels are insufficient, further assessment and possible preparatory treatment may be discussed.",
+          },
+          {
+            title: "Good Oral Health",
+            body: "Healthy gums and a commitment to good oral hygiene are important factors in the long-term success of dental implant treatment.",
+          },
+        ],
+      },
+      {
+        kind: "callout",
+        label: "Important",
+        body: "Suitability for dental implants depends on individual clinical evaluation. Factors such as medical history, bone density, and oral health will be carefully assessed at your consultation.",
+      },
+      {
+        kind: "steps",
+        eyebrow: "Treatment Options",
+        heading: "Types of Dental Implant Treatments",
+        sub: "Dental implants can be used to replace a single tooth, several teeth, or to support larger restorations. Your dentist will recommend the most suitable approach based on your clinical needs.",
+        items: [
+          {
+            title: "Single Tooth Implant",
+            meta: "1",
+            body: "A single implant post supports an individual replacement tooth. This option preserves the surrounding teeth, which do not need to be prepared or altered.",
+          },
+          {
+            title: "Multiple Teeth Replacement",
+            meta: "2",
+            body: "When several adjacent teeth are missing, a smaller number of implants can support a bridge, replacing multiple teeth without affecting healthy neighbouring teeth.",
+          },
+          {
+            title: "Implant-Supported Restorations",
+            meta: "3",
+            body: "For patients missing a larger number of teeth, implants can support more extensive fixed restorations. The number of implants required is determined by clinical assessment.",
+          },
+        ],
+      },
+      {
+        kind: "steps",
+        eyebrow: "Your Journey",
+        heading: "The Dental Implant Process",
+        sub: "Each stage is carefully managed to support the best possible outcome for your treatment.",
+        items: [
+          {
+            title: "Consultation & Assessment",
+            meta: "01",
+            body: "A thorough examination of your teeth, gums, and jawbone is carried out. Imaging may be used to assess bone levels and help plan the treatment.",
+          },
+          {
+            title: "Treatment Planning",
+            meta: "02",
+            body: "A personalised treatment plan is created based on your clinical assessment. All options, timelines, and costs are discussed before any treatment begins.",
+          },
+          {
+            title: "Implant Placement",
+            meta: "03",
+            body: "The implant post is carefully placed into the jawbone under local anaesthetic. The procedure is carried out with precision to support a stable foundation.",
+          },
+          {
+            title: "Healing Period",
+            meta: "04",
+            body: "A period of healing follows, during which the implant integrates with the jawbone. The length of this phase varies between individuals.",
+          },
+          {
+            title: "Final Restoration",
+            meta: "05",
+            body: "Once healing is complete, the final replacement tooth is carefully fitted to the implant, designed to match the appearance of your natural teeth.",
+          },
+        ],
+      },
+      {
+        kind: "cards",
+        eyebrow: "Recovery",
+        heading: "Healing & Recovery",
+        intro:
+          "Recovery following implant placement is an important part of the treatment process. Your dentist will provide detailed aftercare guidance tailored to your individual needs.",
+        items: [
+          {
+            title: "Healing Times Vary",
+            body: "The time required for the implant to integrate with the jawbone varies between individuals. Your dentist will monitor healing progress at follow-up appointments.",
+          },
+          {
+            title: "Bone Integration",
+            body: "A key part of the healing process involves the implant gradually bonding with the jawbone. This integration is essential for providing a stable, secure foundation.",
+          },
+          {
+            title: "Follow-Up Care",
+            body: "Regular follow-up appointments are an important part of your implant journey. Your dentist will review healing, answer questions, and advise when you are ready for the next stage.",
+          },
+        ],
+      },
+      {
+        kind: "cards",
+        eyebrow: "Pricing",
+        heading: "Dental Implants Cost London",
+        intro:
+          "The cost of dental implant treatment depends on a number of factors, including the number of implants required, the complexity of the case, and whether any additional procedures are needed.",
+        sub: "What Affects the Cost?",
+        items: [
+          {
+            title: "Number of Implants",
+            body: "Replacing a single tooth requires one implant, while multiple missing teeth may need additional implants to provide adequate support.",
+          },
+          {
+            title: "Treatment Complexity",
+            body: "The overall complexity of your case, including bone density and the position of missing teeth, will influence the treatment plan and associated costs.",
+          },
+          {
+            title: "Additional Procedures",
+            body: "Some patients may require preparatory procedures before implant placement. These will be discussed and costed as part of your personalised treatment plan.",
+          },
+          {
+            title: "Personalised Plan",
+            body: "A full written treatment plan with itemised costs is provided following your consultation, so you know exactly what to expect before treatment begins.",
+          },
+          {
+            title: "Implants are not included in our membership discount",
+            body: "Dental implants — including bone grafting, sinus lift and All-on-X treatment — are excluded from the £20/month membership plan. Implant fees are the same whether or not you are a member; finance options may be available.",
+          },
+        ],
+      },
+      {
+        kind: "list",
+        eyebrow: "Our Approach",
+        heading: "Why Choose Smile Dentist",
+        sub: "Dr. Yasha Y Shirazi — GDC: 195843",
+        items: [
+          "London practice with experience in implant dentistry",
+          "Careful clinical assessment and personalised treatment planning",
+          "Full written treatment plan with costs provided before treatment",
+          "GDC-registered dentists at a CQC-registered practice",
+        ],
+      },
+      {
+        kind: "prose",
+        eyebrow: "Serving London",
+        heading: "Dental Implants Near You",
+        paragraphs: [
+          "Our London dental practice welcomes patients from across the city and surrounding areas who are seeking implant treatment. Whether you are searching for dental implants near you or a trusted implant dentist in London, we are here to help.",
+          "Conveniently located in London with excellent transport links",
+        ],
+      },
+      {
+        kind: "faq",
+        heading: "Frequently Asked Questions",
+        items: [
+          {
+            q: "What are dental implants?",
+            a: "Dental implants are small posts placed into the jawbone to support replacement teeth. They are designed to function and feel similar to natural teeth, providing a stable foundation for a crown, bridge, or other restoration. Suitability is determined by clinical assessment.",
+          },
+          {
+            q: "Are dental implants painful?",
+            a: "Implant placement is carried out under local anaesthetic, so you should not feel discomfort during the procedure. Some swelling and tenderness may occur in the days following treatment, which typically settles with appropriate aftercare. Your dentist will explain what to expect.",
+          },
+          {
+            q: "How long do dental implants last?",
+            a: "The longevity of dental implants varies between individuals and depends on factors such as oral hygiene, overall health, and attendance at regular dental appointments. With appropriate care, implants can provide many years of reliable function. Your dentist will advise on ongoing care.",
+          },
+          {
+            q: "Can anyone get dental implants?",
+            a: "Not everyone is suitable for dental implants. Sufficient jawbone support and good general oral health are important factors. Conditions such as uncontrolled diabetes or certain medications may affect suitability. A thorough clinical assessment is required to determine eligibility.",
+          },
+          {
+            q: "Do implants look like natural teeth?",
+            a: "The replacement teeth placed on dental implants are carefully designed to match the shade, shape, and translucency of your surrounding natural teeth. Metal-free materials are available to create a natural-looking appearance. Your dentist will colour-match the restoration during planning.",
+          },
+        ],
+      },
+      smileGallery(),
+    ],
+  },
+
+  "dental-crowns-london": {
+    h1: "Dental Crowns London",
+    intro:
+      "A dental crown is a custom-made restoration designed to cover a damaged or weakened tooth, restoring its strength, shape, and appearance. At our London practice, crowns are carefully planned and crafted using tooth-coloured materials to blend naturally with your smile.",
+    badges: [
+      "4.9/5 from Google Reviews",
+      "South Kensington • Next to South Ken Station",
+      "City of London • Ave Maria Lane, EC4",
+      "Porcelain / Ceramic Crown From £995",
+      "Member (50% off) From £497.50",
+      "Membership £20/month",
+    ],
+    hero: {
+      src: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1765805809/dental-crowns_pq0fvz.jpg",
+      alt: "Dental crown treatment at Smile Dentist London",
+    },
+    blocks: [
+      {
+        kind: "steps",
+        eyebrow: "Understanding Dental Crowns",
+        heading: "What Is a Dental Crown?",
+        sub: "A dental crown is a custom-made covering that is placed over the entire visible portion of a tooth, from the gum line upwards. It is designed to restore the tooth's original shape, strength, and appearance when the remaining structure can no longer be adequately supported by a simpler restoration such as a filling. Crowns are made from tooth-coloured materials and are individually shaped to match the surrounding teeth in size, shade, and form. Once cemented in place, a crown functions and looks like a natural tooth, allowing you to eat, speak, and smile with confidence.",
+        items: [
+          {
+            title: "Custom-Made",
+            meta: "1",
+            body: "Each crown is individually designed to match the shape, shade, and proportions of your natural teeth for a seamless result.",
+          },
+          {
+            title: "Full Coverage",
+            meta: "2",
+            body: "A crown encases the entire visible tooth, providing structural support and protection to the weakened or damaged tooth beneath.",
+          },
+          {
+            title: "Restored Function",
+            meta: "3",
+            body: "Once placed, a crown restores normal biting and chewing ability, allowing the tooth to function as it did before it was damaged.",
+          },
+        ],
+        footer:
+          "Not every damaged tooth requires a crown. Your dentist will assess the extent of the damage and recommend the most appropriate treatment for your situation.",
+      },
+      {
+        kind: "cards",
+        eyebrow: "Common Indications",
+        heading: "When Is a Dental Crown Needed?",
+        intro:
+          "A dental crown may be recommended in a number of clinical situations where the tooth can no longer be adequately restored with a filling or other simpler treatment. Below are some of the most common reasons a crown is considered.",
+        items: [
+          {
+            title: "Broken or Cracked Teeth",
+            body: "A crown can hold together a tooth that has fractured or developed a crack, helping to prevent further damage and preserving the remaining structure.",
+          },
+          {
+            title: "Teeth Weakened by Decay",
+            body: "When decay has destroyed a large portion of the tooth, there may not be enough structure remaining to support a filling. A crown provides the necessary coverage and strength.",
+          },
+          {
+            title: "After Root Canal Treatment",
+            body: "A tooth that has undergone root canal treatment is often more brittle because the nerve and blood supply have been removed. A crown helps to protect the restored tooth from fracturing.",
+          },
+          {
+            title: "Severely Worn Teeth",
+            body: "Teeth that have become significantly worn down over time — due to grinding, acid erosion, or other factors — may benefit from crowns to restore their original shape and protect them from further wear.",
+          },
+        ],
+        footer:
+          "Whether a crown is the most suitable option depends on a clinical assessment. Your dentist will examine the tooth, discuss all available options, and recommend the approach best suited to your individual situation.",
+      },
+      {
+        kind: "cards",
+        eyebrow: "Crown Materials",
+        heading: "Types of Dental Crowns",
+        intro:
+          "Several types of crown material are available, and the most appropriate choice will depend on the location of the tooth, the forces it needs to withstand, and your individual clinical needs. At Smile Dentist, we use metal-free, tooth-coloured materials to achieve a natural-looking result.",
+        items: [
+          {
+            title: "Porcelain and Ceramic Crowns",
+            body: "Designed to closely match the colour and translucency of natural teeth, making them a popular choice for visible teeth.",
+          },
+          {
+            title: "Tooth-Coloured Options",
+            body: "All crowns placed at our practice are tooth-coloured and metal-free, avoiding the dark margins sometimes seen with older metal-based crowns.",
+          },
+          {
+            title: "Material Selected by Clinical Need",
+            body: "Your dentist will recommend the most suitable material based on the tooth's position, the forces involved, and the desired aesthetic outcome.",
+          },
+        ],
+        footer:
+          "For primarily cosmetic concerns where the tooth structure is largely intact, porcelain veneers may be a more conservative alternative. Your dentist will discuss all suitable options during your consultation.",
+      },
+      {
+        kind: "cards",
+        eyebrow: "Advantages",
+        heading: "Benefits of Dental Crowns",
+        intro:
+          "A well-placed dental crown can offer a number of functional and aesthetic benefits, helping to preserve a damaged tooth and restore your ability to eat, speak, and smile comfortably.",
+        items: [
+          {
+            title: "Restores Strength",
+            body: "A crown reinforces a weakened tooth, allowing it to withstand normal biting and chewing forces once again.",
+          },
+          {
+            title: "Improves Appearance",
+            body: "Tooth-coloured crowns can improve the appearance of damaged, discoloured, or misshapen teeth, blending naturally with surrounding teeth.",
+          },
+          {
+            title: "Protects Tooth Structure",
+            body: "By encasing the remaining tooth, a crown helps to protect it from further decay, fracture, or wear.",
+          },
+          {
+            title: "Long-Term Preservation",
+            body: "Crowns can support the long-term preservation of a tooth that might otherwise need to be extracted, helping you keep your natural teeth for longer.",
+          },
+        ],
+        footer:
+          "The benefits of a crown depend on individual clinical circumstances. Your dentist will discuss realistic expectations based on the condition of your tooth during your consultation.",
+      },
+      {
+        kind: "steps",
+        eyebrow: "The Treatment Process",
+        heading: "How a Dental Crown Is Placed",
+        sub: "The treatment process for a dental crown generally involves several stages, carried out over two or more appointments.",
+        items: [
+          {
+            title: "Consultation and Assessment",
+            meta: "1",
+            body: "Your dentist will examine the affected tooth, take any necessary images, and assess whether a crown is the most suitable treatment option. A written treatment plan with costs is provided before any treatment begins.",
+          },
+          {
+            title: "Preparation of the Tooth",
+            meta: "2",
+            body: "The tooth is carefully shaped under local anaesthetic to create space for the crown. A small amount of the outer surface is removed so that the crown can sit over the tooth without being too bulky.",
+          },
+          {
+            title: "Impressions and Measurements",
+            meta: "3",
+            body: "Detailed impressions or digital scans are taken to create a precise model of the prepared tooth. This information is sent to the dental laboratory where your crown will be custom-made. A temporary crown is placed to protect the tooth in the meantime.",
+          },
+          {
+            title: "Placement of the Crown",
+            meta: "4",
+            body: "Once the permanent crown is ready, it is carefully tried in and assessed for fit, bite, and appearance. When both you and your dentist are satisfied, the crown is cemented securely in place.",
+          },
+          {
+            title: "Final Adjustments",
+            meta: "5",
+            body: "Minor adjustments may be made to ensure the crown sits comfortably and your bite feels natural. Your dentist will also provide guidance on how to care for the crown to support its longevity.",
+          },
+        ],
+      },
+      {
+        kind: "cards",
+        eyebrow: "Longevity and Care",
+        heading: "How Long Do Dental Crowns Last?",
+        intro:
+          "The lifespan of a dental crown varies between individuals. Several factors influence how long a crown will continue to function well, and there is no fixed guarantee of longevity for any dental restoration.",
+        items: [
+          {
+            title: "Oral Hygiene",
+            body: "Thorough daily cleaning, including brushing around the crown and flossing, helps to protect the underlying tooth and surrounding gum tissue from decay and disease.",
+          },
+          {
+            title: "Habits and Diet",
+            body: "Avoiding excessively hard or sticky foods and habits such as teeth grinding can help reduce the risk of damage. A nightguard may be recommended for patients who grind their teeth.",
+          },
+          {
+            title: "Regular Dental Care",
+            body: "Attending routine dental check-ups and hygiene appointments allows your dentist to monitor the condition of the crown and the underlying tooth, addressing any concerns early.",
+          },
+        ],
+        footer:
+          "The longevity of a dental crown depends on individual factors. Your dentist will discuss realistic expectations and how to care for your crown during your consultation. All treatment outcomes are dependent on individual clinical circumstances.",
+      },
+      {
+        kind: "pricing",
+        eyebrow: "Cost Guide",
+        heading: "Dental Crown Cost London",
+        intro:
+          "The cost of a dental crown in London varies depending on several factors, including the material used, the complexity of the preparation, and whether additional procedures — such as a core build-up — are required. A detailed, written treatment plan with costs is always provided before any work begins.",
+        columns: ["Treatment", "Standard", "Member"],
+        rows: [
+          { label: "Porcelain / Ceramic Crown", standard: "From £995", member: "From £497.50" },
+          { label: "Core Build-Up", standard: "From £154", member: "From £77" },
+          { label: "Temporary Crown", standard: "Included", member: "Included" },
+        ],
+        notes: [
+          {
+            title: "Personalised planning",
+            body: "Every treatment plan is tailored to the individual, ensuring you understand the costs involved before making a decision.",
+          },
+          {
+            title: "Number of teeth",
+            body: "If multiple crowns are needed, the total cost will reflect the number of teeth being treated.",
+          },
+          {
+            title: "Membership Savings",
+            body: "Join our membership for £20/month and receive 50% off all treatment fees.",
+          },
+        ],
+        footnote:
+          "Final costs depend on individual clinical factors. A full written estimate is provided before treatment begins.",
+      },
+      {
+        kind: "cards",
+        eyebrow: "Our Approach",
+        heading: "Why Choose Smile Dentist for Dental Crowns",
+        intro:
+          "At Smile Dentist, we take a personalised approach to restorative dentistry. Every treatment plan is developed following a thorough clinical assessment, ensuring that the recommended approach is appropriate for your individual needs.",
+        items: [
+          {
+            title: "London Location",
+            body: "Our practice is conveniently located in London, accessible for patients across the city and surrounding areas.",
+          },
+          {
+            title: "Restorative Experience",
+            body: "Our GDC-registered dentists have experience across a range of restorative treatments, including crowns, bridges, and implant-supported restorations.",
+          },
+          {
+            title: "Natural-Looking Results",
+            body: "We use metal-free, tooth-coloured materials that are shade-matched to your natural teeth, with the aim of creating a restoration that blends seamlessly with your smile.",
+          },
+          {
+            title: "Personalised Planning",
+            body: "Every patient receives a written treatment plan with transparent costs. We discuss all available options so you can make an informed decision about your care.",
+          },
+        ],
+      },
+      {
+        kind: "prose",
+        eyebrow: "Serving Patients Across London",
+        heading: "Dental Crowns Near You",
+        paragraphs: [
+          "We welcome patients from across London and the surrounding areas who are looking for a reliable solution to restore damaged or weakened teeth. Whether you are searching for a dental crown near you or have been referred by another dental professional, our team is here to help.",
+          "Our practice is well connected by public transport and offers a calm, welcoming environment for patients seeking restorative dental care. All treatments are delivered by GDC-registered dentists at our CQC-registered practice.",
+        ],
+      },
+      {
+        kind: "faq",
+        eyebrow: "Common Questions",
+        heading: "Frequently Asked Questions",
+        items: [
+          {
+            q: "What is a dental crown?",
+            a: "A dental crown is a custom-made restoration that covers the entire visible portion of a tooth. It is designed to restore the tooth's shape, strength, and appearance when it can no longer be adequately supported by a filling. Suitability is determined by clinical assessment.",
+          },
+          {
+            q: "Is getting a dental crown painful?",
+            a: "The procedure is carried out under local anaesthetic, so you should not feel discomfort during preparation. Some patients experience mild sensitivity on the treated tooth for a few days afterwards, which typically settles on its own. Your dentist will explain what to expect.",
+          },
+          {
+            q: "How long do dental crowns last?",
+            a: "The longevity of a dental crown varies between individuals and depends on factors such as oral hygiene, dietary habits, and attendance at regular dental appointments. With appropriate care, crowns can provide many years of reliable function. Your dentist will advise on ongoing care.",
+          },
+          {
+            q: "When is a crown needed instead of a filling?",
+            a: "A crown may be recommended when a tooth has lost a significant amount of structure and a filling alone would not provide adequate support. This can occur after extensive decay, fracture, or root canal treatment. Your dentist will assess the remaining tooth structure to determine the most suitable option.",
+          },
+          {
+            q: "Do crowns look like natural teeth?",
+            a: "Modern tooth-coloured crowns are carefully designed to match the shade, shape, and translucency of your natural teeth. The materials used at our practice are metal-free, helping to create a natural-looking result. Your dentist will colour-match the crown during the planning stage.",
+          },
+        ],
+      },
+      smileGallery(),
+    ],
+  },
+
+  "dental-bridges-london": {
+    h1: "Dental Bridges London",
+    intro:
+      "A dental bridge is a fixed restoration designed to replace one or more missing teeth, helping to restore both the function and appearance of your smile. At our London practice, bridges are carefully planned and crafted to blend naturally with your existing teeth.",
+    badges: [
+      "4.9/5 from Google Reviews",
+      "South Kensington • Next to South Ken Station",
+      "City of London • Ave Maria Lane, EC4",
+      "Zirconia / E-Max Bridge (Per Unit) From £995",
+      "Member (50% off) From £497.50",
+      "Membership £20/month",
+    ],
+    hero: {
+      src: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1765805729/Dental-Bridges_ygwl9m.jpg",
+      alt: "Dental bridge treatment at Smile Dentist London",
+    },
+    blocks: [
+      {
+        kind: "steps",
+        eyebrow: "Understanding Dental Bridges",
+        heading: "What Is a Dental Bridge?",
+        sub: "A dental bridge is a fixed restoration used to replace one or more missing teeth. It works by placing crowns on the teeth either side of the gap — known as the supporting teeth — with a replacement tooth attached between them to fill the space. Unlike a removable denture, a bridge is cemented in place and does not need to be taken out for cleaning. Bridges can be supported by natural teeth or, in some cases, by dental implants. They are designed to restore both function and appearance, allowing you to eat, speak, and smile with greater confidence.",
+        items: [
+          {
+            title: "Supporting Teeth",
+            meta: "1",
+            body: "Crowns are placed on the teeth adjacent to the gap, providing a stable foundation for the bridge.",
+          },
+          {
+            title: "Replacement Tooth",
+            meta: "2",
+            body: "A custom-made false tooth is attached between the crowns, filling the space where the tooth is missing.",
+          },
+          {
+            title: "A Natural Result",
+            meta: "3",
+            body: "The completed bridge creates a continuous row of teeth, restoring your ability to chew and speak comfortably.",
+          },
+        ],
+        footer:
+          "Not all gaps are suitable for a bridge. Your dentist will assess the condition of the adjacent teeth and the size of the gap during your consultation to determine whether a bridge is the most appropriate option for your situation.",
+      },
+      {
+        kind: "cards",
+        eyebrow: "The Importance of Tooth Replacement",
+        heading: "Why Replace Missing Teeth?",
+        intro:
+          "Losing a tooth affects more than appearance. Over time, the surrounding teeth may begin to shift into the empty space, which can lead to changes in your bite and the way your teeth come together. This can affect chewing efficiency and may place uneven pressure on other teeth.",
+        items: [
+          {
+            title: "Chewing and Speech",
+            body: "Missing teeth can make it more difficult to chew certain foods effectively and may affect the clarity of speech, particularly if front teeth are involved.",
+          },
+          {
+            title: "Shifting Teeth",
+            body: "When a tooth is lost, neighbouring teeth may gradually drift into the gap. This can create new spacing issues and make oral hygiene more difficult.",
+          },
+          {
+            title: "Bite and Alignment",
+            body: "Changes in tooth position can alter how your upper and lower teeth meet, potentially leading to discomfort or uneven wear on remaining teeth.",
+          },
+        ],
+        footer:
+          "A dental bridge is one of several options available for replacing missing teeth. Your dentist will discuss all suitable approaches during your consultation to help you make an informed decision.",
+      },
+      {
+        kind: "list",
+        eyebrow: "Suitability",
+        heading: "Who Are Dental Bridges Suitable For?",
+        sub: "Dental bridges may be considered for patients who are missing one or more teeth and have suitable supporting teeth on either side of the gap. They can also be an appropriate option for patients who prefer to avoid the surgical element associated with dental implants.",
+        items: [
+          "Patients missing one or more adjacent teeth",
+          "Cases where the neighbouring teeth already have crowns or large fillings",
+          "Patients who prefer a non-surgical tooth replacement option",
+          "Those seeking a fixed restoration rather than a removable denture",
+        ],
+      },
+      {
+        kind: "callout",
+        label: "Suitability",
+        body: "Suitability for a dental bridge depends on a clinical assessment. Your dentist will examine the health of the supporting teeth and surrounding gum tissue before recommending a treatment plan.",
+      },
+      {
+        kind: "cards",
+        eyebrow: "Bridge Options",
+        heading: "Types of Dental Bridges",
+        intro:
+          "There are several types of dental bridge, and the most appropriate design will depend on the location of the gap, the condition of the surrounding teeth, and your individual clinical needs.",
+        items: [
+          {
+            title: "Traditional Bridge",
+            body: "The most commonly used type. Crowns are placed on the teeth on either side of the gap, with a replacement tooth attached between them. This design provides excellent stability and is suitable for most situations where healthy supporting teeth are available.",
+          },
+          {
+            title: "Cantilever Bridge",
+            body: "Supported by a crown on one side of the gap only. This design may be considered in specific clinical situations where there is only one suitable supporting tooth adjacent to the space. It is less commonly used than a traditional bridge.",
+          },
+          {
+            title: "Implant-Supported Bridge",
+            body: "Instead of being supported by natural teeth, this type of bridge is anchored by dental implants placed in the jawbone. It may be recommended when several adjacent teeth are missing or when the neighbouring teeth are not suitable to act as supports.",
+          },
+        ],
+        footer:
+          "Your dentist will explain which type of bridge may be most appropriate for your situation and discuss all available options during your consultation.",
+      },
+      {
+        kind: "steps",
+        eyebrow: "The Treatment Process",
+        heading: "How a Dental Bridge Is Placed",
+        sub: "The treatment process for a dental bridge generally involves several stages, carried out over two or more appointments.",
+        items: [
+          {
+            title: "Consultation and Assessment",
+            meta: "1",
+            body: "Your dentist will examine the gap and the surrounding teeth, take any necessary images, and discuss whether a bridge is a suitable option for your situation. A written treatment plan with costs is provided before any treatment begins.",
+          },
+          {
+            title: "Preparation of Supporting Teeth",
+            meta: "2",
+            body: "The teeth on either side of the gap are carefully shaped under local anaesthetic to accommodate the bridge crowns. A small amount of enamel is removed to create space for the restoration.",
+          },
+          {
+            title: "Impressions and Measurements",
+            meta: "3",
+            body: "Detailed impressions or digital scans are taken to create a precise model of your teeth. This information is sent to the dental laboratory where your bridge will be custom-made. A temporary bridge is placed to protect the prepared teeth.",
+          },
+          {
+            title: "Placement of the Bridge",
+            meta: "4",
+            body: "Once the permanent bridge is ready, it is carefully tried in and assessed for fit, bite, and appearance. When both you and your dentist are satisfied, the bridge is cemented securely in place.",
+          },
+          {
+            title: "Final Adjustments",
+            meta: "5",
+            body: "Minor adjustments may be made to ensure the bridge sits comfortably and your bite feels natural. Your dentist will also provide guidance on how to clean beneath and around the bridge to support its longevity.",
+          },
+        ],
+      },
+      {
+        kind: "cards",
+        eyebrow: "Longevity and Care",
+        heading: "How Long Do Dental Bridges Last?",
+        intro:
+          "The lifespan of a dental bridge varies between individuals. Several factors influence how long a bridge will continue to function well, and there is no fixed guarantee of longevity for any dental restoration.",
+        items: [
+          {
+            title: "Oral Hygiene",
+            body: "Thorough daily cleaning, including brushing and cleaning beneath the bridge with interdental aids, helps to protect the supporting teeth and gum tissue.",
+          },
+          {
+            title: "Dietary Habits",
+            body: "Avoiding excessively hard or sticky foods can help reduce the risk of damage to the bridge. Your dentist will advise on any specific dietary considerations.",
+          },
+          {
+            title: "Regular Dental Care",
+            body: "Attending routine dental check-ups and hygiene appointments allows your dentist to monitor the condition of the bridge and address any concerns early.",
+          },
+        ],
+        footer:
+          "The longevity of a dental bridge depends on individual factors. Your dentist will discuss realistic expectations and how to care for your bridge during your consultation. All treatment outcomes are dependent on individual clinical circumstances.",
+      },
+      {
+        kind: "pricing",
+        eyebrow: "Cost Guide",
+        heading: "Dental Bridge Cost London",
+        intro:
+          "The cost of a dental bridge in London varies depending on several factors, including the number of teeth being replaced, the type of bridge used, and the complexity of treatment. A detailed, written treatment plan with costs is always provided before any work begins.",
+        columns: ["Treatment", "Standard", "Member"],
+        rows: [
+          { label: "Zirconia Bridge (Per Unit)", standard: "From £995", member: "From £497.50" },
+          { label: "E-Max Bridge (Per Unit)", standard: "From £995", member: "From £497.50" },
+          { label: "Temporary Bridge", standard: "POA", member: "POA" },
+        ],
+        notes: [
+          {
+            title: "Per-unit pricing",
+            body: "Bridges are priced per unit — each crown on a supporting tooth and the replacement tooth itself count as individual units.",
+          },
+          {
+            title: "Example",
+            body: "Replacing one missing tooth with a traditional bridge typically involves three units (two supporting crowns and one replacement tooth).",
+          },
+          {
+            title: "Membership Savings",
+            body: "Join our membership for £20/month and receive 50% off all treatment fees.",
+          },
+        ],
+        footnote:
+          "Final costs depend on the number of units required and individual clinical factors. A full written estimate is provided before treatment begins.",
+      },
+      {
+        kind: "cards",
+        eyebrow: "Our Approach",
+        heading: "Why Choose Smile Dentist for Dental Bridges",
+        intro:
+          "At Smile Dentist, we take a personalised approach to restorative dentistry. Every treatment plan is developed following a thorough clinical assessment, ensuring that the recommended approach is appropriate for your individual needs.",
+        items: [
+          {
+            title: "Central London Location",
+            body: "Our practice is conveniently located in London, accessible for patients across the city and surrounding areas.",
+          },
+          {
+            title: "Restorative Expertise",
+            body: "Our GDC-registered dentists have experience in a range of restorative treatments, including dental bridges, crowns, and implant-supported restorations.",
+          },
+          {
+            title: "Natural-Looking Results",
+            body: "We use metal-free ceramic materials that are shade-matched to your natural teeth, with the aim of creating a restoration that blends seamlessly with your smile.",
+          },
+          {
+            title: "Personalised Planning",
+            body: "Every patient receives a written treatment plan with transparent costs. We discuss all available options so you can make an informed decision about your care.",
+          },
+        ],
+      },
+      {
+        kind: "prose",
+        eyebrow: "Serving Patients Across London",
+        heading: "Dental Bridges Near You",
+        paragraphs: [
+          "We welcome patients from across London and the surrounding areas who are looking for a fixed solution to replace missing teeth. Whether you are searching for a dental bridge near you or have been referred by another dental professional, our team is here to help.",
+          "Our practice is well connected by public transport and offers a calm, welcoming environment for patients seeking restorative dental care. All treatments are delivered by GDC-registered dentists at our CQC-registered practice.",
+        ],
+      },
+      {
+        kind: "faq",
+        eyebrow: "Common Questions",
+        heading: "Frequently Asked Questions",
+        items: [
+          {
+            q: "What is a dental bridge?",
+            a: "A dental bridge is a fixed restoration used to replace one or more missing teeth. It is supported by crowns placed on the teeth either side of the gap, with a replacement tooth attached between them. Bridges are cemented in place and do not need to be removed. Suitability depends on a clinical assessment.",
+          },
+          {
+            q: "Is getting a dental bridge painful?",
+            a: "The preparation is carried out under local anaesthetic, so you should not feel discomfort during the procedure. Some patients experience mild sensitivity on the prepared teeth for a few days afterwards, which typically settles on its own. Your dentist will discuss what to expect at each stage.",
+          },
+          {
+            q: "How long do dental bridges last?",
+            a: "The longevity of a dental bridge varies between individuals and depends on factors such as oral hygiene, dietary habits, and attendance at regular dental appointments. With appropriate care, bridges can provide many years of reliable function. Your dentist will advise on how to care for your bridge.",
+          },
+          {
+            q: "Are bridges better than implants?",
+            a: "Neither option is universally better — the most suitable choice depends on your individual clinical circumstances. Bridges do not require surgery, while implants do not involve preparing adjacent teeth. Your dentist will discuss both options during your consultation and recommend the approach best suited to your situation.",
+          },
+          {
+            q: "Do dental bridges look natural?",
+            a: "Modern ceramic bridges are carefully designed to match the shade, shape, and translucency of your natural teeth. The materials used at our practice are metal-free, which helps to create a natural-looking result. Your dentist will colour-match the bridge during the planning stage.",
+          },
+        ],
+      },
+      smileGallery(),
     ],
   },
 };
