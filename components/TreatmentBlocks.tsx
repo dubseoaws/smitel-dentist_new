@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { ContentBlock } from "@/lib/treatment-content";
 
@@ -71,14 +72,9 @@ function Steps({ block }: { block: Extract<ContentBlock, { kind: "steps" }> }) {
         {block.items.map((item, i) => (
           <li key={item.title} className="border border-ink/10 bg-ivory p-7">
             <span className="inline-flex h-9 w-9 items-center justify-center border border-gold/50 font-display text-sm text-gold-deep">
-              {String(i + 1).padStart(2, "0")}
+              {item.meta ?? String(i + 1).padStart(2, "0")}
             </span>
             <h3 className="mt-4 font-semibold text-lg">{item.title}</h3>
-            {item.meta && (
-              <p className="mt-1 font-label text-[10px] font-bold tracking-[0.2em] uppercase text-gold-deep">
-                {item.meta}
-              </p>
-            )}
             <p className="mt-3 text-sm text-ink-soft leading-relaxed">{item.body}</p>
           </li>
         ))}
@@ -129,33 +125,107 @@ function Stories({ block }: { block: Extract<ContentBlock, { kind: "stories" }> 
   return (
     <div className="space-y-10">
       <div className="max-w-3xl space-y-4">
+        <Eyebrow>{block.eyebrow}</Eyebrow>
         <Heading>{block.heading}</Heading>
         <Sub>{block.sub}</Sub>
       </div>
       <div className="grid gap-6 md:grid-cols-2">
         {block.items.map((item) => (
-          <article key={item.title} className="border border-ink/10 bg-ivory p-7 space-y-4">
-            <h3 className="font-semibold text-lg">{item.title}</h3>
-            {(
-              [
-                ["Patient Concern", item.concern],
-                ["Treatment", item.treatment],
-                ["Outcome", item.outcome],
-              ] as const
-            ).map(([label, body]) => (
-              <div key={label}>
-                <p className="font-label text-[10px] font-bold tracking-[0.2em] uppercase text-gold-deep">
-                  {label}
-                </p>
-                <p className="mt-1 text-sm text-ink-soft leading-relaxed">{body}</p>
+          <article key={item.title} className="border border-ink/10 bg-ivory">
+            {item.before && item.after && (
+              <div className="grid grid-cols-2">
+                {(
+                  [
+                    ["Before", item.before],
+                    ["After", item.after],
+                  ] as const
+                ).map(([label, img]) => (
+                  <div key={label} className="relative aspect-[4/3] bg-cream">
+                    <Image
+                      src={img.src}
+                      alt={img.alt}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 50vw, 25vw"
+                    />
+                    <span className="absolute left-3 top-3 bg-ink/85 text-ivory px-2.5 py-1 font-label text-[10px] font-bold tracking-[0.2em] uppercase">
+                      {label}
+                    </span>
+                  </div>
+                ))}
               </div>
-            ))}
+            )}
+            <div className="p-7 space-y-4">
+              {item.meta && (
+                <p className="font-label text-[10px] font-bold tracking-[0.2em] uppercase text-gold-deep">
+                  {item.meta}
+                </p>
+              )}
+              <h3 className="font-semibold text-lg">{item.title}</h3>
+              {(
+                [
+                  ["Patient Concern", item.concern],
+                  ["Treatment", item.treatment],
+                  ["Outcome", item.outcome],
+                ] as const
+              ).map(([label, body]) => (
+                <div key={label}>
+                  <p className="font-label text-[10px] font-bold tracking-[0.2em] uppercase text-gold-deep">
+                    {label}
+                  </p>
+                  <p className="mt-1 text-sm text-ink-soft leading-relaxed">{body}</p>
+                </div>
+              ))}
+            </div>
           </article>
         ))}
       </div>
       {block.disclaimer && (
         <p className="text-xs text-ink-soft/80">{block.disclaimer}</p>
       )}
+    </div>
+  );
+}
+
+function ComparisonTable({
+  block,
+}: {
+  block: Extract<ContentBlock, { kind: "table" }>;
+}) {
+  return (
+    <div className="space-y-10">
+      <div className="max-w-3xl space-y-4">
+        <Eyebrow>{block.eyebrow}</Eyebrow>
+        <Heading>{block.heading}</Heading>
+        <Sub>{block.sub}</Sub>
+      </div>
+      <div className="overflow-x-auto border border-ink/10">
+        <table className="w-full min-w-[600px] text-sm">
+          <thead>
+            <tr className="bg-ink text-ivory">
+              {block.columns.map((c) => (
+                <th
+                  key={c}
+                  className="px-5 py-4 text-left font-label text-[11px] font-bold tracking-[0.16em] uppercase"
+                >
+                  {c}
+                </th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {block.rows.map((row) => (
+              <tr key={row[0]} className="border-t border-ink/10">
+                <th scope="row" className="px-5 py-4 text-left font-semibold">
+                  {row[0]}
+                </th>
+                <td className="px-5 py-4 text-ink-soft">{row[1]}</td>
+                <td className="px-5 py-4 text-ink-soft">{row[2]}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 }
@@ -295,6 +365,7 @@ export default function TreatmentBlocks({ blocks }: { blocks: ContentBlock[] }) 
             {block.kind === "steps" && <Steps block={block} />}
             {block.kind === "doAvoid" && <DoAvoid block={block} />}
             {block.kind === "stories" && <Stories block={block} />}
+            {block.kind === "table" && <ComparisonTable block={block} />}
             {block.kind === "pricing" && <Pricing block={block} />}
             {block.kind === "faq" && <Faq block={block} />}
             {block.kind === "callout" && (

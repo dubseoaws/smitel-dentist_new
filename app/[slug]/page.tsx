@@ -120,8 +120,11 @@ function TreatmentDetail({ slug }: { slug: string }) {
             </div>
           </div>
           <Image
-            src={treatment.image}
-            alt={`${treatment.name} - professional dental treatment in South Kensington`}
+            src={content?.hero?.src ?? treatment.image}
+            alt={
+              content?.hero?.alt ??
+              `${treatment.name} - professional dental treatment in South Kensington`
+            }
             width={720}
             height={560}
             className="rounded-2xl object-cover w-full h-80 lg:h-[460px]"
