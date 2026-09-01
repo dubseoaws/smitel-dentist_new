@@ -18,6 +18,7 @@ export type ContentBlock =
       sub?: string;
       intro?: string;
       items: { title: string; meta?: string; body: string }[];
+      footer?: string;
     }
   | {
       kind: "steps";
@@ -26,6 +27,7 @@ export type ContentBlock =
       sub?: string;
       items: { title: string; meta?: string; body: string }[];
       note?: { title: string; body: string };
+      footer?: string;
     }
   | { kind: "doAvoid"; heading?: string; sub?: string; dos: string[]; avoids: string[] }
   | {
@@ -71,7 +73,7 @@ export type ContentBlock =
 
 export type TreatmentContent = {
   h1: string;
-  kicker: string;
+  kicker?: string;
   intro: string;
   badges?: string[];
   hero?: ContentImage;
@@ -1110,6 +1112,944 @@ export const TREATMENT_CONTENT: Record<string, TreatmentContent> = {
           {
             q: "Do I need a night guard afterwards?",
             a: "We often recommend a custom night guard (occlusal splint) to protect your investment, particularly if you grind or clench your teeth. Bruxism is one of the leading causes of damage to dental restorations. A night guard is a small investment that can significantly extend the life of your new smile.",
+          },
+        ],
+      },
+    ],
+  },
+
+  "tooth-contouring-london": {
+    h1: "Tooth Contouring London",
+    intro:
+      "Tooth contouring is a subtle cosmetic procedure designed to refine small imperfections by gently reshaping the edges and surfaces of your teeth. Suitable for smoothing uneven lengths, minor chips, or slightly irregular shapes, it offers a conservative approach to enhancing your smile — here in London.",
+    badges: [
+      "4.9/5 from Google Reviews",
+      "South Kensington • Next to South Ken Station",
+      "City of London • Ave Maria Lane, EC4",
+    ],
+    hero: {
+      src: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1765805791/tooth-contouring_ex8lq0.jpg",
+      alt: "Tooth contouring treatment at Smile Dentist London",
+    },
+    blocks: [
+      {
+        kind: "cards",
+        eyebrow: "Subtle Refinement",
+        heading: "What Is Tooth Contouring?",
+        intro:
+          "Tooth contouring is a minimally invasive cosmetic procedure that involves reshaping small amounts of enamel to improve the overall shape and symmetry of your teeth. By carefully refining edges and surfaces, it can help create a more balanced and aesthetically pleasing appearance.",
+        items: [
+          {
+            title: "Minimally Invasive",
+            body: "A conservative approach that works within the outer enamel layer, preserving the natural structure of your tooth.",
+          },
+          {
+            title: "Gentle Reshaping",
+            body: "Only small amounts of enamel are adjusted, focusing on subtle improvements to tooth shape and proportion.",
+          },
+          {
+            title: "Improved Symmetry",
+            body: "Used to create a more harmonious smile line by addressing minor variations in tooth length or shape.",
+          },
+        ],
+        footer:
+          "Tooth contouring is one of several cosmetic dentistry treatments we offer at our London practice.",
+      },
+      {
+        kind: "cards",
+        eyebrow: "Suitability",
+        heading: "Who Is Tooth Contouring Suitable For?",
+        intro:
+          "Tooth contouring is designed to address specific minor cosmetic concerns. Whether this treatment is right for you depends on the thickness of your enamel and the results of a clinical assessment.",
+        items: [
+          {
+            title: "Slightly Uneven Tooth Edges",
+            body: "If you notice that the edges of your front teeth appear rough or irregular, contouring may help smooth them into a more uniform shape.",
+          },
+          {
+            title: "Minor Overlaps or Irregular Shapes",
+            body: "Small irregularities in tooth shape or slight overlapping edges can sometimes be refined through careful enamel adjustment.",
+          },
+          {
+            title: "Small Chips or Rough Edges",
+            body: "Minor chips or roughness left by everyday wear can be smoothed to restore a cleaner, more polished appearance.",
+          },
+          {
+            title: "Clinical Assessment Required",
+            body: "Suitability depends on enamel thickness and the condition of your teeth. For concerns beyond minor imperfections, composite bonding may be a more appropriate option.",
+          },
+        ],
+      },
+      {
+        kind: "cards",
+        eyebrow: "Advantages",
+        heading: "Benefits of Tooth Contouring",
+        intro:
+          "Tooth contouring offers a number of advantages for patients seeking subtle aesthetic improvements to their smile.",
+        items: [
+          {
+            title: "Minimally Invasive Approach",
+            body: "The procedure is conservative by nature, working within the enamel layer to make gentle adjustments without the need for more extensive intervention.",
+          },
+          {
+            title: "Subtle Aesthetic Improvements",
+            body: "Rather than dramatic changes, tooth contouring focuses on refining small details that can meaningfully enhance the overall balance of your smile.",
+          },
+          {
+            title: "Conservative Treatment",
+            body: "The reshaping can be completed conservatively, preserving as much of your natural tooth structure as possible while still achieving a noticeable refinement.",
+          },
+          {
+            title: "A More Balanced Smile",
+            body: "By addressing irregularities in tooth shape or edge alignment, contouring helps create a more symmetrical and harmonious appearance.",
+          },
+        ],
+      },
+      {
+        kind: "steps",
+        eyebrow: "Your Visit",
+        heading: "The Tooth Contouring Process",
+        sub: "The procedure follows a careful, step-by-step approach to ensure precise and conservative reshaping.",
+        items: [
+          {
+            title: "Consultation and Smile Assessment",
+            meta: "1",
+            body: "Your dentist will examine your teeth, discuss your concerns, and assess whether tooth contouring is a suitable option for you. This includes evaluating the overall condition of your enamel and your cosmetic goals.",
+          },
+          {
+            title: "Careful Evaluation of Enamel",
+            meta: "2",
+            body: "Before any reshaping takes place, the thickness and health of your enamel is carefully assessed. This step ensures that the treatment can be carried out conservatively and safely.",
+          },
+          {
+            title: "Gentle Reshaping of Tooth Edges",
+            meta: "3",
+            body: "Using precision instruments, your dentist will gently reshape the areas identified during the assessment. Only small amounts of enamel are adjusted to refine the shape and proportion of the teeth.",
+          },
+          {
+            title: "Smoothing and Polishing",
+            meta: "4",
+            body: "Once the reshaping is complete, the treated surfaces are carefully smoothed and polished. This creates a natural finish and ensures the teeth feel comfortable.",
+          },
+        ],
+      },
+      {
+        kind: "cards",
+        eyebrow: "Longevity",
+        heading: "How Long Does Tooth Contouring Last?",
+        items: [
+          {
+            title: "Long-Lasting Results",
+            body: "When performed appropriately, the results of tooth contouring are generally long-lasting. The reshaping itself is permanent, as enamel does not regenerate.",
+          },
+          {
+            title: "Enamel Preservation Matters",
+            body: "The longevity of results depends on how well the enamel is preserved during treatment and how your teeth respond to everyday wear over time.",
+          },
+          {
+            title: "Ongoing Care Is Important",
+            body: "Maintaining good oral hygiene and attending regular dental check-ups will help protect your teeth and support the results of your contouring treatment.",
+          },
+        ],
+      },
+      {
+        kind: "cards",
+        eyebrow: "Cost Guide",
+        heading: "Tooth Contouring Cost London",
+        intro:
+          "The cost of tooth contouring varies depending on individual needs. A personalised treatment plan is provided following your consultation.",
+        items: [
+          {
+            title: "Number of Teeth",
+            body: "The total cost will depend on how many teeth require reshaping, which is determined during your clinical assessment.",
+          },
+          {
+            title: "Complexity of Reshaping",
+            body: "The extent of enamel adjustment required varies from patient to patient, which influences the overall treatment cost.",
+          },
+          {
+            title: "Personalised Planning",
+            body: "Each treatment plan is tailored to your individual needs. A written quote is provided before any treatment begins.",
+          },
+        ],
+        footer: "For a full overview of our treatment fees, please visit our fees page.",
+      },
+      {
+        kind: "cards",
+        eyebrow: "Our Approach",
+        heading: "Why Choose Smile Dentist",
+        items: [
+          {
+            title: "London Practice",
+            body: "Our practice is conveniently located in London, providing accessible care for patients seeking subtle cosmetic dental treatments.",
+          },
+          {
+            title: "Experienced in Cosmetic Treatments",
+            body: "Our team has experience in a range of subtle cosmetic procedures, including tooth contouring, ensuring careful and considered treatment at every stage.",
+          },
+          {
+            title: "Natural-Looking Enhancements",
+            body: "We focus on results that look and feel natural. Our approach prioritises subtle refinements that complement your existing features.",
+          },
+          {
+            title: "Personalised Aesthetic Approach",
+            body: "Every treatment plan is tailored to your individual goals and clinical needs, ensuring a considered and personalised experience.",
+          },
+        ],
+      },
+      {
+        kind: "prose",
+        eyebrow: "Serving London",
+        heading: "Tooth Contouring Near You",
+        paragraphs: [
+          "Patients visit Smile Dentist from across London for subtle cosmetic treatments including tooth contouring. Whether you are searching for tooth contouring near me or exploring enamel reshaping options in the London area, our practice is well placed to help.",
+          "All treatments are provided by General Dental Council (GDC)-registered dentists at our Care Quality Commission (CQC)-registered practice. We welcome patients for a consultation to discuss whether tooth contouring may be suitable for their individual needs.",
+        ],
+      },
+      {
+        kind: "faq",
+        heading: "Frequently Asked Questions",
+        items: [
+          {
+            q: "What is tooth contouring?",
+            a: "Tooth contouring is a minimally invasive cosmetic procedure that involves carefully reshaping small amounts of enamel to improve the appearance of your teeth. It can address minor imperfections such as uneven edges, slight irregularities, or rough surfaces. Suitability depends on individual clinical assessment.",
+          },
+          {
+            q: "Is tooth contouring painful?",
+            a: "Tooth contouring is generally well tolerated by most patients. The procedure works within the outer enamel layer, which typically does not contain nerve endings. However, individual experiences may vary, and your dentist will discuss what to expect during your consultation.",
+          },
+          {
+            q: "How long does tooth contouring last?",
+            a: "The results of tooth contouring are generally long-lasting, as the reshaping involves the permanent structure of the enamel. How long the results remain depends on your oral care habits and the condition of your enamel. Regular dental check-ups help maintain the outcome.",
+          },
+          {
+            q: "Can tooth contouring fix uneven teeth?",
+            a: "Tooth contouring may help improve the appearance of mildly uneven teeth by refining edges and adjusting proportions. However, it is suited to minor imperfections only. For more significant alignment concerns, your dentist may recommend alternative treatments following a clinical assessment.",
+          },
+          {
+            q: "Is tooth contouring suitable for everyone?",
+            a: "Suitability for tooth contouring depends on several factors, including enamel thickness, the extent of reshaping required, and the overall health of your teeth. A thorough clinical assessment is necessary to determine whether this treatment is appropriate for your individual needs.",
+          },
+        ],
+      },
+    ],
+  },
+
+  "white-fillings-london": {
+    h1: "White Fillings London",
+    intro:
+      "White fillings are tooth-coloured restorations used to treat decay and repair damaged teeth. Designed to blend with the natural appearance of your teeth, they offer a discreet alternative to traditional metal fillings — available at our London practice.",
+    badges: [
+      "4.9/5 from Google Reviews",
+      "South Kensington • Next to South Ken Station",
+      "City of London • Ave Maria Lane, EC4",
+      "Standard Price From £185",
+      "Member (50% off) From £92.50",
+    ],
+    hero: {
+      src: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1765805809/composite-fillings_g5zpxk.jpg",
+      alt: "White composite fillings at Smile Dentist London",
+    },
+    blocks: [
+      {
+        kind: "cards",
+        eyebrow: "Understanding the Treatment",
+        heading: "What Are White Fillings?",
+        intro:
+          "White fillings are made from a tooth-coloured composite material used to repair teeth affected by decay or damage. They are designed to blend with your natural teeth, providing both a functional restoration and an aesthetically pleasing result.",
+        items: [
+          {
+            title: "Tooth-Coloured Material",
+            body: "Composite resin is carefully shade-matched to blend with the natural colour of your surrounding teeth for a more discreet restoration.",
+          },
+          {
+            title: "Functional Restoration",
+            body: "White fillings restore the structure and function of a tooth, helping to protect it from further decay or damage.",
+          },
+          {
+            title: "Cosmetic Consideration",
+            body: "In addition to repairing teeth, white fillings can be used as part of a cosmetic approach, offering a natural-looking alternative to metal restorations.",
+          },
+        ],
+      },
+      {
+        kind: "cards",
+        eyebrow: "Common Indications",
+        heading: "When Are White Fillings Needed?",
+        intro:
+          "White fillings may be recommended in a range of clinical situations. Whether a filling is the right option depends on an individual assessment by your dentist.",
+        items: [
+          {
+            title: "Tooth Decay (Cavities)",
+            body: "When decay has created a cavity in a tooth, a white filling can be used to restore the affected area and help prevent further damage. A dental examination can help identify decay early.",
+          },
+          {
+            title: "Minor Cracks or Damage",
+            body: "Small cracks, chips, or areas of wear on a tooth may be repaired using composite material to restore the tooth's shape and function.",
+          },
+          {
+            title: "Replacing Old Metal Fillings",
+            body: "Existing amalgam fillings that are worn, cracked, or no longer functioning well can often be replaced with tooth-coloured composite restorations.",
+          },
+        ],
+        footer:
+          "Suitability for white fillings depends on a clinical assessment of the size, location, and condition of the affected tooth.",
+      },
+      {
+        kind: "cards",
+        eyebrow: "Advantages",
+        heading: "Benefits of White Fillings",
+        intro:
+          "White fillings offer several advantages for patients seeking both functional and aesthetic dental restorations.",
+        items: [
+          {
+            title: "Blend with Natural Teeth",
+            body: "Composite material is shade-matched to your natural tooth colour, allowing the restoration to blend more discreetly than traditional metal alternatives.",
+          },
+          {
+            title: "Preserve Tooth Structure",
+            body: "In many cases, white fillings require less removal of healthy tooth structure compared to some traditional filling methods, helping to preserve more of your natural tooth.",
+          },
+          {
+            title: "Functional Restoration",
+            body: "White fillings restore the shape and function of a tooth, supporting your ability to eat and speak comfortably while protecting against further damage.",
+          },
+          {
+            title: "Aesthetic Support",
+            body: "By using tooth-coloured material, white fillings support both the function and appearance of your teeth, contributing to a more natural-looking smile.",
+          },
+        ],
+      },
+      {
+        kind: "steps",
+        eyebrow: "Your Appointment",
+        heading: "The White Filling Process",
+        sub: "The procedure follows a careful approach to restore the affected tooth. For larger restorations, your dentist may recommend a dental crown as a more suitable alternative.",
+        items: [
+          {
+            title: "Examination and Diagnosis",
+            meta: "1",
+            body: "Your dentist will examine the affected tooth and assess the extent of decay or damage. This may include imaging to determine the most appropriate treatment approach for your individual needs.",
+          },
+          {
+            title: "Removal of Decay or Damaged Tissue",
+            meta: "2",
+            body: "The decayed or damaged portion of the tooth is carefully removed, preserving as much healthy tooth structure as possible. Local anaesthetic is used to help keep you comfortable.",
+          },
+          {
+            title: "Placement of Composite Material",
+            meta: "3",
+            body: "Tooth-coloured composite resin is carefully applied in layers, with each layer shaped to recreate the natural form of the tooth. The material is shade-matched to blend with your surrounding teeth.",
+          },
+          {
+            title: "Shaping and Polishing",
+            meta: "4",
+            body: "Once the composite has been placed, the filling is shaped to ensure a comfortable bite and polished for a smooth, natural finish.",
+          },
+        ],
+      },
+      {
+        kind: "cards",
+        eyebrow: "Longevity",
+        heading: "How Long Do White Fillings Last?",
+        items: [
+          {
+            title: "Individual Variation",
+            body: "The longevity of white fillings varies between individuals. Factors such as the size and location of the filling, and your bite, all play a role in how long a restoration lasts.",
+          },
+          {
+            title: "Oral Hygiene Matters",
+            body: "Maintaining good oral hygiene habits, including regular brushing, flossing, and avoiding excessive pressure on the filled tooth, helps support the lifespan of your restoration.",
+          },
+          {
+            title: "Regular Dental Care",
+            body: "Attending regular dental check-ups allows your dentist to monitor the condition of your fillings and identify any issues early, helping to maintain the results of your treatment.",
+          },
+        ],
+      },
+      {
+        kind: "pricing",
+        eyebrow: "Cost Guide",
+        heading: "White Fillings Cost London",
+        intro:
+          "The cost of white fillings depends on the size, number, and complexity of the restorations required. Members receive 50% off all treatment fees.",
+        columns: ["Treatment", "Standard", "Member"],
+        rows: [
+          { label: "Small Composite Filling", standard: "From £185.00", member: "From £92.50" },
+          { label: "Medium Composite Filling", standard: "From £260.00", member: "From £130.00" },
+          { label: "Large Composite Filling", standard: "From £305.00", member: "From £152.50" },
+        ],
+        notes: [
+          {
+            title: "Membership Plan",
+            body: "Join for £20/month and receive 50% off all treatment fees. Members also receive two check-ups and two hygiene visits per year. A written quote is provided before any treatment begins.",
+          },
+        ],
+        footnote: "For a full overview of our treatment fees, please visit our fees page.",
+      },
+      {
+        kind: "cards",
+        eyebrow: "Our Approach",
+        heading: "Why Choose Smile Dentist",
+        items: [
+          {
+            title: "London Practice",
+            body: "Our practice is conveniently located in London, providing accessible dental care for patients across the city and surrounding areas.",
+          },
+          {
+            title: "Restorative and Cosmetic Experience",
+            body: "Our team has experience in a range of restorative and cosmetic dental treatments, delivering considered care tailored to each patient.",
+          },
+          {
+            title: "Focus on Natural-Looking Results",
+            body: "We take care to shade-match composite materials and shape fillings to achieve results that look and feel as natural as possible.",
+          },
+          {
+            title: "Personalised Treatment Approach",
+            body: "Every treatment plan is developed based on your individual clinical needs and goals, ensuring a considered and supportive experience throughout.",
+          },
+        ],
+      },
+      {
+        kind: "prose",
+        eyebrow: "Serving London",
+        heading: "White Fillings Near You",
+        paragraphs: [
+          "Patients visit Smile Dentist from across London for restorative and cosmetic dental care, including white composite fillings. Whether you are searching for white fillings near me or looking for a practice in London that can help with tooth decay or replacing old metal fillings, we are here to help.",
+          "All treatments are provided by General Dental Council (GDC)-registered dentists at our Care Quality Commission (CQC)-registered practice. We welcome patients for a consultation to discuss whether white fillings may be suitable for their individual needs.",
+        ],
+      },
+      {
+        kind: "faq",
+        heading: "Frequently Asked Questions",
+        items: [
+          {
+            q: "What are white fillings?",
+            a: "White fillings are tooth-coloured restorations made from composite resin. They are used to repair teeth affected by decay, minor damage, or to replace older metal fillings. The material is designed to blend with your natural teeth for a more discreet appearance.",
+          },
+          {
+            q: "Are white fillings better than metal fillings?",
+            a: "White fillings offer a more natural appearance and can preserve more tooth structure in many cases. However, both types have their place in dentistry. Your dentist will discuss which option is most appropriate based on the location and extent of the restoration required.",
+          },
+          {
+            q: "How long do white fillings last?",
+            a: "The longevity of white fillings varies between individuals and depends on factors such as oral hygiene, dietary habits, and the size and location of the filling. Regular dental check-ups help monitor the condition of your fillings and maintain their performance over time.",
+          },
+          {
+            q: "Are white fillings noticeable?",
+            a: "White fillings are designed to blend with your natural tooth colour. While no restoration is entirely undetectable, composite material is carefully shade-matched to achieve a discreet result. The outcome depends on factors such as size, location, and the skill of the clinician.",
+          },
+          {
+            q: "Can old fillings be replaced with white fillings?",
+            a: "In many cases, old amalgam fillings can be replaced with tooth-coloured composite restorations. Suitability depends on the size of the existing filling and the condition of the surrounding tooth structure. Your dentist will assess whether replacement is appropriate during a consultation.",
+          },
+        ],
+      },
+    ],
+  },
+
+  "tooth-extraction-london": {
+    h1: "Tooth Extraction London",
+    intro:
+      "Tooth extraction is the careful removal of a tooth when it can no longer be preserved. Whether required due to damage, decay, or other clinical reasons, the procedure is carried out with the aim of protecting your overall oral health. Our London practice provides a calm and supportive environment throughout.",
+    badges: [
+      "4.9/5 from Google Reviews",
+      "South Kensington • Next to South Ken Station",
+      "City of London • Ave Maria Lane, EC4",
+    ],
+    hero: {
+      src: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1765805791/tooth-contouring_ex8lq0.jpg",
+      alt: "Tooth extraction care at Smile Dentist London",
+    },
+    blocks: [
+      {
+        kind: "cards",
+        eyebrow: "Understanding the Procedure",
+        heading: "What Is Tooth Extraction?",
+        intro:
+          "Tooth extraction is the removal of a tooth that cannot be preserved through other dental treatments. It is performed to protect the health of your surrounding teeth and gums, and is considered when alternative restorative options are no longer suitable.",
+        items: [
+          {
+            title: "Protecting Oral Health",
+            body: "Removing a tooth that cannot be saved helps protect the surrounding teeth and gums from further complications.",
+          },
+          {
+            title: "Patient-Centred Care",
+            body: "The procedure is carried out with careful consideration for your comfort, using local anaesthetic to help keep you at ease.",
+          },
+          {
+            title: "Last Resort Approach",
+            body: "Extraction is generally considered only when other treatment options have been explored and are no longer viable.",
+          },
+        ],
+      },
+      {
+        kind: "cards",
+        eyebrow: "Clinical Reasons",
+        heading: "When Is Tooth Extraction Needed?",
+        intro:
+          "Tooth extraction may be recommended in a number of clinical situations. Whether it is the right course of action depends on an individual assessment by your dentist.",
+        items: [
+          {
+            title: "Severe Tooth Decay",
+            body: "When decay has progressed significantly and the tooth structure can no longer support a restoration, extraction may be the most appropriate option to prevent further complications.",
+          },
+          {
+            title: "Advanced Gum Disease",
+            body: "Periodontal disease that has affected the bone and supporting structures around a tooth may require extraction to protect the health of the remaining teeth.",
+          },
+          {
+            title: "Broken or Damaged Teeth",
+            body: "Teeth that have sustained significant damage, such as fractures extending below the gum line, may not be restorable and may need to be removed.",
+          },
+          {
+            title: "Impacted or Problematic Teeth",
+            body: "Teeth that are unable to emerge properly or are causing issues for neighbouring teeth may need to be removed following a thorough clinical assessment.",
+          },
+        ],
+        footer:
+          "A clinical assessment is required to determine whether extraction is the most appropriate treatment for your individual situation.",
+      },
+      {
+        kind: "cards",
+        eyebrow: "Preserving Your Teeth",
+        heading: "Alternatives to Tooth Extraction",
+        intro:
+          "Where possible, we aim to preserve natural teeth. Extraction is considered as a last resort when other restorative treatments are no longer suitable.",
+        items: [
+          {
+            title: "Root Canal Treatment",
+            body: "If the inner pulp of a tooth is infected but the surrounding structure remains sound, a root canal treatment may be able to preserve the tooth.",
+          },
+          {
+            title: "Dental Crowns",
+            body: "A crown can protect and strengthen a weakened tooth, covering the remaining structure to restore its shape and function.",
+          },
+          {
+            title: "Other Restorative Options",
+            body: "Depending on your situation, other treatments such as fillings or periodontal care may be explored before considering extraction.",
+          },
+        ],
+        footer:
+          "Your dentist will discuss all available options with you before recommending extraction.",
+      },
+      {
+        kind: "steps",
+        eyebrow: "Your Appointment",
+        heading: "The Tooth Extraction Process",
+        sub: "Understanding what to expect can help ease any concerns. The procedure follows a careful, step-by-step approach.",
+        items: [
+          {
+            title: "Examination and Diagnosis",
+            meta: "1",
+            body: "Your dentist will carry out a thorough examination of the affected tooth and surrounding area. This may include imaging to assess the full extent of the issue and determine the most appropriate approach.",
+          },
+          {
+            title: "Local Anaesthetic to Improve Comfort",
+            meta: "2",
+            body: "Local anaesthetic is used to help keep you comfortable throughout the procedure. Your dentist will ensure the area is sufficiently numb before proceeding, and you are welcome to let them know if you need more time or reassurance.",
+          },
+          {
+            title: "Removal of the Tooth",
+            meta: "3",
+            body: "The tooth is carefully loosened and removed. You may feel some pressure during this stage, but you should not experience sharp pain. Your dentist will work gently and at a pace that feels manageable for you.",
+          },
+          {
+            title: "Post-Treatment Care Guidance",
+            meta: "4",
+            body: "After the procedure, your dentist will provide detailed aftercare instructions to support the healing process. This guidance is tailored to your individual treatment.",
+          },
+        ],
+        note: {
+          title: "Support for Anxious Patients",
+          body: "We understand that the prospect of tooth extraction can cause anxiety. Our team takes a calm and supportive approach, explaining each step clearly and working at a pace that suits you. Please let us know about any concerns before or during your appointment.",
+        },
+      },
+      {
+        kind: "cards",
+        eyebrow: "Recovery",
+        heading: "Aftercare and Recovery",
+        intro:
+          "Following your aftercare guidance is important to support the healing process. Recovery varies between individuals and depends on the type of extraction performed.",
+        items: [
+          {
+            title: "Mild Discomfort May Occur",
+            body: "It is normal to experience some mild discomfort or swelling after the procedure. Your dentist will advise you on how best to manage this during your recovery.",
+          },
+          {
+            title: "Recovery Varies",
+            body: "How quickly you recover depends on several factors, including the complexity of the extraction and your individual healing response. Your dentist will provide realistic guidance.",
+          },
+          {
+            title: "Aftercare Is Important",
+            body: "Following the aftercare advice provided by your dentist carefully is important to protect the extraction site and support the healing process.",
+          },
+        ],
+      },
+      {
+        kind: "cards",
+        eyebrow: "Restoration",
+        heading: "Replacing a Missing Tooth After Extraction",
+        intro:
+          "After a tooth has been removed, replacing it is often recommended to help maintain the alignment of your remaining teeth and support your overall oral health.",
+        items: [
+          {
+            title: "Dental Implants",
+            body: "A dental implant is a fixed replacement option that is designed to look and function like a natural tooth. Suitability depends on a clinical assessment.",
+          },
+          {
+            title: "Dental Bridges",
+            body: "A bridge uses the adjacent teeth to support a replacement tooth, offering a fixed solution without the need for surgical placement.",
+          },
+          {
+            title: "Other Restorative Options",
+            body: "Depending on your individual needs and clinical assessment, other replacement options may be discussed. Your dentist will recommend the most appropriate solution.",
+          },
+        ],
+        footer:
+          "Replacing a missing tooth helps prevent neighbouring teeth from shifting and supports long-term oral health.",
+      },
+      {
+        kind: "cards",
+        eyebrow: "Cost Guide",
+        heading: "Tooth Extraction Cost London",
+        intro:
+          "The cost of tooth extraction varies depending on individual clinical needs. A personalised treatment plan is provided following your consultation.",
+        items: [
+          {
+            title: "Complexity of Extraction",
+            body: "The type of extraction required — whether straightforward or more complex — influences the overall cost of your treatment.",
+          },
+          {
+            title: "Type of Tooth",
+            body: "The position and condition of the tooth being removed can affect the approach needed and the associated cost.",
+          },
+          {
+            title: "Personalised Planning",
+            body: "Each treatment plan is tailored to your needs. A written quote is provided before any treatment begins so you can make an informed decision.",
+          },
+        ],
+      },
+      {
+        kind: "pricing",
+        columns: ["Treatment", "Standard", "Member"],
+        rows: [
+          { label: "Simple Extraction", standard: "From £250.00", member: "From £125.00" },
+          { label: "Complicated Extraction", standard: "From £450.00", member: "From £225.00" },
+          { label: "Surgical Extraction", standard: "From £650.00", member: "From £325.00" },
+        ],
+        notes: [
+          {
+            title: "Membership Plan",
+            body: "Join for £20/month and receive 50% off all treatment fees. Members also receive two check-ups and two hygiene visits per year. A written quote is provided before any treatment begins.",
+          },
+        ],
+      },
+      {
+        kind: "cards",
+        eyebrow: "Our Approach",
+        heading: "Why Choose Smile Dentist",
+        items: [
+          {
+            title: "London Practice",
+            body: "Conveniently located in London, our practice provides accessible dental care for patients across the city and surrounding areas.",
+          },
+          {
+            title: "Calm and Supportive Approach",
+            body: "We understand that dental procedures can cause anxiety. Our team takes a calm, patient-centred approach, explaining each step and working at a pace that suits you.",
+          },
+          {
+            title: "Experience in General Dentistry",
+            body: "Our team has experience in a range of general and restorative dental treatments, providing considered care tailored to each patient.",
+          },
+          {
+            title: "Personalised Care",
+            body: "Every treatment plan is developed based on your individual clinical needs and personal circumstances, ensuring a considered and supportive experience.",
+          },
+        ],
+      },
+      {
+        kind: "prose",
+        eyebrow: "Serving London",
+        heading: "Tooth Extraction Near You",
+        paragraphs: [
+          "Patients visit Smile Dentist from across London for general and restorative dental care, including tooth extraction. Whether you are searching for tooth extraction near me or looking for a dental practice in London that can help with a damaged or problematic tooth, we are here to support you.",
+          "All treatments are provided by General Dental Council (GDC)-registered dentists at our Care Quality Commission (CQC)-registered practice. We welcome patients for a consultation to assess your needs and discuss the most appropriate treatment options.",
+        ],
+      },
+      {
+        kind: "faq",
+        heading: "Frequently Asked Questions",
+        items: [
+          {
+            q: "What is tooth extraction?",
+            a: "Tooth extraction is the removal of a tooth that can no longer be preserved through other dental treatments. It is carried out to protect the health of surrounding teeth and gums. The procedure is performed under local anaesthetic, and your dentist will explain the process fully beforehand.",
+          },
+          {
+            q: "Is tooth extraction painful?",
+            a: "Local anaesthetic is used to help keep you comfortable during the procedure. While you may feel some pressure, you should not experience sharp pain. If you feel any discomfort at any point, your dentist can adjust the anaesthesia. Some mild soreness after the procedure is normal.",
+          },
+          {
+            q: "How long does it take to recover?",
+            a: "Recovery varies between individuals and depends on the type of extraction performed. Mild discomfort or swelling may occur in the days following treatment. Following the aftercare guidance provided by your dentist is important to support the healing process.",
+          },
+          {
+            q: "When is extraction necessary?",
+            a: "Extraction may be recommended when a tooth is severely decayed, damaged, or affected by advanced gum disease. It is generally considered when other treatment options are no longer suitable. A clinical assessment is required to determine whether extraction is the most appropriate course of action.",
+          },
+          {
+            q: "What should I do after tooth extraction?",
+            a: "Following your aftercare instructions carefully is important for recovery. This typically includes resting, avoiding vigorous rinsing, and eating soft foods initially. Your dentist will provide detailed guidance specific to your treatment to help support the healing process.",
+          },
+        ],
+      },
+    ],
+  },
+
+  "wisdom-tooth-extraction-london": {
+    h1: "Wisdom Tooth Extraction London",
+    intro:
+      "Wisdom tooth extraction is the careful removal of one or more third molars when they are causing pain, infection, or other problems. Whether your wisdom teeth are impacted or creating discomfort, the procedure is carried out with the aim of relieving symptoms and protecting your oral health — here at our London practice.",
+    badges: [
+      "4.9/5 from Google Reviews",
+      "South Kensington • Next to South Ken Station",
+      "City of London • Ave Maria Lane, EC4",
+    ],
+    hero: {
+      src: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1765805807/tooth-extraction_efzra6.jpg",
+      alt: "Wisdom tooth extraction at Smile Dentist London",
+    },
+    blocks: [
+      {
+        kind: "cards",
+        eyebrow: "Understanding the Procedure",
+        heading: "What Is Wisdom Tooth Extraction?",
+        intro:
+          "Wisdom tooth extraction is the removal of one or more of your third molars — the last teeth to develop, usually at the back of the mouth. It is often required when these teeth are impacted, partially erupted, or causing problems for your surrounding teeth and gums. The procedure helps prevent further complications and supports your overall oral health.",
+        items: [
+          {
+            title: "Preventing Complications",
+            body: "Removing problematic wisdom teeth helps protect the health and alignment of your surrounding teeth and gums.",
+          },
+          {
+            title: "Relieving Discomfort",
+            body: "When wisdom teeth cause pain or infection, removal can help relieve persistent discomfort and support recovery.",
+          },
+          {
+            title: "Clinically Assessed",
+            body: "The decision to extract is always based on a thorough clinical assessment of your individual situation.",
+          },
+        ],
+      },
+      {
+        kind: "cards",
+        eyebrow: "Recognising the Signs",
+        heading: "Signs You May Need Wisdom Tooth Extraction",
+        intro:
+          "A number of symptoms may indicate that your wisdom teeth are causing problems. If you are experiencing any of the following, we would recommend a consultation to assess your situation.",
+        items: [
+          {
+            title: "Pain at the Back of the Mouth",
+            body: "Persistent or recurring pain in the area behind your back teeth may be a sign that a wisdom tooth is causing problems and may need to be assessed.",
+          },
+          {
+            title: "Swelling or Inflammation",
+            body: "Swelling, tenderness, or redness around the gum tissue near a wisdom tooth may indicate inflammation or the early stages of infection.",
+          },
+          {
+            title: "Difficulty Opening the Mouth",
+            body: "Jaw stiffness or reduced ability to open your mouth fully can sometimes be associated with problematic wisdom teeth and should be assessed.",
+          },
+          {
+            title: "Infection or Repeated Discomfort",
+            body: "Recurring episodes of pain, swelling, or infection around a wisdom tooth may suggest that removal is the most appropriate course of action.",
+          },
+        ],
+        footer:
+          "Symptoms vary between individuals and require a clinical diagnosis. If you are experiencing dental discomfort, please contact our team or visit our emergency dentist page for urgent care.",
+      },
+      {
+        kind: "cards",
+        eyebrow: "Key Concern",
+        heading: "Impacted Wisdom Teeth",
+        intro:
+          "Impaction is one of the most common reasons wisdom teeth need to be removed. Understanding what this means can help you feel more informed about your treatment options.",
+        items: [
+          {
+            title: "What Does Impaction Mean?",
+            body: "A wisdom tooth is described as impacted when it is unable to emerge fully through the gum into its correct position. This can happen when there is insufficient space in the jaw or when the tooth is growing at an angle.",
+          },
+          {
+            title: "How Wisdom Teeth May Not Erupt Properly",
+            body: "Impacted wisdom teeth may remain fully beneath the gum, or they may only partially emerge, leaving a flap of gum tissue over the tooth. This partial eruption can make the area difficult to clean and more susceptible to problems.",
+          },
+          {
+            title: "Potential Effects on Surrounding Teeth and Gums",
+            body: "When a wisdom tooth is impacted, it may place pressure on neighbouring teeth, potentially affecting their alignment. It can also contribute to inflammation or infection in the surrounding gum tissue. A clinical assessment is needed to determine whether removal is advisable.",
+          },
+        ],
+      },
+      {
+        kind: "steps",
+        eyebrow: "Your Appointment",
+        heading: "The Wisdom Tooth Extraction Process",
+        sub: "Understanding what to expect can help ease any concerns. The procedure follows a careful, step-by-step approach.",
+        items: [
+          {
+            title: "Consultation and Assessment",
+            meta: "1",
+            body: "Your dentist will carry out a thorough examination of the affected area, discuss your symptoms, and assess whether extraction is the most appropriate option for your individual situation.",
+          },
+          {
+            title: "Imaging if Required",
+            meta: "2",
+            body: "Depending on the position of the tooth, imaging may be used to provide a clearer picture of the area. This helps your dentist plan the most suitable approach for removal.",
+          },
+          {
+            title: "Local Anaesthetic to Improve Comfort",
+            meta: "3",
+            body: "Local anaesthetic is used to help keep you comfortable throughout the procedure. Your dentist will ensure the area is sufficiently numb before proceeding, and you are welcome to let them know if you need more time or reassurance.",
+          },
+          {
+            title: "Removal of the Tooth",
+            meta: "4",
+            body: "The wisdom tooth is carefully loosened and removed. You may feel some pressure during this stage, but you should not experience sharp pain. Your dentist will work gently and at a pace that feels manageable for you.",
+          },
+          {
+            title: "Post-Treatment Care",
+            meta: "5",
+            body: "After the procedure, your dentist will provide detailed aftercare instructions to support the healing process. This guidance is tailored to your individual treatment.",
+          },
+        ],
+        note: {
+          title: "Support for Anxious Patients",
+          body: "We understand that the prospect of wisdom tooth extraction can cause anxiety. Our team takes a calm and supportive approach, explaining each step clearly and working at a pace that suits you. Please let us know about any concerns before or during your appointment.",
+        },
+      },
+      {
+        kind: "cards",
+        eyebrow: "Recovery",
+        heading: "Aftercare and Recovery",
+        intro:
+          "Following your aftercare guidance is important to support the healing process. Recovery varies between individuals and depends on the complexity of the extraction.",
+        items: [
+          {
+            title: "Mild Swelling May Occur",
+            body: "It is normal to experience some mild swelling or discomfort after the procedure. Your dentist will advise you on how best to manage this during your recovery.",
+          },
+          {
+            title: "Recovery Varies",
+            body: "How quickly you recover depends on several factors, including the position of the tooth and the complexity of the extraction. Your dentist will provide realistic guidance.",
+          },
+          {
+            title: "Aftercare Supports Healing",
+            body: "Following the aftercare advice provided by your dentist carefully is important to protect the extraction site and support the healing process.",
+          },
+        ],
+      },
+      {
+        kind: "cards",
+        eyebrow: "Clinical Considerations",
+        heading: "When Is Wisdom Tooth Extraction Necessary?",
+        intro:
+          "The decision to remove a wisdom tooth is always based on a clinical assessment. There are a number of common reasons why extraction may be recommended.",
+        items: [
+          {
+            title: "Persistent Pain",
+            body: "Ongoing or recurring pain in the wisdom tooth area that does not resolve with conservative treatment may indicate that removal is the most appropriate option.",
+          },
+          {
+            title: "Recurrent Infection",
+            body: "Repeated episodes of infection around a wisdom tooth suggest that the tooth is unlikely to settle on its own and may benefit from removal.",
+          },
+          {
+            title: "Impact on Surrounding Teeth",
+            body: "When a wisdom tooth is pressing against neighbouring teeth or contributing to alignment concerns, extraction may help protect the health of your other teeth.",
+          },
+          {
+            title: "Limited Space in the Jaw",
+            body: "When there is insufficient space for a wisdom tooth to emerge fully, it may become impacted. In such cases, removal is often recommended to prevent further complications.",
+          },
+        ],
+        footer:
+          "For more information about general tooth extraction, please visit our dedicated page.",
+      },
+      {
+        kind: "pricing",
+        eyebrow: "Cost Guide",
+        heading: "Wisdom Tooth Extraction Cost London",
+        intro:
+          "The cost of wisdom tooth extraction varies depending on individual clinical needs. A personalised treatment plan is provided following your consultation.",
+        columns: ["Extraction Type", "Standard", "Member"],
+        rows: [
+          { label: "Simple Extraction", standard: "From £250", member: "From £125" },
+          { label: "Complicated Extraction", standard: "From £450", member: "From £225" },
+          { label: "Surgical Extraction", standard: "From £650", member: "From £325" },
+        ],
+        notes: [
+          {
+            title: "Smile Plan Members Save 50%",
+            body: "Our membership plan offers 50% off all treatments, including extractions. Visit our membership page to find out more.",
+          },
+        ],
+        footnote:
+          "The type of extraction required depends on the position and condition of your tooth. A written quote is provided following your consultation. For a full overview, visit our fees page.",
+      },
+      {
+        kind: "cards",
+        eyebrow: "Our Approach",
+        heading: "Why Choose Smile Dentist",
+        items: [
+          {
+            title: "London Practice",
+            body: "Conveniently located in London, our practice provides accessible dental care for patients across the city and surrounding areas.",
+          },
+          {
+            title: "Calm and Supportive Approach",
+            body: "We understand that wisdom tooth extraction can cause anxiety. Our team takes a calm, patient-centred approach, explaining each step and working at a pace that suits you.",
+          },
+          {
+            title: "Experience in General Dentistry",
+            body: "Our team has experience in a range of general and restorative dental treatments, providing considered care tailored to each patient.",
+          },
+          {
+            title: "Personalised Care",
+            body: "Every treatment plan is developed based on your individual clinical needs and personal circumstances, ensuring a considered and supportive experience.",
+          },
+        ],
+      },
+      {
+        kind: "prose",
+        eyebrow: "Serving London",
+        heading: "Wisdom Tooth Extraction Near You",
+        paragraphs: [
+          "Patients visit Smile Dentist from across London for general and restorative dental care, including wisdom tooth extraction. Whether you are searching for wisdom tooth extraction near me or looking for a dental practice in London that can help with impacted or problematic wisdom teeth, we are here to support you.",
+          "All treatments are provided by General Dental Council (GDC)-registered dentists at our Care Quality Commission (CQC)-registered practice. We welcome patients for a consultation to assess your needs and discuss the most appropriate treatment options.",
+        ],
+      },
+      {
+        kind: "faq",
+        heading: "Frequently Asked Questions",
+        items: [
+          {
+            q: "What is wisdom tooth extraction?",
+            a: "Wisdom tooth extraction is the removal of one or more third molars — the teeth at the very back of your mouth. It is commonly carried out when wisdom teeth are impacted, causing pain, or affecting the health of surrounding teeth. A clinical assessment determines whether removal is appropriate.",
+          },
+          {
+            q: "Is wisdom tooth removal painful?",
+            a: "Local anaesthetic is used to help keep you comfortable during the procedure. While you may feel some pressure, you should not experience sharp pain. Some mild discomfort or swelling may occur afterwards, and your dentist will provide guidance on managing this during recovery.",
+          },
+          {
+            q: "How long does recovery take?",
+            a: "Recovery varies between individuals and depends on the complexity of the extraction. Mild discomfort or swelling may occur in the days following treatment. Following the aftercare advice provided by your dentist is important to support the healing process.",
+          },
+          {
+            q: "When should a wisdom tooth be removed?",
+            a: "Removal may be recommended when a wisdom tooth is causing persistent pain, recurrent infection, or is affecting neighbouring teeth. The decision is always based on a thorough clinical assessment of your individual situation, including the position and condition of the tooth.",
+          },
+          {
+            q: "What should I do after wisdom tooth extraction?",
+            a: "Following your aftercare instructions carefully is important for recovery. This typically includes resting, avoiding vigorous rinsing, and eating soft foods initially. Your dentist will provide detailed guidance specific to your treatment to help support the healing process.",
           },
         ],
       },

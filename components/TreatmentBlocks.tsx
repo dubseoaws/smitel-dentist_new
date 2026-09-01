@@ -56,6 +56,9 @@ function Cards({ block }: { block: Extract<ContentBlock, { kind: "cards" }> }) {
           </div>
         ))}
       </div>
+      {block.footer && (
+        <p className="max-w-3xl text-ink-soft leading-relaxed">{block.footer}</p>
+      )}
     </div>
   );
 }
@@ -84,6 +87,9 @@ function Steps({ block }: { block: Extract<ContentBlock, { kind: "steps" }> }) {
           <span className="font-semibold text-ink">{block.note.title}: </span>
           {block.note.body}
         </p>
+      )}
+      {block.footer && (
+        <p className="max-w-3xl text-ink-soft leading-relaxed">{block.footer}</p>
       )}
     </div>
   );
