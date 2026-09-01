@@ -6,7 +6,48 @@ import MembershipBanner from "@/components/MembershipBanner";
 import CaseStudies from "@/components/CaseStudies";
 import TeamGrid from "@/components/TeamGrid";
 import VideoSection from "@/components/VideoSection";
+import TreatmentBlocks from "@/components/TreatmentBlocks";
 import { ALL_TREATMENTS, IMAGES, FEE_SECTIONS } from "@/lib/site-data";
+import type { ContentBlock } from "@/lib/treatment-content";
+
+// Answers are verbatim copy already published elsewhere on the site.
+const HOME_FAQ: ContentBlock[] = [
+  {
+    kind: "faq",
+    eyebrow: "Common Questions",
+    heading: "Frequently Asked Questions",
+    items: [
+      {
+        q: "How much is membership and what does it save me?",
+        a: "Most private dentists in London have hidden costs. We have a simple membership. £20 a month gets you half-price treatment. No distinct tiers, no confusion. Just value.",
+      },
+      {
+        q: "What does the membership include?",
+        a: "50% off includes Check Ups, Cosmetic Dentistry (inc. whitening), Restorative Dentistry (fillings, crowns, bridges and dentures) and Invisible braces. 12-month contract. Terms apply.",
+      },
+      {
+        q: "Which treatments are not covered by the membership discount?",
+        a: "Dental implants, bone grafting and full-mouth rehabilitation are not included in the membership discount; full terms are on our membership page.",
+      },
+      {
+        q: "Do you offer finance?",
+        a: "Spread the cost of your treatment. We offer 0% finance options for treatment plans over £1,000 (subject to status).",
+      },
+      {
+        q: "Where are your clinics?",
+        a: "With clinics in South Kensington and the City of London, we are never far away. South Kensington: 20 Old Brompton Road, London, SW7 3DL — a 3-min walk from South Kensington Station. City of London: 5 Ave Maria Lane, London, EC4M 7AQ — a 3-min walk from St Paul's Station.",
+      },
+      {
+        q: "I am nervous about visiting the dentist. Can you help?",
+        a: "Anxious? We offer a judgment-free zone. From our relaxing lounge environment to our gentle approach and calming techniques, we ensure your visit is stress-free.",
+      },
+      {
+        q: "Are your dentists registered and regulated?",
+        a: "Our team are fully registered and regulated for practice in the United Kingdom. Our patients should expect nothing less.",
+      },
+    ],
+  },
+];
 
 const FEATURED_SLUGS = [
   "smile-makeover-london",
@@ -325,6 +366,8 @@ export default function HomePage() {
       </section>
 
       <CaseStudies />
+
+      <TreatmentBlocks blocks={HOME_FAQ} />
 
       {/* Compliance */}
       <section className="pb-20">
