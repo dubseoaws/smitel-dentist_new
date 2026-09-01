@@ -615,4 +615,247 @@ export const TREATMENT_CONTENT: Record<string, TreatmentContent> = {
       },
     ],
   },
+
+  "porcelain-veneers-london": {
+    h1: "Porcelain Veneers London",
+    kicker: "Understanding the Treatment",
+    intro:
+      "Porcelain veneers are custom-made ceramic shells designed to enhance the appearance of your smile. At our London practice, we create personalised veneers that aim to improve tooth shape, colour, and symmetry for a natural-looking result.",
+    badges: [
+      "4.9/5 from Google Reviews",
+      "South Kensington • Next to South Ken Station",
+      "City of London • Ave Maria Lane, EC4",
+    ],
+    hero: {
+      src: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1765871030/Full-Smile-Transformation-with-20-Porcelain-Veneers-after_gnkzev.jpg",
+      alt: "Porcelain veneers at Smile Dentist London",
+    },
+    blocks: [
+      {
+        kind: "cards",
+        eyebrow: "Understanding the Treatment",
+        heading: "What Are Porcelain Veneers?",
+        intro:
+          "Porcelain veneers are thin, custom-made shells that are placed over the front surface of teeth. They are designed to improve the shape, colour, and overall symmetry of your smile, and are one of the most widely used treatments in cosmetic dentistry.",
+        items: [
+          {
+            title: "Custom-Made",
+            body: "Each veneer is individually crafted to fit your teeth, taking into account the desired shape, shade, and proportion for a result that complements your natural appearance.",
+          },
+          {
+            title: "Aesthetic Enhancement",
+            body: "Veneers can address a range of cosmetic concerns, including discolouration, uneven tooth shape, and minor imperfections, to help improve the appearance of your smile.",
+          },
+          {
+            title: "Porcelain Material",
+            body: "Porcelain is chosen for its ability to replicate the translucency and appearance of natural tooth enamel. Once placed, veneers are designed to blend seamlessly with your surrounding teeth.",
+          },
+        ],
+      },
+      {
+        kind: "steps",
+        eyebrow: "Is This Treatment for You?",
+        heading: "Who Are Porcelain Veneers Suitable For?",
+        sub: "Porcelain veneers may be suitable for patients looking to improve the appearance of their teeth. Common concerns that veneers can help address include:",
+        items: [
+          {
+            title: "Discoloured Teeth",
+            body: "Teeth with deep or intrinsic staining that may not respond to whitening treatments can often be improved with veneers.",
+          },
+          {
+            title: "Worn or Uneven Teeth",
+            body: "Veneers can help restore the shape and symmetry of teeth that have become worn, chipped, or uneven over time.",
+          },
+          {
+            title: "Small Gaps",
+            body: "Closing gaps between teeth is one of the cosmetic improvements that can be achieved with veneers, depending on the size and position of the spaces.",
+          },
+          {
+            title: "Minor Alignment Concerns",
+            body: "For patients with minor irregularities, veneers can improve the overall appearance. They may also form part of a broader smile makeover plan.",
+          },
+        ],
+        note: {
+          title: "Important",
+          body: "Suitability for porcelain veneers depends on a clinical assessment of your teeth and gums. Your dentist will discuss all suitable options during your consultation.",
+        },
+      },
+      {
+        kind: "cards",
+        eyebrow: "Why Consider Veneers",
+        heading: "Benefits of Porcelain Veneers",
+        intro:
+          "Porcelain veneers offer a number of potential benefits as a cosmetic treatment option. The outcome will depend on your individual clinical situation.",
+        items: [
+          {
+            title: "Aesthetic Improvement",
+            body: "Veneers can enhance the overall appearance of your smile by improving tooth shape, colour, and symmetry. Results are tailored to your individual goals and facial characteristics.",
+          },
+          {
+            title: "Natural-Looking Results",
+            body: "Porcelain is designed to replicate the translucency and characteristics of natural tooth enamel, helping veneers blend with your surrounding teeth for a natural appearance.",
+          },
+          {
+            title: "Customised to Each Patient",
+            body: "Every veneer is individually designed to suit your teeth, taking into account the shape, shade, and proportions that complement your smile and facial features.",
+          },
+          {
+            title: "Long-Term Cosmetic Option",
+            body: "With appropriate care and regular dental visits, porcelain veneers are designed to be a durable cosmetic option. Longevity varies between individuals and depends on ongoing care.",
+          },
+        ],
+      },
+      {
+        kind: "steps",
+        eyebrow: "What to Expect",
+        heading: "The Porcelain Veneers Process",
+        sub: "The porcelain veneers process follows a structured approach, with each stage carefully planned to achieve a result that suits you.",
+        items: [
+          {
+            title: "Consultation & Smile Assessment",
+            body: "Your dentist will assess your teeth, discuss your goals, and determine whether veneers are a suitable option for you.",
+          },
+          {
+            title: "Treatment Planning",
+            body: "A personalised treatment plan is developed, including shade selection and discussion of the expected approach and number of veneers.",
+          },
+          {
+            title: "Preparation of Teeth",
+            body: "Where required, a small amount of the tooth surface may be prepared to allow the veneer to sit naturally. This stage is carried out under local anaesthetic.",
+          },
+          {
+            title: "Placement of Veneers",
+            body: "Once your custom veneers are ready, they are carefully checked for fit, colour, and shape before being bonded to the front of your teeth.",
+          },
+          {
+            title: "Final Adjustments",
+            body: "Any fine adjustments are made to ensure comfort and a natural bite. Your dentist will provide guidance on caring for your veneers going forward.",
+          },
+        ],
+      },
+      {
+        kind: "cards",
+        eyebrow: "Longevity",
+        heading: "How Long Do Porcelain Veneers Last?",
+        intro:
+          "The lifespan of porcelain veneers varies between individuals and is influenced by a number of factors. With appropriate care, veneers are designed to be a long-lasting cosmetic option.",
+        items: [
+          {
+            title: "Individual Variation",
+            body: "How long veneers last depends on each patient's individual circumstances. Factors such as oral health, bite, and lifestyle all play a role in the longevity of the restoration.",
+          },
+          {
+            title: "Care and Oral Habits",
+            body: "Good oral hygiene, a balanced diet, and avoiding excessive force on the teeth can all help support the lifespan of porcelain veneers.",
+          },
+          {
+            title: "Regular Maintenance",
+            body: "Attending regular dental appointments allows your dentist to monitor the condition of your veneers and address any concerns early.",
+          },
+        ],
+      },
+      {
+        kind: "callout",
+        label: "Please note",
+        body: "Longevity varies between individuals and cannot be guaranteed. Your dentist will discuss expected outcomes during your consultation.",
+      },
+      {
+        kind: "cards",
+        eyebrow: "Pricing",
+        heading: "Porcelain Veneers Cost London",
+        intro:
+          "The cost of porcelain veneers varies depending on the number of veneers required, the complexity of the case, and the personalised treatment plan developed for you. Full costs are provided before treatment begins.",
+        sub: "What Affects the Cost?",
+        items: [
+          {
+            title: "Number of Veneers",
+            body: "Whether you require a single veneer or multiple veneers will influence the overall cost of treatment.",
+          },
+          {
+            title: "Complexity of the Case",
+            body: "The extent of preparation needed and any additional cosmetic considerations can affect the treatment plan and costs.",
+          },
+          {
+            title: "Personalised Treatment Plan",
+            body: "A written treatment plan with itemised costs is provided following your consultation, giving you full clarity before any treatment begins.",
+          },
+          {
+            title: "Membership Benefits",
+            body: "Our membership plan offers reduced treatment fees for patients who wish to benefit from ongoing savings across all treatments.",
+          },
+        ],
+      },
+      {
+        kind: "pricing",
+        columns: ["Treatment", "Standard", "Member"],
+        rows: [
+          {
+            label: "Porcelain Veneer (per tooth)",
+            standard: "From £1,095",
+            member: "From £547.50",
+          },
+          {
+            label: "Composite Veneer (per tooth)",
+            standard: "From £595",
+            member: "From £297.50",
+          },
+        ],
+        footnote:
+          "Final costs depend on the number of veneers and complexity. A written treatment plan with full costs is provided before treatment begins.",
+        notes: [
+          {
+            title: "View Our Full Fee Guide",
+            body: "A transparent breakdown of treatment fees is available on our pricing page.",
+          },
+        ],
+      },
+      {
+        kind: "prose",
+        eyebrow: "Our Approach",
+        heading: "Why Choose Smile Dentist",
+        sub: "Dr. Yasha Y Shirazi — GDC: 195843",
+        paragraphs: [
+          "London practice with experience in cosmetic dentistry",
+          "Focus on natural-looking, personalised results",
+          "Personalised smile design approach for every patient",
+          "GDC-registered dentists at a CQC-registered practice",
+        ],
+      },
+      {
+        kind: "prose",
+        eyebrow: "Serving London",
+        heading: "Porcelain Veneers Near You",
+        paragraphs: [
+          "Our London practice welcomes patients from across the city and surrounding areas who are considering porcelain veneers. Whether you are searching for dental veneers near you or exploring cosmetic options, we are here to help.",
+          "Conveniently located in London with excellent transport links",
+        ],
+      },
+      {
+        kind: "faq",
+        heading: "Frequently Asked Questions",
+        items: [
+          {
+            q: "What are porcelain veneers?",
+            a: "Porcelain veneers are thin, custom-made shells designed to fit over the front surface of teeth. They are used in cosmetic dentistry to improve the appearance of teeth by addressing concerns such as discolouration, uneven shape, or small gaps.",
+          },
+          {
+            q: "Are porcelain veneers painful?",
+            a: "Local anaesthetic is used during the preparation stage to ensure comfort. Some patients may experience mild sensitivity afterwards, which typically settles within a short period. Your dentist will discuss what to expect at each stage of treatment.",
+          },
+          {
+            q: "How long do veneers last?",
+            a: "The longevity of porcelain veneers varies between individuals and depends on factors such as oral hygiene, dietary habits, and general care. Regular dental visits and good home care can help support the lifespan of your veneers.",
+          },
+          {
+            q: "Can veneers fix gaps between teeth?",
+            a: "Porcelain veneers can be used to reduce the appearance of small gaps between teeth. During your consultation, your dentist will assess your teeth and discuss whether veneers are a suitable option for your specific concern.",
+          },
+          {
+            q: "Are veneers suitable for everyone?",
+            a: "Suitability for porcelain veneers depends on a number of factors, including the health of your teeth and gums. A thorough clinical assessment is needed to determine whether veneers are the most appropriate option for you.",
+          },
+        ],
+      },
+    ],
+  },
 };
