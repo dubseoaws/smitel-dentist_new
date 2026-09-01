@@ -5185,4 +5185,996 @@ export const TREATMENT_CONTENT: Record<string, TreatmentContent> = {
       smileGallery(),
     ],
   },
+
+  "dental-examination-london": {
+    h1: "Dental Examination London",
+    intro:
+      "A dental examination is a routine assessment of your teeth, gums, and overall oral health. Regular check-ups play an important role in preventative dental care, helping to monitor your oral health over time and identify potential concerns at an early stage. At our London practice, every examination is carried out by a GDC-registered dentist.",
+    badges: [
+      "4.9/5 from Google Reviews",
+      "South Kensington • Next to South Ken Station",
+      "City of London • Ave Maria Lane, EC4",
+      "Standard Examination From £95",
+      "Member (50% off) From £47.50",
+      "New Patient Examination £30",
+      "Membership £20/month",
+    ],
+    blocks: [
+      {
+        kind: "list",
+        heading: "What to Expect",
+        items: [
+          "Assessment of teeth, gums, and soft tissues",
+          "Discussion of your oral health and any concerns",
+          "Checking for signs of decay or gum issues",
+          "Personalised recommendations based on findings",
+          "Written treatment plan if any issues are identified",
+        ],
+      },
+      {
+        kind: "steps",
+        eyebrow: "Understanding Dental Examinations",
+        heading: "What Is a Dental Examination?",
+        sub: "A dental examination is a routine assessment of your teeth, gums, and the soft tissues of your mouth. It is carried out by a dentist and is designed to provide an overall picture of your current oral health. During the examination, your dentist will look for any signs of potential concerns — such as early decay, gum inflammation, or changes in the soft tissues — and discuss their findings with you. Where issues are identified, a written treatment plan with costs may be provided so you can make an informed decision about any recommended care. Regular dental examinations play an important role in helping to maintain long-term oral health by allowing your dentist to monitor changes over time and provide guidance on how to care for your teeth and gums at home.",
+        items: [
+          {
+            title: "Routine Assessment",
+            meta: "1",
+            body: "A thorough check of your teeth, gums, and oral tissues, carried out by a GDC-registered dentist at each visit.",
+          },
+          {
+            title: "Early Identification",
+            meta: "2",
+            body: "Helps identify potential concerns at an early stage, when they may be simpler to manage or address.",
+          },
+          {
+            title: "Long-Term Monitoring",
+            meta: "3",
+            body: "Regular visits allow your dentist to track changes in your oral health over time and adjust recommendations accordingly.",
+          },
+        ],
+      },
+      {
+        kind: "cards",
+        eyebrow: "Preventative Care",
+        heading: "Why Regular Dental Check-Ups Are Important",
+        intro:
+          "Attending regular dental check-ups is one of the most effective ways to support your long-term oral health. These visits give your dentist the opportunity to monitor your teeth and gums over time and to discuss any changes that may benefit from attention.",
+        items: [
+          {
+            title: "Monitoring Over Time",
+            body: "Regular visits allow your dentist to observe how your oral health is changing, making it easier to spot trends or developing concerns before they progress.",
+          },
+          {
+            title: "Identifying Early Signs",
+            body: "Some dental conditions can develop without obvious symptoms. Routine examinations may help identify potential issues at an earlier stage, when they can often be addressed more simply.",
+          },
+          {
+            title: "Preventative Approach",
+            body: "A dental examination is an opportunity to discuss your oral hygiene routine and receive guidance on how to care for your teeth and gums between visits.",
+          },
+        ],
+        footer:
+          "Your dentist may also recommend a visit to the dental hygienist for a professional clean, which can complement your examination and support your oral health routine.",
+      },
+      {
+        kind: "steps",
+        eyebrow: "The Examination Process",
+        heading: "What Happens During a Dental Examination",
+        sub: "A dental examination is a structured assessment carried out by your dentist to evaluate the health of your teeth, gums, and surrounding tissues.",
+        items: [
+          {
+            title: "Discussion of Your Concerns",
+            meta: "1",
+            body: "Your dentist will begin by asking about your general health, any concerns you may have, and your dental history. This helps to tailor the examination to your individual needs.",
+          },
+          {
+            title: "Visual Assessment of Teeth",
+            meta: "2",
+            body: "Your dentist will visually examine each tooth, looking for signs of decay, wear, cracks, or any changes to existing restorations such as fillings or crowns.",
+          },
+          {
+            title: "Checking Gums and Soft Tissues",
+            meta: "3",
+            body: "The health of your gums is assessed, including checking for signs of inflammation or gum disease. The soft tissues of your mouth — including your tongue, cheeks, and palate — are also examined.",
+          },
+          {
+            title: "Discussion of Findings",
+            meta: "4",
+            body: "Your dentist will discuss their findings with you, explain any areas of concern, and answer any questions you may have. If further investigation or treatment is recommended, this will be outlined clearly.",
+          },
+          {
+            title: "Personalised Recommendations",
+            meta: "5",
+            body: "Based on the assessment, your dentist will provide personalised advice on oral hygiene, suggest any recommended treatments, and advise on when your next check-up should be scheduled.",
+          },
+        ],
+      },
+      {
+        kind: "cards",
+        eyebrow: "Frequency of Visits",
+        heading: "How Often Should You Have a Dental Check-Up?",
+        intro:
+          "The recommended frequency of dental check-ups varies between individuals. There is no single interval that is right for everyone — the most appropriate schedule depends on your current oral health, any existing conditions, and your individual risk factors.",
+        items: [
+          {
+            title: "Individual Assessment",
+            body: "Your dentist will recommend a recall interval based on your specific oral health needs, taking into account factors such as gum health, decay risk, and general health.",
+          },
+          {
+            title: "Adjusted Over Time",
+            body: "The recommended interval may change over time as your oral health evolves. Your dentist will review and adjust their recommendation at each visit.",
+          },
+          {
+            title: "Personalised Guidance",
+            body: "Rather than applying a fixed schedule, your dentist will provide a personalised recommendation that reflects your current needs and oral health status.",
+          },
+        ],
+        footer:
+          "The appropriate interval between dental check-ups depends on individual clinical factors. Your dentist will advise on how often you should attend based on your oral health assessment.",
+      },
+      {
+        kind: "cards",
+        eyebrow: "Supporting Your Oral Health",
+        heading: "Benefits of Regular Dental Examinations",
+        intro:
+          "Attending regular dental examinations is an important part of looking after your oral health. While no examination can guarantee the detection of every condition, routine visits provide a number of benefits.",
+        items: [
+          {
+            title: "Supports Oral Health",
+            body: "Regular check-ups help you stay informed about the current condition of your teeth and gums, supporting your overall oral health.",
+          },
+          {
+            title: "Early Identification",
+            body: "Some dental concerns can develop without obvious symptoms. Routine examinations may help identify potential issues at an earlier stage.",
+          },
+          {
+            title: "Professional Guidance",
+            body: "Your dentist can provide tailored advice on brushing, flossing, and diet — helping you to care for your teeth and gums more effectively at home.",
+          },
+          {
+            title: "Informed Decisions",
+            body: "Understanding the current state of your oral health allows you to make informed decisions about any recommended care or treatment.",
+          },
+        ],
+        footer:
+          "The benefits of regular dental examinations depend on individual clinical circumstances. No examination can guarantee the detection of all conditions. Your dentist will discuss any findings and recommendations with you.",
+      },
+      {
+        kind: "pricing",
+        eyebrow: "Examination Fees",
+        heading: "Dental Examination Cost London",
+        intro:
+          "The cost of a dental examination may vary depending on the type of assessment carried out and whether any additional checks — such as X-rays — are clinically required. A new patient examination is available at a reduced introductory fee.",
+        columns: ["Service", "Standard", "Member"],
+        rows: [
+          { label: "Comprehensive Examination", standard: "From £95", member: "From £47.50" },
+          { label: "New Patient Examination", standard: "£30", member: "" },
+          { label: "Small X-Ray (each)", standard: "From £20", member: "From £10" },
+        ],
+        notes: [
+          {
+            title: "Personalised recommendations",
+            body: "Your dentist will advise on any additional assessments or follow-up care based on your individual needs.",
+          },
+          {
+            title: "No obligation",
+            body: "If treatment is recommended, a written plan with costs is provided. There is no obligation to proceed on the day.",
+          },
+          {
+            title: "Membership Plan",
+            body: "Our membership plan (£20/month) includes examinations and offers a reduction on treatment fees.",
+          },
+        ],
+        footnote:
+          "X-rays are taken only when clinically indicated and charged separately. Final costs depend on individual assessment.",
+      },
+      {
+        kind: "cards",
+        eyebrow: "Our Approach",
+        heading: "Why Choose Smile Dentist for Your Dental Examination",
+        intro:
+          "At Smile Dentist, we take a calm, patient-focused approach to dental examinations. Every assessment is carried out by a GDC-registered dentist, and our team is committed to making your visit as comfortable and informative as possible.",
+        items: [
+          {
+            title: "London Location",
+            body: "Our practice is conveniently located in London, accessible for patients across the city and surrounding areas.",
+          },
+          {
+            title: "Focus on Preventative Care",
+            body: "We believe in a preventative approach to dentistry, with regular examinations forming the foundation of good oral health management.",
+          },
+          {
+            title: "Calm and Patient-Focused",
+            body: "We understand that visiting the dentist can feel daunting. Our team takes a calm, gentle approach and will go at your pace throughout the appointment.",
+          },
+          {
+            title: "Personalised Assessments",
+            body: "Every examination is tailored to your individual needs. We listen to your concerns, assess your oral health, and provide recommendations specific to your situation.",
+          },
+        ],
+      },
+      {
+        kind: "prose",
+        eyebrow: "Serving Patients Across London",
+        heading: "Dental Check-Ups Near You",
+        paragraphs: [
+          "We welcome patients from across London and the surrounding areas who are looking for a thorough and professional dental check-up. Whether you are searching for a dentist check-up near you or are registering with a new practice, our team is here to help.",
+          "Our practice is well connected by public transport and offers a calm, welcoming environment for patients of all ages. All examinations are carried out by GDC-registered dentists at our CQC-registered practice.",
+        ],
+      },
+      {
+        kind: "faq",
+        eyebrow: "Common Questions",
+        heading: "Frequently Asked Questions",
+        items: [
+          {
+            q: "What happens during a dental examination?",
+            a: "A dental examination involves a visual assessment of your teeth, gums, and soft tissues. Your dentist will check for signs of decay, gum disease, and other concerns. Findings are discussed with you, and a written treatment plan may be provided if any issues are identified.",
+          },
+          {
+            q: "Is a dental check-up painful?",
+            a: "A routine dental check-up is generally comfortable. It involves a visual and gentle physical assessment of your teeth and gums. If any tenderness is experienced, let your dentist know and they will adjust their approach. Most patients find the process straightforward.",
+          },
+          {
+            q: "How long does a dental exam take?",
+            a: "The length of a dental examination depends on individual needs and what is being assessed. A routine check-up typically takes around 20 to 30 minutes, though this may vary. Your dentist will ensure adequate time is allocated for a thorough assessment.",
+          },
+          {
+            q: "How often should I visit the dentist?",
+            a: "The recommended frequency of dental visits varies between individuals. Your dentist will advise on an appropriate interval based on your oral health needs. Some patients may benefit from more frequent visits, while others may be seen less often.",
+          },
+          {
+            q: "Do I need a check-up if I have no symptoms?",
+            a: "Yes, regular check-ups are recommended even if you have no symptoms. Some dental conditions can develop without obvious signs, and a routine examination allows your dentist to monitor your oral health and identify any concerns at an early stage.",
+          },
+        ],
+      },
+      smileGallery(),
+    ],
+  },
+
+  "tmj-treatment-london": {
+    h1: "TMJ Treatment London",
+    intro:
+      "Assessment and conservative management of temporomandibular joint (TMJ) symptoms — including jaw discomfort, clicking, and bruxism-related muscle tension — delivered at our London practice as part of a personalised care plan.",
+    badges: [
+      "4.9/5 from Google Reviews",
+      "South Kensington • Next to South Ken Station",
+      "City of London • Ave Maria Lane, EC4",
+      "Consultation From £95",
+      "Splint Therapy From £595",
+      "Personalised treatment plan with full costs provided before treatment",
+    ],
+    hero: {
+      src: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1777304430/tmj_hff8cu.jpg",
+      alt: "TMJ assessment and treatment at Smile Dentist London",
+    },
+    blocks: [
+      {
+        kind: "cards",
+        eyebrow: "Understanding the Condition",
+        heading: "What Is TMJ Disorder?",
+        intro:
+          "The temporomandibular joint (TMJ) is the hinge joint that connects the lower jaw to the skull, just in front of each ear. Temporomandibular disorder (TMD) is a collective term for a range of conditions affecting this joint and the surrounding muscles. TMD can cause jaw discomfort, clicking or popping sounds, stiffness, and other related symptoms. For a detailed overview of symptoms and causes, see our TMD / TMJ pain condition page.",
+        items: [
+          {
+            title: "Jaw Joint & Muscles",
+            body: "TMD typically involves the joint itself, the surrounding muscles used for chewing, and the nerves supplying this region. Symptoms may come from any of these structures.",
+          },
+          {
+            title: "Multifactorial",
+            body: "Symptoms are often linked to a combination of factors — including bruxism, stress, bite imbalances, and previous injury — rather than a single cause.",
+          },
+          {
+            title: "Usually Manageable",
+            body: "For many patients, TMD symptoms can often be reduced or managed through conservative measures. Your dentist will discuss realistic, evidence-informed options.",
+          },
+        ],
+      },
+      {
+        kind: "callout",
+        label: "Important",
+        body: "This page is general information only and is not medical advice. Similar symptoms can arise from other conditions. If you are experiencing severe pain, sudden inability to open or close your mouth, or associated symptoms such as facial swelling, please seek prompt professional advice.",
+      },
+      {
+        kind: "cards",
+        eyebrow: "Recognising the Signs",
+        heading: "Common TMJ Symptoms",
+        intro:
+          "TMD presents differently from person to person. You do not need to have every symptom below for a clinical assessment to be worthwhile.",
+        items: [
+          {
+            title: "Jaw Pain or Tenderness",
+            body: "Aching or tenderness in the jaw joint, the muscles around the jaw, or in the temples, particularly on waking or during chewing.",
+          },
+          {
+            title: "Clicking or Popping",
+            body: "Audible clicks or pops from the jaw joint during opening, closing, or chewing — see also our page on jaw clicking and popping.",
+          },
+          {
+            title: "Restricted Jaw Movement",
+            body: "A feeling that the jaw does not open as fully as usual, or a sense of stiffness in the morning or after periods of stress.",
+          },
+          {
+            title: "Headaches or Earache",
+            body: "Some patients experience tension-type headaches, temple pain, or earache that may be associated with TMJ-related muscle tension.",
+          },
+          {
+            title: "Tooth Wear or Sensitivity",
+            body: "Worn, flattened, or sensitive teeth can suggest night-time grinding or clenching (bruxism), which can contribute to TMJ symptoms.",
+          },
+          {
+            title: "Facial Muscle Fatigue",
+            body: "A feeling of tiredness or aching in the muscles of the face and jaw, especially later in the day or after stress.",
+          },
+        ],
+      },
+      {
+        kind: "callout",
+        label: "Note",
+        body: "These symptoms are not exclusive to TMD and can arise from other dental or medical conditions. Professional assessment is important before assuming a cause or starting treatment.",
+      },
+      {
+        kind: "cards",
+        eyebrow: "Why TMD Develops",
+        heading: "Possible Causes & Contributing Factors",
+        intro:
+          "TMD is typically multifactorial. Identifying the likely contributing factors helps guide a more tailored management plan.",
+        items: [
+          {
+            title: "Teeth Grinding & Clenching (Bruxism)",
+            body: "Grinding or clenching — often during sleep — can place sustained load on the jaw muscles and joint, and is commonly associated with TMD symptoms.",
+          },
+          {
+            title: "Stress & Muscle Tension",
+            body: "Emotional or physical stress may increase activity in the jaw muscles, contributing to fatigue, tenderness, and headache-type symptoms.",
+          },
+          {
+            title: "Bite Imbalances",
+            body: "Changes in how the teeth meet — from tooth loss, wear, or previous dental work — may sometimes contribute to altered joint loading and muscle strain.",
+          },
+          {
+            title: "Injury or Joint Conditions",
+            body: "Previous trauma to the jaw or underlying joint conditions such as arthritis can affect how the joint moves and may contribute to symptoms.",
+          },
+        ],
+      },
+      {
+        kind: "cards",
+        eyebrow: "Our Management Approach",
+        heading: "How We Approach TMJ Treatment",
+        intro:
+          "We focus on conservative, evidence-informed management. The aim is to help reduce symptoms and support day-to-day comfort, not to promise a cure.",
+        items: [
+          {
+            title: "Comprehensive Assessment",
+            body: "Your dentist will take a detailed history, examine your jaw, muscles, bite, and teeth, and may take photographs or imaging where clinically indicated. This helps identify likely contributing factors.",
+          },
+          {
+            title: "Custom Occlusal Splint (Night Guard)",
+            body: "Where clinically appropriate, a custom-made splint worn at night may help protect teeth from grinding forces and may reduce muscle tension for some patients. Suitability depends on assessment.",
+          },
+          {
+            title: "Self-Care & Lifestyle Guidance",
+            body: "Advice may cover jaw relaxation techniques, diet modification during flare-ups, posture, and stress-management strategies. These measures can play an important role in symptom control.",
+          },
+          {
+            title: "Addressing Dental Contributing Factors",
+            body: "If dental factors such as tooth wear or missing teeth appear to be contributing, your dentist will discuss any relevant restorative options and their potential role within your overall plan.",
+          },
+          {
+            title: "Onward Referral Where Needed",
+            body: "For symptoms that are severe, long-standing, or not responding to conservative care, your dentist may recommend onward referral — for example to your GP, a physiotherapist with a jaw interest, or specialist services.",
+          },
+        ],
+      },
+      {
+        kind: "callout",
+        label: "Please note",
+        body: "Response to TMD treatment varies between individuals, and no specific outcome can be guaranteed. Your dentist will discuss realistic expectations based on your assessment.",
+      },
+      {
+        kind: "steps",
+        eyebrow: "Your Pathway",
+        heading: "What to Expect",
+        sub: "A typical pathway involves several stages, each designed to build a clear picture of your symptoms and inform a personalised plan.",
+        items: [
+          {
+            title: "Initial Assessment",
+            meta: "Step 1",
+            body: "Detailed history and clinical examination, including the jaw joint, muscles, bite, and teeth.",
+          },
+          {
+            title: "Discussion & Plan",
+            meta: "Step 2",
+            body: "Your dentist will explain findings, possible contributing factors, and discuss suitable options in plain language.",
+          },
+          {
+            title: "Management Phase",
+            meta: "Step 3",
+            body: "May include a custom splint, self-care guidance, dental factors, and review of progress over time.",
+          },
+          {
+            title: "Review & Refine",
+            meta: "Step 4",
+            body: "Follow-up appointments help monitor response, adjust the plan, or consider onward referral if needed.",
+          },
+        ],
+      },
+      {
+        kind: "pricing",
+        eyebrow: "Pricing",
+        heading: "TMJ Treatment Cost London",
+        intro:
+          "The cost of TMJ-related care depends on the assessment findings and the management approach agreed with your dentist. A personalised written treatment plan is provided before any treatment begins.",
+        columns: ["Service", "Standard", "Member"],
+        rows: [
+          {
+            label: "Dental Examination / TMJ Assessment",
+            standard: "From £95",
+            member: "Included with membership",
+          },
+          {
+            label: "Custom Occlusal Splint (Night Guard)",
+            standard: "From £595",
+            member: "From £297.50",
+          },
+          { label: "Follow-Up Review", standard: "From £95", member: "Reduced with membership" },
+        ],
+        notes: [
+          {
+            title: "View Our Full Fee Guide",
+            body: "A transparent breakdown of our treatment fees is available on our pricing page.",
+          },
+        ],
+        footnote:
+          "Additional restorative or dental treatment, where indicated, is costed separately and confirmed in writing before treatment begins.",
+      },
+      {
+        kind: "list",
+        eyebrow: "Our Approach",
+        heading: "Why Choose Smile Dentist",
+        sub: "Dr. Yasha Y Shirazi — GDC: 195843",
+        items: [
+          "Careful, structured assessment of jaw and bite-related symptoms",
+          "Conservative, evidence-informed management approach",
+          "Custom-made occlusal splints where clinically appropriate",
+          "Onward referral to GP or specialist services when needed",
+          "GDC-registered dentists at a CQC-registered practice",
+        ],
+      },
+      {
+        kind: "prose",
+        eyebrow: "Visit Our London Practice",
+        heading: "TMJ Assessment in South Kensington",
+        paragraphs: [
+          "Our South Kensington practice welcomes patients from across London and surrounding areas who are seeking assessment and management of TMJ-related symptoms. Our aim is to provide clear, balanced information and a personalised plan based on your clinical assessment.",
+          "20 Old Brompton Road, South Kensington, London SW7 3DL",
+        ],
+      },
+      {
+        kind: "faq",
+        heading: "Frequently Asked Questions",
+        items: [
+          {
+            q: "What is TMJ treatment?",
+            a: "TMJ treatment refers to the management of symptoms relating to the temporomandibular joint (TMJ) and surrounding jaw muscles — a group of conditions known collectively as temporomandibular disorder (TMD). Treatment aims to help reduce symptoms such as jaw discomfort, muscle tension, and clicking, rather than to cure an underlying medical condition. A clinical assessment is carried out to understand your individual situation before any treatment is recommended.",
+          },
+          {
+            q: "What are the common symptoms of TMJ disorder?",
+            a: "Common symptoms can include jaw pain or tenderness, clicking or popping sounds when opening or closing the mouth, stiffness, limited jaw movement, facial muscle ache, and in some cases headaches or earache. Symptoms vary between individuals, and similar symptoms can sometimes be caused by other conditions, which is why professional assessment is important.",
+          },
+          {
+            q: "What causes TMJ problems?",
+            a: "Several factors may contribute to TMJ symptoms, including teeth grinding or clenching (bruxism), stress-related muscle tension, jaw injury, bite imbalances, and joint-related conditions such as arthritis. In many cases more than one factor is involved, and the relative contribution varies between patients.",
+          },
+          {
+            q: "Can TMJ problems be cured?",
+            a: "TMD is a long-term condition that cannot always be cured in the traditional sense. However, for many patients, symptoms can often be managed or reduced through a combination of conservative measures, such as splint therapy, self-care advice, and addressing contributing factors. Your dentist will discuss realistic expectations based on your individual assessment.",
+          },
+          {
+            q: "Will I need a night guard or splint?",
+            a: "A custom-made occlusal splint (night guard) is one of the most commonly used management options where clinically appropriate, particularly when teeth grinding or clenching appears to be contributing to symptoms. It is not suitable or necessary in every case. Your dentist will advise whether a splint may be helpful for you.",
+          },
+          {
+            q: "Does TMJ treatment involve surgery?",
+            a: "At our practice, management focuses on conservative, non-surgical approaches such as assessment, splint therapy, bite-related guidance, and referral where appropriate. Surgical intervention for TMD is uncommon and is typically considered only in specific cases by specialist services when conservative options have not provided adequate relief.",
+          },
+          {
+            q: "How long does TMJ treatment take to help?",
+            a: "Response to treatment varies between individuals and depends on the nature and duration of the symptoms, contributing factors, and the approach agreed with your dentist. Some people may notice changes within a few weeks, while others may need a longer period of management and review. Your dentist will discuss expected timelines and follow-up care.",
+          },
+          {
+            q: "Can my GP or physiotherapist also help?",
+            a: "Yes. TMD can benefit from a joined-up approach. Where appropriate, your dentist may recommend discussing symptoms with your GP, or seeking input from a physiotherapist with an interest in jaw disorders. If symptoms are severe, unusual, or fail to respond to initial management, onward referral to specialist services may be suggested.",
+          },
+        ],
+      },
+    ],
+  },
+
+  "hygiene-london": {
+    h1: "Dental Hygiene London",
+    kicker: "First-Time Patient: £49 Introductory Offer",
+    intro:
+      "Professional teeth cleaning is an important part of maintaining good oral health. A hygiene appointment helps to remove plaque and tartar build-up, supports gum health, and contributes to fresher breath. At our London practice, all hygiene treatments are carried out by registered dental professionals.",
+    badges: [
+      "4.9/5 from Google Reviews",
+      "South Kensington • Next to South Ken Station",
+      "City of London • Ave Maria Lane, EC4",
+      "First-Time Patient £49",
+      "Hygiene Appointment From £89",
+      "Member (50% off) From £44.50",
+      "Membership £20/month",
+    ],
+    hero: {
+      src: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1765805807/dental-hygiene_nmtblc.jpg",
+      alt: "Professional dental hygiene appointment at Smile Dentist London",
+    },
+    blocks: [
+      {
+        kind: "steps",
+        eyebrow: "Understanding Dental Hygiene",
+        heading: "What Is Dental Hygiene?",
+        sub: "Dental hygiene refers to the professional cleaning and care of your teeth and gums, carried out by a qualified dental hygienist. The primary aim is to remove plaque and tartar — hardened deposits that build up on teeth over time and cannot be fully removed by brushing and flossing alone. A hygiene appointment also provides an opportunity for your hygienist to assess the health of your gums, identify any areas that may need additional attention, and offer tailored advice on how to maintain your oral hygiene routine at home. Regular professional cleaning supports overall oral health and helps to keep your teeth and gums in good condition.",
+        items: [
+          {
+            title: "Professional Cleaning",
+            meta: "1",
+            body: "Thorough removal of plaque and tartar from all tooth surfaces, including areas that are difficult to reach with a toothbrush.",
+          },
+          {
+            title: "Plaque and Tartar Removal",
+            meta: "2",
+            body: "Tartar is hardened plaque that forms on teeth over time. Once it has formed, it can only be removed by a dental professional using specialist instruments.",
+          },
+          {
+            title: "Supports Oral Health",
+            meta: "3",
+            body: "Regular hygiene appointments help to support the long-term health of your teeth and gums, complementing your daily oral care routine.",
+          },
+        ],
+      },
+      {
+        kind: "cards",
+        eyebrow: "Preventative Care",
+        heading: "Why Regular Hygiene Appointments Are Important",
+        intro:
+          "Even with a thorough home care routine, plaque and tartar can gradually accumulate in areas that are difficult to clean. Regular hygiene appointments help to manage this build-up and support the ongoing health of your teeth and gums.",
+        items: [
+          {
+            title: "Preventing Build-Up",
+            body: "Professional cleaning removes plaque and tartar deposits before they have the chance to contribute to more significant oral health concerns.",
+          },
+          {
+            title: "Supporting Gum Health",
+            body: "Tartar build-up along and below the gum line can contribute to gum inflammation. Regular cleaning helps to support healthier gums over time.",
+          },
+          {
+            title: "Long-Term Maintenance",
+            body: "Consistent hygiene appointments form part of a long-term approach to oral health, helping you maintain the condition of your teeth and gums over the years.",
+          },
+        ],
+        footer:
+          "If signs of gum inflammation are identified during your appointment, your hygienist may recommend further assessment. You can learn more about how we support patients with gum disease on our dedicated page.",
+      },
+      {
+        kind: "steps",
+        eyebrow: "Your Appointment",
+        heading: "What Happens During a Hygiene Appointment",
+        sub: "A hygiene appointment typically involves several steps, each designed to support the cleanliness and health of your teeth and gums.",
+        items: [
+          {
+            title: "Assessment of Teeth and Gums",
+            meta: "1",
+            body: "Your hygienist will begin by assessing the current condition of your teeth and gums, checking for any signs of plaque build-up, tartar, or gum inflammation. This helps to tailor the appointment to your individual needs.",
+          },
+          {
+            title: "Removal of Plaque and Tartar",
+            meta: "2",
+            body: "Using specialist instruments, your hygienist will carefully remove plaque and tartar deposits from all tooth surfaces, including areas above and below the gum line that are difficult to reach with a toothbrush.",
+          },
+          {
+            title: "Polishing of Teeth",
+            meta: "3",
+            body: "After the cleaning, your teeth are polished to remove surface staining and leave them feeling smooth and clean. Polishing also makes it more difficult for plaque to adhere to tooth surfaces in the short term.",
+          },
+          {
+            title: "Oral Hygiene Advice",
+            meta: "4",
+            body: "Your hygienist will provide personalised guidance on how to care for your teeth and gums at home, including brushing technique, interdental cleaning, and any areas that may benefit from additional attention. We also recommend attending a routine dental examination alongside your hygiene appointments.",
+          },
+        ],
+      },
+      {
+        kind: "cards",
+        eyebrow: "Frequency of Visits",
+        heading: "How Often Should You See a Hygienist?",
+        intro:
+          "The recommended frequency of hygiene appointments varies between individuals. There is no single schedule that suits everyone — the most appropriate interval depends on your current oral health, gum condition, and individual risk factors.",
+        items: [
+          {
+            title: "Varies Between Individuals",
+            body: "Some patients benefit from more frequent visits, while others may need appointments less often. Your hygienist will recommend an interval based on your needs.",
+          },
+          {
+            title: "Based on Oral Health Needs",
+            body: "Factors such as gum health, the rate of tartar build-up, and your home care routine all influence how frequently professional cleaning is recommended.",
+          },
+          {
+            title: "Personalised Recommendation",
+            body: "Your hygienist will provide a personalised recommendation at each visit, adjusting the recall interval as your oral health evolves over time.",
+          },
+        ],
+        footer:
+          "The appropriate interval between hygiene appointments depends on individual clinical factors. Your hygienist or dentist will advise on how often you should attend based on your oral health assessment.",
+      },
+      {
+        kind: "cards",
+        eyebrow: "Supporting Your Oral Health",
+        heading: "Benefits of Dental Hygiene",
+        intro:
+          "Regular dental hygiene appointments offer a number of benefits that contribute to the ongoing health and comfort of your teeth and gums. While outcomes depend on individual circumstances, professional cleaning can play a valuable role in your overall oral care.",
+        items: [
+          {
+            title: "Supports Gum Health",
+            body: "Removing plaque and tartar from along the gum line helps to reduce the factors that can contribute to gum inflammation and discomfort.",
+          },
+          {
+            title: "Helps Maintain Clean Teeth",
+            body: "Professional cleaning reaches areas that are difficult to access with a toothbrush, helping to keep your teeth cleaner between appointments.",
+          },
+          {
+            title: "Contributes to Fresh Breath",
+            body: "Bacteria in plaque and tartar can contribute to bad breath. Removing these deposits can help to improve the freshness of your breath.",
+          },
+          {
+            title: "Encourages Preventative Care",
+            body: "Regular hygiene visits reinforce the importance of preventative care and provide an opportunity to receive professional guidance on your home routine.",
+          },
+        ],
+        footer:
+          "The benefits of dental hygiene treatment depend on individual oral health and circumstances. Your hygienist will discuss what you can expect based on your specific needs.",
+      },
+      {
+        kind: "pricing",
+        eyebrow: "Treatment Fees",
+        heading: "Dental Hygiene Cost London",
+        intro:
+          "The cost of a dental hygiene appointment may vary depending on the type and extent of cleaning required. If additional care — such as more intensive cleaning or follow-up appointments — is recommended, this will be discussed with you beforehand.",
+        columns: ["Treatment", "Standard", "Member"],
+        rows: [
+          { label: "Hygiene Appointment", standard: "From £89", member: "From £44.50" },
+          { label: "Hygiene with Airflow", standard: "From £142", member: "From £71" },
+          { label: "Periodontal Treatment", standard: "From £880", member: "From £440" },
+        ],
+        notes: [
+          {
+            title: "Personalised planning",
+            body: "Your hygienist will explain the recommended treatment and associated costs based on your individual needs.",
+          },
+          {
+            title: "No surprises",
+            body: "Where applicable, a written treatment plan with costs is provided before treatment begins.",
+          },
+          {
+            title: "Membership Plan",
+            body: "Our membership plan (£20/month) includes hygiene appointments and offers a reduction on treatment fees.",
+          },
+        ],
+        footnote:
+          "Final costs depend on individual treatment needs. All fees are confirmed before treatment begins.",
+      },
+      {
+        kind: "cards",
+        eyebrow: "Our Approach",
+        heading: "Why Choose Smile Dentist for Dental Hygiene",
+        intro:
+          "At Smile Dentist, we believe that preventative care is the foundation of good oral health. Our hygiene team is committed to providing thorough, patient-focused care in a calm and comfortable environment.",
+        items: [
+          {
+            title: "London Location",
+            body: "Our practice is conveniently located in London, accessible for patients across the city and surrounding areas.",
+          },
+          {
+            title: "Focus on Preventative Dentistry",
+            body: "We take a preventative approach, with regular hygiene appointments forming a key part of how we help patients maintain their oral health over time.",
+          },
+          {
+            title: "Calm and Patient-Focused",
+            body: "We understand that dental visits can feel daunting. Our hygienists take a gentle, reassuring approach and are experienced in working with nervous patients.",
+          },
+          {
+            title: "Personalised Hygiene Advice",
+            body: "Every patient receives tailored guidance on how to care for their teeth and gums at home, including brushing technique, interdental cleaning, and product recommendations.",
+          },
+        ],
+      },
+      {
+        kind: "prose",
+        eyebrow: "Serving Patients Across London",
+        heading: "Dental Hygiene Near You",
+        paragraphs: [
+          "We welcome patients from across London and the surrounding areas who are looking for a professional and thorough hygiene appointment. Whether you are searching for dental hygiene near you or are looking for a new hygienist, our team is here to help.",
+          "Our practice is well connected by public transport and offers a calm, welcoming environment. All hygiene treatments are carried out by GDC-registered dental hygienists at our CQC-registered practice.",
+        ],
+      },
+      {
+        kind: "faq",
+        eyebrow: "Common Questions",
+        heading: "Frequently Asked Questions",
+        items: [
+          {
+            q: "What does a dental hygienist do?",
+            a: "A dental hygienist carries out professional cleaning of your teeth and gums, removing plaque and tartar that cannot be removed by brushing alone. They also provide personalised advice on how to care for your teeth and gums at home. Suitability for specific treatments depends on individual assessment.",
+          },
+          {
+            q: "Is teeth cleaning painful?",
+            a: "Most patients find professional teeth cleaning comfortable. Some sensitivity may be experienced, particularly if there is significant tartar build-up or gum inflammation. If you have any concerns, your hygienist can adjust their approach to help keep you comfortable throughout.",
+          },
+          {
+            q: "How long does a hygiene appointment take?",
+            a: "The length of a hygiene appointment depends on individual needs and the amount of cleaning required. A typical appointment may last around 30 to 45 minutes, though this can vary. Your hygienist will ensure adequate time is allocated for a thorough clean.",
+          },
+          {
+            q: "How often should I have my teeth cleaned?",
+            a: "The recommended frequency of hygiene appointments varies between individuals. Your hygienist or dentist will advise on an appropriate interval based on your oral health needs. Some patients may benefit from more frequent visits, while others may be seen less often.",
+          },
+          {
+            q: "Does dental hygiene help with gum disease?",
+            a: "Professional cleaning plays an important role in managing gum health by removing plaque and tartar that contribute to gum inflammation. Regular hygiene appointments, combined with good home care, can support the management of gum disease. Individual outcomes depend on clinical circumstances.",
+          },
+        ],
+      },
+      smileGallery(),
+    ],
+  },
+
+  "periodontal-london": {
+    h1: "Periodontal Treatment London",
+    intro:
+      "Periodontal treatment focuses on managing gum disease and supporting long-term gum health. At our London practice, we provide thorough assessment and personalised care to help protect your teeth and the structures that support them.",
+    badges: [
+      "4.9/5 from Google Reviews",
+      "South Kensington • Next to South Ken Station",
+      "City of London • Ave Maria Lane, EC4",
+      "Personalised treatment plan with costs provided",
+    ],
+    hero: {
+      src: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1765805739/periodontal-treatment_xigiko.jpg",
+      alt: "Periodontal treatment at Smile Dentist London",
+    },
+    blocks: [
+      {
+        kind: "callout",
+        label: "Gum Health Assessment",
+        body: "A comprehensive assessment of your gum health is the first step. Your dentist will evaluate the condition of your gums, discuss any concerns, and outline suitable treatment options.",
+      },
+      {
+        kind: "cards",
+        eyebrow: "Understanding Gum Disease",
+        heading: "What Is Periodontal Disease?",
+        intro:
+          "Periodontal disease is an infection that affects the gums and the structures that support the teeth. It begins with inflammation of the gums — a stage known as gingivitis — and, if not addressed, can progress to periodontitis, where the infection extends below the gum line.",
+        items: [
+          {
+            title: "Gingivitis",
+            body: "The early stage of gum disease, characterised by inflammation of the gums. At this stage, the condition is often manageable with professional care and improved oral hygiene.",
+          },
+          {
+            title: "Periodontitis",
+            body: "A more advanced stage where infection spreads below the gum line and can begin to affect the bone and structures that support the teeth. Treatment aims to stabilise the condition.",
+          },
+          {
+            title: "Impact on Oral Health",
+            body: "Without appropriate care, periodontal disease may lead to increased tooth mobility, changes in bite, and potential tooth loss. Early assessment can help manage the condition more effectively.",
+          },
+        ],
+      },
+      {
+        kind: "steps",
+        eyebrow: "Recognising the Signs",
+        heading: "Signs of Gum Disease",
+        sub: "Gum disease can develop gradually and is not always accompanied by pain. Being aware of the common signs can help you seek assessment at an early stage.",
+        items: [
+          {
+            title: "Bleeding Gums",
+            meta: "1",
+            body: "Gums that bleed during brushing or flossing may indicate gum inflammation. This is one of the most common early signs of gum disease.",
+          },
+          {
+            title: "Red or Swollen Gums",
+            meta: "2",
+            body: "Healthy gums are typically firm and pale pink. Gums that appear red, swollen, or tender may be showing signs of inflammation.",
+          },
+          {
+            title: "Persistent Bad Breath",
+            meta: "3",
+            body: "Ongoing bad breath that does not improve with regular brushing may be related to bacteria accumulating below the gum line.",
+          },
+          {
+            title: "Gum Recession",
+            meta: "4",
+            body: "Teeth that appear longer than before may indicate the gum tissue is receding, exposing more of the tooth surface.",
+          },
+        ],
+        note: {
+          title: "Important",
+          body: "Symptoms can vary between individuals and a clinical assessment is needed for diagnosis. Regular visits to a dental hygienist can help identify early signs of gum disease.",
+        },
+      },
+      {
+        kind: "cards",
+        eyebrow: "Protecting Your Oral Health",
+        heading: "Why Periodontal Treatment Is Important",
+        intro:
+          "Addressing gum disease at any stage can help protect your teeth and the structures that support them. Periodontal treatment plays an important role in managing the condition and supporting long-term oral health.",
+        items: [
+          {
+            title: "Managing Progression",
+            body: "Treatment aims to help manage gum disease and reduce the risk of further progression, supporting the stability of the teeth and surrounding structures.",
+          },
+          {
+            title: "Protecting Your Teeth",
+            body: "By addressing infection and inflammation, periodontal treatment helps protect the teeth and the bone that holds them in place, supporting long-term dental health.",
+          },
+          {
+            title: "Long-Term Oral Health",
+            body: "Ongoing periodontal care, combined with regular dental examinations, supports the long-term health of your gums and teeth.",
+          },
+        ],
+      },
+      {
+        kind: "steps",
+        eyebrow: "Treatment Approaches",
+        heading: "Types of Periodontal Treatment",
+        sub: "The type of treatment recommended will depend on the stage and severity of your gum disease. Your dentist will explain the most suitable approach following a thorough assessment.",
+        items: [
+          {
+            title: "Professional Cleaning",
+            meta: "1",
+            body: "Scaling and root planing involves the careful removal of bacteria and deposits from the tooth surfaces and below the gum line. This deep cleaning of teeth and gums is a key part of periodontal care.",
+          },
+          {
+            title: "Ongoing Maintenance",
+            meta: "2",
+            body: "Following initial treatment, regular maintenance appointments help monitor gum health and ensure the condition remains stable. The frequency of visits is tailored to each patient.",
+          },
+          {
+            title: "Personalised Care",
+            meta: "3",
+            body: "Every patient's gum health is different. Your treatment plan is developed around your individual needs, taking into account the severity of the condition and your overall oral health.",
+          },
+        ],
+      },
+      {
+        kind: "steps",
+        eyebrow: "What to Expect",
+        heading: "The Periodontal Treatment Process",
+        sub: "Periodontal treatment follows a structured approach, beginning with a thorough assessment and progressing through treatment and ongoing care.",
+        items: [
+          {
+            title: "Assessment of Gum Health",
+            meta: "Step 1",
+            body: "Your dentist will carry out a detailed assessment of your gum health, measuring pocket depths and evaluating the condition of the supporting structures.",
+          },
+          {
+            title: "Treatment Planning",
+            meta: "Step 2",
+            body: "Based on the findings, a personalised treatment plan is developed outlining the recommended approach and expected number of appointments.",
+          },
+          {
+            title: "Deep Cleaning",
+            meta: "Step 3",
+            body: "Professional cleaning of the teeth and gums, including scaling and root planing below the gum line, to remove bacteria and deposits.",
+          },
+          {
+            title: "Follow-Up & Maintenance",
+            meta: "Step 4",
+            body: "Review appointments are arranged to assess healing and monitor progress. Ongoing maintenance visits may be recommended to help keep the condition stable.",
+          },
+        ],
+      },
+      {
+        kind: "cards",
+        eyebrow: "After Treatment",
+        heading: "Recovery and Maintenance",
+        intro:
+          "Understanding what to expect after periodontal treatment can help you support your recovery and maintain the health of your gums in the longer term.",
+        items: [
+          {
+            title: "Mild Sensitivity",
+            body: "Some patients may experience mild sensitivity or tenderness after treatment. This is a normal response and typically settles within a few days.",
+          },
+          {
+            title: "Ongoing Care",
+            body: "Maintaining good oral hygiene at home is an important part of supporting your gum health after treatment. Your dentist will provide guidance tailored to your needs.",
+          },
+          {
+            title: "Regular Hygiene Visits",
+            body: "Regular professional cleaning appointments may be recommended following treatment. The frequency of visits will depend on your individual gum health and response to treatment.",
+          },
+        ],
+      },
+      {
+        kind: "cards",
+        eyebrow: "Pricing",
+        heading: "Periodontal Treatment Cost London",
+        intro:
+          "The cost of periodontal treatment varies depending on the severity of the condition, the type of treatment required, and the number of appointments needed. A personalised treatment plan with full costs is provided following your assessment.",
+        sub: "What Affects the Cost?",
+        items: [
+          {
+            title: "Severity of Gum Disease",
+            body: "The extent and severity of the condition will influence the type and duration of treatment needed, which affects the overall cost.",
+          },
+          {
+            title: "Number of Visits",
+            body: "A course of periodontal treatment may involve multiple appointments. The number of visits required depends on your individual treatment plan.",
+          },
+          {
+            title: "Personalised Planning",
+            body: "A written treatment plan with itemised costs is provided after your assessment, so you have full clarity before treatment begins.",
+          },
+          {
+            title: "Membership Benefits",
+            body: "Our membership plan offers reduced treatment fees for patients who wish to benefit from ongoing savings across all treatments.",
+          },
+          {
+            title: "View Our Full Fee Guide",
+            body: "A transparent breakdown of treatment fees is available on our pricing page.",
+          },
+        ],
+      },
+      {
+        kind: "list",
+        eyebrow: "Our Approach",
+        heading: "Why Choose Smile Dentist",
+        sub: "Dr. Yasha Y Shirazi — GDC: 195843",
+        items: [
+          "London practice with a focus on gum health and preventative care",
+          "Supportive and personalised approach to periodontal treatment",
+          "Ongoing maintenance guidance to support long-term gum health",
+          "GDC-registered dentists at a CQC-registered practice",
+        ],
+      },
+      {
+        kind: "prose",
+        eyebrow: "Serving London",
+        heading: "Periodontal Treatment Near You",
+        paragraphs: [
+          "Our London practice welcomes patients from across the city and surrounding areas who are seeking support for gum health concerns. Whether you are looking for gum disease treatment near you or exploring periodontal care options, we are here to help.",
+          "Conveniently located in London with excellent transport links",
+        ],
+      },
+      {
+        kind: "faq",
+        heading: "Frequently Asked Questions",
+        items: [
+          {
+            q: "What is periodontal treatment?",
+            a: "Periodontal treatment focuses on managing infection and inflammation of the gums and the structures that support the teeth. It typically involves professional cleaning below the gum line, assessment of gum health, and ongoing maintenance to help stabilise the condition.",
+          },
+          {
+            q: "Can gum disease be reversed?",
+            a: "Gingivitis, the early stage of gum disease, can often be resolved with professional cleaning and improved oral hygiene. Periodontitis, the more advanced stage, cannot be fully reversed but can be managed and stabilised with appropriate treatment and ongoing care.",
+          },
+          {
+            q: "Is periodontal treatment painful?",
+            a: "Local anaesthetic is used to ensure comfort during treatment. Some patients may experience mild sensitivity or tenderness afterwards, which typically resolves within a few days. Your dentist will discuss what to expect at each stage.",
+          },
+          {
+            q: "How long does treatment take?",
+            a: "The length of treatment depends on the severity and extent of gum disease. A course of treatment may involve multiple appointments over several weeks. Your dentist will provide a personalised treatment plan outlining the expected timeline.",
+          },
+          {
+            q: "What happens if gum disease is left untreated?",
+            a: "Without treatment, gum disease may progress and affect the supporting structures of the teeth. Over time, this can lead to increased tooth mobility and potential tooth loss. Early assessment and treatment can help manage the condition more effectively.",
+          },
+        ],
+      },
+      smileGallery(),
+    ],
+  },
 };
