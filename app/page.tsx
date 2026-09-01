@@ -18,14 +18,14 @@ const FEATURED_SLUGS = [
 ];
 
 const MARQUEE_ITEMS = [
-  "Smile Makeover",
-  "Porcelain Veneers",
-  "Composite Bonding",
-  "Teeth Whitening",
-  "Pro-aligners",
-  "Dental Implants",
-  "Gum Contouring",
-  "Dental Hygiene",
+  { label: "Smile Makeover", slug: "smile-makeover-london" },
+  { label: "Porcelain Veneers", slug: "porcelain-veneers-london" },
+  { label: "Composite Bonding", slug: "composite-bonding-london" },
+  { label: "Teeth Whitening", slug: "teeth-whitening-london" },
+  { label: "Pro-aligners", slug: "pro-aligners-london" },
+  { label: "Dental Implants", slug: "dental-implants-london" },
+  { label: "Gum Contouring", slug: "gum-contouring-london" },
+  { label: "Dental Hygiene", slug: "hygiene-london" },
 ];
 
 const WHY_CARDS = [
@@ -59,17 +59,26 @@ export default function HomePage() {
       <Hero />
 
       {/* Marquee */}
-      <div className="bg-ink text-ivory py-4 overflow-hidden" aria-hidden>
+      <div className="marquee bg-ink text-ivory py-4 overflow-hidden">
         <div className="marquee-track">
           {[0, 1].map((copy) => (
             <div key={copy} className="flex shrink-0 items-center">
               {MARQUEE_ITEMS.map((item) => (
                 <span
-                  key={`${copy}-${item}`}
+                  key={`${copy}-${item.slug}`}
                   className="flex items-center gap-6 px-6 font-label text-xs tracking-[0.24em] uppercase whitespace-nowrap"
                 >
-                  {item}
-                  <span className="text-gold text-base">◆</span>
+                  <Link
+                    href={`/${item.slug}`}
+                    tabIndex={copy === 0 ? undefined : -1}
+                    aria-hidden={copy === 1}
+                    className="hover:text-gold-bright transition-colors"
+                  >
+                    {item.label}
+                  </Link>
+                  <span className="text-gold text-base" aria-hidden>
+                    ◆
+                  </span>
                 </span>
               ))}
             </div>

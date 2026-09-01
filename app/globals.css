@@ -241,6 +241,11 @@ h3 {
   width: max-content;
   animation: marquee 36s linear infinite;
 }
+/* Pause so the treatment links can be clicked */
+.marquee:hover .marquee-track,
+.marquee:focus-within .marquee-track {
+  animation-play-state: paused;
+}
 
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(24px); }
