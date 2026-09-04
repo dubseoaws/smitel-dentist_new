@@ -3,9 +3,13 @@ import TeamGrid from "@/components/TeamGrid";
 
 export default function MeetExperts({
   limit = 3,
+  columns = 3,
+  shape = "card",
   tone = "ivory",
 }: {
   limit?: number;
+  columns?: 3 | 4;
+  shape?: "card" | "circle";
   tone?: "ivory" | "cream";
 }) {
   return (
@@ -28,7 +32,7 @@ export default function MeetExperts({
             View all staff →
           </Link>
         </div>
-        <TeamGrid limit={limit} />
+        <TeamGrid limit={limit} columns={columns} shape={shape} />
       </div>
     </section>
   );

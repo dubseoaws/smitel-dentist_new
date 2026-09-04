@@ -2,12 +2,18 @@ import Image from "next/image";
 import Link from "next/link";
 import Hero from "@/components/Hero";
 import TreatmentCard from "@/components/TreatmentCard";
-import MembershipBanner from "@/components/MembershipBanner";
-import CaseStudies from "@/components/CaseStudies";
-import TeamGrid from "@/components/TeamGrid";
 import VideoSection from "@/components/VideoSection";
 import TreatmentBlocks from "@/components/TreatmentBlocks";
-import { ALL_TREATMENTS, IMAGES, FEE_SECTIONS } from "@/lib/site-data";
+import TeamGrid from "@/components/TeamGrid";
+import SmileGallery from "@/components/SmileGallery";
+import GoogleG from "@/components/GoogleG";
+import {
+  ALL_TREATMENTS,
+  IMAGES,
+  CASE_STUDIES,
+  SITE,
+  REVIEW_US_URL,
+} from "@/lib/site-data";
 import type { ContentBlock } from "@/lib/treatment-content";
 
 // Answers are verbatim copy already published elsewhere on the site.
@@ -58,17 +64,6 @@ const FEATURED_SLUGS = [
   "dental-implants-london",
 ];
 
-const MARQUEE_ITEMS = [
-  { label: "Smile Makeover", slug: "smile-makeover-london" },
-  { label: "Porcelain Veneers", slug: "porcelain-veneers-london" },
-  { label: "Composite Bonding", slug: "composite-bonding-london" },
-  { label: "Teeth Whitening", slug: "teeth-whitening-london" },
-  { label: "Pro-aligners", slug: "pro-aligners-london" },
-  { label: "Dental Implants", slug: "dental-implants-london" },
-  { label: "Gum Contouring", slug: "gum-contouring-london" },
-  { label: "Dental Hygiene", slug: "hygiene-london" },
-];
-
 const WHY_CARDS = [
   {
     title: "The Smile Dentist Standard",
@@ -88,7 +83,13 @@ const WHY_CARDS = [
   },
 ];
 
-const HOME_FEE_SECTION = FEE_SECTIONS.find((s) => s.title === "Cosmetic Dentistry")!;
+// Comfort promises, each phrase taken from our nervous-patient copy.
+const COMFORT_POINTS = [
+  "A judgment-free zone",
+  "Relaxing lounge environment",
+  "Gentle approach & calming techniques",
+  "Stress-free visits, start to finish",
+];
 
 export default function HomePage() {
   const featured = FEATURED_SLUGS.map(
@@ -99,150 +100,124 @@ export default function HomePage() {
     <>
       <Hero />
 
-      {/* Marquee */}
-      <div className="marquee bg-ink text-ivory py-4 overflow-hidden">
-        <div className="marquee-track">
-          {[0, 1].map((copy) => (
-            <div key={copy} className="flex shrink-0 items-center">
-              {MARQUEE_ITEMS.map((item) => (
-                <span
-                  key={`${copy}-${item.slug}`}
-                  className="flex items-center gap-6 px-6 font-label text-xs tracking-[0.24em] uppercase whitespace-nowrap"
-                >
-                  <Link
-                    href={`/${item.slug}`}
-                    tabIndex={copy === 0 ? undefined : -1}
-                    aria-hidden={copy === 1}
-                    className="hover:text-gold-bright transition-colors"
-                  >
-                    {item.label}
-                  </Link>
-                  <span className="text-gold text-base" aria-hidden>
-                    ◆
-                  </span>
-                </span>
-              ))}
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Philosophy */}
-      <section className="py-20 lg:py-28">
-        <div className="mx-auto max-w-6xl px-5 sm:px-10 grid gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
-          <div className="relative">
-            <div className="relative h-[440px] sm:h-[520px] overflow-hidden border border-gold/30 p-2">
-              <Image
-                src={IMAGES.drYasha}
-                alt="Dr. Yasha Y Shirazi - Principal Dentist & Clinical Director at Smile Dentist South Kensington"
-                fill
-                className="object-cover object-top"
-                sizes="(max-width: 1024px) 100vw, 45vw"
-              />
-            </div>
-            <div className="glass absolute -bottom-6 right-4 sm:right-8 px-6 py-4 shadow-xl shadow-ink/10 border border-gold/30">
-              <Image
-                src={IMAGES.signature}
-                alt="Dr. Yasha Y Shirazi signature"
-                width={130}
-                height={44}
-                className="h-9 w-auto"
-              />
-              <p className="font-label text-[10px] tracking-[0.16em] uppercase text-ink-soft mt-1">
-                Principal Dentist &amp; Clinical Director
-              </p>
-            </div>
+      {/* Before & after strip */}
+      <section className="bg-white border-b border-ink/10">
+        <div className="mx-auto max-w-7xl px-5 sm:px-10 py-10 grid gap-10 lg:grid-cols-[1fr_auto] lg:items-center">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
+            {CASE_STUDIES.flatMap((study) => [
+              { key: `${study.title}-before`, src: study.before, label: "Before", title: study.title },
+              { key: `${study.title}-after`, src: study.after, label: "After", title: study.title },
+            ]).map((shot, i) => (
+              <figure key={shot.key} className={i === 2 ? "sm:border-l sm:border-ink/10 sm:pl-6" : ""}>
+                <div className="relative h-28 sm:h-32 overflow-hidden">
+                  <Image
+                    src={shot.src}
+                    alt={`${shot.title} — ${shot.label.toLowerCase()} treatment at Smile Dentist`}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 640px) 50vw, 22vw"
+                  />
+                </div>
+                <figcaption className="mt-3 text-center font-label text-[10px] font-semibold tracking-[0.24em] uppercase text-ink-soft">
+                  {shot.label}
+                </figcaption>
+              </figure>
+            ))}
           </div>
 
-          <div className="space-y-6">
-            <p className="eyebrow">Welcome to SmileDentist</p>
-            <h2 className="font-display text-4xl sm:text-5xl leading-[1.12]">
-              Changing the face of{" "}
-              <span className="text-gold-deep">modern dentistry</span>
-            </h2>
-            <div className="space-y-4 text-ink-soft leading-relaxed">
-              <p>
-                Welcome to Smile Dentist, where we have reimagined the dental experience
-                for the style-conscious Londoner. With clinics in South Kensington and the
-                City of London, we believe a stunning, healthy smile is a truly worthwhile
-                investment.
-              </p>
-              <p>
-                Gone are the days of clinical, cold appointments. Step into our sanctuary
-                of calm, designed with the warmth of a luxury hotel and the clinical
-                precision of a modern dental facility.
-              </p>
-              <p>
-                <strong className="text-ink">Our Philosophy: Affordable Luxury.</strong> We
-                believe high-end cosmetic dentistry should be accessible. By joining our
-                exclusive membership for just £20/month, you unlock 50% off most cosmetic
-                and restorative dental treatments — for example Invisalign, Composite
-                Bonding and Porcelain Veneers. Dental implants, bone grafting and
-                full-mouth rehabilitation are not included in the membership discount;
-                full terms are on our membership page.
-              </p>
-            </div>
+          <div className="lg:max-w-[15rem] lg:border-l lg:border-ink/10 lg:pl-10 space-y-4">
+            <p className="eyebrow">Transformations</p>
+            <h2 className="font-display text-2xl leading-tight">Real People, Real Smiles</h2>
+            <p className="text-[13px] text-ink-soft leading-relaxed">
+              We take pride in changing lives, one smile at a time. Browse our gallery of
+              recent case studies.
+            </p>
+            <Link href="/results-london" className="link-underline">
+              View all case studies <span aria-hidden>→</span>
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* Why — bento */}
-      <section className="glow-light">
-        <div className="mx-auto max-w-6xl px-5 sm:px-10 py-16 lg:py-24">
-          <div className="max-w-2xl mx-auto text-center mb-12 space-y-4">
-            <p className="eyebrow justify-center before:hidden ornament">Trust &amp; Authority</p>
-            <h2 className="font-display text-4xl sm:text-5xl">
-              Why London chooses
-              <br />
-              Smile Dentist
-            </h2>
-            <p className="text-ink-soft leading-relaxed">
-              With clinics in South Kensington and the City of London, we are never far
-              away. Here is why patients across London choose Dr. Yasha and the team:
+      {/* Welcome · philosophy */}
+      <section className="grid lg:grid-cols-[1fr_1fr] border-b border-ink/10">
+        <div className="glow-light px-5 sm:px-10 lg:px-12 py-14 lg:py-16 space-y-7">
+          <p className="eyebrow">Welcome to SmileDentist</p>
+          <h2 className="text-3xl sm:text-4xl">
+            Changing the Face of{" "}
+            <span className="text-gold-deep">Modern Dentistry.</span>
+          </h2>
+          <div className="space-y-4 text-[15px] text-ink-soft leading-relaxed">
+            <p>
+              Welcome to Smile Dentist, where we have reimagined the dental experience for
+              the style-conscious Londoner. With clinics in South Kensington and the City
+              of London, we believe a stunning, healthy smile is a truly worthwhile
+              investment.
+            </p>
+            <p>
+              Gone are the days of clinical, cold appointments. Step into our sanctuary of
+              calm, designed with the warmth of a luxury hotel and the clinical precision
+              of a modern dental facility.
+            </p>
+            <p>
+              Our Philosophy: Affordable Luxury. We believe high-end cosmetic dentistry
+              should be accessible. By joining our exclusive membership for just
+              £20/month, you unlock 50% off most cosmetic and restorative dental
+              treatments — for example Invisalign, Composite Bonding and Porcelain
+              Veneers. Dental implants, bone grafting and full-mouth rehabilitation are
+              not included in the membership discount; full terms are on our membership
+              page.
             </p>
           </div>
 
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-12">
+          <p className="text-[15px] text-ink-soft leading-relaxed">
+            With clinics in South Kensington and the City of London, we are never far
+            away. Here is why patients across London choose Dr. Yasha and the team:
+          </p>
+
+          <div className="grid grid-cols-2 gap-x-6 gap-y-6 pt-2">
             {WHY_CARDS.map((card, i) => (
-              <article
-                key={card.title}
-                className={`bg-white border border-ink/8 p-8 space-y-4 shadow-sm shadow-ink/5 hover:-translate-y-1 hover:shadow-xl hover:shadow-ink/10 hover:border-gold/50 transition-all duration-300 ${
-                  i === 0 || i === 3 ? "lg:col-span-7" : "lg:col-span-5"
-                }`}
-              >
-                <span className="inline-flex h-11 w-11 items-center justify-center border border-gold/50 font-label text-sm font-bold text-gold-deep">
+              <div key={card.title} className="space-y-2">
+                <span className="flex h-9 w-9 items-center justify-center border border-gold/50 font-label text-[11px] font-semibold text-gold-deep">
                   {String(i + 1).padStart(2, "0")}
                 </span>
-                <h3 className="font-display text-2xl font-semibold">{card.title}</h3>
-                <p className="text-sm text-ink-soft leading-relaxed">{card.body}</p>
-              </article>
+                <p className="font-label text-[11px] font-semibold tracking-[0.14em] uppercase leading-relaxed">
+                  {card.title}
+                </p>
+              </div>
             ))}
           </div>
+        </div>
+
+        <div className="relative min-h-[360px] lg:min-h-full">
+          <Image
+            src={IMAGES.practice}
+            alt="Dental treatment in progress at Smile Dentist, London"
+            fill
+            className="object-cover object-center"
+            sizes="(max-width: 1024px) 100vw, 50vw"
+          />
         </div>
       </section>
 
       {/* Treatments */}
-      <section className="py-20 lg:py-28">
-        <div className="mx-auto max-w-6xl px-5 sm:px-10">
-          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-14">
+      <section className="py-16 lg:py-20">
+        <div className="mx-auto max-w-7xl px-5 sm:px-10">
+          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-12">
             <div className="max-w-xl space-y-4">
               <p className="eyebrow">Our Treatments</p>
-              <h2 className="font-display text-4xl sm:text-5xl">
-                Signature cosmetic
-                <br />
-                treatments
+              <h2 className="text-3xl sm:text-4xl">
+                Signature Cosmetic Treatments
               </h2>
-              <p className="text-ink-soft leading-relaxed">
+              <p className="text-[15px] text-ink-soft leading-relaxed">
                 We excel in creating natural, bespoke smiles using the latest digital
                 technology. Below is a selection of our most popular smile-transforming
                 procedures.
               </p>
             </div>
-            <Link
-              href="/treatments"
-              className="border border-ink/20 px-7 py-3.5 font-label text-[11px] font-bold tracking-[0.18em] uppercase hover:border-gold-deep hover:text-gold-deep transition-colors whitespace-nowrap self-start lg:self-auto"
-            >
-              Explore full menu →
+            <Link href="/treatments" className="btn-outline self-start lg:self-auto">
+              Explore full cosmetic menu
+              <span aria-hidden>→</span>
             </Link>
           </div>
 
@@ -261,149 +236,174 @@ export default function HomePage() {
         </div>
       </section>
 
-      <MembershipBanner />
+      {/* Nervous patient care */}
+      <section className="grid lg:grid-cols-[0.85fr_1fr_0.85fr] border-y border-ink/10">
+        <div className="relative min-h-[300px]">
+          <Image
+            src={IMAGES.heroAligners}
+            alt="Relaxed patient during comfort-focused dental care at Smile Dentist"
+            fill
+            className="object-cover"
+            sizes="(max-width: 1024px) 100vw, 30vw"
+          />
+        </div>
 
-      {/* Nervous patients */}
-      <section className="py-20 lg:py-24">
-        <div className="mx-auto max-w-3xl px-5 sm:px-10 text-center space-y-6">
-          <p className="eyebrow justify-center before:hidden ornament">Nervous Patient Care</p>
-          <h2 className="font-display text-4xl sm:text-5xl">
-            Comfort-focused dentistry
+        <div className="glow-light px-5 sm:px-10 lg:px-12 py-14 lg:py-16 space-y-5">
+          <p className="eyebrow">Nervous Patient Care</p>
+          <h2 className="text-3xl sm:text-4xl">
+            Comfort-Focused
+            <br />
+            Dentistry
           </h2>
-          <p className="text-ink-soft leading-relaxed max-w-xl mx-auto">
+          <p className="text-[15px] text-ink-soft leading-relaxed max-w-md">
             Feeling anxious about visiting the dentist? Our team specialises in gentle,
             reassuring care using modern techniques designed to make your treatment as
             comfortable as possible.
           </p>
-          <div className="flex flex-wrap justify-center gap-3">
-            <Link
-              href="/booking"
-              className="bg-ink text-ivory px-8 py-4 font-label text-[11px] font-bold tracking-[0.18em] uppercase hover:bg-gold hover:text-ink transition-colors"
-            >
-              Book my appointment
-            </Link>
-            <Link
-              href="/fees"
-              className="border border-ink/20 px-8 py-4 font-label text-[11px] font-bold tracking-[0.18em] uppercase hover:border-gold-deep hover:text-gold-deep transition-colors"
-            >
-              View full fee guide
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Team */}
-      <section className="glow-light">
-        <div className="mx-auto max-w-6xl px-5 sm:px-10 py-16 lg:py-24">
-          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-12">
-            <div className="max-w-xl space-y-4">
-              <p className="eyebrow">Expert Dental Care</p>
-              <h2 className="font-display text-4xl sm:text-5xl">
-                Meet the experts
-              </h2>
-              <p className="text-ink-soft leading-relaxed">
-                Our hand-picked team of clinicians is dedicated to the art and science of
-                your smile.
-              </p>
-            </div>
-            <Link
-              href="/team"
-              className="border border-ink/20 bg-white px-7 py-3.5 font-label text-[11px] font-bold tracking-[0.18em] uppercase hover:border-gold-deep hover:text-gold-deep transition-colors whitespace-nowrap self-start lg:self-auto"
-            >
-              View all staff →
-            </Link>
-          </div>
-          <TeamGrid limit={6} />
-        </div>
-      </section>
-
-      <VideoSection />
-
-      {/* Fees preview */}
-      <section className="py-20 lg:py-28">
-        <div className="mx-auto max-w-6xl px-5 sm:px-10 grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
-          <div className="space-y-6 lg:sticky lg:top-32">
-            <p className="eyebrow">Cosmetic Price List</p>
-            <h2 className="font-display text-4xl sm:text-5xl">
-              Cosmetic &amp;
-              <br />
-              implant fees
-            </h2>
-            <p className="text-ink-soft leading-relaxed">
-              A curated list of our most popular cosmetic treatments. For general
-              dentistry, hygiene, and diagnostics, please view the full guide.
-            </p>
-            <Link
-              href="/fees"
-              className="inline-block bg-ink text-ivory px-8 py-4 font-label text-[11px] font-bold tracking-[0.18em] uppercase hover:bg-gold hover:text-ink transition-colors"
-            >
-              View full fee guide
-            </Link>
-          </div>
-
-          <div className="bg-white border border-gold/30 overflow-hidden">
-            <div className="grid grid-cols-[1.4fr_1fr_1fr] px-7 py-4 bg-ink text-ivory font-label text-[10px] tracking-[0.18em]">
-              <span>TREATMENT</span>
-              <span className="text-right">NON-MEMBER</span>
-              <span className="text-right text-gold-bright">MEMBER (50% OFF)</span>
-            </div>
-            {HOME_FEE_SECTION.rows.map((row) => (
-              <div
-                key={row.name}
-                className="grid grid-cols-[1.4fr_1fr_1fr] items-baseline px-7 py-4 text-sm border-t border-ink/5 hover:bg-cream/50 transition-colors"
-              >
-                <span className="font-medium">{row.name}</span>
-                <span className="text-right font-display text-lg text-ink-soft">
-                  {row.standard}
-                </span>
-                <span className="text-right font-display text-2xl font-semibold text-gold-deep">
-                  {row.member}
-                </span>
-              </div>
-            ))}
-            <p className="px-7 py-4 text-xs text-ink-soft bg-cream/40">
-              *Prices represent starting from costs. Full treatment plan provided at
-              consultation. Dental implants are not eligible for the membership discount.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <CaseStudies />
-
-      <TreatmentBlocks blocks={HOME_FAQ} />
-
-      {/* Compliance */}
-      <section className="pb-20">
-        <div className="mx-auto max-w-3xl px-5 sm:px-10 text-center space-y-5">
-          <p className="eyebrow justify-center before:hidden ornament">Compliance &amp; Safety</p>
-          <h2 className="font-display text-3xl sm:text-4xl">
-            Registered &amp; regulated
-          </h2>
-          <p className="text-ink-soft leading-relaxed">
-            Our team are fully registered and regulated for practice in the United Kingdom.
-            Our patients should expect nothing less.
+          <p className="text-[15px] text-ink-soft leading-relaxed max-w-md">
+            Book your consultation today and experience dentistry without fear.
           </p>
-          <div className="flex flex-wrap justify-center gap-3">
+          <div className="flex flex-wrap gap-3 pt-1">
+            <Link href="/booking" className="btn-primary">
+              Book My Appointment
+              <span aria-hidden>→</span>
+            </Link>
+            <Link href="/fees" className="btn-outline">
+              View full fee guide
+              <span aria-hidden>→</span>
+            </Link>
+          </div>
+        </div>
+
+        <ul className="bg-white px-5 sm:px-10 lg:px-11 py-14 lg:py-16 space-y-6 border-l border-ink/10">
+          {COMFORT_POINTS.map((point) => (
+            <li key={point} className="flex items-start gap-4">
+              <span className="flex h-9 w-9 shrink-0 items-center justify-center border border-gold/50">
+                <svg viewBox="0 0 20 20" className="h-4 w-4 fill-gold" aria-hidden>
+                  <path d="M8.7 14.4l-4-4 1.4-1.4 2.6 2.6 5.5-5.5 1.4 1.4-6.9 6.9z" />
+                </svg>
+              </span>
+              <p className="font-label text-[12px] font-medium tracking-[0.1em] uppercase leading-relaxed text-ink-soft pt-2">
+                {point}
+              </p>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      {/* Compliance & safety + the team */}
+      <section className="grid lg:grid-cols-[0.8fr_1.6fr] border-b border-ink/10">
+        <div className="flex flex-col">
+          <div className="glow-light px-5 sm:px-10 lg:px-12 py-14 lg:py-16 space-y-5">
+            <p className="eyebrow">Compliance &amp; Safety</p>
+            <h2 className="text-3xl">
+              Registered &amp;
+              <br />
+              Regulated
+            </h2>
+            <p className="text-[15px] text-ink-soft leading-relaxed">
+              Our team are fully registered and regulated for practice in the United
+              Kingdom. Our patients should expect nothing less.
+            </p>
+          </div>
+
+          <div className="px-5 sm:px-10 lg:px-12 py-10 flex flex-nowrap items-center gap-5">
             <a
               href="https://www.gdc-uk.org/"
               target="_blank"
               rel="noopener noreferrer"
-              className="border border-ink/20 px-6 py-3 font-label text-[11px] font-bold tracking-[0.16em] uppercase hover:border-gold-deep hover:text-gold-deep transition-colors"
+              aria-label="General Dental Council (GDC) - UK dental regulatory body"
+              className="shrink-0"
             >
-              General Dental Council (GDC)
+              <Image
+                src="/gdc-new.png"
+                alt="General Dental Council (GDC) - UK dental regulatory body"
+                width={800}
+                height={406}
+                className="h-9 w-auto"
+              />
             </a>
             <a
               href="https://www.cqc.org.uk/"
               target="_blank"
               rel="noopener noreferrer"
-              className="border border-ink/20 px-6 py-3 font-label text-[11px] font-bold tracking-[0.16em] uppercase hover:border-gold-deep hover:text-gold-deep transition-colors"
+              aria-label="Care Quality Commission (CQC) - UK healthcare regulator"
+              className="shrink-0"
             >
-              Care Quality Commission (CQC)
+              <Image
+                src="/cqc-new-logo.png"
+                alt="Care Quality Commission (CQC) - UK healthcare regulator"
+                width={2560}
+                height={819}
+                className="h-7 w-auto"
+              />
+            </a>
+            <a
+              href={REVIEW_US_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex shrink-0 items-center gap-2.5 group"
+            >
+              <GoogleG className="h-7 w-7" />
+              <span>
+                <span className="block font-display text-lg leading-none">
+                  {SITE.rating}
+                  <span className="text-[#FBBC05] ml-1.5 text-sm" aria-hidden>
+                    ★★★★★
+                  </span>
+                </span>
+                <span className="mt-1 block font-label text-[8px] tracking-[0.14em] uppercase text-ink-soft group-hover:text-ink transition-colors">
+                  {SITE.reviewCount} reviews on Google
+                </span>
+              </span>
             </a>
           </div>
+
+          <div className="border-t border-ink/10 px-5 sm:px-10 lg:px-12 py-12 space-y-4">
+            <p className="eyebrow">Nervous Patient Care</p>
+            <h2 className="text-2xl sm:text-3xl">Comfort-Focused Dentistry</h2>
+            <p className="text-[15px] text-ink-soft leading-relaxed">
+              Feeling anxious about visiting the dentist? Our team specialises in gentle,
+              reassuring care using modern techniques designed to make your treatment as
+              comfortable as possible.
+            </p>
+            <p className="text-[15px] text-ink-soft leading-relaxed">
+              Book your consultation today and experience dentistry without fear.
+            </p>
+            <Link
+              href="/booking"
+              className="mt-2 flex w-full items-center justify-center gap-3 bg-ink px-8 py-5 font-label text-[14px] font-bold tracking-[0.14em] uppercase text-ivory shadow-xl shadow-ink/20 hover:bg-gold hover:text-ink transition-colors"
+            >
+              Book My Appointment
+              <span aria-hidden>→</span>
+            </Link>
+          </div>
+        </div>
+
+        <div className="bg-white px-5 sm:px-10 lg:px-12 py-14 lg:py-16 border-l border-ink/10 space-y-10">
+          <div className="flex flex-wrap items-end justify-between gap-6">
+            <div className="space-y-3 max-w-xl">
+              <p className="eyebrow">Expert Dental Care</p>
+              <h2 className="text-3xl sm:text-4xl">Meet The Experts</h2>
+              <p className="text-[15px] text-ink-soft leading-relaxed">
+                Our hand-picked team of clinicians is dedicated to the art and science of
+                your smile.
+              </p>
+            </div>
+            <Link href="/team" className="link-underline">
+              View all staff <span aria-hidden>→</span>
+            </Link>
+          </div>
+
+          <TeamGrid limit={8} columns={4} shape="circle" />
         </div>
       </section>
+
+      <SmileGallery limit={6} className="bg-cream border-y border-ink/10" />
+
+      <VideoSection />
+
+      <TreatmentBlocks blocks={HOME_FAQ} />
     </>
   );
 }

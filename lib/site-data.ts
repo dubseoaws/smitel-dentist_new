@@ -2,13 +2,13 @@
 
 export const SITE = {
   name: "Smile Dentist",
-  phone: "020 7183 2362",
-  phoneHref: "tel:02071832362",
+  phone: "020 70434314",
+  phoneHref: "tel:02070434314",
   email: "info@smiledentist.co.uk",
   bookingUrl: "/booking",
   membershipUrl: "https://membership.md.co.uk/",
   rating: "4.9",
-  reviewCount: "437",
+  reviewCount: "439",
   tagline:
     "Redefining dental care with affordable luxury. Two clinics across Central London — South Kensington and the City of London.",
 };
@@ -24,6 +24,7 @@ export const IMAGES = {
   heroVeneers: `${CLOUDINARY}/v1765871030/Full-Smile-Transformation-with-20-Porcelain-Veneers-after_gnkzev.jpg`,
   heroAligners: `${CLOUDINARY}/v1765805892/proaligners-home_xasqw8.jpg`,
   heroImplant: "/hero/gum-contouring.jpg",
+  practice: `${CLOUDINARY}/v1765881711/IMG_2036_2_klddah.jpg`,
 };
 
 export type Treatment = {
@@ -560,30 +561,35 @@ export const CASE_STUDIES = [
 export const YOUTUBE_CHANNEL =
   "https://www.youtube.com/@SouthKensingtonMedicalDental";
 
+export const REVIEW_US_URL =
+  "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2tWdVpISndNV2Q1TlhvMVFtSlJiRUpwV2tSdWFVRRAB!2m1!1s0x0:0x930a792197128adf!3m1!1s2@1:CAIQACodChtycF9oOkVuZHJwMWd5NXo1QmJRbEJpWkRuaUE%7C%7C";
+
 export const VIDEOS = [
   {
     id: "n33iO5y6N0g",
-    title: "\"I Can't Stop Smiling!\" | Composite Bonding Patient Review",
-  },
-  {
-    id: "Huq5WJ2grKc",
     title: "Dental Implants Explained | A Premium Solution for Missing Teeth",
   },
   {
+    id: "Huq5WJ2grKc",
+    title: "Impacted Wisdom Tooth | The Hidden Problem at the Back of Your Mouth",
+  },
+  {
     id: "bLtSMhb60HI",
-    title: "Private Dentist Appointment in South Kensington | Explained By Dr. Yasha Shirazi",
+    title:
+      "Full Mouth Rehabilitation in London | Transform Your Smile with Dr. Andreia Phipps",
   },
   {
     id: "33u-MrdHaVU",
-    title: "Full Mouth Rehabilitation in London | Transform Your Smile with Dr. Andreia Phipps",
-  },
-  {
-    id: "lHx-p0FbocQ",
     title: "Saving £3,750 on Zirconia Teeth in London! | A Patient's Success Story",
   },
   {
+    id: "lHx-p0FbocQ",
+    title: "Need an Emergency Dentist in London? £30 Same-Day Appointments | SW7",
+  },
+  {
     id: "JyjVdDbavkA",
-    title: "Impacted Wisdom Tooth | The Hidden Problem at the Back of Your Mouth",
+    title:
+      "Private Dentist Appointment in South Kensington | Explained By Dr. Yasha Shirazi",
   },
 ];
 
@@ -602,18 +608,84 @@ export const NAV_CLINIC_LINKS = [
   { label: "City of London EC4 · St Paul's", href: "/city-of-london" },
 ];
 
+// Live Google reviews as published on smiledentist.co.uk
 export const REVIEWS = [
   {
     name: "james reilly",
+    date: "14 days ago",
+    avatar:
+      "https://lh3.googleusercontent.com/a/ACg8ocI8mViTuTVThBvuww3HH7AP6rpEIsYjVf7bbyDdHL6Sfh-BsA=s120-c-rp-mo-br100",
     text: "Dr kamran Yazd and his assistant went the extra mile to solve the issue I had for which I’m very grateful, The reception staff very friendly and professional, Found this clinic online by chance but this clinic will be my first choice for any future treatments, Highly recommend",
   },
   {
     name: "Diana Osipova",
+    date: "15 days ago",
+    avatar:
+      "https://lh3.googleusercontent.com/a-/ALV-UjUklsvPrkH_veF6AtePXSkx5CJD4r9CvzDNB1m2WSu-4eEYQjTK=s120-c-rp-mo-br100",
     text: "I had an appointmenrt today with Dr. Kamran, he was very kind, professional and explained everything very clearly. I would definitely recommend this dental practice to other!",
   },
   {
     name: "Olivia Heading",
+    date: "15 days ago",
+    avatar:
+      "https://lh3.googleusercontent.com/a/ACg8ocKYL6O6AluyADeuIS1RxUHQ4o-wsS04emyEKDgm7Oku-MtzIg=s120-c-rp-mo-br100",
     text: "Bernadetta was brilliant - my first dental hygienist appointment but she made me feel very at ease and explained each process throughout",
+  },
+  {
+    name: "S",
+    date: "4 days ago",
+    avatar:
+      "https://lh3.googleusercontent.com/a-/ALV-UjVMNRx2fWupkDVumwlho96ibvooXpUaAgolxCiGQb1spE-_kvdG=s120-c-rp-mo-br100",
+    text: "I had my dental hygiene appointment with Laila. She is kind and caring from the moment she interacted with me . She did a good job in taking care of my teeth . I was recommend to her by my sibling. She let me know what she was doing and gave me advice on how I could improve brushing my teeth in a calm and friendly manor .",
+  },
+  {
+    name: "CHOW CF",
+    date: "19 days ago",
+    avatar:
+      "https://lh3.googleusercontent.com/a/ACg8ocKfX5m7WViGtECaLo9m1GLv0BFOU-1GlhsVTndzCNnbTmAwQg=s120-c-rp-mo-br100",
+    text: "Laila did a good job on my teeth. She is a great hygienist.",
+  },
+  {
+    name: "Zsuzsanna Varro",
+    date: "19 days ago",
+    avatar:
+      "https://lh3.googleusercontent.com/a/ACg8ocKruEJstJtJGTM2_68-Cwj1JKimnXa3fWxnbPMnesDCKP9uzw=s120-c-rp-mo-br100",
+    text: "I felt relaxed and comfortable throughout my dental hygienist appointment. Leila was friendly, professional and attentive, and the receptionists were kind and welcoming. I received excellent service and had a really positive experience.",
+  },
+  {
+    name: "Lukas Ponte",
+    date: "28 days ago",
+    avatar:
+      "https://lh3.googleusercontent.com/a/ACg8ocKta0G3JPaqAtanB313BmrBwKWim-gtJJLQ4doTaKEHtA5XUA=s120-c-rp-mo-br100",
+    text: "I had a great experience with Dr. Andréia. She was incredibly professional, gentle, and took the time to explain everything throughout the treatment. I had a cavity very close to the root of my tooth, and thanks to her skill and careful work, she was able to treat it without the need for a root canal. I’m truly grateful for her expertise and attention to detail. I highly recommend Dr. Andréia to anyone looking for an excellent dentist. Thank you so much for your outstanding care!",
+  },
+  {
+    name: "Bhaswati Roy",
+    date: "30 days ago",
+    avatar:
+      "https://lh3.googleusercontent.com/a-/ALV-UjUx7RPFYCJ-K-maDpmgVs0nYbI8iXJjn1pujFQKjHkfZVgPmHAY=s120-c-rp-mo-br100",
+    text: "I had an amazing experience with Hygienist Laila. She is friendly, amazing at her work, and was always making sure I feel alright. Highly recommended!",
+  },
+  {
+    name: "Liz Layzell",
+    date: "30 days ago",
+    avatar:
+      "https://lh3.googleusercontent.com/a/ACg8ocKIkJln66EW6fcZVlv9RDwvZU5nodWnEoMTpQ8QncQDDyRBcA=s120-c-rp-mo-ba12-br100",
+    text: "Dr Shilan is amazing thanks so much ! First time here she had her work cut out with me!!! Made my teeth so white .",
+  },
+  {
+    name: "Dorsa Jalaei",
+    date: "1 month ago",
+    avatar:
+      "https://lh3.googleusercontent.com/a-/ALV-UjVlt2_4Ypq-RIWlj97zybkXkrOXwPQrwv15XDE7XK8DTb7WKhsv=s120-c-rp-mo-br100",
+    text: "I had one of my wisdom teeth removed here as an urgent procedure, and this was by far the best surgical experience I've had for this kind of surgery. Dr. Reza Davari was incredibly knowledgeable and clearly up to date with the most modern techniques in the field. Before the procedure, he took the time to walk me through my X-rays and patiently explained the entire process, which made me feel informed and at ease. The anesthesia was administered perfectly, I didn't feel a thing during the surgery. The whole team took great care of me despite the case being urgent, and my recovery afterward was smooth and quick. If you need wisdom teeth removed (or any oral surgery), I'd highly recommend Dr. Davari and this clinic. Truly top-notch care from start to finish",
+  },
+  {
+    name: "Emmanuel Bolaji",
+    date: "1 month ago",
+    avatar:
+      "https://lh3.googleusercontent.com/a/ACg8ocLp2V-scPgn_U2dsHAkDxMtFW-4VZh_H4B1y864JhKTGM1qbw=s120-c-rp-mo-br100",
+    text: "Sadhana and Solina were really kind and helpful. I haven’t been to the hygienist in around 6 years and they gave me good advice and cleaned my teeth really well.",
   },
 ];
 

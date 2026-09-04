@@ -326,6 +326,8 @@ function ComparisonTable({
 }
 
 function Pricing({ block }: { block: Extract<ContentBlock, { kind: "pricing" }> }) {
+  const rows = (block.rows ?? []).filter((row) => row.standard !== "POA");
+  const standard = block.standard?.value === "POA" ? undefined : block.standard;
   return (
     <div className="space-y-12">
       <div className="max-w-3xl space-y-5">
@@ -337,17 +339,15 @@ function Pricing({ block }: { block: Extract<ContentBlock, { kind: "pricing" }> 
         )}
       </div>
 
-      {block.rows && block.rows.length > 0 && (
+      {rows.length > 0 && (
         <div className="overflow-x-auto border border-gold/30">
           <table className="w-full text-left text-sm">
             <thead className="bg-ink text-ivory">
               <tr>
-                {(block.columns ?? ["Treatment", "Standard", "Member"]).map((c, i) => (
+                {(block.columns ?? ["Treatment", "Standard"]).slice(0, 2).map((c) => (
                   <th
                     key={c}
-                    className={`px-5 py-4 font-label text-[10px] font-bold tracking-[0.2em] uppercase ${
-                      i === 2 ? "text-gold-bright" : ""
-                    }`}
+                    className="px-5 py-4 font-label text-[10px] font-bold tracking-[0.2em] uppercase"
                   >
                     {c}
                   </th>
@@ -355,14 +355,11 @@ function Pricing({ block }: { block: Extract<ContentBlock, { kind: "pricing" }> 
               </tr>
             </thead>
             <tbody>
-              {block.rows.map((row) => (
+              {rows.map((row) => (
                 <tr key={row.label} className="border-t border-ink/10">
                   <td className="px-5 py-4 font-medium">{row.label}</td>
-                  <td className="px-5 py-4 font-display text-xl text-ink-soft">
+                  <td className="px-5 py-4 font-display text-2xl text-ink">
                     {row.standard}
-                  </td>
-                  <td className="bg-gold/10 px-5 py-4 font-display text-3xl font-semibold text-gold-deep">
-                    {row.member}
                   </td>
                 </tr>
               ))}
@@ -371,7 +368,7 @@ function Pricing({ block }: { block: Extract<ContentBlock, { kind: "pricing" }> 
         </div>
       )}
 
-      {(block.includes || block.standard) && (
+      {(block.includes || standard) && (
         <div className="grid gap-8 border border-gold/30 p-8 md:grid-cols-2">
           {block.includes && (
             <div>
@@ -396,30 +393,17 @@ function Pricing({ block }: { block: Extract<ContentBlock, { kind: "pricing" }> 
               </ul>
             </div>
           )}
-          {block.standard && (
+          {standard && (
             <div className="flex flex-col justify-center gap-6">
               <div className="flex flex-wrap items-stretch gap-px border border-gold/40 bg-gold/25">
                 <div className="flex-1 min-w-[150px] bg-ivory px-6 py-5">
                   <p className="font-label text-[11px] font-bold tracking-[0.18em] uppercase text-ink-soft">
-                    {block.standard.label}
+                    {standard.label}
                   </p>
-                  <p className="mt-1.5 font-display text-3xl text-ink-soft">
-                    {block.standard.value}
+                  <p className="mt-1.5 font-display text-4xl sm:text-5xl font-semibold text-ink">
+                    {standard.value}
                   </p>
                 </div>
-                {block.member && (
-                  <div className="flex-1 min-w-[180px] bg-gold/10 px-6 py-5">
-                    <p className="flex items-center gap-2 font-label text-[11px] font-bold tracking-[0.18em] uppercase text-gold-deep">
-                      {block.member.label}
-                      <span className="bg-gold-deep px-1.5 py-0.5 text-[9px] tracking-[0.12em] text-ivory">
-                        50% Off
-                      </span>
-                    </p>
-                    <p className="mt-1.5 font-display text-4xl sm:text-5xl font-semibold text-gold-deep">
-                      {block.member.value}
-                    </p>
-                  </div>
-                )}
               </div>
               <Link href="/booking" className="btn-primary w-fit">
                 Book Consultation
@@ -514,7 +498,7 @@ export default function TreatmentBlocks({ blocks }: { blocks: ContentBlock[] }) 
           key={i}
           className={`py-16 lg:py-24 ${i % 2 === 1 ? "bg-cream" : ""}`}
         >
-          <div className="mx-auto max-w-7xl px-4 sm:px-6">
+          <div className="mx-auto max-w-7xl px-5 sm:px-8">
             {block.kind === "prose" && <Prose block={block} />}
             {block.kind === "cards" && <Cards block={block} />}
             {block.kind === "steps" && <Steps block={block} />}
