@@ -13,6 +13,7 @@ import {
   CASE_STUDIES,
   SITE,
   REVIEW_US_URL,
+  HOME_VIDEOS,
 } from "@/lib/site-data";
 import type { ContentBlock } from "@/lib/treatment-content";
 
@@ -64,24 +65,83 @@ const FEATURED_SLUGS = [
   "dental-implants-london",
 ];
 
+// Icon paths are decorative only; copy below is verbatim site content.
 const WHY_CARDS = [
   {
     title: "The Smile Dentist Standard",
-    body: "Led by Dr. Yasha Y Shirazi (Principal Dentist & Clinical Director), our team combines artistic flair with medical rigor. We don't just fix teeth; we curate smiles using a bespoke approach that considers your unique facial features.",
+    icon: "star",
+    body: (
+      <>
+        Led by <strong className="font-semibold text-ink">Dr. Yasha Y Shirazi</strong>{" "}
+        (Principal Dentist &amp; Clinical Director), our team combines artistic flair with
+        medical rigor. We don&apos;t just fix teeth; we curate smiles using a bespoke
+        approach that considers your unique facial features.
+      </>
+    ),
   },
   {
     title: "Transparent, Exclusive Pricing",
-    body: "Most private dentists in London have hidden costs. We have a simple membership. £20 a month gets you half-price treatment. No distinct tiers, no confusion. Just value.",
+    icon: "shield",
+    body: (
+      <>
+        Most private dentists in London have hidden costs. We have a simple membership.
+        <strong className="font-semibold text-ink">
+          {" "}£20 a month gets you half-price treatment.
+        </strong>{" "}
+        No distinct tiers, no confusion. Just value.
+      </>
+    ),
   },
   {
     title: "Digital Precision",
-    body: "We have ditched the uncomfortable gooey impressions. We use advanced Intra Oral Dental Scanners and Digital X-rays for precise planning, faster results, and a more comfortable experience.",
+    icon: "scan",
+    body: (
+      <>
+        We have ditched the uncomfortable gooey impressions. We use advanced{" "}
+        <strong className="font-semibold text-ink">Intra Oral Dental Scanners</strong> and
+        Digital X-rays for precise planning, faster results, and a more comfortable
+        experience.
+      </>
+    ),
   },
   {
     title: "Nervous Patients Welcome",
-    body: "Anxious? We offer a judgment-free zone. From our relaxing lounge environment to our gentle approach and calming techniques, we ensure your visit is stress-free.",
+    icon: "heart",
+    body: (
+      <>
+        Anxious? We offer a judgment-free zone. From our relaxing lounge environment to our
+        gentle approach and calming techniques, we ensure your visit is stress-free.
+      </>
+    ),
   },
 ];
+
+const WHY_ICONS: Record<string, React.ReactNode> = {
+  star: (
+    <path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9L12 3.5z" />
+  ),
+  shield: (
+    <>
+      <path d="M12 3l7 3v5.5c0 4.4-3 8-7 9.5-4-1.5-7-5.1-7-9.5V6l7-3z" />
+      <path d="M9 12l2 2 4-4" />
+    </>
+  ),
+  scan: (
+    <>
+      <path d="M6 10a6 6 0 0112 0" />
+      <path d="M9 11a3 3 0 016 0v3" />
+      <path d="M12 11v6" />
+      <path d="M6 13v3" />
+      <path d="M18 13v3" />
+    </>
+  ),
+  heart: (
+    <>
+      <path d="M12 20s-7-4.4-7-9a3.6 3.6 0 016.2-2.5L12 9.6l.8-1.1A3.6 3.6 0 0119 11c0 4.6-7 9-7 9z" />
+      <path d="M10 13l1.5 1.5L15 11" />
+    </>
+  ),
+};
 
 // Comfort promises, each phrase taken from our nervous-patient copy.
 const COMFORT_POINTS = [
@@ -170,23 +230,6 @@ export default function HomePage() {
             </p>
           </div>
 
-          <p className="text-[15px] text-ink-soft leading-relaxed">
-            With clinics in South Kensington and the City of London, we are never far
-            away. Here is why patients across London choose Dr. Yasha and the team:
-          </p>
-
-          <div className="grid grid-cols-2 gap-x-6 gap-y-6 pt-2">
-            {WHY_CARDS.map((card, i) => (
-              <div key={card.title} className="space-y-2">
-                <span className="flex h-9 w-9 items-center justify-center border border-gold/50 font-label text-[11px] font-semibold text-gold-deep">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                <p className="font-label text-[11px] font-semibold tracking-[0.14em] uppercase leading-relaxed">
-                  {card.title}
-                </p>
-              </div>
-            ))}
-          </div>
         </div>
 
         <div className="relative min-h-[360px] lg:min-h-full">
@@ -197,6 +240,50 @@ export default function HomePage() {
             className="object-cover object-center"
             sizes="(max-width: 1024px) 100vw, 50vw"
           />
+        </div>
+      </section>
+
+      {/* Trust & authority */}
+      <section className="bg-white border-b border-ink/10 py-16 lg:py-20">
+        <div className="mx-auto max-w-7xl px-5 sm:px-10">
+          <div className="mx-auto max-w-3xl text-center space-y-4">
+            <p className="eyebrow">Trust &amp; Authority</p>
+            <h2 className="text-3xl sm:text-4xl">Why London Chooses Smile Dentist</h2>
+            <p className="text-[15px] text-ink-soft leading-relaxed">
+              With clinics in South Kensington and the City of London, we are never far
+              away. Here is why patients across London choose Dr. Yasha and the team:
+            </p>
+          </div>
+
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {WHY_CARDS.map((card, i) => (
+              <div
+                key={card.title}
+                className="h-full border border-ink/10 bg-cream/40 p-7 space-y-5"
+              >
+                <span
+                  className={`flex h-12 w-12 items-center justify-center ${
+                    i === 1 ? "bg-gold text-white" : "bg-gold/10 text-gold-deep"
+                  }`}
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth={1.5}
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="h-6 w-6"
+                    aria-hidden
+                  >
+                    {WHY_ICONS[card.icon]}
+                  </svg>
+                </span>
+                <h3 className="text-xl">{card.title}</h3>
+                <p className="text-[15px] text-ink-soft leading-relaxed">{card.body}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -239,12 +326,16 @@ export default function HomePage() {
       {/* Nervous patient care */}
       <section className="grid lg:grid-cols-[0.85fr_1fr_0.85fr] border-y border-ink/10">
         <div className="relative min-h-[300px]">
-          <Image
-            src={IMAGES.heroAligners}
-            alt="Relaxed patient during comfort-focused dental care at Smile Dentist"
-            fill
-            className="object-cover"
-            sizes="(max-width: 1024px) 100vw, 30vw"
+          <video
+            src={HOME_VIDEOS.nervousPatient}
+            poster={IMAGES.nervousPatient}
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
+            aria-label="Comfort-focused dental care at Smile Dentist"
+            className="absolute inset-0 h-full w-full object-cover"
           />
         </div>
 
@@ -360,23 +451,64 @@ export default function HomePage() {
           </div>
 
           <div className="border-t border-ink/10 px-5 sm:px-10 lg:px-12 py-12 space-y-4">
-            <p className="eyebrow">Nervous Patient Care</p>
-            <h2 className="text-2xl sm:text-3xl">Comfort-Focused Dentistry</h2>
+            <p className="eyebrow">Book With Us</p>
+            <h2 className="text-2xl sm:text-3xl">
+              Ready to start your own transformation?
+            </h2>
             <p className="text-[15px] text-ink-soft leading-relaxed">
-              Feeling anxious about visiting the dentist? Our team specialises in gentle,
-              reassuring care using modern techniques designed to make your treatment as
-              comfortable as possible.
+              Book a consultation with Dr. Yasha today and let us design your dream smile.
             </p>
-            <p className="text-[15px] text-ink-soft leading-relaxed">
-              Book your consultation today and experience dentistry without fear.
-            </p>
-            <Link
-              href="/booking"
-              className="mt-2 flex w-full items-center justify-center gap-3 bg-ink px-8 py-5 font-label text-[14px] font-bold tracking-[0.14em] uppercase text-ivory shadow-xl shadow-ink/20 hover:bg-gold hover:text-ink transition-colors"
-            >
-              Book My Appointment
-              <span aria-hidden>→</span>
-            </Link>
+            <div className="space-y-2 pt-1">
+              <a
+                href={SITE.phoneHref}
+                className="flex items-center gap-3 text-[15px] text-ink-soft hover:text-ink transition-colors"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth={1.5}
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="h-4 w-4 text-gold-deep"
+                  aria-hidden
+                >
+                  <path d="M6.5 3h3l1.5 4-2 1.5a12 12 0 006.5 6.5l1.5-2 4 1.5v3a2 2 0 01-2.2 2A17 17 0 014.5 5.2 2 2 0 016.5 3z" />
+                </svg>
+                {SITE.phone}
+              </a>
+              <a
+                href={`mailto:${SITE.email}`}
+                className="flex items-center gap-3 text-[15px] text-ink-soft hover:text-ink transition-colors"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth={1.5}
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="h-4 w-4 text-gold-deep"
+                  aria-hidden
+                >
+                  <path d="M3.5 5.5h17v13h-17z" />
+                  <path d="M3.5 6.5l8.5 6 8.5-6" />
+                </svg>
+                {SITE.email}
+              </a>
+            </div>
+            <div className="flex flex-col gap-3 pt-2 sm:flex-row">
+              <Link
+                href="/booking"
+                className="flex flex-1 items-center justify-center gap-3 bg-ink px-8 py-5 font-label text-[14px] font-bold tracking-[0.14em] uppercase text-ivory shadow-xl shadow-ink/20 hover:bg-gold hover:text-ink transition-colors"
+              >
+                Book Now
+                <span aria-hidden>→</span>
+              </Link>
+              <a href={SITE.phoneHref} className="btn-outline flex-1 justify-center">
+                Call {SITE.phone}
+              </a>
+            </div>
           </div>
         </div>
 

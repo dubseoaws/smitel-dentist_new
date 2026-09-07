@@ -24,7 +24,14 @@ export const IMAGES = {
   heroVeneers: `${CLOUDINARY}/v1765871030/Full-Smile-Transformation-with-20-Porcelain-Veneers-after_gnkzev.jpg`,
   heroAligners: `${CLOUDINARY}/v1765805892/proaligners-home_xasqw8.jpg`,
   heroImplant: "/hero/gum-contouring.jpg",
+  nervousPatient: `${CLOUDINARY}/v1765805807/tooth-extraction_efzra6.jpg`,
   practice: `${CLOUDINARY}/v1765881711/IMG_2036_2_klddah.jpg`,
+};
+
+export const CLOUDINARY_VIDEO = "https://res.cloudinary.com/da1zmp1ib/video/upload";
+
+export const HOME_VIDEOS = {
+  nervousPatient: `${CLOUDINARY_VIDEO}/v1767134248/IMG_9968_oqnls5.mp4`,
 };
 
 export type Treatment = {
