@@ -302,7 +302,10 @@ export default function HomePage() {
                 procedures.
               </p>
             </div>
-            <Link href="/treatments" className="btn-outline self-start lg:self-auto">
+            <Link
+              href="/cosmetic-dentistry-london"
+              className="btn-outline self-start lg:self-auto"
+            >
               Explore full cosmetic menu
               <span aria-hidden>→</span>
             </Link>
