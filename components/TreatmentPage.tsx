@@ -5,7 +5,7 @@ import MeetExperts from "@/components/MeetExperts";
 import SmileGallery from "@/components/SmileGallery";
 import TreatmentVideo, { HeroVideo } from "@/components/TreatmentVideo";
 import TreatmentCard from "@/components/TreatmentCard";
-import { ALL_TREATMENTS, TREATMENT_CATEGORIES, SITE } from "@/lib/site-data";
+import { ALL_TREATMENTS, TREATMENT_CATEGORIES, SITE, CLOUDINARY } from "@/lib/site-data";
 import { heroVideoFor } from "@/lib/treatment-videos";
 import { TREATMENT_CONTENT, type ContentBlock } from "@/lib/treatment-content";
 
@@ -35,6 +35,11 @@ const MEMBERSHIP = /member/i;
 // Additional channel videos shown in a band further down the page.
 const EXTRA_VIDEOS: Record<string, string[]> = {
   "missing-teeth-london": ["lHx-p0FbocQ", "33u-MrdHaVU"],
+};
+
+// Slugs with no matching channel video use a still image in the hero instead.
+const HERO_IMAGES: Record<string, string> = {
+  "dentures-london": `${CLOUDINARY}/v1765805793/acrylic-_-flexi-dentures_caf2u4.jpg`,
 };
 
 // Drops any sentence promoting the membership plan.
@@ -725,6 +730,7 @@ export default function TreatmentPage({
   )!;
   const related = category.treatments.filter((t) => t.slug !== slug).slice(0, 3);
   const heroVideoId = heroVideoFor(slug);
+  const heroImage = HERO_IMAGES[slug];
   const extraVideoIds = EXTRA_VIDEOS[slug] ?? [];
 
   const badges = (content?.badges ?? []).filter((badge) => !MEMBERSHIP.test(badge));
@@ -781,7 +787,24 @@ export default function TreatmentPage({
             </a>
           </div>
         </div>
-        <HeroVideo id={heroVideoId} />
+        {heroImage ? (
+          <div className="relative min-h-[300px] bg-ink sm:min-h-[420px] lg:min-h-full">
+            <Image
+              src={heroImage}
+              alt={content?.h1 ?? treatment.name}
+              fill
+              priority
+              className="object-cover"
+              sizes="(max-width: 1024px) 100vw, 50vw"
+            />
+            <span
+              className="pointer-events-none absolute inset-4 border border-gold/40 lg:inset-6"
+              aria-hidden
+            />
+          </div>
+        ) : (
+          <HeroVideo id={heroVideoId} />
+        )}
       </section>
 
       {jumpLinks.length > 0 && (
