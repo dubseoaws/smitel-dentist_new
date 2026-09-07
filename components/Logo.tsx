@@ -1,22 +1,17 @@
-export function LogoMark({ className = "h-10 w-10" }: { className?: string }) {
+export function LogoMark({ className = "h-9 w-9" }: { className?: string }) {
   return (
     <svg viewBox="0 0 44 44" fill="none" className={className} aria-hidden>
-      <defs>
-        <linearGradient id="sd-grad" x1="0" y1="0" x2="44" y2="44">
-          <stop offset="0%" stopColor="#1B3A63" />
-          <stop offset="100%" stopColor="#0C2340" />
-        </linearGradient>
-      </defs>
-      <circle cx="22" cy="22" r="22" fill="url(#sd-grad)" />
-      {/* Tooth glyph */}
       <path
-        d="M28.6 10.5c-2.6 0-4 1.6-6.6 1.6s-4-1.6-6.6-1.6c-3.6 0-6.4 2.8-6.4 6.4 0 5 2.6 6.8 3.5 12 .4 2.6 1.3 4.6 3.1 4.6 2.3 0 1.8-4.1 4.9-4.1s2.6 4.1 4.9 4.1c1.8 0 2.7-2 3.1-4.6.9-5.2 3.5-7 3.5-12 0-3.6-2.8-6.4-6.4-6.4z"
-        fill="#fff"
+        d="M29.8 8.5c-3 0-4.6 1.8-7.6 1.8s-4.6-1.8-7.6-1.8c-4.1 0-7.3 3.2-7.3 7.3 0 5.7 3 7.8 4 13.7.5 3 1.5 5.3 3.5 5.3 2.6 0 2.1-4.7 5.6-4.7s3 4.7 5.6 4.7c2 0 3-2.3 3.5-5.3 1-5.9 4-8 4-13.7 0-4.1-3.2-7.3-7.3-7.3Z"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinejoin="round"
       />
-      {/* Sparkle */}
       <path
-        d="M33.2 6.2l.9 2.3 2.3.9-2.3.9-.9 2.3-.9-2.3-2.3-.9 2.3-.9.9-2.3z"
-        fill="#C9A24E"
+        d="M22 14.5v7"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
       />
     </svg>
   );
@@ -30,22 +25,22 @@ export default function Logo({
   className?: string;
 }) {
   return (
-    <span className={`inline-flex items-center gap-2.5 ${className}`}>
-      <LogoMark />
+    <span className={`inline-flex items-center gap-3 ${className}`}>
+      <LogoMark className="h-9 w-9 text-gold" />
       <span className="leading-none">
         <span
-          className={`block font-display text-[1.35rem] font-semibold tracking-[0.06em] uppercase ${
+          className={`block font-display text-[1.15rem] tracking-[0.28em] uppercase ${
             light ? "text-ivory" : "text-ink"
           }`}
         >
-          Smile Dentist
+          Smile
         </span>
         <span
-          className={`block font-label text-[8.5px] font-semibold tracking-[0.32em] uppercase mt-1 ${
-            light ? "text-gold" : "text-gold-deep"
+          className={`block font-display text-[0.95rem] tracking-[0.34em] uppercase mt-1.5 ${
+            light ? "text-ivory/80" : "text-ink/70"
           }`}
         >
-          Cosmetic Dentistry
+          Dentist
         </span>
       </span>
     </span>

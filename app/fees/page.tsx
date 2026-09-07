@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { FEE_SECTIONS, SITE, IMAGES } from "@/lib/site-data";
 import MeetExperts from "@/components/MeetExperts";
+import SmileGallery from "@/components/SmileGallery";
 
 export const metadata: Metadata = {
   title: "Fees",
@@ -184,7 +185,8 @@ export default function FeesPage() {
         </div>
       </section>
 
-      <MeetExperts limit={3} tone="cream" />
+      <SmileGallery limit={6} className="bg-cream border-y border-ink/10" />
+      <MeetExperts limit={8} columns={4} shape="circle" />
     </>
   );
 }

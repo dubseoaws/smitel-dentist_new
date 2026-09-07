@@ -4,7 +4,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import MembershipBanner from "@/components/MembershipBanner";
 import MeetExperts from "@/components/MeetExperts";
-import TreatmentBlocks from "@/components/TreatmentBlocks";
+import SmileGallery from "@/components/SmileGallery";
+import TreatmentPage from "@/components/TreatmentPage";
 import TreatmentCard from "@/components/TreatmentCard";
 import {
   ALL_TREATMENTS,
@@ -20,7 +21,10 @@ type Params = { slug: string };
 
 export function generateStaticParams(): Params[] {
   return [
-    ...ALL_TREATMENTS.map((t) => ({ slug: t.slug })),
+    // /smile-makeover-london has its own static route.
+    ...ALL_TREATMENTS.filter((t) => t.slug !== "smile-makeover-london").map((t) => ({
+      slug: t.slug,
+    })),
     ...TEAM.map((m) => ({ slug: m.slug })),
     ...CLINICS.map((c) => ({ slug: c.slug })),
   ];
@@ -57,139 +61,7 @@ export default async function DetailPage({ params }: { params: Promise<Params> }
 }
 
 function TreatmentDetail({ slug }: { slug: string }) {
-  const treatment = ALL_TREATMENTS.find((t) => t.slug === slug)!;
-  const category = TREATMENT_CATEGORIES.find((c) =>
-    c.treatments.some((t) => t.slug === slug)
-  )!;
-  const related = category.treatments.filter((t) => t.slug !== slug).slice(0, 3);
-  const content = TREATMENT_CONTENT[slug];
-
-  return (
-    <>
-      <section className="bg-cream py-16 lg:py-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 grid gap-12 lg:grid-cols-2 lg:items-center">
-          <div className="space-y-6">
-            <p className="eyebrow">{content?.kicker ?? category.title}</p>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl leading-[1.08] tracking-tight">
-              {content?.h1 ?? treatment.name}
-            </h1>
-            <span className="block h-px w-20 bg-gold" aria-hidden />
-            <p className="text-lg sm:text-xl text-ink-soft leading-[1.7]">
-              {content?.intro ?? treatment.description}
-            </p>
-
-            {content?.badges && (
-              <div className="flex flex-wrap gap-3">
-                {content.badges.map((badge) => (
-                  <span
-                    key={badge}
-                    className={`px-4 py-2 font-label text-[11px] font-bold tracking-[0.16em] uppercase ${
-                      badge.includes("£")
-                        ? "border border-gold/60 bg-gold/10 text-gold-deep"
-                        : "border border-ink/15 text-ink-soft"
-                    }`}
-                  >
-                    {badge}
-                  </span>
-                ))}
-              </div>
-            )}
-
-            <div className="flex flex-wrap items-stretch gap-px border border-gold/40 bg-gold/25">
-              <div className="flex-1 min-w-[150px] bg-ivory px-6 py-5">
-                <p className="text-[11px] font-bold tracking-widest uppercase text-ink-soft">
-                  Standard
-                </p>
-                <p className="mt-1.5 font-display text-3xl text-ink-soft">
-                  {treatment.standard}
-                </p>
-              </div>
-              <div className="flex-1 min-w-[180px] bg-gold/10 px-6 py-5">
-                <p className="flex items-center gap-2 text-[11px] font-bold tracking-widest uppercase text-gold-deep">
-                  Member&rsquo;s Price
-                  <span className="bg-gold-deep px-1.5 py-0.5 text-[9px] tracking-[0.12em] text-ivory">
-                    50% Off
-                  </span>
-                </p>
-                <p className="mt-1.5 font-display text-4xl sm:text-5xl font-semibold text-gold-deep">
-                  {treatment.member}
-                </p>
-              </div>
-            </div>
-
-            <div className="flex flex-wrap gap-4">
-              <Link
-                href="/booking"
-                className="btn-primary"
-              >
-                Book My Appointment
-              </Link>
-              <a
-                href={SITE.phoneHref}
-                className="btn-outline"
-              >
-                Call {SITE.phone}
-              </a>
-            </div>
-          </div>
-          <Image
-            src={content?.hero?.src ?? treatment.image}
-            alt={
-              content?.hero?.alt ??
-              `${treatment.name} - professional dental treatment in South Kensington`
-            }
-            width={720}
-            height={560}
-            className="object-cover w-full h-80 lg:h-[460px] shadow-2xl shadow-ink/15"
-            priority
-          />
-        </div>
-      </section>
-
-      {content && <TreatmentBlocks blocks={content.blocks} />}
-
-      <MeetExperts limit={3} />
-
-      <section className="bg-cream py-16 lg:py-20">
-        <div className="mx-auto max-w-3xl px-4 sm:px-6 text-center space-y-5">
-          <h2 className="text-2xl sm:text-3xl tracking-tight">Not sure what you need?</h2>
-          <p className="text-ink-soft leading-relaxed">
-            Book a consultation with Dr. Yasha or one of our dentists. We will assess your
-            oral health and create a bespoke treatment plan just for you.
-          </p>
-          <Link
-            href="/booking"
-            className="btn-primary"
-          >
-            Book Consultation: £95
-          </Link>
-        </div>
-      </section>
-
-      {related.length > 0 && (
-        <section className="py-16 lg:py-20">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6">
-            <div className="flex items-end justify-between gap-6 mb-10">
-              <h2 className="text-3xl tracking-tight">More {category.title}</h2>
-              <Link
-                href="/treatments"
-                className="text-xs font-bold tracking-widest text-gold-deep hover:underline whitespace-nowrap"
-              >
-                ALL TREATMENTS →
-              </Link>
-            </div>
-            <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-              {related.map((t) => (
-                <TreatmentCard key={t.slug} treatment={t} />
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
-
-      <MembershipBanner />
-    </>
-  );
+  return <TreatmentPage slug={slug} />;
 }
 
 function TeamDetail({ slug }: { slug: string }) {
@@ -274,7 +146,8 @@ function TeamDetail({ slug }: { slug: string }) {
           </div>
         </div>
       </section>
-      <MeetExperts limit={3} tone="cream" />
+      <SmileGallery limit={6} className="bg-cream border-y border-ink/10" />
+      <MeetExperts limit={8} columns={4} shape="circle" />
       <MembershipBanner />
     </>
   );
@@ -358,7 +231,9 @@ function ClinicDetail({ slug }: { slug: string }) {
         </div>
       </section>
 
-      <MeetExperts limit={3} tone="cream" />
+      <SmileGallery limit={6} className="bg-cream border-y border-ink/10" />
+
+      <MeetExperts limit={8} columns={4} shape="circle" />
 
       <MembershipBanner />
     </>

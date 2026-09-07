@@ -10,7 +10,7 @@ import {
   SITE,
 } from "@/lib/site-data";
 
-const RIGHT_LINKS = ["Fees", "Results", "Blog"];
+const RIGHT_LINKS = ["Fees", "Results", "Blog", "Contact Us"];
 
 const ABOUT_LINKS = [
   { label: "Your Dentists", href: "/team" },
@@ -19,7 +19,7 @@ const ABOUT_LINKS = [
 ];
 
 const NAV_LINK =
-  "px-4 py-2.5 font-label text-[13px] font-bold tracking-[0.08em] uppercase text-ink hover:text-gold-deep transition-colors";
+  "px-3.5 py-2 font-label text-[12px] font-medium tracking-[0.12em] uppercase text-ivory/85 hover:text-gold transition-colors";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -47,17 +47,11 @@ export default function Header() {
 
   return (
     <>
-      <div className="bg-ink text-ivory text-center py-2.5 px-4 font-label text-[11px] tracking-[0.24em] uppercase">
-        <Link href="/membership" className="text-gold hover:text-ivory transition-colors">
-          MEMBERS: 50% OFF · £20/MONTH
-        </Link>
-      </div>
-
-      <header className="sticky top-0 z-50 bg-ivory/95 backdrop-blur border-b border-ink/10 shadow-sm shadow-ink/5">
+      <header className="sticky top-0 z-50 bg-ink text-ivory">
         <div className="mx-auto max-w-7xl">
-          <div className="flex items-center justify-between px-4 sm:px-8 py-3">
+          <div className="flex items-center justify-between gap-6 px-4 sm:px-8 py-3.5">
             <Link href="/" onClick={closeAll} aria-label="Smile Dentist home">
-              <Logo />
+              <Logo light />
             </Link>
 
             <nav className="hidden lg:flex items-center">
@@ -247,14 +241,14 @@ export default function Header() {
               ))}
             </nav>
 
-            <div className="hidden lg:flex items-center gap-4">
+            <div className="hidden lg:flex items-center gap-5">
               <a
                 href={SITE.phoneHref}
-                className="flex items-center gap-2 font-label text-[15px] font-bold tracking-[0.02em] text-ink hover:text-gold-deep transition-colors px-2"
+                className="flex items-center gap-2 font-label text-[13px] font-medium tracking-[0.06em] text-ivory/85 hover:text-gold transition-colors"
               >
                 <svg
                   viewBox="0 0 24 24"
-                  className="h-4 w-4 text-gold-deep"
+                  className="h-4 w-4 text-gold"
                   fill="currentColor"
                   aria-hidden
                 >
@@ -262,11 +256,9 @@ export default function Header() {
                 </svg>
                 {SITE.phone}
               </a>
-              <Link
-                href="/booking"
-                className="bg-gold text-ink whitespace-nowrap px-7 py-3.5 font-label text-[13px] font-bold tracking-[0.1em] uppercase shadow-[0_8px_20px_-10px_rgba(12,35,64,0.6)] hover:bg-ink hover:text-ivory transition-colors"
-              >
-                Book Online
+              <Link href="/booking" className="btn-gold whitespace-nowrap">
+                Book My Appointment
+                <span aria-hidden>→</span>
               </Link>
             </div>
 
@@ -274,21 +266,21 @@ export default function Header() {
               aria-label="Toggle menu"
               aria-expanded={open}
               onClick={() => setOpen(!open)}
-              className="lg:hidden flex h-11 w-11 items-center justify-center rounded-full bg-ink/5"
+              className="lg:hidden flex h-11 w-11 items-center justify-center rounded-full bg-ivory/10"
             >
               <span className="relative block h-3.5 w-5">
                 <span
-                  className={`absolute left-0 top-0 h-0.5 w-full bg-ink transition-transform ${
+                  className={`absolute left-0 top-0 h-0.5 w-full bg-ivory transition-transform ${
                     open ? "top-1.5 rotate-45" : ""
                   }`}
                 />
                 <span
-                  className={`absolute left-0 top-1.5 h-0.5 w-full bg-ink transition-opacity ${
+                  className={`absolute left-0 top-1.5 h-0.5 w-full bg-ivory transition-opacity ${
                     open ? "opacity-0" : ""
                   }`}
                 />
                 <span
-                  className={`absolute left-0 top-3 h-0.5 w-full bg-ink transition-transform ${
+                  className={`absolute left-0 top-3 h-0.5 w-full bg-ivory transition-transform ${
                     open ? "top-1.5 -rotate-45" : ""
                   }`}
                 />
@@ -298,22 +290,22 @@ export default function Header() {
         </div>
 
         {open && (
-          <nav className="lg:hidden mx-auto max-w-6xl bg-ivory border-t border-ink/10 p-5 space-y-1 shadow-xl shadow-ink/10 max-h-[70vh] overflow-y-auto">
+          <nav className="lg:hidden mx-auto max-w-6xl bg-ink border-t border-ivory/10 p-5 space-y-1 max-h-[70vh] overflow-y-auto">
             <Link
               href="/"
               onClick={closeAll}
-              className="block rounded-2xl px-4 py-3 text-base font-medium text-ink hover:bg-ink/5"
+              className="block rounded-2xl px-4 py-3 text-base font-medium text-ivory hover:bg-ivory/10"
             >
               Home
             </Link>
             <button
               onClick={() => setMobileAbout(!mobileAbout)}
               aria-expanded={mobileAbout}
-              className="flex w-full items-center justify-between rounded-2xl px-4 py-3 text-base font-medium text-ink hover:bg-ink/5"
+              className="flex w-full items-center justify-between rounded-2xl px-4 py-3 text-base font-medium text-ivory hover:bg-ivory/10"
             >
               About Us
               <span
-                className={`transition-transform text-ink-soft ${
+                className={`transition-transform text-ivory/60 ${
                   mobileAbout ? "rotate-180" : ""
                 }`}
               >
@@ -321,13 +313,13 @@ export default function Header() {
               </span>
             </button>
             {mobileAbout && (
-              <div className="ml-3 pl-4 border-l border-ink/10 space-y-1 py-2">
+              <div className="ml-3 pl-4 border-l border-ivory/15 space-y-1 py-2">
                 {ABOUT_LINKS.map((l) => (
                   <Link
                     key={l.href}
                     href={l.href}
                     onClick={closeAll}
-                    className="block py-1.5 text-sm text-ink-soft hover:text-gold-deep"
+                    className="block py-1.5 text-sm text-ivory/70 hover:text-gold"
                   >
                     {l.label}
                   </Link>
@@ -338,11 +330,11 @@ export default function Header() {
             <button
               onClick={() => setMobileTreatments(!mobileTreatments)}
               aria-expanded={mobileTreatments}
-              className="flex w-full items-center justify-between rounded-2xl px-4 py-3 text-base font-medium text-ink hover:bg-ink/5"
+              className="flex w-full items-center justify-between rounded-2xl px-4 py-3 text-base font-medium text-ivory hover:bg-ivory/10"
             >
               Treatments
               <span
-                className={`transition-transform text-ink-soft ${
+                className={`transition-transform text-ivory/60 ${
                   mobileTreatments ? "rotate-180" : ""
                 }`}
               >
@@ -350,10 +342,10 @@ export default function Header() {
               </span>
             </button>
             {mobileTreatments && (
-              <div className="ml-3 pl-4 border-l border-ink/10 space-y-4 py-2">
+              <div className="ml-3 pl-4 border-l border-ivory/15 space-y-4 py-2">
                 {TREATMENT_CATEGORIES.map((cat) => (
                   <div key={cat.id} className="space-y-1">
-                    <p className="font-label text-[10px] font-bold tracking-[0.2em] uppercase text-gold-deep">
+                    <p className="font-label text-[10px] font-bold tracking-[0.2em] uppercase text-gold">
                       {cat.title}
                     </p>
                     {cat.treatments.map((t) => (
@@ -361,7 +353,7 @@ export default function Header() {
                         key={t.slug}
                         href={`/${t.slug}`}
                         onClick={closeAll}
-                        className="block py-1.5 text-sm text-ink-soft hover:text-gold-deep"
+                        className="block py-1.5 text-sm text-ivory/70 hover:text-gold"
                       >
                         {t.name}
                       </Link>
@@ -373,7 +365,7 @@ export default function Header() {
                     key={c.href}
                     href={c.href}
                     onClick={closeAll}
-                    className="block py-1.5 text-sm font-semibold text-ink hover:text-gold-deep"
+                    className="block py-1.5 text-sm font-semibold text-ivory hover:text-gold"
                   >
                     {c.label}
                   </Link>
@@ -381,7 +373,7 @@ export default function Header() {
                 <Link
                   href="/treatments"
                   onClick={closeAll}
-                  className="block py-1.5 text-sm font-bold text-gold-deep"
+                  className="block py-1.5 text-sm font-bold text-gold"
                 >
                   View All Treatments →
                 </Link>
@@ -393,13 +385,13 @@ export default function Header() {
                 key={link.href}
                 href={link.href}
                 onClick={closeAll}
-                className="block rounded-2xl px-4 py-3 text-base font-medium text-ink hover:bg-ink/5"
+                className="block rounded-2xl px-4 py-3 text-base font-medium text-ivory hover:bg-ivory/10"
               >
                 {link.label}
               </Link>
             ))}
 
-            <p className="px-4 pt-2 font-label text-[10px] font-bold tracking-[0.2em] uppercase text-gold-deep">
+            <p className="px-4 pt-2 font-label text-[10px] font-bold tracking-[0.2em] uppercase text-gold">
               Locations
             </p>
             {NAV_CLINIC_LINKS.map((c) => (
@@ -407,7 +399,7 @@ export default function Header() {
                 key={`m-${c.href}`}
                 href={c.href}
                 onClick={closeAll}
-                className="block rounded-2xl px-4 py-2.5 text-sm font-medium text-ink hover:bg-ink/5"
+                className="block rounded-2xl px-4 py-2.5 text-sm font-medium text-ivory hover:bg-ivory/10"
               >
                 {c.label}
               </Link>
@@ -416,16 +408,16 @@ export default function Header() {
             <div className="pt-3 grid grid-cols-2 gap-2">
               <a
                 href={SITE.phoneHref}
-                className="border border-ink/20 text-center px-4 py-3 font-label text-[11px] font-bold tracking-[0.18em] uppercase"
+                className="border border-ivory/25 text-ivory text-center px-4 py-3 font-label text-[11px] font-bold tracking-[0.18em] uppercase"
               >
                 Call us
               </a>
               <Link
                 href="/booking"
                 onClick={closeAll}
-                className="bg-gold-bright text-ink text-center px-4 py-3.5 font-label text-xs font-bold tracking-[0.1em] uppercase"
+                className="bg-gold text-ink text-center px-4 py-3.5 font-label text-xs font-bold tracking-[0.1em] uppercase"
               >
-                Book Online
+                Book My Appointment
               </Link>
             </div>
           </nav>

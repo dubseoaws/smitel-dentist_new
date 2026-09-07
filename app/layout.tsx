@@ -1,15 +1,17 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Inter } from "next/font/google";
+import { Playfair_Display, Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ContactSection from "@/components/ContactSection";
 import ReviewsSection from "@/components/ReviewsSection";
+import HideOnContact from "@/components/HideOnContact";
+import ScrollProgress from "@/components/ScrollProgress";
 
-const cormorant = Cormorant_Garamond({
+const playfair = Playfair_Display({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
-  variable: "--font-cormorant",
+  variable: "--font-playfair",
   display: "swap",
 });
 
@@ -30,12 +32,15 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${cormorant.variable} ${inter.variable}`}>
+    <html lang="en" className={`${playfair.variable} ${inter.variable}`}>
       <body>
+        <ScrollProgress />
         <Header />
         <main>{children}</main>
         <ReviewsSection />
-        <ContactSection />
+        <HideOnContact>
+          <ContactSection />
+        </HideOnContact>
         <Footer />
       </body>
     </html>

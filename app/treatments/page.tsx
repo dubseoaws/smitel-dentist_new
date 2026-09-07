@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import TreatmentCard from "@/components/TreatmentCard";
 import MembershipBanner from "@/components/MembershipBanner";
+import SmileGallery from "@/components/SmileGallery";
 import MeetExperts from "@/components/MeetExperts";
 import { TREATMENT_CATEGORIES } from "@/lib/site-data";
 
@@ -27,7 +28,7 @@ export default function TreatmentsPage() {
               <a
                 key={cat.id}
                 href={`#${cat.id}`}
-                className="rounded-full border border-ink/20 bg-white px-5 py-2 text-[11px] font-bold tracking-widest hover:border-gold hover:text-gold-deep transition-colors"
+                className="border border-ink/20 bg-white px-5 py-2.5 font-label text-[11px] font-medium tracking-[0.16em] uppercase hover:border-gold hover:text-gold-deep transition-colors"
               >
                 {cat.title.toUpperCase()}
               </a>
@@ -56,6 +57,8 @@ export default function TreatmentsPage() {
         </section>
       ))}
 
+      <SmileGallery limit={6} className="bg-cream border-y border-ink/10" />
+
       <section className="py-16">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 text-center space-y-5">
           <h2 className="text-2xl sm:text-3xl tracking-tight">Not sure what you need?</h2>
@@ -72,7 +75,7 @@ export default function TreatmentsPage() {
         </div>
       </section>
 
-      <MeetExperts limit={3} tone="cream" />
+      <MeetExperts limit={8} columns={4} shape="circle" />
 
       <MembershipBanner />
     </>
