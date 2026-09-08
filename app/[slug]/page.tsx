@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import MembershipBanner from "@/components/MembershipBanner";
 import MeetExperts from "@/components/MeetExperts";
 import SmileGallery from "@/components/SmileGallery";
 import TreatmentPage from "@/components/TreatmentPage";
@@ -148,7 +147,6 @@ function TeamDetail({ slug }: { slug: string }) {
       </section>
       <SmileGallery limit={6} className="bg-cream border-y border-ink/10" />
       <MeetExperts limit={8} columns={4} shape="circle" />
-      <MembershipBanner />
     </>
   );
 }
@@ -234,8 +232,6 @@ function ClinicDetail({ slug }: { slug: string }) {
       <SmileGallery limit={6} className="bg-cream border-y border-ink/10" />
 
       <MeetExperts limit={8} columns={4} shape="circle" />
-
-      <MembershipBanner />
     </>
   );
 }

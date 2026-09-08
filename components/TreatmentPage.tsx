@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import MembershipBanner from "@/components/MembershipBanner";
 import MeetExperts from "@/components/MeetExperts";
 import SmileGallery from "@/components/SmileGallery";
 import TreatmentVideo, { HeroVideo } from "@/components/TreatmentVideo";
@@ -40,6 +39,10 @@ const EXTRA_VIDEOS: Record<string, string[]> = {
 // Slugs with no matching channel video use a still image in the hero instead.
 const HERO_IMAGES: Record<string, string> = {
   "dentures-london": `${CLOUDINARY}/v1765805793/acrylic-_-flexi-dentures_caf2u4.jpg`,
+  "dental-veneers-london": `${CLOUDINARY}/v1788768870/IMG_5726_csrkco.jpg`,
+  "pro-aligners-london": `${CLOUDINARY}/v1772026575/how_long_do_braces_take_to_straighten_teeth_1_prh7fp.png`,
+  "maryland-bridge-london": `${CLOUDINARY}/v1765881712/IMG_2042_2_lq57r0.jpg`,
+  "tooth-extraction-london": `${CLOUDINARY}/v1765880910/WhatsApp_Image_2025-12-03_at_3.55.59_PM_2_bvu5q7.jpg`,
 };
 
 // Drops any sentence promoting the membership plan.
@@ -912,8 +915,6 @@ export default function TreatmentPage({
           </div>
         </section>
       )}
-
-      {!hideMembership && <MembershipBanner />}
     </>
   );
 }
