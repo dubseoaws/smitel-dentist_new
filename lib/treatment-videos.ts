@@ -16,40 +16,52 @@ export const CHANNEL_VIDEO_TITLES: Record<string, string> = {
     "Emergency Dentist in London, South Kensington | Same-Day Appointments | Walk-Ins Welcome",
   TXWm6v44dJc:
     "South Kensington Medical and Dental Clinic: Luxury Medical & Dental Care",
+  "6t0x3swAIww": "What Is Composite Bonding? ✨ A Fast Way to Improve Your Smile",
+  Z2S8nGtEMKE: "Porcelain Veneers Treatment | Perfect Smile with Cosmetic Dentistry",
+  ZZTyMH2IIZA: "Composite Veneers Treatment | Natural Smile Makeover",
+  bLNstEIcrBQ: "Professional Dental Hygienist Cleaning | Healthy Teeth & Gums",
+  mWMhRZo2E54:
+    "South Kensington Medical and Dental Clinic: Luxury Medical & Dental Care",
+  "lkEY_-its4k": "Dental Crown Treatment | Restore Strength and Improve Your Smile",
+  M_ZfyFgI9y0:
+    "Dental Bridge Treatment | Replace Missing Teeth and Restore Your Smile",
+  N8_yS4Ynfso: "Root Canal Treatment | Save Your Tooth and Relieve Pain",
+  cjQ1gRfY22E:
+    "Need an Emergency Dentist in London? £30 Same-Day Appointments | SW7",
+  X0YevbTU4ws:
+    "Now Open Saturdays | Private GP & Dentist in South Kensington | Walk-Ins Welcome",
+  MrlpuYBR0K0: "White Fillings Explained | Natural Looking Tooth Repair in London",
 };
 
 export const TREATMENT_HERO_VIDEOS: Record<string, string> = {
   // Cosmetic Dentistry
   "smile-makeover-london": "bLtSMhb60HI",
   "teeth-whitening-london": "TXWm6v44dJc",
-  "composite-bonding-london": "TXWm6v44dJc",
-  "porcelain-veneers-london": "33u-MrdHaVU",
-  "composite-veneers-london": "33u-MrdHaVU",
+  "composite-bonding-london": "6t0x3swAIww",
+  "porcelain-veneers-london": "Z2S8nGtEMKE",
+  "composite-veneers-london": "ZZTyMH2IIZA",
   "dental-veneers-london": "33u-MrdHaVU",
   "tooth-contouring-london": "TXWm6v44dJc",
-  "gum-contouring-london": "TXWm6v44dJc",
-  "pro-aligners-london": "TXWm6v44dJc",
+  "gum-contouring-london": "bLtSMhb60HI",
   // Restorative & Implants
-  "missing-teeth-london": "n33iO5y6N0g",
-  "dental-implants-london": "n33iO5y6N0g",
-  "dental-crowns-london": "33u-MrdHaVU",
-  "dental-bridges-london": "n33iO5y6N0g",
-  "maryland-bridge-london": "n33iO5y6N0g",
+  "missing-teeth-london": "mWMhRZo2E54",
+  "dental-implants-london": "Huq5WJ2grKc",
+  "dental-crowns-london": "lkEY_-its4k",
+  "dental-bridges-london": "M_ZfyFgI9y0",
   "dentures-london": "bLtSMhb60HI",
   "full-dentures": "bLtSMhb60HI",
-  "root-canal-london": "JyjVdDbavkA",
+  "root-canal-london": "N8_yS4Ynfso",
   // General Dentistry
-  "dental-examination-london": "JyjVdDbavkA",
-  "white-fillings-london": "JyjVdDbavkA",
-  "tooth-extraction-london": "Huq5WJ2grKc",
-  "wisdom-tooth-extraction-london": "Huq5WJ2grKc",
-  "tmj-treatment-london": "TXWm6v44dJc",
+  "dental-examination-london": "X0YevbTU4ws",
+  "white-fillings-london": "MrlpuYBR0K0",
+  "wisdom-tooth-extraction-london": "JyjVdDbavkA",
+  "tmj-treatment-london": "mWMhRZo2E54",
   // Preventative Care
-  "hygiene-london": "ulaDPSMdx4M",
+  "hygiene-london": "bLNstEIcrBQ",
   "periodontal-london": "ulaDPSMdx4M",
   "childrens-dentistry-london": "TXWm6v44dJc",
   // Emergency Care
-  "emergency-dental-london": "Pv7tn0ULDgo",
+  "emergency-dental-london": "cjQ1gRfY22E",
 };
 
 export const FALLBACK_HERO_VIDEO = "TXWm6v44dJc";
