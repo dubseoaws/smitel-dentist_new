@@ -31,6 +31,25 @@ const TREATMENT_LINKS: { match: RegExp; slug: string }[] = [
 
 const MEMBERSHIP = /member/i;
 
+// One shared rhythm for every block so sections line up on the same grid.
+const SHELL = "mx-auto max-w-[82rem] px-5 sm:px-8";
+const BAND = "py-14 lg:py-20";
+const STACK = "space-y-10 lg:space-y-12";
+
+// Picks the column count that leaves the fewest empty cells in the last row.
+const gridCols = (count: number, max = 3) => {
+  let best = 1;
+  let bestGap = Infinity;
+  for (let c = Math.min(count, max); c >= 2; c--) {
+    const gap = (c - (count % c)) % c;
+    if (gap < bestGap) {
+      bestGap = gap;
+      best = c;
+    }
+  }
+  return ["", "lg:grid-cols-1", "lg:grid-cols-2", "lg:grid-cols-3", "lg:grid-cols-4"][best];
+};
+
 // Additional channel videos shown in a band further down the page.
 const EXTRA_VIDEOS: Record<string, string[]> = {
   "missing-teeth-london": ["lHx-p0FbocQ", "33u-MrdHaVU"],
@@ -146,27 +165,27 @@ function Cards({
   ctx: Ctx;
 }) {
   const count = block.items.length;
-  // Cards grow to fill the last row so the grid never ends ragged.
-  const basis = count % 3 === 0 || count === 5 ? "lg:basis-1/3" : "lg:basis-1/2";
+  // Equal-width columns; a short last row is left aligned rather than stretched.
+  const cols = gridCols(count);
   return (
     <section
       id={block.heading ? anchor(block.heading) : undefined}
-      className={`scroll-mt-32 ${index === 0 ? "pt-10 lg:pt-12" : "pt-20 lg:pt-28"} pb-20 lg:pb-28 ${index % 2 === 1 ? "glow-light border-y border-ink/10" : ""}`}
+      className={`scroll-mt-32 ${index === 0 ? "pt-10 lg:pt-12" : "pt-14 lg:pt-20"} pb-14 lg:pb-20 ${index % 2 === 1 ? "glow-light border-y border-ink/10" : ""}`}
     >
-      <div className="mx-auto max-w-7xl px-5 sm:px-8 space-y-14">
+      <div className={`${SHELL} ${STACK}`}>
         <SectionHead
           eyebrow={block.eyebrow}
           heading={block.heading}
           sub={block.sub}
           intro={block.intro}
         />
-        <div className="flex flex-wrap border-l border-t border-ink/10">
+        <div className={`grid sm:grid-cols-2 ${cols} border-l border-t border-ink/10`}>
           {block.items.map((item, i) => {
             const href = treatmentHref(item.title, ctx);
             return (
               <article
                 key={item.title}
-                className={`group relative grow basis-full sm:basis-1/2 ${basis} border-r border-b border-ink/10 bg-ivory p-9 transition-colors duration-300 hover:bg-white`}
+                className="group relative flex flex-col border-r border-b border-ink/10 bg-ivory p-8 transition-colors duration-300 hover:bg-white"
               >
                 <span className="font-display text-5xl leading-none text-gold/25 transition-colors duration-300 group-hover:text-gold/60">
                   {String(i + 1).padStart(2, "0")}
@@ -223,23 +242,24 @@ function Cards({
 }
 
 function Steps({ block }: { block: Extract<ContentBlock, { kind: "steps" }> }) {
+  const cols = gridCols(block.items.length, 4);
   return (
     <section
       id={block.heading ? anchor(block.heading) : undefined}
-      className="scroll-mt-32 relative overflow-hidden bg-ink text-ivory py-20 lg:py-28"
+      className={`scroll-mt-32 relative overflow-hidden bg-ink text-ivory ${BAND}`}
     >
       <span
         className="pointer-events-none absolute -left-32 top-1/3 h-96 w-96 rounded-full bg-gold/10 blur-3xl"
         aria-hidden
       />
-      <div className="relative mx-auto max-w-7xl px-5 sm:px-8 space-y-16">
+      <div className={`relative ${SHELL} ${STACK}`}>
         <SectionHead
           eyebrow={block.eyebrow}
           heading={block.heading}
           sub={block.sub}
           tone="dark"
         />
-        <ol className="relative grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+        <ol className={`relative grid gap-10 sm:grid-cols-2 ${cols}`}>
           <span
             className="pointer-events-none absolute left-0 right-0 top-7 hidden h-px bg-ivory/15 lg:block"
             aria-hidden
@@ -286,9 +306,9 @@ function Stories({
   return (
     <section
       id={block.heading ? anchor(block.heading) : undefined}
-      className={`scroll-mt-32 py-20 lg:py-28 ${index % 2 === 1 ? "glow-light border-y border-ink/10" : ""}`}
+      className={`scroll-mt-32 ${BAND} ${index % 2 === 1 ? "glow-light border-y border-ink/10" : ""}`}
     >
-      <div className="mx-auto max-w-7xl px-5 sm:px-8 space-y-14">
+      <div className={`${SHELL} ${STACK}`}>
         <SectionHead
           eyebrow={block.eyebrow}
           heading={block.heading}
@@ -439,9 +459,9 @@ function Pricing({
   return (
     <section
       id={block.heading ? anchor(block.heading) : undefined}
-      className="scroll-mt-32 glow-light border-y border-ink/10 py-20 lg:py-28"
+      className={`scroll-mt-32 glow-light border-y border-ink/10 ${BAND}`}
     >
-      <div className="mx-auto max-w-7xl px-5 sm:px-8 space-y-14">
+      <div className={`${SHELL} ${STACK}`}>
         <SectionHead eyebrow={block.eyebrow} heading={block.heading} intro={intro} />
         {rows.length > 0 && (
           <div className="border border-ink/10 bg-white">
@@ -541,9 +561,9 @@ function ComparisonTable({
   return (
     <section
       id={block.heading ? anchor(block.heading) : undefined}
-      className={`scroll-mt-32 py-20 lg:py-28 ${index % 2 === 1 ? "glow-light border-y border-ink/10" : ""}`}
+      className={`scroll-mt-32 ${BAND} ${index % 2 === 1 ? "glow-light border-y border-ink/10" : ""}`}
     >
-      <div className="mx-auto max-w-7xl px-5 sm:px-8 space-y-14">
+      <div className={`${SHELL} ${STACK}`}>
         <SectionHead
           eyebrow={block.eyebrow}
           heading={block.heading}
@@ -597,15 +617,15 @@ function Checklist({
   return (
     <section
       id={block.heading ? anchor(block.heading) : undefined}
-      className={`scroll-mt-32 py-20 lg:py-28 ${index % 2 === 1 ? "glow-light border-y border-ink/10" : ""}`}
+      className={`scroll-mt-32 ${BAND} ${index % 2 === 1 ? "glow-light border-y border-ink/10" : ""}`}
     >
-      <div className="mx-auto max-w-7xl px-5 sm:px-8 space-y-14">
+      <div className={`${SHELL} ${STACK}`}>
         <SectionHead eyebrow={block.eyebrow} heading={block.heading} sub={block.sub} />
-        <ul className="flex flex-wrap border-l border-t border-ink/10">
+        <ul className="grid sm:grid-cols-2 border-l border-t border-ink/10">
           {block.items.map((item) => (
             <li
               key={item}
-              className="flex grow basis-full items-start gap-4 border-r border-b border-ink/10 bg-ivory p-7 text-[15px] text-ink-soft leading-[1.75] sm:basis-1/2"
+              className="flex items-start gap-4 border-r border-b border-ink/10 bg-ivory p-7 text-[15px] text-ink-soft leading-[1.75]"
             >
               <span
                 className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center bg-gold text-[11px] font-bold text-ink"
@@ -625,7 +645,7 @@ function Checklist({
 function Quote({ block }: { block: Extract<ContentBlock, { kind: "prose" }> }) {
   const [lead, ...rest] = block.paragraphs;
   return (
-    <section className="relative overflow-hidden bg-ink text-ivory py-20 lg:py-28">
+    <section className={`relative overflow-hidden bg-ink text-ivory ${BAND}`}>
       <span
         className="pointer-events-none absolute -right-20 bottom-0 h-80 w-80 rounded-full bg-gold/10 blur-3xl"
         aria-hidden
@@ -666,7 +686,7 @@ function Prose({
   return (
     <section
       id={block.heading ? anchor(block.heading) : undefined}
-      className={`scroll-mt-32 py-20 lg:py-28 ${index % 2 === 1 ? "glow-light border-y border-ink/10" : ""}`}
+      className={`scroll-mt-32 ${BAND} ${index % 2 === 1 ? "glow-light border-y border-ink/10" : ""}`}
     >
       <div className="mx-auto max-w-3xl px-5 sm:px-8 space-y-6">
         <SectionHead eyebrow={block.eyebrow} heading={block.heading} sub={block.sub} />
@@ -815,7 +835,7 @@ export default function TreatmentPage({
           aria-label="On this page"
           className="sticky top-[72px] lg:top-[75px] z-30 border-b border-ink/10 bg-ivory/95 backdrop-blur"
         >
-          <div className="mx-auto flex max-w-7xl gap-7 overflow-x-auto px-5 sm:px-8 py-4">
+          <div className={`flex gap-7 overflow-x-auto py-4 ${SHELL}`}>
             {jumpLinks.map((heading) => (
               <a
                 key={heading}
@@ -895,7 +915,7 @@ export default function TreatmentPage({
 
       {related.length > 0 && (
         <section className="py-16 lg:py-20">
-          <div className="mx-auto max-w-7xl px-5 sm:px-8">
+          <div className={SHELL}>
             <div className="flex items-end justify-between gap-6 mb-10">
               <h2 className="display-xl text-[1.75rem] sm:text-[2rem]">
                 More {category.title}
