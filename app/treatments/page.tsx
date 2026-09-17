@@ -5,16 +5,15 @@ import MembershipBanner from "@/components/MembershipBanner";
 import SmileGallery from "@/components/SmileGallery";
 import MeetExperts from "@/components/MeetExperts";
 import { TREATMENT_CATEGORIES } from "@/lib/site-data";
+import { PAGE_JSONLD, pageMetadata } from "@/lib/seo";
+import { JsonLdBlocks } from "@/components/JsonLd";
 
-export const metadata: Metadata = {
-  title: "Our Treatments",
-  description:
-    "From routine preventative care to complex cosmetic transformations, we offer a full spectrum of dental services under one roof.",
-};
+export const metadata: Metadata = pageMetadata("/treatments");
 
 export default function TreatmentsPage() {
   return (
     <>
+      <JsonLdBlocks blocks={PAGE_JSONLD["/treatments"]} />
       <section className="bg-cream py-16 lg:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <p className="eyebrow mb-3">Comprehensive Care</p>

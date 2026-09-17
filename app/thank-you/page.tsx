@@ -1,15 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { SITE } from "@/lib/site-data";
+import { pageMetadata } from "@/lib/seo";
 import MeetExperts from "@/components/MeetExperts";
 import SmileGallery from "@/components/SmileGallery";
 
-export const metadata: Metadata = {
-  title: "Thank You",
-  description:
-    "Your appointment is confirmed, we're looking forward to welcoming you to the clinic.",
-  robots: { index: false },
-};
+export const metadata: Metadata = pageMetadata("/thank-you");
 
 export default function ThankYouPage() {
   return (

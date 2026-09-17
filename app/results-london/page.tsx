@@ -3,6 +3,8 @@ import CaseStudies from "@/components/CaseStudies";
 import SmileGallery from "@/components/SmileGallery";
 import MeetExperts from "@/components/MeetExperts";
 import TreatmentBlocks from "@/components/TreatmentBlocks";
+import { PAGE_JSONLD, pageMetadata } from "@/lib/seo";
+import { JsonLdBlocks } from "@/components/JsonLd";
 import type { ContentBlock } from "@/lib/treatment-content";
 
 // Answers are verbatim copy already published elsewhere on the site.
@@ -48,15 +50,12 @@ const RESULTS_FAQ: ContentBlock[] = [
   },
 ];
 
-export const metadata: Metadata = {
-  title: "Real People, Real Smiles",
-  description:
-    "We take pride in changing lives, one smile at a time. Browse our gallery of recent case studies.",
-};
+export const metadata: Metadata = pageMetadata("/results-london");
 
 export default function ResultsPage() {
   return (
     <>
+      <JsonLdBlocks blocks={PAGE_JSONLD["/results-london"]} />
       <section className="bg-cream py-16 lg:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <p className="eyebrow mb-3">Transformations</p>

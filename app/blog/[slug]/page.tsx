@@ -8,6 +8,8 @@ import ContactSection from "@/components/ContactSection";
 import MeetExperts from "@/components/MeetExperts";
 import SmileGallery from "@/components/SmileGallery";
 import { ALL_BLOG_POSTS, BLOG_AUTHOR } from "@/lib/blog-posts";
+import { SEO_KEYWORDS, SITE_URL, TITLE_SUFFIX } from "@/lib/seo";
+import JsonLd from "@/components/JsonLd";
 import { SITE } from "@/lib/site-data";
 
 const AUTHOR_ROLE = "Dental Care Team";
@@ -37,15 +39,27 @@ export async function generateMetadata({
   const { slug } = await params;
   const post = ALL_BLOG_POSTS.find((p) => p.slug === slug);
   if (!post) return {};
+  const url = `${SITE_URL}/blog/${post.slug}`;
   return {
-    title: post.title,
+    title: { absolute: post.title + TITLE_SUFFIX },
     description: post.excerpt,
+    keywords: SEO_KEYWORDS,
+    robots: { index: true, follow: true },
+    alternates: { canonical: url },
     openGraph: {
-      title: post.title,
+      title: { absolute: post.title },
       description: post.excerpt,
-      images: post.image ? [post.image] : undefined,
+      url,
       type: "article",
       publishedTime: post.iso,
+      authors: [BLOG_AUTHOR],
+      images: [{ url: post.image, width: 1200, height: 630, alt: post.title }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: { absolute: post.title },
+      description: post.excerpt,
+      images: [post.image],
     },
   };
 }
@@ -64,8 +78,54 @@ export default async function BlogPostPage({
     (p) => p.slug !== post.slug && p.category === post.category
   ).slice(0, 3);
 
+  const url = `${SITE_URL}/blog/${post.slug}`;
+
   return (
     <>
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          headline: post.title,
+          description: post.excerpt,
+          image: post.image,
+          url,
+          datePublished: post.iso,
+          dateModified: post.iso,
+          inLanguage: "en-GB",
+          isAccessibleForFree: true,
+          author: {
+            "@type": "Person",
+            name: BLOG_AUTHOR,
+            worksFor: {
+              "@type": "MedicalOrganization",
+              name: "Smile Dentist",
+              url: SITE_URL,
+            },
+          },
+          publisher: {
+            "@type": "MedicalOrganization",
+            name: "Smile Dentist",
+            url: SITE_URL,
+            logo: {
+              "@type": "ImageObject",
+              url: `${SITE_URL}/icon-512.png`,
+            },
+          },
+          mainEntityOfPage: { "@type": "WebPage", "@id": url },
+        }}
+      />
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: `${SITE_URL}/` },
+            { "@type": "ListItem", position: 2, name: "Blog", item: `${SITE_URL}/blog` },
+            { "@type": "ListItem", position: 3, name: post.title, item: url },
+          ],
+        }}
+      />
       <section className="relative overflow-hidden bg-ink text-ivory">
         <span
           className="pointer-events-none absolute -right-24 -top-24 h-96 w-96 rounded-full bg-gold/10 blur-3xl"

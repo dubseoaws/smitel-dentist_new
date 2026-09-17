@@ -4,12 +4,10 @@ import Link from "next/link";
 import MeetExperts from "@/components/MeetExperts";
 import SmileGallery from "@/components/SmileGallery";
 import { SITE, CLINICS } from "@/lib/site-data";
+import { PAGE_JSONLD, pageMetadata } from "@/lib/seo";
+import { JsonLdBlocks } from "@/components/JsonLd";
 
-export const metadata: Metadata = {
-  title: "Contact Us",
-  description:
-    "Two clinics across Central London. Same team, same prices, same exceptional care.",
-};
+export const metadata: Metadata = pageMetadata("/contact");
 
 const MAP_QUERIES: Record<string, string> = {
   "south-kensington": "20 Old Brompton Road, South Kensington, London SW7 3DL",
@@ -21,6 +19,7 @@ export default function ContactPage() {
 
   return (
     <>
+      <JsonLdBlocks blocks={PAGE_JSONLD["/contact"]} />
       {/* Intro */}
       <section className="grid lg:grid-cols-[1fr_1fr] border-b border-ink/10">
         <div className="glow-light px-5 sm:px-10 lg:px-14 py-16 lg:py-20 flex flex-col justify-center space-y-6">

@@ -6,14 +6,12 @@ import SmileGallery from "@/components/SmileGallery";
 import TeamGrid from "@/components/TeamGrid";
 import TreatmentBlocks from "@/components/TreatmentBlocks";
 import { CLOUDINARY, SITE } from "@/lib/site-data";
+import { PAGE_JSONLD, pageMetadata } from "@/lib/seo";
+import { JsonLdBlocks } from "@/components/JsonLd";
 import type { ContentBlock } from "@/lib/treatment-content";
 
 // Copy sourced from www.smiledentist.co.uk/cosmetic-dentistry-london
-export const metadata: Metadata = {
-  title: "Cosmetic Dentistry in London",
-  description:
-    "From subtle enhancements to comprehensive smile makeovers, our GDC-registered team uses digital planning and minimally invasive techniques to help you achieve the smile you want.",
-};
+export const metadata: Metadata = pageMetadata("/cosmetic-dentistry-london");
 
 const HERO_IMAGE = `${CLOUDINARY}/v1765805808/gum-contouring_k46rrb.jpg`;
 
@@ -160,6 +158,7 @@ const PATIENT_STORIES = [
 export default function CosmeticDentistryPage() {
   return (
     <>
+      <JsonLdBlocks blocks={PAGE_JSONLD["/cosmetic-dentistry-london"]} />
       <section className="grid bg-ink text-ivory lg:grid-cols-[1fr_1fr]">
         <div className="flex flex-col justify-center gap-5 px-5 sm:px-10 lg:px-12 py-12 lg:py-14">
           <Link
