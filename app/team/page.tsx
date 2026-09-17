@@ -5,15 +5,15 @@ import TeamGrid from "@/components/TeamGrid";
 import SmileGallery from "@/components/SmileGallery";
 import GoogleG from "@/components/GoogleG";
 import { IMAGES, YASHA_FULL_BIO, SITE, REVIEW_US_URL } from "@/lib/site-data";
+import { PAGE_JSONLD, pageMetadata } from "@/lib/seo";
+import { JsonLdBlocks } from "@/components/JsonLd";
 
-export const metadata: Metadata = {
-  title: "Our Team",
-  description: "Meet the team dedicated to the art and science of your smile.",
-};
+export const metadata: Metadata = pageMetadata("/team");
 
 export default function TeamPage() {
   return (
     <>
+      <JsonLdBlocks blocks={PAGE_JSONLD["/team"]} />
       {/* Intro */}
       <section className="grid lg:grid-cols-[1fr_1fr] border-b border-ink/10">
         <div className="glow-light px-5 sm:px-10 lg:px-14 py-16 lg:py-20 flex flex-col justify-center space-y-6">

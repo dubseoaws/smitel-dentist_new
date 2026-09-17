@@ -1,16 +1,17 @@
 import type { Metadata } from "next";
 import TreatmentPage from "@/components/TreatmentPage";
-import { ALL_TREATMENTS } from "@/lib/site-data";
+import { PAGE_JSONLD, pageMetadata } from "@/lib/seo";
+import { JsonLdBlocks } from "@/components/JsonLd";
 
 const SLUG = "smile-makeover-london";
 
-const treatment = ALL_TREATMENTS.find((t) => t.slug === SLUG)!;
-
-export const metadata: Metadata = {
-  title: treatment.name,
-  description: treatment.description,
-};
+export const metadata: Metadata = pageMetadata(`/${SLUG}`);
 
 export default function SmileMakeoverPage() {
-  return <TreatmentPage slug={SLUG} hideMembership />;
+  return (
+    <>
+      <JsonLdBlocks blocks={PAGE_JSONLD[`/${SLUG}`]} />
+      <TreatmentPage slug={SLUG} hideMembership />
+    </>
+  );
 }

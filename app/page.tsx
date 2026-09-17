@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { Metadata } from "next";
 import Hero from "@/components/Hero";
 import TreatmentCard from "@/components/TreatmentCard";
 import VideoSection from "@/components/VideoSection";
@@ -7,6 +8,8 @@ import TreatmentBlocks from "@/components/TreatmentBlocks";
 import TeamGrid from "@/components/TeamGrid";
 import SmileGallery from "@/components/SmileGallery";
 import GoogleG from "@/components/GoogleG";
+import { JsonLdBlocks } from "@/components/JsonLd";
+import { PAGE_JSONLD, pageMetadata } from "@/lib/seo";
 import {
   ALL_TREATMENTS,
   IMAGES,
@@ -151,6 +154,8 @@ const COMFORT_POINTS = [
   "Stress-free visits, start to finish",
 ];
 
+export const metadata: Metadata = pageMetadata("/");
+
 export default function HomePage() {
   const featured = FEATURED_SLUGS.map(
     (slug) => ALL_TREATMENTS.find((t) => t.slug === slug)!
@@ -158,6 +163,7 @@ export default function HomePage() {
 
   return (
     <>
+      <JsonLdBlocks blocks={PAGE_JSONLD["/"]} />
       <Hero />
 
       {/* Before & after strip */}

@@ -1,19 +1,18 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { SITE, MEMBERSHIP } from "@/lib/site-data";
+import { PAGE_JSONLD, pageMetadata } from "@/lib/seo";
+import { JsonLdBlocks } from "@/components/JsonLd";
 import MeetExperts from "@/components/MeetExperts";
 import SmileGallery from "@/components/SmileGallery";
 import CaseStudies from "@/components/CaseStudies";
 
-export const metadata: Metadata = {
-  title: "Membership",
-  description:
-    "50% Off On All Dental Treatment. All-in-One Dental Membership Only £20/month. Add family members for just £10/month.",
-};
+export const metadata: Metadata = pageMetadata("/membership");
 
 export default function MembershipPage() {
   return (
     <>
+      <JsonLdBlocks blocks={PAGE_JSONLD["/membership"]} />
       {/* Sign-up pause notice */}
       <section className="bg-ink text-ivory border-b border-ink/10 px-5 sm:px-10 lg:px-12 py-5">
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">

@@ -2,18 +2,17 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { FEE_SECTIONS, SITE, IMAGES } from "@/lib/site-data";
+import { PAGE_JSONLD, pageMetadata } from "@/lib/seo";
+import { JsonLdBlocks } from "@/components/JsonLd";
 import MeetExperts from "@/components/MeetExperts";
 import SmileGallery from "@/components/SmileGallery";
 
-export const metadata: Metadata = {
-  title: "Fees",
-  description:
-    "Transparent Pricing. Exclusive Value. Private dentistry in South Kensington doesn't have to cost a fortune. Join our membership and save 50% instantly.",
-};
+export const metadata: Metadata = pageMetadata("/fees");
 
 export default function FeesPage() {
   return (
     <>
+      <JsonLdBlocks blocks={PAGE_JSONLD["/fees"]} />
       <section className="bg-cream py-16 lg:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <p className="eyebrow mb-3">Fees &amp; Membership</p>

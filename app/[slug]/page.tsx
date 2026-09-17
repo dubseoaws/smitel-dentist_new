@@ -15,8 +15,17 @@ import {
   YASHA_FULL_BIO,
 } from "@/lib/site-data";
 import { TREATMENT_CONTENT } from "@/lib/treatment-content";
+import { PAGE_JSONLD, pageMetadata } from "@/lib/seo";
+import { JsonLdBlocks } from "@/components/JsonLd";
+import ContentPage from "@/components/ContentPage";
+import { PAGE_CONTENT } from "@/lib/page-content";
 
 type Params = { slug: string };
+
+// Live pages that have no bespoke local template (dentures, hubs, legal).
+const CONTENT_SLUGS = Object.keys(PAGE_CONTENT)
+  .filter((path) => path.split("/").length === 2)
+  .map((path) => path.slice(1));
 
 export function generateStaticParams(): Params[] {
   return [
@@ -26,6 +35,7 @@ export function generateStaticParams(): Params[] {
     })),
     ...TEAM.map((m) => ({ slug: m.slug })),
     ...CLINICS.map((c) => ({ slug: c.slug })),
+    ...CONTENT_SLUGS.map((slug) => ({ slug })),
   ];
 }
 
@@ -35,13 +45,7 @@ export async function generateMetadata({
   params: Promise<Params>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const treatment = ALL_TREATMENTS.find((t) => t.slug === slug);
-  if (treatment) return { title: treatment.name, description: treatment.description };
-  const member = TEAM.find((m) => m.slug === slug);
-  if (member) return { title: member.name, description: member.bio };
-  const clinic = CLINICS.find((c) => c.slug === slug);
-  if (clinic) return { title: `${clinic.name} Clinic` };
-  return {};
+  return pageMetadata(`/${slug}`);
 }
 
 export default async function DetailPage({ params }: { params: Promise<Params> }) {
@@ -56,11 +60,30 @@ export default async function DetailPage({ params }: { params: Promise<Params> }
   const clinic = CLINICS.find((c) => c.slug === slug);
   if (clinic) return <ClinicDetail slug={slug} />;
 
+  const content = PAGE_CONTENT[`/${slug}`];
+  if (content) {
+    return (
+      <>
+        <PageJsonLd slug={slug} />
+        <ContentPage content={content} />
+      </>
+    );
+  }
+
   notFound();
 }
 
 function TreatmentDetail({ slug }: { slug: string }) {
-  return <TreatmentPage slug={slug} />;
+  return (
+    <>
+      <PageJsonLd slug={slug} />
+      <TreatmentPage slug={slug} />
+    </>
+  );
+}
+
+function PageJsonLd({ slug }: { slug: string }) {
+  return <JsonLdBlocks blocks={PAGE_JSONLD[`/${slug}`] ?? []} />;
 }
 
 function TeamDetail({ slug }: { slug: string }) {
@@ -69,6 +92,7 @@ function TeamDetail({ slug }: { slug: string }) {
 
   return (
     <>
+      <PageJsonLd slug={slug} />
       <section className="bg-cream py-16 lg:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 grid gap-12 lg:grid-cols-2 lg:items-start">
           <div>
@@ -156,6 +180,7 @@ function ClinicDetail({ slug }: { slug: string }) {
 
   return (
     <>
+      <PageJsonLd slug={slug} />
       <section className="bg-cream py-16 lg:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <p className="eyebrow mb-3">Our Clinics</p>

@@ -4,6 +4,7 @@ import BlogListing from "@/components/BlogListing";
 import MeetExperts from "@/components/MeetExperts";
 import SmileGallery from "@/components/SmileGallery";
 import { ALL_BLOG_POSTS, BLOG_PER_PAGE } from "@/lib/blog-posts";
+import { OG_IMAGE, OG_LOCALE, SEO_KEYWORDS, SITE_NAME, SITE_URL, TITLE_SUFFIX } from "@/lib/seo";
 
 const TOTAL_PAGES = Math.ceil(ALL_BLOG_POSTS.length / BLOG_PER_PAGE);
 
@@ -17,7 +18,31 @@ export async function generateMetadata({
   params: Promise<{ page: string }>;
 }): Promise<Metadata> {
   const { page } = await params;
-  return { title: `Dental Health Blog – Page ${page}` };
+  const title = `Dental Health Blog — Page ${page} | Smile Dentist London`;
+  const url = `${SITE_URL}/blog/page/${page}`;
+  const ogDescription =
+    "Expert dental health advice, tips, and insights about cosmetic dentistry, oral care, and dental treatments.";
+  return {
+    title: { absolute: title + TITLE_SUFFIX },
+    description: `Expert dental health advice, tips, and insights — page ${page}. Browse our dental blog for oral care guidance from our experienced London team.`,
+    keywords: SEO_KEYWORDS,
+    alternates: { canonical: url },
+    openGraph: {
+      title: { absolute: title },
+      description: ogDescription,
+      url,
+      siteName: SITE_NAME,
+      locale: OG_LOCALE,
+      type: "website",
+      images: [OG_IMAGE],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: { absolute: title },
+      description: ogDescription,
+      images: [OG_IMAGE],
+    },
+  };
 }
 
 export default async function BlogPaginatedPage({
