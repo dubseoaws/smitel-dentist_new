@@ -3,6 +3,9 @@ import Image from "next/image";
 import Link from "next/link";
 import MeetExperts from "@/components/MeetExperts";
 import SmileGallery from "@/components/SmileGallery";
+import FaqSection from "@/components/FaqSection";
+import ContactForm from "@/components/ContactForm";
+import { CONTACT_FAQS } from "@/lib/faqs";
 import { SITE, CLINICS } from "@/lib/site-data";
 import { PAGE_JSONLD, pageMetadata } from "@/lib/seo";
 import { JsonLdBlocks } from "@/components/JsonLd";
@@ -271,6 +274,28 @@ export default function ContactPage() {
           />
         </div>
       </section>
+      {/* Enquiry form */}
+      <section id="enquiry" className="scroll-mt-28 grid border-b border-ink/10 lg:grid-cols-[0.8fr_1.2fr]">
+        <div className="glow-light flex flex-col justify-start px-5 sm:px-10 lg:px-12 py-14 lg:py-20">
+          <div className="lg:sticky lg:top-28 space-y-5">
+            <p className="eyebrow">Send Us A Message</p>
+            <h2 className="text-3xl sm:text-4xl tracking-tight">Ask us anything</h2>
+            <span className="block h-px w-16 bg-gold" aria-hidden />
+            <p className="max-w-md text-[15px] leading-relaxed text-ink-soft">
+              Prefer to write? Send us the details and a member of the team will get back
+              to you.
+            </p>
+            <a href={`mailto:${SITE.email}`} className="link-underline text-[15px]">
+              {SITE.email}
+            </a>
+          </div>
+        </div>
+        <div className="bg-white px-5 sm:px-10 lg:px-12 py-14 lg:py-20 lg:border-l border-ink/10">
+          <ContactForm />
+        </div>
+      </section>
+
+      <FaqSection items={CONTACT_FAQS} />
       <SmileGallery limit={6} className="bg-cream border-y border-ink/10" />
       <MeetExperts limit={8} columns={4} shape="circle" />
     </>

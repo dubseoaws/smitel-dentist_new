@@ -6,6 +6,8 @@ import MeetExperts from "@/components/MeetExperts";
 import SmileGallery from "@/components/SmileGallery";
 import TreatmentPage from "@/components/TreatmentPage";
 import TreatmentCard from "@/components/TreatmentCard";
+import FaqSection from "@/components/FaqSection";
+import { GENERAL_FAQS, PAGE_FAQS } from "@/lib/faqs";
 import {
   ALL_TREATMENTS,
   TREATMENT_CATEGORIES,
@@ -62,10 +64,13 @@ export default async function DetailPage({ params }: { params: Promise<Params> }
 
   const content = PAGE_CONTENT[`/${slug}`];
   if (content) {
+    const hasFaqBlock = content.blocks.some((block) => block.kind === "faq");
+    const fallbackFaqs = PAGE_FAQS[`/${slug}`];
     return (
       <>
         <PageJsonLd slug={slug} />
         <ContentPage content={content} />
+        {!hasFaqBlock && fallbackFaqs && <FaqSection items={fallbackFaqs} />}
       </>
     );
   }
@@ -170,6 +175,7 @@ function TeamDetail({ slug }: { slug: string }) {
         </div>
       </section>
       <SmileGallery limit={6} className="bg-cream border-y border-ink/10" />
+      <FaqSection items={GENERAL_FAQS} />
       <MeetExperts limit={8} columns={4} shape="circle" />
     </>
   );

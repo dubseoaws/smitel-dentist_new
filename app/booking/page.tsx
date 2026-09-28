@@ -3,6 +3,8 @@ import { Suspense } from "react";
 import BookingFlow from "@/components/BookingFlow";
 import MeetExperts from "@/components/MeetExperts";
 import SmileGallery from "@/components/SmileGallery";
+import FaqSection from "@/components/FaqSection";
+import { BOOKING_FAQS } from "@/lib/faqs";
 import { PAGE_JSONLD, pageMetadata } from "@/lib/seo";
 import { JsonLdBlocks } from "@/components/JsonLd";
 
@@ -20,6 +22,7 @@ export default async function BookingPage({
       <Suspense>
         <BookingFlow preSelectedCategory={category} />
       </Suspense>
+      <FaqSection items={BOOKING_FAQS} />
       <SmileGallery limit={6} className="bg-cream border-y border-ink/10" />
       <MeetExperts limit={8} columns={4} shape="circle" />
     </>

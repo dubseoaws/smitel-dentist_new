@@ -6,6 +6,8 @@ import { JsonLdBlocks } from "@/components/JsonLd";
 import MeetExperts from "@/components/MeetExperts";
 import SmileGallery from "@/components/SmileGallery";
 import CaseStudies from "@/components/CaseStudies";
+import FaqSection from "@/components/FaqSection";
+import { MEMBERSHIP_FAQS } from "@/lib/faqs";
 
 export const metadata: Metadata = pageMetadata("/membership");
 
@@ -243,6 +245,8 @@ export default function MembershipPage() {
       </section>
 
       <CaseStudies />
+
+      <FaqSection items={MEMBERSHIP_FAQS} />
 
       <SmileGallery limit={6} className="bg-cream border-y border-ink/10" />
 

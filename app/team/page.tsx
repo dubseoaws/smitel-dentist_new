@@ -4,6 +4,8 @@ import Link from "next/link";
 import TeamGrid from "@/components/TeamGrid";
 import SmileGallery from "@/components/SmileGallery";
 import GoogleG from "@/components/GoogleG";
+import FaqSection from "@/components/FaqSection";
+import { TEAM_FAQS } from "@/lib/faqs";
 import { IMAGES, YASHA_FULL_BIO, SITE, REVIEW_US_URL } from "@/lib/site-data";
 import { PAGE_JSONLD, pageMetadata } from "@/lib/seo";
 import { JsonLdBlocks } from "@/components/JsonLd";
@@ -184,20 +186,30 @@ export default function TeamPage() {
         </div>
       </section>
 
+      {/* FAQ */}
+      <FaqSection items={TEAM_FAQS} className="border-b border-ink/10" />
+
       {/* Careers */}
-      <section className="glow-dark text-ivory px-5 sm:px-10 lg:px-12 py-14 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
-        <div className="space-y-4 max-w-2xl">
-          <p className="eyebrow">Careers</p>
-          <h2 className="text-3xl">Join Our Team</h2>
-          <p className="text-sm text-ivory/60 leading-relaxed">
-            We are always looking for exceptional talent to join our South Kensington
-            clinic.
-          </p>
+      <section className="glow-dark text-ivory py-16 lg:py-20">
+        <div className="mx-auto max-w-7xl px-5 sm:px-8 grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
+          <div className="space-y-5">
+            <p className="eyebrow !text-gold before:!bg-gold">Careers</p>
+            <h2 className="display-xl text-[1.75rem] sm:text-[2rem] lg:text-[2.25rem] leading-[1.15]">
+              Join Our Team
+            </h2>
+            <span className="block h-px w-16 bg-gold" aria-hidden />
+            <p className="max-w-xl text-[15px] text-ivory/60 leading-relaxed">
+              We are always looking for exceptional talent to join our South Kensington
+              clinic.
+            </p>
+          </div>
+          <div className="lg:justify-self-end">
+            <a href="mailto:careers@smiledentist.co.uk" className="btn-gold w-fit">
+              Send us your CV
+              <span aria-hidden>→</span>
+            </a>
+          </div>
         </div>
-        <a href="mailto:careers@smiledentist.co.uk" className="btn-gold w-fit">
-          Send us your CV
-          <span aria-hidden>→</span>
-        </a>
       </section>
 
       <SmileGallery limit={6} className="bg-cream border-y border-ink/10" />

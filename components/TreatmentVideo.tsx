@@ -19,10 +19,11 @@ function VideoTile({
   sizes?: string;
 }) {
   const [playing, setPlaying] = useState(false);
-  // Not every upload has a 1280x720 thumbnail, so fall back to the standard one.
-  const [thumb, setThumb] = useState(
-    `https://i.ytimg.com/vi/${video.id}/${priority ? "maxresdefault" : "hqdefault"}.jpg`
-  );
+  // Not every upload has the larger thumbnails, so step down until one loads.
+  const thumbs = priority
+    ? ["maxresdefault", "sddefault", "hqdefault"]
+    : ["hqdefault"];
+  const [thumbIndex, setThumbIndex] = useState(0);
 
   return (
     <div className={`overflow-hidden bg-ink ${className}`}>
@@ -41,11 +42,11 @@ function VideoTile({
           className="group absolute inset-0 h-full w-full text-left"
         >
           <Image
-            src={thumb}
+            src={`https://i.ytimg.com/vi/${video.id}/${thumbs[thumbIndex]}.jpg`}
             alt={video.title}
             fill
             onError={() =>
-              setThumb(`https://i.ytimg.com/vi/${video.id}/sddefault.jpg`)
+              setThumbIndex((i) => Math.min(i + 1, thumbs.length - 1))
             }
             className={`${fit} opacity-90 transition-all duration-500 group-hover:opacity-100 group-hover:scale-[1.03]`}
             sizes={sizes}

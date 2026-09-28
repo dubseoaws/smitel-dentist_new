@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Playfair_Display, Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
@@ -43,6 +43,7 @@ export const metadata: Metadata = {
   description: home.description,
   keywords: SEO_KEYWORDS,
   robots: { index: true, follow: true },
+  manifest: "/manifest.webmanifest",
   openGraph: {
     siteName: SITE_NAME,
     locale: OG_LOCALE,
@@ -53,6 +54,10 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     images: [OG_IMAGE],
   },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#1b1815",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

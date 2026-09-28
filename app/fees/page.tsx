@@ -6,6 +6,8 @@ import { PAGE_JSONLD, pageMetadata } from "@/lib/seo";
 import { JsonLdBlocks } from "@/components/JsonLd";
 import MeetExperts from "@/components/MeetExperts";
 import SmileGallery from "@/components/SmileGallery";
+import FaqSection from "@/components/FaqSection";
+import { FEES_FAQS } from "@/lib/faqs";
 
 export const metadata: Metadata = pageMetadata("/fees");
 
@@ -184,6 +186,7 @@ export default function FeesPage() {
         </div>
       </section>
 
+      <FaqSection items={FEES_FAQS} />
       <SmileGallery limit={6} className="bg-cream border-y border-ink/10" />
       <MeetExperts limit={8} columns={4} shape="circle" />
     </>
