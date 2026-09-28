@@ -3,7 +3,10 @@ import Link from "next/link";
 import TreatmentCard from "@/components/TreatmentCard";
 import MembershipBanner from "@/components/MembershipBanner";
 import SmileGallery from "@/components/SmileGallery";
+import { HeroVideo } from "@/components/TreatmentVideo";
 import MeetExperts from "@/components/MeetExperts";
+import FaqSection from "@/components/FaqSection";
+import { TREATMENTS_FAQS } from "@/lib/faqs";
 import { TREATMENT_CATEGORIES } from "@/lib/site-data";
 import { PAGE_JSONLD, pageMetadata } from "@/lib/seo";
 import { JsonLdBlocks } from "@/components/JsonLd";
@@ -14,8 +17,8 @@ export default function TreatmentsPage() {
   return (
     <>
       <JsonLdBlocks blocks={PAGE_JSONLD["/treatments"]} />
-      <section className="bg-cream py-16 lg:py-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6">
+      <section className="bg-cream grid items-stretch lg:grid-cols-[1.1fr_0.9fr]">
+        <div className="px-4 sm:px-6 lg:pl-10 xl:pl-16 py-16 lg:py-24 flex flex-col justify-center">
           <p className="eyebrow mb-3">Comprehensive Care</p>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl tracking-tight">Our Treatments</h1>
           <p className="mt-5 max-w-2xl text-ink-soft leading-relaxed">
@@ -34,6 +37,7 @@ export default function TreatmentsPage() {
             ))}
           </nav>
         </div>
+        <HeroVideo id="ulaDPSMdx4M" />
       </section>
 
       {TREATMENT_CATEGORIES.map((cat, i) => (
@@ -73,6 +77,8 @@ export default function TreatmentsPage() {
           </Link>
         </div>
       </section>
+
+      <FaqSection items={TREATMENTS_FAQS} />
 
       <MeetExperts limit={8} columns={4} shape="circle" />
 

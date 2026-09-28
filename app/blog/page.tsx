@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import BlogListing from "@/components/BlogListing";
 import MeetExperts from "@/components/MeetExperts";
 import SmileGallery from "@/components/SmileGallery";
+import FaqSection from "@/components/FaqSection";
+import { GENERAL_FAQS } from "@/lib/faqs";
 import JsonLd, { JsonLdBlocks } from "@/components/JsonLd";
 import { ALL_BLOG_POSTS } from "@/lib/blog-posts";
 import { PAGE_JSONLD, SITE_URL, pageMetadata } from "@/lib/seo";
@@ -34,6 +36,7 @@ export default function BlogPage() {
       <JsonLd data={collectionPage} />
       <JsonLdBlocks blocks={PAGE_JSONLD["/blog"]} />
       <BlogListing />
+      <FaqSection items={GENERAL_FAQS} />
       <SmileGallery limit={6} className="bg-cream border-y border-ink/10" />
       <MeetExperts limit={8} columns={4} shape="circle" />
     </>

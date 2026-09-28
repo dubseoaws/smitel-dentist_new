@@ -266,6 +266,7 @@ h1, h2 {
   color: var(--color-ink);
   font-size: 1.0625rem;
   line-height: 1.85;
+  max-width: 74ch;
 }
 .blog-prose > * + * {
   margin-top: 1.35rem;
@@ -361,6 +362,120 @@ h1, h2 {
 }
 .blog-prose em {
   color: var(--color-ink-soft);
+}
+
+/* Articles arrive with a generic blue/grey utility palette from the source CMS —
+   remap those classes onto the ivory & gold system. */
+.blog-prose [class~="text-gray-900"],
+.blog-prose [class~="text-gray-800"],
+.blog-prose [class~="text-blue-900"],
+.blog-prose [class~="text-amber-900"],
+.blog-prose [class~="text-green-900"] {
+  color: var(--color-ink);
+}
+.blog-prose [class~="text-gray-700"],
+.blog-prose [class~="text-gray-600"],
+.blog-prose [class~="text-gray-500"] {
+  color: var(--color-ink-soft);
+}
+.blog-prose [class~="text-blue-600"],
+.blog-prose [class~="text-blue-700"],
+.blog-prose [class~="text-blue-800"],
+.blog-prose [class~="text-amber-800"],
+.blog-prose [class~="text-amber-700"],
+.blog-prose [class~="text-green-800"],
+.blog-prose [class~="text-green-700"],
+.blog-prose [class~="text-red-800"],
+.blog-prose [class~="text-red-700"] {
+  color: var(--color-gold-deep);
+}
+.blog-prose [class*="bg-blue-"],
+.blog-prose [class*="bg-gray-"],
+.blog-prose [class*="bg-slate-"],
+.blog-prose [class*="bg-green-"],
+.blog-prose [class*="bg-amber-"],
+.blog-prose [class*="bg-yellow-"],
+.blog-prose [class*="bg-red-"] {
+  background-color: var(--color-cream);
+  border: 1px solid rgba(185, 140, 85, 0.28);
+}
+.blog-prose [class*="bg-"][class~="p-6"],
+.blog-prose [class*="bg-"][class~="p-4"] {
+  padding: 1.75rem;
+}
+.blog-prose [class*="border-gray-"],
+.blog-prose [class*="border-blue-"],
+.blog-prose [class*="border-amber-"],
+.blog-prose [class*="border-green-"],
+.blog-prose [class*="border-red-"] {
+  border-color: rgba(185, 140, 85, 0.35);
+}
+.blog-prose [class~="border-l-4"] {
+  border-left-width: 2px;
+  border-left-color: var(--color-gold);
+}
+
+/* Callout boxes read as editorial panels, not cards. */
+.blog-prose [class*="bg-"][class*="p-"] > :first-child {
+  margin-top: 0;
+}
+.blog-prose [class*="bg-"] h2,
+.blog-prose [class*="bg-"] h3,
+.blog-prose [class*="bg-"] h4 {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: 0;
+  font-size: 1.05rem;
+  font-family: var(--font-label);
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-gold-deep);
+}
+
+/* In-article table of contents. */
+.blog-prose [class*="bg-"] ul {
+  gap: 0.4rem;
+}
+.blog-prose [class*="bg-"] ul > li::before {
+  display: none;
+}
+.blog-prose [class*="bg-"] ul > li {
+  padding-left: 0;
+}
+.blog-prose [class*="bg-"] a {
+  text-decoration: none;
+}
+.blog-prose [class*="bg-"] a:hover {
+  text-decoration: underline;
+}
+
+/* Source markup ships its own type scale; keep the article on one rhythm. */
+.blog-prose [class~="text-2xl"] {
+  font-size: 1.75rem;
+}
+.blog-prose [class~="text-xl"] {
+  font-size: 1.3rem;
+}
+.blog-prose [class~="text-lg"] {
+  font-size: 1.0625rem;
+}
+.blog-prose [class~="font-bold"],
+.blog-prose [class~="font-semibold"] {
+  font-weight: 600;
+}
+.blog-prose h2[class~="font-bold"],
+.blog-prose h3[class~="font-bold"],
+.blog-prose h4[class~="font-bold"] {
+  font-weight: 400;
+}
+.blog-prose [class~="rounded-xl"],
+.blog-prose [class~="rounded-lg"] {
+  border-radius: 0;
+}
+.blog-prose [class~="prose"],
+.blog-prose [class~="prose-lg"] {
+  max-width: none;
 }
 
 /* Marquee */

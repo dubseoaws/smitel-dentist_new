@@ -31,12 +31,13 @@ export const CHANNEL_VIDEO_TITLES: Record<string, string> = {
   X0YevbTU4ws:
     "Now Open Saturdays | Private GP & Dentist in South Kensington | Walk-Ins Welcome",
   MrlpuYBR0K0: "White Fillings Explained | Natural Looking Tooth Repair in London",
+  BIUdsbvWGrY: "Professional Teeth Whitening in London | Medical and Dental",
 };
 
 export const TREATMENT_HERO_VIDEOS: Record<string, string> = {
   // Cosmetic Dentistry
   "smile-makeover-london": "bLtSMhb60HI",
-  "teeth-whitening-london": "TXWm6v44dJc",
+  "teeth-whitening-london": "BIUdsbvWGrY",
   "composite-bonding-london": "6t0x3swAIww",
   "porcelain-veneers-london": "Z2S8nGtEMKE",
   "composite-veneers-london": "ZZTyMH2IIZA",

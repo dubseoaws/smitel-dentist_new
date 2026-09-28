@@ -598,6 +598,10 @@ export const VIDEOS = [
     title:
       "Private Dentist Appointment in South Kensington | Explained By Dr. Yasha Shirazi",
   },
+  {
+    id: "ulaDPSMdx4M",
+    title: "What Does a Dental Hygienist Do? | Essential Preventive Care Explained",
+  },
 ];
 
 export const NAV_LINKS = [
