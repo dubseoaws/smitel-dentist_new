@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   /* Warm ivory & antique-gold palette */
   --color-ivory: #fbf9f6;
@@ -508,3 +510,174 @@ h1, h2 {
   50% { transform: translateY(-10px); }
 }
 .float-slow { animation: floatY 6s ease-in-out infinite; }
+
+/* ---------- Small-screen comfort ---------- */
+body {
+  overflow-wrap: break-word;
+}
+/* Long emails/URLs must not push the layout wider than the screen */
+a[href^="mailto:"],
+a[href^="http"] {
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 639px) {
+  /* Let long CTA labels wrap instead of overflowing narrow phones */
+  .btn-primary,
+  .btn-outline,
+  .btn-gold {
+    white-space: normal;
+    justify-content: center;
+    text-align: center;
+    max-width: 100%;
+    min-height: 3rem;
+    padding-inline: 1.25rem;
+    letter-spacing: 0.12em;
+  }
+  .link-underline {
+    max-width: 100%;
+    white-space: normal;
+  }
+  /* Micro labels are hard to read on phones */
+  .text-\[9px\],
+  .text-\[10px\] {
+    font-size: 11px;
+  }
+}
+
+/* Hero video showcase */
+@keyframes eq-bar { 0%,100% { height: 30%; } 50% { height: 100%; } }
+.eq-bar { height: 30%; animation: eq-bar 0.9s ease-in-out infinite; }
+@keyframes pulse-ring { 0% { transform: scale(1); opacity: .8; } 100% { transform: scale(1.7); opacity: 0; } }
+.pulse-ring { animation: pulse-ring 2.4s cubic-bezier(.2,.7,.3,1) infinite; }
+@keyframes float-soft { 0%,100% { translate: 0 0; } 50% { translate: 0 -8px; } }
+.float-soft { animation: float-soft 6s ease-in-out infinite; }
+.float-soft-delayed { animation: float-soft 7s ease-in-out 1.5s infinite; }
+@media (prefers-reduced-motion: reduce) {
+  .eq-bar, .pulse-ring, .float-soft, .float-soft-delayed, .spin-slow { animation: none; }
+}
+
+/* Popup: blurred backdrop fade + zoom-in panel */
+@keyframes lightbox-fade { from { opacity: 0; backdrop-filter: blur(0); } to { opacity: 1; } }
+@keyframes lightbox-pop {
+  0% { opacity: 0; transform: scale(0.82) translateY(16px); filter: blur(8px); }
+  60% { opacity: 1; filter: blur(0); }
+  100% { opacity: 1; transform: scale(1) translateY(0); }
+}
+.lightbox-backdrop { animation: lightbox-fade 0.3s ease-out both; }
+.lightbox-panel { animation: lightbox-pop 0.45s cubic-bezier(0.22, 1.2, 0.36, 1) both; }
+@media (prefers-reduced-motion: reduce) {
+  .lightbox-backdrop, .lightbox-panel { animation: none; }
+}
+
+/* Mobile-friendly CTA: full-width, larger tap target and text on phones */
+.btn-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+@media (max-width: 639px) {
+  .btn-cta {
+    width: 100%;
+    min-height: 3.5rem;
+    padding: 1rem 1.25rem;
+    font-size: 0.8125rem;
+    letter-spacing: 0.12em;
+    white-space: normal;
+    line-height: 1.35;
+    gap: 0.5rem;
+  }
+}
+@media (max-width: 379px) {
+  .btn-cta {
+    letter-spacing: 0.06em;
+    padding-inline: 0.75rem;
+  }
+}
+
+/* ------------------------------------------------------------------
+   Dark mode — toggled by the `dark` class on <html> (see ThemeToggle).
+   The palette tokens are flipped so light surfaces turn dark and ink
+   text turns light. Surfaces that are already dark in light mode
+   (bg-ink bands, image overlays, ivory-on-dark text, gold buttons)
+   get the original palette back so they render exactly as before.
+   ------------------------------------------------------------------ */
+html.dark,
+html.dark header .bg-white {
+  --color-ivory: #12100e;
+  --color-cream: #1b1815;
+  --color-white: #211d19;
+  --color-ink: #f1ebe3;
+  --color-ink-soft: #b7ad9f;
+  --color-gold-deep: #d4a86f;
+  --color-sage: #4a433b;
+  color-scheme: dark;
+}
+
+html.dark
+  :is(
+    .bg-ink,
+    .bg-ink\/95,
+    .bg-ink\/90,
+    .bg-ink\/85,
+    .bg-ink\/80,
+    .bg-ink\/70,
+    .bg-ink\/60,
+    .bg-ink\/55,
+    [class*="[&>*]:bg-ink"] > *,
+    .glow-dark,
+    .hero-fade,
+    [class^="from-ink"],
+    [class*=" from-ink"],
+    [class*="bg-[#"],
+    [class^="text-ivory"],
+    [class*=" text-ivory"],
+    .bg-gold,
+    .bg-gold-bright,
+    .bg-gold\/95,
+    .btn-gold,
+    .bg-black
+  ) {
+  --color-ivory: #fbf9f6;
+  --color-cream: #f4efe8;
+  --color-white: #fff;
+  --color-ink: #1b1815;
+  --color-ink-soft: #6d665e;
+  --color-gold-deep: #9a6f3c;
+  --color-sage: #c9bfb2;
+  color-scheme: light;
+}
+
+/* Dark bands sit slightly above the page so they still read as bands */
+html.dark :is(.bg-ink, .glow-dark, [class*="[&>*]:bg-ink"] > *) {
+  --color-ink: #231f1b;
+}
+
+/* Gold hovers keep dark text for contrast */
+html.dark .btn-primary:hover,
+html.dark .hover\:bg-gold:hover,
+html.dark .hover\:bg-gold-bright:hover {
+  --color-ink: #1b1815;
+  --color-ivory: #fbf9f6;
+}
+
+html.dark .btn-outline {
+  border-color: rgba(241, 235, 227, 0.35);
+}
+html.dark .glass {
+  background: rgba(18, 16, 14, 0.85);
+  border-color: rgba(241, 235, 227, 0.1);
+}
+html.dark .blog-prose h2 {
+  border-top-color: rgba(241, 235, 227, 0.12);
+}
+html.dark .blog-prose th,
+html.dark .blog-prose td {
+  border-color: rgba(241, 235, 227, 0.14);
+}
+
+/* Photos and videos shouldn't glare against the dark page */
+html.dark main img:not([src$=".svg"]) {
+  filter: brightness(0.94);
+}

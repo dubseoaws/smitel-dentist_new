@@ -7,13 +7,13 @@ export default function MembershipBanner() {
           <div className="space-y-6">
             <p className="eyebrow !text-gold before:!bg-gold">Exclusive Membership Plan</p>
             <h2 className="font-display text-4xl sm:text-5xl leading-[1.12]">
-              50% off on all
+              50% Off
               <br />
-              dental treatment
+              Most Treatments
             </h2>
             <p className="text-ivory/70 leading-relaxed max-w-md">
-              All-in-One Dental Membership Only £20/month*. + Add Family Members For Just
-              £10/Month.
+              All-in-One Dental Membership £30 a month, or £240 a year*. Under-18s join
+              through a parent or guardian at the clinic.
             </p>
             <div className="flex flex-wrap gap-3">
               <a
@@ -38,7 +38,7 @@ export default function MembershipBanner() {
             <div className="flex items-baseline justify-between">
               <p className="font-label text-[11px] tracking-[0.22em] text-gold">GOLD MEMBER</p>
               <p className="font-display text-4xl font-semibold">
-                £20<span className="text-base text-ivory/50 font-normal">/mo</span>
+                £30<span className="text-base text-ivory/50 font-normal">/mo</span>
               </p>
             </div>
             <ul className="space-y-3 text-sm">
@@ -51,8 +51,8 @@ export default function MembershipBanner() {
                 <span className="font-semibold text-gold">50% OFF</span>
               </li>
               <li className="flex justify-between border-b border-ivory/10 pb-3">
-                <span className="text-ivory/60">Family Add-On</span>
-                <span className="font-semibold">£10/mo</span>
+                <span className="text-ivory/60">Contract</span>
+                <span className="font-semibold">12 months</span>
               </li>
             </ul>
             <p className="text-xs text-ivory/40">*12 month contract</p>

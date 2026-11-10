@@ -4,9 +4,19 @@ import MeetExperts from "@/components/MeetExperts";
 import SmileGallery from "@/components/SmileGallery";
 import TreatmentVideo, { HeroVideo } from "@/components/TreatmentVideo";
 import TreatmentCard from "@/components/TreatmentCard";
+import EmergencyOffer from "@/components/EmergencyOffer";
+import ClinicLiveStrip from "@/components/ClinicLiveStrip";
+import TrustBadges, { GoogleReviewBadge } from "@/components/TrustBadges";
 import { ALL_TREATMENTS, TREATMENT_CATEGORIES, SITE, CLOUDINARY } from "@/lib/site-data";
-import { heroVideoFor } from "@/lib/treatment-videos";
+import { HERO_EXTRA_SHORTS, heroVideoFor } from "@/lib/treatment-videos";
 import { TREATMENT_CONTENT, type ContentBlock } from "@/lib/treatment-content";
+import { OFFER_TERMS } from "@/lib/booking-data";
+
+const HERO_OFFER_NOTE: Record<string, string> = {
+  "dental-examination-london": OFFER_TERMS.exam,
+  "emergency-dental-london": OFFER_TERMS.emergency,
+  "teeth-whitening-london": OFFER_TERMS.whitening,
+};
 
 const anchor = (heading: string) =>
   heading
@@ -170,7 +180,7 @@ function Cards({
   return (
     <section
       id={block.heading ? anchor(block.heading) : undefined}
-      className={`scroll-mt-32 ${index === 0 ? "pt-10 lg:pt-12" : "pt-14 lg:pt-20"} pb-14 lg:pb-20 ${index % 2 === 1 ? "glow-light border-y border-ink/10" : ""}`}
+      className={`scroll-mt-48 ${index === 0 ? "pt-10 lg:pt-12" : "pt-14 lg:pt-20"} pb-14 lg:pb-20 ${index % 2 === 1 ? "glow-light border-y border-ink/10" : ""}`}
     >
       <div className={`${SHELL} ${STACK}`}>
         <SectionHead
@@ -246,7 +256,7 @@ function Steps({ block }: { block: Extract<ContentBlock, { kind: "steps" }> }) {
   return (
     <section
       id={block.heading ? anchor(block.heading) : undefined}
-      className={`scroll-mt-32 relative overflow-hidden bg-ink text-ivory ${BAND}`}
+      className={`scroll-mt-48 relative overflow-hidden bg-ink text-ivory ${BAND}`}
     >
       <span
         className="pointer-events-none absolute -left-32 top-1/3 h-96 w-96 rounded-full bg-gold/10 blur-3xl"
@@ -306,7 +316,7 @@ function Stories({
   return (
     <section
       id={block.heading ? anchor(block.heading) : undefined}
-      className={`scroll-mt-32 ${BAND} ${index % 2 === 1 ? "glow-light border-y border-ink/10" : ""}`}
+      className={`scroll-mt-48 ${BAND} ${index % 2 === 1 ? "glow-light border-y border-ink/10" : ""}`}
     >
       <div className={`${SHELL} ${STACK}`}>
         <SectionHead
@@ -395,7 +405,7 @@ function DoAvoid({ block }: { block: Extract<ContentBlock, { kind: "doAvoid" }> 
   return (
     <section
       id={block.heading ? anchor(block.heading) : undefined}
-      className="scroll-mt-32 grid border-y border-ink/10 lg:grid-cols-[0.85fr_1.15fr]"
+      className="scroll-mt-48 grid border-y border-ink/10 lg:grid-cols-[0.85fr_1.15fr]"
     >
       <div className="glow-light flex flex-col justify-center px-5 sm:px-10 lg:px-12 py-16 lg:py-24">
         <SectionHead heading={block.heading} sub={block.sub} />
@@ -459,7 +469,7 @@ function Pricing({
   return (
     <section
       id={block.heading ? anchor(block.heading) : undefined}
-      className={`scroll-mt-32 glow-light border-y border-ink/10 ${BAND}`}
+      className={`scroll-mt-48 glow-light border-y border-ink/10 ${BAND}`}
     >
       <div className={`${SHELL} ${STACK}`}>
         <SectionHead eyebrow={block.eyebrow} heading={block.heading} intro={intro} />
@@ -474,8 +484,17 @@ function Pricing({
                 >
                   <span className="font-display text-lg text-ink">
                     {href ? (
-                      <Link href={href} className="link-underline hover:text-gold-deep">
+                      <Link
+                        href={href}
+                        className="group/row inline-flex items-center gap-2 transition-colors hover:text-gold-deep"
+                      >
                         {row.label}
+                        <span
+                          className="text-sm text-gold-deep transition-transform group-hover/row:translate-x-1"
+                          aria-hidden
+                        >
+                          →
+                        </span>
                       </Link>
                     ) : (
                       row.label
@@ -517,7 +536,7 @@ function Pricing({
               </div>
             )}
             {standard && (
-              <div className="flex flex-col justify-center gap-6 bg-ivory p-9">
+              <div className="flex flex-col justify-center gap-6 bg-ivory p-9 max-sm:p-6">
                 <div>
                   <p className="font-label text-[11px] font-bold tracking-[0.18em] uppercase text-ink-soft">
                     {standard.label}
@@ -526,7 +545,7 @@ function Pricing({
                     {standard.value}
                   </p>
                 </div>
-                <Link href="/booking" className="btn-primary w-fit">
+                <Link href="/booking" className="btn-primary btn-cta sm:w-fit">
                   Book Consultation
                 </Link>
               </div>
@@ -535,9 +554,11 @@ function Pricing({
         )}
         {block.footnote && <p className="text-xs text-ink-soft/80">{block.footnote}</p>}
         {notes.length > 0 && (
-          <div className="grid gap-px bg-ink/10 md:grid-cols-2">
+          <div
+            className={`grid gap-px border border-ink/10 bg-ink/10 ${notes.length > 1 ? "md:grid-cols-2" : ""}`}
+          >
             {notes.map((note) => (
-              <div key={note.title} className="bg-ivory p-9">
+              <div key={note.title} className="bg-ivory p-7 sm:p-9">
                 <h3 className="font-display text-lg font-semibold text-ink">
                   {note.title}
                 </h3>
@@ -561,7 +582,7 @@ function ComparisonTable({
   return (
     <section
       id={block.heading ? anchor(block.heading) : undefined}
-      className={`scroll-mt-32 ${BAND} ${index % 2 === 1 ? "glow-light border-y border-ink/10" : ""}`}
+      className={`scroll-mt-48 ${BAND} ${index % 2 === 1 ? "glow-light border-y border-ink/10" : ""}`}
     >
       <div className={`${SHELL} ${STACK}`}>
         <SectionHead
@@ -617,7 +638,7 @@ function Checklist({
   return (
     <section
       id={block.heading ? anchor(block.heading) : undefined}
-      className={`scroll-mt-32 ${BAND} ${index % 2 === 1 ? "glow-light border-y border-ink/10" : ""}`}
+      className={`scroll-mt-48 ${BAND} ${index % 2 === 1 ? "glow-light border-y border-ink/10" : ""}`}
     >
       <div className={`${SHELL} ${STACK}`}>
         <SectionHead eyebrow={block.eyebrow} heading={block.heading} sub={block.sub} />
@@ -686,7 +707,7 @@ function Prose({
   return (
     <section
       id={block.heading ? anchor(block.heading) : undefined}
-      className={`scroll-mt-32 ${BAND} ${index % 2 === 1 ? "glow-light border-y border-ink/10" : ""}`}
+      className={`scroll-mt-48 ${BAND} ${index % 2 === 1 ? "glow-light border-y border-ink/10" : ""}`}
     >
       <div className="mx-auto max-w-3xl px-5 sm:px-8 space-y-6">
         <SectionHead eyebrow={block.eyebrow} heading={block.heading} sub={block.sub} />
@@ -704,12 +725,12 @@ function Faq({ block }: { block: Extract<ContentBlock, { kind: "faq" }> }) {
   return (
     <section
       id={block.heading ? anchor(block.heading) : undefined}
-      className="scroll-mt-32 grid border-y border-ink/10 lg:grid-cols-[0.8fr_1.2fr]"
+      className="scroll-mt-48 grid border-y border-ink/10 lg:grid-cols-[0.8fr_1.2fr]"
     >
       <div className="glow-light flex flex-col justify-start px-5 sm:px-10 lg:px-12 py-16 lg:py-24">
         <div className="lg:sticky lg:top-28">
           <SectionHead eyebrow={block.eyebrow} heading={block.heading} />
-          <Link href="/booking" className="btn-primary mt-8 inline-flex w-fit">
+          <Link href="/booking" className="btn-primary btn-cta mt-8 sm:w-fit">
             Book My Appointment
           </Link>
         </div>
@@ -738,6 +759,42 @@ function Faq({ block }: { block: Extract<ContentBlock, { kind: "faq" }> }) {
   );
 }
 
+const priceAmount = (text: string) =>
+  /£([\d,.]+)/.exec(text)?.[1].replace(/,/g, "").replace(/\.00$/, "") ?? "";
+
+// Splits listing prices like "From £2950" / "£30 Only" so the amount can be emphasised.
+function PriceValue({ price }: { price: string }) {
+  const m = /^(.*?)(£[\d,.]+)(.*)$/.exec(price);
+  if (!m) {
+    return <span className="font-display text-3xl lg:text-4xl leading-none text-gold-bright">{price}</span>;
+  }
+  const [, before, amount, after] = m;
+  return (
+    <span className="flex items-baseline gap-2 whitespace-nowrap">
+      {before.trim() && (
+        <span className="font-label text-[11px] font-bold tracking-[0.18em] uppercase text-ivory/60">{before.trim()}</span>
+      )}
+      <span className={`font-display text-4xl lg:text-[2.75rem] leading-none text-gold-bright`}>
+        {amount}
+      </span>
+      {after.trim() && (
+        <span className="font-label text-[11px] font-bold tracking-[0.18em] uppercase text-ivory/60">{after.trim()}</span>
+      )}
+    </span>
+  );
+}
+
+function HeroPrice({ standard }: { standard: string }) {
+  return (
+    <div className="fade-up fade-up-2 max-sm:hidden flex w-fit max-w-full flex-col justify-center gap-2.5 border border-gold/50 bg-gradient-to-br from-gold/15 via-gold/5 to-transparent px-6 py-4 shadow-[0_18px_40px_-24px_rgba(185,140,85,0.6)] lg:px-7 lg:py-5">
+      <span className="font-label text-[10px] font-bold tracking-[0.24em] uppercase text-gold-bright">
+        Standard price
+      </span>
+      <PriceValue price={standard} />
+    </div>
+  );
+}
+
 export default function TreatmentPage({
   slug,
   hideMembership = false,
@@ -756,7 +813,16 @@ export default function TreatmentPage({
   const heroImage = HERO_IMAGES[slug];
   const extraVideoIds = EXTRA_VIDEOS[slug] ?? [];
 
-  const badges = (content?.badges ?? []).filter((badge) => !MEMBERSHIP.test(badge));
+  // Rating and clinic badges are replaced by the trust bar and live clinic strip.
+  // Standard-price badges are dropped so the hero price panel is the only standard price shown.
+  const standardAmount = priceAmount(treatment.standard);
+  const badges = (content?.badges ?? []).filter(
+    (badge) =>
+      !MEMBERSHIP.test(badge) &&
+      !/google review|south kensington •|city of london •/i.test(badge) &&
+      !/^standard( price)?\b/i.test(badge) &&
+      !(standardAmount && priceAmount(badge) === standardAmount)
+  );
   const blocks = (content?.blocks ?? []).filter(
     (b) =>
       !(hideMembership && b.kind === "callout" && MEMBERSHIP.test(`${b.label} ${b.body}`))
@@ -774,42 +840,59 @@ export default function TreatmentPage({
 
   return (
     <>
-      <section className="grid bg-ink text-ivory lg:grid-cols-[1fr_1fr]">
-        <div className="flex flex-col justify-center gap-5 px-5 sm:px-10 lg:px-12 py-12 lg:py-14">
+      <div className="sticky top-[67px] z-40 border-b border-gold/25 bg-gradient-to-r from-ink via-[#2a241d] to-ink text-ivory shadow-[0_12px_30px_-18px_rgba(0,0,0,0.7)] sm:top-[70px]">
+        <ClinicLiveStrip tone="dark" />
+      </div>
+      <section className="grid grid-cols-[minmax(0,1fr)] bg-ink text-ivory lg:grid-cols-[1fr_1fr]">
+        <div className="min-w-0 flex flex-col justify-center gap-5 px-5 sm:px-10 lg:px-12 py-12 lg:py-14 max-sm:items-center max-sm:text-center">
           <p className="fade-up font-label text-[10px] font-bold tracking-[0.28em] uppercase text-gold-bright">
             {content?.kicker ?? category.title}
           </p>
-          <h1 className="fade-up fade-up-1 display-xl text-[2.25rem] sm:text-5xl lg:text-[3.25rem] leading-[1.05] text-ivory">
+          <h1 className="fade-up fade-up-1 display-xl text-[1.875rem] min-[375px]:text-[2.25rem] sm:text-5xl lg:text-[3.25rem] leading-[1.05] text-ivory hyphens-auto">
             {content?.h1 ?? treatment.name}
           </h1>
           <span className="fade-up fade-up-1 block h-px w-20 bg-gold" aria-hidden />
           <p className="fade-up fade-up-2 max-w-[52ch] text-[15px] sm:text-base leading-[1.85] text-ivory/70">
             {content?.intro ?? treatment.description}
           </p>
+          <HeroPrice standard={treatment.standard} />
+          <TrustBadges reviews="mobile" className="fade-up fade-up-2 w-full max-w-sm" />
           {badges.length > 0 && (
-            <div className="fade-up fade-up-2 flex flex-wrap gap-2.5">
+            <ul className="fade-up fade-up-2 grid gap-2.5 max-sm:hidden">
               {badges.map((badge) => (
-                <span
-                  key={badge}
-                  className="border border-ivory/20 px-4 py-2 font-label text-[10px] font-bold tracking-[0.16em] uppercase text-ivory/70"
-                >
+                <li key={badge} className="flex items-start gap-3 text-[14px] leading-snug text-ivory/80">
+                  <span
+                    className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-gold/15 text-[11px] font-bold text-gold-bright"
+                    aria-hidden
+                  >
+                    ✓
+                  </span>
                   {badge}
-                </span>
+                </li>
               ))}
-            </div>
+            </ul>
           )}
-          <div className="fade-up fade-up-3 mt-2 flex flex-wrap gap-4">
-            <Link href="/booking" className="btn-gold">
+          <div className="fade-up fade-up-3 mt-2 flex flex-wrap gap-4 max-sm:w-full max-sm:flex-col max-sm:items-stretch max-sm:gap-3">
+            <Link href="/booking" className="btn-gold btn-cta font-bold">
               Book My Appointment
+              {/£/.test(treatment.standard) && (
+                <span className="sm:hidden">· {treatment.standard}</span>
+              )}
             </Link>
             <a
               href={SITE.phoneHref}
-              className="border border-ivory/30 px-7 py-3.5 font-label text-[11px] font-bold tracking-[0.18em] uppercase text-ivory transition-colors hover:border-gold hover:text-gold-bright"
+              className="btn-cta border border-ivory/30 px-7 py-3.5 text-center font-label text-[11px] font-bold tracking-[0.18em] uppercase text-ivory transition-colors hover:border-gold hover:text-gold-bright"
             >
               Call {SITE.phone}
             </a>
           </div>
+          {HERO_OFFER_NOTE[treatment.slug] && (
+            <p className="fade-up fade-up-3 max-w-[52ch] border-l-2 border-gold/60 pl-3 text-xs leading-relaxed text-ivory/60 max-sm:border-l-0 max-sm:pl-0">
+              * {HERO_OFFER_NOTE[treatment.slug]}
+            </p>
+          )}
         </div>
+        <div className="relative grid min-w-0">
         {heroImage ? (
           <div className="relative min-h-[300px] bg-ink sm:min-h-[420px] lg:min-h-full">
             <Image
@@ -826,14 +909,16 @@ export default function TreatmentPage({
             />
           </div>
         ) : (
-          <HeroVideo id={heroVideoId} />
+          <HeroVideo id={heroVideoId} extraIds={HERO_EXTRA_SHORTS[slug]} />
         )}
+          <GoogleReviewBadge className="absolute left-8 top-8 z-10 max-sm:hidden lg:left-10 lg:top-10" />
+        </div>
       </section>
 
       {jumpLinks.length > 0 && (
         <nav
           aria-label="On this page"
-          className="sticky top-[72px] lg:top-[75px] z-30 border-b border-ink/10 bg-ivory/95 backdrop-blur"
+          className="sticky top-[143px] sm:top-[152px] md:top-[135px] xl:top-[126px] z-30 border-b border-ink/10 bg-ivory/95 backdrop-blur"
         >
           <div className={`flex gap-7 overflow-x-auto py-4 ${SHELL}`}>
             {jumpLinks.map((heading) => (
@@ -849,6 +934,14 @@ export default function TreatmentPage({
         </nav>
       )}
 
+      {category.id === "emergency" && (
+        <section className={`bg-cream ${BAND}`}>
+          <div className={SHELL}>
+            <EmergencyOffer />
+          </div>
+        </section>
+      )}
+
       {blocks.map((block, i) => {
         switch (block.kind) {
           case "callout":
@@ -861,7 +954,7 @@ export default function TreatmentPage({
             return block.heading === "Smile Gallery" ? (
               <SmileGallery
                 key={i}
-                limit={6}
+                limit={9}
                 className="bg-cream border-y border-ink/10"
               />
             ) : (
@@ -892,7 +985,7 @@ export default function TreatmentPage({
       {extraVideoIds.length > 0 && <TreatmentVideo ids={extraVideoIds} />}
 
       {!hasGallery && (
-        <SmileGallery limit={6} className="bg-cream border-y border-ink/10" />
+        <SmileGallery limit={9} className="bg-cream border-y border-ink/10" />
       )}
 
       <MeetExperts limit={8} columns={4} shape="circle" />
@@ -907,7 +1000,7 @@ export default function TreatmentPage({
             Book a consultation with Dr. Yasha or one of our dentists. We will assess your
             oral health and create a bespoke treatment plan just for you.
           </p>
-          <Link href="/booking" className="btn-primary">
+          <Link href="/booking" className="btn-primary btn-cta">
             Book Consultation: £95
           </Link>
         </div>
@@ -916,13 +1009,13 @@ export default function TreatmentPage({
       {related.length > 0 && (
         <section className="py-16 lg:py-20">
           <div className={SHELL}>
-            <div className="flex items-end justify-between gap-6 mb-10">
+            <div className="flex flex-wrap items-end justify-between gap-x-6 gap-y-3 mb-10">
               <h2 className="display-xl text-[1.75rem] sm:text-[2rem]">
                 More {category.title}
               </h2>
               <Link
                 href="/treatments"
-                className="text-xs font-bold tracking-widest text-gold-deep hover:underline whitespace-nowrap"
+                className="py-2 text-xs font-bold tracking-widest text-gold-deep hover:underline whitespace-nowrap"
               >
                 ALL TREATMENTS →
               </Link>

@@ -57,7 +57,7 @@ export default async function BlogPaginatedPage({
   return (
     <>
       <BlogListing initialPage={current} />
-      <SmileGallery limit={6} className="bg-cream border-y border-ink/10" />
+      <SmileGallery limit={9} className="bg-cream border-y border-ink/10" />
       <MeetExperts limit={8} columns={4} shape="circle" />
     </>
   );

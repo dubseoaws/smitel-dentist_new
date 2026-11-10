@@ -200,6 +200,11 @@ function Index({ block, tone }: { block: Extract<PageBlock, { kind: "index" }>; 
   );
 }
 
+// Address-only clinic blocks duplicate the site-wide ContactSection rendered in the layout.
+function isClinicListBlock(block: PageBlock) {
+  return block.kind === "section" && block.heading?.trim().toLowerCase() === "visit smile dentist london";
+}
+
 export default function ContentPage({ content }: { content: PageContent }) {
   return (
     <>
@@ -217,7 +222,7 @@ export default function ContentPage({ content }: { content: PageContent }) {
           </div>
         </div>
       </section>
-      {content.blocks.map((block, i) =>
+      {content.blocks.filter((block) => !isClinicListBlock(block)).map((block, i) =>
         block.kind === "faq" ? (
           <Faq key={i} block={block} tone={i % 2 === 1} />
         ) : block.kind === "index" ? (

@@ -37,7 +37,7 @@ export default function BlogPage() {
       <JsonLdBlocks blocks={PAGE_JSONLD["/blog"]} />
       <BlogListing />
       <FaqSection items={GENERAL_FAQS} />
-      <SmileGallery limit={6} className="bg-cream border-y border-ink/10" />
+      <SmileGallery limit={9} className="bg-cream border-y border-ink/10" />
       <MeetExperts limit={8} columns={4} shape="circle" />
     </>
   );

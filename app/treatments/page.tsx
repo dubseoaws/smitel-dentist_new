@@ -60,7 +60,7 @@ export default function TreatmentsPage() {
         </section>
       ))}
 
-      <SmileGallery limit={6} className="bg-cream border-y border-ink/10" />
+      <SmileGallery limit={9} className="bg-cream border-y border-ink/10" />
 
       <section className="py-16">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 text-center space-y-5">

@@ -27,7 +27,7 @@ export default function FaqSection({
         <div className="lg:sticky lg:top-28 space-y-5">
           <p className="eyebrow">{eyebrow}</p>
           <h2 className="text-3xl sm:text-4xl tracking-tight">{heading}</h2>
-          <Link href="/booking" className="btn-primary mt-3 inline-flex w-fit">
+          <Link href="/booking" className="btn-primary btn-cta mt-3 sm:w-fit">
             Book My Appointment
             <span aria-hidden>→</span>
           </Link>

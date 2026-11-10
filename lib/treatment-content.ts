@@ -288,20 +288,19 @@ export const TREATMENT_CONTENT: Record<string, TreatmentContent> = {
           "Our comprehensive whitening package includes everything you need for a complete course of treatment.",
         includesTitle: "The Boutique Package Includes:",
         includes: [
-          "Full dental health check",
           "Custom-made super-seal trays",
           "Full kit of Boutique whitening gels",
           "Desensitising toothpaste included",
           "Shade assessment and guidance",
         ],
         standard: { label: "Standard Price", value: "From £399.00" },
-        member: { label: "Member Price", value: "From £199.50" },
+        member: { label: "Member Price", value: "From £199" },
         footnote:
-          "A dental health assessment is required before whitening can begin. Pricing includes the full package as described above.",
+          "A dental health assessment is required before whitening can begin. Our £199 whitening offer does not include this — new patients may need an examination, charged separately at £30 (new patient offer), plus £20 per X-ray if clinically needed.",
         notes: [
           {
             title: "Membership Plan",
-            body: "Join for £20/month and receive 50% off all treatments. Members also receive two check-ups and two hygiene visits per year included in their membership.",
+            body: "Join for £30/month and receive 50% off all treatments. Members also receive two check-ups and two hygiene visits per year included in their membership.",
           },
         ],
       },
@@ -615,7 +614,7 @@ export const TREATMENT_CONTENT: Record<string, TreatmentContent> = {
         notes: [
           {
             title: "Membership Savings",
-            body: "Join for £20/month and receive 50% off all treatments.",
+            body: "Join for £30/month and receive 50% off all treatments.",
           },
         ],
       },
@@ -994,6 +993,7 @@ export const TREATMENT_CONTENT: Record<string, TreatmentContent> = {
           body: "Before any treatment begins, you will receive a detailed written treatment plan outlining all proposed procedures, costs, expected timelines, and alternative options. This is provided for your consideration with no obligation to proceed.",
         },
       },
+      smileGallery(),
       {
         kind: "stories",
         heading: "Real Patient Stories",
@@ -1020,6 +1020,65 @@ export const TREATMENT_CONTENT: Record<string, TreatmentContent> = {
         ],
         disclaimer:
           "Individual results may vary. A consultation is required to determine suitability.",
+      },
+      {
+        kind: "pricing",
+        eyebrow: "Transparent Pricing",
+        heading: "Smile Makeover Pricing",
+        intro:
+          "Every smile makeover is unique, so pricing depends on the specific treatments involved. Below are the individual treatment fees that may form part of your personalised plan. Members receive 50% off most treatment fees; dental implants are not included in the membership discount.",
+        columns: ["Treatment Component", "Standard Price", "Member Price"],
+        rows: [
+          {
+            label: "Consultation & Digital Scan",
+            standard: "From £95.00",
+            member: "From £47.50",
+          },
+          {
+            label: "Porcelain Veneer (per tooth)",
+            standard: "From £1,095.00",
+            member: "From £547.50",
+          },
+          {
+            label: "Zirconia Crown (per tooth)",
+            standard: "From £995.00",
+            member: "From £497.50",
+          },
+          {
+            label: "Dental Implant (per tooth)",
+            standard: "From £2,950.00",
+            member: "Not eligible †",
+          },
+          {
+            label: "Gum Contouring (per tooth)",
+            standard: "From £200.00",
+            member: "From £100.00",
+          },
+          {
+            label: "Boutique Teeth Whitening",
+            standard: "From £399.00",
+            member: "From £199",
+          },
+        ],
+        notes: [
+          {
+            title: "Membership Plan",
+            body: "Join for £30/month and receive 50% off most treatment fees, two check-ups and two hygiene visits per year. † Dental implants, bone grafting, sinus lift and full-mouth rehabilitation are excluded from the membership discount.",
+          },
+          {
+            title: "Finance Options",
+            body: "We offer finance plans to help spread the cost of your smile makeover. Finance is subject to status; terms and conditions apply. Ask at your consultation for details and a personalised quote.",
+          },
+        ],
+      },
+      {
+        kind: "prose",
+        heading: "Dr. Yasha Y Shirazi",
+        sub: "Principal Dentist — GDC: 195843",
+        paragraphs: [
+          "“A comprehensive smile makeover involves careful planning of both aesthetics and function. We ensure your bite is balanced so your new restorations are comfortable and long-lasting. Every case is unique, and we take the time to understand what matters most to you.”",
+          "Views expressed are those of the individual clinician.",
+        ],
       },
       {
         kind: "doAvoid",
@@ -1069,65 +1128,6 @@ export const TREATMENT_CONTENT: Record<string, TreatmentContent> = {
         body: "We provide comprehensive information about all treatment options, including alternatives, risks, and expected outcomes, so you can make a fully informed decision. A detailed written treatment plan is provided before any work begins.",
       },
       {
-        kind: "pricing",
-        eyebrow: "Transparent Pricing",
-        heading: "Smile Makeover Pricing",
-        intro:
-          "Every smile makeover is unique, so pricing depends on the specific treatments involved. Below are the individual treatment fees that may form part of your personalised plan. Members receive 50% off most treatment fees; dental implants are not included in the membership discount.",
-        columns: ["Treatment Component", "Standard Price", "Member Price"],
-        rows: [
-          {
-            label: "Consultation & Digital Scan",
-            standard: "From £95.00",
-            member: "From £47.50",
-          },
-          {
-            label: "Porcelain Veneer (per tooth)",
-            standard: "From £1,095.00",
-            member: "From £547.50",
-          },
-          {
-            label: "Zirconia Crown (per tooth)",
-            standard: "From £995.00",
-            member: "From £497.50",
-          },
-          {
-            label: "Dental Implant (per tooth)",
-            standard: "From £2,950.00",
-            member: "Not eligible †",
-          },
-          {
-            label: "Gum Contouring (per tooth)",
-            standard: "From £200.00",
-            member: "From £100.00",
-          },
-          {
-            label: "Boutique Teeth Whitening",
-            standard: "From £399.00",
-            member: "From £199.50",
-          },
-        ],
-        notes: [
-          {
-            title: "Membership Plan",
-            body: "Join for £20/month and receive 50% off most treatment fees, two check-ups and two hygiene visits per year. † Dental implants, bone grafting, sinus lift and full-mouth rehabilitation are excluded from the membership discount.",
-          },
-          {
-            title: "Finance Options",
-            body: "We offer finance plans to help spread the cost of your smile makeover. Finance is subject to status; terms and conditions apply. Ask at your consultation for details and a personalised quote.",
-          },
-        ],
-      },
-      {
-        kind: "prose",
-        heading: "Dr. Yasha Y Shirazi",
-        sub: "Principal Dentist — GDC: 195843",
-        paragraphs: [
-          "“A comprehensive smile makeover involves careful planning of both aesthetics and function. We ensure your bite is balanced so your new restorations are comfortable and long-lasting. Every case is unique, and we take the time to understand what matters most to you.”",
-          "Views expressed are those of the individual clinician.",
-        ],
-      },
-      {
         kind: "faq",
         heading: "Frequently Asked Questions",
         items: [
@@ -1165,7 +1165,6 @@ export const TREATMENT_CONTENT: Record<string, TreatmentContent> = {
           },
         ],
       },
-      smileGallery(),
     ],
   },
 
@@ -1534,7 +1533,7 @@ export const TREATMENT_CONTENT: Record<string, TreatmentContent> = {
         notes: [
           {
             title: "Membership Plan",
-            body: "Join for £20/month and receive 50% off all treatment fees. Members also receive two check-ups and two hygiene visits per year. A written quote is provided before any treatment begins.",
+            body: "Join for £30/month and receive 50% off all treatment fees. Members also receive two check-ups and two hygiene visits per year. A written quote is provided before any treatment begins.",
           },
         ],
         footnote: "For a full overview of our treatment fees, please visit our fees page.",
@@ -1794,7 +1793,7 @@ export const TREATMENT_CONTENT: Record<string, TreatmentContent> = {
         notes: [
           {
             title: "Membership Plan",
-            body: "Join for £20/month and receive 50% off all treatment fees. Members also receive two check-ups and two hygiene visits per year. A written quote is provided before any treatment begins.",
+            body: "Join for £30/month and receive 50% off all treatment fees. Members also receive two check-ups and two hygiene visits per year. A written quote is provided before any treatment begins.",
           },
         ],
       },
@@ -2744,7 +2743,7 @@ export const TREATMENT_CONTENT: Record<string, TreatmentContent> = {
       "City of London • Ave Maria Lane, EC4",
       "Gum Contouring (Per Tooth) From £200",
       "Member (50% off) From £100",
-      "Membership £20/month",
+      "Membership £30/month",
     ],
     hero: {
       src: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1765805808/gum-contouring_k46rrb.jpg",
@@ -3022,8 +3021,8 @@ export const TREATMENT_CONTENT: Record<string, TreatmentContent> = {
       "4.9/5 from Google Reviews",
       "South Kensington • Next to South Ken Station",
       "City of London • Ave Maria Lane, EC4",
-      "Standard From £2,000",
-      "Member (50% off) From £1,000",
+      "Pro-Aligners From £2,000",
+      "Refinements as clinically required. Not included in the membership discount.",
       "Finance options available (subject to status)",
     ],
     hero: {
@@ -3157,10 +3156,10 @@ export const TREATMENT_CONTENT: Record<string, TreatmentContent> = {
         eyebrow: "Transparent Pricing",
         heading: "Pro-Aligner Costs",
         intro:
-          "Members receive 50% off all treatment fees. A written treatment plan with full costs is provided before treatment begins.",
+          "A written treatment plan with full costs is provided before treatment begins. Refinement aligners are provided as clinically required.",
         columns: ["Treatment", "Standard", "Member"],
         rows: [
-          { label: "Pro-Aligners (Mild/Moderate)", standard: "From £2,000", member: "From £1,000" },
+          { label: "Pro-Aligners (Mild/Moderate)", standard: "From £2,000", member: "Not included in membership" },
           { label: "Removable Retainers (Per Arch)", standard: "From £300", member: "From £150" },
           { label: "Fixed Bonded Retainer (Per Arch)", standard: "From £350", member: "From £175" },
           { label: "Consultation", standard: "From £95", member: "From £47.50" },
@@ -3170,7 +3169,7 @@ export const TREATMENT_CONTENT: Record<string, TreatmentContent> = {
         notes: [
           {
             title: "Membership",
-            body: "Join for £20/month and receive 50% off all treatments.",
+            body: "Pro-Aligners and invisible braces are not included in the membership discount. Members still receive 50% off retainers and consultations.",
           },
         ],
       },
@@ -3290,11 +3289,6 @@ export const TREATMENT_CONTENT: Record<string, TreatmentContent> = {
     },
     blocks: [
       {
-        kind: "callout",
-        label: "Treatment Options",
-        body: "We offer several approaches to replacing missing teeth, including dental implants, bridges, and other suitable options. The right solution depends on your clinical needs, which are assessed during a consultation.",
-      },
-      {
         kind: "cards",
         eyebrow: "Understanding the Impact",
         heading: "Why Replacing Missing Teeth Is Important",
@@ -3348,11 +3342,11 @@ export const TREATMENT_CONTENT: Record<string, TreatmentContent> = {
             body: "Dental implants involve placing a small post into the jawbone, which acts as a foundation for a replacement tooth. Over time, the implant integrates with the bone to provide a secure, stable base.",
           },
           {
-            title: "When May They Be Suitable?",
+            title: "When Are Implants Suitable?",
             body: "Implants may be suitable for patients with one or more missing teeth who have sufficient bone support and good general oral health. Suitability is determined through a thorough clinical assessment.",
           },
           {
-            title: "General Benefits",
+            title: "Benefits of Implants",
             bullets: [
               "Designed to function similarly to natural teeth for eating and speaking",
               "Do not require preparation of neighbouring healthy teeth",
@@ -3371,11 +3365,11 @@ export const TREATMENT_CONTENT: Record<string, TreatmentContent> = {
             body: "A dental bridge is a fixed restoration that fills the gap left by a missing tooth. The replacement tooth is supported by crowns placed on the teeth either side, creating a stable, natural-looking result.",
           },
           {
-            title: "When May They Be Suitable?",
+            title: "When Are Bridges Suitable?",
             body: "Bridges may be suitable when the teeth on either side of the gap are strong enough to support the restoration. They are a fixed option that does not require surgery, making them appropriate for a range of clinical situations.",
           },
           {
-            title: "General Benefits",
+            title: "Benefits of Bridges",
             bullets: [
               "Fixed in place — no need to remove for cleaning",
               "Does not require surgical placement",
@@ -3406,11 +3400,6 @@ export const TREATMENT_CONTENT: Record<string, TreatmentContent> = {
         ],
       },
       {
-        kind: "callout",
-        label: "Important",
-        body: "The right treatment for you can only be determined through a thorough clinical assessment. Your dentist will explain all suitable options and provide a personalised recommendation.",
-      },
-      {
         kind: "cards",
         eyebrow: "Pricing",
         heading: "Cost of Missing Teeth Solutions London",
@@ -3425,10 +3414,6 @@ export const TREATMENT_CONTENT: Record<string, TreatmentContent> = {
           {
             title: "Complexity & Number of Teeth",
             body: "The number of teeth being replaced and the overall complexity of your case will influence the treatment plan and associated costs.",
-          },
-          {
-            title: "Personalised Planning",
-            body: "A full written treatment plan with itemised costs is provided following your consultation, so you know exactly what to expect before treatment begins.",
           },
           {
             title: "Membership Benefits",
@@ -3481,10 +3466,6 @@ export const TREATMENT_CONTENT: Record<string, TreatmentContent> = {
             q: "Can I leave a missing tooth untreated?",
             a: "While it is possible to leave a gap, missing teeth can lead to changes over time, including shifting of surrounding teeth, bite alterations, and bone changes in the jaw. A clinical assessment can help you understand the potential implications and explore your options.",
           },
-          {
-            q: "Which option is right for me?",
-            a: "The most suitable treatment depends on a number of factors including the number and position of missing teeth, your bone support, oral health, and personal preferences. A thorough clinical assessment is the best way to determine which approach is right for your individual situation.",
-          },
         ],
       },
       smileGallery(),
@@ -3509,7 +3490,7 @@ export const TREATMENT_CONTENT: Record<string, TreatmentContent> = {
       {
         kind: "callout",
         label: "Investment",
-        body: "Cost depends on the number of implants, complexity of treatment, and any additional procedures required. A full treatment plan with costs is provided following your consultation. Our £20/month dental membership does not apply to dental implant treatment. Implant fees are the same whether or not you are a member.",
+        body: "Cost depends on the number of implants, complexity of treatment, and any additional procedures required. A full treatment plan with costs is provided following your consultation. Our £30/month dental membership does not apply to dental implant treatment. Implant fees are the same whether or not you are a member.",
       },
       {
         kind: "cards",
@@ -3686,7 +3667,7 @@ export const TREATMENT_CONTENT: Record<string, TreatmentContent> = {
           },
           {
             title: "Implants are not included in our membership discount",
-            body: "Dental implants — including bone grafting, sinus lift and All-on-X treatment — are excluded from the £20/month membership plan. Implant fees are the same whether or not you are a member; finance options may be available.",
+            body: "Dental implants — including bone grafting, sinus lift and All-on-X treatment — are excluded from the £30/month membership plan. Implant fees are the same whether or not you are a member; finance options may be available.",
           },
         ],
       },
@@ -3751,7 +3732,7 @@ export const TREATMENT_CONTENT: Record<string, TreatmentContent> = {
       "City of London • Ave Maria Lane, EC4",
       "Porcelain / Ceramic Crown From £995",
       "Member (50% off) From £497.50",
-      "Membership £20/month",
+      "Membership £30/month",
     ],
     hero: {
       src: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1765805809/dental-crowns_pq0fvz.jpg",
@@ -3939,7 +3920,7 @@ export const TREATMENT_CONTENT: Record<string, TreatmentContent> = {
           },
           {
             title: "Membership Savings",
-            body: "Join our membership for £20/month and receive 50% off all treatment fees.",
+            body: "Join our membership for £30/month and receive 50% off all treatment fees.",
           },
         ],
         footnote:
@@ -4020,7 +4001,7 @@ export const TREATMENT_CONTENT: Record<string, TreatmentContent> = {
       "City of London • Ave Maria Lane, EC4",
       "Zirconia / E-Max Bridge (Per Unit) From £995",
       "Member (50% off) From £497.50",
-      "Membership £20/month",
+      "Membership £30/month",
     ],
     hero: {
       src: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1765805729/Dental-Bridges_ygwl9m.jpg",
@@ -4194,7 +4175,7 @@ export const TREATMENT_CONTENT: Record<string, TreatmentContent> = {
           },
           {
             title: "Membership Savings",
-            body: "Join our membership for £20/month and receive 50% off all treatment fees.",
+            body: "Join our membership for £30/month and receive 50% off all treatment fees.",
           },
         ],
         footnote:
@@ -4510,7 +4491,7 @@ export const TREATMENT_CONTENT: Record<string, TreatmentContent> = {
       "Acrylic Dentures From £397.50",
       "Valplast Flexible From £447.50",
       "Cobalt-Chrome From £697.50",
-      "Membership £20/month",
+      "Membership £30/month",
     ],
     hero: {
       src: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1765805793/acrylic-_-flexi-dentures_caf2u4.jpg",
@@ -4602,7 +4583,7 @@ export const TREATMENT_CONTENT: Record<string, TreatmentContent> = {
         notes: [
           {
             title: "Membership Savings",
-            body: "Join our membership for £20/month and receive 50% off all treatment fees.",
+            body: "Join our membership for £30/month and receive 50% off all treatment fees.",
           },
         ],
         footnote: "A full written estimate is provided before treatment begins.",
@@ -5207,7 +5188,7 @@ export const TREATMENT_CONTENT: Record<string, TreatmentContent> = {
       "Standard Examination From £95",
       "Member (50% off) From £47.50",
       "New Patient Examination £30",
-      "Membership £20/month",
+      "Membership £30/month",
     ],
     blocks: [
       {
@@ -5359,7 +5340,7 @@ export const TREATMENT_CONTENT: Record<string, TreatmentContent> = {
         columns: ["Service", "Standard", "Member"],
         rows: [
           { label: "Comprehensive Examination", standard: "From £95", member: "From £47.50" },
-          { label: "New Patient Examination", standard: "£30", member: "" },
+          { label: "New Patient Examination (new patient offer, X-rays not included)", standard: "£30", member: "" },
           { label: "Small X-Ray (each)", standard: "From £20", member: "From £10" },
         ],
         notes: [
@@ -5373,11 +5354,11 @@ export const TREATMENT_CONTENT: Record<string, TreatmentContent> = {
           },
           {
             title: "Membership Plan",
-            body: "Our membership plan (£20/month) includes examinations and offers a reduction on treatment fees.",
+            body: "Our membership plan (£30/month) includes examinations and offers a reduction on treatment fees.",
           },
         ],
         footnote:
-          "X-rays are taken only when clinically indicated and charged separately. Final costs depend on individual assessment.",
+          "£30 is a new patient offer. X-rays are not included — they are taken only when clinically needed and charged separately at £20 each (£10 for members). Final costs depend on individual assessment.",
       },
       {
         kind: "cards",
@@ -5717,7 +5698,7 @@ export const TREATMENT_CONTENT: Record<string, TreatmentContent> = {
       "First-Time Patient £49",
       "Hygiene Appointment From £89",
       "Member (50% off) From £44.50",
-      "Membership £20/month",
+      "Membership £30/month",
     ],
     hero: {
       src: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1765805807/dental-hygiene_nmtblc.jpg",
@@ -5871,7 +5852,7 @@ export const TREATMENT_CONTENT: Record<string, TreatmentContent> = {
           },
           {
             title: "Membership Plan",
-            body: "Our membership plan (£20/month) includes hygiene appointments and offers a reduction on treatment fees.",
+            body: "Our membership plan (£30/month) includes hygiene appointments and offers a reduction on treatment fees.",
           },
         ],
         footnote:
@@ -6305,7 +6286,7 @@ export const TREATMENT_CONTENT: Record<string, TreatmentContent> = {
         notes: [
           {
             title: "Family Membership",
-            body: "Adult membership: £20/month. Add a child: just £10/month. Members receive 50% off all treatment fees, plus two check-ups and two hygiene visits per year.",
+            body: "Adult membership: £30/month, or £240 a year. Under-18s join through a parent or guardian at the clinic. Members receive 50% off most treatment fees, plus two check-ups and two hygiene visits per year.",
           },
         ],
         footnote:
@@ -6374,6 +6355,7 @@ export const TREATMENT_CONTENT: Record<string, TreatmentContent> = {
       "4.9/5 from Google Reviews",
       "South Kensington • Next to South Ken Station",
       "City of London • Ave Maria Lane, EC4",
+      "New Patient Emergency Exam £30 Only",
       "Treatment costs explained before proceeding",
     ],
     hero: {
@@ -6532,6 +6514,10 @@ export const TREATMENT_CONTENT: Record<string, TreatmentContent> = {
         sub: "What Determines the Cost?",
         items: [
           {
+            title: "New Patient Emergency Examination — £30 Only",
+            body: "The £30 emergency examination is a new patient offer. X-rays are not included — if clinically needed they are £20 each. Your dentist will diagnose the problem, relieve pain where possible and explain any further treatment and costs.",
+          },
+          {
             title: "Nature of the Concern",
             body: "The type of dental emergency — whether it involves pain relief, infection management, or trauma repair — will influence the treatment and associated cost.",
           },
@@ -6545,7 +6531,7 @@ export const TREATMENT_CONTENT: Record<string, TreatmentContent> = {
           },
           {
             title: "Membership Benefits",
-            body: "Members of our dental plan receive reduced fees across all treatments, including emergency care. Membership is available for £20 per month.",
+            body: "Members of our dental plan receive reduced fees across all treatments, including emergency care. Membership is available for £30 per month.",
           },
           {
             title: "View Our Full Fee Guide",

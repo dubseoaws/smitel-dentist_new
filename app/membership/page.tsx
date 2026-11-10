@@ -1,192 +1,233 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { SITE, MEMBERSHIP } from "@/lib/site-data";
 import { PAGE_JSONLD, pageMetadata } from "@/lib/seo";
 import { JsonLdBlocks } from "@/components/JsonLd";
-import MeetExperts from "@/components/MeetExperts";
-import SmileGallery from "@/components/SmileGallery";
-import CaseStudies from "@/components/CaseStudies";
-import FaqSection from "@/components/FaqSection";
-import { MEMBERSHIP_FAQS } from "@/lib/faqs";
 
 export const metadata: Metadata = pageMetadata("/membership");
+
+const JOIN_URL = (content: "hero" | "bottom") =>
+  `https://dental.md.co.uk/membership?utm_source=smiledentist.co.uk&utm_medium=website&utm_campaign=membership-page&utm_content=${content}`;
+
+const INCLUDES = [
+  "Check Ups",
+  "Cosmetic Dentistry (inc. whitening)",
+  "Restorative Dentistry (fillings, crowns, bridges and dentures)",
+];
+
+const EXCLUSIONS = [
+  "Dental implants, including All-on-4 and All-on-6 full-arch treatment and implant-retained restorations",
+  "Pro-Aligners and invisible braces (clear aligner treatment)",
+  "Bone grafting",
+  "Sinus lifts",
+  "Apicectomy (root-end surgery)",
+  "Treatments involving gold, such as gold crowns and gold inlays or onlays",
+  "Chrome-cobalt (metal-framed) dentures",
+  "Any treatment carried out by a GDC-registered specialist",
+  "Laboratory fees, prescription medicines and products retailed by the clinic",
+];
+
+const STEPS = [
+  { title: "1. Join online", body: "Join online in about a minute." },
+  {
+    title: "2. Pay securely",
+    body: "Pay securely by card (Stripe). The first payment is taken today.",
+  },
+  {
+    title: "3. Book your first visit",
+    body: "You are sent to our thank-you page, and from there to md.co.uk to book your first appointment. Your membership card is emailed to you.",
+  },
+];
 
 export default function MembershipPage() {
   return (
     <>
       <JsonLdBlocks blocks={PAGE_JSONLD["/membership"]} />
+
       {/* Sign-up pause notice */}
-      <section className="bg-ink text-ivory border-b border-ink/10 px-5 sm:px-10 lg:px-12 py-5">
-        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-          <p className="text-[13px] leading-relaxed text-ivory/80 max-w-4xl">
-            ❤️ We&rsquo;ve been overwhelmed by the love! Due to incredible demand, new
-            membership sign-ups will pause from{" "}
-            <span className="font-semibold text-gold">1 April</span>. Existing members —
-            your 50% off isn&rsquo;t going anywhere. You can still join until then.
-          </p>
-          <Link
-            href="/"
-            className="font-label text-[11px] tracking-[0.16em] uppercase text-ivory/70 hover:text-gold transition-colors whitespace-nowrap"
-          >
-            ← Back to Home
-          </Link>
+      <section className="bg-gold/15 border-b border-gold/30 px-5 sm:px-10 lg:px-12 py-4">
+        <p className="mx-auto max-w-5xl text-center text-[13px] leading-relaxed text-ink">
+          ❤️ Due to incredible demand, new membership sign-ups pause on{" "}
+          <strong className="font-semibold">Sunday 18 October</strong>. Existing members —
+          your 50% off isn&rsquo;t going anywhere. You can still join until then.
+        </p>
+      </section>
+
+      {/* Hero */}
+      <section className="glow-dark text-ivory border-b border-ink/10">
+        <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-10 lg:px-12 py-14 lg:py-24 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
+          <div className="space-y-6 max-lg:text-center">
+            <Link
+              href="/"
+              className="inline-block font-label text-[11px] font-bold tracking-[0.18em] uppercase text-gold hover:text-ivory transition-colors"
+            >
+              ← Back to Home
+            </Link>
+            <p className="eyebrow !text-gold before:!bg-gold max-lg:justify-center">
+              Exclusive Membership Plan
+            </p>
+            <h1 className="display-xl text-[2.5rem] sm:text-5xl lg:text-[4rem] leading-[1.05]">
+              50% Off
+              <span className="block italic text-gold">Most Treatments</span>
+            </h1>
+            <span className="block h-px w-16 bg-gold max-lg:mx-auto" aria-hidden />
+            <div className="space-y-2">
+              <p className="text-base sm:text-lg text-ivory/85 leading-relaxed">
+                All-in-One Dental Membership £30 a month, or £240 a year*
+              </p>
+              <p className="text-sm text-ivory/60">
+                Under-18s join through a parent or guardian at the clinic.
+              </p>
+            </div>
+            <a
+              href={JOIN_URL("hero")}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-gold btn-cta font-bold"
+            >
+              Join now
+              <span aria-hidden>→</span>
+            </a>
+          </div>
+
+          {/* Gold Member card */}
+          <div className="relative mx-auto w-full max-w-md border border-gold/40 bg-ink/60 p-8 sm:p-10 shadow-2xl shadow-black/40">
+            <div className="flex items-start justify-between gap-4">
+              <div>
+                <h3 className="font-display text-2xl text-ivory">Gold Member</h3>
+                <p className="mt-1 font-label text-[11px] tracking-[0.18em] uppercase text-gold">
+                  Access All Areas
+                </p>
+              </div>
+              <span className="flex h-11 w-11 items-center justify-center rounded-full bg-gold text-ink text-lg" aria-hidden>
+                ★
+              </span>
+            </div>
+            <ul className="mt-8 space-y-3 text-sm">
+              <li className="flex justify-between border-b border-ivory/10 pb-3">
+                <span className="text-ivory/70">Check-Ups</span>
+                <span className="font-semibold">Included</span>
+              </li>
+              <li className="flex justify-between border-b border-ivory/10 pb-3">
+                <span className="text-ivory/70">Treatments</span>
+                <span className="font-semibold text-gold">50% OFF</span>
+              </li>
+              <li className="flex justify-between border-b border-ivory/10 pb-3">
+                <span className="text-ivory/70">Contract</span>
+                <span className="font-semibold">12 months</span>
+              </li>
+            </ul>
+            <div className="mt-8 flex items-end justify-between gap-4">
+              <div>
+                <p className="font-display text-5xl leading-none text-ivory">
+                  £30<span className="text-lg text-ivory/60">/mo</span>
+                </p>
+                <p className="mt-2 text-sm text-ivory/70">or £240 a year</p>
+              </div>
+              <p className="text-xs text-ivory/50">*12 month contract</p>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Intro */}
-      <section className="grid lg:grid-cols-[1.1fr_0.9fr] border-b border-ink/10">
-        <div className="glow-light px-5 sm:px-10 lg:px-12 py-16 lg:py-20 space-y-6 flex flex-col justify-center">
-          <p className="eyebrow">Exclusive Membership Plan</p>
-          <h1 className="display-xl text-[2rem] sm:text-4xl lg:text-[3rem] max-w-[16ch]">
-            50% Off <span className="italic text-gold-deep">On All Dental Treatment</span>
-          </h1>
-          <span className="block h-px w-16 bg-gold" aria-hidden />
-          <p className="text-[15px] text-ink-soft leading-relaxed max-w-xl">
-            All-in-One Dental Membership Only £20/month* + Add Family Members For Just
-            £10/Month
-          </p>
-          <div className="flex flex-wrap items-center gap-4 pt-2">
-            <a
-              href={SITE.membershipUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-primary"
-            >
-              Join As A Member Now
+      {/* Membership */}
+      <section className="border-b border-ink/10 bg-white">
+        <div className="mx-auto max-w-7xl px-5 sm:px-10 lg:px-12 py-16 lg:py-24 space-y-12">
+          <div className="max-w-3xl space-y-5 max-sm:text-center">
+            <h2 className="text-3xl sm:text-4xl">Membership</h2>
+            <span className="block h-px w-16 bg-gold max-sm:mx-auto" aria-hidden />
+            <p className="text-[15px] text-ink-soft leading-relaxed">
+              At South Kensington Medical &amp; Dental Clinic, we believe high-quality
+              dental care should be affordable and accessible. That&rsquo;s why we offer a
+              simple, cost-effective membership plan that gives you access to dental
+              services — all under one roof.
+            </p>
+          </div>
+
+          <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
+            {/* Plan */}
+            <div className="border border-ink/10 bg-cream p-7 sm:p-10 space-y-7">
+              <div className="flex flex-wrap items-end justify-between gap-4 border-b border-ink/10 pb-6">
+                <h3 className="font-display text-2xl">All-in-One Dental Membership</h3>
+                <div className="text-right max-sm:text-left">
+                  <p className="font-display text-5xl leading-none">
+                    £30*<span className="text-lg text-ink-soft"> a month</span>
+                  </p>
+                  <p className="mt-1 text-sm text-ink-soft">or £240 a year</p>
+                </div>
+              </div>
+              <h4 className="font-display text-xl leading-snug">
+                Our membership is designed for anyone who wants reliable care at reduced
+                prices. For £30 a month, or £240 a year, you&rsquo;ll enjoy:
+              </h4>
+              <div className="border border-gold/40 bg-white p-6 space-y-4">
+                <h5 className="font-label text-[12px] font-bold tracking-[0.16em] uppercase text-gold-deep">
+                  50% off most treatments
+                </h5>
+                <ul className="space-y-2.5 text-sm text-ink-soft">
+                  {INCLUDES.map((item) => (
+                    <li key={item} className="flex items-start gap-3">
+                      <span className="mt-0.5 text-gold-deep" aria-hidden>✓</span>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <ul className="space-y-2.5 text-sm text-ink-soft">
+                <li className="flex items-start gap-3">
+                  <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gold" />
+                  Priority support with bookings and care coordination
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gold" />
+                  Under-18s join through a parent or guardian at the clinic.
+                </li>
+              </ul>
+              <p className="text-[15px] text-ink-soft leading-relaxed">
+                This plan provides outstanding value for anyone looking to save on both
+                everyday care and preventative health services.
+              </p>
+            </div>
+
+            {/* Exclusions */}
+            <div className="border border-red-800/15 bg-red-50/40 dark:border-red-400/20 dark:bg-red-950/30 p-7 sm:p-10 space-y-5">
+              <h5 className="font-display text-xl text-red-900 dark:text-red-200">
+                Exclusions — Not Covered by Membership
+              </h5>
+              <ul className="space-y-3 text-sm text-red-900/80 dark:text-red-200/80">
+                {EXCLUSIONS.map((item) => (
+                  <li key={item} className="flex items-start gap-3 border-b border-red-800/10 dark:border-red-400/15 pb-3 last:border-0 last:pb-0">
+                    <span className="font-bold text-red-700/80 dark:text-red-300/80 shrink-0" aria-hidden>✕</span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Pay as you go */}
+      <section className="glow-light border-b border-ink/10">
+        <div className="mx-auto grid max-w-7xl gap-10 px-5 sm:px-10 lg:px-12 py-16 lg:py-20 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+          <div className="space-y-5 max-sm:text-center">
+            <h3 className="text-3xl sm:text-4xl">Prefer Pay-As-You-Go?</h3>
+            <p className="text-[15px] text-ink-soft leading-relaxed">
+              No problem. Our standard fees apply, you can find them on our{" "}
+              <Link href="/fees" className="text-gold-deep underline-offset-4 hover:underline">
+                fee pages
+              </Link>
+              .
+            </p>
+            <Link href="/booking" className="btn-primary btn-cta">
+              Book Now
               <span aria-hidden>→</span>
-            </a>
-            <Link href="/booking" className="btn-outline">
-              Book My Appointment
             </Link>
           </div>
-        </div>
-
-        <div className="glow-dark text-ivory border-t lg:border-t-0 lg:border-l border-ink/10 px-5 sm:px-10 lg:px-12 py-16 lg:py-20 flex flex-col justify-center gap-7">
-          <div>
-            <p className="eyebrow">Gold Member</p>
-            <p className="mt-2 text-sm text-ivory/60">Access All Areas</p>
-          </div>
-          <p className="font-display text-6xl leading-none">
-            £20<span className="text-lg text-ivory/60">/mo</span>
-          </p>
-          <ul className="space-y-3 text-sm">
-            <li className="flex justify-between border-b border-ivory/10 pb-3">
-              <span className="text-ivory/70">Check-Ups</span>
-              <span className="font-semibold">Included</span>
-            </li>
-            <li className="flex justify-between border-b border-ivory/10 pb-3">
-              <span className="text-ivory/70">Treatments</span>
-              <span className="font-semibold text-gold">50% OFF</span>
-            </li>
-            <li className="flex justify-between border-b border-ivory/10 pb-3">
-              <span className="text-ivory/70">Family Add-On</span>
-              <span className="font-semibold">£10/mo</span>
-            </li>
-          </ul>
-          <a
-            href={SITE.membershipUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-gold justify-center"
-          >
-            Join As A Member Now
-          </a>
-          <p className="text-xs text-ivory/50">*12 month contract</p>
-        </div>
-      </section>
-
-      {/* What's included */}
-      <section className="grid lg:grid-cols-[0.9fr_1.1fr] border-b border-ink/10">
-        <div className="glow-light px-5 sm:px-10 lg:px-12 py-16 space-y-5">
-          <p className="eyebrow">Affordable Luxury</p>
-          <h2 className="text-3xl">Membership</h2>
-          <p className="text-[15px] text-ink-soft leading-relaxed">
-            At South Kensington Medical &amp; Dental Clinic, we believe high-quality
-            dental care should be affordable and accessible. That&rsquo;s why we offer a
-            simple, cost-effective membership plan that gives you access to dental
-            services — all under one roof.
-          </p>
-          <p className="text-[15px] text-ink-soft leading-relaxed">
-            This plan provides outstanding value for anyone looking to save on both
-            everyday care and preventative health services.
-          </p>
-        </div>
-
-        <div className="bg-white border-t lg:border-t-0 lg:border-l border-ink/10 px-5 sm:px-10 lg:px-12 py-16 space-y-7">
-          <div className="space-y-3">
-            <h3 className="font-display text-2xl">All-in-One Dental Membership</h3>
-            <p className="font-display text-5xl leading-none">
-              £20<span className="text-lg text-ink-soft">*/month</span>
-            </p>
-            <p className="text-[15px] text-ink-soft">
-              + Add Family Members For Just £10/Month
-            </p>
-            <a
-              href={SITE.membershipUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-primary mt-1"
-            >
-              Join As A Member Now
-              <span aria-hidden>→</span>
-            </a>
-            <p className="text-[15px] text-ink-soft leading-relaxed pt-2">
-              Our membership is designed for individuals and families who want reliable
-              care at reduced prices. For just £20 a month, you&rsquo;ll enjoy:
-            </p>
-          </div>
-
-          <div className="border border-ink/10 bg-cream p-7 space-y-3">
-            <p className="font-label text-[12px] font-bold tracking-[0.16em] uppercase">
-              50% off all dental treatments
-            </p>
-            <ul className="space-y-2 text-sm text-ink-soft">
-              {MEMBERSHIP.includes.map((item) => (
-                <li key={item} className="flex items-start gap-3">
-                  <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-gold shrink-0" />
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <ul className="space-y-2 text-sm text-ink-soft">
-            {MEMBERSHIP.perks.map((perk) => (
-              <li key={perk} className="flex items-start gap-3">
-                <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-sage shrink-0" />
-                {perk}
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
-
-      {/* Exclusions + pay as you go */}
-      <section className="grid lg:grid-cols-2 border-b border-ink/10">
-        <div className="bg-white px-5 sm:px-10 lg:px-12 py-16 space-y-5">
-          <p className="eyebrow">Please Note</p>
-          <h2 className="text-3xl">Exclusions — Not Covered by Membership</h2>
-          <ul className="space-y-3 text-sm text-ink-soft pt-2">
-            {MEMBERSHIP.exclusions.map((item) => (
-              <li key={item} className="flex items-start gap-3 border-b border-ink/8 pb-3">
-                <span className="text-red-700/70 font-bold shrink-0">✕</span>
-                {item}
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        <div className="glow-light border-t lg:border-t-0 lg:border-l border-ink/10 px-5 sm:px-10 lg:px-12 py-16 space-y-6">
-          <p className="eyebrow">No Commitment</p>
-          <h2 className="text-3xl">Prefer Pay-As-You-Go?</h2>
-          <p className="text-[15px] text-ink-soft leading-relaxed">
-            No problem. Our standard fees apply, you can find them on our fee pages.
-          </p>
           <div className="grid gap-4 sm:grid-cols-2">
             <div className="bg-white border border-ink/10 p-6">
-              <p className="font-label text-[10px] font-bold tracking-[0.2em] uppercase text-ink-soft mb-4">
+              <h4 className="font-label text-[10px] font-bold tracking-[0.2em] uppercase text-ink-soft mb-4">
                 Standard Fees
-              </p>
+              </h4>
               <div className="flex items-baseline justify-between border-b border-ink/8 pb-2 mb-2">
                 <span className="text-sm">Dental Check ups</span>
                 <span className="font-display text-3xl font-semibold">£95</span>
@@ -204,53 +245,44 @@ export default function MembershipPage() {
               <p className="text-xs text-ivory/60 mt-1">The Prices Above</p>
             </div>
           </div>
-          <Link href="/booking" className="btn-primary">
-            Book Now
-            <span aria-hidden>→</span>
-          </Link>
         </div>
       </section>
 
-      {/* Ready to join */}
-      <section className="glow-dark text-ivory px-5 sm:px-10 lg:px-12 py-16 grid lg:grid-cols-[1.1fr_0.9fr] gap-10 lg:items-center border-b border-ink/10">
-        <div className="space-y-4">
-          <p className="eyebrow">Join Today</p>
-          <h2 className="text-3xl">Ready to Join?</h2>
-          <p className="text-sm text-ivory/60 leading-relaxed max-w-xl">
-            You can sign up easily by calling us or speaking with our team at your next
-            visit. Your health, your way, with care that works for your lifestyle.
-          </p>
-        </div>
-        <div className="space-y-5">
+      {/* How it works */}
+      <section className="glow-dark text-ivory border-b border-ink/10">
+        <div className="mx-auto max-w-5xl px-5 sm:px-10 py-16 lg:py-20 text-center">
+          <h3 className="display-xl text-[1.75rem] sm:text-[2.25rem]">How It Works</h3>
+          <span className="mx-auto mt-5 block h-px w-16 bg-gold" aria-hidden />
+          <ol className="mt-10 grid gap-5 text-left md:grid-cols-3">
+            {STEPS.map((s) => (
+              <li key={s.title} className="border border-ivory/10 bg-ivory/[0.03] p-6">
+                <p className="font-display text-xl text-gold">{s.title}</p>
+                <p className="mt-3 text-sm text-ivory/70 leading-relaxed">{s.body}</p>
+              </li>
+            ))}
+          </ol>
           <a
-            href={SITE.membershipUrl}
+            href={JOIN_URL("bottom")}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-gold"
+            className="btn-gold btn-cta mt-10 font-bold"
           >
-            Join As A Member Now
+            Join now
             <span aria-hidden>→</span>
           </a>
-          <p className="text-sm text-ivory/60 leading-relaxed">
-            Membership is just £20/month — no hidden fees, 12-month contract.{" "}
+          <p className="mt-6 text-sm text-ivory/70 leading-relaxed">
+            Membership is just <strong className="text-ivory">£30 a month, or £240 a year</strong>{" "}
+            — no hidden fees, 12-month contract.{" "}
             <Link href="/membership-terms" className="text-gold hover:underline">
               Full Terms &amp; Conditions
             </Link>
             .
           </p>
-          <p className="text-xs text-ivory/40">
+          <p className="mt-3 text-xs text-ivory/40">
             20 Old Brompton Road, South Kensington, London
           </p>
         </div>
       </section>
-
-      <CaseStudies />
-
-      <FaqSection items={MEMBERSHIP_FAQS} />
-
-      <SmileGallery limit={6} className="bg-cream border-y border-ink/10" />
-
-      <MeetExperts limit={8} columns={4} shape="circle" />
     </>
   );
 }

@@ -23,7 +23,7 @@ export const GENERAL_FAQS: FaqItem[] = [
 export const TREATMENTS_FAQS: FaqItem[] = [
   {
     q: "Is Smile Dentist South Kensington NHS or private?",
-    a: "Smile Dentist is a private dental practice. We offer transparent pricing with no hidden fees. Our membership plan gives patients 50% off all treatments for just £20 per month, making private dentistry accessible and affordable.",
+    a: "Smile Dentist is a private dental practice. We offer transparent pricing with no hidden fees. Our membership plan gives patients 50% off all treatments for just £30 per month, making private dentistry accessible and affordable.",
   },
   {
     q: "How much does a dental check-up cost in South Kensington?",
@@ -62,7 +62,7 @@ export const TEAM_FAQS: FaqItem[] = [
   },
   {
     q: "Is Smile Dentist South Kensington NHS or private?",
-    a: "Smile Dentist is a private dental practice. We offer transparent pricing with no hidden fees. Our membership plan gives patients 50% off all treatments for just £20 per month, making private dentistry accessible and affordable.",
+    a: "Smile Dentist is a private dental practice. We offer transparent pricing with no hidden fees. Our membership plan gives patients 50% off all treatments for just £30 per month, making private dentistry accessible and affordable.",
   },
   {
     q: "How do I book an appointment?",
@@ -73,15 +73,15 @@ export const TEAM_FAQS: FaqItem[] = [
 export const MEMBERSHIP_FAQS: FaqItem[] = [
   {
     q: "Is Smile Dentist South Kensington NHS or private?",
-    a: "Smile Dentist is a private dental practice. We offer transparent pricing with no hidden fees. Our membership plan gives patients 50% off all treatments for just £20 per month, making private dentistry accessible and affordable.",
+    a: "Smile Dentist is a private dental practice. We offer transparent pricing with no hidden fees. Our membership plan gives patients 50% off all treatments for just £30 per month, making private dentistry accessible and affordable.",
   },
   {
     q: "Can I use my Smile Dentist membership at the City of London clinic?",
-    a: "Yes. Our Smile Dentist Membership is valid at both the South Kensington and City of London clinics. For £20 per month, members receive 50% off most treatments (dental implants are excluded from the membership discount).",
+    a: "Yes. Our Smile Dentist Membership is valid at both the South Kensington and City of London clinics. For £30 per month, members receive 50% off most treatments (dental implants are excluded from the membership discount).",
   },
   {
     q: "Do you offer membership discounts on dental implants?",
-    a: "No. Our £20/month dental membership offers 50% off many routine and cosmetic treatments, but it does not apply to dental implant treatment. Implant fees are the same whether or not you are a member.",
+    a: "No. Our £30/month dental membership offers 50% off many routine and cosmetic treatments, but it does not apply to dental implant treatment. Implant fees are the same whether or not you are a member.",
   },
   {
     q: "How much does a dental check-up cost in South Kensington?",
@@ -100,7 +100,7 @@ export const FEES_FAQS: FaqItem[] = [
   },
   {
     q: "Is Smile Dentist South Kensington NHS or private?",
-    a: "Smile Dentist is a private dental practice. We offer transparent pricing with no hidden fees. Our membership plan gives patients 50% off all treatments for just £20 per month, making private dentistry accessible and affordable.",
+    a: "Smile Dentist is a private dental practice. We offer transparent pricing with no hidden fees. Our membership plan gives patients 50% off all treatments for just £30 per month, making private dentistry accessible and affordable.",
   },
   {
     q: "Do you offer payment plans or finance?",
@@ -108,7 +108,7 @@ export const FEES_FAQS: FaqItem[] = [
   },
   {
     q: "Do you offer membership discounts on dental implants?",
-    a: "No. Our £20/month dental membership offers 50% off many routine and cosmetic treatments, but it does not apply to dental implant treatment. Implant fees are the same whether or not you are a member.",
+    a: "No. Our £30/month dental membership offers 50% off many routine and cosmetic treatments, but it does not apply to dental implant treatment. Implant fees are the same whether or not you are a member.",
   },
   {
     q: "Do you offer finance for dental implants?",

@@ -7,6 +7,7 @@ import { JsonLdBlocks } from "@/components/JsonLd";
 import MeetExperts from "@/components/MeetExperts";
 import SmileGallery from "@/components/SmileGallery";
 import FaqSection from "@/components/FaqSection";
+import EmergencyOffer from "@/components/EmergencyOffer";
 import { FEES_FAQS } from "@/lib/faqs";
 
 export const metadata: Metadata = pageMetadata("/fees");
@@ -49,10 +50,10 @@ export default function FeesPage() {
             </p>
             <ul className="space-y-3 text-sm font-medium">
               <li className="flex items-center gap-3">
-                <span className="h-2 w-2 rounded-full bg-gold" /> £20/Month Membership
+                <span className="h-2 w-2 rounded-full bg-gold" /> £30/Month Membership
               </li>
               <li className="flex items-center gap-3">
-                <span className="h-2 w-2 rounded-full bg-gold" /> Add family for £10/Month
+                <span className="h-2 w-2 rounded-full bg-gold" /> Or £240 a Year
               </li>
               <li className="flex items-center gap-3">
                 <span className="h-2 w-2 rounded-full bg-gold" /> Instant 50% Savings
@@ -88,6 +89,7 @@ export default function FeesPage() {
       {/* Fee tables */}
       <section className="bg-cream py-16 lg:py-20">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 space-y-10">
+          <EmergencyOffer />
           <div className="grid grid-cols-3 px-6 py-4 bg-ink text-ivory text-[11px] font-bold tracking-widest rounded-xl">
             <span>TREATMENT</span>
             <span className="text-right">NON-MEMBER</span>
@@ -187,7 +189,7 @@ export default function FeesPage() {
       </section>
 
       <FaqSection items={FEES_FAQS} />
-      <SmileGallery limit={6} className="bg-cream border-y border-ink/10" />
+      <SmileGallery limit={9} className="bg-cream border-y border-ink/10" />
       <MeetExperts limit={8} columns={4} shape="circle" />
     </>
   );

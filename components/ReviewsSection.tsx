@@ -21,9 +21,9 @@ function VerifiedBadge() {
   );
 }
 
-function ReviewCard({ review }: { review: (typeof REVIEWS)[number] }) {
+function ReviewCard({ review, clone = false }: { review: (typeof REVIEWS)[number]; clone?: boolean }) {
   return (
-    <article className="w-[80vw] sm:w-[46vw] lg:w-[30vw] max-w-[420px] shrink-0 bg-white border border-ink/10 p-7 flex flex-col gap-4">
+    <article aria-hidden={clone || undefined} className="w-[80vw] sm:w-[46vw] lg:w-[30vw] max-w-[420px] shrink-0 bg-white border border-ink/10 p-7 flex flex-col gap-4">
       <div className="flex items-center gap-4">
         <span className="relative shrink-0">
           {/* Google-hosted avatar: served straight from Google's CDN */}
@@ -65,7 +65,7 @@ function ReviewCard({ review }: { review: (typeof REVIEWS)[number] }) {
 
 export default function ReviewsSection() {
   return (
-    <section className="bg-cream border-y border-ink/10 py-14 overflow-hidden">
+    <section id="reviews" className="scroll-mt-20 bg-cream border-y border-ink/10 py-14 overflow-hidden">
       <div className="mx-auto max-w-7xl px-5 sm:px-10 flex flex-wrap items-end justify-between gap-8">
         <div className="space-y-2">
           <p className="eyebrow">What Our Patients Say</p>
@@ -94,7 +94,7 @@ export default function ReviewsSection() {
       <div className="marquee mt-10">
         <div className="marquee-track gap-6" style={{ animationDuration: "80s" }}>
           {[...REVIEWS, ...REVIEWS].map((review, i) => (
-            <ReviewCard key={`${review.name}-${i}`} review={review} />
+            <ReviewCard key={`${review.name}-${i}`} review={review} clone={i >= REVIEWS.length} />
           ))}
         </div>
       </div>

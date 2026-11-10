@@ -1,149 +1,236 @@
-import Image from "next/image";
-import Link from "next/link";
-import { SITE, IMAGES, YOUTUBE_CHANNEL } from "@/lib/site-data";
+"use client";
 
-const USP_ITEMS = [
-  {
-    top: `${SITE.rating}/5`,
-    bottom: "from Google Reviews",
-    icon: (
-      <path d="M12 3l2.6 5.6L21 9.4l-4.5 4.4 1.1 6.2L12 17.1 6.4 20l1.1-6.2L3 9.4l6.4-.8L12 3z" />
-    ),
-  },
-  {
-    top: "South Kensington",
-    bottom: "Next to South Ken Station",
-    icon: (
-      <path d="M12 2c-3.9 0-7 3.1-7 7 0 5.3 7 13 7 13s7-7.7 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z" />
-    ),
-  },
-  {
-    top: "City of London",
-    bottom: "Ave Maria Lane, EC4",
-    icon: (
-      <path d="M12 2c-3.9 0-7 3.1-7 7 0 5.3 7 13 7 13s7-7.7 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z" />
-    ),
-  },
-  {
-    top: "Members: 50% Off",
-    bottom: "£20/Month",
-    icon: (
-      <path d="M12 21s-8-4.6-8-10a4.6 4.6 0 0 1 8-3.1A4.6 4.6 0 0 1 20 11c0 5.4-8 10-8 10z" />
-    ),
-  },
+import Link from "next/link";
+import { MotionConfig, motion } from "motion/react";
+import Image from "next/image";
+import { SITE } from "@/lib/site-data";
+import HeroMedia from "@/components/HeroMedia";
+import GoogleG from "@/components/GoogleG";
+
+const EASE = [0.22, 1, 0.36, 1] as const;
+
+const POPULAR = [
+  { label: "Dental Veneers", href: "/dental-veneers-london" },
+  { label: "Composite Bonding", href: "/composite-bonding-london" },
+  { label: "Invisible Braces", href: "/pro-aligners-london" },
+  { label: "Smile Makeover", href: "/smile-makeover-london" },
 ];
+
+const HEADLINE = ["Fall in Love", "With Your", "Smile Again"];
+const HEADLINE_GOLD = new Set([2]);
+
+function HeadlineLines({ lines, gold }: { lines: string[]; gold: Set<number> }) {
+  return lines.map((line, i) => (
+    <span key={line} className="block overflow-hidden pb-[0.06em]">
+      <motion.span
+        className={`block ${gold.has(i) ? "text-gold-deep" : ""}`}
+        initial={{ y: "110%" }}
+        animate={{ y: 0 }}
+        transition={{ duration: 0.9, ease: EASE, delay: 0.1 + i * 0.1 }}
+      >
+        {line}
+      </motion.span>
+    </span>
+  ));
+}
+
+const rise = (delay: number) => ({
+  initial: { opacity: 0, y: 24 },
+  animate: { opacity: 1, y: 0 },
+  transition: { duration: 0.8, ease: EASE, delay },
+});
 
 export default function Hero() {
   return (
-    <>
-      <section className="hero-shade relative overflow-hidden">
-        <div className="mx-auto max-w-7xl grid lg:grid-cols-[1fr_1.05fr] items-stretch">
-          <div className="px-5 sm:px-10 lg:pr-16 py-16 lg:py-24 self-center">
-            <p className="eyebrow fade-up max-w-[18rem] leading-relaxed">
-              Affordable Luxury Across Central London
-            </p>
+    <MotionConfig reducedMotion="user">
+      <section id="main-content" className="hero-shade relative overflow-hidden">
+        <div className="relative mx-auto max-w-7xl grid lg:grid-cols-[0.92fr_1.08fr] lg:grid-rows-[1fr_auto_auto_1fr] gap-x-6">
+          <div className="min-w-0 px-5 sm:px-10 lg:pr-6 max-sm:text-center pt-9 pb-10 sm:pt-12 sm:pb-20 lg:col-start-1 lg:row-start-2 lg:pt-12 lg:pb-16">
+            <motion.p
+              {...rise(0)}
+              className="flex items-center max-sm:justify-center gap-3 font-label text-[11px] font-semibold tracking-[0.26em] uppercase text-gold-deep"
+            >
+              <span className="h-px w-8 bg-gold max-sm:w-5" aria-hidden />
+              Cosmetic Dentistry · Central London
+              <span className="h-px w-5 bg-gold sm:hidden" aria-hidden />
+            </motion.p>
 
-            <h1 className="display-xl fade-up fade-up-1 mt-6 max-w-[13ch] text-[2rem] sm:text-4xl lg:text-[3.15rem]">
-              Smile Dentist: The New Standard for Cosmetic Dentistry
+            <h1 className="display-xl mt-6 text-[2.15rem] min-[375px]:text-[2.5rem] sm:text-6xl lg:text-[3.9rem] xl:text-[4.5rem] 2xl:text-[5.6rem] lg:leading-[0.98]">
+              <HeadlineLines lines={HEADLINE} gold={HEADLINE_GOLD} />
             </h1>
 
-            <p className="fade-up fade-up-2 mt-7 max-w-md text-[15px] leading-relaxed text-ink-soft">
-              {SITE.tagline}
-            </p>
+            <motion.p
+              {...rise(0.55)}
+              className="mt-6 max-w-md lg:max-w-xl max-sm:mx-auto text-[15px] sm:text-base lg:text-lg leading-relaxed text-ink-soft"
+            >
+              Whether it&apos;s a chipped tooth or a complete smile makeover, our gentle
+              cosmetic team will help you feel confident every time you smile — at
+              prices that make it possible.
+            </motion.p>
 
-            <div className="fade-up fade-up-3 mt-9 flex flex-wrap items-center gap-3">
+            <motion.div {...rise(0.65)} className="mt-7 max-sm:text-center">
+              <p className="font-label text-[11px] font-semibold tracking-[0.2em] uppercase text-ink-soft">
+                Popular cosmetic treatments
+              </p>
+              <div className="mt-3 flex flex-wrap max-sm:justify-center gap-2">
+                {POPULAR.map((t) => (
+                  <Link
+                    key={t.href}
+                    href={t.href}
+                    className="group inline-flex items-center gap-1.5 rounded-full border border-ink/15 bg-white/60 px-4 py-2 text-[13px] text-ink transition-all hover:-translate-y-0.5 hover:border-gold hover:bg-white hover:shadow-md"
+                  >
+                    {t.label}
+                    <span
+                      aria-hidden
+                      className="text-gold transition-transform group-hover:translate-x-0.5"
+                    >
+                      →
+                    </span>
+                  </Link>
+                ))}
+              </div>
+            </motion.div>
+
+            <motion.div {...rise(0.8)} className="mt-8 flex flex-wrap items-center max-sm:flex-col max-sm:items-stretch max-sm:mx-auto max-sm:max-w-[20rem] gap-3">
               <Link href="/booking" className="btn-primary">
-                Book My Appointment
+                Book a Smile Makeover
                 <span aria-hidden>→</span>
               </Link>
               <Link href="/fees" className="btn-outline">
                 View Fee Guide
                 <span aria-hidden>→</span>
               </Link>
-            </div>
+            </motion.div>
           </div>
 
-          <div className="relative min-h-[380px] sm:min-h-[520px] lg:min-h-[660px]">
-            <Image
-              src={IMAGES.drYasha}
-              alt="Dr. Yasha Y Shirazi - Principal Dentist and Clinical Director at Smile Dentist London"
-              fill
-              priority
-              className="object-cover object-top"
-              sizes="(max-width: 1024px) 100vw, 55vw"
-            />
-
-            <a
-              href={YOUTUBE_CHANNEL}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Watch patient stories on our YouTube channel"
-              className="group absolute left-4 sm:left-0 lg:-left-14 top-1/2 -translate-y-1/2 flex h-28 w-28 items-center justify-center"
-            >
-              <svg viewBox="0 0 120 120" className="spin-slow absolute inset-0 h-full w-full">
-                <defs>
-                  <path
-                    id="hero-badge-arc"
-                    d="M60,60 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0"
-                    fill="none"
+          {/* Mobile-only trust strip, shown above the video */}
+          <motion.div {...rise(0.8)} className="min-w-0 px-5 pb-8 sm:hidden">
+            <div className="grid gap-px overflow-hidden border border-ink/10 bg-ink/10 shadow-[0_20px_40px_-28px_rgba(27,24,21,0.35)]">
+              <div className="grid grid-cols-3 gap-px">
+                <a
+                  href="https://www.gdc-uk.org/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="General Dental Council (GDC) registered"
+                  className="flex flex-col items-center justify-center gap-1.5 bg-white/90 px-1.5 py-3"
+                >
+                  <Image
+                    src="/gdc-new.png"
+                    alt="General Dental Council (GDC)"
+                    width={800}
+                    height={406}
+                    className="h-8 w-auto max-w-full object-contain"
                   />
-                </defs>
-                <text className="fill-ink/70 font-label text-[9px] tracking-[0.32em] uppercase">
-                  <textPath href="#hero-badge-arc" startOffset="0%">
-                    Watch patient stories · Watch patient stories ·
-                  </textPath>
-                </text>
-              </svg>
-              <span className="flex h-16 w-16 items-center justify-center rounded-full bg-ivory shadow-lg shadow-ink/20 transition-colors group-hover:bg-gold">
-                <svg viewBox="0 0 24 24" className="h-5 w-5 translate-x-0.5 fill-ink" aria-hidden>
-                  <path d="M8 5v14l11-7L8 5z" />
-                </svg>
-              </span>
-            </a>
-
-            <div className="glass absolute bottom-6 left-6 max-w-[19rem] px-5 py-3.5 border border-gold/30">
-              <Image
-                src={IMAGES.signature}
-                alt="Dr. Yasha Y Shirazi signature"
-                width={130}
-                height={44}
-                className="h-8 w-auto"
-              />
-              <p className="font-label text-[9px] tracking-[0.18em] uppercase text-ink-soft mt-1">
-                Dr. Yasha Y Shirazi &middot; Principal Dentist &amp; Clinical Director
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* USP strip */}
-      <section id="main-content" className="bg-ink text-ivory">
-        <div className="mx-auto max-w-7xl grid grid-cols-2 lg:grid-cols-4 divide-x divide-ivory/10">
-          {USP_ITEMS.map((item) => (
-            <div key={item.top} className="flex items-start gap-4 px-6 sm:px-10 py-9">
-              <svg
-                viewBox="0 0 24 24"
-                className="h-8 w-8 shrink-0 fill-gold"
-                aria-hidden
-              >
-                {item.icon}
-              </svg>
-              <div>
-                <p className="font-label text-[13px] font-semibold tracking-[0.16em] uppercase">
-                  {item.top}
-                </p>
-                <p className="mt-2 text-[15px] leading-relaxed text-ivory/60">
-                  {item.bottom}
-                </p>
+                  <span className="text-center font-label text-[9px] leading-tight tracking-[0.08em] uppercase text-ink-soft">
+                    GDC Registered
+                  </span>
+                </a>
+                <a
+                  href="https://www.cqc.org.uk/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Care Quality Commission (CQC) regulated"
+                  className="flex flex-col items-center justify-center gap-1.5 bg-white/90 px-1.5 py-3"
+                >
+                  <Image
+                    src="/cqc-new-logo.png"
+                    alt="Care Quality Commission (CQC)"
+                    width={2560}
+                    height={819}
+                    className="h-6 my-1 w-auto max-w-full object-contain"
+                  />
+                  <span className="text-center font-label text-[9px] leading-tight tracking-[0.08em] uppercase text-ink-soft">
+                    CQC Regulated
+                  </span>
+                </a>
+                <a
+                  href="#reviews"
+                  aria-label={`Rated ${SITE.rating} from ${SITE.reviewCount} Google reviews`}
+                  className="flex flex-col items-center justify-center gap-1 bg-white/90 px-1.5 py-3"
+                >
+                  <span className="flex items-center gap-1.5">
+                    <GoogleG className="h-5 w-5" />
+                    <span className="font-display text-lg leading-none text-ink">
+                      {SITE.rating}
+                    </span>
+                  </span>
+                  <span className="text-[11px] leading-none tracking-tight text-[#FBBC05]" aria-hidden>
+                    ★★★★★
+                  </span>
+                  <span className="text-center font-label text-[9px] leading-tight tracking-[0.08em] uppercase text-ink-soft">
+                    {SITE.reviewCount} Reviews
+                  </span>
+                </a>
               </div>
             </div>
-          ))}
+          </motion.div>
+
+          <div className="min-w-0 lg:col-start-2 lg:row-span-4 lg:row-start-1 lg:self-start">
+            <HeroMedia
+              id="xQ833zvg6XY"
+              title="3 Things Your Dentist Notices That You Might Miss | Dr Nikki"
+              speaker="Dr Nikki · South Kensington"
+              duration="1:31"
+            />
+            {/* Trust bar: regulators */}
+            <motion.div
+              {...rise(1)}
+              className="px-5 sm:px-10 lg:px-0 lg:pl-8 lg:pr-10 pb-10 lg:pt-10 lg:pb-14 max-sm:hidden"
+            >
+              <div className="overflow-hidden border border-ink/10 shadow-[0_24px_50px_-30px_rgba(27,24,21,0.35)]">
+                <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 bg-white/85 px-6 py-4">
+                  <p className="flex items-center gap-2 font-label text-[11px] font-semibold tracking-[0.2em] uppercase text-ink-soft">
+                    <svg viewBox="0 0 24 24" className="h-4 w-4 fill-gold" aria-hidden>
+                      <path d="M12 2 4 5v6c0 5 3.4 9.7 8 11 4.6-1.3 8-6 8-11V5l-8-3zm-1.2 14.2-3.5-3.5 1.4-1.4 2.1 2.1 4.9-4.9 1.4 1.4-6.3 6.3z" />
+                    </svg>
+                    Registered &amp; regulated
+                  </p>
+                  <div className="flex items-center gap-4 min-[375px]:gap-6 sm:gap-8">
+                    <a
+                      href="https://www.gdc-uk.org/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="General Dental Council (GDC) registered"
+                      className="shrink-0 py-1 opacity-90 transition-opacity hover:opacity-100"
+                    >
+                      <Image
+                        src="/gdc-new.png"
+                        alt="General Dental Council (GDC)"
+                        width={800}
+                        height={406}
+                        className="h-14 w-auto"
+                      />
+                      <span className="mt-1 block font-label text-[10px] max-[374px]:tracking-[0.1em] tracking-[0.16em] uppercase text-ink-soft">
+                        GDC Registered
+                      </span>
+                    </a>
+                    <span className="h-12 w-px shrink-0 bg-ink/10" aria-hidden />
+                    <a
+                      href="https://www.cqc.org.uk/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Care Quality Commission (CQC) regulated"
+                      className="shrink-0 py-1 opacity-90 transition-opacity hover:opacity-100"
+                    >
+                      <Image
+                        src="/cqc-new-logo.png"
+                        alt="Care Quality Commission (CQC)"
+                        width={2560}
+                        height={819}
+                        className="h-8 w-auto"
+                      />
+                      <span className="mt-2 block font-label text-[10px] max-[374px]:tracking-[0.1em] tracking-[0.16em] uppercase text-ink-soft">
+                        CQC Regulated
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
         </div>
+
       </section>
-    </>
+    </MotionConfig>
   );
 }
-
-
-

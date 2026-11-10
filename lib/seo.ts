@@ -36,7 +36,7 @@ export type PageSeo = {
 
 export const PAGE_SEO: Record<string, PageSeo> = {
   "/": {"title": "Smile Dentist London | Cosmetic, Implants & Smile Makeover Dentist", "description": "Smile Dentist London — affordable luxury cosmetic dentistry across two Central London clinics in South Kensington (SW7) and the City of London (EC4). 50% off treatments for members. Book today."},
-  "/membership": {"title": "Dental Membership Plan London | Save 50% Instantly", "description": "Join our exclusive dental membership for just £20/month. Get 50% off all treatments instantly. Includes check-ups and family add-ons."},
+  "/membership": {"title": "Dental Membership Plan London | Save 50% Instantly", "description": "Join our dental membership for £30 a month, or £240 a year. Get 50% off most treatments instantly. Includes check-ups."},
   "/fees": {"title": "Dental Fees & Pricing London | Transparent Cost Guide | Smile Dentist", "description": "Transparent dental fees. See our member vs non-member prices. Check-ups from £47.50, Hygiene from £44.50. No hidden costs."},
   "/booking": {"title": "Book a Dentist Appointment in London | Smile Dentist", "description": "Book your dental appointment online at Smile Dentist London. Two clinics in South Kensington (SW7) and the City of London (EC4). Same-week availability for new and existing patients."},
   "/treatments": {"title": "Dental Treatments London | Full Range of Services", "description": "Explore our full range of dental treatments including cosmetic dentistry, dental implants, teeth whitening, and emergency dental care in South Kensington."},
@@ -46,17 +46,17 @@ export const PAGE_SEO: Record<string, PageSeo> = {
   "/cosmetic-dentistry-london": {"title": "Cosmetic Dentist London | Veneers, Bonding & Makeovers", "description": "Enhance your smile with Dr Yasha. Expert cosmetic dentistry including Porcelain Veneers, Composite Bonding and Smile Makeovers."},
   "/thank-you": {"title": "Thank You", "description": "Thank you for your booking at Smile Dentist London. Your appointment is confirmed.", "noindex": true},
   "/blog": {"title": "Dental Health Blog | Expert Tips & Advice | Smile Dentist London", "description": "Expert dental health advice, tips, and insights about cosmetic dentistry, oral care, and dental treatments from our experienced team in London."},
-  "/south-kensington": {"title": "Dentist South Kensington SW7 | Veneers, Implants & Cosmetic Dentistry", "description": "Smile Dentist South Kensington — private cosmetic dentist at 20 Old Brompton Road, SW7. Veneers from £547.50 and teeth whitening from £199.50 for members; dental implants from £2,950. CQC registered. 3 min from South Kensington Station. Open 7 days."},
+  "/south-kensington": {"title": "Dentist South Kensington SW7 | Veneers, Implants & Cosmetic Dentistry", "description": "Smile Dentist South Kensington — private cosmetic dentist at 20 Old Brompton Road, SW7. Veneers from £547.50 and teeth whitening from £199; dental implants from £2,950. CQC registered. 3 min from South Kensington Station. Open 7 days."},
   "/city-of-london": {"title": "Dentist City of London | Private & Cosmetic Dentist", "description": "Private and cosmetic dentist in the City of London at 5 Ave Maria Lane, near St Paul’s. Explore treatments, meet our team and book your appointment."},
   "/smile-makeover-london": {"title": "Smile Makeover London | Comprehensive Cosmetic Dentistry", "description": "Transform your smile with a bespoke smile makeover in London. Veneers, bonding, whitening & implants combined. GDC-registered team. Members save 50%."},
-  "/teeth-whitening-london": {"title": "Teeth Whitening London From £199.50 | Dentist Supervised Kits", "description": "Teeth whitening in London by an experienced whitening dentist in Central London. Custom trays & safe home kits from £199.50. Book today."},
+  "/teeth-whitening-london": {"title": "Teeth Whitening London From £199 | Dentist Supervised Kits", "description": "Teeth whitening in London by an experienced whitening dentist in Central London. Custom trays & safe home kits from £199. Book today."},
   "/composite-bonding-london": {"title": "Composite Bonding London | Natural Smile Enhancements | Smile Dentist", "description": "Repair chips, close gaps and reshape teeth with composite bonding in London. Natural-looking results from just £197 per tooth."},
   "/porcelain-veneers-london": {"title": "Porcelain Veneers London | Premium Smile Makeover | Smile Dentist", "description": "Enhance your smile with hand-crafted porcelain veneers in Central London. Premium quality from £547.50 with our plan. 0% finance available. Book today!"},
   "/composite-veneers-london": {"title": "Composite Veneers London | Cosmetic Smile Treatment | Smile Dentist", "description": "Hand-sculpted composite veneers in Central London. A minimally invasive cosmetic option from £297.50 with our membership plan. Book a consultation today."},
   "/dental-veneers-london": {"title": "Dental Veneers London | Composite & Porcelain Options | Smile Dentist", "description": "Composite and porcelain dental veneers in Central London. Personalised cosmetic treatment from £297.50 with our membership plan. Book a consultation today."},
   "/tooth-contouring-london": {"title": "Tooth Contouring London | Reshape Your Smile", "description": "Smooth jagged edges and reshape teeth in one painless visit at Smile Dentist London. No drilling, no anaesthetic. From £75 for members. Book today."},
   "/gum-contouring-london": {"title": "Gum Contouring London | Fix Gummy Smile", "description": "Expert gum contouring in London to fix a gummy smile and uneven gum lines. Precise laser sculpting by GDC-registered dentists. From £100 for members."},
-  "/pro-aligners-london": {"title": "Invisible Braces London | Clear Aligners from £1000", "description": "Straighten teeth discreetly with clear aligners in London. Affordable Invisalign alternative from £1,000 for members. Free consultation. Book today."},
+  "/pro-aligners-london": {"title": "Invisible Braces London | Clear Aligners from £2000", "description": "Straighten teeth discreetly with clear aligners in London. Affordable Invisalign alternative from £2,000. Free consultation. Book today."},
   "/missing-teeth-london": {"title": "Missing Teeth Solutions London | Implants, Bridges & Dentures", "description": "Explore all options for replacing missing teeth in London — dental implants, bridges and dentures. GDC-registered team. Members save 50%. Book today."},
   "/dental-implants-london": {"title": "Dental Implants London | Long-Lasting Tooth Replacement", "description": "Dental implants in London from £2,950, including the implant, abutment and zirconia crown. Long-lasting, natural-looking tooth replacement by GDC-registered implant dentists. Our membership discount does not apply to implants. Book a consultation."},
   "/dental-crowns-london": {"title": "Dental Crowns London | Restore Damaged Teeth", "description": "Dental crowns in London — natural-looking porcelain and zirconia crowns to restore damaged teeth. GDC-registered team. From £497.50 for members."},
@@ -171,14 +171,14 @@ export const PAGE_SEO: Record<string, PageSeo> = {
   "/conditions/white-spots-on-teeth": {"title": "White Spots on Teeth | Smile Dentist London", "description": "White spots on teeth may indicate enamel changes or early decay. Learn possible causes and how dentists assess these changes."},
   "/conditions/wisdom-tooth-pain-pericoronitis": {"title": "Wisdom Tooth Pain (Pericoronitis) | London Dentist", "description": "Wisdom tooth pain may be caused by pericoronitis. Learn symptoms, risks, and when emergency dental assessment is needed."},
   "/conditions/worn-teeth": {"title": "Worn Teeth (Attrition) Treatment | Smile Dentist London", "description": "Learn about worn teeth caused by grinding or tooth attrition, common symptoms, and how dentists assess and manage tooth wear."},
-  "/dental-crowns-london/dental-crown-cost": {"title": "Dental Crown Cost London | £995 per Crown", "description": "Dental crowns in London at £995 per tooth (£497.50 with our £20/month membership). High-strength zirconia or E-max ceramic crowns by GDC-registered dentists. SW7 and EC4 clinics."},
+  "/dental-crowns-london/dental-crown-cost": {"title": "Dental Crown Cost London | £995 per Crown", "description": "Dental crowns in London at £995 per tooth (£497.50 with our £30/month membership). High-strength zirconia or E-max ceramic crowns by GDC-registered dentists. SW7 and EC4 clinics."},
   "/dental-implants-london/dental-implant-cost": {"title": "Dental Implants Cost London | £2,950 inc. Crown", "description": "Dental implants in London — single tooth implant from £2,950 including the implant, abutment and zirconia crown. Placed by GDC-registered implant dentists with 30+ years of experience. SW7 and EC4 clinics."},
-  "/dental-veneers-london/veneers-cost": {"title": "Dental Veneers Cost London | From £595 per Tooth", "description": "Dental veneers cost in London: composite veneers from £595 per tooth, porcelain veneers from £1,095 per tooth. 50% off with our £20/month membership. By GDC-registered dentists at our SW7 and EC4 clinics."},
-  "/dentures-london/dentures-cost": {"title": "Dentures Cost London | Partial £795 · Full £1,095", "description": "Dentures in London from £795. Acrylic partial £795, full acrylic £1,095, cobalt-chrome £1,395, Valplast/Flexi £895. 50% off with our £20/month membership. GDC-registered dentists at our CQC-regulated South Kensington (SW7) clinic."},
+  "/dental-veneers-london/veneers-cost": {"title": "Dental Veneers Cost London | From £595 per Tooth", "description": "Dental veneers cost in London: composite veneers from £595 per tooth, porcelain veneers from £1,095 per tooth. 50% off with our £30/month membership. By GDC-registered dentists at our SW7 and EC4 clinics."},
+  "/dentures-london/dentures-cost": {"title": "Dentures Cost London | Partial £795 · Full £1,095", "description": "Dentures in London from £795. Acrylic partial £795, full acrylic £1,095, cobalt-chrome £1,395, Valplast/Flexi £895. 50% off with our £30/month membership. GDC-registered dentists at our CQC-regulated South Kensington (SW7) clinic."},
   "/implant-dentures-london": {"title": "Implant Dentures London | Secure Fixed Dentures", "description": "Implant-retained dentures in London — secure, fixed dentures anchored by dental implants. No slipping, no adhesive. Consultations available. Book today."},
   "/membership-terms": {"title": "Dental Membership Terms | Smile Dentist London", "description": "Dental membership policy, terms and conditions for the Smile Dentist membership programme. Clear, fair, and transparent terms."},
   "/privacy-policy": {"title": "Privacy Policy | Smile Dentist London", "description": "Read our privacy policy to understand how Smile Dentist collects, uses, and protects your personal data in accordance with UK GDPR."},
-  "/root-canal-london/root-canal-cost-london": {"title": "Root Canal Cost London | From £695 Front · £895 Molar", "description": "Root canal treatment in London from £695 (front tooth) to £895 (molar). 50% off with our £20/month membership. Single-visit where clinically possible, by GDC-registered dentists at our CQC-regulated SW7 clinic."},
+  "/root-canal-london/root-canal-cost-london": {"title": "Root Canal Cost London | From £695 Front · £895 Molar", "description": "Root canal treatment in London from £695 (front tooth) to £895 (molar). 50% off with our £30/month membership. Single-visit where clinically possible, by GDC-registered dentists at our CQC-regulated SW7 clinic."},
   "/teeth-whitening-london/teeth-whitening-cost": {"title": "Teeth Whitening Cost London | £199 Limited Offer", "description": "Teeth whitening in London now £199 for everyone (limited-time offer, usually £399). Dentist-prescribed Boutique home whitening with custom trays. No hidden fees. SW7 & EC4 clinics."},
   "/terms": {"title": "Terms & Conditions | Smile Dentist London", "description": "Terms and conditions for Smile Dentist services, membership, and website usage."},
   "/valplast-dentures-london": {"title": "Valplast Dentures London | Flexible Partial Dentures", "description": "Valplast flexible partial dentures in London — metal-free, lightweight and virtually invisible. Ideal for front teeth. From £497.50 for members."},
@@ -379,13 +379,13 @@ export const PAGE_JSONLD: Record<string, unknown[]> = {
       "offers": [
         {
           "@type": "Offer",
-          "price": "20",
+          "price": "30",
           "priceCurrency": "GBP",
           "description": "Standard Price"
         },
         {
           "@type": "Offer",
-          "price": "20",
+          "price": "30",
           "priceCurrency": "GBP",
           "description": "Member Price (50% off)"
         }
@@ -727,7 +727,7 @@ export const PAGE_JSONLD: Record<string, unknown[]> = {
           "name": "Is Smile Dentist South Kensington NHS or private?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Smile Dentist is a private dental practice. We offer transparent pricing with no hidden fees. Our membership plan gives patients 50% off all treatments for just £20 per month, making private dentistry accessible and affordable."
+            "text": "Smile Dentist is a private dental practice. We offer transparent pricing with no hidden fees. Our membership plan gives patients 50% off all treatments for just £30 per month, making private dentistry accessible and affordable."
           }
         },
         {
@@ -952,7 +952,7 @@ export const PAGE_JSONLD: Record<string, unknown[]> = {
           "name": "Can I use my Smile Dentist membership at the City of London clinic?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. Our Smile Dentist Membership is valid at both the South Kensington and City of London clinics. For £20 per month, members receive 50% off most treatments (dental implants are excluded from the membership discount)."
+            "text": "Yes. Our Smile Dentist Membership is valid at both the South Kensington and City of London clinics. For £30 per month, members receive 50% off most treatments (dental implants are excluded from the membership discount)."
           }
         },
         {
@@ -1309,7 +1309,7 @@ export const PAGE_JSONLD: Record<string, unknown[]> = {
       "@context": "https://schema.org",
       "@type": "MedicalProcedure",
       "name": "Clear Aligners",
-      "description": "Straighten teeth discreetly with clear aligners. Affordable alternative to Invisalign from £1000 for members.",
+      "description": "Straighten teeth discreetly with clear aligners. Affordable alternative to Invisalign from £2000.",
       "availableService": {
         "@type": "MedicalBusiness",
         "name": "Smile Dentist",
@@ -1435,7 +1435,7 @@ export const PAGE_JSONLD: Record<string, unknown[]> = {
           "name": "How much do dental implants cost at Smile Dentist?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A single dental implant including the implant, abutment, and zirconia crown starts from £2,950. Our £20/month membership discount does not apply to dental implants; implant fees are the same whether or not you are a member. A full written treatment plan with costs is provided after your consultation."
+            "text": "A single dental implant including the implant, abutment, and zirconia crown starts from £2,950. Our £30/month membership discount does not apply to dental implants; implant fees are the same whether or not you are a member. A full written treatment plan with costs is provided after your consultation."
           }
         },
         {
@@ -5151,7 +5151,7 @@ export const PAGE_JSONLD: Record<string, unknown[]> = {
         "Cosmetic Bonding",
         "Composite Edge Bonding"
       ],
-      "description": "Composite bonding (cosmetic dental bonding) in London. Hand-sculpted high-aesthetic resin applied directly to the tooth to repair chips, close small gaps, lengthen worn edges or refine shape — typically with little or no removal of natural tooth structure. £395 per tooth (£197.50 with our £20/month membership). Carried out by GDC-registered dentists at Smile Dentist London (South Kensington, SW7).",
+      "description": "Composite bonding (cosmetic dental bonding) in London. Hand-sculpted high-aesthetic resin applied directly to the tooth to repair chips, close small gaps, lengthen worn edges or refine shape — typically with little or no removal of natural tooth structure. £395 per tooth (£197.50 with our £30/month membership). Carried out by GDC-registered dentists at Smile Dentist London (South Kensington, SW7).",
       "procedureType": "https://schema.org/TherapeuticProcedure",
       "bodyLocation": "Teeth",
       "url": "https://www.smiledentist.co.uk/composite-bonding-london/composite-bonding-cost",
@@ -5235,7 +5235,7 @@ export const PAGE_JSONLD: Record<string, unknown[]> = {
           "name": "How much does composite bonding cost in London?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "At Smile Dentist London, composite bonding is £395 per tooth. Members of our £20/month dental plan pay £197.50 per tooth (50% off). A separate clinical examination is required first to confirm suitability — £30 for new patients or £95 for returning patients (£47.50 with membership). The final fee is always confirmed in a written treatment plan after your consultation."
+            "text": "At Smile Dentist London, composite bonding is £395 per tooth. Members of our £30/month dental plan pay £197.50 per tooth (50% off). A separate clinical examination is required first to confirm suitability — £30 for new patients or £95 for returning patients (£47.50 with membership). The final fee is always confirmed in a written treatment plan after your consultation."
           }
         },
         {
@@ -11258,7 +11258,7 @@ export const PAGE_JSONLD: Record<string, unknown[]> = {
         "Ceramic Crown",
         "Cap"
       ],
-      "description": "Dental crowns in London — full-contour zirconia or E-max lithium disilicate ceramic crowns. A custom crown covers a tooth that is fractured, heavily filled or root-treated to restore strength, shape and appearance. £995 per tooth (£497.50 with our £20/month membership). Carried out by GDC-registered dentists at Smile Dentist London (South Kensington, SW7).",
+      "description": "Dental crowns in London — full-contour zirconia or E-max lithium disilicate ceramic crowns. A custom crown covers a tooth that is fractured, heavily filled or root-treated to restore strength, shape and appearance. £995 per tooth (£497.50 with our £30/month membership). Carried out by GDC-registered dentists at Smile Dentist London (South Kensington, SW7).",
       "procedureType": "https://schema.org/TherapeuticProcedure",
       "bodyLocation": "Teeth",
       "howPerformed": "Under local anaesthetic, the damaged tooth is conservatively prepared. A digital scan or conventional impression is taken and a custom zirconia or E-max ceramic crown is made by a UK dental laboratory. A temporary crown is worn for typically 1–2 weeks. At the second appointment the final crown is fitted and bonded.",
@@ -11343,7 +11343,7 @@ export const PAGE_JSONLD: Record<string, unknown[]> = {
           "name": "How much does a dental crown cost in London?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "At Smile Dentist London, a dental crown costs £995 per tooth. Members of our £20/month dental plan pay £497.50 per crown (50% off). A clinical examination is required first — £30 for new patients or £95 for returning patients (£47.50 with membership). The final fee is always confirmed in a written treatment plan after your consultation."
+            "text": "At Smile Dentist London, a dental crown costs £995 per tooth. Members of our £30/month dental plan pay £497.50 per crown (50% off). A clinical examination is required first — £30 for new patients or £95 for returning patients (£47.50 with membership). The final fee is always confirmed in a written treatment plan after your consultation."
           }
         },
         {
@@ -11440,7 +11440,7 @@ export const PAGE_JSONLD: Record<string, unknown[]> = {
         "Implant-Supported Crown",
         "Endosseous Implant"
       ],
-      "description": "Dental implant treatment in London. A titanium implant fixture is placed into the jawbone to replace the root of a missing tooth and restored with a custom zirconia crown. £2,950 per single tooth implant — fee includes the implant, abutment and crown. Placed by GDC-registered implant dentists at Smile Dentist London (South Kensington, SW7). Our £20/month dental membership does not apply to implant treatment.",
+      "description": "Dental implant treatment in London. A titanium implant fixture is placed into the jawbone to replace the root of a missing tooth and restored with a custom zirconia crown. £2,950 per single tooth implant — fee includes the implant, abutment and crown. Placed by GDC-registered implant dentists at Smile Dentist London (South Kensington, SW7). Our £30/month dental membership does not apply to implant treatment.",
       "procedureType": "https://schema.org/SurgicalProcedure",
       "bodyLocation": "Jaw",
       "howPerformed": "Under local anaesthetic (with optional IV sedation for anxious patients), a titanium implant fixture is placed into the jawbone. After a healing period of typically 3–6 months during which the bone integrates with the implant, an abutment and a custom zirconia crown are fitted.",
@@ -11525,7 +11525,7 @@ export const PAGE_JSONLD: Record<string, unknown[]> = {
           "name": "How much does a single dental implant cost in London?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "At Smile Dentist London, a single tooth dental implant costs £2,950 — and this fee includes the titanium implant, the abutment, and a custom zirconia crown. A clinical assessment (new patient examination £30 or returning patient £95) and a CBCT 3D scan when clinically indicated (£250) are charged separately. The final, all-in fee for your case is always confirmed in a written treatment plan after your consultation. Please note that our £20/month dental membership does not apply to implant treatment."
+            "text": "At Smile Dentist London, a single tooth dental implant costs £2,950 — and this fee includes the titanium implant, the abutment, and a custom zirconia crown. A clinical assessment (new patient examination £30 or returning patient £95) and a CBCT 3D scan when clinically indicated (£250) are charged separately. The final, all-in fee for your case is always confirmed in a written treatment plan after your consultation. Please note that our £30/month dental membership does not apply to implant treatment."
           }
         },
         {
@@ -11573,7 +11573,7 @@ export const PAGE_JSONLD: Record<string, unknown[]> = {
           "name": "Do you offer membership discounts on dental implants?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No. Our £20/month dental membership offers 50% off many routine and cosmetic treatments, but it does not apply to dental implant treatment. Implant fees are the same whether or not you are a member."
+            "text": "No. Our £30/month dental membership offers 50% off many routine and cosmetic treatments, but it does not apply to dental implant treatment. Implant fees are the same whether or not you are a member."
           }
         },
         {
@@ -11622,7 +11622,7 @@ export const PAGE_JSONLD: Record<string, unknown[]> = {
         "Ceramic Veneers",
         "Dental Laminates"
       ],
-      "description": "Dental veneers in London — both composite and porcelain options. Veneers are thin facings applied to the front of the tooth to improve shape, colour, length and alignment. Composite veneers £595 per tooth (£297.50 with our £20/month membership). Porcelain veneers £1,095 per tooth (£547.50 with membership). Carried out by GDC-registered dentists at Smile Dentist London (South Kensington, SW7).",
+      "description": "Dental veneers in London — both composite and porcelain options. Veneers are thin facings applied to the front of the tooth to improve shape, colour, length and alignment. Composite veneers £595 per tooth (£297.50 with our £30/month membership). Porcelain veneers £1,095 per tooth (£547.50 with membership). Carried out by GDC-registered dentists at Smile Dentist London (South Kensington, SW7).",
       "procedureType": "https://schema.org/TherapeuticProcedure",
       "bodyLocation": "Teeth",
       "url": "https://www.smiledentist.co.uk/dental-veneers-london/veneers-cost",
@@ -11741,7 +11741,7 @@ export const PAGE_JSONLD: Record<string, unknown[]> = {
           "name": "How much do dental veneers cost in London?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "At Smile Dentist London, composite veneers are £595 per tooth and porcelain veneers are £1,095 per tooth. With our £20/month dental membership, members pay £297.50 per composite veneer and £547.50 per porcelain veneer (50% off). A clinical examination is required first — £30 for new patients or £95 for returning patients (£47.50 with membership). Final fees are confirmed in a written treatment plan after your consultation."
+            "text": "At Smile Dentist London, composite veneers are £595 per tooth and porcelain veneers are £1,095 per tooth. With our £30/month dental membership, members pay £297.50 per composite veneer and £547.50 per porcelain veneer (50% off). A clinical examination is required first — £30 for new patients or £95 for returning patients (£47.50 with membership). Final fees are confirmed in a written treatment plan after your consultation."
           }
         },
         {
@@ -11938,7 +11938,7 @@ export const PAGE_JSONLD: Record<string, unknown[]> = {
           "name": "How much do dentures cost in London?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "At Smile Dentist London, an acrylic partial denture starts from £795, a full acrylic denture is £1,095, a cobalt-chrome metal-framework partial is £1,395 and a Valplast/Flexi flexible partial is £895. Members of our £20/month dental plan pay 50% off the denture fee. A clinical consultation is required first — £30 for new patients or £95 for returning patients (£47.50 with membership). The final fee is always confirmed in a written treatment plan after your consultation."
+            "text": "At Smile Dentist London, an acrylic partial denture starts from £795, a full acrylic denture is £1,095, a cobalt-chrome metal-framework partial is £1,395 and a Valplast/Flexi flexible partial is £895. Members of our £30/month dental plan pay 50% off the denture fee. A clinical consultation is required first — £30 for new patients or £95 for returning patients (£47.50 with membership). The final fee is always confirmed in a written treatment plan after your consultation."
           }
         },
         {
@@ -12002,7 +12002,7 @@ export const PAGE_JSONLD: Record<string, unknown[]> = {
           "name": "Can my denture be supported by dental implants?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes — implant-retained dentures clip onto two or more dental implants, providing significantly improved stability, especially for the lower jaw. Implant treatment is quoted separately and is not covered by our £20/month dental membership. See our dedicated implant-retained dentures page for details."
+            "text": "Yes — implant-retained dentures clip onto two or more dental implants, providing significantly improved stability, especially for the lower jaw. Implant treatment is quoted separately and is not covered by our £30/month dental membership. See our dedicated implant-retained dentures page for details."
           }
         },
         {
@@ -12164,7 +12164,7 @@ export const PAGE_JSONLD: Record<string, unknown[]> = {
           "name": "How much does a root canal cost in London?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "At Smile Dentist London, root canal treatment costs £695 for a front (anterior) tooth and £895 for a back (molar) tooth. Members of our £20/month dental plan pay £347.50 and £447.50 respectively (50% off). A clinical examination is required first — £30 for new patients or £95 for returning patients (£47.50 with membership). The final fee is always confirmed in a written treatment plan after your consultation."
+            "text": "At Smile Dentist London, root canal treatment costs £695 for a front (anterior) tooth and £895 for a back (molar) tooth. Members of our £30/month dental plan pay £347.50 and £447.50 respectively (50% off). A clinical examination is required first — £30 for new patients or £95 for returning patients (£47.50 with membership). The final fee is always confirmed in a written treatment plan after your consultation."
           }
         },
         {
@@ -12388,7 +12388,7 @@ export const PAGE_JSONLD: Record<string, unknown[]> = {
           "name": "Do you offer finance for teeth whitening?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The current £199 promotional whitening price applies to everyone and does not require membership. Smile Dentist also offers a monthly dental membership at £20 per month which includes routine examinations and hygiene appointments and gives discounts on most other treatments."
+            "text": "The current £199 promotional whitening price applies to everyone and does not require membership. Smile Dentist also offers a monthly dental membership at £30 per month which includes routine examinations and hygiene appointments and gives discounts on most other treatments."
           }
         }
       ]
@@ -12604,7 +12604,7 @@ export const PAGE_JSONLD: Record<string, unknown[]> = {
           "name": "Do you offer finance or membership discounts for wisdom tooth extraction?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Patients on our £20/month dental membership pay 50% of the standard extraction fees (£125 simple, £225 complicated, £325 surgical). The plan also includes routine examinations and hygiene appointments. Please ask reception for the current membership terms and joining conditions."
+            "text": "Patients on our £30/month dental membership pay 50% of the standard extraction fees (£125 simple, £225 complicated, £325 surgical). The plan also includes routine examinations and hygiene appointments. Please ask reception for the current membership terms and joining conditions."
           }
         }
       ]

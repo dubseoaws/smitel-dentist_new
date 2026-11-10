@@ -9,6 +9,14 @@ export type BookingCategory =
   | "cosmetic"
   | "ortho";
 
+export const OFFER_TERMS = {
+  exam: "£30 is a new-patient introductory examination offer. X-rays are not included; if clinically required, they are charged at £20 each.",
+  emergency:
+    "£30 is a new-patient introductory emergency examination offer. X-rays are not included; if clinically required, they are charged at £20 each.",
+  whitening:
+    "£199 is for the whitening package only. If you are a new patient, an examination is charged separately at £30. X-rays are not included and, if clinically required, are £20 each.",
+} as const;
+
 export type SkService = {
   id: string;
   name: string;
@@ -43,7 +51,7 @@ export const SK_SERVICES: SkService[] = [
     priceLabel: "£30 New Patient Offer (was £95)",
     category: "emergency",
     tag: "Special",
-    note: "Join Membership to save £125 on extractions",
+    note: OFFER_TERMS.exam,
     serviceKey: "emergency-dentist",
     serviceTitle: "Emergency Dentist",
     deposit: 0,
@@ -54,6 +62,7 @@ export const SK_SERVICES: SkService[] = [
     name: "Dentist (Routine Exam)",
     duration: 30,
     priceLabel: "£30 New Patient Offer (was £95)",
+    note: OFFER_TERMS.exam,
     category: "general",
     serviceKey: "emergency-dentist",
     serviceTitle: "Dentist (Routine Exam)",
@@ -76,6 +85,7 @@ export const SK_SERVICES: SkService[] = [
     name: "Teeth Whitening",
     duration: 30,
     priceLabel: "£199 Offer",
+    note: OFFER_TERMS.whitening,
     category: "whitening",
     serviceKey: "emergency-dentist",
     serviceTitle: "Teeth Whitening",
@@ -128,7 +138,8 @@ export const COL_SERVICES: ColService[] = [
     role: "dentist",
     duration: 30,
     priceLabel: "£30 New Patient Offer (was £95)",
-    comments: "Dentist Examination – £30",
+    note: OFFER_TERMS.exam,
+    comments: "Dentist Examination (new-patient offer) – £30; X-rays not included (£20 each if clinically required)",
   },
   {
     id: "emergency",
@@ -137,8 +148,9 @@ export const COL_SERVICES: ColService[] = [
     role: "dentist",
     duration: 30,
     priceLabel: "£30 New Patient Offer (was £95)",
+    note: OFFER_TERMS.emergency,
     tag: "Special",
-    comments: "Emergency Dental Examination – £30",
+    comments: "Emergency Dental Examination (new-patient offer) – £30; X-rays not included (£20 each if clinically required)",
   },
   {
     id: "hygiene",
@@ -165,7 +177,8 @@ export const COL_SERVICES: ColService[] = [
     role: "dentist",
     duration: 30,
     priceLabel: "£199 Offer",
-    comments: "Teeth Whitening (Whitening Scan) – £199",
+    note: OFFER_TERMS.whitening,
+    comments: "Teeth Whitening (Whitening Scan) – £199; examination may be charged separately for new patients",
   },
   {
     id: "implant-consult",
