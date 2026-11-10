@@ -8,6 +8,8 @@ import ReviewsSection from "@/components/ReviewsSection";
 import HideOnContact from "@/components/HideOnContact";
 import ScrollProgress from "@/components/ScrollProgress";
 import JsonLd from "@/components/JsonLd";
+import MobileActionBar from "@/components/MobileActionBar";
+import { THEME_INIT_SCRIPT } from "@/lib/theme";
 import {
   OG_IMAGE,
   OG_LOCALE,
@@ -58,11 +60,15 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = {
   themeColor: "#1b1815",
+  viewportFit: "cover",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${playfair.variable} ${inter.variable}`}>
+    <html lang="en" className={`${playfair.variable} ${inter.variable}`} suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }} />
+      </head>
       <body>
         <JsonLd data={SITE_JSONLD} />
         <ScrollProgress />
@@ -73,6 +79,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <ContactSection />
         </HideOnContact>
         <Footer />
+        <MobileActionBar />
       </body>
     </html>
   );

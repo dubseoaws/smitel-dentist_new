@@ -41,7 +41,11 @@ export type Treatment = {
   standard: string;
   member: string;
   image: string;
+  /** Offer-style entries without their own page link straight to this URL instead. */
+  href?: string;
 };
+
+export const treatmentHref = (t: Treatment) => t.href ?? `/${t.slug}`;
 
 export type TreatmentCategory = {
   id: string;
@@ -222,6 +226,16 @@ export const TREATMENT_CATEGORIES: TreatmentCategory[] = [
       "The foundation of a healthy smile. Comprehensive care for your long-term oral health.",
     treatments: [
       {
+        slug: "new-patient-emergency-examination",
+        name: "New Patient Emergency Examination",
+        description:
+          "In pain? A same-day emergency examination for new patients to diagnose toothache, swelling or damage and plan relief.",
+        standard: "£30 Only",
+        member: "£30 Only",
+        image: `${CLOUDINARY}/v1765805792/emergency-dental_selpql.jpg`,
+        href: "/booking?category=emergency",
+      },
+      {
         slug: "dental-examination-london",
         name: "Dental Examination",
         description:
@@ -319,7 +333,8 @@ export const TREATMENT_CATEGORIES: TreatmentCategory[] = [
   },
 ];
 
-export const ALL_TREATMENTS = TREATMENT_CATEGORIES.flatMap((c) => c.treatments);
+// Only treatments with their own page (offer entries with `href` are excluded from routes/sitemap).
+export const ALL_TREATMENTS = TREATMENT_CATEGORIES.flatMap((c) => c.treatments).filter((t) => !t.href);
 
 export type TeamMember = {
   slug: string;
@@ -429,8 +444,9 @@ export const FEE_SECTIONS: FeeSection[] = [
   {
     title: "General Dentistry",
     rows: [
+      { name: "New Patient Emergency Examination (X-rays extra)", standard: "£30 Only", member: "£30 Only" },
       { name: "Dental Examination", standard: "From £95", member: "From £47.50" },
-      { name: "X-Ray", standard: "From £20", member: "From £10.00" },
+      { name: "X-Ray (each, if clinically needed)", standard: "£20", member: "£10.00" },
       { name: "Dental Hygiene", standard: "From £89", member: "From £44.50" },
       { name: "Dental Hygiene with Airflow", standard: "From £142", member: "From £71.00" },
       { name: "Composite Filling", standard: "From £185", member: "From £92.50" },
@@ -571,36 +587,48 @@ export const YOUTUBE_CHANNEL =
 export const REVIEW_US_URL =
   "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2tWdVpISndNV2Q1TlhvMVFtSlJiRUpwV2tSdWFVRRAB!2m1!1s0x0:0x930a792197128adf!3m1!1s2@1:CAIQACodChtycF9oOkVuZHJwMWd5NXo1QmJRbEJpWkRuaUE%7C%7C";
 
+/** Vertical YouTube Shorts shown in the home "Watch real stories" section. */
+export const STORY_SHORTS = [
+  { id: "0UQIojOAJtc", tag: "Composite Bonding", title: "Why I Chose Composite Bonding | Real Patient Experience" },
+  { id: "23mlzg9tsyk", tag: "Smile Makeover", title: "Your Smile Makeover with Dr Yasha" },
+  { id: "et-2VaCjT2A", tag: "Composite Bonding", title: "Composite Bonding Patient Review | Her New Smile" },
+  { id: "lJL8n7hB8dQ", tag: "Porcelain Veneers", title: "Porcelain Veneers | Perfect Smile Transformation" },
+  { id: "Y6YmMX70o88", tag: "Patient Testimonial", title: "A Five-Star Patient Testimonial: How He Saved Over £4,000" },
+];
+
 export const VIDEOS = [
   {
     id: "n33iO5y6N0g",
-    title: "Dental Implants Explained | A Premium Solution for Missing Teeth",
+    title: "\"I Can't Stop Smiling!\" | Composite Bonding Patient Review",
   },
   {
     id: "Huq5WJ2grKc",
-    title: "Impacted Wisdom Tooth | The Hidden Problem at the Back of Your Mouth",
+    title: "Dental Implants Explained | A Premium Solution for Missing Teeth",
   },
   {
     id: "bLtSMhb60HI",
     title:
-      "Full Mouth Rehabilitation in London | Transform Your Smile with Dr. Andreia Phipps",
+      "Private Dentist Appointment in South Kensington | Explained By Dr. Yasha Shirazi",
   },
   {
     id: "33u-MrdHaVU",
-    title: "Saving £3,750 on Zirconia Teeth in London! | A Patient's Success Story",
+    title:
+      "Full Mouth Rehabilitation in London | Transform Your Smile with Dr. Andreia Phipps",
   },
   {
     id: "lHx-p0FbocQ",
-    title: "Need an Emergency Dentist in London? £30 Same-Day Appointments | SW7",
+    title:
+      "Saving £3,750 on Zirconia Teeth in London! | A Patient's Success Story",
   },
   {
     id: "JyjVdDbavkA",
     title:
-      "Private Dentist Appointment in South Kensington | Explained By Dr. Yasha Shirazi",
+      "Impacted Wisdom Tooth | The Hidden Problem at the Back of Your Mouth",
   },
   {
     id: "ulaDPSMdx4M",
-    title: "What Does a Dental Hygienist Do? | Essential Preventive Care Explained",
+    title:
+      "Open All Weekend: Your Sunday appointment in South Kensington Dentist",
   },
 ];
 
@@ -771,7 +799,7 @@ export const FOOTER_QUICK_LINKS = [
 export const MEMBERSHIP = {
   headline: "50% Off On All Dental Treatment",
   subline:
-    "All-in-One Dental Membership Only £20/month* + Add Family Members For Just £10/Month",
+    "All-in-One Dental Membership £30 a month, or £240 a year*. Under-18s join through a parent or guardian at the clinic.",
   terms:
     "*12-month contract. Terms apply. 50% off includes Check Ups, Cosmetic, Restorative, and more.",
   includes: [
@@ -782,7 +810,7 @@ export const MEMBERSHIP = {
   ],
   perks: [
     "Priority support with bookings and care coordination",
-    "Add family members for just £10/month each",
+    "Under-18s join through a parent or guardian at the clinic.",
   ],
   exclusions: [
     "Full Mouth Rehabilitation",

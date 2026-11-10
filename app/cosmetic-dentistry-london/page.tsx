@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import MeetExperts from "@/components/MeetExperts";
 import SmileGallery from "@/components/SmileGallery";
-import TeamGrid from "@/components/TeamGrid";
 import TreatmentBlocks from "@/components/TreatmentBlocks";
-import { CLOUDINARY, SITE } from "@/lib/site-data";
+import TreatmentCard from "@/components/TreatmentCard";
+import ClinicLiveStrip from "@/components/ClinicLiveStrip";
+import TrustBadges, { GoogleReviewBadge } from "@/components/TrustBadges";
+import { HeroVideo } from "@/components/TreatmentVideo";
+import { ALL_TREATMENTS, SITE } from "@/lib/site-data";
+import { heroVideoFor } from "@/lib/treatment-videos";
 import { PAGE_JSONLD, pageMetadata } from "@/lib/seo";
 import { JsonLdBlocks } from "@/components/JsonLd";
 import type { ContentBlock } from "@/lib/treatment-content";
@@ -13,17 +16,9 @@ import type { ContentBlock } from "@/lib/treatment-content";
 // Copy sourced from www.smiledentist.co.uk/cosmetic-dentistry-london
 export const metadata: Metadata = pageMetadata("/cosmetic-dentistry-london");
 
-const HERO_IMAGE = `${CLOUDINARY}/v1765805808/gum-contouring_k46rrb.jpg`;
-
 const HERO_POINTS = [
   "Digital Smile Design: See your potential result before treatment.",
   "Finance available (subject to status, terms apply).",
-];
-
-const TRUST_POINTS = [
-  "4.9/5 from Google Reviews",
-  "South Kensington • Next to South Ken Station",
-  "City of London • Ave Maria Lane, EC4",
 ];
 
 const COSMETIC_CARDS = [
@@ -113,7 +108,7 @@ const FAQ: ContentBlock[] = [
       },
       {
         q: "How much does cosmetic dentistry cost?",
-        a: "Costs vary depending on the treatment and complexity. Bonding starts from £395, veneers from £1,095, and whitening from £399. A full written quote is provided before any treatment begins.",
+        a: "Costs vary depending on the treatment and complexity. Bonding starts from £395 (£197.50 for members), veneers from £1,095 (£547.50 for members), and whitening from £199 as a current offer. A full written quote is provided before any treatment begins.",
       },
     ],
   },
@@ -155,222 +150,267 @@ const PATIENT_STORIES = [
   },
 ];
 
+const INLINE_LINK =
+  "font-medium text-gold-deep underline decoration-gold/40 underline-offset-4 transition-colors hover:decoration-gold";
+const SHELL = "mx-auto max-w-[82rem] px-5 sm:px-8";
+const BAND = "py-14 lg:py-20 scroll-mt-40";
+
+const JUMP_LINKS = [
+  { id: "approach", label: "Our Approach" },
+  { id: "treatments", label: "Cosmetic Treatments" },
+  { id: "stories", label: "Patient Stories" },
+  { id: "faqs", label: "FAQs" },
+  { id: "book", label: "Book" },
+];
+
+function Head({
+  eyebrow,
+  heading,
+  sub,
+  tone = "light",
+}: {
+  eyebrow: string;
+  heading: string;
+  sub?: string;
+  tone?: "light" | "dark";
+}) {
+  return (
+    <div className="mx-auto max-w-3xl space-y-5 text-center">
+      <p className="eyebrow">{eyebrow}</p>
+      <h2
+        className={`display-xl text-[1.75rem] sm:text-[2.25rem] lg:text-[2.75rem] leading-[1.12] ${
+          tone === "dark" ? "text-ivory" : "text-ink"
+        }`}
+      >
+        {heading}
+      </h2>
+      <span className="mx-auto block h-px w-16 bg-gold" aria-hidden />
+      {sub && (
+        <p className={`text-lg leading-relaxed ${tone === "dark" ? "text-ivory/70" : "text-ink-soft"}`}>
+          {sub}
+        </p>
+      )}
+    </div>
+  );
+}
+
 export default function CosmeticDentistryPage() {
+  const treatments = COSMETIC_CARDS.map((card) =>
+    ALL_TREATMENTS.find((t) => `/${t.slug}` === card.href)
+  ).filter((t) => t !== undefined);
+
   return (
     <>
       <JsonLdBlocks blocks={PAGE_JSONLD["/cosmetic-dentistry-london"]} />
-      <section className="grid bg-ink text-ivory lg:grid-cols-[1fr_1fr]">
-        <div className="flex flex-col justify-center gap-5 px-5 sm:px-10 lg:px-12 py-12 lg:py-14">
+
+      <div className="sticky top-[67px] z-40 border-b border-gold/25 bg-gradient-to-r from-ink via-[#2a241d] to-ink text-ivory shadow-[0_12px_30px_-18px_rgba(0,0,0,0.7)] sm:top-[70px]">
+        <ClinicLiveStrip tone="dark" />
+      </div>
+
+      <section className="grid grid-cols-[minmax(0,1fr)] bg-ink text-ivory lg:grid-cols-[1fr_1fr]">
+        <div className="min-w-0 flex flex-col justify-center gap-5 px-5 sm:px-10 lg:px-12 py-12 lg:py-14 max-sm:items-center max-sm:text-center">
           <Link
             href="/treatments"
-            className="w-fit font-label text-[10px] font-bold tracking-[0.28em] uppercase text-gold-bright hover:text-ivory transition-colors"
+            className="fade-up w-fit font-label text-[10px] font-bold tracking-[0.28em] uppercase text-gold-bright hover:text-ivory transition-colors"
           >
             ← Back to Treatments
           </Link>
-          <h1 className="display-xl text-[2.25rem] sm:text-5xl lg:text-[3.25rem] leading-[1.05] text-ivory">
+          <h1 className="fade-up fade-up-1 display-xl text-[1.875rem] min-[375px]:text-[2.25rem] sm:text-5xl lg:text-[3.25rem] leading-[1.05] text-ivory">
             Cosmetic Dentistry in London
           </h1>
-          <p className="font-display text-2xl text-gold-bright">Smile Design Services</p>
-          <span className="block h-px w-20 bg-gold" aria-hidden />
-          <p className="max-w-[52ch] text-[15px] sm:text-base leading-[1.85] text-ivory/70">
+          <p className="fade-up fade-up-1 font-display text-xl sm:text-2xl text-gold-bright">
+            Smile Design Services
+          </p>
+          <span className="fade-up fade-up-1 block h-px w-20 bg-gold" aria-hidden />
+          <p className="fade-up fade-up-2 max-w-[52ch] text-[15px] sm:text-base leading-[1.85] text-ivory/70">
             From subtle enhancements to comprehensive smile makeovers, our GDC-registered
             team uses digital planning and minimally invasive techniques to help you
             achieve the smile you want.
           </p>
-          <ul className="flex flex-wrap gap-x-6 gap-y-2 text-[13px] text-ivory/60">
-            {TRUST_POINTS.map((point) => (
-              <li key={point}>{point}</li>
-            ))}
-          </ul>
-          <ul className="space-y-2.5">
+          <TrustBadges reviews="mobile" className="fade-up fade-up-2 w-full max-w-sm" />
+          <ul className="fade-up fade-up-2 grid gap-2.5 max-sm:hidden">
             {HERO_POINTS.map((point) => (
-              <li key={point} className="flex items-start gap-3 text-[15px] text-ivory/75">
-                <svg viewBox="0 0 20 20" className="mt-1 h-4 w-4 shrink-0 fill-gold" aria-hidden>
-                  <path d="M8.7 14.4l-4-4 1.4-1.4 2.6 2.6 5.5-5.5 1.4 1.4-6.9 6.9z" />
-                </svg>
+              <li key={point} className="flex items-start gap-3 text-[14px] leading-snug text-ivory/80">
+                <span
+                  className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-gold/15 text-[11px] font-bold text-gold-bright"
+                  aria-hidden
+                >
+                  ✓
+                </span>
                 {point}
               </li>
             ))}
           </ul>
-          <div className="mt-2 flex flex-wrap gap-4">
-            <Link href="/booking" className="btn-gold">
+          <div className="fade-up fade-up-3 mt-2 flex flex-wrap gap-4 max-sm:w-full max-sm:flex-col max-sm:items-stretch max-sm:gap-3">
+            <Link href="/booking" className="btn-gold btn-cta font-bold">
               Book Consultation
             </Link>
             <a
               href={SITE.phoneHref}
-              className="border border-ivory/30 px-7 py-3.5 font-label text-[11px] font-bold tracking-[0.18em] uppercase text-ivory transition-colors hover:border-gold hover:text-gold-bright"
+              className="btn-cta border border-ivory/30 px-7 py-3.5 text-center font-label text-[11px] font-bold tracking-[0.18em] uppercase text-ivory transition-colors hover:border-gold hover:text-gold-bright"
             >
               Call {SITE.phone}
             </a>
           </div>
         </div>
-
-        <div className="relative min-h-[300px] bg-ink sm:min-h-[420px] lg:min-h-full">
-          <Image
-            src={HERO_IMAGE}
-            alt="Cosmetic Dentistry at Smile Dentist London"
-            fill
-            priority
-            className="object-cover"
-            sizes="(max-width: 1024px) 100vw, 50vw"
-          />
-          <span
-            className="pointer-events-none absolute inset-4 border border-gold/40 lg:inset-6"
-            aria-hidden
-          />
+        <div className="relative grid min-w-0">
+          <HeroVideo id={heroVideoFor("cosmetic-dentistry-london")} />
+          <GoogleReviewBadge className="absolute left-8 top-8 z-10 max-sm:hidden lg:left-10 lg:top-10" />
         </div>
       </section>
 
-      <section className="py-16 lg:py-20">
-        <div className="mx-auto max-w-7xl px-5 sm:px-10">
-          <div className="max-w-2xl space-y-3">
-            <h2 className="text-3xl sm:text-4xl">Our Approach to Cosmetic Dentistry</h2>
-            <p className="text-[15px] text-ink-soft leading-relaxed">
-              Natural-Looking Results Through Conservative Techniques
-            </p>
-          </div>
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
+      <nav
+        aria-label="On this page"
+        className="sticky top-[143px] sm:top-[152px] md:top-[135px] xl:top-[126px] z-30 border-b border-ink/10 bg-ivory/95 backdrop-blur"
+      >
+        <div className={`flex gap-7 overflow-x-auto py-4 ${SHELL}`}>
+          {JUMP_LINKS.map((link) => (
+            <a
+              key={link.id}
+              href={`#${link.id}`}
+              className="whitespace-nowrap font-label text-[10px] font-bold tracking-[0.18em] uppercase text-ink-soft transition-colors hover:text-gold-deep"
+            >
+              {link.label}
+            </a>
+          ))}
+        </div>
+      </nav>
+
+      <section id="approach" className={BAND}>
+        <div className={`${SHELL} space-y-10 lg:space-y-12`}>
+          <Head
+            eyebrow="Our Approach"
+            heading="Our Approach to Cosmetic Dentistry"
+            sub="Natural-Looking Results Through Conservative Techniques"
+          />
+          <div className="grid gap-5 md:grid-cols-3">
             {APPROACH.map((item, i) => (
               <div
                 key={item.title}
-                className="h-full border border-ink/10 bg-cream/40 p-7 space-y-4"
+                className="group relative h-full overflow-hidden border border-ink/10 bg-white p-7 transition-all duration-300 hover:-translate-y-1 hover:border-gold/60 hover:shadow-2xl hover:shadow-ink/8 max-sm:text-center"
               >
-                <span className="flex h-9 w-9 items-center justify-center border border-gold/50 font-label text-[11px] font-semibold text-gold-deep">
-                  {i + 1}
+                <span className="absolute inset-x-0 top-0 h-0.5 bg-gold/0 transition-colors group-hover:bg-gold" aria-hidden />
+                <span className="flex h-11 w-11 items-center justify-center rounded-full bg-gold/10 font-display text-xl text-gold-deep max-sm:mx-auto">
+                  {String(i + 1).padStart(2, "0")}
                 </span>
-                <h3 className="text-xl">{item.title}</h3>
-                <p className="text-[15px] text-ink-soft leading-relaxed">{item.body}</p>
+                <h3 className="mt-5 font-display text-xl font-semibold">{item.title}</h3>
+                <p className="mt-3 text-[15px] text-ink-soft leading-relaxed">{item.body}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="bg-cream border-y border-ink/10 py-16 lg:py-20">
-        <div className="mx-auto max-w-7xl px-5 sm:px-10">
-          <div className="max-w-2xl space-y-3">
-            <h2 className="text-3xl sm:text-4xl">Our Cosmetic Treatments</h2>
-            <p className="text-[15px] text-ink-soft leading-relaxed">
-              From subtle enhancements to comprehensive makeovers.
-            </p>
-          </div>
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {COSMETIC_CARDS.map((card) => (
-              <Link
-                key={card.href}
-                href={card.href}
-                className="group flex h-full flex-col border border-ink/10 bg-white p-7 transition-colors hover:border-gold"
+      <section id="treatments" className={`bg-cream border-y border-ink/10 ${BAND}`}>
+        <div className={`${SHELL} space-y-10 lg:space-y-12`}>
+          <Head
+            eyebrow="Treatments"
+            heading="Our Cosmetic Treatments"
+            sub="From subtle enhancements to comprehensive makeovers."
+          />
+          <div className="flex flex-wrap justify-center gap-6">
+            {treatments.map((t) => (
+              <div
+                key={t.slug}
+                className="w-full sm:w-[calc(50%-0.75rem)] lg:w-[calc(25%-1.125rem)]"
               >
-                <h3 className="text-xl group-hover:text-gold-deep transition-colors">
-                  {card.title}
-                </h3>
-                <p className="mt-1 font-label text-[11px] font-bold tracking-[0.16em] uppercase text-gold-deep">
-                  {card.subtitle}
-                </p>
-                <p className="mt-4 flex-grow text-[15px] text-ink-soft leading-relaxed">
-                  {card.description}
-                </p>
-                <div className="mt-6 border-t border-ink/10 pt-4">
-                  <span className="flex items-center gap-2 font-label text-[11px] font-bold tracking-[0.16em] uppercase text-gold-deep">
-                    Learn more <span aria-hidden>→</span>
-                  </span>
-                </div>
-              </Link>
+                <TreatmentCard treatment={t} />
+              </div>
             ))}
+          </div>
+          <div className="flex justify-center">
+            <Link href="/fees" className="btn-outline">
+              View full fee guide <span aria-hidden>→</span>
+            </Link>
           </div>
         </div>
       </section>
 
-      <section className="py-16 lg:py-20">
-        <div className="mx-auto max-w-7xl px-5 sm:px-10">
-          <div className="max-w-2xl space-y-3">
-            <h2 className="text-3xl sm:text-4xl">Real Patient Stories</h2>
-            <p className="text-[15px] text-ink-soft leading-relaxed">
-              How cosmetic treatments have helped real patients.
-            </p>
-          </div>
-          <div className="mt-12 grid gap-6 md:grid-cols-2">
+      <section id="stories" className={BAND}>
+        <div className={`${SHELL} space-y-10 lg:space-y-12`}>
+          <Head
+            eyebrow="Real Patients"
+            heading="Real Patient Stories"
+            sub="How cosmetic treatments have helped real patients."
+          />
+          <div className="grid gap-6 md:grid-cols-2">
             {PATIENT_STORIES.map((story) => (
               <article
                 key={story.title}
-                className="h-full border border-ink/10 p-7 space-y-4"
+                className="flex h-full flex-col border border-ink/10 bg-white shadow-[0_20px_40px_-32px_rgba(0,0,0,0.5)]"
               >
-                <h3 className="text-xl">{story.title}</h3>
-                <p className="text-[15px] text-ink-soft leading-relaxed">
-                  <strong className="font-semibold text-ink">Patient Concern:</strong>{" "}
-                  {story.concern}
-                </p>
-                <p className="text-[15px] text-ink-soft leading-relaxed">
-                  <strong className="font-semibold text-ink">Treatment:</strong>{" "}
-                  {story.treatment}
-                </p>
-                <p className="text-[15px] text-ink-soft leading-relaxed">
-                  <strong className="font-semibold text-ink">Outcome:</strong>{" "}
-                  {story.outcome}
-                </p>
-                <p className="text-[13px] text-ink-soft/80 leading-relaxed">
+                <h3 className="border-b border-ink/10 bg-ink px-7 py-5 font-display text-xl text-ivory">
+                  {story.title}
+                </h3>
+                <dl className="flex-1 divide-y divide-ink/10 px-7">
+                  {(
+                    [
+                      ["Patient Concern", story.concern],
+                      ["Treatment", story.treatment],
+                      ["Outcome", story.outcome],
+                    ] as const
+                  ).map(([label, text]) => (
+                    <div key={label} className="py-4">
+                      <dt className="font-label text-[10px] font-bold tracking-[0.18em] uppercase text-gold-deep">
+                        {label}
+                      </dt>
+                      <dd className="mt-1.5 text-[15px] text-ink-soft leading-relaxed">{text}</dd>
+                    </div>
+                  ))}
+                </dl>
+                <p className="border-t border-ink/10 px-7 py-4 text-[12px] text-ink-soft/80 leading-relaxed">
                   Individual results may vary. A consultation is required to determine
                   suitability.
                 </p>
               </article>
             ))}
           </div>
-          <Link href="/results-london" className="btn-outline mt-10 w-fit">
-            View before &amp; after gallery
-            <span aria-hidden>→</span>
-          </Link>
-        </div>
-      </section>
-
-      <section className="bg-cream border-y border-ink/10 py-16 lg:py-20">
-        <div className="mx-auto max-w-7xl px-5 sm:px-10">
-          <div className="max-w-2xl space-y-3">
-            <h2 className="text-3xl sm:text-4xl">Your Cosmetic Dental Team</h2>
-            <p className="text-[15px] text-ink-soft leading-relaxed">
-              GDC-registered professionals providing your care.
-            </p>
-          </div>
-          <div className="mt-12">
-            <TeamGrid limit={3} columns={3} />
+          <div className="flex justify-center">
+            <Link href="/results-london" className="btn-outline">
+              View before &amp; after gallery <span aria-hidden>→</span>
+            </Link>
           </div>
         </div>
       </section>
 
-      <TreatmentBlocks blocks={FAQ} />
+      <SmileGallery limit={9} className="bg-cream border-y border-ink/10" />
 
-      <SmileGallery limit={6} className="bg-cream border-y border-ink/10" />
+      <div id="faqs" className="scroll-mt-40">
+        <TreatmentBlocks blocks={FAQ} />
+      </div>
 
-      <section className="bg-cream border-y border-ink/10 py-16 lg:py-20">
-        <div className="mx-auto max-w-7xl px-5 sm:px-10">
+      <section id="book" className={`bg-cream border-y border-ink/10 ${BAND}`}>
+        <div className={SHELL}>
           <div className="grid items-stretch gap-6 lg:grid-cols-3">
-            <div className="border border-ink/10 bg-white p-8 space-y-5">
-              <h2 className="text-2xl sm:text-3xl">
+            <div className="space-y-5 border border-ink/10 bg-white p-8">
+              <p className="eyebrow">Smile Design</p>
+              <h2 className="font-display text-2xl sm:text-[1.75rem] leading-snug">
                 Cosmetic Dentist London — Natural Smile Design
               </h2>
               <p className="text-[15px] text-ink-soft leading-relaxed">
                 At Smile Dentist in London, with clinics in South Kensington and the City
                 of London, we offer a full range of cosmetic dental treatments including{" "}
-                <Link href="/porcelain-veneers-london" className="link-underline">
+                <Link href="/porcelain-veneers-london" className={INLINE_LINK}>
                   porcelain veneers
                 </Link>
                 ,{" "}
-                <Link href="/composite-bonding-london" className="link-underline">
+                <Link href="/composite-bonding-london" className={INLINE_LINK}>
                   composite bonding
                 </Link>
                 ,{" "}
-                <Link href="/teeth-whitening-london" className="link-underline">
+                <Link href="/teeth-whitening-london" className={INLINE_LINK}>
                   teeth whitening
                 </Link>
                 ,{" "}
-                <Link href="/tooth-contouring-london" className="link-underline">
+                <Link href="/tooth-contouring-london" className={INLINE_LINK}>
                   tooth contouring
                 </Link>
                 ,{" "}
-                <Link href="/gum-contouring-london" className="link-underline">
+                <Link href="/gum-contouring-london" className={INLINE_LINK}>
                   gum contouring
                 </Link>
                 , and{" "}
-                <Link href="/smile-makeover-london" className="link-underline">
+                <Link href="/smile-makeover-london" className={INLINE_LINK}>
                   smile makeovers
                 </Link>
                 .
@@ -387,53 +427,38 @@ export default function CosmeticDentistryPage() {
               </p>
             </div>
 
-            <div className="flex flex-col justify-center bg-ink p-8 text-ivory space-y-5">
-              <h2 className="text-2xl sm:text-3xl">Book Your Consultation</h2>
-              <p className="text-[15px] text-ivory/70 leading-relaxed">
+            <div className="relative flex flex-col justify-center space-y-5 overflow-hidden bg-ink p-8 text-ivory shadow-2xl shadow-ink/20 max-sm:text-center">
+              <span className="pointer-events-none absolute inset-3 border border-gold/30" aria-hidden />
+              <p className="eyebrow relative">Book A Consultation</p>
+              <h2 className="relative font-display text-2xl sm:text-[1.75rem]">Book Your Consultation</h2>
+              <p className="relative text-[15px] text-ivory/70 leading-relaxed">
                 We will assess your needs, explain all options, and provide a written
                 treatment plan with costs — no obligation.
               </p>
-              <div className="flex flex-col gap-3">
-                <Link href="/booking" className="btn-gold justify-center">
+              <div className="relative flex flex-col gap-3">
+                <Link href="/booking" className="btn-gold btn-cta justify-center font-bold">
                   Book Your Cosmetic Consultation
                 </Link>
                 <a
                   href={SITE.phoneHref}
-                  className="btn-outline justify-center border-ivory/30 text-ivory hover:border-gold hover:text-gold"
+                  className="btn-cta border border-ivory/30 px-7 py-3.5 text-center font-label text-[11px] font-bold tracking-[0.18em] uppercase text-ivory transition-colors hover:border-gold hover:text-gold-bright"
                 >
                   Call {SITE.phone}
                 </a>
               </div>
-              <p className="text-[13px] text-ivory/60">
+              <p className="relative text-[13px] text-ivory/60">
                 South Kensington (SW7) • City of London (EC4) • Same team, same prices
               </p>
             </div>
 
-            <div className="border border-ink/10 bg-white p-8 space-y-4">
+            <div className="space-y-5 border border-ink/10 bg-white p-8">
               <p className="eyebrow">Compliance &amp; Safety</p>
-              <h2 className="text-2xl sm:text-3xl">Registered &amp; Regulated</h2>
+              <h2 className="font-display text-2xl sm:text-[1.75rem]">Registered &amp; Regulated</h2>
               <p className="text-[15px] text-ink-soft leading-relaxed">
                 Our team are fully registered and regulated for practice in the United
                 Kingdom. Our patients should expect nothing less.
               </p>
-              <div className="flex flex-col gap-3">
-                <a
-                  href="https://www.gdc-uk.org/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="link-underline"
-                >
-                  General Dental Council (GDC)
-                </a>
-                <a
-                  href="https://www.cqc.org.uk/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="link-underline"
-                >
-                  Care Quality Commission (CQC)
-                </a>
-              </div>
+              <TrustBadges reviews={false} />
             </div>
           </div>
         </div>

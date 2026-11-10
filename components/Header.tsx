@@ -2,11 +2,13 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import ThemeToggle from "@/components/ThemeToggle";
 import Logo from "@/components/Logo";
 import {
   NAV_LINKS,
   NAV_CLINIC_LINKS,
   TREATMENT_CATEGORIES,
+  treatmentHref,
   SITE,
 } from "@/lib/site-data";
 
@@ -18,8 +20,17 @@ const ABOUT_LINKS = [
   { label: "Membership", href: "/membership" },
 ];
 
+const POPULAR_COSMETIC = [
+  { label: "Smile Makeover", href: "/smile-makeover-london" },
+  { label: "Porcelain Veneers", href: "/porcelain-veneers-london" },
+  { label: "Composite Bonding", href: "/composite-bonding-london" },
+  { label: "Teeth Whitening", href: "/teeth-whitening-london" },
+  { label: "Invisible Braces", href: "/pro-aligners-london" },
+  { label: "All Cosmetic", href: "/cosmetic-dentistry-london" },
+];
+
 const NAV_LINK =
-  "px-3.5 py-2 font-label text-[12px] font-medium tracking-[0.12em] uppercase text-ivory/85 hover:text-gold transition-colors";
+  "px-2.5 2xl:px-3.5 py-2 font-label text-[12px] font-medium tracking-[0.12em] uppercase text-ivory/85 hover:text-gold transition-colors";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -49,12 +60,12 @@ export default function Header() {
     <>
       <header className="sticky top-0 z-50 bg-ink text-ivory">
         <div className="mx-auto max-w-7xl">
-          <div className="flex items-center justify-between gap-6 px-4 sm:px-8 py-3.5">
+          <div className="flex items-center justify-between gap-4 px-4 sm:px-8 py-3">
             <Link href="/" onClick={closeAll} aria-label="Smile Dentist home">
               <Logo light />
             </Link>
 
-            <nav className="hidden lg:flex items-center">
+            <nav className="hidden xl:flex items-center">
               <Link
                 href="/"
                 className={NAV_LINK}
@@ -148,7 +159,7 @@ export default function Header() {
                             {cat.treatments.map((t) => (
                               <li key={t.slug}>
                                 <Link
-                                  href={`/${t.slug}`}
+                                  href={treatmentHref(t)}
                                   onClick={closeAll}
                                   className="block text-[13px] text-ink-soft hover:text-gold-deep py-0.5 transition-colors"
                                 >
@@ -241,10 +252,11 @@ export default function Header() {
               ))}
             </nav>
 
-            <div className="hidden lg:flex items-center gap-5">
+            <div className="ml-auto xl:ml-0 hidden sm:flex items-center gap-3 2xl:gap-5">
               <a
                 href={SITE.phoneHref}
-                className="flex items-center gap-2 font-label text-[13px] font-medium tracking-[0.06em] text-ivory/85 hover:text-gold transition-colors"
+                aria-label={`Call ${SITE.phone}`}
+                className="flex h-11 min-w-11 items-center justify-center gap-2 rounded-full bg-ivory/10 2xl:bg-transparent 2xl:min-w-0 font-label text-[13px] font-medium tracking-[0.06em] text-ivory/85 hover:text-gold transition-colors"
               >
                 <svg
                   viewBox="0 0 24 24"
@@ -254,7 +266,7 @@ export default function Header() {
                 >
                   <path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.58 3.6a1 1 0 0 1-.25 1l-2.23 2.2Z" />
                 </svg>
-                {SITE.phone}
+                <span className="hidden 2xl:inline">{SITE.phone}</span>
               </a>
               <Link href="/booking" className="btn-gold whitespace-nowrap">
                 Book My Appointment
@@ -262,11 +274,13 @@ export default function Header() {
               </Link>
             </div>
 
+            <div className="flex items-center gap-2">
+            <ThemeToggle />
             <button
               aria-label="Toggle menu"
               aria-expanded={open}
               onClick={() => setOpen(!open)}
-              className="lg:hidden flex h-11 w-11 items-center justify-center rounded-full bg-ivory/10"
+              className="xl:hidden flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-ivory/10"
             >
               <span className="relative block h-3.5 w-5">
                 <span
@@ -286,11 +300,29 @@ export default function Header() {
                 />
               </span>
             </button>
+            </div>
           </div>
         </div>
 
         {open && (
-          <nav className="lg:hidden mx-auto max-w-6xl bg-ink border-t border-ivory/10 p-5 space-y-1 max-h-[70vh] overflow-y-auto">
+          <nav className="xl:hidden mx-auto max-w-6xl bg-ink border-t border-ivory/10 p-5 space-y-1 max-h-[calc(100dvh-4.25rem)] overflow-y-auto overscroll-contain">
+            <div className="pb-4 mb-2 border-b border-ivory/10">
+              <p className="px-1 pb-3 font-label text-[11px] font-bold tracking-[0.2em] uppercase text-gold">
+                Popular Cosmetic Treatments
+              </p>
+              <div className="flex flex-wrap gap-2">
+                {POPULAR_COSMETIC.map((t) => (
+                  <Link
+                    key={t.href}
+                    href={t.href}
+                    onClick={closeAll}
+                    className="rounded-full border border-gold/40 bg-gold/10 px-4 py-2.5 text-sm font-medium text-ivory hover:bg-gold hover:text-ink transition-colors"
+                  >
+                    {t.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
             <Link
               href="/"
               onClick={closeAll}
@@ -319,7 +351,7 @@ export default function Header() {
                     key={l.href}
                     href={l.href}
                     onClick={closeAll}
-                    className="block py-1.5 text-sm text-ivory/70 hover:text-gold"
+                    className="block py-2.5 text-[15px] text-ivory/75 hover:text-gold"
                   >
                     {l.label}
                   </Link>
@@ -345,15 +377,15 @@ export default function Header() {
               <div className="ml-3 pl-4 border-l border-ivory/15 space-y-4 py-2">
                 {TREATMENT_CATEGORIES.map((cat) => (
                   <div key={cat.id} className="space-y-1">
-                    <p className="font-label text-[10px] font-bold tracking-[0.2em] uppercase text-gold">
+                    <p className="pt-1 font-label text-[11px] font-bold tracking-[0.2em] uppercase text-gold">
                       {cat.title}
                     </p>
                     {cat.treatments.map((t) => (
                       <Link
                         key={t.slug}
-                        href={`/${t.slug}`}
+                        href={treatmentHref(t)}
                         onClick={closeAll}
-                        className="block py-1.5 text-sm text-ivory/70 hover:text-gold"
+                        className="block py-2.5 text-[15px] text-ivory/75 hover:text-gold"
                       >
                         {t.name}
                       </Link>
@@ -365,7 +397,7 @@ export default function Header() {
                     key={c.href}
                     href={c.href}
                     onClick={closeAll}
-                    className="block py-1.5 text-sm font-semibold text-ivory hover:text-gold"
+                    className="block py-2.5 text-[15px] font-semibold text-ivory hover:text-gold"
                   >
                     {c.label}
                   </Link>
@@ -373,7 +405,7 @@ export default function Header() {
                 <Link
                   href="/treatments"
                   onClick={closeAll}
-                  className="block py-1.5 text-sm font-bold text-gold"
+                  className="block py-2.5 text-[15px] font-bold text-gold"
                 >
                   View All Treatments →
                 </Link>
@@ -391,7 +423,7 @@ export default function Header() {
               </Link>
             ))}
 
-            <p className="px-4 pt-2 font-label text-[10px] font-bold tracking-[0.2em] uppercase text-gold">
+            <p className="px-4 pt-2 font-label text-[11px] font-bold tracking-[0.2em] uppercase text-gold">
               Locations
             </p>
             {NAV_CLINIC_LINKS.map((c) => (

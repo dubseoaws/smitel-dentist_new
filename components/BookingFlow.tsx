@@ -573,15 +573,6 @@ export default function BookingFlow({
                 );
               })}
             </div>
-
-            <div className="mt-10 flex flex-wrap items-center gap-6 border-t border-ink/10 pt-6">
-              <p className="font-label text-[11px] uppercase tracking-[0.18em] text-ink-soft">
-                4.9/5 <span className="text-ink-soft/70">from 300+ Reviews</span>
-              </p>
-              <p className="font-label text-[11px] uppercase tracking-[0.18em] text-ink-soft">
-                GDC Registered Clinicians
-              </p>
-            </div>
           </div>
         )}
 
@@ -905,6 +896,11 @@ export default function BookingFlow({
               </p>
               <p className="mt-1 text-sm text-ink-soft">{summaryDate}</p>
               <p className="mt-1 text-sm text-ink-soft">{CLINIC_LABEL[clinic]}</p>
+              {(clinic === "sk" ? service?.note : colService?.note) && (
+                <p className="mt-4 border-t border-ink/10 pt-3 text-xs leading-relaxed text-ink-soft">
+                  {clinic === "sk" ? service?.note : colService?.note}
+                </p>
+              )}
             </div>
 
             <div className="mt-8 grid gap-5 sm:grid-cols-2">

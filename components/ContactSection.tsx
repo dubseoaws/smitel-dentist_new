@@ -51,7 +51,7 @@ export default function ContactSection() {
                 <svg viewBox="0 0 24 24" className="mt-0.5 h-4 w-4 shrink-0 fill-gold" aria-hidden>
                   <path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.58 3.6a1 1 0 0 1-.25 1l-2.23 2.2Z" />
                 </svg>
-                <a href={SITE.phoneHref} className="hover:text-gold-deep transition-colors">
+                <a href={SITE.phoneHref} className="-my-1.5 inline-block py-1.5 hover:text-gold-deep transition-colors">
                   {SITE.phone}
                 </a>
               </li>
@@ -81,7 +81,7 @@ export default function ContactSection() {
                 Get Directions
                 <span aria-hidden>→</span>
               </a>
-              <Link href={`/${clinic.slug}`} className="link-underline self-center">
+              <Link href={`/${clinic.slug}`} className="link-underline self-center !py-2">
                 View clinic <span aria-hidden>→</span>
               </Link>
             </div>
@@ -97,14 +97,14 @@ export default function ContactSection() {
             Book your consultation today and experience dentistry without fear.
           </p>
         </div>
-        <div className="flex flex-wrap items-center gap-6">
-          <Link href="/booking" className="btn-gold">
+        <div className="flex flex-wrap items-center gap-6 max-sm:w-full max-sm:justify-center">
+          <Link href="/booking" className="btn-gold btn-cta font-bold">
             Book My Appointment
             <span aria-hidden>→</span>
           </Link>
           <a
             href={`mailto:${SITE.email}`}
-            className="font-label text-[11px] tracking-[0.16em] uppercase text-ivory/70 hover:text-gold transition-colors"
+            className="inline-block py-2 font-label text-[11px] tracking-[0.16em] uppercase text-ivory/70 hover:text-gold transition-colors"
           >
             {SITE.email}
           </a>

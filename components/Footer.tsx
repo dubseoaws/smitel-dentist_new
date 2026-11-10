@@ -21,8 +21,8 @@ const SOCIALS = [
 export default function Footer() {
   return (
     <footer className="glow-dark text-ivory">
-      <div className="mx-auto max-w-7xl px-5 sm:px-10 py-16 grid gap-12 md:grid-cols-2 lg:grid-cols-5">
-        <div className="space-y-5">
+      <div className="mx-auto max-w-7xl px-5 sm:px-10 py-14 sm:py-16 grid grid-cols-2 gap-x-6 gap-y-10 sm:gap-12 lg:grid-cols-5">
+        <div className="col-span-2 lg:col-span-1 space-y-5">
           <Logo light />
           <p className="text-sm text-ivory/55 leading-relaxed max-w-xs">{SITE.tagline}</p>
           <div className="flex items-center gap-3">
@@ -33,7 +33,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={social.label}
-                className="flex h-9 w-9 items-center justify-center border border-ivory/20 text-ivory/70 hover:border-gold hover:text-gold transition-colors"
+                className="flex h-11 w-11 sm:h-9 sm:w-9 items-center justify-center border border-ivory/20 text-ivory/70 hover:border-gold hover:text-gold transition-colors"
               >
                 <svg viewBox="0 0 24 24" className="h-4 w-4 fill-current" aria-hidden>
                   {social.icon}
@@ -47,26 +47,26 @@ export default function Footer() {
           <p className="font-label text-[11px] font-semibold tracking-[0.22em] uppercase text-gold mb-5">
             Quick Links
           </p>
-          <ul className="space-y-2.5 text-sm">
+          <ul className="space-y-0.5 sm:space-y-2.5 text-sm">
             {FOOTER_QUICK_LINKS.map((t) => (
               <li key={t.href}>
-                <Link href={t.href} className="text-ivory/60 hover:text-gold transition-colors">
+                <Link href={t.href} className="inline-block py-1.5 sm:py-0 text-ivory/60 hover:text-gold transition-colors">
                   {t.label}
                 </Link>
               </li>
             ))}
             <li>
-              <Link href="/membership" className="text-ivory/60 hover:text-gold transition-colors">
+              <Link href="/membership" className="inline-block py-1.5 sm:py-0 text-ivory/60 hover:text-gold transition-colors">
                 Membership
               </Link>
             </li>
             <li>
-              <Link href="/results-london" className="text-ivory/60 hover:text-gold transition-colors">
+              <Link href="/results-london" className="inline-block py-1.5 sm:py-0 text-ivory/60 hover:text-gold transition-colors">
                 Smile Gallery
               </Link>
             </li>
             <li>
-              <Link href="/blog" className="text-ivory/60 hover:text-gold transition-colors">
+              <Link href="/blog" className="inline-block py-1.5 sm:py-0 text-ivory/60 hover:text-gold transition-colors">
                 Blog
               </Link>
             </li>
@@ -77,10 +77,10 @@ export default function Footer() {
           <p className="font-label text-[11px] font-semibold tracking-[0.22em] uppercase text-gold mb-5">
             Treatments
           </p>
-          <ul className="space-y-2.5 text-sm">
+          <ul className="space-y-0.5 sm:space-y-2.5 text-sm">
             {FOOTER_TREATMENTS.map((t) => (
               <li key={t.href}>
-                <Link href={t.href} className="text-ivory/60 hover:text-gold transition-colors">
+                <Link href={t.href} className="inline-block py-1.5 sm:py-0 text-ivory/60 hover:text-gold transition-colors">
                   {t.label}
                 </Link>
               </li>
@@ -88,32 +88,32 @@ export default function Footer() {
           </ul>
         </div>
 
-        <div>
+        <div className="col-span-2 sm:col-span-1">
           <p className="font-label text-[11px] font-semibold tracking-[0.22em] uppercase text-gold mb-5">
             Contact Us
           </p>
-          <ul className="space-y-4 text-sm text-ivory/60">
+          <ul className="space-y-2 sm:space-y-4 text-sm text-ivory/60">
             {CLINICS.map((clinic) => (
               <li key={clinic.slug}>
-                <Link href={`/${clinic.slug}`} className="hover:text-gold transition-colors">
+                <Link href={`/${clinic.slug}`} className="inline-block py-1.5 sm:py-0 hover:text-gold transition-colors">
                   {clinic.address.join(", ")}
                 </Link>
               </li>
             ))}
             <li>
-              <a href={SITE.phoneHref} className="hover:text-gold transition-colors">
+              <a href={SITE.phoneHref} className="inline-block py-1.5 sm:py-0 hover:text-gold transition-colors">
                 {SITE.phone}
               </a>
             </li>
             <li>
-              <a href={`mailto:${SITE.email}`} className="hover:text-gold transition-colors">
+              <a href={`mailto:${SITE.email}`} className="inline-block py-1.5 sm:py-0 hover:text-gold transition-colors">
                 {SITE.email}
               </a>
             </li>
           </ul>
         </div>
 
-        <div>
+        <div className="col-span-2 sm:col-span-1">
           <p className="font-label text-[11px] font-semibold tracking-[0.22em] uppercase text-gold mb-5">
             Opening Hours
           </p>
@@ -162,7 +162,7 @@ export default function Footer() {
           </p>
           <div className="flex flex-wrap items-center justify-between gap-4 pt-2">
             <p>© 2026 Smile Dentist. All rights reserved.</p>
-            <Link href="/contact" className="hover:text-gold transition-colors">
+            <Link href="/contact" className="inline-block py-2 hover:text-gold transition-colors">
               Contact us
             </Link>
           </div>

@@ -1,11 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import MeetExperts from "@/components/MeetExperts";
-import SmileGallery from "@/components/SmileGallery";
-import FaqSection from "@/components/FaqSection";
 import ContactForm from "@/components/ContactForm";
-import { CONTACT_FAQS } from "@/lib/faqs";
 import { SITE, CLINICS } from "@/lib/site-data";
 import { PAGE_JSONLD, pageMetadata } from "@/lib/seo";
 import { JsonLdBlocks } from "@/components/JsonLd";
@@ -57,8 +53,8 @@ export default function ContactPage() {
 
       {/* Contact strip */}
       <section className="bg-ink text-ivory">
-        <div className="mx-auto max-w-7xl grid sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-ivory/10">
-          <div className="px-6 sm:px-10 py-10 space-y-2">
+        <div className="mx-auto max-w-7xl grid gap-px bg-ivory/10 sm:grid-cols-2 xl:grid-cols-4 [&>*]:bg-ink">
+          <div className="px-6 sm:px-8 xl:px-10 py-10 space-y-2">
             <p className="font-label text-[13px] font-semibold tracking-[0.16em] uppercase">
               Phone
             </p>
@@ -70,32 +66,41 @@ export default function ContactPage() {
               {SITE.phone}
             </a>
           </div>
-          <div className="px-6 sm:px-10 py-10 space-y-2">
+          <div className="px-6 sm:px-8 xl:px-10 py-10 space-y-2">
             <p className="font-label text-[13px] font-semibold tracking-[0.16em] uppercase">
               Email
             </p>
             <p className="text-[15px] text-ivory/60">Send us a message anytime.</p>
             <a
               href={`mailto:${SITE.email}`}
-              className="block font-display text-2xl text-gold hover:text-gold-bright transition-colors break-all"
+              className="block font-display text-2xl text-gold hover:text-gold-bright transition-colors break-words"
             >
               {SITE.email}
             </a>
           </div>
-          <div className="px-6 sm:px-10 py-10 space-y-2">
-            <p className="font-label text-[13px] font-semibold tracking-[0.16em] uppercase">
-              Visit
-            </p>
-            <p className="text-[15px] text-ivory/60">Two Central London locations</p>
-            <p className="text-[15px] text-ivory">
-              South Kensington (SW7) • City of London (EC4)
-            </p>
-          </div>
+          {CLINICS.map((c) => (
+            <a
+              key={c.slug}
+              href={`#${c.slug}`}
+              className="group block px-6 sm:px-8 xl:px-10 py-10 space-y-2 transition-colors hover:!bg-[#24201b]"
+            >
+              <p className="font-label text-[13px] font-semibold tracking-[0.16em] uppercase">
+                Visit · {c.address[2].replace(/^London,\s*/, "").split(" ")[0]}
+              </p>
+              <p className="text-[15px] text-ivory/60">{c.proximity}</p>
+              <span className="block font-display text-2xl text-gold group-hover:text-gold-bright transition-colors">
+                {c.name}
+              </span>
+              <span className="block text-[14px] text-ivory/70">
+                {c.address[0]}, {c.address[2].replace(/^London,\s*/, "London ")}
+              </span>
+            </a>
+          ))}
         </div>
       </section>
 
       {/* South Kensington */}
-      <section className="grid lg:grid-cols-[1fr_1fr_0.8fr] border-b border-ink/10">
+      <section id="south-kensington" className="scroll-mt-28 grid lg:grid-cols-[1fr_1fr_0.8fr] border-b border-ink/10">
         <div className="relative min-h-[300px] border-b lg:border-b-0 lg:border-r border-ink/10">
           <iframe
             src={`https://www.google.com/maps?q=${encodeURIComponent(
@@ -178,7 +183,7 @@ export default function ContactPage() {
       </section>
 
       {/* City of London */}
-      <section className="grid lg:grid-cols-[0.8fr_1fr_1fr] border-b border-ink/10">
+      <section id="city-of-london" className="scroll-mt-28 grid lg:grid-cols-[0.8fr_1fr_1fr] border-b border-ink/10">
         <div className="bg-white px-5 sm:px-10 lg:px-11 py-14 order-2 lg:order-none border-r border-ink/10">
           <p className="font-label text-[10px] font-bold tracking-[0.18em] uppercase text-gold-deep">
             Opening Hours
@@ -294,10 +299,6 @@ export default function ContactPage() {
           <ContactForm />
         </div>
       </section>
-
-      <FaqSection items={CONTACT_FAQS} />
-      <SmileGallery limit={6} className="bg-cream border-y border-ink/10" />
-      <MeetExperts limit={8} columns={4} shape="circle" />
     </>
   );
 }

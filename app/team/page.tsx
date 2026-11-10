@@ -116,7 +116,7 @@ export default function TeamPage() {
             </Link>
           </div>
 
-          <TeamGrid columns={4} shape="circle" />
+          <TeamGrid columns={3} shape="circle" exclude={["dr-yasha-shirazi-cosmetic-dentist"]} />
         </div>
       </section>
 
@@ -212,7 +212,7 @@ export default function TeamPage() {
         </div>
       </section>
 
-      <SmileGallery limit={6} className="bg-cream border-y border-ink/10" />
+      <SmileGallery limit={9} className="bg-cream border-y border-ink/10" />
     </>
   );
 }

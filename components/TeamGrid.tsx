@@ -10,12 +10,15 @@ export default function TeamGrid({
   limit,
   columns = 3,
   shape = "card",
+  exclude = [],
 }: {
   limit?: number;
   columns?: 3 | 4;
   shape?: "card" | "circle";
+  exclude?: string[];
 }) {
-  const members = limit ? TEAM.slice(0, limit) : TEAM;
+  const pool = TEAM.filter((m) => !exclude.includes(m.slug));
+  const members = limit ? pool.slice(0, limit) : pool;
   const initialsOf = (name: string) =>
     name
       .split(" ")

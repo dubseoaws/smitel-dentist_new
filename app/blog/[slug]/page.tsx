@@ -4,7 +4,6 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import ContactSection from "@/components/ContactSection";
 import MeetExperts from "@/components/MeetExperts";
 import SmileGallery from "@/components/SmileGallery";
 import { ALL_BLOG_POSTS, BLOG_AUTHOR } from "@/lib/blog-posts";
@@ -311,9 +310,8 @@ export default async function BlogPostPage({
         </section>
       )}
 
-      <SmileGallery limit={6} className="bg-cream border-y border-ink/10" />
+      <SmileGallery limit={9} className="bg-cream border-y border-ink/10" />
       <MeetExperts limit={8} columns={4} shape="circle" />
-      <ContactSection />
     </>
   );
 }
