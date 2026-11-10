@@ -15,7 +15,28 @@ function pageWindow(current: number, total: number) {
   return [...pages].filter((p) => p >= 1 && p <= total).sort((a, b) => a - b);
 }
 
-export default function BlogListing({ initialPage = 1 }: { initialPage?: number }) {
+// The final card fills any empty grid cells, switching to a horizontal layout so the last row is never ragged.
+function lastCardLayout(count: number) {
+  const smWide = count % 2 === 1;
+  const lgSpan = count % 3;
+  const card = [
+    smWide ? "sm:col-span-2 sm:flex-row" : "",
+    lgSpan === 0 ? "lg:col-span-1 lg:flex-col" : `${lgSpan === 1 ? "lg:col-span-3" : "lg:col-span-2"} lg:flex-row`,
+  ].join(" ");
+  const media = [
+    smWide ? "sm:h-auto sm:min-h-64 sm:w-2/5 sm:shrink-0" : "",
+    lgSpan === 0 ? "lg:h-52 lg:min-h-0 lg:w-auto" : `lg:h-auto lg:min-h-64 lg:shrink-0 ${lgSpan === 1 ? "lg:w-1/3" : "lg:w-1/2"}`,
+  ].join(" ");
+  return { card, media };
+}
+
+export default function BlogListing({
+  initialPage = 1,
+  heading = "Dental Health Blog",
+}: {
+  initialPage?: number;
+  heading?: string;
+}) {
   const [query, setQuery] = useState("");
   const [category, setCategory] = useState("All");
   const [page, setPage] = useState(initialPage);
@@ -56,7 +77,7 @@ export default function BlogListing({ initialPage = 1 }: { initialPage?: number 
         <div className="relative mx-auto max-w-7xl px-5 sm:px-8 py-16 lg:py-20 space-y-6">
           <p className="eyebrow !text-gold before:!bg-gold fade-up">Blog</p>
           <h1 className="display-xl text-[2.25rem] sm:text-5xl lg:text-[3.25rem] leading-[1.08] fade-up fade-up-1">
-            Dental Health Blog
+            {heading}
           </h1>
           <span className="block h-px w-20 bg-gold fade-up fade-up-2" aria-hidden />
           <p className="max-w-2xl text-lg leading-relaxed text-ivory/70 fade-up fade-up-3">
@@ -110,12 +131,18 @@ export default function BlogListing({ initialPage = 1 }: { initialPage?: number 
           </p>
 
           <div className="grid gap-px bg-ink/10 sm:grid-cols-2 lg:grid-cols-3">
-            {posts.map((post) => (
+            {posts.map((post, i) => (
               <article
                 key={post.slug}
-                className="group relative flex flex-col bg-ivory transition-colors hover:bg-white"
+                className={`group relative flex flex-col bg-ivory transition-colors hover:bg-white ${
+                  i === posts.length - 1 ? lastCardLayout(posts.length).card : ""
+                }`}
               >
-                <div className="relative h-52 overflow-hidden bg-cream">
+                <div
+                  className={`relative h-52 overflow-hidden bg-cream ${
+                    i === posts.length - 1 ? lastCardLayout(posts.length).media : ""
+                  }`}
+                >
                   {post.image && (
                     <Image
                       src={post.image}

@@ -60,7 +60,7 @@ export default function ResultsPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <p className="eyebrow mb-3">Transformations</p>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl tracking-tight">
-            Real People, Real Smiles
+            Real Results
           </h1>
           <p className="mt-5 max-w-2xl text-ink-soft leading-relaxed">
             We take pride in changing lives, one smile at a time. Browse our gallery of

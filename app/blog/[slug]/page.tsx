@@ -8,7 +8,7 @@ import MeetExperts from "@/components/MeetExperts";
 import SmileGallery from "@/components/SmileGallery";
 import { ALL_BLOG_POSTS, BLOG_AUTHOR } from "@/lib/blog-posts";
 import { BLOG_SEO } from "@/lib/blog-seo";
-import { SEO_KEYWORDS, SITE_URL } from "@/lib/seo";
+import { GOOGLEBOT_INDEX, SEO_KEYWORDS, SITE_URL } from "@/lib/seo";
 import JsonLd from "@/components/JsonLd";
 import { SITE } from "@/lib/site-data";
 
@@ -22,6 +22,18 @@ async function readArticle(slug: string) {
       path.join(process.cwd(), "content", "blog", `${slug}.html`),
       "utf8"
     );
+  } catch {
+    return null;
+  }
+}
+
+async function readArticleFaq(slug: string) {
+  try {
+    const raw = await fs.readFile(
+      path.join(process.cwd(), "content", "blog", `${slug}.faq.json`),
+      "utf8"
+    );
+    return JSON.parse(raw) as Record<string, unknown>;
   } catch {
     return null;
   }
@@ -51,7 +63,7 @@ export async function generateMetadata({
     title: { absolute: title },
     description,
     keywords: SEO_KEYWORDS,
-    robots: { index: true, follow: true },
+    robots: { index: true, follow: true, googleBot: GOOGLEBOT_INDEX },
     alternates: { canonical: url },
     openGraph: {
       title: { absolute: title },
@@ -60,7 +72,7 @@ export async function generateMetadata({
       type: "article",
       publishedTime: post.iso,
       authors: [BLOG_AUTHOR],
-      images: [{ url: post.image, width: 1200, height: 630, alt: post.title }],
+      images: [{ url: post.image, width: 1200, height: 630, alt: title }],
     },
     twitter: {
       card: "summary_large_image",
@@ -80,6 +92,7 @@ export default async function BlogPostPage({
   const post = ALL_BLOG_POSTS.find((p) => p.slug === slug);
   const body = post ? await readArticle(slug) : null;
   if (!post || !body) notFound();
+  const faqJsonLd = await readArticleFaq(slug);
 
   const related = ALL_BLOG_POSTS.filter(
     (p) => p.slug !== post.slug && p.category === post.category
@@ -95,7 +108,7 @@ export default async function BlogPostPage({
         data={{
           "@context": "https://schema.org",
           "@type": "BlogPosting",
-          headline: seo?.title ?? post.title,
+          headline: post.title,
           description: seo?.description ?? post.excerpt,
           image: post.image,
           url,
@@ -135,6 +148,7 @@ export default async function BlogPostPage({
           ],
         }}
       />
+      {faqJsonLd && <JsonLd data={faqJsonLd} />}
       <article>
         <section className="relative overflow-hidden bg-ink text-ivory">
           <span

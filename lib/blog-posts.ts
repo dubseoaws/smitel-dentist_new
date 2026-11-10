@@ -1,4 +1,4 @@
-// Blog listing scraped from https://www.smiledentist.co.uk/blog (632 articles).
+// Blog listing scraped from https://www.smiledentist.co.uk/blog (761 articles).
 export type BlogPost = {
   slug: string;
   title: string;
@@ -11,28 +11,1171 @@ export type BlogPost = {
 
 export const BLOG_CATEGORIES = ["General Dentistry", "Cosmetic Dentistry", "Dental Health Tips"];
 
-export const BLOG_PER_PAGE = 24;
+export const BLOG_PER_PAGE = 25;
 
 export const BLOG_AUTHOR = "Smile Dentist Team";
 
 export const ALL_BLOG_POSTS: BlogPost[] = [
   {
-    slug: "can-denture-cleaning-tablets-damage-implant-attachment-components",
-    title: "Can Denture-Cleaning Tablets Damage Implant Attachment Components?",
-    excerpt: "Find out whether denture-cleaning tablets can damage implant attachment components and how to safely care for your dental implant prosthetics.",
-    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1786440491/Can_an_Implant_Crown_Be_Polished_fiwoi9.jpg",
+    slug: "why-does-a-new-denture-feel-bulky-at-the-roof-of-your-mouth",
+    title: "Why Does a New Denture Feel Bulky at the Roof of Your Mouth?",
+    excerpt: "Find out why a new denture can feel bulky at the roof of your mouth and what you can do to adjust comfortably, with general educational guidance from our London dental team.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1773119617/How_Many_Dental_Implants_Are_Needed_for_a_Full_Mouth_nx9apv.jpg",
     category: "General Dentistry",
-    date: "September 4, 2026",
-    iso: "2026-09-04T08:25:42.000Z",
+    date: "November 9, 2026",
+    iso: "2026-11-09T10:59:16.000Z",
   },
   {
-    slug: "can-a-crown-need-replacing-even-if-it-looks-fine",
-    title: "Can a Crown Need Replacing Even If It Looks Fine? A City of London Dentist Explains",
-    excerpt: "Your crown may look intact but still need replacing. A City of London dentist explains the signs, risks, and what to expect from crown assessment.",
-    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1773754083/Can_a_Cracked_Tooth_Be_Saved_with_a_Crown_luxlg4.jpg",
+    slug: "what-happens-if-tooth-next-to-dental-implant-develops-infection",
+    title: "What Happens If the Tooth Next to a Dental Implant Develops an Infection?",
+    excerpt: "Learn what happens when a tooth next to a dental implant becomes infected, including signs, risks, and when to seek professional dental advice.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1772458838/Navigating_Social_Events_with_Dental_Implants_z5na1p.jpg",
     category: "General Dentistry",
-    date: "September 4, 2026",
-    iso: "2026-09-04T08:16:42.000Z",
+    date: "November 9, 2026",
+    iso: "2026-11-09T10:59:16.000Z",
+  },
+  {
+    slug: "difference-between-temporary-veneers-and-permanent-porcelain-veneers",
+    title: "What Is the Difference Between Temporary Veneers and Permanent Porcelain Veneers?",
+    excerpt: "Learn the key differences between temporary and permanent porcelain veneers, how each works, and what to expect at every stage of your treatment journey.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1773119929/Can_Invisible_Braces_Fix_Severe_Crowding_dbl8md.jpg",
+    category: "Cosmetic Dentistry",
+    date: "November 9, 2026",
+    iso: "2026-11-09T10:59:16.000Z",
+  },
+  {
+    slug: "can-an-old-root-canal-infection-affect-a-future-dental-implant-site",
+    title: "Can an Old Root Canal Infection Affect a Future Dental Implant Site?",
+    excerpt: "Can a previous root canal infection affect your dental implant? Learn how past infections influence implant success and what to discuss with your dentist.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1772458838/The_Impact_of_Dental_Implants_on_Facial_Aesthetics_and_Preventing_Facial_Collapse_jxktfu.jpg",
+    category: "General Dentistry",
+    date: "November 9, 2026",
+    iso: "2026-11-09T10:59:16.000Z",
+  },
+  {
+    slug: "can-a-dental-crown-affect-the-taste-of-food",
+    title: "Can a Dental Crown Affect the Taste of Food?",
+    excerpt: "Can a dental crown change how food tastes? Learn why taste changes occur after crown placement and when to speak with your London dentist.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1773071021/Professional_Teeth_Whitening_Cost_in_London_What_Patients_Should_Expect_nee4ar.jpg",
+    category: "General Dentistry",
+    date: "November 9, 2026",
+    iso: "2026-11-09T10:59:16.000Z",
+  },
+  {
+    slug: "what-does-healing-look-like-after-gum-contouring-and-what-can-you-eat",
+    title: "What Does Healing Look Like After Gum Contouring, and What Can You Eat?",
+    excerpt: "Learn what to expect during gum contouring recovery, what foods to eat, and when to seek professional dental advice after treatment.",
+    image: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1772198165/Is_Composite_Bonding_Reversible_What_Patients_Should_Know_Before_Treatment_lihh4w.jpg",
+    category: "Cosmetic Dentistry",
+    date: "November 6, 2026",
+    iso: "2026-11-06T12:16:42.000Z",
+  },
+  {
+    slug: "how-long-does-a-smile-makeover-take-from-first-consultation-to-final-result",
+    title: "How Long Does a Smile Makeover Take From First Consultation to Final Result?",
+    excerpt: "Wondering how long a smile makeover takes in London? Learn what affects the timeline, from first consultation to your final result, in this expert guide.",
+    image: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1769596652/The_Secret_to_a_Healthier_Happier_Smile_in_London_Daily_Habits-_Expert_Dental_Care_hsceig.jpg",
+    category: "Cosmetic Dentistry",
+    date: "November 6, 2026",
+    iso: "2026-11-06T12:16:42.000Z",
+  },
+  {
+    slug: "can-tooth-contouring-and-gum-contouring-be-combined-for-a-more-balanced-smile",
+    title: "Can Tooth Contouring and Gum Contouring Be Combined for a More Balanced Smile?",
+    excerpt: "Can tooth contouring and gum contouring be combined? Learn how these treatments work together to create a more balanced, natural-looking smile.",
+    image: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1768221777/How_to_Whiten_Composite_Bonding_Safely_ai0i6c.webp",
+    category: "Cosmetic Dentistry",
+    date: "November 6, 2026",
+    iso: "2026-11-06T12:16:42.000Z",
+  },
+  {
+    slug: "can-pro-aligners-straighten-teeth-before-smile-makeover",
+    title: "Can Pro Aligners Straighten Your Teeth Before a Smile Makeover?",
+    excerpt: "Find out how pro aligners can straighten teeth before a smile makeover and why the sequence of treatment matters for long-term dental results.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1777188645/Factors_in_Tooth_Restoration_The_Importance_of_the_Ferrule_Effect_rezu4w.jpg",
+    category: "Cosmetic Dentistry",
+    date: "November 6, 2026",
+    iso: "2026-11-06T12:16:42.000Z",
+  },
+  {
+    slug: "can-composite-veneers-be-repaired-in-one-visit-if-they-chip",
+    title: "Can Composite Veneers Be Repaired in One Visit If They Chip?",
+    excerpt: "Find out if chipped composite veneers can be repaired in a single dental visit, what affects the repair process, and when to seek professional advice.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1774248643/Is_composite_bonding_suitable_for_worn-down_teeth_fzpqsc.jpg",
+    category: "Cosmetic Dentistry",
+    date: "November 6, 2026",
+    iso: "2026-11-06T12:16:42.000Z",
+  },
+  {
+    slug: "what-happens-if-a-veneer-starts-to-feel-rough-against-your-tongue",
+    title: "What Happens If a Veneer Starts to Feel Rough Against Your Tongue?",
+    excerpt: "If your veneer feels rough against your tongue, find out what may be causing it, when to seek dental advice, and how to care for your veneers properly.",
+    image: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1772198153/Composite_Bonding_vs_Porcelain_Veneers_Which_Is_Better_for_Front_Teeth_bvokoc.jpg",
+    category: "Cosmetic Dentistry",
+    date: "November 4, 2026",
+    iso: "2026-11-04T08:45:19.000Z",
+  },
+  {
+    slug: "maintaining-an-implant-supported-single-tooth",
+    title: "What Should You Know About Maintaining an Implant-Supported Single Tooth?",
+    excerpt: "Learn how to care for and maintain an implant-supported single tooth. Practical dental guidance for London patients on hygiene, longevity, and check-ups.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1773925232/Why_Does_My_Jaw_Feel_Weak_When_Chewing_uj8hxw.jpg",
+    category: "General Dentistry",
+    date: "November 4, 2026",
+    iso: "2026-11-04T08:45:19.000Z",
+  },
+  {
+    slug: "implant-cleaning-advice-limited-hand-dexterity",
+    title: "What Implant Cleaning Advice May Help People With Limited Hand Dexterity?",
+    excerpt: "Practical implant cleaning advice for people with limited hand dexterity. Learn about tools, techniques and professional support options.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1773925360/Why_Does_Food_Get_Stuck_More_After_Missing_Teeth_kv95rb.jpg",
+    category: "General Dentistry",
+    date: "November 4, 2026",
+    iso: "2026-11-04T08:45:19.000Z",
+  },
+  {
+    slug: "how-can-you-tell-if-composite-bonding-is-affecting-your-bite",
+    title: "How Can You Tell If Composite Bonding Is Affecting Your Bite?",
+    excerpt: "Learn how to tell if composite bonding is affecting your bite, what symptoms to look for, and when to seek a professional dental assessment in London.",
+    image: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1772198165/Is_Composite_Bonding_Reversible_What_Patients_Should_Know_Before_Treatment_lihh4w.jpg",
+    category: "Cosmetic Dentistry",
+    date: "November 4, 2026",
+    iso: "2026-11-04T08:45:19.000Z",
+  },
+  {
+    slug: "can-a-crown-become-worn-even-when-it-has-not-cracked",
+    title: "Can a Dental Crown Become Worn Even When It Has Not Cracked?",
+    excerpt: "Learn how dental crowns can wear down over time without cracking, what signs to look for, and when to seek a professional dental assessment.",
+    image: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1772458148/Why_Do_Molar_Root_Canals_Cost_More_Than_Front_Teeth_zg3vkv.jpg",
+    category: "General Dentistry",
+    date: "November 4, 2026",
+    iso: "2026-11-04T08:45:19.000Z",
+  },
+  {
+    slug: "how-to-prepare-for-a-dental-implant-review-after-moving-to-a-new-area",
+    title: "How to Prepare for a Dental Implant Review After Moving to a New Area",
+    excerpt: "Moved to a new area with dental implants? Learn how to prepare for your next implant review and keep your smile healthy long term.",
+    image: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1772028583/Why_Dental_Implants_Are_a_Better_Investment_Than_a_3-Unit_Bridge_iulzvw.jpg",
+    category: "General Dentistry",
+    date: "November 2, 2026",
+    iso: "2026-11-02T08:45:19.000Z",
+  },
+  {
+    slug: "can-you-have-an-implant-checked-if-it-was-placed-at-another-clinic",
+    title: "Can You Have a Dental Implant Checked If It Was Placed at Another Clinic?",
+    excerpt: "Find out if you can have a dental implant checked at a different clinic in London, including implant reviews, aftercare, and when to seek help.",
+    image: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1771840403/Do_Cavity_Fillings_Hurt_What_to_Expect_Before_During_and_After_Treatments_qfkhvw.jpg",
+    category: "General Dentistry",
+    date: "November 2, 2026",
+    iso: "2026-11-02T08:45:19.000Z",
+  },
+  {
+    slug: "can-porcelain-veneers-be-repaired-if-one-corner-chips",
+    title: "Can Porcelain Veneers Be Repaired If Only One Corner Chips?",
+    excerpt: "Discovering a chipped corner on a porcelain veneer can be an unsettling experience — particularly if it was a significant investment in your smile. It is entirely understandable that many patients immediately search onli",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1773119929/Can_Invisible_Braces_Fix_Severe_Crowding_dbl8md.jpg",
+    category: "Cosmetic Dentistry",
+    date: "November 2, 2026",
+    iso: "2026-11-02T08:45:19.000Z",
+  },
+  {
+    slug: "can-composite-bonding-change-the-way-food-passes-between-teeth",
+    title: "Can Composite Bonding Change the Way Food Passes Between Teeth?",
+    excerpt: "Discover how composite bonding can affect food flow between teeth, what to expect after treatment, and when to seek professional dental advice.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1773069260/How_Long_Do_Porcelain_Veneers_Last_Lifespan_Explained_avsfbz.jpg",
+    category: "Cosmetic Dentistry",
+    date: "November 2, 2026",
+    iso: "2026-11-02T08:45:19.000Z",
+  },
+  {
+    slug: "can-a-dental-crown-trap-food-between-neighbouring-teeth",
+    title: "Can a Dental Crown Trap Food Between Neighbouring Teeth?",
+    excerpt: "Find out why dental crowns can trap food between neighbouring teeth, what causes it, and when to seek professional dental advice in London.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1773754082/What_Happens_If_You_Delay_Getting_a_Crown_After_Root_Canal_saipxb.jpg",
+    category: "General Dentistry",
+    date: "November 2, 2026",
+    iso: "2026-11-02T08:45:19.000Z",
+  },
+  {
+    slug: "can-veneers-affect-the-appearance-of-black-triangles-between-teeth",
+    title: "Can Veneers Affect the Appearance of Black Triangles Between Teeth?",
+    excerpt: "Discover how veneers may help improve the appearance of black triangles between teeth. Learn about causes, treatment options, and when to seek dental advice.",
+    image: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1772112147/How_to_Fix_Small_Teeth_with_Cosmetic_Dentistry_Your_Options_Explained_wxwhjr.jpg",
+    category: "Cosmetic Dentistry",
+    date: "October 30, 2026",
+    iso: "2026-10-30T08:45:19.000Z",
+  },
+  {
+    slug: "can-composite-bonding-change-how-food-feels-between-front-teeth",
+    title: "Can Composite Bonding Change How Food Feels Between the Front Teeth?",
+    excerpt: "Can composite bonding change how food feels between your front teeth? Learn what to expect, why it happens, and when to seek dental advice.",
+    image: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1772112141/Does_Cosmetic_Dentistry_Damage_Your_Natural_Teeth_What_to_Know_mf0awg.jpg",
+    category: "Cosmetic Dentistry",
+    date: "October 30, 2026",
+    iso: "2026-10-30T08:45:19.000Z",
+  },
+  {
+    slug: "can-a-dental-implant-crown-be-replaced-without-replacing-the-implant",
+    title: "Can a Dental Implant Crown Be Replaced Without Replacing the Implant?",
+    excerpt: "Learn whether a dental implant crown can be replaced without removing the implant itself. Educational guide for patients in London.",
+    image: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1772028583/Why_Dental_Implants_Are_a_Better_Investment_Than_a_3-Unit_Bridge_iulzvw.jpg",
+    category: "General Dentistry",
+    date: "October 30, 2026",
+    iso: "2026-10-30T08:45:19.000Z",
+  },
+  {
+    slug: "what-should-you-do-if-a-denture-becomes-stuck-in-your-mouth",
+    title: "What Should You Do If a Denture Becomes Stuck in Your Mouth?",
+    excerpt: "Discover why dentures can become stuck and what steps to take safely. Practical dental guidance for patients in London from Smile Dentist.",
+    image: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1772112136/Can_You_Change_Tooth_Shape_Without_Braces_Cosmetic_Options_Explained_zypfy3.jpg",
+    category: "General Dentistry",
+    date: "October 28, 2026",
+    iso: "2026-10-28T08:45:19.000Z",
+  },
+  {
+    slug: "questions-to-ask-about-cleaning-an-implant-supported-bridge",
+    title: "What Questions Should You Ask About Cleaning an Implant-Supported Bridge?",
+    excerpt: "Find out what to ask your dentist about cleaning an implant-supported bridge and how to maintain long-term oral health.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1773124522/The_Biomechanics_of_All-on-4_How_angled_implants_provide_maximum_stability_ro1hbt.jpg",
+    category: "General Dentistry",
+    date: "October 28, 2026",
+    iso: "2026-10-28T08:45:19.000Z",
+  },
+  {
+    slug: "can-implant-attachments-wear-out-even-when-implants-feel-fine",
+    title: "Can Implant Attachments Wear Out Even When the Implants Feel Fine?",
+    excerpt: "Learn how dental implant attachments can wear out over time, even when implants feel fine. Educational guide from a London dental clinic.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1773124700/Weight_and_Durability_Comparing_acrylic_vs._composite_bridges_for_All-on-4_xvjg6c.jpg",
+    category: "General Dentistry",
+    date: "October 28, 2026",
+    iso: "2026-10-28T08:45:19.000Z",
+  },
+  {
+    slug: "can-a-dental-crown-match-teeth-that-have-been-professionally-whitened",
+    title: "Can a Dental Crown Match Teeth That Have Been Professionally Whitened?",
+    excerpt: "Wondering if a dental crown can match professionally whitened teeth? Learn what to expect, timing tips, and how to achieve a consistent smile in London.",
+    image: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1772458138/The_Cost_of_Root_Canal_Retreatment_h36wqf.jpg",
+    category: "Cosmetic Dentistry",
+    date: "October 28, 2026",
+    iso: "2026-10-28T08:45:19.000Z",
+  },
+  {
+    slug: "which-interdental-brushes-are-suitable-for-cleaning-around-dental-implants",
+    title: "Which Interdental Brushes Are Suitable for Cleaning Around Dental Implants?",
+    excerpt: "Find out which interdental brushes are suitable for cleaning around dental implants and how to protect your implant investment with the right oral hygiene tools.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1774269674/Why_does_my_face_look_sunken_after_tooth_loss_xy1o7m.jpg",
+    category: "General Dentistry",
+    date: "October 26, 2026",
+    iso: "2026-10-26T08:45:19.000Z",
+  },
+  {
+    slug: "is-a-sharp-denture-edge-a-dental-emergency",
+    title: "Is a Sharp Denture Edge a Dental Emergency?",
+    excerpt: "Sharp denture edge causing pain or sores? Learn when it's urgent, what causes it, and when to seek professional dental advice in London.",
+    image: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1771943557/White_Fillings_vs_Silver_Fillings_in_London_uprzsd.jpg",
+    category: "General Dentistry",
+    date: "October 26, 2026",
+    iso: "2026-10-26T08:45:19.000Z",
+  },
+  {
+    slug: "can-you-use-an-electric-toothbrush-around-a-dental-implant",
+    title: "Can You Use an Electric Toothbrush Around a Dental Implant?",
+    excerpt: "Wondering if an electric toothbrush is safe around dental implants? Read our practical guide on implant care, oral hygiene tips, and when to seek advice.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1772458838/Managing_Post-Surgical_Swelling_m6rmbc.jpg",
+    category: "General Dentistry",
+    date: "October 26, 2026",
+    iso: "2026-10-26T08:45:19.000Z",
+  },
+  {
+    slug: "can-composite-bonding-be-polished-without-changing-its-shape",
+    title: "Can Composite Bonding Be Polished Without Changing Its Shape?",
+    excerpt: "Learn whether composite bonding can be polished without altering its shape, and what to expect from professional maintenance appointments in London.",
+    image: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1772027680/How_Long_Does_Composite_Bonding_Last_sko73q.jpg",
+    category: "Cosmetic Dentistry",
+    date: "October 26, 2026",
+    iso: "2026-10-26T08:45:19.000Z",
+  },
+  {
+    slug: "what-does-primary-closure-mean-after-implant-surgery",
+    title: "What Does Primary Closure Mean After Implant Surgery?",
+    excerpt: "Learn what primary closure means after dental implant surgery, why it matters for healing, and when to seek professional dental advice in London.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1774330460/Is_composite_bonding_a_good_alternative_to_veneers_for_minor_issues_yeolwt.jpg",
+    category: "General Dentistry",
+    date: "October 23, 2026",
+    iso: "2026-10-23T08:45:19.000Z",
+  },
+  {
+    slug: "what-does-load-bearing-mean-for-a-dental-implant",
+    title: "What Does Load-Bearing Mean for a Dental Implant?",
+    excerpt: "Learn what load-bearing means for dental implants, how osseointegration works, and when immediate or delayed loading may be suitable for you.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1774248643/Can_composite_bonding_fix_uneven_edges_on_front_teeth_yndjtp.jpg",
+    category: "General Dentistry",
+    date: "October 23, 2026",
+    iso: "2026-10-23T08:45:19.000Z",
+  },
+  {
+    slug: "can-you-get-dental-implants-if-you-have-sickle-cell-disease-or-trait",
+    title: "Can You Get Dental Implants If You Have Sickle Cell Disease or Trait?",
+    excerpt: "Wondering if dental implants are possible with sickle cell disease or trait? Learn what to consider and when to seek professional dental advice.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1774330460/When_is_composite_bonding_NOT_recommended_uanlsm.jpg",
+    category: "General Dentistry",
+    date: "October 23, 2026",
+    iso: "2026-10-23T08:45:19.000Z",
+  },
+  {
+    slug: "can-veneers-improve-teeth-with-uneven-gum-level-appearance",
+    title: "Can Veneers Improve Teeth With Uneven Gum-Level Appearance?",
+    excerpt: "Discover how veneers may help improve the appearance of teeth with uneven gum levels. Learn about causes, treatment options, and when to seek professional advice.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1773923889/How_Many_Teeth_Should_You_Get_Composite_Bonding_On_yq912t.jpg",
+    category: "Cosmetic Dentistry",
+    date: "October 23, 2026",
+    iso: "2026-10-23T08:45:19.000Z",
+  },
+  {
+    slug: "can-veneers-close-a-gap-without-making-front-teeth-look-too-wide",
+    title: "Can Veneers Close a Gap Without Making Front Teeth Look Too Wide?",
+    excerpt: "A gap between the front teeth — clinically referred to as a diastema — is one of the most commonly searched cosmetic dental concerns in the UK. Many adults feel self-conscious about a visible space between their upper fr",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1773923889/How_Many_Teeth_Should_You_Get_Composite_Bonding_On_yq912t.jpg",
+    category: "Cosmetic Dentistry",
+    date: "October 22, 2026",
+    iso: "2026-10-22T08:45:19.000Z",
+  },
+  {
+    slug: "can-composite-bonding-restore-a-tooth-that-looks-narrower-than-its-neighbours",
+    title: "Can Composite Bonding Restore a Tooth That Looks Narrower Than Its Neighbours?",
+    excerpt: "Can composite bonding fix a tooth that looks narrower than its neighbours? Learn how this treatment works and when to seek professional dental advice.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1773923889/What_Happens_When_Composite_Bonding_Wears_Down_xxd3sc.jpg",
+    category: "Cosmetic Dentistry",
+    date: "October 22, 2026",
+    iso: "2026-10-22T08:45:19.000Z",
+  },
+  {
+    slug: "can-composite-bonding-hide-a-small-enamel-groove",
+    title: "Can Composite Bonding Hide a Small Enamel Groove?",
+    excerpt: "Wondering if composite bonding can hide a small enamel groove? Learn what's possible, what to expect, and when to seek a dental assessment in London.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1774333119/Why_do_my_gums_bleed_even_when_I_don_t_brush_hard_seqvxn.jpg",
+    category: "Cosmetic Dentistry",
+    date: "October 22, 2026",
+    iso: "2026-10-22T08:45:19.000Z",
+  },
+  {
+    slug: "can-a-dental-crown-help-restore-a-tooth-that-has-changed-shape-from-wear",
+    title: "Can a Dental Crown Help Restore a Tooth That Has Changed Shape From Wear?",
+    excerpt: "Find out how a dental crown can help restore a tooth that has changed shape from wear. Educational guide for London dental patients.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1774333306/Why_do_my_teeth_look_shorter_than_before_erv3xw.jpg",
+    category: "General Dentistry",
+    date: "October 22, 2026",
+    iso: "2026-10-22T08:45:19.000Z",
+  },
+  {
+    slug: "can-a-dental-crown-be-replaced-without-repeating-full-tooth-preparation",
+    title: "Can a Dental Crown Be Replaced Without Repeating Full Tooth Preparation?",
+    excerpt: "Wondering if your dental crown can be replaced without full tooth preparation? Learn what's clinically involved and when to seek a dental assessment.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1774333309/Why_is_one_tooth_darker_than_the_others_ymgbnt.jpg",
+    category: "General Dentistry",
+    date: "October 22, 2026",
+    iso: "2026-10-22T08:45:19.000Z",
+  },
+  {
+    slug: "what-is-an-interim-restoration-and-how-long-do-you-wear-one",
+    title: "What Is an Interim Restoration and How Long Do You Wear One?",
+    excerpt: "Find out what an interim dental restoration is, how long you wear one, and what to expect during treatment. Educational guide from Smile Dentist London.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1774269671/Why_does_food_keep_getting_trapped_in_missing_tooth_gaps_pgqram.jpg",
+    category: "General Dentistry",
+    date: "October 16, 2026",
+    iso: "2026-10-16T08:45:19.000Z",
+  },
+  {
+    slug: "what-is-a-healing-cap-and-what-does-it-actually-do",
+    title: "What Is a Healing Cap and What Does It Actually Do?",
+    excerpt: "Learn what a healing cap is, how it works after dental implant placement, and what to expect during your implant treatment journey.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1774267605/Can_you_get_dental_implants_if_you_have_thin_jawbone_hxvyrx.jpg",
+    category: "General Dentistry",
+    date: "October 16, 2026",
+    iso: "2026-10-16T08:45:19.000Z",
+  },
+  {
+    slug: "can-veneers-be-used-on-teeth-with-enamel-hypoplasia",
+    title: "Can Veneers Be Used on Teeth With Enamel Hypoplasia?",
+    excerpt: "Can veneers treat enamel hypoplasia? Learn how this condition affects treatment options and when professional dental assessment is recommended.",
+    image: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1772198165/Is_Composite_Bonding_Reversible_What_Patients_Should_Know_Before_Treatment_lihh4w.jpg",
+    category: "Cosmetic Dentistry",
+    date: "October 16, 2026",
+    iso: "2026-10-16T08:45:19.000Z",
+  },
+  {
+    slug: "can-composite-bonding-be-used-on-teeth-with-mild-erosion",
+    title: "Can Composite Bonding Be Used on Teeth With Mild Erosion?",
+    excerpt: "If you have noticed that your teeth look shorter, feel more sensitive, or appear slightly translucent at the edges, you may have some degree of tooth erosion. It is a very common concern, and many patients who experience",
+    image: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1771943559/White_Fillings_Composite_Bonding_Veneers_ypsocb.jpg",
+    category: "Cosmetic Dentistry",
+    date: "October 16, 2026",
+    iso: "2026-10-16T08:45:19.000Z",
+  },
+  {
+    slug: "can-a-dental-crown-be-used-for-a-tooth-with-a-large-filling",
+    title: "Can a Dental Crown Be Used for a Tooth With a Large Filling?",
+    excerpt: "Find out whether a dental crown is suitable for a tooth with a large filling, what signs to look for, and when to seek professional dental advice in London.",
+    image: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1772027680/How_Long_Does_a_Cavity_Filling_Take_oa7r80.jpg",
+    category: "General Dentistry",
+    date: "October 16, 2026",
+    iso: "2026-10-16T08:45:19.000Z",
+  },
+  {
+    slug: "what-is-passive-fit-and-why-does-it-matter-for-an-implant-bridge",
+    title: "What Is Passive Fit and Why Does It Matter for an Implant Bridge?",
+    excerpt: "Learn what passive fit means for implant bridges, why it matters for long-term success, and when to seek professional dental assessment in London.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1776405287/Replace-all-teeth-at-once-or-phase-implant-treatment_ecxasj.jpg",
+    category: "General Dentistry",
+    date: "October 14, 2026",
+    iso: "2026-10-14T08:45:19.000Z",
+  },
+  {
+    slug: "what-is-a-soft-tissue-profile-and-why-do-dentists-care-about-it",
+    title: "What Is a Soft Tissue Profile and Why Do Dentists Care About It?",
+    excerpt: "Learn what a soft tissue profile is, why dentists assess it, and how it influences your dental and facial health. Educational guide for London patients.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1776405366/Single-implant-prevents-gum_pockets_i0muy8.jpg",
+    category: "General Dentistry",
+    date: "October 14, 2026",
+    iso: "2026-10-14T08:45:19.000Z",
+  },
+  {
+    slug: "can-veneers-be-used-when-one-front-tooth-is-shorter-than-the-other",
+    title: "Can Veneers Be Used When One Front Tooth Is Shorter Than the Other?",
+    excerpt: "Can veneers fix a front tooth that's shorter than the other? Learn how dental veneers may help correct tooth length and smile symmetry in London.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1774333778/What_happens_if_you_don_t_replace_a_lost_filling_akthn0.jpg",
+    category: "Cosmetic Dentistry",
+    date: "October 14, 2026",
+    iso: "2026-10-14T08:45:19.000Z",
+  },
+  {
+    slug: "can-composite-bonding-help-protect-exposed-dentine",
+    title: "Can Composite Bonding Help Protect a Small Area of Exposed Dentine?",
+    excerpt: "Wondering if composite bonding can protect exposed dentine? Learn about causes, treatment options, and when to seek professional dental advice in London.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1774333306/Why_do_my_teeth_look_shorter_than_before_erv3xw.jpg",
+    category: "Cosmetic Dentistry",
+    date: "October 14, 2026",
+    iso: "2026-10-14T08:45:19.000Z",
+  },
+  {
+    slug: "can-a-dental-crown-be-placed-on-a-tooth-with-very-little-tooth-structure-left",
+    title: "Can a Dental Crown Be Placed on a Tooth With Very Little Tooth Structure Left?",
+    excerpt: "Can a crown be placed on a tooth with very little structure left? Learn about crown lengthening, posts, and when treatment may be suitable.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1774333118/Why_does_my_breath_smell_even_after_brushing_vvmrl9.jpg",
+    category: "General Dentistry",
+    date: "October 14, 2026",
+    iso: "2026-10-14T08:45:19.000Z",
+  },
+  {
+    slug: "what-is-a-try-in-for-implant-supported-teeth",
+    title: "What Is a Try-In for Implant-Supported Teeth? A Patient Guide",
+    excerpt: "Discover what a try-in for implant-supported teeth involves, why it matters, and what to expect during this key stage of your dental implant journey.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1774270841/Why_do_dentures_cause_sore_spots_repeatedly_ibq0lv.jpg",
+    category: "General Dentistry",
+    date: "October 12, 2026",
+    iso: "2026-10-12T08:45:19.000Z",
+  },
+  {
+    slug: "what-does-edentulous-mean-and-how-can-dental-implants-help",
+    title: "What Does Edentulous Mean and How Can Dental Implants Help?",
+    excerpt: "Learn what edentulous means, how tooth loss affects oral health, and how dental implants may help restore function and confidence. Educational guide.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1774249039/Can_smokers_successfully_get_dental_implants_long_term_rznjff.jpg",
+    category: "General Dentistry",
+    date: "October 12, 2026",
+    iso: "2026-10-12T08:45:19.000Z",
+  },
+  {
+    slug: "can-veneers-make-teeth-look-less-pointed",
+    title: "Can Veneers Make Teeth Look Less Pointed?",
+    excerpt: "Wondering if veneers can fix pointed teeth? Learn how dental veneers may help reshape sharp or uneven teeth in this patient-friendly guide.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1774248643/Can_composite_bonding_fix_uneven_edges_on_front_teeth_yndjtp.jpg",
+    category: "Cosmetic Dentistry",
+    date: "October 12, 2026",
+    iso: "2026-10-12T08:45:19.000Z",
+  },
+  {
+    slug: "can-composite-bonding-repair-small-notch-between-teeth",
+    title: "Can Composite Bonding Be Used to Repair a Small Notch Between Teeth?",
+    excerpt: "Can composite bonding fix a small notch between teeth? Learn how this popular treatment works, what to expect, and when to seek professional advice.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1774248643/Does_composite_bonding_damage_natural_teeth_over_time_dxd1eg.jpg",
+    category: "Cosmetic Dentistry",
+    date: "October 12, 2026",
+    iso: "2026-10-12T08:45:19.000Z",
+  },
+  {
+    slug: "can-a-crown-become-worn-down",
+    title: "Can a Dental Crown Become Worn Down?",
+    excerpt: "Learn whether dental crowns can wear down over time, what causes it, the signs to look for, and when to seek professional dental advice.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1774248643/Is_composite_bonding_suitable_for_worn-down_teeth_fzpqsc.jpg",
+    category: "General Dentistry",
+    date: "October 12, 2026",
+    iso: "2026-10-12T08:45:19.000Z",
+  },
+  {
+    slug: "signs-youve-chosen-the-right-implant-dentist-for-you",
+    title: "Signs You've Chosen the Right Implant Dentist for You",
+    excerpt: "Wondering if you've picked the right implant dentist? Learn the key signs of quality dental implant care and what to expect from a trusted provider in London.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1777554541/Implants_and_Teeth_Grinding_Protecting_Your_Restoration_gj9dun.jpg",
+    category: "General Dentistry",
+    date: "October 9, 2026",
+    iso: "2026-10-09T08:45:19.000Z",
+  },
+  {
+    slug: "signs-your-temporary-implant-crown-needs-adjusting-before-the-final-fit",
+    title: "Signs Your Temporary Implant Crown Needs Adjusting Before the Final Fit",
+    excerpt: "Learn the key signs your temporary implant crown may need adjusting before your final restoration is fitted. Expert dental guidance for London patients.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1777554540/Gum_Biotypes_Why_Tissue_Thickness_Matters_for_Implants_ft7e3f.jpg",
+    category: "General Dentistry",
+    date: "October 9, 2026",
+    iso: "2026-10-09T08:45:19.000Z",
+  },
+  {
+    slug: "can-veneers-correct-uneven-incisal-edges",
+    title: "Can Veneers Correct Uneven Incisal Edges? What Patients in London Should Know",
+    excerpt: "Wondering if veneers can correct uneven incisal edges? Learn what causes them, how veneers work, and when to seek professional dental advice in London.",
+    image: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1769596652/The_Secret_to_a_Healthier_Happier_Smile_in_London_Daily_Habits-_Expert_Dental_Care_hsceig.jpg",
+    category: "Cosmetic Dentistry",
+    date: "October 9, 2026",
+    iso: "2026-10-09T08:45:19.000Z",
+  },
+  {
+    slug: "can-composite-bonding-be-used-on-tooth-with-large-existing-filling",
+    title: "Can Composite Bonding Be Used on a Tooth With a Large Existing Filling?",
+    excerpt: "Can composite bonding be placed on a tooth with a large filling? Find out what affects suitability and when to seek a professional dental assessment.",
+    image: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1768221777/How_to_Whiten_Composite_Bonding_Safely_ai0i6c.webp",
+    category: "Cosmetic Dentistry",
+    date: "October 9, 2026",
+    iso: "2026-10-09T08:45:19.000Z",
+  },
+  {
+    slug: "can-a-dental-crown-be-too-close-to-the-gum",
+    title: "Can a Dental Crown Be Too Close to the Gum?",
+    excerpt: "Learn why a dental crown placed too close to the gum line can affect gum health, cause sensitivity, and what to do if you're concerned about your crown.",
+    image: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1771943550/Early_Tooth_Decay_Small_White_Fillings_bvxz5v.jpg",
+    category: "Dental Health Tips",
+    date: "October 9, 2026",
+    iso: "2026-10-09T08:45:19.000Z",
+  },
+  {
+    slug: "how-to-prepare-for-your-first-post-surgery-implant-check-up",
+    title: "How to Prepare for Your First Post-Surgery Implant Check-Up Appointment",
+    excerpt: "Find out how to prepare for your first post-surgery dental implant check-up, what to expect, and why this appointment matters for your recovery.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1778579222/Is_a_loose_implant_crown_a_dental_emergency_viqgqp.jpg",
+    category: "General Dentistry",
+    date: "October 7, 2026",
+    iso: "2026-10-07T08:45:19.000Z",
+  },
+  {
+    slug: "how-to-keep-a-healing-diary-after-dental-implant-surgery",
+    title: "How to Keep a Healing Diary After Dental Implant Surgery",
+    excerpt: "Learn how to keep a healing diary after dental implant surgery to track recovery, spot concerns early, and support your dental team in London.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1778579223/What_should_I_expect_during_a_dental_implant_hygiene_visit_s3zel6.jpg",
+    category: "General Dentistry",
+    date: "October 7, 2026",
+    iso: "2026-10-07T08:45:19.000Z",
+  },
+  {
+    slug: "how-often-should-dental-crowns-be-reviewed",
+    title: "How Often Should Dental Crowns Be Reviewed?",
+    excerpt: "Find out how often dental crowns need reviewing, what affects their lifespan, and when to seek professional dental advice in London.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1777188645/Understanding_the_Role_of_Bone_Density_in_Dental_Implant_Stability_iz2mg3.jpg",
+    category: "General Dentistry",
+    date: "October 7, 2026",
+    iso: "2026-10-07T08:45:19.000Z",
+  },
+  {
+    slug: "can-veneers-be-placed-over-teeth-with-small-cracks",
+    title: "Can Veneers Be Placed Over Teeth With Small Cracks?",
+    excerpt: "Find out whether dental veneers can be placed over teeth with small cracks, what influences suitability, and when professional assessment is essential.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1776948643/Poly-Chromatic_Layering_Replicating_Natural_Tooth_Depth_with_Composite_hvzqga.jpg",
+    category: "Cosmetic Dentistry",
+    date: "October 7, 2026",
+    iso: "2026-10-07T08:45:19.000Z",
+  },
+  {
+    slug: "can-composite-bonding-improve-a-slightly-rotated-tooth-without-orthodontics",
+    title: "Can Composite Bonding Improve a Slightly Rotated Tooth Without Orthodontics?",
+    excerpt: "Can composite bonding improve a slightly rotated tooth without braces? Explore what's possible, how it works, and when to seek a dental assessment.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1777036613/Composite_Bonding_Managing_Micro-Fissures_and_Interface_Staining_jqtkzi.jpg",
+    category: "Cosmetic Dentistry",
+    date: "October 7, 2026",
+    iso: "2026-10-07T08:45:19.000Z",
+  },
+  {
+    slug: "how-to-prepare-mentally-for-a-multi-stage-implant-treatment-plan",
+    title: "How to Prepare Mentally for a Multi-Stage Dental Implant Treatment Plan",
+    excerpt: "Learn how to prepare mentally for a multi-stage dental implant plan. Educational guidance for London patients considering implant treatment.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1779443900/Why_is_gradual_loading_important_after_implant_placement_cpgm2o.jpg",
+    category: "General Dentistry",
+    date: "October 5, 2026",
+    iso: "2026-10-05T08:45:19.000Z",
+  },
+  {
+    slug: "checklist-for-choosing-an-implant-dentist-beyond-just-price",
+    title: "A Checklist for Choosing an Implant Dentist: What to Look for Beyond Just Price",
+    excerpt: "Choosing a dental implant dentist involves more than cost. Use this practical checklist to make an informed, confident decision about your care.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1779286803/Why_is_healing_after_dental_implants_different_for_some_medical_conditions_vuz5id.jpg",
+    category: "General Dentistry",
+    date: "October 5, 2026",
+    iso: "2026-10-05T08:45:19.000Z",
+  },
+  {
+    slug: "can-veneers-be-used-on-teeth-with-large-existing-fillings",
+    title: "Can Veneers Be Used on Teeth With Large Existing Fillings?",
+    excerpt: "Can veneers be placed on teeth with large fillings? Learn what affects suitability, the ferrule effect, and when to seek a dental assessment.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1777188645/Factors_in_Tooth_Restoration_The_Importance_of_the_Ferrule_Effect_rezu4w.jpg",
+    category: "Cosmetic Dentistry",
+    date: "October 5, 2026",
+    iso: "2026-10-05T08:45:19.000Z",
+  },
+  {
+    slug: "can-composite-bonding-be-used-around-a-gumline-without-irritating-the-gums",
+    title: "Can Composite Bonding Be Used Around a Gumline Without Irritating the Gums?",
+    excerpt: "Wondering if composite bonding near your gumline will cause irritation? Learn what the research and clinical guidance says in this patient-friendly guide.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1777382383/Assessment_of_Gingival_Zenith_Alignment_for_Symmetrical_Smile_Refinement_r6nxcf.jpg",
+    category: "Cosmetic Dentistry",
+    date: "October 5, 2026",
+    iso: "2026-10-05T08:45:19.000Z",
+  },
+  {
+    slug: "can-a-dental-crown-affect-flossing-between-teeth",
+    title: "Can a Dental Crown Affect Flossing Between Teeth?",
+    excerpt: "Learn how dental crowns can affect flossing, why the contact point matters, and when to seek professional dental advice for crown-related concerns.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1777297789/Composite_Bonding_A_Minimally_Invasive_Approach_to_Correcting_Minor_Tooth_Wear_ncb4ki.jpg",
+    category: "General Dentistry",
+    date: "October 5, 2026",
+    iso: "2026-10-05T08:45:19.000Z",
+  },
+  {
+    slug: "why-does-my-crown-feel-sensitive-after-several-years",
+    title: "Why Does My Crown Feel Sensitive After Several Years?",
+    excerpt: "Experiencing crown sensitivity after several years? Learn the common causes, symptoms, and when to seek professional dental advice in this educational guide.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1774333777/What_happens_if_a_cracked_tooth_is_left_untreated_qemraa.jpg",
+    category: "Dental Health Tips",
+    date: "October 2, 2026",
+    iso: "2026-10-02T08:45:19.000Z",
+  },
+  {
+    slug: "when-should-you-stop-wearing-a-damaged-denture",
+    title: "When Should You Stop Wearing a Damaged Denture?",
+    excerpt: "Find out when a damaged denture becomes unsafe to wear and what signs mean you should seek professional dental advice promptly.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1774847880/How_Long_Do_Flexible_Dentures_Last_sxaurv.jpg",
+    category: "General Dentistry",
+    date: "October 2, 2026",
+    iso: "2026-10-02T08:45:19.000Z",
+  },
+  {
+    slug: "how-to-prepare-a-work-handover-before-dental-implant-surgery",
+    title: "How to Prepare a Work Handover Before Taking Time Off for Implant Surgery",
+    excerpt: "Planning time off for dental implant surgery? Learn how to prepare a smooth work handover so you can recover with peace of mind.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1778121644/Does_Sleeping_Open-Mouthed_Cause_Implant_Infection_v8i9aa.jpg",
+    category: "General Dentistry",
+    date: "October 2, 2026",
+    iso: "2026-10-02T08:45:19.000Z",
+  },
+  {
+    slug: "how-to-choose-the-right-time-of-year-to-start-implant-treatment",
+    title: "How to Choose the Right Time of Year to Start Dental Implant Treatment",
+    excerpt: "Wondering when to start dental implant treatment? Learn how to plan your implant journey around your lifestyle, health, and recovery needs.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1778121645/Why_Does_an_Old_Implant_Suddenly_Feel_High_wlzrer.jpg",
+    category: "General Dentistry",
+    date: "October 2, 2026",
+    iso: "2026-10-02T08:45:19.000Z",
+  },
+  {
+    slug: "can-a-veneer-affect-the-bite-on-one-tooth",
+    title: "Can a Veneer Affect the Bite on One Tooth?",
+    excerpt: "Find out how a dental veneer can affect your bite on one tooth, what symptoms to look for, and when to seek professional dental advice in London.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1774333778/What_happens_if_you_don_t_replace_a_lost_filling_akthn0.jpg",
+    category: "Cosmetic Dentistry",
+    date: "October 2, 2026",
+    iso: "2026-10-02T08:45:19.000Z",
+  },
+  {
+    slug: "why-does-my-crown-sound-different-when-i-tap-it",
+    title: "Why Does My Crown Sound Different When I Tap It?",
+    excerpt: "Noticing a hollow or different sound from your dental crown? Learn what causes it, when to seek advice, and how to protect your oral health.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1773921628/Early_Signs_of_Gum_Disease_Most_People_Ignore_xe9u3m.jpg",
+    category: "General Dentistry",
+    date: "September 30, 2026",
+    iso: "2026-09-30T08:45:19.000Z",
+  },
+  {
+    slug: "how-to-prepare-for-the-sounds-and-sensations-of-implant-surgery",
+    title: "How to Prepare for the Sounds and Sensations of Implant Surgery",
+    excerpt: "Learn how to prepare for dental implant surgery sounds and sensations. Educational guide for patients in London from Smile Dentist.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1777983027/Do_I_Need_Special_Tools_to_clean_a_dental_implant_hvcxeu.jpg",
+    category: "General Dentistry",
+    date: "September 30, 2026",
+    iso: "2026-09-30T08:45:19.000Z",
+  },
+  {
+    slug: "how-to-choose-which-missing-tooth-to-replace-first",
+    title: "How to Choose Which Missing Tooth to Replace First?",
+    excerpt: "Missing multiple teeth? Learn how to prioritise tooth replacement for your oral health, bite, and confidence. Educational guide for London patients.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1778149805/Can_a_dental_implant_become_infected_years_after_treatment_fvhtip.jpg",
+    category: "General Dentistry",
+    date: "September 30, 2026",
+    iso: "2026-09-30T08:45:19.000Z",
+  },
+  {
+    slug: "can-gum-changes-affect-the-appearance-of-veneers",
+    title: "Can Gum Changes Affect the Appearance of Veneers?",
+    excerpt: "Discover how gum recession, inflammation, and gum line changes can affect the look of dental veneers, and when to seek professional dental advice.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1777643251/Managing_Translucency_with_Composite_Bonding_Resins_khhk3i.jpg",
+    category: "Cosmetic Dentistry",
+    date: "September 30, 2026",
+    iso: "2026-09-30T08:45:19.000Z",
+  },
+  {
+    slug: "why-does-my-veneer-feel-slightly-raised",
+    title: "Why Does My Veneer Feel Slightly Raised? A Patient Guide",
+    excerpt: "Veneer feels raised or uneven? Learn the common causes, what it means for your smile, and when to seek professional dental advice in London.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1773069261/Porcelain_Veneers_Cost_in_London_A_Transparent_2026_Guide_nl1w83.jpg",
+    category: "Cosmetic Dentistry",
+    date: "September 28, 2026",
+    iso: "2026-09-28T08:45:19.000Z",
+  },
+  {
+    slug: "what-to-pack-in-a-dental-implant-recovery-kit",
+    title: "What to Pack in a Dental Implant Recovery Kit?",
+    excerpt: "Preparing for dental implant surgery? Discover what to pack in your recovery kit to support healing and comfort after your procedure.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1777382911/The_Physics_of_Cantilever_Forces_in_Implant-Supported_Bridges_tnydov.jpg",
+    category: "General Dentistry",
+    date: "September 28, 2026",
+    iso: "2026-09-28T08:45:19.000Z",
+  },
+  {
+    slug: "what-should-you-do-if-your-denture-suddenly-becomes-painful",
+    title: "What Should You Do If Your Denture Suddenly Becomes Painful?",
+    excerpt: "Experiencing sudden denture pain? Learn common causes, warning signs, and when to seek professional dental advice in this educational guide.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1773071015/Highlight_that_with_proper_care_the_titanium_post_can_last_a_lifetime_focusing_on_the_25_year_success_rate._hdnbya.jpg",
+    category: "General Dentistry",
+    date: "September 28, 2026",
+    iso: "2026-09-28T08:45:19.000Z",
+  },
+  {
+    slug: "questions-to-ask-at-your-second-dental-implant-consultation",
+    title: "Questions to Ask at Your Second Dental Implant Consultation",
+    excerpt: "Preparing for your second dental implant consultation? Discover the key questions to ask your dentist to feel informed and confident about your treatment.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1777382912/The_Role_of_the_Emergence_Profile_in_Gum_Health_ntizjk.jpg",
+    category: "General Dentistry",
+    date: "September 28, 2026",
+    iso: "2026-09-28T08:45:19.000Z",
+  },
+  {
+    slug: "can-a-crown-be-recemented",
+    title: "Can a Crown Be Recemented? What to Do When a Dental Crown Comes Loose",
+    excerpt: "Find out if a loose or fallen dental crown can be recemented, what causes crowns to come loose, and when to see your London dentist.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1773071021/Professional_Teeth_Whitening_Cost_in_London_What_Patients_Should_Expect_nee4ar.jpg",
+    category: "General Dentistry",
+    date: "September 28, 2026",
+    iso: "2026-09-28T08:45:19.000Z",
+  },
+  {
+    slug: "why-does-my-crown-feel-different-when-chewing-hard-foods",
+    title: "Why Does My Crown Feel Different When Chewing Hard Foods?",
+    excerpt: "Noticing your dental crown feels odd when chewing hard foods? Learn the common causes, what symptoms to watch for, and when to see a dentist.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1773069260/How_Long_Do_Porcelain_Veneers_Last_Lifespan_Explained_avsfbz.jpg",
+    category: "General Dentistry",
+    date: "September 25, 2026",
+    iso: "2026-09-25T08:45:19.000Z",
+  },
+  {
+    slug: "can-you-get-dental-implants-if-you-take-medication-for-narcolepsy-or-excessive-daytime-sleepiness",
+    title: "Can You Get Dental Implants If You Take Medication for Narcolepsy or Excessive Daytime Sleepiness?",
+    excerpt: "Taking medication for narcolepsy? Learn how it may affect dental implants and what to discuss with your dentist before treatment begins.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1777913845/Stopping_Bone_Loss_How_Implants_Save_Your_Face._bdazed.jpg",
+    category: "General Dentistry",
+    date: "September 25, 2026",
+    iso: "2026-09-25T08:45:19.000Z",
+  },
+  {
+    slug: "can-wheelchair-users-face-additional-considerations-for-implant-aftercare",
+    title: "Can Wheelchair Users Face Additional Considerations for Dental Implant Aftercare?",
+    excerpt: "Can wheelchair users face extra challenges with dental implant aftercare? Learn what to consider for safe, effective implant recovery and oral health.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1777913844/Can_I_Feel_My_Dental_Implant_The_Science_of_Missing_Periodontal_Ligaments_ufr3zs.jpg",
+    category: "General Dentistry",
+    date: "September 25, 2026",
+    iso: "2026-09-25T08:45:19.000Z",
+  },
+  {
+    slug: "can-veneers-be-shortened-after-they-are-fitted",
+    title: "Can Veneers Be Shortened After They're Fitted?",
+    excerpt: "Wondering if veneers can be shortened after fitting? Learn what's possible, what to expect, and when to seek professional dental advice in London.",
+    image: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1772198153/Composite_Bonding_vs_Porcelain_Veneers_Which_Is_Better_for_Front_Teeth_bvokoc.jpg",
+    category: "Cosmetic Dentistry",
+    date: "September 25, 2026",
+    iso: "2026-09-25T08:45:19.000Z",
+  },
+  {
+    slug: "can-a-denture-emergency-cause-mouth-sores-or-cuts",
+    title: "Can a Denture Emergency Cause Mouth Sores or Cuts?",
+    excerpt: "Discover how denture emergencies can cause mouth sores or cuts, what symptoms to look out for, and when to seek professional dental advice in London.",
+    image: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1772198101/Can_Composite_Bonding_Fix_Uneven_Teeth_Without_Drilling_pptno0.jpg",
+    category: "General Dentistry",
+    date: "September 25, 2026",
+    iso: "2026-09-25T08:45:19.000Z",
+  },
+  {
+    slug: "wheelchair-users-additional-considerations-implant-aftercare",
+    title: "Can Wheelchair Users Face Any Additional Considerations for Implant Aftercare?",
+    excerpt: "Discover how wheelchair users may face additional considerations for dental implant aftercare and how tailored support can help ensure long-term implant success.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1779443900/Why_is_gradual_loading_important_after_implant_placement_cpgm2o.jpg",
+    category: "General Dentistry",
+    date: "September 23, 2026",
+    iso: "2026-09-23T08:45:19.000Z",
+  },
+  {
+    slug: "can-you-get-dental-implants-if-you-wear-a-facial-prosthesis",
+    title: "Can You Get Dental Implants If You Wear a Facial Prosthesis?",
+    excerpt: "Can you get dental implants if you wear a facial prosthesis? Learn about implant suitability, osseointegration, and what to discuss with your dentist.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1777191138/Post-Surgical_Nutrition_Supporting_the_Early_Stages_of_Osseointegration_hokqej.jpg",
+    category: "General Dentistry",
+    date: "September 23, 2026",
+    iso: "2026-09-23T08:45:19.000Z",
+  },
+  {
+    slug: "can-veneers-help-with-mild-tooth-wear",
+    title: "Can Veneers Help With Mild Tooth Wear? What Patients Should Know",
+    excerpt: "Wondering if veneers can help with mild tooth wear? Learn how veneers work, what to expect, and when to seek professional dental advice in London.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1776753392/Do_Veneers_Damage_Natural_Teeth_What_Really_Happens_to_Enamel_During_Preparation_x3sfeu.jpg",
+    category: "Cosmetic Dentistry",
+    date: "September 23, 2026",
+    iso: "2026-09-23T08:45:19.000Z",
+  },
+  {
+    slug: "can-poor-denture-hygiene-cause-a-bad-taste-in-your-mouth",
+    title: "Can Poor Denture Hygiene Cause a Bad Taste in Your Mouth?",
+    excerpt: "Discover how poor denture hygiene can cause a bad taste in your mouth and what you can do to keep your dentures clean and your mouth healthy.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1776775972/How_Veneer_Edge_Design_Affects_Gum_Health_Over_Time_c5iamq.jpg",
+    category: "Dental Health Tips",
+    date: "September 23, 2026",
+    iso: "2026-09-23T08:45:19.000Z",
+  },
+  {
+    slug: "can-crowns-change-your-bite-over-time",
+    title: "Can Crowns Change Your Bite Over Time?",
+    excerpt: "Discover how dental crowns can affect your bite over time, what symptoms to look for, and when to seek professional dental assessment in London.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1776863835/Advanced_Ceramic_Veneers_Achieving_a_Natural_Long-Lasting_Smile_nslwc9.jpg",
+    category: "General Dentistry",
+    date: "September 23, 2026",
+    iso: "2026-09-23T08:45:19.000Z",
+  },
+  {
+    slug: "why-does-my-crown-feel-fine-during-the-day-but-sensitive-at-night",
+    title: "Why Does My Crown Feel Fine During the Day but Sensitive at Night?",
+    excerpt: "Discover why a dental crown may feel fine during the day but sensitive at night, and when to seek professional dental advice in London.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1774960565/Can_bleeding_gums_be_normal_q83xyq.jpg",
+    category: "Dental Health Tips",
+    date: "September 21, 2026",
+    iso: "2026-09-21T08:45:19.000Z",
+  },
+  {
+    slug: "how-long-do-acrylic-dentures-typically-last",
+    title: "How Long Do Acrylic Dentures Typically Last?",
+    excerpt: "Wondering how long acrylic dentures last? Learn what affects their lifespan, when to replace them, and how to care for them properly.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1772802955/Can_a_lost_filling_wait_until_Monday_Emergency_dental_advice._i1w0mv.jpg",
+    category: "General Dentistry",
+    date: "September 21, 2026",
+    iso: "2026-09-21T08:45:19.000Z",
+  },
+  {
+    slug: "can-you-get-dental-implants-if-you-have-chronic-migraine",
+    title: "Can You Get Dental Implants If You Have Chronic Migraine?",
+    excerpt: "Wondering if chronic migraine affects dental implant eligibility? Read our educational guide for London patients exploring implant treatment options.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1773124520/Life_After_All-on-4_How_to_clean_under_your_new_fixed_bridge_bpgnli.jpg",
+    category: "General Dentistry",
+    date: "September 21, 2026",
+    iso: "2026-09-21T08:45:19.000Z",
+  },
+  {
+    slug: "can-you-get-dental-implants-if-you-are-living-with-hiv",
+    title: "Can You Get Dental Implants If You Are Living With HIV?",
+    excerpt: "Can you get dental implants if you're living with HIV? Learn what the research says and how clinical assessment guides suitability in the UK.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1772803471/How_to_Identify_Early_vs._Late_Implant_Failure_dgqawj.jpg",
+    category: "General Dentistry",
+    date: "September 21, 2026",
+    iso: "2026-09-21T08:45:19.000Z",
+  },
+  {
+    slug: "are-veneers-more-fragile-than-natural-teeth",
+    title: "Are Veneers More Fragile Than Natural Teeth?",
+    excerpt: "Wondering if dental veneers are more fragile than natural teeth? Learn how veneers work, how durable they are, and how to protect them long-term.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1774961614/What_happens_if_you_avoid_a_root_canal_v6nlz3.jpg",
+    category: "Cosmetic Dentistry",
+    date: "September 21, 2026",
+    iso: "2026-09-21T08:45:19.000Z",
+  },
+  {
+    slug: "steroid-cream-users-dental-implant-healing-considerations",
+    title: "Can Long-Term Steroid Cream Users for Skin Conditions Face Different Dental Implant Healing Considerations?",
+    excerpt: "Can long-term steroid cream use affect dental implant healing? Learn what UK patients with skin conditions should discuss with their dentist before treatment.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1777642590/Facial_Volume_and_How_Dental_Implants_Help_Support_Your_Appearance_oe7fyq.jpg",
+    category: "General Dentistry",
+    date: "September 18, 2026",
+    iso: "2026-09-18T08:45:19.000Z",
+  },
+  {
+    slug: "questions-to-ask-before-replacing-a-crown",
+    title: "What Questions Should You Ask Before Replacing a Dental Crown?",
+    excerpt: "Considering replacing a dental crown? Learn the key questions to ask your dentist before treatment to make an informed, confident decision.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1774333306/Why_do_my_teeth_look_shorter_than_before_erv3xw.jpg",
+    category: "General Dentistry",
+    date: "September 18, 2026",
+    iso: "2026-09-18T08:45:19.000Z",
+  },
+  {
+    slug: "how-to-care-for-an-acrylic-denture-daily-cleaning-and-storage-tips",
+    title: "How to Care for an Acrylic Denture: Daily Cleaning and Storage Tips",
+    excerpt: "Learn how to clean and store acrylic dentures properly. Practical daily care tips from a London dental clinic to keep your dentures fresh and long-lasting.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1774333118/Why_does_my_breath_smell_even_after_brushing_vvmrl9.jpg",
+    category: "General Dentistry",
+    date: "September 18, 2026",
+    iso: "2026-09-18T08:45:19.000Z",
+  },
+  {
+    slug: "how-often-should-veneers-be-professionally-checked-city-of-london",
+    title: "How Often Should Veneers Be Professionally Checked? City of London Dental Advice",
+    excerpt: "Wondering how often your veneers need a professional check? Read our City of London dental guide on veneer maintenance, care, and when to see your dentist.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1774333119/Why_does_my_tooth_feel_loose_suddenly_bnjjrz.jpg",
+    category: "Cosmetic Dentistry",
+    date: "September 18, 2026",
+    iso: "2026-09-18T08:45:19.000Z",
+  },
+  {
+    slug: "can-you-get-dental-implants-if-you-have-fibromyalgia",
+    title: "Can You Get Dental Implants If You Have Fibromyalgia?",
+    excerpt: "Can you get dental implants if you have fibromyalgia? Learn how this condition affects implant suitability, bone health, and what to discuss with your dentist.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1777643334/How_Bone_Quality_and_Density_Influence_Dental_Implant_Stability_m9gotv.jpg",
+    category: "General Dentistry",
+    date: "September 18, 2026",
+    iso: "2026-09-18T08:45:19.000Z",
+  },
+  {
+    slug: "why-does-my-crown-feel-tight-when-i-floss",
+    title: "Why Does My Crown Feel Tight When I Floss?",
+    excerpt: "Discover why your dental crown feels tight when flossing, what it may mean, and when to seek professional dental advice in London.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1773821597/Can_You_Repair_Composite_Bonding_Without_Replacing_It_lhabyc.jpg",
+    category: "General Dentistry",
+    date: "September 16, 2026",
+    iso: "2026-09-16T08:45:19.000Z",
+  },
+  {
+    slug: "why-do-veneers-sometimes-need-replacing-city-of-london-dentists-explain",
+    title: "Why Do Veneers Sometimes Need Replacing? City of London Dentists Explain",
+    excerpt: "Wondering why veneers sometimes need replacing? London dentists explain the causes, signs to watch for, and how to extend their lifespan.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1773923889/How_Many_Teeth_Should_You_Get_Composite_Bonding_On_yq912t.jpg",
+    category: "Cosmetic Dentistry",
+    date: "September 16, 2026",
+    iso: "2026-09-16T08:45:19.000Z",
+  },
+  {
+    slug: "how-long-does-it-take-to-get-used-to-flexible-dentures",
+    title: "How Long Does It Take to Get Used to Flexible Dentures?",
+    excerpt: "Wondering how long it takes to adjust to flexible dentures? Learn what to expect, tips to adapt faster, and when to seek dental advice.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1773821597/Can_Composite_Bonding_Fix_Very_Crooked_Teeth_wnmigo.jpg",
+    category: "General Dentistry",
+    date: "September 16, 2026",
+    iso: "2026-09-16T08:45:19.000Z",
+  },
+  {
+    slug: "does-grazing-on-dried-fruit-or-chewy-sweets-increase-plaque-risk-around-an-implant",
+    title: "Does Frequently Grazing on Dried Fruit or Chewy Sweets Increase Plaque Risk Around a Dental Implant?",
+    excerpt: "Learn how frequently grazing on dried fruit or chewy sweets may increase plaque build-up around dental implants and what you can do to protect them.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1781514403/What_Biological_Processes_Drive_Implant_Integration_dkn81u.jpg",
+    category: "General Dentistry",
+    date: "September 16, 2026",
+    iso: "2026-09-16T08:45:19.000Z",
+  },
+  {
+    slug: "dental-implants-cleft-lip-palate-history",
+    title: "Can You Get Dental Implants If You Have a Cleft Lip and Palate History?",
+    excerpt: "Can you get dental implants if you have a cleft lip and palate history? Learn what factors affect suitability in this educational guide from Smile Dentist London.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1781267045/Are_Dental_Implants_Safe_During_an_MRI_Scan_weqtfi.jpg",
+    category: "General Dentistry",
+    date: "September 16, 2026",
+    iso: "2026-09-16T08:45:19.000Z",
+  },
+  {
+    slug: "how-to-clean-and-care-for-flexible-dentures-properly",
+    title: "How to Clean and Care for Flexible Dentures Properly",
+    excerpt: "Learn how to clean and care for flexible dentures properly with this practical guide from a London dental clinic. Tips for daily maintenance and longevity.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1778868942/Can_You_Have_a_Dental_Implant_if_You_Are_on_Blood_Thinners_aqnuyw.jpg",
+    category: "General Dentistry",
+    date: "September 14, 2026",
+    iso: "2026-09-14T08:45:19.000Z",
+  },
+  {
+    slug: "dental-implants-misaligned-impacted-wisdom-teeth",
+    title: "Can You Get Dental Implants If You Have Misaligned or Impacted Wisdom Teeth?",
+    excerpt: "Many adults considering dental implants find themselves wondering whether existing dental issues — such as misaligned or impacted wisdom teeth — might prevent them from going ahead with treatment. It is a common and enti",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1777299099/Managing_Dental_Anxiety_Without_Intravenous_Sedation_tvjjqh.jpg",
+    category: "General Dentistry",
+    date: "September 14, 2026",
+    iso: "2026-09-14T08:45:19.000Z",
+  },
+  {
+    slug: "can-you-get-dental-implants-if-you-have-a-sensitivity-or-allergy-to-local-anaesthetic",
+    title: "Can You Get Dental Implants If You Have a Known Sensitivity or Allergy to Local Anaesthetic?",
+    excerpt: "Can a local anaesthetic allergy stop you getting dental implants? Learn what your options are and when to seek a professional dental assessment in London.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1777383433/The_Biomechanics_of_Single_vs._Splinted_Implant_Restorations_gj5afi.jpg",
+    category: "General Dentistry",
+    date: "September 14, 2026",
+    iso: "2026-09-14T08:45:19.000Z",
+  },
+  {
+    slug: "can-one-veneer-be-replaced-without-replacing-the-others",
+    title: "Can One Veneer Be Replaced Without Replacing the Others?",
+    excerpt: "If you have dental veneers and one has chipped, discoloured, or become loose, you may find yourself wondering whether the damaged veneer can be replaced on its own — or whether the entire set needs to be redone. This is",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1774248643/Does_composite_bonding_damage_natural_teeth_over_time_dxd1eg.jpg",
+    category: "Cosmetic Dentistry",
+    date: "September 14, 2026",
+    iso: "2026-09-14T08:45:19.000Z",
+  },
+  {
+    slug: "can-a-crown-be-polished-city-of-london-dentists-explain",
+    title: "Can a Crown Be Polished? City of London Dentists Explain",
+    excerpt: "Wondering if your dental crown can be polished? City of London dentists explain what's possible, what affects crown appearance, and when to seek advice.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1774962694/Can_white_fillings_fall_out_lgbv33.jpg",
+    category: "General Dentistry",
+    date: "September 14, 2026",
+    iso: "2026-09-14T08:45:19.000Z",
+  },
+  {
+    slug: "why-is-there-a-small-gap-around-my-veneer",
+    title: "Why Is There a Small Gap Around My Veneer?",
+    excerpt: "Noticed a gap around your dental veneer? Find out what causes it, what symptoms to watch for, and when to seek professional dental advice in London.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1785393870/Can_a_Crown_Be_Fitted_Comfortably_on_a_Tooth_With_Sensitive_Gums_a8gq3t.jpg",
+    category: "Cosmetic Dentistry",
+    date: "September 10, 2026",
+    iso: "2026-09-10T08:45:19.000Z",
+  },
+  {
+    slug: "does-frequently-biting-your-nails-near-a-dental-implant-site-slow-healing",
+    title: "Does Frequently Biting Your Nails Near a Dental Implant Site Slow Healing?",
+    excerpt: "Can nail biting slow dental implant healing? Learn how this common habit may affect your implant recovery and what you can do to protect your results.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1783594298/Submerged_vs_non-submerged_implant_healing_what_s_the_difference_wlplas.jpg",
+    category: "General Dentistry",
+    date: "September 10, 2026",
+    iso: "2026-09-10T08:45:19.000Z",
+  },
+  {
+    slug: "can-you-get-dental-implants-if-you-have-a-history-of-repeated-jaw-fractures",
+    title: "Can You Get Dental Implants If You Have a History of Repeated Jaw Fractures?",
+    excerpt: "Wondering if jaw fractures affect dental implant suitability? Learn what dentists assess and when professional advice is recommended.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1783418305/How_Do_Dentists_Check_That_a_Dental_Implant_Is_Secure_t74pma.jpg",
+    category: "General Dentistry",
+    date: "September 10, 2026",
+    iso: "2026-09-10T08:45:19.000Z",
+  },
+  {
+    slug: "can-teeth-grinding-affect-composite-bonding",
+    title: "Can Teeth Grinding Affect Composite Bonding?",
+    excerpt: "Discover how bruxism can impact composite bonding, what signs to look for, and how to protect your smile. Educational advice from a London dental clinic.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1786815244/Can_Composite_Bonding_Stain_Faster_Than_Natural_Teeth_poaqow.jpg",
+    category: "Cosmetic Dentistry",
+    date: "September 10, 2026",
+    iso: "2026-09-10T08:45:19.000Z",
+  },
+  {
+    slug: "can-a-dental-crown-protect-a-tooth-from-further-wear",
+    title: "Can a Dental Crown Protect a Tooth From Further Wear?",
+    excerpt: "Discover how dental crowns protect worn teeth, when they may be recommended, and what to expect from treatment. Educational guide for London patients.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1786187081/Can_a_Crown_Feel_Too_High_Even_After_an_Adjustment_frnojz.jpg",
+    category: "General Dentistry",
+    date: "September 10, 2026",
+    iso: "2026-09-10T08:45:19.000Z",
+  },
+  {
+    slug: "early-signs-a-crown-needs-checking",
+    title: "What Are the Early Signs a Crown Needs Checking?",
+    excerpt: "Learn the early warning signs that your dental crown may need professional assessment. Professional dental advice from a London clinic.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1785088822/Can_Composite_Bonding_Be_Used_on_Just_One_Front_Tooth_for_Balance_ip62c0.jpg",
+    category: "General Dentistry",
+    date: "September 9, 2026",
+    iso: "2026-09-09T08:45:19.000Z",
+  },
+  {
+    slug: "can-wearing-a-full-face-motorcycle-helmet-put-pressure-on-a-recently-placed-implant",
+    title: "Can Wearing a Full-Face Motorcycle Helmet Put Pressure on a Recently Placed Dental Implant?",
+    excerpt: "Wondering if your motorcycle helmet could affect a new dental implant? Learn what pressure means for osseointegration and when to seek dental advice.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1785998645/Can_Cold_Weather_Make_a_Dental_Implant_Feel_Different_rlxirp.jpg",
+    category: "General Dentistry",
+    date: "September 9, 2026",
+    iso: "2026-09-09T08:45:19.000Z",
+  },
+  {
+    slug: "can-composite-bonding-be-reshaped-city-of-london-dental-advice",
+    title: "Can Composite Bonding Be Reshaped? City of London Dental Advice",
+    excerpt: "Wondering if composite bonding can be reshaped or adjusted? Read our City of London dental guide covering what's possible, when, and what to expect.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1784793043/Can_Seasonal_Allergies_Affect_Upper_Jaw_Dental_Implants_qam8bo.jpg",
+    category: "Cosmetic Dentistry",
+    date: "September 9, 2026",
+    iso: "2026-09-09T08:45:19.000Z",
+  },
+  {
+    slug: "are-led-facial-devices-safe-near-a-healing-implant-site",
+    title: "Are LED Facial Devices Safe Near a Healing Implant Site? City of London Dentists Explain",
+    excerpt: "If you have recently undergone dental implant surgery and are wondering whether it is safe to continue using your LED facial device during recovery, you are not alone. With at-home LED light therapy becoming increasingly",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1785394096/Why_does_my_jaw_feel_tight_after_dental_implant_surgery_npbsjk.jpg",
+    category: "General Dentistry",
+    date: "September 9, 2026",
+    iso: "2026-09-09T08:45:19.000Z",
+  },
+  {
+    slug: "can-you-get-dental-implants-if-you-have-a-strong-gag-reflex",
+    title: "Can You Get Dental Implants If You Have a Strong Gag Reflex? A City of London Dentist Explains",
+    excerpt: "Can a strong gag reflex stop you getting dental implants? A City of London dentist explains what options are available and how treatment can be made comfortable.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1785998647/Why_Does_My_Implant_Feel_Tight_in_the_Morning_fczuea.jpg",
+    category: "General Dentistry",
+    date: "September 7, 2026",
+    iso: "2026-09-07T08:45:19.000Z",
+  },
+  {
+    slug: "can-you-bite-into-apples-with-veneers",
+    title: "Can You Bite Into Apples With Veneers?",
+    excerpt: "Wondering if you can bite into apples with veneers? Learn what to eat, what to avoid, and how to protect your veneers long-term.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1786440374/Can_Veneers_Become_More_Noticeable_as_I_Age_fhtg7i.jpg",
+    category: "Cosmetic Dentistry",
+    date: "September 7, 2026",
+    iso: "2026-09-07T08:45:19.000Z",
+  },
+  {
+    slug: "can-good-maintenance-extend-composite-bonding-life-advice-city-of-london-dental-practice",
+    title: "Can Good Maintenance Extend Composite Bonding Life? Advice from a City of London Dental Practice",
+    excerpt: "Find out how good maintenance can extend composite bonding life. Practical advice from a City of London dental practice on care, habits, and longevity.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1786815244/Why_Does_My_Veneer_Catch_My_Tongue_bnmntk.jpg",
+    category: "Cosmetic Dentistry",
+    date: "September 7, 2026",
+    iso: "2026-09-07T08:45:19.000Z",
+  },
+  {
+    slug: "can-good-maintenance-extend-composite-bonding-life",
+    title: "Can Good Maintenance Extend Composite Bonding Life?",
+    excerpt: "Discover how good oral hygiene and professional care can help extend composite bonding life. Educational advice from a City of London dental practice.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1786815244/Why_Does_My_Veneer_Catch_My_Tongue_bnmntk.jpg",
+    category: "Cosmetic Dentistry",
+    date: "September 7, 2026",
+    iso: "2026-09-07T08:45:19.000Z",
+  },
+  {
+    slug: "can-dry-air-or-air-conditioning-affect-dental-implant-healing",
+    title: "Can Dry Air or Air Conditioning Affect Dental Implant Healing?",
+    excerpt: "Wondering if dry air or air conditioning can affect dental implant healing? Learn what patients in London should know about implant recovery.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1786187172/Why_Are_My_Gums_Slightly_Different_Around_My_Implant_t9ciqn.jpg",
+    category: "General Dentistry",
+    date: "September 7, 2026",
+    iso: "2026-09-07T08:45:19.000Z",
+  },
+  {
+    slug: "can-brushing-too-hard-damage-a-crown-margin",
+    title: "Can Brushing Too Hard Damage a Crown Margin?",
+    excerpt: "Find out if brushing too hard can damage a dental crown margin, what signs to look for, and how to protect your crown long-term.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1786596218/Is_a_Gum_Boil_an_Emergency_When_to_Seek_Dental_Care_iyko6q.jpg",
+    category: "General Dentistry",
+    date: "September 7, 2026",
+    iso: "2026-09-07T08:45:19.000Z",
   },
   {
     slug: "how-can-you-tell-if-a-veneer-needs-professional-attention",
@@ -41,7 +1184,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1773071019/How_Many_Veneers_Do_You_Need_for_a_Full_Smile_Makeover_hcsypv.jpg",
     category: "Cosmetic Dentistry",
     date: "September 4, 2026",
-    iso: "2026-09-04T08:15:20.000Z",
+    iso: "2026-09-04T08:45:19.000Z",
   },
   {
     slug: "do-energy-gels-increase-plaque-risk-around-implants",
@@ -50,7 +1193,25 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1786187172/Does_Sleeping_Position_Affect_Implant_Healing_After_Surgery_hdbfd4.jpg",
     category: "General Dentistry",
     date: "September 4, 2026",
-    iso: "2026-09-04T08:15:15.000Z",
+    iso: "2026-09-04T08:45:19.000Z",
+  },
+  {
+    slug: "can-denture-cleaning-tablets-damage-implant-attachment-components",
+    title: "Can Denture-Cleaning Tablets Damage Implant Attachment Components?",
+    excerpt: "Find out whether denture-cleaning tablets can damage implant attachment components and how to safely care for your dental implant prosthetics.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1786440491/Can_an_Implant_Crown_Be_Polished_fiwoi9.jpg",
+    category: "General Dentistry",
+    date: "September 4, 2026",
+    iso: "2026-09-04T08:45:19.000Z",
+  },
+  {
+    slug: "can-a-crown-need-replacing-even-if-it-looks-fine",
+    title: "Can a Crown Need Replacing Even If It Looks Fine? A City of London Dentist Explains",
+    excerpt: "Your crown may look intact but still need replacing. A City of London dentist explains the signs, risks, and what to expect from crown assessment.",
+    image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1773754083/Can_a_Cracked_Tooth_Be_Saved_with_a_Crown_luxlg4.jpg",
+    category: "General Dentistry",
+    date: "September 4, 2026",
+    iso: "2026-09-04T08:45:19.000Z",
   },
   {
     slug: "why-does-my-crown-feel-wider-than-my-natural-tooth",
@@ -59,7 +1220,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1785393870/Can_a_Crown_Be_Fitted_Comfortably_on_a_Tooth_With_Sensitive_Gums_a8gq3t.jpg",
     category: "General Dentistry",
     date: "September 2, 2026",
-    iso: "2026-09-02T13:31:42.000Z",
+    iso: "2026-09-02T08:45:19.000Z",
   },
   {
     slug: "how-do-flexible-dentures-stay-in-place",
@@ -68,7 +1229,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1772802956/Why_dental_implants_feel_more_natural_than_removable_dentures._pks3br.jpg",
     category: "General Dentistry",
     date: "September 2, 2026",
-    iso: "2026-09-02T13:31:42.000Z",
+    iso: "2026-09-02T08:45:19.000Z",
   },
   {
     slug: "do-teeth-have-to-be-straight-for-veneers",
@@ -77,7 +1238,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1786596219/Why_Do_My_Veneers_Look_Different_in_Natural_Sunlight_svztqd.jpg",
     category: "Cosmetic Dentistry",
     date: "September 2, 2026",
-    iso: "2026-09-02T13:31:42.000Z",
+    iso: "2026-09-02T08:45:19.000Z",
   },
   {
     slug: "can-you-have-a-tongue-or-lip-piercing-alongside-a-dental-implant",
@@ -86,7 +1247,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1785394096/Why_does_my_jaw_feel_tight_after_dental_implant_surgery_npbsjk.jpg",
     category: "General Dentistry",
     date: "September 2, 2026",
-    iso: "2026-09-02T13:31:42.000Z",
+    iso: "2026-09-02T08:45:19.000Z",
   },
   {
     slug: "can-you-chew-gum-with-dental-implants",
@@ -95,7 +1256,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1785692418/When_Should_I_See_My_Dentist_About_a_Moving_Implant_sfoaak.jpg",
     category: "Dental Health Tips",
     date: "September 2, 2026",
-    iso: "2026-09-02T13:31:42.000Z",
+    iso: "2026-09-02T08:45:19.000Z",
   },
   {
     slug: "how-many-teeth-do-you-need-for-pop-on-veneers",
@@ -104,7 +1265,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1786187081/Can_a_Crown_Feel_Too_High_Even_After_an_Adjustment_frnojz.jpg",
     category: "Cosmetic Dentistry",
     date: "August 31, 2026",
-    iso: "2026-08-31T07:12:49.000Z",
+    iso: "2026-08-31T08:45:19.000Z",
   },
   {
     slug: "how-many-teeth-can-have-composite-bonding",
@@ -113,7 +1274,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1784793043/Can_Composite_Bonding_Be_Combined_With_Tooth_Contouring_for_a_Subtler_Change_uhj8yc.jpg",
     category: "Cosmetic Dentistry",
     date: "August 31, 2026",
-    iso: "2026-08-31T07:12:49.000Z",
+    iso: "2026-08-31T08:45:19.000Z",
   },
   {
     slug: "can-you-put-a-crown-on-a-broken-tooth",
@@ -122,7 +1283,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1785088822/What_Are_the_Early_Signs_a_Dental_Crown_May_Be_Failing_oxqfu9.jpg",
     category: "General Dentistry",
     date: "August 31, 2026",
-    iso: "2026-08-31T07:12:49.000Z",
+    iso: "2026-08-31T08:45:19.000Z",
   },
   {
     slug: "can-you-eat-anything-with-dentures",
@@ -131,7 +1292,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1772458145/Why_Dental_Implants_Are_the_Best_Solution_for_Denture_Breath_gvrxuo.jpg",
     category: "General Dentistry",
     date: "August 31, 2026",
-    iso: "2026-08-31T07:12:49.000Z",
+    iso: "2026-08-31T08:45:19.000Z",
   },
   {
     slug: "are-scuba-diving-and-swimming-safe-after-dental-implant-treatment",
@@ -140,7 +1301,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1786440492/Can_I_Sleep_on_the_Side_Where_My_Implant_Was_Placed_lrubq7.jpg",
     category: "General Dentistry",
     date: "August 31, 2026",
-    iso: "2026-08-31T07:12:49.000Z",
+    iso: "2026-08-31T08:45:19.000Z",
   },
   {
     slug: "what-is-implant-biocompatibility-and-why-does-it-matter",
@@ -149,7 +1310,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1786187172/Why_Are_My_Gums_Slightly_Different_Around_My_Implant_t9ciqn.jpg",
     category: "General Dentistry",
     date: "August 28, 2026",
-    iso: "2026-08-28T07:12:49.000Z",
+    iso: "2026-08-28T08:45:19.000Z",
   },
   {
     slug: "is-acrylic-safe-for-dentures",
@@ -158,7 +1319,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1774847880/How_Long_Do_Flexible_Dentures_Last_sxaurv.jpg",
     category: "General Dentistry",
     date: "August 28, 2026",
-    iso: "2026-08-28T07:12:49.000Z",
+    iso: "2026-08-28T08:45:19.000Z",
   },
   {
     slug: "how-to-get-stains-off-composite-bonding",
@@ -167,7 +1328,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1785822737/Why_Does_Composite_Bonding_Feel_Different_at_First_bizkr2.jpg",
     category: "Cosmetic Dentistry",
     date: "August 28, 2026",
-    iso: "2026-08-28T07:12:49.000Z",
+    iso: "2026-08-28T08:45:19.000Z",
   },
   {
     slug: "crown-vs-filling-when-do-you-need-one",
@@ -176,7 +1337,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1785226672/How_Do_Dentists_Match_a_Crown_s_Shade_to_Surrounding_Teeth_q9doo7.jpg",
     category: "General Dentistry",
     date: "August 28, 2026",
-    iso: "2026-08-28T07:12:49.000Z",
+    iso: "2026-08-28T08:45:19.000Z",
   },
   {
     slug: "can-you-get-veneers-instead-of-braces",
@@ -185,7 +1346,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1785692256/Can_a_Single_Veneer_Be_Matched_Successfully_to_the_Rest_of_a_Smile_tdr2lg.jpg",
     category: "Cosmetic Dentistry",
     date: "August 28, 2026",
-    iso: "2026-08-28T07:12:49.000Z",
+    iso: "2026-08-28T08:45:19.000Z",
   },
   {
     slug: "why-wait-two-weeks-after-root-canal-for-crown",
@@ -194,7 +1355,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1786187081/Can_a_Crown_Feel_Too_High_Even_After_an_Adjustment_frnojz.jpg",
     category: "General Dentistry",
     date: "August 26, 2026",
-    iso: "2026-08-26T07:12:49.000Z",
+    iso: "2026-08-26T08:45:19.000Z",
   },
   {
     slug: "why-does-food-keep-getting-stuck-around-my-dental-implant",
@@ -203,7 +1364,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1786596630/Can_Frequent_Snacking_Affect_Implant_Health_mbjbue.jpg",
     category: "General Dentistry",
     date: "August 26, 2026",
-    iso: "2026-08-26T07:12:49.000Z",
+    iso: "2026-08-26T08:45:19.000Z",
   },
   {
     slug: "which-dentures-are-right-for-you",
@@ -212,7 +1373,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1785226879/Should_I_Choose_an_Implant_Bridge_or_Individual_Dental_Implants_ifhnuo.jpg",
     category: "General Dentistry",
     date: "August 26, 2026",
-    iso: "2026-08-26T07:12:49.000Z",
+    iso: "2026-08-26T08:45:19.000Z",
   },
   {
     slug: "is-it-common-for-veneers-to-come-off",
@@ -221,7 +1382,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1786815244/Why_Does_My_Veneer_Catch_My_Tongue_bnmntk.jpg",
     category: "Cosmetic Dentistry",
     date: "August 26, 2026",
-    iso: "2026-08-26T07:12:49.000Z",
+    iso: "2026-08-26T08:45:19.000Z",
   },
   {
     slug: "do-teeth-whitening-strips-work-on-composite-bonding",
@@ -230,7 +1391,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1786815244/Can_Composite_Bonding_Stain_Faster_Than_Natural_Teeth_poaqow.jpg",
     category: "Cosmetic Dentistry",
     date: "August 26, 2026",
-    iso: "2026-08-26T07:12:49.000Z",
+    iso: "2026-08-26T08:45:19.000Z",
   },
   {
     slug: "what-are-invisible-dentures",
@@ -239,7 +1400,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1774934604/How_long_does_it_take_to_get_used_to_dentures_q4ubbo.jpg",
     category: "General Dentistry",
     date: "August 24, 2026",
-    iso: "2026-08-24T07:12:49.000Z",
+    iso: "2026-08-24T08:45:19.000Z",
   },
   {
     slug: "how-long-does-composite-bonding-last-on-teeth",
@@ -248,7 +1409,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1786440375/Why_Does_My_Bonded_Tooth_Feel_Slightly_Rough_cexoem.jpg",
     category: "Cosmetic Dentistry",
     date: "August 24, 2026",
-    iso: "2026-08-24T07:12:49.000Z",
+    iso: "2026-08-24T08:45:19.000Z",
   },
   {
     slug: "how-implants-improve-bite-alignment",
@@ -257,7 +1418,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1786187173/Why_Does_My_Implant_Collect_More_Plaque_Than_My_Natural_Teeth_htqbmy.jpg",
     category: "General Dentistry",
     date: "August 24, 2026",
-    iso: "2026-08-24T07:12:49.000Z",
+    iso: "2026-08-24T08:45:19.000Z",
   },
   {
     slug: "are-metal-crowns-safe-in-mri",
@@ -266,7 +1427,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1786187081/Can_a_Crown_Feel_Too_High_Even_After_an_Adjustment_frnojz.jpg",
     category: "General Dentistry",
     date: "August 24, 2026",
-    iso: "2026-08-24T07:12:49.000Z",
+    iso: "2026-08-24T08:45:19.000Z",
   },
   {
     slug: "why-no-dairy-after-dental-implant",
@@ -275,7 +1436,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1786596631/Do_Dry_Lips_and_Dry_Mouth_Increase_Implant_Risks_md6wpk.jpg",
     category: "General Dentistry",
     date: "August 21, 2026",
-    iso: "2026-08-21T07:12:49.000Z",
+    iso: "2026-08-21T08:45:19.000Z",
   },
   {
     slug: "what-can-you-not-eat-with-composite-bonding",
@@ -284,7 +1445,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1785393870/How_Soon_Can_You_Eat_and_Drink_Normally_After_Bonding_Treatment_pmmg6z.jpg",
     category: "Cosmetic Dentistry",
     date: "August 21, 2026",
-    iso: "2026-08-21T07:12:49.000Z",
+    iso: "2026-08-21T08:45:19.000Z",
   },
   {
     slug: "can-you-have-veneers-with-crooked-teeth",
@@ -293,7 +1454,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1785393870/What_Should_You_Ask_a_Dentist_Before_Deciding_on_Veneers_i4rmfx.jpg",
     category: "Cosmetic Dentistry",
     date: "August 21, 2026",
-    iso: "2026-08-21T07:12:49.000Z",
+    iso: "2026-08-21T08:45:19.000Z",
   },
   {
     slug: "can-i-sleep-with-dentures",
@@ -302,7 +1463,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1785226879/Should_I_Choose_an_Implant_Bridge_or_Individual_Dental_Implants_ifhnuo.jpg",
     category: "General Dentistry",
     date: "August 21, 2026",
-    iso: "2026-08-21T07:12:49.000Z",
+    iso: "2026-08-21T08:45:19.000Z",
   },
   {
     slug: "can-dental-crowns-discolour-over-time",
@@ -311,7 +1472,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1785393870/Can_a_Crown_Be_Fitted_Comfortably_on_a_Tooth_With_Sensitive_Gums_a8gq3t.jpg",
     category: "General Dentistry",
     date: "August 21, 2026",
-    iso: "2026-08-21T07:12:49.000Z",
+    iso: "2026-08-21T08:45:19.000Z",
   },
   {
     slug: "why-is-my-composite-bonding-losing-its-shine",
@@ -320,7 +1481,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1773069259/Can_Composite_Bonding_Repair_Broken_Front_Teeth_m1rynq.jpg",
     category: "Cosmetic Dentistry",
     date: "August 19, 2026",
-    iso: "2026-08-19T07:12:49.000Z",
+    iso: "2026-08-19T08:45:19.000Z",
   },
   {
     slug: "why-does-my-crown-feel-smooth-compared-with-my-other-teeth",
@@ -329,7 +1490,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1773754083/Can_a_Cracked_Tooth_Be_Saved_with_a_Crown_luxlg4.jpg",
     category: "General Dentistry",
     date: "August 19, 2026",
-    iso: "2026-08-19T07:12:49.000Z",
+    iso: "2026-08-19T08:45:19.000Z",
   },
   {
     slug: "can-veneers-become-stained-around-the-edges",
@@ -338,7 +1499,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1773071019/How_Many_Veneers_Do_You_Need_for_a_Full_Smile_Makeover_hcsypv.jpg",
     category: "Cosmetic Dentistry",
     date: "August 19, 2026",
-    iso: "2026-08-19T07:12:49.000Z",
+    iso: "2026-08-19T08:45:19.000Z",
   },
   {
     slug: "why-does-my-veneer-catch-my-tongue",
@@ -347,7 +1508,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1786815244/Why_Does_My_Veneer_Catch_My_Tongue_bnmntk.jpg",
     category: "Cosmetic Dentistry",
     date: "August 17, 2026",
-    iso: "2026-08-17T07:12:49.000Z",
+    iso: "2026-08-17T08:45:19.000Z",
   },
   {
     slug: "does-dehydration-affect-oral-health-around-implants",
@@ -356,7 +1517,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1786596632/Does_Dehydration_Affect_Oral_Health_Around_Implants_o7wrlj.jpg",
     category: "General Dentistry",
     date: "August 17, 2026",
-    iso: "2026-08-17T07:12:49.000Z",
+    iso: "2026-08-17T08:45:19.000Z",
   },
   {
     slug: "can-a-crown-crack-without-causing-pain",
@@ -365,7 +1526,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1786815243/Can_a_Crown_Crack_Without_Causing_Pain_eyhijx.jpg",
     category: "General Dentistry",
     date: "August 17, 2026",
-    iso: "2026-08-17T07:12:49.000Z",
+    iso: "2026-08-17T08:45:19.000Z",
   },
   {
     slug: "why-does-my-crown-feel-sensitive-to-cold",
@@ -374,7 +1535,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1786596219/Why_Does_My_Crown_Feel_Sensitive_to_Cold_rmc5s0.jpg",
     category: "Dental Health Tips",
     date: "August 14, 2026",
-    iso: "2026-08-14T07:12:49.000Z",
+    iso: "2026-08-14T08:45:19.000Z",
   },
   {
     slug: "why-do-my-veneers-look-different-in-natural-sunlight",
@@ -383,7 +1544,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1786596219/Why_Do_My_Veneers_Look_Different_in_Natural_Sunlight_svztqd.jpg",
     category: "Cosmetic Dentistry",
     date: "August 14, 2026",
-    iso: "2026-08-14T07:12:49.000Z",
+    iso: "2026-08-14T08:45:19.000Z",
   },
   {
     slug: "is-it-safe-to-drink-sparkling-water-with-dental-implants",
@@ -392,7 +1553,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1786440492/Is_It_Safe_to_Drink_Sparkling_Water_With_Dental_Implants_sxmrrx.jpg",
     category: "General Dentistry",
     date: "August 14, 2026",
-    iso: "2026-08-14T07:12:49.000Z",
+    iso: "2026-08-14T08:45:19.000Z",
   },
   {
     slug: "is-a-gum-boil-an-emergency-when-to-seek-dental-care",
@@ -401,7 +1562,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1786596218/Is_a_Gum_Boil_an_Emergency_When_to_Seek_Dental_Care_iyko6q.jpg",
     category: "Dental Health Tips",
     date: "August 14, 2026",
-    iso: "2026-08-14T07:12:49.000Z",
+    iso: "2026-08-14T08:45:19.000Z",
   },
   {
     slug: "can-i-sleep-on-the-side-where-my-implant-was-placed",
@@ -410,7 +1571,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1786440492/Can_I_Sleep_on_the_Side_Where_My_Implant_Was_Placed_lrubq7.jpg",
     category: "General Dentistry",
     date: "August 14, 2026",
-    iso: "2026-08-14T07:12:49.000Z",
+    iso: "2026-08-14T08:45:19.000Z",
   },
   {
     slug: "why-does-my-implant-collect-more-plaque-than-my-natural-teeth",
@@ -419,7 +1580,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1786187173/Why_Does_My_Implant_Collect_More_Plaque_Than_My_Natural_Teeth_htqbmy.jpg",
     category: "General Dentistry",
     date: "August 12, 2026",
-    iso: "2026-08-12T07:12:49.000Z",
+    iso: "2026-08-12T08:45:19.000Z",
   },
   {
     slug: "why-does-my-bonded-tooth-feel-slightly-rough",
@@ -428,7 +1589,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1786440375/Why_Does_My_Bonded_Tooth_Feel_Slightly_Rough_cexoem.jpg",
     category: "General Dentistry",
     date: "August 12, 2026",
-    iso: "2026-08-12T07:12:49.000Z",
+    iso: "2026-08-12T08:45:19.000Z",
   },
   {
     slug: "what-happens-if-a-crown-comes-off-unexpectedly",
@@ -437,7 +1598,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1786440375/What_Happens_If_a_Crown_Comes_Off_Unexpectedly_obk6h3.jpg",
     category: "General Dentistry",
     date: "August 12, 2026",
-    iso: "2026-08-12T07:12:49.000Z",
+    iso: "2026-08-12T08:45:19.000Z",
   },
   {
     slug: "does-sleeping-position-affect-implant-healing-after-surgery",
@@ -446,7 +1607,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1786187172/Does_Sleeping_Position_Affect_Implant_Healing_After_Surgery_hdbfd4.jpg",
     category: "General Dentistry",
     date: "August 12, 2026",
-    iso: "2026-08-12T07:12:49.000Z",
+    iso: "2026-08-12T08:45:19.000Z",
   },
   {
     slug: "can-veneers-become-more-noticeable-as-i-age",
@@ -455,7 +1616,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1786440374/Can_Veneers_Become_More_Noticeable_as_I_Age_fhtg7i.jpg",
     category: "Cosmetic Dentistry",
     date: "August 12, 2026",
-    iso: "2026-08-12T07:12:49.000Z",
+    iso: "2026-08-12T08:45:19.000Z",
   },
   {
     slug: "why-does-my-implant-feel-fine-during-the-day-but-ache-at-night",
@@ -464,7 +1625,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1785998646/Why_Does_My_Implant_Feel_Fine_During_the_Day_but_Ache_at_Night_pnfs3c.jpg",
     category: "General Dentistry",
     date: "August 10, 2026",
-    iso: "2026-08-10T07:12:49.000Z",
+    iso: "2026-08-10T08:45:19.000Z",
   },
   {
     slug: "can-veneers-protect-weak-front-teeth",
@@ -473,7 +1634,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1786187080/Can_Veneers_Protect_Weak_Front_Teeth_vben8j.jpg",
     category: "Cosmetic Dentistry",
     date: "August 10, 2026",
-    iso: "2026-08-10T07:12:49.000Z",
+    iso: "2026-08-10T08:45:19.000Z",
   },
   {
     slug: "can-healthy-gums-still-bleed-around-an-implant",
@@ -482,7 +1643,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1785998646/Can_Healthy_Gums_Still_Bleed_Around_an_Implant_yiaswz.jpg",
     category: "Dental Health Tips",
     date: "August 10, 2026",
-    iso: "2026-08-10T07:12:49.000Z",
+    iso: "2026-08-10T08:45:19.000Z",
   },
   {
     slug: "can-a-crown-feel-too-high-even-after-an-adjustment",
@@ -491,7 +1652,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1786187081/Can_a_Crown_Feel_Too_High_Even_After_an_Adjustment_frnojz.jpg",
     category: "General Dentistry",
     date: "August 10, 2026",
-    iso: "2026-08-10T07:12:49.000Z",
+    iso: "2026-08-10T08:45:19.000Z",
   },
   {
     slug: "bad-taste-in-mouth-after-filling-dental-treatment",
@@ -500,7 +1661,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1786187080/Bad_Taste_in_Mouth_After_a_Filling_or_Dental_Treatment_Is_It_Normal_nwgmk9.jpg",
     category: "General Dentistry",
     date: "August 10, 2026",
-    iso: "2026-08-10T07:12:49.000Z",
+    iso: "2026-08-10T08:45:19.000Z",
   },
   {
     slug: "why-does-my-implant-tooth-sound-different-when-i-tap-it",
@@ -509,7 +1670,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1785823254/Why_Does_My_Implant_Tooth_Sound_Different_When_I_Tap_It_hj2ylz.jpg",
     category: "General Dentistry",
     date: "August 7, 2026",
-    iso: "2026-08-07T07:12:49.000Z",
+    iso: "2026-08-07T08:45:19.000Z",
   },
   {
     slug: "what-should-you-avoid-doing-with-a-new-crown",
@@ -518,7 +1679,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1785996925/What_Should_You_Avoid_Doing_With_a_New_Crown_jtkxau.jpg",
     category: "General Dentistry",
     date: "August 7, 2026",
-    iso: "2026-08-07T07:12:49.000Z",
+    iso: "2026-08-07T08:45:19.000Z",
   },
   {
     slug: "how-long-does-it-take-to-get-used-to-veneers",
@@ -527,7 +1688,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1785996924/How_Long_Does_It_Take_to_Get_Used_to_Veneers_fkrgc0.jpg",
     category: "Cosmetic Dentistry",
     date: "August 7, 2026",
-    iso: "2026-08-07T07:12:49.000Z",
+    iso: "2026-08-07T08:45:19.000Z",
   },
   {
     slug: "can-certain-medications-cause-gum-disease-or-gum-overgrowth",
@@ -536,7 +1697,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1785996924/Can_Certain_Medications_Cause_Gum_Disease_or_Gum_Overgrowth_frjryz.jpg",
     category: "Dental Health Tips",
     date: "August 7, 2026",
-    iso: "2026-08-07T07:12:49.000Z",
+    iso: "2026-08-07T08:45:19.000Z",
   },
   {
     slug: "can-a-dental-implant-feel-too-high-even-if-it-looks-fine",
@@ -545,7 +1706,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1785823252/Can_a_Dental_Implant_Feel_Too_High_Even_If_It_Looks_Fine_lb3na9.jpg",
     category: "General Dentistry",
     date: "August 7, 2026",
-    iso: "2026-08-07T07:12:49.000Z",
+    iso: "2026-08-07T08:45:19.000Z",
   },
   {
     slug: "why-does-composite-bonding-feel-different-at-first",
@@ -554,7 +1715,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1785822737/Why_Does_Composite_Bonding_Feel_Different_at_First_bizkr2.jpg",
     category: "Cosmetic Dentistry",
     date: "August 5, 2026",
-    iso: "2026-08-05T07:12:49.000Z",
+    iso: "2026-08-05T08:45:19.000Z",
   },
   {
     slug: "localised-vs-generalised-gum-disease-whats-the-difference",
@@ -563,7 +1724,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1785822737/Localised_vs_Generalised_Gum_Disease_What_s_the_Difference_au2pwx.jpg",
     category: "Dental Health Tips",
     date: "August 5, 2026",
-    iso: "2026-08-05T07:12:49.000Z",
+    iso: "2026-08-05T08:45:19.000Z",
   },
   {
     slug: "can-veneers-feel-too-thick-at-first",
@@ -572,7 +1733,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1785822737/Can_Veneers_Feel_Too_Thick_at_First_glfds0.jpg",
     category: "Cosmetic Dentistry",
     date: "August 5, 2026",
-    iso: "2026-08-05T07:12:49.000Z",
+    iso: "2026-08-05T08:45:19.000Z",
   },
   {
     slug: "can-a-dental-implant-shift-or-move-over-time",
@@ -581,7 +1742,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1785692415/Can_a_dental_implant_shift_or_move_over_time_qu8vcx.jpg",
     category: "General Dentistry",
     date: "August 5, 2026",
-    iso: "2026-08-05T07:12:49.000Z",
+    iso: "2026-08-05T08:45:19.000Z",
   },
   {
     slug: "can-a-dental-implant-crown-be-shade-matched",
@@ -590,7 +1751,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1785692415/Can_a_Dental_Implant_Crown_Be_Shade_Matched_led530.jpg",
     category: "General Dentistry",
     date: "August 5, 2026",
-    iso: "2026-08-05T07:12:49.000Z",
+    iso: "2026-08-05T08:45:19.000Z",
   },
   {
     slug: "why-does-my-jaw-feel-tight-after-dental-implant-surgery",
@@ -599,7 +1760,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1785394096/Why_does_my_jaw_feel_tight_after_dental_implant_surgery_npbsjk.jpg",
     category: "General Dentistry",
     date: "August 3, 2026",
-    iso: "2026-08-03T07:12:49.000Z",
+    iso: "2026-08-03T08:45:19.000Z",
   },
   {
     slug: "what-foods-are-worth-approaching-carefully-after-composite-bonding",
@@ -608,7 +1769,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1785692257/What_Foods_Are_Worth_Approaching_Carefully_After_Composite_Bonding_gcwd6y.jpg",
     category: "Cosmetic Dentistry",
     date: "August 3, 2026",
-    iso: "2026-08-03T07:12:49.000Z",
+    iso: "2026-08-03T08:45:19.000Z",
   },
   {
     slug: "how-to-tell-the-difference-between-a-toothache-and-a-dental-abscess",
@@ -617,7 +1778,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1785692257/How_to_tell_the_difference_between_a_toothache_and_a_dental_abscess_otdyai.jpg",
     category: "General Dentistry",
     date: "August 3, 2026",
-    iso: "2026-08-03T07:12:49.000Z",
+    iso: "2026-08-03T08:45:19.000Z",
   },
   {
     slug: "can-i-use-an-electric-toothbrush-on-a-dental-implant",
@@ -626,7 +1787,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1785394092/Can_I_use_an_electric_toothbrush_on_a_dental_implant_xat7lc.jpg",
     category: "General Dentistry",
     date: "August 3, 2026",
-    iso: "2026-08-03T07:12:49.000Z",
+    iso: "2026-08-03T08:45:19.000Z",
   },
   {
     slug: "can-a-single-veneer-be-matched-successfully-to-the-rest-of-a-smile",
@@ -635,7 +1796,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1785692256/Can_a_Single_Veneer_Be_Matched_Successfully_to_the_Rest_of_a_Smile_tdr2lg.jpg",
     category: "Cosmetic Dentistry",
     date: "August 3, 2026",
-    iso: "2026-08-03T07:12:49.000Z",
+    iso: "2026-08-03T08:45:19.000Z",
   },
   {
     slug: "what-to-do-when-pain-relief-doesnt-stop-tooth-pain",
@@ -644,7 +1805,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1785393870/What_to_do_when_pain_relief_doesn_t_stop_tooth_pain_jflnfj.jpg",
     category: "General Dentistry",
     date: "July 31, 2026",
-    iso: "2026-07-31T07:12:49.000Z",
+    iso: "2026-07-31T08:45:19.000Z",
   },
   {
     slug: "what-should-you-ask-a-dentist-before-deciding-on-veneers",
@@ -653,7 +1814,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1785393870/What_Should_You_Ask_a_Dentist_Before_Deciding_on_Veneers_i4rmfx.jpg",
     category: "Cosmetic Dentistry",
     date: "July 31, 2026",
-    iso: "2026-07-31T07:12:49.000Z",
+    iso: "2026-07-31T08:45:19.000Z",
   },
   {
     slug: "should-i-choose-an-implant-bridge-or-individual-dental-implants",
@@ -662,7 +1823,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1785226879/Should_I_Choose_an_Implant_Bridge_or_Individual_Dental_Implants_ifhnuo.jpg",
     category: "General Dentistry",
     date: "July 31, 2026",
-    iso: "2026-07-31T07:12:49.000Z",
+    iso: "2026-07-31T08:45:19.000Z",
   },
   {
     slug: "how-soon-can-you-eat-and-drink-normally-after-bonding-treatment",
@@ -671,7 +1832,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1785393870/How_Soon_Can_You_Eat_and_Drink_Normally_After_Bonding_Treatment_pmmg6z.jpg",
     category: "Cosmetic Dentistry",
     date: "July 31, 2026",
-    iso: "2026-07-31T07:12:49.000Z",
+    iso: "2026-07-31T08:45:19.000Z",
   },
   {
     slug: "can-a-crown-be-fitted-comfortably-on-a-tooth-with-sensitive-gums",
@@ -680,7 +1841,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1785393870/Can_a_Crown_Be_Fitted_Comfortably_on_a_Tooth_With_Sensitive_Gums_a8gq3t.jpg",
     category: "Dental Health Tips",
     date: "July 31, 2026",
-    iso: "2026-07-31T07:12:49.000Z",
+    iso: "2026-07-31T08:45:19.000Z",
   },
   {
     slug: "why-is-my-toothache-worse-at-night",
@@ -689,7 +1850,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1785226672/Why_is_my_toothache_worse_at_night_r1ixit.jpg",
     category: "General Dentistry",
     date: "July 29, 2026",
-    iso: "2026-07-29T07:12:49.000Z",
+    iso: "2026-07-29T08:45:19.000Z",
   },
   {
     slug: "what-does-the-first-week-feel-like-after-veneer-placement",
@@ -698,7 +1859,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1785226673/What_Does_the_First_Week_Feel_Like_After_Veneer_Placement_jr7seq.jpg",
     category: "Cosmetic Dentistry",
     date: "July 29, 2026",
-    iso: "2026-07-29T07:12:49.000Z",
+    iso: "2026-07-29T08:45:19.000Z",
   },
   {
     slug: "how-does-bonding-compare-to-waiting-and-monitoring-a-minor-chip",
@@ -707,7 +1868,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1785226672/How_Does_Bonding_Compare_to_Waiting_and_Monitoring_a_Minor_Chip_cvfot9.jpg",
     category: "Cosmetic Dentistry",
     date: "July 29, 2026",
-    iso: "2026-07-29T07:12:49.000Z",
+    iso: "2026-07-29T08:45:19.000Z",
   },
   {
     slug: "how-do-dentists-match-a-crowns-shade-to-surrounding-teeth",
@@ -716,7 +1877,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1785226672/How_Do_Dentists_Match_a_Crown_s_Shade_to_Surrounding_Teeth_q9doo7.jpg",
     category: "General Dentistry",
     date: "July 29, 2026",
-    iso: "2026-07-29T07:12:49.000Z",
+    iso: "2026-07-29T08:45:19.000Z",
   },
   {
     slug: "are-dental-implants-suitable-after-an-eating-disorder",
@@ -725,7 +1886,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1785226672/Are_Dental_Implants_Suitable_After_an_Eating_Disorder_ger1eg.jpg",
     category: "General Dentistry",
     date: "July 29, 2026",
-    iso: "2026-07-29T07:12:49.000Z",
+    iso: "2026-07-29T08:45:19.000Z",
   },
   {
     slug: "what-causes-sudden-gum-bleeding-and-severe-pain-that-wont-stop",
@@ -734,7 +1895,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1785088822/What_Causes_Sudden_Gum_Bleeding_and_Severe_Pain_That_Won_t_Stop_umdoz4.jpg",
     category: "Dental Health Tips",
     date: "July 27, 2026",
-    iso: "2026-07-27T07:12:49.000Z",
+    iso: "2026-07-27T08:45:19.000Z",
   },
   {
     slug: "what-are-the-early-signs-a-dental-crown-may-be-failing",
@@ -743,7 +1904,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1785088822/What_Are_the_Early_Signs_a_Dental_Crown_May_Be_Failing_oxqfu9.jpg",
     category: "General Dentistry",
     date: "July 27, 2026",
-    iso: "2026-07-27T07:12:49.000Z",
+    iso: "2026-07-27T08:45:19.000Z",
   },
   {
     slug: "can-veneers-help-close-small-gaps-between-front-teeth",
@@ -752,7 +1913,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1785088822/Can_Veneers_Help_Close_Small_Gaps_Between_Front_Teeth_xzudcp.jpg",
     category: "Cosmetic Dentistry",
     date: "July 27, 2026",
-    iso: "2026-07-27T07:12:49.000Z",
+    iso: "2026-07-27T08:45:19.000Z",
   },
   {
     slug: "can-composite-bonding-be-used-on-just-one-front-tooth-for-balance",
@@ -761,7 +1922,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1785088822/Can_Composite_Bonding_Be_Used_on_Just_One_Front_Tooth_for_Balance_ip62c0.jpg",
     category: "Cosmetic Dentistry",
     date: "July 27, 2026",
-    iso: "2026-07-27T07:12:49.000Z",
+    iso: "2026-07-27T08:45:19.000Z",
   },
   {
     slug: "are-dental-implants-safe-if-you-have-high-blood-pressure",
@@ -770,7 +1931,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1784793429/Are_Dental_Implants_Safe_if_You_Have_High_Blood_Pressure_rq4wtd.jpg",
     category: "General Dentistry",
     date: "July 27, 2026",
-    iso: "2026-07-27T07:12:49.000Z",
+    iso: "2026-07-27T08:45:19.000Z",
   },
   {
     slug: "how-do-dentists-decide-between-different-crown-materials",
@@ -779,7 +1940,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1784793043/How_Do_Dentists_Decide_Between_Different_Crown_Materials_zecodw.jpg",
     category: "General Dentistry",
     date: "July 24, 2026",
-    iso: "2026-07-24T07:12:49.000Z",
+    iso: "2026-07-24T08:45:19.000Z",
   },
   {
     slug: "can-veneers-and-composite-bonding-be-combined-in-one-smile-plan",
@@ -788,7 +1949,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1784793043/Can_Veneers_and_Composite_Bonding_Be_Combined_in_One_Smile_Plan_d1vvum.jpg",
     category: "Cosmetic Dentistry",
     date: "July 24, 2026",
-    iso: "2026-07-24T07:12:49.000Z",
+    iso: "2026-07-24T08:45:19.000Z",
   },
   {
     slug: "can-seasonal-allergies-affect-upper-jaw-dental-implants",
@@ -797,7 +1958,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1784793043/Can_Seasonal_Allergies_Affect_Upper_Jaw_Dental_Implants_qam8bo.jpg",
     category: "General Dentistry",
     date: "July 24, 2026",
-    iso: "2026-07-24T07:12:49.000Z",
+    iso: "2026-07-24T08:45:19.000Z",
   },
   {
     slug: "can-composite-bonding-be-combined-with-tooth-contouring-for-a-subtler-change",
@@ -806,7 +1967,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1784793043/Can_Composite_Bonding_Be_Combined_With_Tooth_Contouring_for_a_Subtler_Change_uhj8yc.jpg",
     category: "Cosmetic Dentistry",
     date: "July 24, 2026",
-    iso: "2026-07-24T07:12:49.000Z",
+    iso: "2026-07-24T08:45:19.000Z",
   },
   {
     slug: "can-a-cracked-tooth-heal-on-its-own-or-does-it-need-emergency-care",
@@ -815,7 +1976,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1784793043/Can_a_Cracked_Tooth_Heal_on_Its_Own_or_Does_It_Need_Emergency_Care_z7geyn.jpg",
     category: "General Dentistry",
     date: "July 24, 2026",
-    iso: "2026-07-24T07:12:49.000Z",
+    iso: "2026-07-24T08:45:19.000Z",
   },
   {
     slug: "why-do-i-have-a-bad-taste-in-my-mouth-after-eating",
@@ -824,7 +1985,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1784629541/Why_Do_I_Have_a_Bad_Taste_in_My_Mouth_After_Eating_Dental_Causes_Explained_kwwm8w.jpg",
     category: "General Dentistry",
     date: "July 22, 2026",
-    iso: "2026-07-22T07:12:49.000Z",
+    iso: "2026-07-22T08:45:19.000Z",
   },
   {
     slug: "gum-boil-vs-mouth-ulcer-how-to-tell-the-difference",
@@ -833,7 +1994,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1784629425/Gum_Boil_vs_Mouth_Ulcer_How_to_Tell_the_Difference_e6seny.jpg",
     category: "Dental Health Tips",
     date: "July 22, 2026",
-    iso: "2026-07-22T07:12:49.000Z",
+    iso: "2026-07-22T08:45:19.000Z",
   },
   {
     slug: "full-vs-partial-acrylic-dentures-understanding-the-difference",
@@ -842,7 +2003,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1784629426/Full_vs_Partial_Acrylic_Dentures_Understanding_the_Difference_v94ywu.jpg",
     category: "General Dentistry",
     date: "July 22, 2026",
-    iso: "2026-07-22T07:12:49.000Z",
+    iso: "2026-07-22T08:45:19.000Z",
   },
   {
     slug: "can-hormones-cause-gum-disease",
@@ -851,7 +2012,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1784629541/Can_Hormones_Cause_Gum_Disease_pqfi5w.jpg",
     category: "Dental Health Tips",
     date: "July 22, 2026",
-    iso: "2026-07-22T07:12:49.000Z",
+    iso: "2026-07-22T08:45:19.000Z",
   },
   {
     slug: "can-flexible-dentures-be-adjusted-or-relined-over-time",
@@ -860,7 +2021,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1784629425/Can_Flexible_Dentures_Be_Adjusted_or_Relined_Over_Time_jc9jrt.jpg",
     category: "General Dentistry",
     date: "July 22, 2026",
-    iso: "2026-07-22T07:12:49.000Z",
+    iso: "2026-07-22T08:45:19.000Z",
   },
   {
     slug: "why-does-my-new-flexible-denture-feel-too-tight-in-the-evenings",
@@ -869,7 +2030,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1784472778/Why_Does_My_New_Flexible_Denture_Feel_Too_Tight_in_the_Evenings_lgeevi.jpg",
     category: "General Dentistry",
     date: "July 20, 2026",
-    iso: "2026-07-20T07:12:49.000Z",
+    iso: "2026-07-20T08:45:19.000Z",
   },
   {
     slug: "why-does-a-gum-boil-keep-popping-and-returning-in-the-exact-same-spot",
@@ -878,7 +2039,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1784472776/Why_Does_a_Gum_Boil_Keep_Popping_and_Returning_in_the_Exact_Same_Spot_tcslnk.jpg",
     category: "Dental Health Tips",
     date: "July 20, 2026",
-    iso: "2026-07-20T07:12:49.000Z",
+    iso: "2026-07-20T08:45:19.000Z",
   },
   {
     slug: "why-do-i-have-a-bitter-taste-every-time-i-floss-or-clean-between-my-teeth",
@@ -887,7 +2048,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1784472776/Why_Do_I_Have_a_Bitter_Taste_Every_Time_I_Floss_or_Clean_Between_My_Teeth_q3vwt1.jpg",
     category: "General Dentistry",
     date: "July 20, 2026",
-    iso: "2026-07-20T07:12:49.000Z",
+    iso: "2026-07-20T08:45:19.000Z",
   },
   {
     slug: "what-is-acute-necrotizing-ulcerative-gingivitis-anug-and-how-does-it-differ-from-standard-gingivitis",
@@ -896,7 +2057,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1784472775/What_Is_Acute_Necrotizing_Ulcerative_Gingivitis_ANUG_and_How_Does_It_Differ_from_Standard_Gingivitis_xs4pb9.jpg",
     category: "General Dentistry",
     date: "July 20, 2026",
-    iso: "2026-07-20T07:12:49.000Z",
+    iso: "2026-07-20T08:45:19.000Z",
   },
   {
     slug: "can-i-use-regular-toothpaste-to-clean-an-acrylic-denture",
@@ -905,7 +2066,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1784472774/Can_I_Use_Regular_Toothpaste_to_Clean_an_Acrylic_Denture_xwrxkt.jpg",
     category: "General Dentistry",
     date: "July 20, 2026",
-    iso: "2026-07-20T07:12:49.000Z",
+    iso: "2026-07-20T08:45:19.000Z",
   },
   {
     slug: "is-it-safe-to-have-dental-implant-surgery-with-the-flu",
@@ -914,7 +2075,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1784021237/Is_It_Safe_to_Have_Dental_Implant_Surgery_With_the_Flu_wmzesn.jpg",
     category: "General Dentistry",
     date: "July 17, 2026",
-    iso: "2026-07-17T07:12:49.000Z",
+    iso: "2026-07-17T08:45:19.000Z",
   },
   {
     slug: "how-long-can-a-temporary-crown-comfortably-last-between-visits",
@@ -923,7 +2084,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1784196570/How_Long_Can_a_Temporary_Crown_Comfortably_Last_Between_Visits_s1ehcs.jpg",
     category: "General Dentistry",
     date: "July 17, 2026",
-    iso: "2026-07-17T07:12:49.000Z",
+    iso: "2026-07-17T08:45:19.000Z",
   },
   {
     slug: "how-do-dentists-choose-a-veneer-shade-for-a-natural-looking-result",
@@ -932,7 +2093,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1784196569/How_Do_Dentists_Choose_a_Veneer_Shade_for_a_Natural-Looking_Result_vkwykv.jpg",
     category: "Cosmetic Dentistry",
     date: "July 17, 2026",
-    iso: "2026-07-17T07:12:49.000Z",
+    iso: "2026-07-17T08:45:19.000Z",
   },
   {
     slug: "can-composite-bonding-reshape-a-single-uneven-tooth",
@@ -941,7 +2102,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1784196569/Can_Composite_Bonding_Reshape_a_Single_Uneven_Tooth_tvghxf.jpg",
     category: "Cosmetic Dentistry",
     date: "July 17, 2026",
-    iso: "2026-07-17T07:12:49.000Z",
+    iso: "2026-07-17T08:45:19.000Z",
   },
   {
     slug: "can-a-tooth-knocked-out-in-an-accident-be-replaced-with-a-dental-implant",
@@ -950,7 +2111,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1784021235/Can_a_tooth_knocked_out_in_an_accident_be_replaced_with_a_dental_implant_rrfyyn.jpg",
     category: "General Dentistry",
     date: "July 17, 2026",
-    iso: "2026-07-17T07:12:49.000Z",
+    iso: "2026-07-17T08:45:19.000Z",
   },
   {
     slug: "why-did-my-veneer-crack",
@@ -959,7 +2120,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1784020886/Why_Did_My_Veneer_Crack_jf8z8x.jpg",
     category: "Cosmetic Dentistry",
     date: "July 15, 2026",
-    iso: "2026-07-15T07:12:49.000Z",
+    iso: "2026-07-15T08:45:19.000Z",
   },
   {
     slug: "what-happens-between-composite-resin-and-your-tooth",
@@ -968,7 +2129,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1784020885/What_Happens_Between_Composite_Resin_and_Your_Tooth_ss1ca3.jpg",
     category: "General Dentistry",
     date: "July 15, 2026",
-    iso: "2026-07-15T07:12:49.000Z",
+    iso: "2026-07-15T08:45:19.000Z",
   },
   {
     slug: "how-do-i-choose-between-fixed-and-removable-implant-teeth",
@@ -977,7 +2138,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1783762417/How_Do_I_Choose_Between_Fixed_and_Removable_Implant_Teeth_mkqhio.jpg",
     category: "General Dentistry",
     date: "July 15, 2026",
-    iso: "2026-07-15T07:12:49.000Z",
+    iso: "2026-07-15T08:45:19.000Z",
   },
   {
     slug: "how-are-front-tooth-implants-planned-for-the-best-cosmetic-result",
@@ -986,7 +2147,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1783762417/How_Are_Front_Tooth_Implants_Planned_for_the_Best_Cosmetic_Result_rulw1i.jpg",
     category: "Cosmetic Dentistry",
     date: "July 15, 2026",
-    iso: "2026-07-15T07:12:49.000Z",
+    iso: "2026-07-15T08:45:19.000Z",
   },
   {
     slug: "can-a-tooth-under-a-crown-still-get-a-cavity",
@@ -995,7 +2156,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1784020884/Can_a_tooth_under_a_crown_still_get_a_cavity_p3ccgu.jpg",
     category: "Dental Health Tips",
     date: "July 15, 2026",
-    iso: "2026-07-15T07:12:49.000Z",
+    iso: "2026-07-15T08:45:19.000Z",
   },
   {
     slug: "why-moisture-control-matters-during-composite-bonding",
@@ -1004,7 +2165,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1783762141/Why_Moisture_Control_Matters_During_Composite_Bonding_fg01z0.jpg",
     category: "Cosmetic Dentistry",
     date: "July 13, 2026",
-    iso: "2026-07-13T07:12:49.000Z",
+    iso: "2026-07-13T08:45:19.000Z",
   },
   {
     slug: "why-do-i-have-a-weird-metallic-taste-around-my-dental-crown",
@@ -1013,7 +2174,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1783762141/Why_do_I_have_a_weird_metallic_taste_around_my_newold_dental_crown_opbggi.jpg",
     category: "General Dentistry",
     date: "July 13, 2026",
-    iso: "2026-07-13T07:12:49.000Z",
+    iso: "2026-07-13T08:45:19.000Z",
   },
   {
     slug: "is-it-safe-to-have-dental-implants-after-orthognathic-surgery",
@@ -1022,7 +2183,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1783594297/Is_It_Safe_to_Have_Dental_Implants_After_Orthognathic_Surgery_yrt1jl.jpg",
     category: "General Dentistry",
     date: "July 13, 2026",
-    iso: "2026-07-13T07:12:49.000Z",
+    iso: "2026-07-13T08:45:19.000Z",
   },
   {
     slug: "how-modern-bonding-techniques-help-keep-veneers-looking-natural",
@@ -1031,7 +2192,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1783762140/How_Modern_Bonding_Techniques_Help_Keep_Veneers_Looking_Natural_aphyrx.jpg",
     category: "Cosmetic Dentistry",
     date: "July 13, 2026",
-    iso: "2026-07-13T07:12:49.000Z",
+    iso: "2026-07-13T08:45:19.000Z",
   },
   {
     slug: "dental-implant-healing-week-by-week-a-realistic-patient-timeline",
@@ -1040,7 +2201,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1783594296/Dental_Implant_Healing_Week_by_Week_A_Realistic_Patient_Timeline_ika1ls.jpg",
     category: "General Dentistry",
     date: "July 13, 2026",
-    iso: "2026-07-13T07:12:49.000Z",
+    iso: "2026-07-13T08:45:19.000Z",
   },
   {
     slug: "why-do-some-veneers-age-better-than-others",
@@ -1049,7 +2210,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1783593790/Why_Do_Some_Veneers_Age_Better_Than_Others_osbiqr.jpg",
     category: "Cosmetic Dentistry",
     date: "July 10, 2026",
-    iso: "2026-07-10T07:12:49.000Z",
+    iso: "2026-07-10T08:45:19.000Z",
   },
   {
     slug: "what-to-do-if-your-temporary-dental-crown-comes-off",
@@ -1058,7 +2219,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1783593790/What_to_do_if_your_temporary_dental_crown_comes_off_before_your_next_appointment_bb9ixy.jpg",
     category: "General Dentistry",
     date: "July 10, 2026",
-    iso: "2026-07-10T07:12:49.000Z",
+    iso: "2026-07-10T08:45:19.000Z",
   },
   {
     slug: "how-do-dentists-check-that-a-dental-implant-is-secure",
@@ -1067,7 +2228,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1783418305/How_Do_Dentists_Check_That_a_Dental_Implant_Is_Secure_t74pma.jpg",
     category: "General Dentistry",
     date: "July 10, 2026",
-    iso: "2026-07-10T07:12:49.000Z",
+    iso: "2026-07-10T08:45:19.000Z",
   },
   {
     slug: "how-do-dentists-assess-teeth-before-composite-bonding",
@@ -1076,7 +2237,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1783593789/How_Do_Dentists_Assess_Teeth_Before_Composite_Bonding_xsv8xv.jpg",
     category: "Cosmetic Dentistry",
     date: "July 10, 2026",
-    iso: "2026-07-10T07:12:49.000Z",
+    iso: "2026-07-10T08:45:19.000Z",
   },
   {
     slug: "are-same-day-dental-implants-suitable-for-everyone",
@@ -1085,7 +2246,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1783418304/Are_Same-Day_Dental_Implants_Suitable_for_Everyone_arhe0s.jpg",
     category: "General Dentistry",
     date: "July 10, 2026",
-    iso: "2026-07-10T07:12:49.000Z",
+    iso: "2026-07-10T08:45:19.000Z",
   },
   {
     slug: "what-should-you-expect-during-the-dental-crown-preparation-appointment",
@@ -1094,7 +2255,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1783418062/What_should_you_expect_during_the_dental_crown_preparation_appointment_llpdoq.jpg",
     category: "General Dentistry",
     date: "July 8, 2026",
-    iso: "2026-07-08T07:12:49.000Z",
+    iso: "2026-07-08T08:45:19.000Z",
   },
   {
     slug: "do-i-need-temporary-teeth-during-implant-treatment",
@@ -1103,7 +2264,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1783075862/Do_I_Need_Temporary_Teeth_During_Implant_Treatment_d9jz73.jpg",
     category: "General Dentistry",
     date: "July 8, 2026",
-    iso: "2026-07-08T07:12:49.000Z",
+    iso: "2026-07-08T08:45:19.000Z",
   },
   {
     slug: "do-anti-inflammatory-painkillers-affect-dental-implants",
@@ -1112,7 +2273,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1783075844/Do_Anti-Inflammatory_Painkillers_Affect_Dental_Implants_n8puvb.jpg",
     category: "General Dentistry",
     date: "July 8, 2026",
-    iso: "2026-07-08T07:12:49.000Z",
+    iso: "2026-07-08T08:45:19.000Z",
   },
   {
     slug: "can-veneer-margins-affect-the-appearance-of-your-smile",
@@ -1121,7 +2282,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1783418062/Can_Veneer_Margins_Affect_the_Appearance_of_Your_Smile_oeg5jt.jpg",
     category: "Cosmetic Dentistry",
     date: "July 8, 2026",
-    iso: "2026-07-08T07:12:49.000Z",
+    iso: "2026-07-08T08:45:19.000Z",
   },
   {
     slug: "can-hidden-tooth-cracks-affect-bonding-results",
@@ -1130,7 +2291,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1783418061/Can_Hidden_Tooth_Cracks_Affect_Bonding_Results_hsxcx0.jpg",
     category: "Cosmetic Dentistry",
     date: "July 8, 2026",
-    iso: "2026-07-08T07:12:49.000Z",
+    iso: "2026-07-08T08:45:19.000Z",
   },
   {
     slug: "why-does-my-jaw-feel-slightly-misaligned-after-a-new-crown-is-fitted",
@@ -1139,7 +2300,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1783075405/Why_does_my_jaw_feel_slightly_misaligned_after_a_new_crown_is_fitted_uhpkwm.jpg",
     category: "General Dentistry",
     date: "July 6, 2026",
-    iso: "2026-07-06T07:12:49.000Z",
+    iso: "2026-07-06T08:45:19.000Z",
   },
   {
     slug: "do-i-need-a-gum-graft-before-getting-dental-implants",
@@ -1148,7 +2309,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1782642543/Do_I_need_a_gum_graft_before_getting_dental_implants_hcmifb.jpg",
     category: "Dental Health Tips",
     date: "July 6, 2026",
-    iso: "2026-07-06T07:12:49.000Z",
+    iso: "2026-07-06T08:45:19.000Z",
   },
   {
     slug: "dental-implants-after-long-term-steroid-use-what-to-expect",
@@ -1157,7 +2318,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1782642542/Dental_implants_after_long-term_steroid_use_what_to_expect_pclsue.jpg",
     category: "General Dentistry",
     date: "July 6, 2026",
-    iso: "2026-07-06T07:12:49.000Z",
+    iso: "2026-07-06T08:45:19.000Z",
   },
   {
     slug: "can-porcelain-veneers-crack-over-time",
@@ -1166,7 +2327,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1783075403/Can_Porcelain_Veneers_Crack_Over_Time_cvzzar.jpg",
     category: "Cosmetic Dentistry",
     date: "July 6, 2026",
-    iso: "2026-07-06T07:12:49.000Z",
+    iso: "2026-07-06T08:45:19.000Z",
   },
   {
     slug: "is-it-safe-to-have-dental-implant-treatment-during-pregnancy-or-while-breastfeeding",
@@ -1175,7 +2336,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1782825157/Is_It_Safe_to_Have_Dental_Implant_Treatment_During_Pregnancy_or_While_Breastfeeding_gmwhm0.jpg",
     category: "Dental Health Tips",
     date: "July 3, 2026",
-    iso: "2026-07-03T07:12:49.000Z",
+    iso: "2026-07-03T08:45:19.000Z",
   },
   {
     slug: "does-vaping-affect-composite-bonding-the-same-way-smoking-does",
@@ -1184,7 +2345,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1782825155/Does_Vaping_Affect_Composite_Bonding_the_Same_Way_Smoking_Does_y39lug.jpg",
     category: "Cosmetic Dentistry",
     date: "July 3, 2026",
-    iso: "2026-07-03T07:12:49.000Z",
+    iso: "2026-07-03T08:45:19.000Z",
   },
   {
     slug: "can-you-go-through-airport-security-or-have-an-mri-scan-with-a-dental-crown",
@@ -1193,7 +2354,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1782825156/Can_You_Go_Through_Airport_Security_or_Have_an_MRI_Scan_With_a_Dental_Crown_t7dgj9.jpg",
     category: "General Dentistry",
     date: "July 3, 2026",
-    iso: "2026-07-03T07:12:49.000Z",
+    iso: "2026-07-03T08:45:19.000Z",
   },
   {
     slug: "can-porcelain-veneers-affect-singing-or-playing-a-wind-instrument",
@@ -1202,7 +2363,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1782825157/Can_Porcelain_Veneers_Affect_Singing_or_Playing_a_Wind_Instrument_dxim6g.jpg",
     category: "Cosmetic Dentistry",
     date: "July 3, 2026",
-    iso: "2026-07-03T07:12:49.000Z",
+    iso: "2026-07-03T08:45:19.000Z",
   },
   {
     slug: "can-patients-with-rheumatoid-arthritis-have-dental-implants",
@@ -1211,7 +2372,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1782825156/Can_Patients_With_Rheumatoid_Arthritis_Have_Dental_Implants_dfpc9y.jpg",
     category: "General Dentistry",
     date: "July 3, 2026",
-    iso: "2026-07-03T07:12:49.000Z",
+    iso: "2026-07-03T08:45:19.000Z",
   },
   {
     slug: "will-composite-bonding-cover-small-cracks-in-teeth",
@@ -1220,7 +2381,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1782641328/Will_Composite_Bonding_Cover_Small_Cracks_in_Teeth_w7ysuy.jpg",
     category: "Cosmetic Dentistry",
     date: "June 30, 2026",
-    iso: "2026-06-30T07:12:49.000Z",
+    iso: "2026-06-30T08:45:19.000Z",
   },
   {
     slug: "what-should-you-know-about-dry-mouth-and-dental-implants",
@@ -1229,7 +2390,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1782469736/What_Should_You_Know_About_Dry_Mouth_and_Dental_Implants_qicy1h.jpg",
     category: "General Dentistry",
     date: "June 30, 2026",
-    iso: "2026-06-30T07:12:49.000Z",
+    iso: "2026-06-30T08:45:19.000Z",
   },
   {
     slug: "how-implant-angulation-influences-long-term-stability",
@@ -1238,7 +2399,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1782469735/How_Implant_Angulation_Influences_Long-Term_Stability_l0al7g.jpg",
     category: "General Dentistry",
     date: "June 30, 2026",
-    iso: "2026-06-30T07:12:49.000Z",
+    iso: "2026-06-30T08:45:19.000Z",
   },
   {
     slug: "can-a-zirconia-crown-be-fitted-while-preserving-natural-tooth-structure",
@@ -1247,7 +2408,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1782641329/Can_a_Zirconia_Crown_Be_Fitted_While_Preserving_Natural_Tooth_Structure_jr2nyb.jpg",
     category: "General Dentistry",
     date: "June 30, 2026",
-    iso: "2026-06-30T07:12:49.000Z",
+    iso: "2026-06-30T08:45:19.000Z",
   },
   {
     slug: "are-porcelain-veneers-strong-enough-for-everyday-eating",
@@ -1256,7 +2417,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1782641328/Are_Porcelain_Veneers_Strong_Enough_for_Everyday_Eating_qcqqsl.jpg",
     category: "Cosmetic Dentistry",
     date: "June 30, 2026",
-    iso: "2026-06-30T07:12:49.000Z",
+    iso: "2026-06-30T08:45:19.000Z",
   },
   {
     slug: "what-causes-discolouration-around-porcelain-veneers",
@@ -1265,7 +2426,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1782384021/What_Causes_Discolouration_Around_Porcelain_Veneers_eggrsv.jpg",
     category: "Cosmetic Dentistry",
     date: "June 26, 2026",
-    iso: "2026-06-26T07:12:49.000Z",
+    iso: "2026-06-26T08:45:19.000Z",
   },
   {
     slug: "does-a-zirconia-crown-require-a-lot-of-tooth-removal",
@@ -1274,7 +2435,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1782384021/Does_a_Zirconia_Crown_Require_a_Lot_of_Tooth_Removal_vg2iza.jpg",
     category: "General Dentistry",
     date: "June 26, 2026",
-    iso: "2026-06-26T07:12:49.000Z",
+    iso: "2026-06-26T08:45:19.000Z",
   },
   {
     slug: "can-i-have-dental-implants-if-i-have-multiple-sclerosis",
@@ -1283,7 +2444,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1782295275/Can_I_Have_Dental_Implants_If_I_Have_Multiple_Sclerosis_lvpxqt.jpg",
     category: "General Dentistry",
     date: "June 26, 2026",
-    iso: "2026-06-26T07:12:49.000Z",
+    iso: "2026-06-26T08:45:19.000Z",
   },
   {
     slug: "can-composite-bonding-be-applied-to-a-cracked-tooth",
@@ -1292,7 +2453,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1782384021/Can_Composite_Bonding_Be_Applied_to_a_Cracked_Tooth_ihltxi.jpg",
     category: "Cosmetic Dentistry",
     date: "June 26, 2026",
-    iso: "2026-06-26T07:12:49.000Z",
+    iso: "2026-06-26T08:45:19.000Z",
   },
   {
     slug: "can-angled-dental-implants-be-as-strong-as-straight-implants",
@@ -1301,7 +2462,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1782295273/Can_Angled_Dental_Implants_Be_as_Strong_as_Straight_Implants_hdt9rv.jpg",
     category: "General Dentistry",
     date: "June 26, 2026",
-    iso: "2026-06-26T07:12:49.000Z",
+    iso: "2026-06-26T08:45:19.000Z",
   },
   {
     slug: "why-is-proper-implant-maintenance-important-for-long-term-success",
@@ -1310,7 +2471,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1782206028/Why_Is_Proper_Implant_Maintenance_Important_for_Long-Term_Success_ut2dtx.jpg",
     category: "General Dentistry",
     date: "June 25, 2026",
-    iso: "2026-06-25T07:12:49.000Z",
+    iso: "2026-06-25T08:45:19.000Z",
   },
   {
     slug: "is-a-loose-crown-a-sign-of-a-problem-underneath",
@@ -1319,7 +2480,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1782294945/Is_a_Loose_Crown_a_Sign_of_a_Problem_Underneath_ndhi4m.jpg",
     category: "General Dentistry",
     date: "June 25, 2026",
-    iso: "2026-06-25T07:12:49.000Z",
+    iso: "2026-06-25T08:45:19.000Z",
   },
   {
     slug: "how-are-loose-implant-crowns-prevented",
@@ -1328,7 +2489,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1782206028/How_Are_Loose_Implant_Crowns_Prevented_plvj1f.jpg",
     category: "General Dentistry",
     date: "June 25, 2026",
-    iso: "2026-06-25T07:12:49.000Z",
+    iso: "2026-06-25T08:45:19.000Z",
   },
   {
     slug: "can-professional-polishing-extend-the-life-of-composite-bonding",
@@ -1337,7 +2498,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1782294945/Can_Professional_Polishing_Extend_the_Life_of_Composite_Bonding_rgxgh2.jpg",
     category: "Cosmetic Dentistry",
     date: "June 25, 2026",
-    iso: "2026-06-25T07:12:49.000Z",
+    iso: "2026-06-25T08:45:19.000Z",
   },
   {
     slug: "can-a-night-guard-protect-porcelain-veneers",
@@ -1346,7 +2507,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1782294944/Can_a_Night_Guard_Protect_Porcelain_Veneers_ejgtzv.jpg",
     category: "Cosmetic Dentistry",
     date: "June 25, 2026",
-    iso: "2026-06-25T07:12:49.000Z",
+    iso: "2026-06-25T08:45:19.000Z",
   },
   {
     slug: "will-veneers-affect-the-way-i-speak",
@@ -1355,7 +2516,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1782205641/Will_Veneers_Affect_the_Way_I_Speak_luggwc.jpg",
     category: "Cosmetic Dentistry",
     date: "June 24, 2026",
-    iso: "2026-06-24T07:12:49.000Z",
+    iso: "2026-06-24T08:45:19.000Z",
   },
   {
     slug: "why-is-my-dental-implant-visible-during-healing",
@@ -1364,7 +2525,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1782118779/How_Does_Psychological_Stress_Affect_Dental_Implant_Healing_ot8x9p.jpg",
     category: "General Dentistry",
     date: "June 24, 2026",
-    iso: "2026-06-24T07:12:49.000Z",
+    iso: "2026-06-24T08:45:19.000Z",
   },
   {
     slug: "what-factors-determine-whether-bonding-can-be-repaired",
@@ -1373,7 +2534,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1782205641/Is_Composite_Bonding_Suitable_for_Large_Tooth_Fractures_l2i1b5.jpg",
     category: "Cosmetic Dentistry",
     date: "June 24, 2026",
-    iso: "2026-06-24T07:12:49.000Z",
+    iso: "2026-06-24T08:45:19.000Z",
   },
   {
     slug: "how-custom-milled-crowns-help-reduce-micro-gaps",
@@ -1382,7 +2543,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1782205640/How_Custom-Milled_Crowns_Help_Reduce_Micro-Gaps_njxlsq.jpg",
     category: "General Dentistry",
     date: "June 24, 2026",
-    iso: "2026-06-24T07:12:49.000Z",
+    iso: "2026-06-24T08:45:19.000Z",
   },
   {
     slug: "can-acid-reflux-medication-impact-dental-implant-healing",
@@ -1391,7 +2552,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1782118777/Can_Acid_Reflux_Medication_Impact_Dental_Implant_Healing_e7v8up.jpg",
     category: "General Dentistry",
     date: "June 24, 2026",
-    iso: "2026-06-24T07:12:49.000Z",
+    iso: "2026-06-24T08:45:19.000Z",
   },
   {
     slug: "why-is-there-a-metal-cap-on-my-dental-implant",
@@ -1400,7 +2561,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1781865970/Why_Is_There_a_Metal_Cap_on_My_Dental_Implant_fnwsji.jpg",
     category: "General Dentistry",
     date: "June 23, 2026",
-    iso: "2026-06-23T07:12:49.000Z",
+    iso: "2026-06-23T08:45:19.000Z",
   },
   {
     slug: "how-do-gums-react-to-modern-dental-crowns",
@@ -1409,7 +2570,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1782118362/How_Do_Gums_React_to_Modern_Dental_Crowns_gv5t4g.jpg",
     category: "Dental Health Tips",
     date: "June 23, 2026",
-    iso: "2026-06-23T07:12:49.000Z",
+    iso: "2026-06-23T08:45:19.000Z",
   },
   {
     slug: "can-porcelain-veneers-come-loose-over-time",
@@ -1418,7 +2579,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1782118360/Can_Porcelain_Veneers_Come_Loose_Over_Time_zntvtk.jpg",
     category: "Cosmetic Dentistry",
     date: "June 23, 2026",
-    iso: "2026-06-23T07:12:49.000Z",
+    iso: "2026-06-23T08:45:19.000Z",
   },
   {
     slug: "does-composite-bonding-hurt-after-treatment",
@@ -1427,7 +2588,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1781865281/Does_Composite_Bonding_Hurt_After_Treatment_s1agss.jpg",
     category: "Cosmetic Dentistry",
     date: "June 22, 2026",
-    iso: "2026-06-22T07:12:49.000Z",
+    iso: "2026-06-22T08:45:19.000Z",
   },
   {
     slug: "do-i-need-a-special-mouthguard-to-protect-my-dental-implants-during-sport",
@@ -1436,7 +2597,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1781774199/Do_I_Need_a_Special_Mouthguard_to_Protect_My_Dental_Implants_During_Sport_zfwfka.jpg",
     category: "General Dentistry",
     date: "June 22, 2026",
-    iso: "2026-06-22T07:12:49.000Z",
+    iso: "2026-06-22T08:45:19.000Z",
   },
   {
     slug: "can-a-dental-crown-irritate-the-gums",
@@ -1445,7 +2606,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1781865281/Can_a_Dental_Crown_Irritate_the_Gums_gcgwe5.jpg",
     category: "Dental Health Tips",
     date: "June 22, 2026",
-    iso: "2026-06-22T07:12:49.000Z",
+    iso: "2026-06-22T08:45:19.000Z",
   },
   {
     slug: "at-what-age-can-a-young-person-get-dental-implants",
@@ -1454,7 +2615,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1781774197/At_What_Age_Can_a_Young_Person_Get_Dental_Implants_j9sx8z.jpg",
     category: "General Dentistry",
     date: "June 22, 2026",
-    iso: "2026-06-22T07:12:49.000Z",
+    iso: "2026-06-22T08:45:19.000Z",
   },
   {
     slug: "are-veneers-a-good-option-if-you-have-bruxism",
@@ -1463,7 +2624,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1781865279/Are_Veneers_a_Good_Option_if_You_Have_Bruxism_lhhmxn.jpg",
     category: "Cosmetic Dentistry",
     date: "June 22, 2026",
-    iso: "2026-06-22T07:12:49.000Z",
+    iso: "2026-06-22T08:45:19.000Z",
   },
   {
     slug: "what-factors-influence-lifespan-porcelain-veneers-teeth-grinders",
@@ -1472,7 +2633,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1781773624/What_Factors_Influence_the_Lifespan_of_Porcelain_Veneers_in_Teeth_Grinders_osnnga.jpg",
     category: "Cosmetic Dentistry",
     date: "June 19, 2026",
-    iso: "2026-06-19T07:12:49.000Z",
+    iso: "2026-06-19T08:45:19.000Z",
   },
   {
     slug: "how-the-oral-microbiome-influences-dental-implant-success",
@@ -1481,7 +2642,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1781694093/How_the_Oral_Microbiome_Influences_Dental_Implant_Success_zsoyls.jpg",
     category: "General Dentistry",
     date: "June 19, 2026",
-    iso: "2026-06-19T07:12:49.000Z",
+    iso: "2026-06-19T08:45:19.000Z",
   },
   {
     slug: "can-heartburn-medication-influence-dental-implant-treatment",
@@ -1490,7 +2651,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1781694091/Can_Heartburn_Medication_Influence_Dental_Implant_Treatment_cm4f4a.jpg",
     category: "General Dentistry",
     date: "June 19, 2026",
-    iso: "2026-06-19T07:12:49.000Z",
+    iso: "2026-06-19T08:45:19.000Z",
   },
   {
     slug: "can-composite-bonding-make-teeth-sensitive-to-hot-and-cold-foods",
@@ -1499,7 +2660,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1781773595/Can_Composite_Bonding_Make_Teeth_Sensitive_to_Hot_and_Cold_Foods_qyjejy.jpg",
     category: "Cosmetic Dentistry",
     date: "June 19, 2026",
-    iso: "2026-06-19T07:12:49.000Z",
+    iso: "2026-06-19T08:45:19.000Z",
   },
   {
     slug: "can-a-dental-crown-affect-the-health-of-my-tooth",
@@ -1508,7 +2669,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1781773594/Can_a_Dental_Crown_Affect_the_Health_of_My_Tooth_bnsbpn.jpg",
     category: "General Dentistry",
     date: "June 19, 2026",
-    iso: "2026-06-19T07:12:49.000Z",
+    iso: "2026-06-19T08:45:19.000Z",
   },
   {
     slug: "why-does-implant-size-matter-for-long-term-success",
@@ -1517,7 +2678,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1781601410/Why_Does_Implant_Size_Matter_for_Long-Term_Success_jtpalo.jpg",
     category: "General Dentistry",
     date: "June 18, 2026",
-    iso: "2026-06-18T07:12:49.000Z",
+    iso: "2026-06-18T08:45:19.000Z",
   },
   {
     slug: "why-did-my-crown-fall-off-unexpectedly",
@@ -1526,7 +2687,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1781693425/Why_Did_My_Crown_Fall_Off_Unexpectedly_rfkyav.jpg",
     category: "General Dentistry",
     date: "June 18, 2026",
-    iso: "2026-06-18T07:12:49.000Z",
+    iso: "2026-06-18T08:45:19.000Z",
   },
   {
     slug: "understanding-post-treatment-sensitivity-following-composite-bonding",
@@ -1535,7 +2696,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1781693424/Understanding_Post-Treatment_Sensitivity_Following_Composite_Bonding_ot3mez.jpg",
     category: "Cosmetic Dentistry",
     date: "June 18, 2026",
-    iso: "2026-06-18T07:12:49.000Z",
+    iso: "2026-06-18T08:45:19.000Z",
   },
   {
     slug: "how-does-implant-surface-texture-improve-healing",
@@ -1544,7 +2705,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1781601408/How_Does_Implant_Surface_Texture_Improve_Healing_ia0mon.jpg",
     category: "General Dentistry",
     date: "June 18, 2026",
-    iso: "2026-06-18T07:12:49.000Z",
+    iso: "2026-06-18T08:45:19.000Z",
   },
   {
     slug: "can-porcelain-veneers-last-if-you-grind-your-teeth",
@@ -1553,7 +2714,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1781693423/Can_Porcelain_Veneers_Last_if_You_Grind_Your_Teeth_ofpr9l.jpg",
     category: "Cosmetic Dentistry",
     date: "June 18, 2026",
-    iso: "2026-06-18T07:12:49.000Z",
+    iso: "2026-06-18T08:45:19.000Z",
   },
   {
     slug: "how-new-blood-vessels-help-a-dental-implant-bond-to-bone",
@@ -1562,7 +2723,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1781514403/How_New_Blood_Vessels_Help_a_Dental_Implant_Bond_to_Bone_mx1l5r.jpg",
     category: "General Dentistry",
     date: "June 17, 2026",
-    iso: "2026-06-17T07:12:49.000Z",
+    iso: "2026-06-17T08:45:19.000Z",
   },
   {
     slug: "how-does-enamel-help-keep-veneers-secure",
@@ -1571,7 +2732,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1781600724/How_Does_Enamel_Help_Keep_Veneers_Secure_hyortx.jpg",
     category: "Cosmetic Dentistry",
     date: "June 17, 2026",
-    iso: "2026-06-17T07:12:49.000Z",
+    iso: "2026-06-17T08:45:19.000Z",
   },
   {
     slug: "how-can-tooth-sensitivity-be-reduced-after-dental-bonding",
@@ -1580,7 +2741,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1781600723/How_Can_Tooth_Sensitivity_Be_Reduced_After_Dental_Bonding_ppebo5.jpg",
     category: "Cosmetic Dentistry",
     date: "June 17, 2026",
-    iso: "2026-06-17T07:12:49.000Z",
+    iso: "2026-06-17T08:45:19.000Z",
   },
   {
     slug: "can-short-dental-implants-avoid-the-need-for-a-sinus-lift",
@@ -1589,7 +2750,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1781514401/Can_Short_Dental_Implants_Avoid_the_Need_for_a_Sinus_Lift_pbm37g.jpg",
     category: "General Dentistry",
     date: "June 17, 2026",
-    iso: "2026-06-17T07:12:49.000Z",
+    iso: "2026-06-17T08:45:19.000Z",
   },
   {
     slug: "can-a-poorly-fitted-crown-cause-gum-inflammation",
@@ -1598,7 +2759,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1781600721/Can_a_Poorly_Fitted_Crown_Cause_Gum_Inflammation_p2akdl.jpg",
     category: "Dental Health Tips",
     date: "June 17, 2026",
-    iso: "2026-06-17T07:12:49.000Z",
+    iso: "2026-06-17T08:45:19.000Z",
   },
   {
     slug: "is-composite-bonding-the-most-conservative-way-to-close-a-tooth-gap",
@@ -1607,7 +2768,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1781514069/Is_Composite_Bonding_the_Most_Conservative_Way_to_Close_a_Tooth_Gap_thstjh.jpg",
     category: "Cosmetic Dentistry",
     date: "June 16, 2026",
-    iso: "2026-06-16T07:12:49.000Z",
+    iso: "2026-06-16T08:45:19.000Z",
   },
   {
     slug: "how-much-tooth-structure-can-be-safely-removed-for-a-crown",
@@ -1616,7 +2777,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1781514069/How_Much_Tooth_Structure_Can_Be_Safely_Removed_for_a_Crown_uh5ufe.jpg",
     category: "General Dentistry",
     date: "June 16, 2026",
-    iso: "2026-06-16T07:12:49.000Z",
+    iso: "2026-06-16T08:45:19.000Z",
   },
   {
     slug: "how-can-nutrition-support-dental-implant-recovery",
@@ -1625,7 +2786,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1781347456/How_Can_Nutrition_Support_Dental_Implant_Recovery_lue8xw.jpg",
     category: "General Dentistry",
     date: "June 16, 2026",
-    iso: "2026-06-16T07:12:49.000Z",
+    iso: "2026-06-16T08:45:19.000Z",
   },
   {
     slug: "can-veneers-fix-overbite",
@@ -1634,7 +2795,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1781514068/Can_Veneers_Fix_Overbite_ic3ue5.jpg",
     category: "Cosmetic Dentistry",
     date: "June 16, 2026",
-    iso: "2026-06-16T07:12:49.000Z",
+    iso: "2026-06-16T08:45:19.000Z",
   },
   {
     slug: "can-medications-affect-how-a-dental-implant-heals",
@@ -1643,7 +2804,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1781347455/Can_Medications_Affect_How_a_Dental_Implant_Heals_ecicbk.jpg",
     category: "General Dentistry",
     date: "June 16, 2026",
-    iso: "2026-06-16T07:12:49.000Z",
+    iso: "2026-06-16T08:45:19.000Z",
   },
   {
     slug: "understanding-tooth-vitality-during-dental-crown-treatment",
@@ -1652,7 +2813,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1781346898/Understanding_Tooth_Vitality_During_Dental_Crown_Treatment_iuymwp.jpg",
     category: "General Dentistry",
     date: "June 15, 2026",
-    iso: "2026-06-15T07:12:49.000Z",
+    iso: "2026-06-15T08:45:19.000Z",
   },
   {
     slug: "does-body-weight-or-obesity-affect-dental-implant-success",
@@ -1661,7 +2822,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1781267048/Does_Body_Weight_or_Obesity_Affect_Dental_Implant_Success_lk3kov.jpg",
     category: "General Dentistry",
     date: "June 15, 2026",
-    iso: "2026-06-15T07:12:49.000Z",
+    iso: "2026-06-15T08:45:19.000Z",
   },
   {
     slug: "difference-between-porcelain-veneers-and-lumineers",
@@ -1670,7 +2831,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1781346898/What_s_the_Difference_Between_Porcelain_Veneers_and_Lumineers_cjexbe.jpg",
     category: "Cosmetic Dentistry",
     date: "June 15, 2026",
-    iso: "2026-06-15T07:12:49.000Z",
+    iso: "2026-06-15T08:45:19.000Z",
   },
   {
     slug: "dental-implants-safe-mri-scan",
@@ -1679,7 +2840,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1781267045/Are_Dental_Implants_Safe_During_an_MRI_Scan_weqtfi.jpg",
     category: "General Dentistry",
     date: "June 15, 2026",
-    iso: "2026-06-15T07:12:49.000Z",
+    iso: "2026-06-15T08:45:19.000Z",
   },
   {
     slug: "composite-bonding-after-braces",
@@ -1688,7 +2849,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1781346897/Can_I_Get_Composite_Bonding_After_Braces_ycscun.jpg",
     category: "Cosmetic Dentistry",
     date: "June 15, 2026",
-    iso: "2026-06-15T07:12:49.000Z",
+    iso: "2026-06-15T08:45:19.000Z",
   },
   {
     slug: "why-does-composite-bonding-stay-attached-to-enamel",
@@ -1697,7 +2858,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1781266738/Why_Does_Composite_Bonding_Stay_Attached_to_Enamel_buynvp.jpg",
     category: "Cosmetic Dentistry",
     date: "June 13, 2026",
-    iso: "2026-06-13T07:12:49.000Z",
+    iso: "2026-06-13T08:45:19.000Z",
   },
   {
     slug: "chronic-kidney-disease-dental-implants",
@@ -1706,7 +2867,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1781171930/Can_People_with_Chronic_Kidney_Disease_Have_Dental_Implants_l5lpxe.jpg",
     category: "General Dentistry",
     date: "June 13, 2026",
-    iso: "2026-06-13T07:12:49.000Z",
+    iso: "2026-06-13T08:45:19.000Z",
   },
   {
     slug: "can-porcelain-veneers-develop-leaks-around-edges",
@@ -1715,7 +2876,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1781266737/Can_Porcelain_Veneers_Develop_Leaks_Around_the_Edges_lvdcok.jpg",
     category: "Cosmetic Dentistry",
     date: "June 13, 2026",
-    iso: "2026-06-13T07:12:49.000Z",
+    iso: "2026-06-13T08:45:19.000Z",
   },
   {
     slug: "can-people-with-weakened-immune-system-have-dental-implants",
@@ -1724,7 +2885,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1781171930/Can_People_with_Weakened_Immune_System_Have_Dental_Implants_xchvp9.jpg",
     category: "General Dentistry",
     date: "June 13, 2026",
-    iso: "2026-06-13T07:12:49.000Z",
+    iso: "2026-06-13T08:45:19.000Z",
   },
   {
     slug: "why-do-some-root-filled-teeth-need-a-crown",
@@ -1733,7 +2894,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1781170464/Why_Do_Some_Root-Filled_Teeth_Need_a_Crown_rud4rd.jpg",
     category: "General Dentistry",
     date: "June 12, 2026",
-    iso: "2026-06-12T07:12:49.000Z",
+    iso: "2026-06-12T08:45:19.000Z",
   },
   {
     slug: "what-is-emergence-profile-dental-implants",
@@ -1742,7 +2903,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1781092433/What_Is_an_Emergence_Profile_in_Dental_Implants_ylulrz.jpg",
     category: "General Dentistry",
     date: "June 12, 2026",
-    iso: "2026-06-12T07:12:49.000Z",
+    iso: "2026-06-12T08:45:19.000Z",
   },
   {
     slug: "how-does-the-body-accept-a-new-dental-implant",
@@ -1751,7 +2912,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1781092434/How_Does_the_Body_Accept_a_New_Dental_Implant_dtm51q.jpg",
     category: "General Dentistry",
     date: "June 12, 2026",
-    iso: "2026-06-12T07:12:49.000Z",
+    iso: "2026-06-12T08:45:19.000Z",
   },
   {
     slug: "can-you-get-veneers-with-receding-gums",
@@ -1760,7 +2921,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1781170465/Can_You_Get_Veneers_with_Receding_Gums_ohf616.jpg",
     category: "Cosmetic Dentistry",
     date: "June 12, 2026",
-    iso: "2026-06-12T07:12:49.000Z",
+    iso: "2026-06-12T08:45:19.000Z",
   },
   {
     slug: "can-you-floss-with-composite-bonding",
@@ -1769,7 +2930,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1781170463/Can_You_Floss_with_Composite_Bonding_t1en8q.jpg",
     category: "Cosmetic Dentistry",
     date: "June 12, 2026",
-    iso: "2026-06-12T07:12:49.000Z",
+    iso: "2026-06-12T08:45:19.000Z",
   },
   {
     slug: "immediate-vs-delayed-loading-titanium-implants",
@@ -1778,7 +2939,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1780996244/Immediate_vs_Delayed_Loading_for_Titanium_Implants_alnbck.jpg",
     category: "General Dentistry",
     date: "June 11, 2026",
-    iso: "2026-06-11T07:12:49.000Z",
+    iso: "2026-06-11T08:45:19.000Z",
   },
   {
     slug: "how-surgical-guides-improve-implant-precision",
@@ -1787,7 +2948,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1780996243/How_Surgical_Guides_Improve_Implant_Precision_kgyujq.jpg",
     category: "General Dentistry",
     date: "June 11, 2026",
-    iso: "2026-06-11T07:12:49.000Z",
+    iso: "2026-06-11T08:45:19.000Z",
   },
   {
     slug: "glass-ceramic-vs-zirconia-crowns-for-biting-force",
@@ -1796,7 +2957,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1781092005/Glass-Ceramic_vs_Zirconia_Crowns_for_Biting_Force_m7bctj.jpg",
     category: "General Dentistry",
     date: "June 11, 2026",
-    iso: "2026-06-11T07:12:49.000Z",
+    iso: "2026-06-11T08:45:19.000Z",
   },
   {
     slug: "do-veneers-cause-bad-breath",
@@ -1805,7 +2966,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1781092005/Do_Veneers_Cause_Bad_Breath_kdwjkf.jpg",
     category: "Cosmetic Dentistry",
     date: "June 11, 2026",
-    iso: "2026-06-11T07:12:49.000Z",
+    iso: "2026-06-11T08:45:19.000Z",
   },
   {
     slug: "can-you-smoke-after-composite-bonding",
@@ -1814,7 +2975,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1781092005/Can_You_Smoke_After_Composite_Bonding_oziz6y.jpg",
     category: "Cosmetic Dentistry",
     date: "June 11, 2026",
-    iso: "2026-06-11T07:12:49.000Z",
+    iso: "2026-06-11T08:45:19.000Z",
   },
   {
     slug: "who-invented-dental-implants-history-of-implant-dentistry",
@@ -1823,7 +2984,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1780670206/Who_Invented_Dental_Implants_A_History_of_Implant_Dentistry_qexax5.jpg",
     category: "General Dentistry",
     date: "June 10, 2026",
-    iso: "2026-06-10T07:12:49.000Z",
+    iso: "2026-06-10T08:45:19.000Z",
   },
   {
     slug: "types-of-dental-implants-your-options-explained",
@@ -1832,7 +2993,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1780670207/Types_of_Dental_Implants_Your_Options_Explained_rifhu3.jpg",
     category: "General Dentistry",
     date: "June 10, 2026",
-    iso: "2026-06-10T07:12:49.000Z",
+    iso: "2026-06-10T08:45:19.000Z",
   },
   {
     slug: "preventing-tooth-fractures-under-posterior-crowns",
@@ -1841,7 +3002,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1780995930/Preventing_Tooth_Fractures_Under_Posterior_Crowns_htnw5c.jpg",
     category: "General Dentistry",
     date: "June 10, 2026",
-    iso: "2026-06-10T07:12:49.000Z",
+    iso: "2026-06-10T08:45:19.000Z",
   },
   {
     slug: "does-composite-bonding-cause-bad-breath",
@@ -1850,7 +3011,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1780995931/Does_Composite_Bonding_Cause_Bad_Breath_hcz1pq.jpg",
     category: "Cosmetic Dentistry",
     date: "June 10, 2026",
-    iso: "2026-06-10T07:12:49.000Z",
+    iso: "2026-06-10T08:45:19.000Z",
   },
   {
     slug: "do-veneers-stain-with-coffee",
@@ -1859,7 +3020,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1780995930/Do_Veneers_Stain_With_Coffee_o4zfhe.jpg",
     category: "Cosmetic Dentistry",
     date: "June 10, 2026",
-    iso: "2026-06-10T07:12:49.000Z",
+    iso: "2026-06-10T08:45:19.000Z",
   },
   {
     slug: "treating-incisal-edge-wear-with-direct-composite",
@@ -1868,7 +3029,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1780944185/Treating_Incisal_Edge_Wear_with_Direct_Composite_cubpyt.jpg",
     category: "General Dentistry",
     date: "June 9, 2026",
-    iso: "2026-06-09T07:12:49.000Z",
+    iso: "2026-06-09T08:45:19.000Z",
   },
   {
     slug: "spotting-early-signs-perimucositis-around-abutments",
@@ -1877,7 +3038,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1780944185/Spotting_Early_Signs_of_Perimucositis_Around_Abutmentss_mqornm.jpg",
     category: "General Dentistry",
     date: "June 9, 2026",
-    iso: "2026-06-09T07:12:49.000Z",
+    iso: "2026-06-09T08:45:19.000Z",
   },
   {
     slug: "hiding-deep-tetracycline-stains-with-porcelain-veneers",
@@ -1886,7 +3047,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1780944185/Hiding_Deep_Tetracycline_Stains_with_Porcelain_Veneers_pxsbqt.jpg",
     category: "Cosmetic Dentistry",
     date: "June 9, 2026",
-    iso: "2026-06-09T07:12:49.000Z",
+    iso: "2026-06-09T08:45:19.000Z",
   },
   {
     slug: "bone-volume-needed-for-narrow-diameter-implants",
@@ -1895,7 +3056,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1780944186/Bone_Volume_Needed_for_Narrow-Diameter_Implants_uformm.jpg",
     category: "General Dentistry",
     date: "June 9, 2026",
-    iso: "2026-06-09T07:12:49.000Z",
+    iso: "2026-06-09T08:45:19.000Z",
   },
   {
     slug: "balancing-gum-health-and-crown-aesthetic-margins",
@@ -1904,7 +3065,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1780944185/Balancing_Gum_Health_and_Crown_Aesthetic_Margins_t7e8i4.jpg",
     category: "Dental Health Tips",
     date: "June 9, 2026",
-    iso: "2026-06-09T07:12:49.000Z",
+    iso: "2026-06-09T08:45:19.000Z",
   },
   {
     slug: "how-long-after-dental-implants-can-i-drink-alcohol",
@@ -1913,7 +3074,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1780670207/How_Long_After_Dental_Implants_Can_I_Drink_Alcohol_fy1oin.jpg",
     category: "General Dentistry",
     date: "June 8, 2026",
-    iso: "2026-06-08T07:12:49.000Z",
+    iso: "2026-06-08T08:45:19.000Z",
   },
   {
     slug: "do-you-have-to-brush-veneers-veneer-care-explained",
@@ -1922,7 +3083,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1780670526/Do_You_Have_to_Brush_Veneers_Veneer_Care_Explained_awq2d5.jpg",
     category: "Cosmetic Dentistry",
     date: "June 8, 2026",
-    iso: "2026-06-08T07:12:49.000Z",
+    iso: "2026-06-08T08:45:19.000Z",
   },
   {
     slug: "composite-bonding-for-overlapping-teeth",
@@ -1931,7 +3092,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1780670525/Composite_Bonding_for_Overlapping_Teeth_A_Fast_Non-Invasive_Cosmetic_Fix_v62eiq.jpg",
     category: "Cosmetic Dentistry",
     date: "June 8, 2026",
-    iso: "2026-06-08T07:12:49.000Z",
+    iso: "2026-06-08T08:45:19.000Z",
   },
   {
     slug: "can-dental-implants-get-plaque",
@@ -1940,7 +3101,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1780670206/Can_dental_implants_get_plaque_ljp98z.jpg",
     category: "General Dentistry",
     date: "June 8, 2026",
-    iso: "2026-06-08T07:12:49.000Z",
+    iso: "2026-06-08T08:45:19.000Z",
   },
   {
     slug: "can-dental-crowns-change-colour-over-time",
@@ -1949,7 +3110,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1780670525/Can_dental_crowns_change_colour_over_time_mdlfge.jpg",
     category: "General Dentistry",
     date: "June 8, 2026",
-    iso: "2026-06-08T07:12:49.000Z",
+    iso: "2026-06-08T08:45:19.000Z",
   },
   {
     slug: "why-is-timing-important-for-dental-implant-placement",
@@ -1958,7 +3119,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1780579123/Why_is_timing_important_for_dental_implant_placement_puwynl.jpg",
     category: "General Dentistry",
     date: "June 6, 2026",
-    iso: "2026-06-06T07:12:49.000Z",
+    iso: "2026-06-06T08:45:19.000Z",
   },
   {
     slug: "veneer-shape-colour-translucency-final-result",
@@ -1967,7 +3128,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1780643986/How_can_veneer_shape_colour_and_translucency_affect_the_final_result_xw5us4.jpg",
     category: "Cosmetic Dentistry",
     date: "June 6, 2026",
-    iso: "2026-06-06T07:12:49.000Z",
+    iso: "2026-06-06T08:45:19.000Z",
   },
   {
     slug: "how-do-chewing-forces-affect-the-lifespan-of-composite-bonding",
@@ -1976,7 +3137,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1780643988/How_do_chewing_forces_affect_the_lifespan_of_composite_bonding_jowjko.jpg",
     category: "Cosmetic Dentistry",
     date: "June 6, 2026",
-    iso: "2026-06-06T07:12:49.000Z",
+    iso: "2026-06-06T08:45:19.000Z",
   },
   {
     slug: "food-stuck-around-old-dental-crown",
@@ -1985,7 +3146,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1780643989/Why_is_food_suddenly_getting_stuck_around_my_old_dental_crown_w7ftj0.jpg",
     category: "General Dentistry",
     date: "June 6, 2026",
-    iso: "2026-06-06T07:12:49.000Z",
+    iso: "2026-06-06T08:45:19.000Z",
   },
   {
     slug: "can-dental-implants-withstand-heavy-grinding-forces",
@@ -1994,7 +3155,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1780579121/Can_dental_implants_withstand_heavy_grinding_forces_ziitf6.jpg",
     category: "General Dentistry",
     date: "June 6, 2026",
-    iso: "2026-06-06T07:12:49.000Z",
+    iso: "2026-06-06T08:45:19.000Z",
   },
   {
     slug: "why-does-my-dental-implant-hurt-or-feel-loose-years-later",
@@ -2003,7 +3164,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1780467877/Why_does_my_dental_implant_hurt_or_feel_loose_years_later_lales2.jpg",
     category: "General Dentistry",
     date: "June 5, 2026",
-    iso: "2026-06-05T07:12:49.000Z",
+    iso: "2026-06-05T08:45:19.000Z",
   },
   {
     slug: "porcelain-veneer-colour-matching-tetracycline-staining",
@@ -2012,7 +3173,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1780578892/Can_a_porcelain_veneer_be_colour-matched_to_tetracycline_staining_a7cuws.jpg",
     category: "Cosmetic Dentistry",
     date: "June 5, 2026",
-    iso: "2026-06-05T07:12:49.000Z",
+    iso: "2026-06-05T08:45:19.000Z",
   },
   {
     slug: "composite-bonding-hide-white-spots-teeth",
@@ -2021,7 +3182,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1780578892/Can_composite_bonding_hide_white_spots_on_teeth_iy6udq.jpg",
     category: "Cosmetic Dentistry",
     date: "June 5, 2026",
-    iso: "2026-06-05T07:12:49.000Z",
+    iso: "2026-06-05T08:45:19.000Z",
   },
   {
     slug: "can-dental-implant-affect-sinus-cavity",
@@ -2030,7 +3191,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1780467875/Can_a_dental_implant_affect_the_sinus_cavity_j8ijaj.jpg",
     category: "Dental Health Tips",
     date: "June 5, 2026",
-    iso: "2026-06-05T07:12:49.000Z",
+    iso: "2026-06-05T08:45:19.000Z",
   },
   {
     slug: "can-a-dental-crown-restore-a-tooth-damaged-by-acid-reflux",
@@ -2039,7 +3200,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1780578891/Can_a_dental_crown_restore_a_tooth_damaged_by_acid_reflux_s2wn1j.jpg",
     category: "General Dentistry",
     date: "June 5, 2026",
-    iso: "2026-06-05T07:12:49.000Z",
+    iso: "2026-06-05T08:45:19.000Z",
   },
   {
     slug: "why-do-healing-times-vary-between-dental-implant-patients",
@@ -2048,7 +3209,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1780392390/Why_do_healing_times_vary_between_dental_implant_patients_cvp0ce.jpg",
     category: "General Dentistry",
     date: "June 4, 2026",
-    iso: "2026-06-04T07:12:49.000Z",
+    iso: "2026-06-04T08:45:19.000Z",
   },
   {
     slug: "implant-crown-design-easiest-maintenance",
@@ -2057,7 +3218,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1780392389/Which_implant_crown_design_offers_the_easiest_future_maintenance_prz1yj.jpg",
     category: "General Dentistry",
     date: "June 4, 2026",
-    iso: "2026-06-04T07:12:49.000Z",
+    iso: "2026-06-04T08:45:19.000Z",
   },
   {
     slug: "how-does-deep-bite-affect-composite-bonding",
@@ -2066,7 +3227,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1780467530/How_does_a_deep_bite_affect_composite_bonding_vbqhoj.jpg",
     category: "Cosmetic Dentistry",
     date: "June 4, 2026",
-    iso: "2026-06-04T07:12:49.000Z",
+    iso: "2026-06-04T08:45:19.000Z",
   },
   {
     slug: "cracked-silver-filling-repair-or-crown",
@@ -2075,7 +3236,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1780467530/Can_a_cracked_silver_filling_be_repaired_or_does_it_need_a_crown_alchpe.jpg",
     category: "General Dentistry",
     date: "June 4, 2026",
-    iso: "2026-06-04T07:12:49.000Z",
+    iso: "2026-06-04T08:45:19.000Z",
   },
   {
     slug: "can-a-single-porcelain-veneer-fix-a-broken-front-tooth-invisibly",
@@ -2084,7 +3245,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1780467529/Can_a_single_porcelain_veneer_fix_a_broken_front_tooth_invisibly_nl8fmk.jpg",
     category: "Cosmetic Dentistry",
     date: "June 4, 2026",
-    iso: "2026-06-04T07:12:49.000Z",
+    iso: "2026-06-04T08:45:19.000Z",
   },
   {
     slug: "what-causes-gum-inflammation-around-existing-crown",
@@ -2093,7 +3254,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1780392126/What_causes_gum_inflammation_around_an_existing_crown_ahunqy.jpg",
     category: "Dental Health Tips",
     date: "June 3, 2026",
-    iso: "2026-06-03T07:12:49.000Z",
+    iso: "2026-06-03T08:45:19.000Z",
   },
   {
     slug: "what-causes-floss-to-catch-around-composite-bonding",
@@ -2102,7 +3263,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1780392126/What_causes_floss_to_catch_around_composite_bonding_wpgvo8.jpg",
     category: "Cosmetic Dentistry",
     date: "June 3, 2026",
-    iso: "2026-06-03T07:12:49.000Z",
+    iso: "2026-06-03T08:45:19.000Z",
   },
   {
     slug: "tooth-sensitivity-temporary-veneers",
@@ -2111,7 +3272,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1780392125/Is_tooth_sensitivity_normal_while_wearing_temporary_veneers_wyauor.jpg",
     category: "Cosmetic Dentistry",
     date: "June 3, 2026",
-    iso: "2026-06-03T07:12:49.000Z",
+    iso: "2026-06-03T08:45:19.000Z",
   },
   {
     slug: "narrow-jawbone-ridge-expansion-dental-implant",
@@ -2120,7 +3281,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1780310559/Why_might_a_narrow_jawbone_need_ridge_expansion_before_a_dental_implant_yboaed.jpg",
     category: "General Dentistry",
     date: "June 3, 2026",
-    iso: "2026-06-03T07:12:49.000Z",
+    iso: "2026-06-03T08:45:19.000Z",
   },
   {
     slug: "bleeding-around-dental-implant-vs-natural-teeth",
@@ -2129,7 +3290,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1780310554/Is_bleeding_around_a_dental_implant_more_serious_than_bleeding_around_natural_teeth_kczmke.jpg",
     category: "General Dentistry",
     date: "June 3, 2026",
-    iso: "2026-06-03T07:12:49.000Z",
+    iso: "2026-06-03T08:45:19.000Z",
   },
   {
     slug: "how-can-early-implant-disease-be-detected",
@@ -2138,7 +3299,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1780251125/How_can_early_implant_disease_be_detected_exxi9i.jpg",
     category: "General Dentistry",
     date: "June 2, 2026",
-    iso: "2026-06-02T07:12:49.000Z",
+    iso: "2026-06-02T08:45:19.000Z",
   },
   {
     slug: "does-composite-bonding-need-to-be-replaced-if-tooth-underneath-is-damaged",
@@ -2147,7 +3308,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1780309810/Does_composite_bonding_need_to_be_replaced_if_the_tooth_underneath_is_damaged_qsghvb.jpg",
     category: "Cosmetic Dentistry",
     date: "June 2, 2026",
-    iso: "2026-06-02T07:12:49.000Z",
+    iso: "2026-06-02T08:45:19.000Z",
   },
   {
     slug: "crown-emergence-profile-why-it-matters",
@@ -2156,7 +3317,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1780309811/What_is_a_crown_emergence_profile_and_why_does_it_matter_bc8o5n.jpg",
     category: "General Dentistry",
     date: "June 2, 2026",
-    iso: "2026-06-02T07:12:49.000Z",
+    iso: "2026-06-02T08:45:19.000Z",
   },
   {
     slug: "can-porcelain-veneers-fix-dark-tooth-trauma",
@@ -2165,7 +3326,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1780309809/Can_porcelain_veneers_fix_a_dark_tooth_caused_by_trauma_dmewtn.jpg",
     category: "Cosmetic Dentistry",
     date: "June 2, 2026",
-    iso: "2026-06-02T07:12:49.000Z",
+    iso: "2026-06-02T08:45:19.000Z",
   },
   {
     slug: "can-bacteria-enter-microscopic-gaps-around-dental-implants",
@@ -2174,7 +3335,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1780251125/Can_bacteria_enter_microscopic_gaps_around_dental_implants_fawt9l.jpg",
     category: "General Dentistry",
     date: "June 2, 2026",
-    iso: "2026-06-02T07:12:49.000Z",
+    iso: "2026-06-02T08:45:19.000Z",
   },
   {
     slug: "why-does-composite-bonding-stain-more-around-the-edges-over-time",
@@ -2183,7 +3344,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1780250506/Why_does_composite_bonding_stain_more_around_the_edges_over_time_s2rqeh.jpg",
     category: "Cosmetic Dentistry",
     date: "June 1, 2026",
-    iso: "2026-06-01T07:12:49.000Z",
+    iso: "2026-06-01T08:45:19.000Z",
   },
   {
     slug: "what-is-the-1-5-mm-rule-in-dental-implant-placement",
@@ -2192,7 +3353,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1780053902/What_is_the_1.5_mm_rule_in_dental_implant_placement_qvcfwy.jpg",
     category: "General Dentistry",
     date: "June 1, 2026",
-    iso: "2026-06-01T07:12:49.000Z",
+    iso: "2026-06-01T08:45:19.000Z",
   },
   {
     slug: "what-is-crevicular-fluid-and-what-can-it-reveal-about-implant-health",
@@ -2201,7 +3362,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1780053901/What_is_crevicular_fluid_and_what_can_it_reveal_about_implant_health_lfp6tx.jpg",
     category: "General Dentistry",
     date: "June 1, 2026",
-    iso: "2026-06-01T07:12:49.000Z",
+    iso: "2026-06-01T08:45:19.000Z",
   },
   {
     slug: "how-do-veneers-mask-tetracycline-staining-or-fluorosis",
@@ -2210,7 +3371,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1780250434/How_do_veneers_mask_tetracycline_staining_or_fluorosis_mgsi2c.jpg",
     category: "Cosmetic Dentistry",
     date: "June 1, 2026",
-    iso: "2026-06-01T07:12:49.000Z",
+    iso: "2026-06-01T08:45:19.000Z",
   },
   {
     slug: "gum-health-around-anterior-crowns",
@@ -2219,7 +3380,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1780250434/What_helps_keep_the_gums_healthy_around_anterior_crowns_jvmftn.jpg",
     category: "Dental Health Tips",
     date: "June 1, 2026",
-    iso: "2026-06-01T07:12:49.000Z",
+    iso: "2026-06-01T08:45:19.000Z",
   },
   {
     slug: "poorly-designed-crowns-gum-inflammation-recession",
@@ -2228,7 +3389,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1780054291/Can_poorly_designed_crowns_cause_gum_inflammation_or_recession_srrnou.jpg",
     category: "Dental Health Tips",
     date: "May 31, 2026",
-    iso: "2026-05-31T07:12:49.000Z",
+    iso: "2026-05-31T08:45:19.000Z",
   },
   {
     slug: "natural-tooth-damage-under-dental-bonding",
@@ -2237,7 +3398,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1780054292/Can_the_natural_tooth_under_dental_bonding_become_damaged_aadt1o.jpg",
     category: "Cosmetic Dentistry",
     date: "May 31, 2026",
-    iso: "2026-05-31T07:12:49.000Z",
+    iso: "2026-05-31T08:45:19.000Z",
   },
   {
     slug: "micro-gaps-dental-implants-why-they-matter",
@@ -2246,7 +3407,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1779962936/What_are_micro-gaps_in_dental_implants_and_why_do_they_matter_voqd0w.jpg",
     category: "General Dentistry",
     date: "May 31, 2026",
-    iso: "2026-05-31T07:12:49.000Z",
+    iso: "2026-05-31T08:45:19.000Z",
   },
   {
     slug: "managing-colour-transition-zones-veneers-natural-teeth",
@@ -2255,7 +3416,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1780054293/Managing_Colour_Transition_Zones_Between_Veneers_and_Natural_Teeth_mxnmbp.jpg",
     category: "Cosmetic Dentistry",
     date: "May 31, 2026",
-    iso: "2026-05-31T07:12:49.000Z",
+    iso: "2026-05-31T08:45:19.000Z",
   },
   {
     slug: "how-does-implant-crown-design-affect-long-term-maintenance",
@@ -2264,7 +3425,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1779962935/How_does_implant_crown_design_affect_long-term_maintenance_kfztsz.jpg",
     category: "General Dentistry",
     date: "May 31, 2026",
-    iso: "2026-05-31T07:12:49.000Z",
+    iso: "2026-05-31T08:45:19.000Z",
   },
   {
     slug: "factors-influencing-dental-implant-stability",
@@ -2273,7 +3434,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1779877612/What_factors_influence_the_stability_of_a_dental_implant_p5yupv.jpg",
     category: "General Dentistry",
     date: "May 29, 2026",
-    iso: "2026-05-29T07:12:49.000Z",
+    iso: "2026-05-29T08:45:19.000Z",
   },
   {
     slug: "difference-between-primary-and-secondary-implant-stability",
@@ -2282,7 +3443,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1779877613/What_is_the_difference_between_primary_and_secondary_implant_stability_jjlkni.jpg",
     category: "General Dentistry",
     date: "May 29, 2026",
-    iso: "2026-05-29T07:12:49.000Z",
+    iso: "2026-05-29T08:45:19.000Z",
   },
   {
     slug: "dental-crown-biological-compatibility-gums",
@@ -2291,7 +3452,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1779963216/What_makes_a_dental_crown_biologically_compatible_with_the_gums_szxqrt.jpg",
     category: "Dental Health Tips",
     date: "May 29, 2026",
-    iso: "2026-05-29T07:12:49.000Z",
+    iso: "2026-05-29T08:45:19.000Z",
   },
   {
     slug: "can-composite-bonding-repair-severely-worn-front-teeth",
@@ -2300,7 +3461,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1779963215/Can_composite_bonding_repair_severely_worn_front_teeth_d6ucyi.jpg",
     category: "Cosmetic Dentistry",
     date: "May 29, 2026",
-    iso: "2026-05-29T07:12:49.000Z",
+    iso: "2026-05-29T08:45:19.000Z",
   },
   {
     slug: "are-modern-veneers-more-conservative-than-older-veneer-techniques",
@@ -2309,7 +3470,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1779963214/Are_modern_veneers_more_conservative_than_older_veneer_techniques_umhk0w.jpg",
     category: "Cosmetic Dentistry",
     date: "May 29, 2026",
-    iso: "2026-05-29T07:12:49.000Z",
+    iso: "2026-05-29T08:45:19.000Z",
   },
   {
     slug: "micro-texture-dental-bonding-appearance",
@@ -2318,7 +3479,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1779877320/How_does_micro-texture_affect_the_appearance_of_dental_bonding_qb0ehk.jpg",
     category: "Cosmetic Dentistry",
     date: "May 28, 2026",
-    iso: "2026-05-28T07:12:49.000Z",
+    iso: "2026-05-28T08:45:19.000Z",
   },
   {
     slug: "how-nutritional-deficiencies-affect-dental-implant-healing",
@@ -2327,7 +3488,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1779793848/How_do_nutritional_deficiencies_affect_dental_implant_healing_mchtw2.jpg",
     category: "General Dentistry",
     date: "May 28, 2026",
-    iso: "2026-05-28T07:12:49.000Z",
+    iso: "2026-05-28T08:45:19.000Z",
   },
   {
     slug: "how-does-crown-margin-placement-affect-gum-health",
@@ -2336,7 +3497,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1779877319/How_does_crown_margin_placement_affect_gum_health_ie8kgx.jpg",
     category: "Dental Health Tips",
     date: "May 28, 2026",
-    iso: "2026-05-28T07:12:49.000Z",
+    iso: "2026-05-28T08:45:19.000Z",
   },
   {
     slug: "how-do-dental-implants-transmit-chewing-pressure-differently",
@@ -2345,7 +3506,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1779793358/How_do_dental_implants_transmit_chewing_pressure_differently_dea12n.jpg",
     category: "General Dentistry",
     date: "May 28, 2026",
-    iso: "2026-05-28T07:12:49.000Z",
+    iso: "2026-05-28T08:45:19.000Z",
   },
   {
     slug: "can-porcelain-veneers-correct-uneven-biting-edges",
@@ -2354,7 +3515,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1779877319/Can_Porcelain_Veneers_Correct_Uneven_Biting_Edges_vy3ssk.jpg",
     category: "Cosmetic Dentistry",
     date: "May 28, 2026",
-    iso: "2026-05-28T07:12:49.000Z",
+    iso: "2026-05-28T08:45:19.000Z",
   },
   {
     slug: "why-does-light-reflection-matter-in-cosmetic-dental-crowns",
@@ -2363,7 +3524,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1779792682/Why_does_light_reflection_matter_in_cosmetic_dental_crowns_awz9cn.jpg",
     category: "Cosmetic Dentistry",
     date: "May 27, 2026",
-    iso: "2026-05-27T07:12:49.000Z",
+    iso: "2026-05-27T08:45:19.000Z",
   },
   {
     slug: "what-is-bis-gma-and-why-is-it-used-in-dental-bonding",
@@ -2372,7 +3533,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1779792681/What_is_Bis-GMA_and_why_is_it_used_in_dental_bonding_g4ikxo.jpg",
     category: "Cosmetic Dentistry",
     date: "May 27, 2026",
-    iso: "2026-05-27T07:12:49.000Z",
+    iso: "2026-05-27T08:45:19.000Z",
   },
   {
     slug: "porcelain-veneers-correct-asymmetrical-slanted-smile-line",
@@ -2381,7 +3542,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1779792681/Can_Porcelain_Veneers_Correct_an_Asymmetrical_or_Slanted_Smile_Line_fqc73q.jpg",
     category: "Cosmetic Dentistry",
     date: "May 27, 2026",
-    iso: "2026-05-27T07:12:49.000Z",
+    iso: "2026-05-27T08:45:19.000Z",
   },
   {
     slug: "healing-phase-weeks-2-4-dental-implants",
@@ -2390,7 +3551,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1779706490/What_happens_during_the_healing_phase_between_weeks_2_and_4_after_dental_implants_ooqbku.jpg",
     category: "General Dentistry",
     date: "May 27, 2026",
-    iso: "2026-05-27T07:12:49.000Z",
+    iso: "2026-05-27T08:45:19.000Z",
   },
   {
     slug: "biological-changes-after-dental-implant-placement",
@@ -2399,7 +3560,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1779706489/What_biological_changes_occur_after_dental_implant_placement_hwre0w.jpg",
     category: "General Dentistry",
     date: "May 27, 2026",
-    iso: "2026-05-27T07:12:49.000Z",
+    iso: "2026-05-27T08:45:19.000Z",
   },
   {
     slug: "what-is-keratinised-tissue-and-why-does-it-matter-for-implants",
@@ -2408,7 +3569,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1779443655/What_is_keratinised_tissue_and_why_does_it_matter_for_implants_enol35.jpg",
     category: "General Dentistry",
     date: "May 26, 2026",
-    iso: "2026-05-26T07:12:49.000Z",
+    iso: "2026-05-26T08:45:19.000Z",
   },
   {
     slug: "what-happens-when-composite-bonding-wears-down-over-time",
@@ -2417,7 +3578,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1779704661/What_Actually_Happens_When_Composite_Bonding_Wears_Down_Over_Time_cjm8oy.jpg",
     category: "Cosmetic Dentistry",
     date: "May 26, 2026",
-    iso: "2026-05-26T07:12:49.000Z",
+    iso: "2026-05-26T08:45:19.000Z",
   },
   {
     slug: "role-of-translucency-in-cosmetic-crown-aesthetics",
@@ -2426,7 +3587,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1779704661/What_is_the_role_of_translucency_in_cosmetic_crown_aesthetics_bwfpm5.jpg",
     category: "Cosmetic Dentistry",
     date: "May 26, 2026",
-    iso: "2026-05-26T07:12:49.000Z",
+    iso: "2026-05-26T08:45:19.000Z",
   },
   {
     slug: "protect-veneers-from-everyday-wear-and-tear",
@@ -2435,7 +3596,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1779704661/How_can_you_protect_veneers_from_everyday_wear_and_tear_dib7lc.jpg",
     category: "Cosmetic Dentistry",
     date: "May 26, 2026",
-    iso: "2026-05-26T07:12:49.000Z",
+    iso: "2026-05-26T08:45:19.000Z",
   },
   {
     slug: "can-bruxism-cause-implant-screws-to-loosen-or-fail",
@@ -2444,7 +3605,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1779443654/Can_bruxism_cause_implant_screws_to_loosen_or_fail_twzibd.jpg",
     category: "General Dentistry",
     date: "May 26, 2026",
-    iso: "2026-05-26T07:12:49.000Z",
+    iso: "2026-05-26T08:45:19.000Z",
   },
   {
     slug: "why-some-dental-implants-fail-in-first-year",
@@ -2453,7 +3614,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1778869327/Why_Some_Dental_Implants_Fail_in_the_First_Year_and_What_Can_Be_Done_About_It_gc64vw.jpg",
     category: "General Dentistry",
     date: "May 25, 2026",
-    iso: "2026-05-25T07:12:49.000Z",
+    iso: "2026-05-25T08:45:19.000Z",
   },
   {
     slug: "veneer-on-tooth-with-root-canal",
@@ -2462,7 +3623,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1778869324/Can_You_Have_a_Veneer_on_a_Tooth_That_Has_Already_Had_a_Root_Canal_jkm8iv.jpg",
     category: "Cosmetic Dentistry",
     date: "May 25, 2026",
-    iso: "2026-05-25T07:12:49.000Z",
+    iso: "2026-05-25T08:45:19.000Z",
   },
   {
     slug: "crown-decay-underneath-prevention",
@@ -2471,7 +3632,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1778869325/Why_a_Crown_Can_Still_Get_Decay_Underneath_It_and_How_to_Prevent_It_zvq6hr.jpg",
     category: "Dental Health Tips",
     date: "May 25, 2026",
-    iso: "2026-05-25T07:12:49.000Z",
+    iso: "2026-05-25T08:45:19.000Z",
   },
   {
     slug: "composite-bonding-photos-vs-real-life",
@@ -2480,7 +3641,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1778869326/Why_Composite_Bonding_Sometimes_Looks_Different_in_Photos_Than_in_Real_Life_yqnczs.jpg",
     category: "Cosmetic Dentistry",
     date: "May 25, 2026",
-    iso: "2026-05-25T07:12:49.000Z",
+    iso: "2026-05-25T08:45:19.000Z",
   },
   {
     slug: "can-you-have-dental-implant-with-heart-condition",
@@ -2489,7 +3650,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1778869323/Can_You_Have_a_Dental_Implant_If_You_Have_a_Heart_Condition_zgrkw3.jpg",
     category: "General Dentistry",
     date: "May 25, 2026",
-    iso: "2026-05-25T07:12:49.000Z",
+    iso: "2026-05-25T08:45:19.000Z",
   },
   {
     slug: "why-is-marginal-fit-important-for-veneers",
@@ -2498,7 +3659,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1779444888/Why_is_marginal_fit_important_for_veneers_sr8evk.jpg",
     category: "Cosmetic Dentistry",
     date: "May 23, 2026",
-    iso: "2026-05-23T07:12:49.000Z",
+    iso: "2026-05-23T08:45:19.000Z",
   },
   {
     slug: "what-gives-anterior-crowns-natural-translucent-appearance",
@@ -2507,7 +3668,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1779444886/What_gives_anterior_crowns_a_natural_translucent_appearance_qwqxbh.jpg",
     category: "General Dentistry",
     date: "May 23, 2026",
-    iso: "2026-05-23T07:12:49.000Z",
+    iso: "2026-05-23T08:45:19.000Z",
   },
   {
     slug: "how-dentists-protect-dental-implants-excessive-bite-forces",
@@ -2516,7 +3677,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1779443654/How_do_dentists_protect_dental_implants_from_excessive_bite_forces_yzrxbt.jpg",
     category: "General Dentistry",
     date: "May 23, 2026",
-    iso: "2026-05-23T07:12:49.000Z",
+    iso: "2026-05-23T08:45:19.000Z",
   },
   {
     slug: "gradual-loading-important-after-implant-placement",
@@ -2525,7 +3686,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1779443900/Why_is_gradual_loading_important_after_implant_placement_cpgm2o.jpg",
     category: "General Dentistry",
     date: "May 23, 2026",
-    iso: "2026-05-23T07:12:49.000Z",
+    iso: "2026-05-23T08:45:19.000Z",
   },
   {
     slug: "can-whitening-weaken-bond-strength-composite-resin",
@@ -2534,7 +3695,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1779444884/Can_whitening_weaken_the_bond_strength_of_composite_resin_ti465w.jpg",
     category: "Cosmetic Dentistry",
     date: "May 23, 2026",
-    iso: "2026-05-23T07:12:49.000Z",
+    iso: "2026-05-23T08:45:19.000Z",
   },
   {
     slug: "new-dental-crown-feels-too-tall-heavy-when-bite",
@@ -2543,7 +3704,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1779287235/Why_Does_My_New_Dental_Crown_Feel_Too_Tall_or_Heavy_When_I_Bite_rtubg3.jpg",
     category: "General Dentistry",
     date: "May 22, 2026",
-    iso: "2026-05-22T07:12:49.000Z",
+    iso: "2026-05-22T08:45:19.000Z",
   },
   {
     slug: "how-do-implant-supported-bridges-differ-from-traditional-bridges",
@@ -2552,7 +3713,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1779286802/How_do_implant-supported_bridges_differ_from_traditional_bridges_rutrwr.jpg",
     category: "General Dentistry",
     date: "May 22, 2026",
-    iso: "2026-05-22T07:12:49.000Z",
+    iso: "2026-05-22T08:45:19.000Z",
   },
   {
     slug: "healing-after-dental-implants-different-medical-conditions",
@@ -2561,7 +3722,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1779286803/Why_is_healing_after_dental_implants_different_for_some_medical_conditions_vuz5id.jpg",
     category: "General Dentistry",
     date: "May 22, 2026",
-    iso: "2026-05-22T07:12:49.000Z",
+    iso: "2026-05-22T08:45:19.000Z",
   },
   {
     slug: "habits-that-damage-composite-bonding",
@@ -2570,7 +3731,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1779287236/What_habits_can_damage_composite_bonding_gw1efm.jpg",
     category: "Cosmetic Dentistry",
     date: "May 22, 2026",
-    iso: "2026-05-22T07:12:49.000Z",
+    iso: "2026-05-22T08:45:19.000Z",
   },
   {
     slug: "dental-veneers-bonding-hide-dark-non-vital-tooth",
@@ -2579,7 +3740,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1779287233/Can_Dental_Veneers_or_Bonding_Hide_an_Intensely_Dark_Non-Vital_Tooth_aqdc82.jpg",
     category: "Cosmetic Dentistry",
     date: "May 22, 2026",
-    iso: "2026-05-22T07:12:49.000Z",
+    iso: "2026-05-22T08:45:19.000Z",
   },
   {
     slug: "why-is-titanium-commonly-used-for-dental-implants",
@@ -2588,7 +3749,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1779094466/Why_is_titanium_commonly_used_for_dental_implants_yhhkcp.jpg",
     category: "General Dentistry",
     date: "May 21, 2026",
-    iso: "2026-05-21T07:12:49.000Z",
+    iso: "2026-05-21T08:45:19.000Z",
   },
   {
     slug: "why-does-flossing-feel-different-with-veneers",
@@ -2597,7 +3758,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1779184323/Why_does_flossing_feel_different_with_veneers_dz7pug.jpg",
     category: "Cosmetic Dentistry",
     date: "May 21, 2026",
-    iso: "2026-05-21T07:12:49.000Z",
+    iso: "2026-05-21T08:45:19.000Z",
   },
   {
     slug: "which-dental-implant-material-is-best-for-long-term-function",
@@ -2606,7 +3767,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1779094466/Which_dental_implant_material_is_best_for_long-term_function_gjvu06.jpg",
     category: "General Dentistry",
     date: "May 21, 2026",
-    iso: "2026-05-21T07:12:49.000Z",
+    iso: "2026-05-21T08:45:19.000Z",
   },
   {
     slug: "when-is-a-tooth-too-damaged-for-a-dental-crown",
@@ -2615,7 +3776,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1779184324/When_is_a_tooth_too_damaged_for_a_dental_crown_cd60yy.jpg",
     category: "General Dentistry",
     date: "May 21, 2026",
-    iso: "2026-05-21T07:12:49.000Z",
+    iso: "2026-05-21T08:45:19.000Z",
   },
   {
     slug: "can-composite-bonding-regain-its-glossy-appearance",
@@ -2624,7 +3785,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1779184323/Can_composite_bonding_regain_its_glossy_appearance_blokfz.jpg",
     category: "Cosmetic Dentistry",
     date: "May 21, 2026",
-    iso: "2026-05-21T07:12:49.000Z",
+    iso: "2026-05-21T08:45:19.000Z",
   },
   {
     slug: "how-does-implant-material-affect-long-term-chewing-strength",
@@ -2633,7 +3794,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1779094466/How_does_implant_material_affect_long-term_chewing_strength_jazhmy.jpg",
     category: "General Dentistry",
     date: "May 19, 2026",
-    iso: "2026-05-19T07:12:49.000Z",
+    iso: "2026-05-19T08:45:19.000Z",
   },
   {
     slug: "healthy-tooth-structure-important-crown",
@@ -2642,7 +3803,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1779095371/Why_is_healthy_tooth_structure_important_for_a_crown_hotjvz.jpg",
     category: "General Dentistry",
     date: "May 19, 2026",
-    iso: "2026-05-19T07:12:49.000Z",
+    iso: "2026-05-19T08:45:19.000Z",
   },
   {
     slug: "gum-irritation-veneers-prevention",
@@ -2651,7 +3812,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1779095370/How_can_gum_irritation_from_veneers_be_prevented_hphlpa.jpg",
     category: "Cosmetic Dentistry",
     date: "May 19, 2026",
-    iso: "2026-05-19T07:12:49.000Z",
+    iso: "2026-05-19T08:45:19.000Z",
   },
   {
     slug: "can-professional-polishing-restore-composite-bonding",
@@ -2660,7 +3821,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1779095369/Can_professional_polishing_restore_composite_bonding_ypvjzy.jpg",
     category: "Cosmetic Dentistry",
     date: "May 19, 2026",
-    iso: "2026-05-19T07:12:49.000Z",
+    iso: "2026-05-19T08:45:19.000Z",
   },
   {
     slug: "can-gum-shape-affect-dental-implant-result",
@@ -2669,7 +3830,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1779094466/Can_gum_shape_affect_the_final_result_of_a_dental_implant_wvh3ls.jpg",
     category: "Dental Health Tips",
     date: "May 19, 2026",
-    iso: "2026-05-19T07:12:49.000Z",
+    iso: "2026-05-19T08:45:19.000Z",
   },
   {
     slug: "what-to-expect-permanent-crown-fitting-appointment",
@@ -2678,7 +3839,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1779032183/What_to_Expect_at_the_Appointment_When_Your_Permanent_Crown_Is_Fitted_bup5yz.jpg",
     category: "General Dentistry",
     date: "May 18, 2026",
-    iso: "2026-05-18T07:12:49.000Z",
+    iso: "2026-05-18T08:45:19.000Z",
   },
   {
     slug: "tooth-position-affects-implant-options",
@@ -2687,7 +3848,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1779032184/Why_the_Position_of_a_Missing_Tooth_in_Your_Mouth_Affects_Which_Implant_Option_Is_Suitable_ziaitl.jpg",
     category: "General Dentistry",
     date: "May 18, 2026",
-    iso: "2026-05-18T07:12:49.000Z",
+    iso: "2026-05-18T08:45:19.000Z",
   },
   {
     slug: "how-veneers-can-improve-teeth-affected-by-childhood-staining",
@@ -2696,7 +3857,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1779032182/How_Veneers_Can_Be_Used_to_Improve_the_Appearance_of_Teeth_Affected_by_Childhood_Staining_sb0y17.jpg",
     category: "Cosmetic Dentistry",
     date: "May 18, 2026",
-    iso: "2026-05-18T07:12:49.000Z",
+    iso: "2026-05-18T08:45:19.000Z",
   },
   {
     slug: "how-to-eat-after-dental-implant-surgery",
@@ -2705,7 +3866,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1779032181/How_to_Eat_and_What_to_Avoid_in_the_Weeks_After_Dental_Implant_Surgery_ta6srq.jpg",
     category: "General Dentistry",
     date: "May 18, 2026",
-    iso: "2026-05-18T07:12:49.000Z",
+    iso: "2026-05-18T08:45:19.000Z",
   },
   {
     slug: "composite-bonding-improve-appearance-teeth-old-amalgam-fillings",
@@ -2714,7 +3875,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1779032181/How_Composite_Bonding_Can_Improve_the_Appearance_of_Teeth_Affected_by_Old_Amalgam_Fillings_ankg2a.jpg",
     category: "Cosmetic Dentistry",
     date: "May 18, 2026",
-    iso: "2026-05-18T07:12:49.000Z",
+    iso: "2026-05-18T08:45:19.000Z",
   },
   {
     slug: "failed-dental-implant-replacement",
@@ -2723,7 +3884,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1778670161/Can_a_failed_dental_implant_be_replaced_successfully_dd8qdb.jpg",
     category: "General Dentistry",
     date: "May 15, 2026",
-    iso: "2026-05-15T07:12:49.000Z",
+    iso: "2026-05-15T08:45:19.000Z",
   },
   {
     slug: "difference-between-grade-4-and-grade-5-titanium-dental-implants",
@@ -2732,7 +3893,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1778670162/What_is_the_difference_between_Grade_4_and_Grade_5_titanium_dental_implants_bc4mst.jpg",
     category: "General Dentistry",
     date: "May 15, 2026",
-    iso: "2026-05-15T07:12:49.000Z",
+    iso: "2026-05-15T08:45:19.000Z",
   },
   {
     slug: "composite-bonding-v-shaped-notch-gum-line",
@@ -2741,7 +3902,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1778754619/Is_composite_bonding_strong_enough_to_fix_a_v-shaped_notch_at_my_gum_line.docx_mirgrr.jpg",
     category: "Cosmetic Dentistry",
     date: "May 15, 2026",
-    iso: "2026-05-15T07:12:49.000Z",
+    iso: "2026-05-15T08:45:19.000Z",
   },
   {
     slug: "can-veneers-be-whitened-if-i-whiten-my-natural-teeth-later",
@@ -2750,7 +3911,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1778754619/Can_veneers_be_whitened_if_I_whiten_my_natural_teeth_later_rviqe2.jpg",
     category: "Cosmetic Dentistry",
     date: "May 15, 2026",
-    iso: "2026-05-15T07:12:49.000Z",
+    iso: "2026-05-15T08:45:19.000Z",
   },
   {
     slug: "biological-width-importance-dental-crown",
@@ -2759,7 +3920,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1778754619/Why_is_biological_width_important_for_a_dental_crown_uxxrxg.jpg",
     category: "General Dentistry",
     date: "May 15, 2026",
-    iso: "2026-05-15T07:12:49.000Z",
+    iso: "2026-05-15T08:45:19.000Z",
   },
   {
     slug: "why-do-some-crowned-teeth-need-additional-internal-support",
@@ -2768,7 +3929,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1778669098/Why_do_some_crowned_teeth_need_additional_internal_support_lhapd6.jpg",
     category: "General Dentistry",
     date: "May 14, 2026",
-    iso: "2026-05-14T07:12:49.000Z",
+    iso: "2026-05-14T08:45:19.000Z",
   },
   {
     slug: "when-should-i-be-concerned-about-uneven-composite-bonding",
@@ -2777,7 +3938,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1778669097/When_should_I_be_concerned_about_uneven_composite_bonding_lgx3db.jpg",
     category: "Cosmetic Dentistry",
     date: "May 14, 2026",
-    iso: "2026-05-14T07:12:49.000Z",
+    iso: "2026-05-14T08:45:19.000Z",
   },
   {
     slug: "what-happens-during-a-veneer-try-in-appointment",
@@ -2786,7 +3947,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1778669098/What_happens_during_a_veneer_try-in_appointment_g4shkq.jpg",
     category: "Cosmetic Dentistry",
     date: "May 14, 2026",
-    iso: "2026-05-14T07:12:49.000Z",
+    iso: "2026-05-14T08:45:19.000Z",
   },
   {
     slug: "is-a-loose-implant-crown-a-dental-emergency",
@@ -2795,7 +3956,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1778579222/Is_a_loose_implant_crown_a_dental_emergency_viqgqp.jpg",
     category: "General Dentistry",
     date: "May 14, 2026",
-    iso: "2026-05-14T07:12:49.000Z",
+    iso: "2026-05-14T08:45:19.000Z",
   },
   {
     slug: "how-to-spot-early-signs-of-peri-implantitis",
@@ -2804,7 +3965,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1778579222/How_to_spot_the_early_signs_of_Peri-implantitis_x0llql.jpg",
     category: "General Dentistry",
     date: "May 14, 2026",
-    iso: "2026-05-14T07:12:49.000Z",
+    iso: "2026-05-14T08:45:19.000Z",
   },
   {
     slug: "dental-implants-safe-osteoporosis-medication",
@@ -2813,7 +3974,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1778579221/Are_dental_implants_safe_for_patients_taking_osteoporosis_medication_ipxitd.jpg",
     category: "General Dentistry",
     date: "May 13, 2026",
-    iso: "2026-05-13T07:12:49.000Z",
+    iso: "2026-05-13T08:45:19.000Z",
   },
   {
     slug: "dental-implant-hygiene-visit-expectations",
@@ -2822,7 +3983,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1778579223/What_should_I_expect_during_a_dental_implant_hygiene_visit_s3zel6.jpg",
     category: "Dental Health Tips",
     date: "May 13, 2026",
-    iso: "2026-05-13T07:12:49.000Z",
+    iso: "2026-05-13T08:45:19.000Z",
   },
   {
     slug: "composite-bonding-close-gaps-after-orthodontic-treatment",
@@ -2831,7 +3992,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1778580859/Can_composite_bonding_close_gaps_after_orthodontic_treatment_hrep5o.jpg",
     category: "Cosmetic Dentistry",
     date: "May 13, 2026",
-    iso: "2026-05-13T07:12:49.000Z",
+    iso: "2026-05-13T08:45:19.000Z",
   },
   {
     slug: "can-veneers-hide-dark-or-discoloured-teeth-underneath",
@@ -2840,7 +4001,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1778580860/Can_veneers_hide_dark_or_discoloured_teeth_underneath_kjycet.jpg",
     category: "Cosmetic Dentistry",
     date: "May 13, 2026",
-    iso: "2026-05-13T07:12:49.000Z",
+    iso: "2026-05-13T08:45:19.000Z",
   },
   {
     slug: "benefits-of-e-max-crowns-compared-to-older-crowns",
@@ -2849,7 +4010,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1778580860/What_are_the_benefits_of_E-Max_crowns_compared_to_older_crowns_o1fua2.jpg",
     category: "General Dentistry",
     date: "May 13, 2026",
-    iso: "2026-05-13T07:12:49.000Z",
+    iso: "2026-05-13T08:45:19.000Z",
   },
   {
     slug: "when-is-a-dental-crown-needed-after-root-canal-treatment",
@@ -2858,7 +4019,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1778517329/When_Is_a_Dental_Crown_Needed_After_Root_Canal_Treatment_plfif9.jpg",
     category: "General Dentistry",
     date: "May 12, 2026",
-    iso: "2026-05-12T07:12:49.000Z",
+    iso: "2026-05-12T08:45:19.000Z",
   },
   {
     slug: "what-to-do-if-your-implant-screw-becomes-visible",
@@ -2867,7 +4028,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1778517329/What_to_Do_If_Your_Implant_Screw_Becomes_Visible_jjaiyg.jpg",
     category: "General Dentistry",
     date: "May 12, 2026",
-    iso: "2026-05-12T07:12:49.000Z",
+    iso: "2026-05-12T08:45:19.000Z",
   },
   {
     slug: "porcelain-veneers-discoloured-teeth-causes-staining",
@@ -2876,7 +4037,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1778517329/Porcelain_Veneers_for_Discoloured_Teeth_What_Causes_Staining_and_When_Veneers_Are_Appropriate_u8rsre.jpg",
     category: "Cosmetic Dentistry",
     date: "May 12, 2026",
-    iso: "2026-05-12T07:12:49.000Z",
+    iso: "2026-05-12T08:45:19.000Z",
   },
   {
     slug: "how-long-does-composite-bonding-last-and-what-affects-its-lifespan",
@@ -2885,7 +4046,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1778517329/How_Long_Does_Composite_Bonding_Last_and_What_Affects_Its_Lifespan_yofk2v.jpg",
     category: "Cosmetic Dentistry",
     date: "May 12, 2026",
-    iso: "2026-05-12T07:12:49.000Z",
+    iso: "2026-05-12T08:45:19.000Z",
   },
   {
     slug: "dental-implants-menopausal-women-bone-density-changes",
@@ -2894,7 +4055,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1778517329/Dental_Implants_for_Menopausal_Women_Understanding_Bone_Density_Changes_c723fi.jpg",
     category: "General Dentistry",
     date: "May 12, 2026",
-    iso: "2026-05-12T07:12:49.000Z",
+    iso: "2026-05-12T08:45:19.000Z",
   },
   {
     slug: "what-makes-dental-restoration-look-natural",
@@ -2903,7 +4064,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1778318999/What_makes_a_dental_restoration_look_natural_yzhqlg.jpg",
     category: "General Dentistry",
     date: "May 11, 2026",
-    iso: "2026-05-11T07:12:49.000Z",
+    iso: "2026-05-11T08:45:19.000Z",
   },
   {
     slug: "missing-teeth-influence-breathing-during-sleep",
@@ -2912,7 +4073,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1778318998/How_missing_teeth_may_influence_breathing_during_sleep_giznzc.jpg",
     category: "General Dentistry",
     date: "May 11, 2026",
-    iso: "2026-05-11T07:12:49.000Z",
+    iso: "2026-05-11T08:45:19.000Z",
   },
   {
     slug: "do-all-veneer-treatments-require-tooth-preparation",
@@ -2921,7 +4082,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1778318997/Do_all_veneer_treatments_require_tooth_preparation_swuyg0.jpg",
     category: "Cosmetic Dentistry",
     date: "May 11, 2026",
-    iso: "2026-05-11T07:12:49.000Z",
+    iso: "2026-05-11T08:45:19.000Z",
   },
   {
     slug: "can-old-crowns-cause-grey-line-at-gums",
@@ -2930,7 +4091,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1778318996/Can_old_crowns_cause_a_grey_line_at_the_gums_hr3xbp.jpg",
     category: "Dental Health Tips",
     date: "May 11, 2026",
-    iso: "2026-05-11T07:12:49.000Z",
+    iso: "2026-05-11T08:45:19.000Z",
   },
   {
     slug: "can-composite-bonding-fix-transparent-tooth-edges",
@@ -2939,7 +4100,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1778318995/Can_composite_bonding_fix_transparent_tooth_edges_eimgco.jpg",
     category: "Cosmetic Dentistry",
     date: "May 11, 2026",
-    iso: "2026-05-11T07:12:49.000Z",
+    iso: "2026-05-11T08:45:19.000Z",
   },
   {
     slug: "the-hoop-effect-why-crowns-are-the-ultimate-tooth-shield",
@@ -2948,7 +4109,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1778245660/The_Hoop_Effect_Why_Crowns_are_the_Ultimate_Tooth_Shield_wutbkm.jpg",
     category: "General Dentistry",
     date: "May 9, 2026",
-    iso: "2026-05-09T07:12:49.000Z",
+    iso: "2026-05-09T08:45:19.000Z",
   },
   {
     slug: "stopping-the-sunken-look-how-titanium-saves-your-jaw",
@@ -2957,7 +4118,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1778245660/Stopping_the_Sunken_Look_How_Titanium_Saves_Your_Jaw_hwtwm3.jpg",
     category: "General Dentistry",
     date: "May 9, 2026",
-    iso: "2026-05-09T07:12:49.000Z",
+    iso: "2026-05-09T08:45:19.000Z",
   },
   {
     slug: "one-tooth-rule-implants-protect-healthy-teeth",
@@ -2966,7 +4127,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1778245660/The_One-Tooth_Rule_Why_Implants_Protect_Your_Healthy_Teeth_xjsvny.jpg",
     category: "General Dentistry",
     date: "May 9, 2026",
-    iso: "2026-05-09T07:12:49.000Z",
+    iso: "2026-05-09T08:45:19.000Z",
   },
   {
     slug: "beyond-turkey-teeth-light-reflecting-enamel",
@@ -2975,7 +4136,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1778245660/Beyond_Turkey_Teeth_The_Secret_to_Light-Reflecting_Enamel_fmcudk.jpg",
     category: "Dental Health Tips",
     date: "May 9, 2026",
-    iso: "2026-05-09T07:12:49.000Z",
+    iso: "2026-05-09T08:45:19.000Z",
   },
   {
     slug: "60-minute-smile-erasing-edge-wear-without-braces",
@@ -2984,7 +4145,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1778245660/The_60-Minute_Smile_Erasing_Edge-Wear_Without_Braces_ac0nok.jpg",
     category: "Cosmetic Dentistry",
     date: "May 9, 2026",
-    iso: "2026-05-09T07:12:49.000Z",
+    iso: "2026-05-09T08:45:19.000Z",
   },
   {
     slug: "why-you-still-need-regular-x-rays-after-your-implants-are-fully-healed",
@@ -2993,7 +4154,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1778150129/Why_You_Still_Need_Regular_X-rays_After_Your_Implants_Are_Fully_Healed_s1tdst.jpg",
     category: "General Dentistry",
     date: "May 8, 2026",
-    iso: "2026-05-08T07:12:49.000Z",
+    iso: "2026-05-08T08:45:19.000Z",
   },
   {
     slug: "modern-ceramic-crowns-support-gum-health",
@@ -3002,7 +4163,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1778150129/How_do_modern_ceramic_crowns_support_gum_health_g74a6u.jpg",
     category: "Dental Health Tips",
     date: "May 8, 2026",
-    iso: "2026-05-08T07:12:49.000Z",
+    iso: "2026-05-08T08:45:19.000Z",
   },
   {
     slug: "can-you-change-the-colour-of-veneers-once-they-are-placed",
@@ -3011,7 +4172,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1778150129/Can_you_change_the_colour_of_veneers_once_they_are_placed_n7fpyz.jpg",
     category: "Cosmetic Dentistry",
     date: "May 8, 2026",
-    iso: "2026-05-08T07:12:49.000Z",
+    iso: "2026-05-08T08:45:19.000Z",
   },
   {
     slug: "can-dental-implant-become-infected-years-after-treatment",
@@ -3020,7 +4181,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1778150127/Can_a_dental_implant_become_infected_years_after_treatment_khw2vu.jpg",
     category: "General Dentistry",
     date: "May 8, 2026",
-    iso: "2026-05-08T07:12:49.000Z",
+    iso: "2026-05-08T08:45:19.000Z",
   },
   {
     slug: "best-practices-for-drinking-tea-and-coffee-with-composite-bonding",
@@ -3029,7 +4190,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1778150127/Best_Practices_for_Drinking_Tea_and_Coffee_with_Composite_Bonding_xh9vhp.jpg",
     category: "Cosmetic Dentistry",
     date: "May 8, 2026",
-    iso: "2026-05-08T07:12:49.000Z",
+    iso: "2026-05-08T08:45:19.000Z",
   },
   {
     slug: "why-does-new-bonding-feel-strange-at-first",
@@ -3038,7 +4199,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1778120961/Why_Does_New_Bonding_Feel_Strange_at_First_mnqett.jpg",
     category: "Cosmetic Dentistry",
     date: "May 7, 2026",
-    iso: "2026-05-07T07:12:49.000Z",
+    iso: "2026-05-07T08:45:19.000Z",
   },
   {
     slug: "why-do-implants-feel-different-when-biting",
@@ -3047,7 +4208,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1778120961/Why_Do_Implants_Feel_Different_When_Biting_abd6id.jpg",
     category: "General Dentistry",
     date: "May 7, 2026",
-    iso: "2026-05-07T07:12:49.000Z",
+    iso: "2026-05-07T08:45:19.000Z",
   },
   {
     slug: "can-veneers-widen-your-smile-and-support-lips",
@@ -3056,7 +4217,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1778120961/Can_Veneers_Widen_Your_Smile_and_Support_Lips_kvdnsa.jpg",
     category: "Cosmetic Dentistry",
     date: "May 7, 2026",
-    iso: "2026-05-07T07:12:49.000Z",
+    iso: "2026-05-07T08:45:19.000Z",
   },
   {
     slug: "can-dry-mouth-cause-implant-failure",
@@ -3065,7 +4226,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1778120961/Can_Dry_Mouth_Cause_Your_Implant_to_Fail_mt3k8o.jpg",
     category: "General Dentistry",
     date: "May 7, 2026",
-    iso: "2026-05-07T07:12:49.000Z",
+    iso: "2026-05-07T08:45:19.000Z",
   },
   {
     slug: "can-a-crown-stop-your-tooth-from-cracking",
@@ -3074,7 +4235,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1778120961/Can_a_Crown_Stop_Your_Tooth_From_Cracking_vfur6w.jpg",
     category: "General Dentistry",
     date: "May 7, 2026",
-    iso: "2026-05-07T07:12:49.000Z",
+    iso: "2026-05-07T08:45:19.000Z",
   },
   {
     slug: "is-it-safe-to-travel-after-dental-implant-surgery",
@@ -3083,7 +4244,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1777983840/Is_it_Safe_to_Travel_After_Dental_Implant_Surgery_nka9xx.jpg",
     category: "General Dentistry",
     date: "May 6, 2026",
-    iso: "2026-05-06T07:12:49.000Z",
+    iso: "2026-05-06T08:45:19.000Z",
   },
   {
     slug: "how-long-does-it-take-to-get-used-to-a-new-dental-crown",
@@ -3092,7 +4253,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1777984407/How_long_does_it_take_to_get_used_to_a_new_dental_crown_oad10v.jpg",
     category: "General Dentistry",
     date: "May 6, 2026",
-    iso: "2026-05-06T07:12:49.000Z",
+    iso: "2026-05-06T08:45:19.000Z",
   },
   {
     slug: "how-do-i-know-if-my-dental-implant-is-healing-correctly",
@@ -3101,7 +4262,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1777983792/How_Do_I_Know_if_My_Dental_Implant_is_Healing_Correctly_uxmuiy.jpg",
     category: "General Dentistry",
     date: "May 6, 2026",
-    iso: "2026-05-06T07:12:49.000Z",
+    iso: "2026-05-06T08:45:19.000Z",
   },
   {
     slug: "do-veneers-require-shaving-down-natural-teeth",
@@ -3110,7 +4271,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1777984297/Do_veneers_require_shaving_down_your_natural_teeth_gbh0a2.jpg",
     category: "Cosmetic Dentistry",
     date: "May 6, 2026",
-    iso: "2026-05-06T07:12:49.000Z",
+    iso: "2026-05-06T08:45:19.000Z",
   },
   {
     slug: "can-dental-bonding-fix-small-gap-between-front-teeth",
@@ -3119,7 +4280,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1777984244/Can_Dental_Bonding_Fix_the_Small_Gap_Between_My_Front_Teeth_owqgts.jpg",
     category: "Cosmetic Dentistry",
     date: "May 6, 2026",
-    iso: "2026-05-06T07:12:49.000Z",
+    iso: "2026-05-06T08:45:19.000Z",
   },
   {
     slug: "soft-tissue-architecture-healthy-gums-implant-aesthetics",
@@ -3128,7 +4289,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1777906053/Soft_Tissue_Architecture_Why_Healthy_Gums_Define_Implant_Aesthetics_cw28mm.jpg",
     category: "Dental Health Tips",
     date: "May 5, 2026",
-    iso: "2026-05-05T07:12:49.000Z",
+    iso: "2026-05-05T08:45:19.000Z",
   },
   {
     slug: "primary-stability-clinical-science-lifetime-implant-success",
@@ -3137,7 +4298,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1777906053/Primary_Stability_The_Clinical_Science_of_Lifetime_Implant_Success_ncwtxw.jpg",
     category: "General Dentistry",
     date: "May 5, 2026",
-    iso: "2026-05-05T07:12:49.000Z",
+    iso: "2026-05-05T08:45:19.000Z",
   },
   {
     slug: "precision-margin-seamless-seal-tooth-protection",
@@ -3146,7 +4307,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1777906055/The_Precision_Margin_Ensuring_a_Seamless_Seal_for_Long-Term_Tooth_Protection_zehloh.jpg",
     category: "General Dentistry",
     date: "May 5, 2026",
-    iso: "2026-05-05T07:12:49.000Z",
+    iso: "2026-05-05T08:45:19.000Z",
   },
   {
     slug: "incisal-translucency-porcelain-layering-vs-flat-white-teeth",
@@ -3155,7 +4316,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1777906052/Incisal_Translucency_Masterful_Porcelain_Layering_vs._Flat_White_Teeth_clutor.jpg",
     category: "General Dentistry",
     date: "May 5, 2026",
-    iso: "2026-05-05T07:12:49.000Z",
+    iso: "2026-05-05T08:45:19.000Z",
   },
   {
     slug: "bio-mimetic-layering-prevent-composite-chipping",
@@ -3164,7 +4325,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1777906053/Bio-Mimetic_Layering_Technical_Strategies_to_Prevent_Composite_Chipping_e10rs1.jpg",
     category: "General Dentistry",
     date: "May 5, 2026",
-    iso: "2026-05-05T07:12:49.000Z",
+    iso: "2026-05-05T08:45:19.000Z",
   },
   {
     slug: "mechanical-load-distribution-in-titanium-implants",
@@ -3173,7 +4334,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1777643293/Mechanical_Load_Distribution_in_Titanium_Implants_uooanx.jpg",
     category: "General Dentistry",
     date: "May 4, 2026",
-    iso: "2026-05-04T07:12:49.000Z",
+    iso: "2026-05-04T08:45:19.000Z",
   },
   {
     slug: "margin-placement-for-healthy-gum-tissue-around-crowns",
@@ -3182,7 +4343,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1777643291/Margin_Placement_for_Healthy_Gum_Tissue_Around_Crowns_wjfdgk.jpg",
     category: "Dental Health Tips",
     date: "May 4, 2026",
-    iso: "2026-05-04T07:12:49.000Z",
+    iso: "2026-05-04T08:45:19.000Z",
   },
   {
     slug: "managing-translucency-with-composite-bonding-resins",
@@ -3191,7 +4352,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1777643290/Managing_Translucency_with_Composite_Bonding_Resins_ulbcnm.jpg",
     category: "Cosmetic Dentistry",
     date: "May 4, 2026",
-    iso: "2026-05-04T07:12:49.000Z",
+    iso: "2026-05-04T08:45:19.000Z",
   },
   {
     slug: "identifying-peri-implantitis-symptoms-for-early-intervention",
@@ -3200,7 +4361,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1777643289/Identifying_Peri-Implantitis_Symptoms_for_Early_Intervention_c43gww.jpg",
     category: "General Dentistry",
     date: "May 4, 2026",
-    iso: "2026-05-04T07:12:49.000Z",
+    iso: "2026-05-04T08:45:19.000Z",
   },
   {
     slug: "chemical-bond-strength-modern-porcelain-veneers",
@@ -3209,7 +4370,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1777643288/Chemical_Bond_Strength_of_Modern_Porcelain_Veneers_puowwh.jpg",
     category: "Cosmetic Dentistry",
     date: "May 4, 2026",
-    iso: "2026-05-04T07:12:49.000Z",
+    iso: "2026-05-04T08:45:19.000Z",
   },
   {
     slug: "titanium-implants-and-vertical-bone-height",
@@ -3218,7 +4379,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1777642569/Titanium_Implants_and_Vertical_Bone_Height_nppuxv.jpg",
     category: "General Dentistry",
     date: "May 2, 2026",
-    iso: "2026-05-02T07:12:49.000Z",
+    iso: "2026-05-02T08:45:19.000Z",
   },
   {
     slug: "porcelain-veneer-resistance-to-surface-staining",
@@ -3227,7 +4388,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1777642569/Porcelain_Veneer_Resistance_to_Surface_Staining_yvqknj.jpg",
     category: "Cosmetic Dentistry",
     date: "May 2, 2026",
-    iso: "2026-05-02T07:12:49.000Z",
+    iso: "2026-05-02T08:45:19.000Z",
   },
   {
     slug: "managing-biological-width-around-dental-implants",
@@ -3236,7 +4397,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1777642568/Managing_Biological_Width_Around_Dental_Implants_asu3rw.jpg",
     category: "General Dentistry",
     date: "May 2, 2026",
-    iso: "2026-05-02T07:12:49.000Z",
+    iso: "2026-05-02T08:45:19.000Z",
   },
   {
     slug: "incremental-layering-composite-bonding-procedures",
@@ -3245,7 +4406,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1777642568/Incremental_Layering_in_Composite_Bonding_Procedures_eoga0f.jpg",
     category: "Cosmetic Dentistry",
     date: "May 2, 2026",
-    iso: "2026-05-02T07:12:49.000Z",
+    iso: "2026-05-02T08:45:19.000Z",
   },
   {
     slug: "core-build-up-requirements-for-dental-crowns",
@@ -3254,7 +4415,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1777642568/Core_Build_Up_Requirements_for_Dental_Crowns_c6ea7p.jpg",
     category: "General Dentistry",
     date: "May 2, 2026",
-    iso: "2026-05-02T07:12:49.000Z",
+    iso: "2026-05-02T08:45:19.000Z",
   },
   {
     slug: "structural-assessment-when-full-coverage-crown-advised-over-large-filling",
@@ -3263,7 +4424,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1777554512/Structural_Assessment_When_a_Full_Coverage_Crown_is_Advised_Over_a_Large_Filling_dbjvsp.jpg",
     category: "General Dentistry",
     date: "May 1, 2026",
-    iso: "2026-05-01T07:12:49.000Z",
+    iso: "2026-05-01T08:45:19.000Z",
   },
   {
     slug: "optical-properties-dental-ceramics-natural-translucency-opalescence",
@@ -3272,7 +4433,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1777554512/Optical_Properties_of_Dental_Ceramics_Achieving_Natural_Translucency_and_Opalescence_my9flk.jpg",
     category: "General Dentistry",
     date: "May 1, 2026",
-    iso: "2026-05-01T07:12:49.000Z",
+    iso: "2026-05-01T08:45:19.000Z",
   },
   {
     slug: "keratinised-tissue-dental-implant-longevity",
@@ -3281,7 +4442,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1777554513/Understanding_the_Importance_of_Keratinised_Tissue_for_Dental_Implant_Longevity_gb4ehp.jpg",
     category: "General Dentistry",
     date: "May 1, 2026",
-    iso: "2026-05-01T07:12:49.000Z",
+    iso: "2026-05-01T08:45:19.000Z",
   },
   {
     slug: "factors-that-influence-the-rate-of-surface-wear-in-composite-bonding",
@@ -3290,7 +4451,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1777554511/Factors_That_Influence_the_Rate_of_Surface_Wear_in_Composite_Bonding_tq9pkf.jpg",
     category: "Cosmetic Dentistry",
     date: "May 1, 2026",
-    iso: "2026-05-01T07:12:49.000Z",
+    iso: "2026-05-01T08:45:19.000Z",
   },
   {
     slug: "alveolar-ridge-preservation-maintaining-bone-volume-following-tooth-extraction",
@@ -3299,7 +4460,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1777554510/Alveolar_Ridge_Preservation_Maintaining_Bone_Volume_Following_a_Tooth_Extraction_w1lz7s.jpg",
     category: "General Dentistry",
     date: "May 1, 2026",
-    iso: "2026-05-01T07:12:49.000Z",
+    iso: "2026-05-01T08:45:19.000Z",
   },
   {
     slug: "the-role-of-attached-gingiva-in-long-term-peri-implant-tissue-stability",
@@ -3308,7 +4469,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1777382690/The_Role_of_Attached_Gingiva_in_Long_Term_Peri_Implant_Tissue_Stability_kdom8i.jpg",
     category: "General Dentistry",
     date: "April 30, 2026",
-    iso: "2026-04-30T07:12:49.000Z",
+    iso: "2026-04-30T08:45:19.000Z",
   },
   {
     slug: "structural-reinforcement-root-canal-treated-teeth-custom-fitted-crowns",
@@ -3317,7 +4478,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1777382688/Structural_Reinforcement_of_Root_Canal_Treated_Teeth_via_Custom-Fitted_Crowns_veglnj.jpg",
     category: "General Dentistry",
     date: "April 30, 2026",
-    iso: "2026-04-30T07:12:49.000Z",
+    iso: "2026-04-30T08:45:19.000Z",
   },
   {
     slug: "science-of-adhesive-bonding-ensuring-high-bond-strength-to-enamel",
@@ -3326,7 +4487,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1777382691/The_Science_of_Adhesive_Bonding_Ensuring_High-Bond_Strength_to_Enamel_lyv2zg.jpg",
     category: "Cosmetic Dentistry",
     date: "April 30, 2026",
-    iso: "2026-04-30T07:12:49.000Z",
+    iso: "2026-04-30T08:45:19.000Z",
   },
   {
     slug: "evaluating-systematic-healing-protocols-multi-unit-titanium-bridges",
@@ -3335,7 +4496,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1777382687/Evaluating_Systematic_Healing_Protocols_for_Multi-Unit_Titanium_Bridges_jcy810.jpg",
     category: "General Dentistry",
     date: "April 30, 2026",
-    iso: "2026-04-30T07:12:49.000Z",
+    iso: "2026-04-30T08:45:19.000Z",
   },
   {
     slug: "correcting-midline-diastemas-natural-tooth-emergence-profiles",
@@ -3344,7 +4505,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1777382685/Correcting_Midline_Diastemas_While_Maintaining_Natural_Tooth_Emergence_Profiles_lk5vdo.jpg",
     category: "General Dentistry",
     date: "April 30, 2026",
-    iso: "2026-04-30T07:12:49.000Z",
+    iso: "2026-04-30T08:45:19.000Z",
   },
   {
     slug: "managing-functional-occlusion-bite-alignment-full-coverage-restorations",
@@ -3353,7 +4514,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1777382422/Managing_Functional_Occlusion_and_Bite_Alignment_in_Full-Coverage_Restorations_tlk2cp.jpg",
     category: "General Dentistry",
     date: "April 29, 2026",
-    iso: "2026-04-29T07:12:49.000Z",
+    iso: "2026-04-29T08:45:19.000Z",
   },
   {
     slug: "gingival-zenith-alignment-symmetrical-smile-refinement",
@@ -3362,7 +4523,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1777382421/Assessment_of_Gingival_Zenith_Alignment_for_Symmetrical_Smile_Refinement_itzfzw.jpg",
     category: "Cosmetic Dentistry",
     date: "April 29, 2026",
-    iso: "2026-04-29T07:12:49.000Z",
+    iso: "2026-04-29T08:45:19.000Z",
   },
   {
     slug: "biomechanical-advantages-titanium-load-bearing-posterior-replacements",
@@ -3371,7 +4532,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1777382422/Biomechanical_Advantages_of_Titanium_in_Load-Bearing_Posterior_Replacements_cjzluz.jpg",
     category: "General Dentistry",
     date: "April 29, 2026",
-    iso: "2026-04-29T07:12:49.000Z",
+    iso: "2026-04-29T08:45:19.000Z",
   },
   {
     slug: "alveolar-bone-preservation-following-extraction",
@@ -3380,7 +4541,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1777382423/The_Clinical_Significance_of_Alveolar_Bone_Preservation_Following_Extraction_ftrgfj.jpg",
     category: "General Dentistry",
     date: "April 29, 2026",
-    iso: "2026-04-29T07:12:49.000Z",
+    iso: "2026-04-29T08:45:19.000Z",
   },
   {
     slug: "addressing-micro-fractures-and-enamel-crazing-with-minimally-invasive-resin",
@@ -3389,7 +4550,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1777382420/Addressing_Micro-Fractures_and_Enamel_Crazing_with_Minimally_Invasive_Resin_pqlr21.jpg",
     category: "Dental Health Tips",
     date: "April 29, 2026",
-    iso: "2026-04-29T07:12:49.000Z",
+    iso: "2026-04-29T08:45:19.000Z",
   },
   {
     slug: "when-is-a-crown-necessary-restoring-strength-to-heavily-filled-teeth",
@@ -3398,7 +4559,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1777297885/When_is_a_Crown_Necessary_Restoring_Strength_to_Heavily_Filled_Teeth_fhls3t.jpg",
     category: "General Dentistry",
     date: "April 28, 2026",
-    iso: "2026-04-28T07:12:49.000Z",
+    iso: "2026-04-28T08:45:19.000Z",
   },
   {
     slug: "titanium-implants-vs-ceramic-alternatives",
@@ -3407,7 +4568,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1777297874/The_Clinical_Rationale_for_Choosing_Titanium_Implants_Over_Ceramic_Alternatives_ak6yqc.jpg",
     category: "General Dentistry",
     date: "April 28, 2026",
-    iso: "2026-04-28T07:12:49.000Z",
+    iso: "2026-04-28T08:45:19.000Z",
   },
   {
     slug: "preparing-for-porcelain-veneers-protecting-underlying-tooth-structure",
@@ -3416,7 +4577,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1777297869/Preparing_for_Porcelain_Veneers_Protecting_the_Underlying_Tooth_Structure_blelmz.jpg",
     category: "Cosmetic Dentistry",
     date: "April 28, 2026",
-    iso: "2026-04-28T07:12:49.000Z",
+    iso: "2026-04-28T08:45:19.000Z",
   },
   {
     slug: "manual-impressions-precise-implant-restoration-planning",
@@ -3425,7 +4586,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1777297886/Why_We_Use_Manual_Impressions_for_Precise_Implant_Restoration_Planning_nnfwrq.jpg",
     category: "General Dentistry",
     date: "April 28, 2026",
-    iso: "2026-04-28T07:12:49.000Z",
+    iso: "2026-04-28T08:45:19.000Z",
   },
   {
     slug: "composite-bonding-minimally-invasive-approach-correcting-minor-tooth-wear",
@@ -3434,7 +4595,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1777297869/Composite_Bonding_A_Minimally_Invasive_Approach_to_Correcting_Minor_Tooth_Wear_pmaln5.jpg",
     category: "Cosmetic Dentistry",
     date: "April 28, 2026",
-    iso: "2026-04-28T07:12:49.000Z",
+    iso: "2026-04-28T08:45:19.000Z",
   },
   {
     slug: "understanding-role-bone-density-dental-implant-stability",
@@ -3443,7 +4604,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1777188930/Understanding_the_Role_of_Bone_Density_in_Dental_Implant_Stability_czcopq.jpg",
     category: "General Dentistry",
     date: "April 27, 2026",
-    iso: "2026-04-27T07:12:49.000Z",
+    iso: "2026-04-27T08:45:19.000Z",
   },
   {
     slug: "factors-tooth-restoration-ferrule-effect",
@@ -3452,7 +4613,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1777188710/Factors_in_Tooth_Restoration_The_Importance_of_the_Ferrule_Effect_ywedmy.jpg",
     category: "General Dentistry",
     date: "April 27, 2026",
-    iso: "2026-04-27T07:12:49.000Z",
+    iso: "2026-04-27T08:45:19.000Z",
   },
   {
     slug: "exploring-the-potential-links-between-vitamin-d-and-implant-health",
@@ -3461,7 +4622,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1777188709/Exploring_the_Potential_Links_Between_Vitamin_D_and_Implant_Health_fegws9.jpg",
     category: "General Dentistry",
     date: "April 27, 2026",
-    iso: "2026-04-27T07:12:49.000Z",
+    iso: "2026-04-27T08:45:19.000Z",
   },
   {
     slug: "addressing-marginal-wear-discolouration-bonding",
@@ -3470,7 +4631,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1777188710/Maintaining_Your_Smile_Addressing_Marginal_Wear_and_Discolouration_in_Bonding_yks1b4.jpg",
     category: "Cosmetic Dentistry",
     date: "April 27, 2026",
-    iso: "2026-04-27T07:12:49.000Z",
+    iso: "2026-04-27T08:45:19.000Z",
   },
   {
     slug: "achieving-natural-aesthetics-translucency-and-light-in-veneer-design",
@@ -3479,7 +4640,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1777188708/Achieving_Natural_Aesthetics_Translucency_and_Light_in_Veneer_Design_pgmlfs.jpg",
     category: "Cosmetic Dentistry",
     date: "April 27, 2026",
-    iso: "2026-04-27T07:12:49.000Z",
+    iso: "2026-04-27T08:45:19.000Z",
   },
   {
     slug: "porcelain-veneers-light-transmission-layered-ceramics",
@@ -3488,7 +4649,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1777036809/Porcelain_Veneers_The_Physics_of_Light_Transmission_in_Layered_Ceramics_kqrycm.jpg",
     category: "Cosmetic Dentistry",
     date: "April 26, 2026",
-    iso: "2026-04-26T07:12:49.000Z",
+    iso: "2026-04-26T08:45:19.000Z",
   },
   {
     slug: "dental-implants-bone-quality-matters-more-than-quantity",
@@ -3497,7 +4658,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1777036809/Dental_Implants_Why_Bone_Quality_Matters_More_Than_Bone_Quantity_xqb4rz.jpg",
     category: "General Dentistry",
     date: "April 26, 2026",
-    iso: "2026-04-26T07:12:49.000Z",
+    iso: "2026-04-26T08:45:19.000Z",
   },
   {
     slug: "dental-implants-alcohol-impact-osseointegration",
@@ -3506,7 +4667,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1777036808/Dental_Implants_Impact_of_Alcohol_on_Early_Stage_Osseointegration_tyksuy.jpg",
     category: "General Dentistry",
     date: "April 26, 2026",
-    iso: "2026-04-26T07:12:49.000Z",
+    iso: "2026-04-26T08:45:19.000Z",
   },
   {
     slug: "dental-crowns-internal-fit-cement-washout",
@@ -3515,7 +4676,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1777187847/Dental_Crowns_The_Internal_Fit_and_Its_Effect_on_Cement_Washout_p5yb6j.jpg",
     category: "General Dentistry",
     date: "April 26, 2026",
-    iso: "2026-04-26T07:12:49.000Z",
+    iso: "2026-04-26T08:45:19.000Z",
   },
   {
     slug: "composite-bonding-managing-micro-fissures-interface-staining",
@@ -3524,7 +4685,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1777036807/Composite_Bonding_Managing_Micro-Fissures_and_Interface_Staining_hdkqmf.jpg",
     category: "Cosmetic Dentistry",
     date: "April 26, 2026",
-    iso: "2026-04-26T07:12:49.000Z",
+    iso: "2026-04-26T08:45:19.000Z",
   },
   {
     slug: "poly-chromatic-layering-replicating-natural-tooth-depth-with-composite",
@@ -3533,7 +4694,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1776949055/Poly-Chromatic_Layering_Replicating_Natural_Tooth_Depth_with_Composite_bu8lye.jpg",
     category: "General Dentistry",
     date: "April 24, 2026",
-    iso: "2026-04-24T07:12:49.000Z",
+    iso: "2026-04-24T08:45:19.000Z",
   },
   {
     slug: "osseointegration-advanced-surface-topography-healing",
@@ -3542,7 +4703,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1776949054/Osseointegration_2.0_How_Advanced_Surface_Topography_Speeds_Up_Healing_qoyqjx.jpg",
     category: "General Dentistry",
     date: "April 24, 2026",
-    iso: "2026-04-24T07:12:49.000Z",
+    iso: "2026-04-24T08:45:19.000Z",
   },
   {
     slug: "no-prep-revolution-achieving-high-end-results-without-enamel-removal",
@@ -3551,7 +4712,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1776949056/The_No-Prep_Revolution_Achieving_High-End_Results_Without_Enamel_Removal_zq4zjy.jpg",
     category: "Dental Health Tips",
     date: "April 24, 2026",
-    iso: "2026-04-24T07:12:49.000Z",
+    iso: "2026-04-24T08:45:19.000Z",
   },
   {
     slug: "monolithic-zirconia-strength-translucency",
@@ -3560,7 +4721,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1776949054/Monolithic_Zirconia_The_Ultimate_Balance_of_Strength_and_Translucency_th9w4s.jpg",
     category: "General Dentistry",
     date: "April 24, 2026",
-    iso: "2026-04-24T07:12:49.000Z",
+    iso: "2026-04-24T08:45:19.000Z",
   },
   {
     slug: "golden-proportion-implants-facial-symmetry",
@@ -3569,7 +4730,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1776949055/The_Golden_Proportion_Using_Implants_to_Restore_Facial_Symmetry_q0mcsg.jpg",
     category: "General Dentistry",
     date: "April 24, 2026",
-    iso: "2026-04-24T07:12:49.000Z",
+    iso: "2026-04-24T08:45:19.000Z",
   },
   {
     slug: "zirconia-crowns-combining-diamond-like-strength-with-natural-beauty",
@@ -3578,7 +4739,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1776863865/Zirconia_Crowns_Combining_Diamond-Like_Strength_with_Natural_Beauty_ybi0ar.jpg",
     category: "General Dentistry",
     date: "April 23, 2026",
-    iso: "2026-04-23T07:12:49.000Z",
+    iso: "2026-04-23T08:45:19.000Z",
   },
   {
     slug: "why-titanium-is-the-global-standard-for-implant-success",
@@ -3587,7 +4748,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1776863864/Why_Titanium_is_the_Global_Standard_for_Implant_Success_neoaxf.jpg",
     category: "General Dentistry",
     date: "April 23, 2026",
-    iso: "2026-04-23T07:12:49.000Z",
+    iso: "2026-04-23T08:45:19.000Z",
   },
   {
     slug: "true-cost-missing-tooth-beyond-gap",
@@ -3596,7 +4757,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1776863864/The_True_Cost_of_a_Missing_Tooth_Beyond_Just_the_Gap_fqmeby.jpg",
     category: "General Dentistry",
     date: "April 23, 2026",
-    iso: "2026-04-23T07:12:49.000Z",
+    iso: "2026-04-23T08:45:19.000Z",
   },
   {
     slug: "cosmetic-resin-bonding-immediate-results-minor-imperfections",
@@ -3605,7 +4766,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1776863863/Cosmetic_Resin_Bonding_Immediate_Results_for_Minor_Imperfections_xbfbqc.jpg",
     category: "Cosmetic Dentistry",
     date: "April 23, 2026",
-    iso: "2026-04-23T07:12:49.000Z",
+    iso: "2026-04-23T08:45:19.000Z",
   },
   {
     slug: "advanced-ceramic-veneers-achieving-natural-long-lasting-smile",
@@ -3614,7 +4775,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1776863863/Advanced_Ceramic_Veneers_Achieving_a_Natural_Long-Lasting_Smile_fujmgl.jpg",
     category: "Cosmetic Dentistry",
     date: "April 23, 2026",
-    iso: "2026-04-23T07:12:49.000Z",
+    iso: "2026-04-23T08:45:19.000Z",
   },
   {
     slug: "veneer-edge-design-gum-health",
@@ -3623,7 +4784,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1776776713/How_Veneer_Edge_Design_Affects_Gum_Health_Over_Time_pjvsmp.jpg",
     category: "Cosmetic Dentistry",
     date: "April 22, 2026",
-    iso: "2026-04-22T07:12:49.000Z",
+    iso: "2026-04-22T08:45:19.000Z",
   },
   {
     slug: "polymerisation-shrinkage-composite-bonding-margins",
@@ -3632,7 +4793,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1776776712/How_Polymerisation_Shrinkage_Affects_Composite_Bonding_Margins_fpgk4b.jpg",
     category: "Cosmetic Dentistry",
     date: "April 22, 2026",
-    iso: "2026-04-22T07:12:49.000Z",
+    iso: "2026-04-22T08:45:19.000Z",
   },
   {
     slug: "marginal-fit-crown-affects-long-term-tooth-health",
@@ -3641,7 +4802,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1776776712/How_Marginal_Fit_of_a_Crown_Affects_Long-Term_Tooth_Health_drovpm.jpg",
     category: "General Dentistry",
     date: "April 22, 2026",
-    iso: "2026-04-22T07:12:49.000Z",
+    iso: "2026-04-22T08:45:19.000Z",
   },
   {
     slug: "implant-angulation-load-distribution-chewing",
@@ -3650,7 +4811,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1776776711/How_Implant_Angulation_Influences_Load_Distribution_in_Daily_Chewing_xf2cps.jpg",
     category: "General Dentistry",
     date: "April 22, 2026",
-    iso: "2026-04-22T07:12:49.000Z",
+    iso: "2026-04-22T08:45:19.000Z",
   },
   {
     slug: "how-implant-positioning-errors-affect-bite-forces-years-later",
@@ -3659,7 +4820,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1776776712/How_Implant_Positioning_Errors_Affect_Bite_Forces_Years_Later_dqrnsd.jpg",
     category: "General Dentistry",
     date: "April 22, 2026",
-    iso: "2026-04-22T07:12:49.000Z",
+    iso: "2026-04-22T08:45:19.000Z",
   },
   {
     slug: "the-role-of-implant-surface-texture-in-bone-integration-success",
@@ -3668,7 +4829,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1776754409/The_Role_of_Implant_Surface_Texture_in_Bone_Integration_Success_npgtoo.jpg",
     category: "General Dentistry",
     date: "April 21, 2026",
-    iso: "2026-04-21T07:12:49.000Z",
+    iso: "2026-04-21T08:45:19.000Z",
   },
   {
     slug: "osseointegration-explained-cellular-level-bone-bonds-implants",
@@ -3677,7 +4838,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1776754410/Osseointegration_Explained_at_a_Cellular_Level_How_Bone_Bonds_to_Implants_bftl3k.jpg",
     category: "General Dentistry",
     date: "April 21, 2026",
-    iso: "2026-04-21T07:12:49.000Z",
+    iso: "2026-04-21T08:45:19.000Z",
   },
   {
     slug: "occlusal-adjustment-crowns-precision-bite-harmony",
@@ -3686,7 +4847,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1776754409/Occlusal_Adjustment_in_Crowns_Why_Precision_Matters_for_Bite_Harmony_fiklu0.jpg",
     category: "General Dentistry",
     date: "April 21, 2026",
-    iso: "2026-04-21T07:12:49.000Z",
+    iso: "2026-04-21T08:45:19.000Z",
   },
   {
     slug: "how-composite-resin-polymerisation-affects-strength-and-colour-stability",
@@ -3695,7 +4856,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1776754408/How_Composite_Resin_Polymerisation_Affects_Strength_and_Colour_Stability_fsb8yc.jpg",
     category: "General Dentistry",
     date: "April 21, 2026",
-    iso: "2026-04-21T07:12:49.000Z",
+    iso: "2026-04-21T08:45:19.000Z",
   },
   {
     slug: "do-veneers-damage-natural-teeth-enamel-preparation",
@@ -3704,7 +4865,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1776754409/Do_Veneers_Damage_Natural_Teeth_What_Really_Happens_to_Enamel_During_Preparation_ummwr1.jpg",
     category: "Cosmetic Dentistry",
     date: "April 21, 2026",
-    iso: "2026-04-21T07:12:49.000Z",
+    iso: "2026-04-21T08:45:19.000Z",
   },
   {
     slug: "what-happens-if-dental-veneer-becomes-damaged-falls-off",
@@ -3713,7 +4874,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1776668879/What_happens_if_a_dental_veneer_becomes_damaged_or_falls_off_gyku8f.jpg",
     category: "Cosmetic Dentistry",
     date: "April 20, 2026",
-    iso: "2026-04-20T07:12:49.000Z",
+    iso: "2026-04-20T08:45:19.000Z",
   },
   {
     slug: "what-can-i-eat-during-dental-implant-recovery",
@@ -3722,7 +4883,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1776668842/What_can_I_eat_during_the_recovery_phase_of_my_dental_implant_nltvhr.jpg",
     category: "General Dentistry",
     date: "April 20, 2026",
-    iso: "2026-04-20T07:12:49.000Z",
+    iso: "2026-04-20T08:45:19.000Z",
   },
   {
     slug: "same-day-crowns-broken-teeth",
@@ -3731,7 +4892,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1776668729/Same-day-crowns-for-broken-teeth_xyirtt.jpg",
     category: "General Dentistry",
     date: "April 20, 2026",
-    iso: "2026-04-20T07:12:49.000Z",
+    iso: "2026-04-20T08:45:19.000Z",
   },
   {
     slug: "how-do-i-clean-an-implant-compared-to-a-normal-tooth",
@@ -3740,7 +4901,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1776668697/How_do_I_clean_an_implant_compared_to_a_normal_tooth_xexzzy.jpg",
     category: "General Dentistry",
     date: "April 20, 2026",
-    iso: "2026-04-20T07:12:49.000Z",
+    iso: "2026-04-20T08:45:19.000Z",
   },
   {
     slug: "bonding-feels-rough-will-it-go-away",
@@ -3749,7 +4910,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1776668953/Why_does_my_bonding_feel_rough_at_first_and_will_it_go_away_agupgw.jpg",
     category: "Cosmetic Dentistry",
     date: "April 20, 2026",
-    iso: "2026-04-20T07:12:49.000Z",
+    iso: "2026-04-20T08:45:19.000Z",
   },
   {
     slug: "shielding-erosion-how-bonding-saves-acid-damaged-enamel",
@@ -3758,7 +4919,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/q_auto/f_auto/v1775623808/Shielding_Erosion_How_Bonding_Saves_Acid-Damaged_Enamel_gseyfv.jpg",
     category: "Cosmetic Dentistry",
     date: "April 8, 2026",
-    iso: "2026-04-08T07:12:49.000Z",
+    iso: "2026-04-08T08:45:19.000Z",
   },
   {
     slug: "why-does-composite-bonding-look-grey-at-the-edges",
@@ -3767,7 +4928,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/q_auto/f_auto/v1775201970/Why_does_composite_bonding_sometimes_look_grey_at_the_edges_wdi3is.jpg",
     category: "Cosmetic Dentistry",
     date: "April 7, 2026",
-    iso: "2026-04-07T07:12:49.000Z",
+    iso: "2026-04-07T08:45:19.000Z",
   },
   {
     slug: "why-does-composite-bonding-feel-different-when-biting",
@@ -3776,7 +4937,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/q_auto/f_auto/v1775201967/Why_does_composite_bonding_feel_different_when_biting_p6fdwz.jpg",
     category: "Cosmetic Dentistry",
     date: "April 7, 2026",
-    iso: "2026-04-07T07:12:49.000Z",
+    iso: "2026-04-07T08:45:19.000Z",
   },
   {
     slug: "what-happens-if-bonding-is-applied-over-old-fillings",
@@ -3785,7 +4946,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/q_auto/f_auto/v1775201967/What_happens_if_bonding_is_applied_over_old_fillings_q6dz8u.jpg",
     category: "Cosmetic Dentistry",
     date: "April 7, 2026",
-    iso: "2026-04-07T07:12:49.000Z",
+    iso: "2026-04-07T08:45:19.000Z",
   },
   {
     slug: "can-composite-bonding-correct-minor-bite-alignment-issues",
@@ -3794,7 +4955,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/q_auto/f_auto/v1775201966/Can_composite_bonding_correct_minor_bite_alignment_issues_lcqiql.jpg",
     category: "Cosmetic Dentistry",
     date: "April 7, 2026",
-    iso: "2026-04-07T07:12:49.000Z",
+    iso: "2026-04-07T08:45:19.000Z",
   },
   {
     slug: "can-bonding-make-teeth-look-longer-without-veneers",
@@ -3803,7 +4964,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/q_auto/f_auto/v1775201965/Can_bonding_make_teeth_look_longer_without_veneers_s3quog.jpg",
     category: "Cosmetic Dentistry",
     date: "April 7, 2026",
-    iso: "2026-04-07T07:12:49.000Z",
+    iso: "2026-04-07T08:45:19.000Z",
   },
   {
     slug: "why-do-some-bonded-teeth-chip-faster-than-others",
@@ -3812,7 +4973,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1772028923/Chipped_or_Cracked_Tooth_in_London_When_a_White_Filling_May_Be_Enough_elbyjj.jpg",
     category: "General Dentistry",
     date: "April 6, 2026",
-    iso: "2026-04-06T07:12:49.000Z",
+    iso: "2026-04-06T08:45:19.000Z",
   },
   {
     slug: "thick-bonding-front-teeth-effects",
@@ -3821,7 +4982,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1774963421/Why_does_composite_bonding_look_bulky_sometimes_xkithc.jpg",
     category: "Cosmetic Dentistry",
     date: "April 6, 2026",
-    iso: "2026-04-06T07:12:49.000Z",
+    iso: "2026-04-06T08:45:19.000Z",
   },
   {
     slug: "composite-bonding-irregular-tooth-spacing",
@@ -3830,7 +4991,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1772721114/Can_Composite_Bonding_Fix_a_Gapped_Tooth_Diastema_Closure_Explained_wzfszt.jpg",
     category: "Cosmetic Dentistry",
     date: "April 6, 2026",
-    iso: "2026-04-06T07:12:49.000Z",
+    iso: "2026-04-06T08:45:19.000Z",
   },
   {
     slug: "composite-bonding-fix-teeth-damaged-acid-erosion",
@@ -3839,7 +5000,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1774337517/What_happens_if_you_ignore_worn-down_teeth_iyzbwv.jpg",
     category: "Cosmetic Dentistry",
     date: "April 6, 2026",
-    iso: "2026-04-06T07:12:49.000Z",
+    iso: "2026-04-06T08:45:19.000Z",
   },
   {
     slug: "can-bonding-be-used-to-reshape-just-one-side-of-a-tooth",
@@ -3848,7 +5009,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1774963420/Can_bonding_change_the_shape_of_your_smile_completely_fuamyj.jpg",
     category: "Cosmetic Dentistry",
     date: "April 6, 2026",
-    iso: "2026-04-06T07:12:49.000Z",
+    iso: "2026-04-06T08:45:19.000Z",
   },
   {
     slug: "composite-bonding-weak-teeth-risks",
@@ -3857,7 +5018,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1772222958/is-composite-bonding-worth-it-london-cost-benefit_drafzy.jpg",
     category: "Cosmetic Dentistry",
     date: "April 4, 2026",
-    iso: "2026-04-04T07:12:49.000Z",
+    iso: "2026-04-04T08:45:19.000Z",
   },
   {
     slug: "composite-bonding-uneven-tooth-edges-grinding",
@@ -3866,7 +5027,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1772799120/How_Stress_Causes_Teeth_Grinding_Bruxism_and_How_to_Stop_It_ugfetn.jpg",
     category: "Cosmetic Dentistry",
     date: "April 4, 2026",
-    iso: "2026-04-04T07:12:49.000Z",
+    iso: "2026-04-04T08:45:19.000Z",
   },
   {
     slug: "composite-bonding-fix-wide-teeth",
@@ -3875,7 +5036,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1773071809/Tooth_Shape_and_Aging_How_contouring_can_make_you_look_younger_fwosiz.jpg",
     category: "Cosmetic Dentistry",
     date: "April 4, 2026",
-    iso: "2026-04-04T07:12:49.000Z",
+    iso: "2026-04-04T08:45:19.000Z",
   },
   {
     slug: "bonding-fix-overlapping-teeth-without-braces",
@@ -3884,7 +5045,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1771940871/Can_composite_bonding_straighten_teeth_afebze.jpg",
     category: "Cosmetic Dentistry",
     date: "April 4, 2026",
-    iso: "2026-04-04T07:12:49.000Z",
+    iso: "2026-04-04T08:45:19.000Z",
   },
   {
     slug: "bonded-teeth-dull-appearance-natural-teeth",
@@ -3893,7 +5054,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1772222998/composite-bonding-aftercare-maintenance-guide_hzpnc7.jpg",
     category: "General Dentistry",
     date: "April 4, 2026",
-    iso: "2026-04-04T07:12:49.000Z",
+    iso: "2026-04-04T08:45:19.000Z",
   },
   {
     slug: "why-does-bonding-lose-shine-over-time",
@@ -3902,7 +5063,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/q_auto/f_auto/v1775193615/Why_does_bonding_lose_shine_over_time_mpzv2c.jpg",
     category: "Cosmetic Dentistry",
     date: "April 3, 2026",
-    iso: "2026-04-03T07:12:49.000Z",
+    iso: "2026-04-03T08:45:19.000Z",
   },
   {
     slug: "what-happens-if-bonding-chips-repeatedly",
@@ -3911,7 +5072,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/q_auto/f_auto/v1775193616/What_happens_if_bonding_chips_repeatedly_nqsgwq.jpg",
     category: "Cosmetic Dentistry",
     date: "April 3, 2026",
-    iso: "2026-04-03T07:12:49.000Z",
+    iso: "2026-04-03T08:45:19.000Z",
   },
   {
     slug: "can-bonding-make-teeth-look-more-symmetrical-in-photos",
@@ -3920,7 +5081,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/q_auto/f_auto/v1775193615/Can_bonding_make_teeth_look_more_symmetrical_in_photos_dpzpiv.jpg",
     category: "Cosmetic Dentistry",
     date: "April 3, 2026",
-    iso: "2026-04-03T07:12:49.000Z",
+    iso: "2026-04-03T08:45:19.000Z",
   },
   {
     slug: "bonding-suitable-thin-enamel",
@@ -3929,7 +5090,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/q_auto/f_auto/v1775193615/Is_bonding_suitable_for_people_with_thin_enamel_ejkuyp.jpg",
     category: "Cosmetic Dentistry",
     date: "April 3, 2026",
-    iso: "2026-04-03T07:12:49.000Z",
+    iso: "2026-04-03T08:45:19.000Z",
   },
   {
     slug: "bonding-close-gaps-near-gum-line",
@@ -3938,7 +5099,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/q_auto/f_auto/v1775193614/Can_bonding_close_gaps_near_the_gum_line_not_just_front_gaps_qk4o0d.jpg",
     category: "Cosmetic Dentistry",
     date: "April 3, 2026",
-    iso: "2026-04-03T07:12:49.000Z",
+    iso: "2026-04-03T08:45:19.000Z",
   },
   {
     slug: "why-does-bonding-feel-rough-after-a-few-months",
@@ -3947,7 +5108,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/q_auto/f_auto/v1775049462/Why_does_bonding_feel_rough_after_a_few_months_htfxjd.jpg",
     category: "Cosmetic Dentistry",
     date: "April 2, 2026",
-    iso: "2026-04-02T07:12:49.000Z",
+    iso: "2026-04-02T08:45:19.000Z",
   },
   {
     slug: "why-do-some-people-regret-composite-bonding",
@@ -3956,7 +5117,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/q_auto/f_auto/v1775049462/Why_do_some_people_regret_composite_bonding_d2fbjw.jpg",
     category: "Cosmetic Dentistry",
     date: "April 2, 2026",
-    iso: "2026-04-02T07:12:49.000Z",
+    iso: "2026-04-02T08:45:19.000Z",
   },
   {
     slug: "does-composite-bonding-affect-speech-initially",
@@ -3965,7 +5126,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/q_auto/f_auto/v1775049462/Does_composite_bonding_affect_speech_initially_cf4dgz.jpg",
     category: "Cosmetic Dentistry",
     date: "April 2, 2026",
-    iso: "2026-04-02T07:12:49.000Z",
+    iso: "2026-04-02T08:45:19.000Z",
   },
   {
     slug: "can-bonding-fix-teeth-that-look-too-flat-or-square",
@@ -3974,7 +5135,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/q_auto/f_auto/v1775049461/Can_bonding_fix_teeth_that_look_too_flat_or_square_ycpqgk.jpg",
     category: "Cosmetic Dentistry",
     date: "April 2, 2026",
-    iso: "2026-04-02T07:12:49.000Z",
+    iso: "2026-04-02T08:45:19.000Z",
   },
   {
     slug: "can-bonding-be-reshaped-years-later",
@@ -3983,7 +5144,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/q_auto/f_auto/v1775049461/Can_bonding_be_reshaped_years_later_msfve3.jpg",
     category: "Cosmetic Dentistry",
     date: "April 2, 2026",
-    iso: "2026-04-02T07:12:49.000Z",
+    iso: "2026-04-02T08:45:19.000Z",
   },
   {
     slug: "why-does-composite-bonding-look-bulky",
@@ -3992,7 +5153,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1774963421/Why_does_composite_bonding_look_bulky_sometimes_xkithc.jpg",
     category: "Cosmetic Dentistry",
     date: "April 1, 2026",
-    iso: "2026-04-01T07:12:49.000Z",
+    iso: "2026-04-01T08:45:19.000Z",
   },
   {
     slug: "what-happens-if-composite-bonding-stains-unevenly",
@@ -4001,7 +5162,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1774963420/What_happens_if_composite_bonding_stains_unevenly_truhgu.jpg",
     category: "Cosmetic Dentistry",
     date: "April 1, 2026",
-    iso: "2026-04-01T07:12:49.000Z",
+    iso: "2026-04-01T08:45:19.000Z",
   },
   {
     slug: "can-composite-bonding-fix-small-teeth",
@@ -4010,7 +5171,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1774963420/Can_composite_bonding_fix_teeth_that_look_too_small_gqa8is.jpg",
     category: "Cosmetic Dentistry",
     date: "April 1, 2026",
-    iso: "2026-04-01T07:12:49.000Z",
+    iso: "2026-04-01T08:45:19.000Z",
   },
   {
     slug: "can-composite-bonding-fix-one-tooth",
@@ -4019,7 +5180,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1774963420/Can_composite_bonding_fix_teeth_that_look_too_small_gqa8is.jpg",
     category: "Cosmetic Dentistry",
     date: "April 1, 2026",
-    iso: "2026-04-01T07:12:49.000Z",
+    iso: "2026-04-01T08:45:19.000Z",
   },
   {
     slug: "can-bonding-change-the-shape-of-your-smile",
@@ -4028,7 +5189,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1774963420/Can_bonding_change_the_shape_of_your_smile_completely_fuamyj.jpg",
     category: "Cosmetic Dentistry",
     date: "April 1, 2026",
-    iso: "2026-04-01T07:12:49.000Z",
+    iso: "2026-04-01T08:45:19.000Z",
   },
   {
     slug: "why-does-food-get-stuck-under-flexible-dentures",
@@ -4037,7 +5198,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1774935199/Why_does_food_get_stuck_under_flexible_dentures_nhwpeo.jpg",
     category: "General Dentistry",
     date: "March 31, 2026",
-    iso: "2026-03-31T07:12:49.000Z",
+    iso: "2026-03-31T08:45:19.000Z",
   },
   {
     slug: "why-do-flexible-dentures-feel-uncomfortable-at-first",
@@ -4046,7 +5207,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1774935195/Why_do_flexible_dentures_feel_uncomfortable_at_first_ko0huw.jpg",
     category: "General Dentistry",
     date: "March 31, 2026",
-    iso: "2026-03-31T07:12:49.000Z",
+    iso: "2026-03-31T08:45:19.000Z",
   },
   {
     slug: "why-do-flexible-dentures-feel-loose-after-few-months",
@@ -4055,7 +5216,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1774935196/Why_do_my_flexible_dentures_feel_loose_after_a_few_months_mb9hrw.jpg",
     category: "General Dentistry",
     date: "March 31, 2026",
-    iso: "2026-03-31T07:12:49.000Z",
+    iso: "2026-03-31T08:45:19.000Z",
   },
   {
     slug: "do-flexible-dentures-cause-sore-gums",
@@ -4064,7 +5225,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1774935195/Do_flexible_dentures_cause_sore_gums_jsd0ha.jpg",
     category: "Dental Health Tips",
     date: "March 31, 2026",
-    iso: "2026-03-31T07:12:49.000Z",
+    iso: "2026-03-31T08:45:19.000Z",
   },
   {
     slug: "can-flexible-dentures-break-easily",
@@ -4073,7 +5234,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1774935198/Can_flexible_dentures_break_easily_xwbvfy.jpg",
     category: "General Dentistry",
     date: "March 31, 2026",
-    iso: "2026-03-31T07:12:49.000Z",
+    iso: "2026-03-31T08:45:19.000Z",
   },
   {
     slug: "why-do-my-teeth-look-flat-or-worn-down",
@@ -4082,7 +5243,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1774335570/Why_do_my_teeth_look_flat_or_worn_down_qjvabn.jpg",
     category: "General Dentistry",
     date: "March 30, 2026",
-    iso: "2026-03-30T07:12:49.000Z",
+    iso: "2026-03-30T08:45:19.000Z",
   },
   {
     slug: "what-happens-if-you-ignore-worn-down-teeth",
@@ -4091,7 +5252,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1774337517/What_happens_if_you_ignore_worn-down_teeth_iyzbwv.jpg",
     category: "General Dentistry",
     date: "March 30, 2026",
-    iso: "2026-03-30T07:12:49.000Z",
+    iso: "2026-03-30T08:45:19.000Z",
   },
   {
     slug: "what-happens-if-you-dont-fix-uneven-teeth-early",
@@ -4100,7 +5261,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1774337515/What_happens_if_you_don_t_fix_uneven_teeth_early_yjqd04.jpg",
     category: "General Dentistry",
     date: "March 30, 2026",
-    iso: "2026-03-30T07:12:49.000Z",
+    iso: "2026-03-30T08:45:19.000Z",
   },
   {
     slug: "is-it-normal-for-teeth-to-shift-after-aligners",
@@ -4109,7 +5270,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1774337514/Is_it_normal_for_teeth_to_shift_slightly_after_aligners_osviik.jpg",
     category: "Cosmetic Dentistry",
     date: "March 30, 2026",
-    iso: "2026-03-30T07:12:49.000Z",
+    iso: "2026-03-30T08:45:19.000Z",
   },
   {
     slug: "imperfections-after-smile-makeover",
@@ -4118,7 +5279,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1774337514/Is_it_normal_to_notice_imperfections_after_a_smile_makeover_nbxgoa.jpg",
     category: "Cosmetic Dentistry",
     date: "March 30, 2026",
-    iso: "2026-03-30T07:12:49.000Z",
+    iso: "2026-03-30T08:45:19.000Z",
   },
   {
     slug: "how-long-do-flexible-dentures-last",
@@ -4127,7 +5288,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1774847931/How_Long_Do_Flexible_Dentures_Last_ank4q1.jpg",
     category: "General Dentistry",
     date: "March 30, 2026",
-    iso: "2026-03-30T07:12:49.000Z",
+    iso: "2026-03-30T08:45:19.000Z",
   },
   {
     slug: "flexible-dentures-vs-acrylic-dentures",
@@ -4136,7 +5297,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1774847931/Flexible_Dentures_vs_Acrylic_Dentures_Which_Is_Better_glj7h8.jpg",
     category: "General Dentistry",
     date: "March 30, 2026",
-    iso: "2026-03-30T07:12:49.000Z",
+    iso: "2026-03-30T08:45:19.000Z",
   },
   {
     slug: "flexible-dentures-for-front-teeth",
@@ -4145,7 +5306,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1774847931/Flexible_Dentures_for_Front_Teeth_Are_They_a_Good_Choice_l2xrya.jpg",
     category: "General Dentistry",
     date: "March 30, 2026",
-    iso: "2026-03-30T07:12:49.000Z",
+    iso: "2026-03-30T08:45:19.000Z",
   },
   {
     slug: "flexible-dentures-cost-guide-are-they-worth-it",
@@ -4154,7 +5315,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1774847930/Flexible_Dentures_Cost_Guide_Are_They_Worth_It_lywkrm.jpg",
     category: "General Dentistry",
     date: "March 30, 2026",
-    iso: "2026-03-30T07:12:49.000Z",
+    iso: "2026-03-30T08:45:19.000Z",
   },
   {
     slug: "flexible-dentures-benefits-cost-who-theyre-for",
@@ -4163,7 +5324,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1774847934/What_Are_Flexible_Dentures_Benefits_Cost_Who_They_re_For_jrp1g0.jpg",
     category: "General Dentistry",
     date: "March 30, 2026",
-    iso: "2026-03-30T07:12:49.000Z",
+    iso: "2026-03-30T08:45:19.000Z",
   },
   {
     slug: "why-does-one-side-of-my-smile-look-different",
@@ -4172,7 +5333,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1774335583/Why_does_one_side_of_my_smile_look_different_wjf6u1.jpg",
     category: "Cosmetic Dentistry",
     date: "March 28, 2026",
-    iso: "2026-03-28T07:12:49.000Z",
+    iso: "2026-03-28T08:45:19.000Z",
   },
   {
     slug: "why-does-my-smile-look-asymmetrical",
@@ -4181,7 +5342,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1774335570/Why_does_my_smile_look_asymmetrical_ltqdht.jpg",
     category: "Cosmetic Dentistry",
     date: "March 28, 2026",
-    iso: "2026-03-28T07:12:49.000Z",
+    iso: "2026-03-28T08:45:19.000Z",
   },
   {
     slug: "why-do-my-teeth-feel-rough-after-whitening",
@@ -4190,7 +5351,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1774335571/Why_do_my_teeth_feel_rough_after_whitening_mm2vpz.jpg",
     category: "Cosmetic Dentistry",
     date: "March 28, 2026",
-    iso: "2026-03-28T07:12:49.000Z",
+    iso: "2026-03-28T08:45:19.000Z",
   },
   {
     slug: "why-do-my-gums-look-swollen-even-without-pain",
@@ -4199,7 +5360,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1774335568/Why_do_my_gums_look_swollen_even_without_pain_lre7n8.jpg",
     category: "Dental Health Tips",
     date: "March 28, 2026",
-    iso: "2026-03-28T07:12:49.000Z",
+    iso: "2026-03-28T08:45:19.000Z",
   },
   {
     slug: "gums-change-shape-after-cosmetic-treatment",
@@ -4208,7 +5369,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1774337514/Is_it_normal_for_gums_to_change_shape_after_cosmetic_treatment_d2m9yt.jpg",
     category: "Cosmetic Dentistry",
     date: "March 28, 2026",
-    iso: "2026-03-28T07:12:49.000Z",
+    iso: "2026-03-28T08:45:19.000Z",
   },
   {
     slug: "why-do-teeth-look-uneven-in-photos-not-mirror",
@@ -4217,7 +5378,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1774335126/Why_do_my_teeth_look_uneven_in_photos_but_not_in_the_mirror_yo0nrm.jpg",
     category: "General Dentistry",
     date: "March 27, 2026",
-    iso: "2026-03-27T07:12:49.000Z",
+    iso: "2026-03-27T08:45:19.000Z",
   },
   {
     slug: "why-do-my-teeth-look-longer-as-i-age",
@@ -4226,7 +5387,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1774335123/Why_do_my_teeth_look_longer_as_I_age_t9m5nd.jpg",
     category: "General Dentistry",
     date: "March 27, 2026",
-    iso: "2026-03-27T07:12:49.000Z",
+    iso: "2026-03-27T08:45:19.000Z",
   },
   {
     slug: "why-do-my-teeth-appear-translucent-at-the-edges",
@@ -4235,7 +5396,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1774335126/Why_do_my_teeth_look_uneven_in_photos_but_not_in_the_mirror_yo0nrm.jpg",
     category: "General Dentistry",
     date: "March 27, 2026",
-    iso: "2026-03-27T07:12:49.000Z",
+    iso: "2026-03-27T08:45:19.000Z",
   },
   {
     slug: "why-do-my-gums-look-darker-in-some-areas",
@@ -4244,7 +5405,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1774335118/Why_do_my_gums_look_darker_in_some_areas_hkbwlx.jpg",
     category: "Dental Health Tips",
     date: "March 27, 2026",
-    iso: "2026-03-27T07:12:49.000Z",
+    iso: "2026-03-27T08:45:19.000Z",
   },
   {
     slug: "why-do-my-front-teeth-keep-chipping",
@@ -4253,7 +5414,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1774335121/Why_do_my_front_teeth_chip_repeatedly_wsbdys.jpg",
     category: "General Dentistry",
     date: "March 27, 2026",
-    iso: "2026-03-27T07:12:49.000Z",
+    iso: "2026-03-27T08:45:19.000Z",
   },
   {
     slug: "how-to-clean-dental-implants",
@@ -4352,7 +5513,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1774331440/Can_you_fix_uneven_teeth_without_braces_or_aligners_toxgjw.jpg",
     category: "Cosmetic Dentistry",
     date: "March 25, 2026",
-    iso: "2026-03-25T07:12:49.000Z",
+    iso: "2026-03-25T08:45:19.000Z",
   },
   {
     slug: "combine-veneers-and-implants-smile-makeover",
@@ -4361,7 +5522,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1774331441/Can_you_combine_veneers_and_implants_in_one_smile_makeover_gp3vuy.jpg",
     category: "Cosmetic Dentistry",
     date: "March 25, 2026",
-    iso: "2026-03-25T07:12:49.000Z",
+    iso: "2026-03-25T08:45:19.000Z",
   },
   {
     slug: "can-you-whiten-teeth-if-you-have-cavities",
@@ -4370,7 +5531,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1774249513/Can_you_whiten_teeth_if_you_have_cavities_eh0mwf.jpg",
     category: "Cosmetic Dentistry",
     date: "March 25, 2026",
-    iso: "2026-03-25T07:12:49.000Z",
+    iso: "2026-03-25T08:45:19.000Z",
   },
   {
     slug: "can-you-get-veneers-if-you-have-gum-disease",
@@ -4379,7 +5540,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1774249512/Can_you_get_veneers_if_you_have_gum_disease_bhsmzx.jpg",
     category: "Cosmetic Dentistry",
     date: "March 25, 2026",
-    iso: "2026-03-25T07:12:49.000Z",
+    iso: "2026-03-25T08:45:19.000Z",
   },
   {
     slug: "can-you-get-aligners-if-you-already-have-crowns",
@@ -4388,7 +5549,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1774249513/Can_you_get_aligners_if_you_already_have_crowns_gxzoqd.jpg",
     category: "Cosmetic Dentistry",
     date: "March 25, 2026",
-    iso: "2026-03-25T07:12:49.000Z",
+    iso: "2026-03-25T08:45:19.000Z",
   },
   {
     slug: "can-veneers-fix-one-tooth-or-do-you-need-a-full-set",
@@ -4397,7 +5558,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1774249511/Can_veneers_fix_one_tooth_or_do_you_need_a_full_set_nlcdss.jpg",
     category: "Cosmetic Dentistry",
     date: "March 24, 2026",
-    iso: "2026-03-24T07:12:49.000Z",
+    iso: "2026-03-24T08:45:19.000Z",
   },
   {
     slug: "can-teeth-whitening-damage-enamel-long-term",
@@ -4406,7 +5567,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1774331439/Can_teeth_whitening_damage_enamel_long_term_p38wm8.jpg",
     category: "Cosmetic Dentistry",
     date: "March 24, 2026",
-    iso: "2026-03-24T07:12:49.000Z",
+    iso: "2026-03-24T08:45:19.000Z",
   },
   {
     slug: "can-cosmetic-dentistry-improve-a-narrow-smile",
@@ -4415,7 +5576,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1774331439/Can_cosmetic_dentistry_improve_a_narrow_smile_yait6u.jpg",
     category: "Cosmetic Dentistry",
     date: "March 24, 2026",
-    iso: "2026-03-24T07:12:49.000Z",
+    iso: "2026-03-24T08:45:19.000Z",
   },
   {
     slug: "can-composite-bonding-fix-worn-down-teeth",
@@ -4424,7 +5585,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1774331439/Can_composite_bonding_fix_worn-down_teeth_d2gjeh.jpg",
     category: "Cosmetic Dentistry",
     date: "March 24, 2026",
-    iso: "2026-03-24T07:12:49.000Z",
+    iso: "2026-03-24T08:45:19.000Z",
   },
   {
     slug: "can-composite-bonding-fix-receding-gums-appearance",
@@ -4433,7 +5594,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1774249487/Can_composite_bonding_fix_receding_gums_appearance_u09cn1.jpg",
     category: "Cosmetic Dentistry",
     date: "March 24, 2026",
-    iso: "2026-03-24T07:12:49.000Z",
+    iso: "2026-03-24T08:45:19.000Z",
   },
   {
     slug: "why-does-my-tooth-hurt-only-at-night",
@@ -4442,7 +5603,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1773927040/Why_Does_My_Tooth_Hurt_Only_at_Night_nz3uyp.jpg",
     category: "General Dentistry",
     date: "March 23, 2026",
-    iso: "2026-03-23T07:12:49.000Z",
+    iso: "2026-03-23T08:45:19.000Z",
   },
   {
     slug: "why-does-my-tooth-feel-high-when-i-bite-down",
@@ -4451,7 +5612,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1773927040/Why_Does_My_Tooth_Feel_High_When_I_Bite_Down_rgmun6.jpg",
     category: "General Dentistry",
     date: "March 23, 2026",
-    iso: "2026-03-23T07:12:49.000Z",
+    iso: "2026-03-23T08:45:19.000Z",
   },
   {
     slug: "why-does-my-jaw-hurt-along-with-one-tooth",
@@ -4460,7 +5621,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1773927043/Why_Does_My_Jaw_Hurt_Along_With_One_Tooth_jbeo3s.jpg",
     category: "General Dentistry",
     date: "March 23, 2026",
-    iso: "2026-03-23T07:12:49.000Z",
+    iso: "2026-03-23T08:45:19.000Z",
   },
   {
     slug: "bad-taste-coming-from-one-tooth",
@@ -4469,7 +5630,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1773927039/Why_Do_I_Have_a_Bad_Taste_Coming_from_One_Tooth_lzur6n.jpg",
     category: "General Dentistry",
     date: "March 23, 2026",
-    iso: "2026-03-23T07:12:49.000Z",
+    iso: "2026-03-23T08:45:19.000Z",
   },
   {
     slug: "when-is-a-root-canal-no-longer-an-option",
@@ -4478,7 +5639,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1773926818/When_Is_a_Root_Canal_No_Longer_an_Option_g9x0y1.jpg",
     category: "General Dentistry",
     date: "March 21, 2026",
-    iso: "2026-03-21T07:12:49.000Z",
+    iso: "2026-03-21T08:45:19.000Z",
   },
   {
     slug: "root-canal-vs-doing-nothing-what-happens-over-time",
@@ -4487,7 +5648,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1773926818/Root_Canal_vs_Doing_Nothing_What_Actually_Happens_Over_Time_ewwe8r.jpg",
     category: "General Dentistry",
     date: "March 21, 2026",
-    iso: "2026-03-21T07:12:49.000Z",
+    iso: "2026-03-21T08:45:19.000Z",
   },
   {
     slug: "how-do-you-know-if-its-too-late-for-a-root-canal",
@@ -4496,7 +5657,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1773926817/How_Do_You_Know_If_It_s_Too_Late_for_a_Root_Canal_uysnjf.jpg",
     category: "General Dentistry",
     date: "March 21, 2026",
-    iso: "2026-03-21T07:12:49.000Z",
+    iso: "2026-03-21T08:45:19.000Z",
   },
   {
     slug: "can-you-delay-a-root-canal-without-losing-the-tooth",
@@ -4505,7 +5666,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1773926817/Can_You_Delay_a_Root_Canal_Without_Losing_the_Tooth_tqpwzv.jpg",
     category: "General Dentistry",
     date: "March 21, 2026",
-    iso: "2026-03-21T07:12:49.000Z",
+    iso: "2026-03-21T08:45:19.000Z",
   },
   {
     slug: "can-a-tooth-heal-without-a-root-canal",
@@ -4514,7 +5675,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1773926817/Can_a_Tooth_Heal_Without_a_Root_Canal_d4teml.jpg",
     category: "General Dentistry",
     date: "March 21, 2026",
-    iso: "2026-03-21T07:12:49.000Z",
+    iso: "2026-03-21T08:45:19.000Z",
   },
   {
     slug: "what-happens-if-one-veneer-breaks",
@@ -4523,7 +5684,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1773926590/What_Happens_If_One_Veneer_Breaks_jt9qxp.jpg",
     category: "Cosmetic Dentistry",
     date: "March 20, 2026",
-    iso: "2026-03-20T07:12:49.000Z",
+    iso: "2026-03-20T08:45:19.000Z",
   },
   {
     slug: "how-much-tooth-reduction-needed-for-veneers",
@@ -4532,7 +5693,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1773926589/How_Much_Tooth_Reduction_Is_Actually_Needed_for_Veneers_gxwn4o.jpg",
     category: "Cosmetic Dentistry",
     date: "March 20, 2026",
-    iso: "2026-03-20T07:12:49.000Z",
+    iso: "2026-03-20T08:45:19.000Z",
   },
   {
     slug: "do-veneers-affect-your-bite-long-term",
@@ -4541,7 +5702,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1773926589/Do_Veneers_Affect_Your_Bite_Long-Term_se7oa3.jpg",
     category: "Cosmetic Dentistry",
     date: "March 20, 2026",
-    iso: "2026-03-20T07:12:49.000Z",
+    iso: "2026-03-20T08:45:19.000Z",
   },
   {
     slug: "can-veneers-be-replaced-without-further-damage",
@@ -4550,16 +5711,16 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1773926589/Can_Veneers_Be_Replaced_Without_Further_Damage_mpig8s.jpg",
     category: "Cosmetic Dentistry",
     date: "March 20, 2026",
-    iso: "2026-03-20T07:12:49.000Z",
+    iso: "2026-03-20T08:45:19.000Z",
   },
   {
     slug: "are-veneers-permanent-what-happens-after-10-15-years",
-    title: "Are Veneers Permanent? What Happens After 10â€“15 Years?",
-    excerpt: "Discover how long dental veneers last, what happens after 10â€“15 years, and when replacement may be needed. Expert guidance from a London dental clinic.",
+    title: "Are Veneers Permanent? What Happens After 10–15 Years?",
+    excerpt: "Discover how long dental veneers last, what happens after 10–15 years, and when replacement may be needed. Expert guidance from a London dental clinic.",
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1773926587/Are_Veneers_Permanent_What_Happens_After_10_15_Years_rvtcuu.jpg",
     category: "Cosmetic Dentistry",
     date: "March 20, 2026",
-    iso: "2026-03-20T07:12:49.000Z",
+    iso: "2026-03-20T08:45:19.000Z",
   },
   {
     slug: "when-should-you-upgrade-from-bonding-to-veneers",
@@ -4568,7 +5729,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1773840814/When_Should_You_Upgrade_from_Bonding_to_Veneers_pbqsxh.jpg",
     category: "Cosmetic Dentistry",
     date: "March 19, 2026",
-    iso: "2026-03-19T07:12:49.000Z",
+    iso: "2026-03-19T08:45:19.000Z",
   },
   {
     slug: "what-happens-if-you-dont-maintain-composite-bonding",
@@ -4577,7 +5738,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1773840814/What_Happens_If_You_Don_t_Maintain_Composite_Bonding_cpva5s.jpg",
     category: "Cosmetic Dentistry",
     date: "March 19, 2026",
-    iso: "2026-03-19T07:12:49.000Z",
+    iso: "2026-03-19T08:45:19.000Z",
   },
   {
     slug: "composite-bonding-for-uneven-gum-lines",
@@ -4586,7 +5747,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1773840814/Composite_Bonding_for_Uneven_Gum_Lines_Is_It_Enough_uetmyr.jpg",
     category: "Cosmetic Dentistry",
     date: "March 19, 2026",
-    iso: "2026-03-19T07:12:49.000Z",
+    iso: "2026-03-19T08:45:19.000Z",
   },
   {
     slug: "can-you-combine-bonding-and-whitening-safely",
@@ -4595,7 +5756,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1773840814/Can_You_Combine_Bonding_and_Whitening_Safely_zupgxt.jpg",
     category: "Cosmetic Dentistry",
     date: "March 19, 2026",
-    iso: "2026-03-19T07:12:49.000Z",
+    iso: "2026-03-19T08:45:19.000Z",
   },
   {
     slug: "can-bonding-fix-bite-issues-or-only-aesthetics",
@@ -4604,7 +5765,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1773840813/Can_Bonding_Fix_Bite_Issues_or_Only_Aesthetics_g8ahuu.jpg",
     category: "Cosmetic Dentistry",
     date: "March 19, 2026",
-    iso: "2026-03-19T07:12:49.000Z",
+    iso: "2026-03-19T08:45:19.000Z",
   },
   {
     slug: "why-dentures-feel-loose-jawbone-resorption",
@@ -4613,7 +5774,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1773069857/Why_your_dentures_feel_loose_after_5_years_The_science_of_jawbone_resorption_c44aqe.jpg",
     category: "General Dentistry",
     date: "March 17, 2026",
-    iso: "2026-03-17T07:12:49.000Z",
+    iso: "2026-03-17T08:45:19.000Z",
   },
   {
     slug: "why-crowns-follow-root-canals-protecting-tooth-structure",
@@ -4622,7 +5783,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1773125135/Why_Crowns_Follow_Root_Canals_Protecting_tooth_structure_m1ig5f.jpg",
     category: "General Dentistry",
     date: "March 17, 2026",
-    iso: "2026-03-17T07:12:49.000Z",
+    iso: "2026-03-17T08:45:19.000Z",
   },
   {
     slug: "veneers-vs-bonding-vs-whitening-which-should-you-do-first",
@@ -4631,7 +5792,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1773754492/Veneers_vs_Bonding_vs_Whitening_Which_Should_You_Do_First_gsff02.jpg",
     category: "Cosmetic Dentistry",
     date: "March 17, 2026",
-    iso: "2026-03-17T07:12:49.000Z",
+    iso: "2026-03-17T08:45:19.000Z",
   },
   {
     slug: "how-to-plan-a-smile-makeover-step-by-step-without-over-treatment",
@@ -4640,7 +5801,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1773754486/How_to_Plan_a_Smile_Makeover_Step-by-Step_Without_Over-Treatment_azwqbk.jpg",
     category: "Cosmetic Dentistry",
     date: "March 17, 2026",
-    iso: "2026-03-17T07:12:49.000Z",
+    iso: "2026-03-17T08:45:19.000Z",
   },
   {
     slug: "fix-your-smile-without-veneers",
@@ -4649,7 +5810,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1773754484/Can_You_Fix_Your_Smile_Without_Veneers_ooxgre.jpg",
     category: "Cosmetic Dentistry",
     date: "March 17, 2026",
-    iso: "2026-03-17T07:12:49.000Z",
+    iso: "2026-03-17T08:45:19.000Z",
   },
   {
     slug: "do-you-need-aligners-before-composite-bonding",
@@ -4658,16 +5819,16 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1773754484/Do_You_Need_Aligners_Before_Composite_Bonding_jrbpyy.jpg",
     category: "Cosmetic Dentistry",
     date: "March 17, 2026",
-    iso: "2026-03-17T07:12:49.000Z",
+    iso: "2026-03-17T08:45:19.000Z",
   },
   {
     slug: "dental-implant-bone-integration-failure-causes-next-steps",
-    title: "Why Some Dental Implants Don't Integrate With Bone â€” Causes and Next Steps",
+    title: "Why Some Dental Implants Don't Integrate With Bone — Causes and Next Steps",
     excerpt: "Learn why some dental implants fail to integrate with bone, common causes of implant failure, warning signs to watch for, and what next steps may be available.",
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1773644514/Why_Some_Dental_Implants_Don_t_Integrate_With_Bone_Causes_and_Next_Steps_bxemxv.jpg",
     category: "General Dentistry",
     date: "March 17, 2026",
-    iso: "2026-03-17T07:12:49.000Z",
+    iso: "2026-03-17T08:45:19.000Z",
   },
   {
     slug: "composite-bonding-or-veneers-for-your-smile-goals",
@@ -4676,7 +5837,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1773754492/Should_You_Choose_Composite_Bonding_or_Veneers_for_Your_Smile_Goals_zllkf9.jpg",
     category: "Cosmetic Dentistry",
     date: "March 17, 2026",
-    iso: "2026-03-17T07:12:49.000Z",
+    iso: "2026-03-17T08:45:19.000Z",
   },
   {
     slug: "can-old-dental-implant-be-replaced",
@@ -4685,7 +5846,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1773644514/Can_an_Old_Dental_Implant_Be_Replaced_What_Patients_Should_Know_ukt9ww.jpg",
     category: "General Dentistry",
     date: "March 17, 2026",
-    iso: "2026-03-17T07:12:49.000Z",
+    iso: "2026-03-17T08:45:19.000Z",
   },
   {
     slug: "bridges-vs-implants-which-is-better-for-your-gap",
@@ -4694,7 +5855,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1773125129/Bridges_vs._Implants_Which_is_better_for_your_gap_su2j7q.jpg",
     category: "General Dentistry",
     date: "March 17, 2026",
-    iso: "2026-03-17T07:12:49.000Z",
+    iso: "2026-03-17T08:45:19.000Z",
   },
   {
     slug: "veneers-over-fillings",
@@ -4703,7 +5864,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1773071811/Veneers_Over_Fillings_Can_you_upgrade_your_existing_dental_work_fkk43l.jpg",
     category: "Cosmetic Dentistry",
     date: "March 15, 2026",
-    iso: "2026-03-15T07:12:49.000Z",
+    iso: "2026-03-15T08:45:19.000Z",
   },
   {
     slug: "tooth-shape-ageing-contouring-look-younger",
@@ -4712,7 +5873,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1773071809/Tooth_Shape_and_Aging_How_contouring_can_make_you_look_younger_fwosiz.jpg",
     category: "Cosmetic Dentistry",
     date: "March 15, 2026",
-    iso: "2026-03-15T07:12:49.000Z",
+    iso: "2026-03-15T08:45:19.000Z",
   },
   {
     slug: "smile-makeovers-for-men-natural-subtle-look",
@@ -4721,7 +5882,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1773071804/Smile_Makeovers_for_Men_Achieving_a_natural_subtle_look_b90dc6.jpg",
     category: "Cosmetic Dentistry",
     date: "March 15, 2026",
-    iso: "2026-03-15T07:12:49.000Z",
+    iso: "2026-03-15T08:45:19.000Z",
   },
   {
     slug: "fixing-gummy-smile-gum-contouring",
@@ -4730,7 +5891,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "",
     category: "",
     date: "March 15, 2026",
-    iso: "2026-03-15T07:12:49.000Z",
+    iso: "2026-03-15T08:45:19.000Z",
   },
   {
     slug: "veneers-vs-lumineers-which-preparation-is-right-for-you",
@@ -4739,16 +5900,16 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1773071813/Veneers_vs._Lumineers_Which_preparation_is_right_for_you_unr8ti.jpg",
     category: "Cosmetic Dentistry",
     date: "March 14, 2026",
-    iso: "2026-03-14T07:12:49.000Z",
+    iso: "2026-03-14T08:45:19.000Z",
   },
   {
     slug: "social-six-fast-results-visible-teeth",
     title: "The Social Six: Fast Results for Your Most Visible Teeth",
-    excerpt: "Learn about the Social Six â€“ orthodontic treatment focusing on your most visible front teeth. Discover how it works, who it suits, and what to expect.",
+    excerpt: "Learn about the Social Six – orthodontic treatment focusing on your most visible front teeth. Discover how it works, who it suits, and what to expect.",
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1773071807/The_Social_Six_Fast_results_for_your_most_visible_teeth_veu2pg.jpg",
     category: "General Dentistry",
     date: "March 14, 2026",
-    iso: "2026-03-14T07:12:49.000Z",
+    iso: "2026-03-14T08:45:19.000Z",
   },
   {
     slug: "is-bonding-painful-what-to-expect",
@@ -4757,7 +5918,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1773124953/Is_Bonding_Painful_What_to_expect_during_your_appointment_l707fr.jpg",
     category: "Cosmetic Dentistry",
     date: "March 14, 2026",
-    iso: "2026-03-14T07:12:49.000Z",
+    iso: "2026-03-14T08:45:19.000Z",
   },
   {
     slug: "how-to-store-and-clean-dentures-avoid-denture-stomatitis",
@@ -4766,7 +5927,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1773069850/How_to_store_and_clean_your_dentures_to_avoid_Denture_Stomatitis_myoz1b.jpg",
     category: "General Dentistry",
     date: "March 14, 2026",
-    iso: "2026-03-14T07:12:49.000Z",
+    iso: "2026-03-14T08:45:19.000Z",
   },
   {
     slug: "closing-black-triangles-bonding-gaps-gum-line",
@@ -4775,7 +5936,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1773124953/Closing_Black_Triangles_Using_bonding_for_gaps_at_the_gum_line_kunb66.jpg",
     category: "Cosmetic Dentistry",
     date: "March 14, 2026",
-    iso: "2026-03-14T07:12:49.000Z",
+    iso: "2026-03-14T08:45:19.000Z",
   },
   {
     slug: "wisdom-tooth-myths-when-they-need-removing",
@@ -4784,7 +5945,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1773125136/Wisdom_Tooth_Myths_When_they_actually_need_to_be_removed_nozgpi.jpg",
     category: "General Dentistry",
     date: "March 13, 2026",
-    iso: "2026-03-13T07:12:49.000Z",
+    iso: "2026-03-13T08:45:19.000Z",
   },
   {
     slug: "replacing-silver-fillings-benefits-of-white-composite",
@@ -4793,7 +5954,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1773125130/Replacing_Silver_Fillings_The_benefits_of_white_composite_rvdbod.webp",
     category: "General Dentistry",
     date: "March 13, 2026",
-    iso: "2026-03-13T07:12:49.000Z",
+    iso: "2026-03-13T08:45:19.000Z",
   },
   {
     slug: "painless-extractions-modern-techniques-stress-free-visit",
@@ -4802,7 +5963,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1773125129/Painless_Extractions_Modern_techniques_for_a_stress-free_visit_lbo4de.jpg",
     category: "General Dentistry",
     date: "March 13, 2026",
-    iso: "2026-03-13T07:12:49.000Z",
+    iso: "2026-03-13T08:45:19.000Z",
   },
   {
     slug: "is-bonding-reversible-benefits-of-no-prep-dentistry",
@@ -4811,7 +5972,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1773125129/Is_Bonding_Reversible_The_benefits_of_no-prep_dentistry_ytgkps.jpg",
     category: "Cosmetic Dentistry",
     date: "March 13, 2026",
-    iso: "2026-03-13T07:12:49.000Z",
+    iso: "2026-03-13T08:45:19.000Z",
   },
   {
     slug: "comfortable-extractions-modern-techniques-relaxed-visit",
@@ -4820,7 +5981,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1773125129/Painless_Extractions_Modern_techniques_for_a_stress-free_visit_lbo4de.jpg",
     category: "General Dentistry",
     date: "March 13, 2026",
-    iso: "2026-03-13T07:12:49.000Z",
+    iso: "2026-03-13T08:45:19.000Z",
   },
   {
     slug: "avoiding-dry-socket-post-extraction-healing",
@@ -4829,7 +5990,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1773125128/Avoiding_Dry_Socket_Crucial_steps_for_post-extraction_healing_vwgykg.jpg",
     category: "General Dentistry",
     date: "March 13, 2026",
-    iso: "2026-03-13T07:12:49.000Z",
+    iso: "2026-03-13T08:45:19.000Z",
   },
   {
     slug: "whitening-before-bonding-why-order-of-treatment-matters",
@@ -4838,7 +5999,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1773124955/Whitening_Before_Bonding_Why_the_order_of_treatment_matters_bxq02c.jpg",
     category: "Cosmetic Dentistry",
     date: "March 12, 2026",
-    iso: "2026-03-12T07:12:49.000Z",
+    iso: "2026-03-12T08:45:19.000Z",
   },
   {
     slug: "repairing-chipped-bonding-quick-fixes-for-accidental-damage",
@@ -4847,7 +6008,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1773124954/Repairing_Chipped_Bonding_Quick_fixes_for_accidental_damage_lz7u1q.jpg",
     category: "Cosmetic Dentistry",
     date: "March 12, 2026",
-    iso: "2026-03-12T07:12:49.000Z",
+    iso: "2026-03-12T08:45:19.000Z",
   },
   {
     slug: "fixing-short-teeth-edge-bonding-restores-smile",
@@ -4856,7 +6017,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1773124953/Fixing_Short_Teeth_How_edge_bonding_restores_your_smile_ccm7bc.jpg",
     category: "Cosmetic Dentistry",
     date: "March 12, 2026",
-    iso: "2026-03-12T07:12:49.000Z",
+    iso: "2026-03-12T08:45:19.000Z",
   },
   {
     slug: "bonding-vs-crowns-choosing-right-repair-for-your-tooth",
@@ -4865,7 +6026,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1773124952/Bonding_vs._Crowns_Choosing_the_right_repair_for_your_tooth_lmuz6y.jpg",
     category: "Cosmetic Dentistry",
     date: "March 12, 2026",
-    iso: "2026-03-12T07:12:49.000Z",
+    iso: "2026-03-12T08:45:19.000Z",
   },
   {
     slug: "bonding-for-smokers-tips-for-managing-stains-and-longevity",
@@ -4874,7 +6035,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1773124952/Bonding_for_Smokers_Tips_for_managing_stains_and_longevity_vtgvzz.jpg",
     category: "Cosmetic Dentistry",
     date: "March 12, 2026",
-    iso: "2026-03-12T07:12:49.000Z",
+    iso: "2026-03-12T08:45:19.000Z",
   },
   {
     slug: "upper-vs-lower-dentures-why-bottom-plate-harder-to-keep-in-place",
@@ -4883,7 +6044,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1773069855/Upper_vs._Lower_Dentures_Why_the_bottom_plate_is_harder_to_keep_in_place_guczrm.jpg",
     category: "General Dentistry",
     date: "March 10, 2026",
-    iso: "2026-03-10T07:12:49.000Z",
+    iso: "2026-03-10T08:45:19.000Z",
   },
   {
     slug: "transitioning-from-traditional-dentures-to-implant-supported-dentures",
@@ -4892,7 +6053,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1773069854/Transitioning_from_traditional_dentures_to_implant-supported_versions_gzmjpk.jpg",
     category: "General Dentistry",
     date: "March 10, 2026",
-    iso: "2026-03-10T07:12:49.000Z",
+    iso: "2026-03-10T08:45:19.000Z",
   },
   {
     slug: "metal-frame-vs-acrylic-partials-pros-cons-london-patients",
@@ -4901,7 +6062,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "",
     category: "",
     date: "March 10, 2026",
-    iso: "2026-03-10T07:12:49.000Z",
+    iso: "2026-03-10T08:45:19.000Z",
   },
   {
     slug: "foods-denture-wearers-struggle-with-how-implants-solve-it",
@@ -4910,7 +6071,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1773069853/The_Top_5_foods_denture_wearers_struggle_with_and_how_implants_solve_it_ugu9ot.jpg",
     category: "General Dentistry",
     date: "March 10, 2026",
-    iso: "2026-03-10T07:12:49.000Z",
+    iso: "2026-03-10T08:45:19.000Z",
   },
   {
     slug: "can-you-reline-an-old-denture-or-is-it-time-for-an-upgrade",
@@ -4919,7 +6080,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1773069849/Can_you_reline_an_old_denture_or_is_it_time_for_an_upgrade_dfqzkx.jpg",
     category: "General Dentistry",
     date: "March 10, 2026",
-    iso: "2026-03-10T07:12:49.000Z",
+    iso: "2026-03-10T08:45:19.000Z",
   },
   {
     slug: "same-day-partial-dentures-london",
@@ -4928,7 +6089,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1773052871/Same-Day_Partial_Dentures_in_London_mdmy3q.jpg",
     category: "General Dentistry",
     date: "March 9, 2026",
-    iso: "2026-03-09T07:12:49.000Z",
+    iso: "2026-03-09T08:45:19.000Z",
   },
   {
     slug: "paying-for-dentures-finance-and-insurance-options",
@@ -4937,7 +6098,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1773052870/Financing_Your_Dentures_lde1te.jpg",
     category: "General Dentistry",
     date: "March 9, 2026",
-    iso: "2026-03-09T07:12:49.000Z",
+    iso: "2026-03-09T08:45:19.000Z",
   },
   {
     slug: "partial-dentures-vs-dental-implants",
@@ -4946,7 +6107,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1773052871/Partial_Dentures_vs._Dental_Implants_jvrdwv.jpg",
     category: "General Dentistry",
     date: "March 9, 2026",
-    iso: "2026-03-09T07:12:49.000Z",
+    iso: "2026-03-09T08:45:19.000Z",
   },
   {
     slug: "partial-dentures-cost-london-2026",
@@ -4955,7 +6116,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1773052871/Partial_Dentures_Cost_2026_hx5xjd.jpg",
     category: "General Dentistry",
     date: "March 9, 2026",
-    iso: "2026-03-09T07:12:49.000Z",
+    iso: "2026-03-09T08:45:19.000Z",
   },
   {
     slug: "invisible-partial-dentures-metal-free-options-front-teeth",
@@ -4964,7 +6125,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1773052871/Invisible_Partial_Dentures_olpqe6.jpg",
     category: "General Dentistry",
     date: "March 9, 2026",
-    iso: "2026-03-09T07:12:49.000Z",
+    iso: "2026-03-09T08:45:19.000Z",
   },
   {
     slug: "flexible-partial-dentures-cost-benefits-drawbacks",
@@ -4973,7 +6134,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1773052870/Flexible_Partial_Dentures_tzvzqj.jpg",
     category: "General Dentistry",
     date: "March 9, 2026",
-    iso: "2026-03-09T07:12:49.000Z",
+    iso: "2026-03-09T08:45:19.000Z",
   },
   {
     slug: "affordable-partial-dentures-budget-friendly-choices",
@@ -4982,7 +6143,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1773052870/Affordable_Partial_Dentures_yyw4v3.jpg",
     category: "General Dentistry",
     date: "March 9, 2026",
-    iso: "2026-03-09T07:12:49.000Z",
+    iso: "2026-03-09T08:45:19.000Z",
   },
   {
     slug: "small-cavities-become-root-canals",
@@ -4991,7 +6152,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1772803881/The_Wait_and_See_Danger_Why_Small_Cavities_Become_Big_Root_Canals_gh94mo.jpg",
     category: "General Dentistry",
     date: "March 8, 2026",
-    iso: "2026-03-08T07:12:49.000Z",
+    iso: "2026-03-08T08:45:19.000Z",
   },
   {
     slug: "sensitive-teeth-how-to-enjoy-ice-cream-again",
@@ -5000,7 +6161,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1772803805/Sensitive_Teeth_How_to_Enjoy_Ice_Cream_Again_xkein5.jpg",
     category: "Dental Health Tips",
     date: "March 8, 2026",
-    iso: "2026-03-08T07:12:49.000Z",
+    iso: "2026-03-08T08:45:19.000Z",
   },
   {
     slug: "role-of-fluoride-in-adult-dentistry",
@@ -5009,7 +6170,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1772803806/The_Role_of_Fluoride_in_Adult_Dentistry_Is_It_Still_Necessary_hw7fzh.jpg",
     category: "Dental Health Tips",
     date: "March 8, 2026",
-    iso: "2026-03-08T07:12:49.000Z",
+    iso: "2026-03-08T08:45:19.000Z",
   },
   {
     slug: "membership-advantage-preventative-plans-save-thousands",
@@ -5018,7 +6179,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1772803806/The_Membership_Advantage_Why_Preventative_Plans_Save_You_Thousands_pe0hyx.jpg",
     category: "General Dentistry",
     date: "March 8, 2026",
-    iso: "2026-03-08T07:12:49.000Z",
+    iso: "2026-03-08T08:45:19.000Z",
   },
   {
     slug: "how-your-dental-hygienist-spots-problems-before-they-become-painful",
@@ -5027,7 +6188,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1772803801/How_Your_Dental_Hygienist_Spots_Problems_Before_They_Become_Painful_fgr24y.jpg",
     category: "General Dentistry",
     date: "March 8, 2026",
-    iso: "2026-03-08T07:12:49.000Z",
+    iso: "2026-03-08T08:45:19.000Z",
   },
   {
     slug: "enamel-erosion-can-you-grow-your-enamel-back",
@@ -5036,7 +6197,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1772803801/Enamel_Erosion_Can_You_Grow_Your_Enamel_Back_srzww7.jpg",
     category: "Dental Health Tips",
     date: "March 8, 2026",
-    iso: "2026-03-08T07:12:49.000Z",
+    iso: "2026-03-08T08:45:19.000Z",
   },
   {
     slug: "what-happens-during-a-deep-clean-for-periodontal-disease",
@@ -5045,7 +6206,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1772799126/What_Happens_During_a_Deep_Clean_for_Periodontal_Disease_c8v8sx.jpg",
     category: "General Dentistry",
     date: "March 7, 2026",
-    iso: "2026-03-07T07:12:49.000Z",
+    iso: "2026-03-07T08:45:19.000Z",
   },
   {
     slug: "veneers-for-discoloured-teeth-when-whitening-isnt-enough",
@@ -5054,7 +6215,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1772785560/Veneers_for_Discoloured_Teeth_When_Whitening_Isn_t_Enough._dnrpba.jpg",
     category: "Cosmetic Dentistry",
     date: "March 7, 2026",
-    iso: "2026-03-07T07:12:49.000Z",
+    iso: "2026-03-07T08:45:19.000Z",
   },
   {
     slug: "tooth-infection-spreading-warning-signs",
@@ -5063,7 +6224,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1772785554/How_Do_You_Know_If_a_Tooth_Infection_Is_Spreading_Warning_Signs_You_Shouldn_t_Ignore_nhfct7.jpg",
     category: "General Dentistry",
     date: "March 7, 2026",
-    iso: "2026-03-07T07:12:49.000Z",
+    iso: "2026-03-07T08:45:19.000Z",
   },
   {
     slug: "tooth-contouring-for-smoother-edges",
@@ -5072,7 +6233,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1772785558/Tooth_Contouring_for_Smoother_Edges_The_Fastest_Cosmetic_Fix._fonh0t.jpg",
     category: "Cosmetic Dentistry",
     date: "March 7, 2026",
-    iso: "2026-03-07T07:12:49.000Z",
+    iso: "2026-03-07T08:45:19.000Z",
   },
   {
     slug: "texture-and-translucency-in-porcelain-veneers",
@@ -5081,7 +6242,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1772785557/The_Micro-Aesthetic_Guide_Texture_and_Translucency_in_Porcelain_Veneers._xpltlv.jpg",
     category: "Cosmetic Dentistry",
     date: "March 7, 2026",
-    iso: "2026-03-07T07:12:49.000Z",
+    iso: "2026-03-07T08:45:19.000Z",
   },
   {
     slug: "sugar-free-diets-healthy-smoothies-ruining-enamel",
@@ -5090,7 +6251,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1772799121/Sugar-Free_Diets_Are_Healthy_Smoothies_Ruining_Your_Enamel_l1bdto.jpg",
     category: "Dental Health Tips",
     date: "March 7, 2026",
-    iso: "2026-03-07T07:12:49.000Z",
+    iso: "2026-03-07T08:45:19.000Z",
   },
   {
     slug: "stress-teeth-grinding-bruxism-how-to-stop",
@@ -5099,7 +6260,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1772799120/How_Stress_Causes_Teeth_Grinding_Bruxism_and_How_to_Stop_It_ugfetn.jpg",
     category: "General Dentistry",
     date: "March 7, 2026",
-    iso: "2026-03-07T07:12:49.000Z",
+    iso: "2026-03-07T08:45:19.000Z",
   },
   {
     slug: "oral-health-and-pregnancy",
@@ -5108,7 +6269,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1772799121/The_Connection_Between_Oral_Health_and_Pregnancy._xcby8k.jpg",
     category: "Dental Health Tips",
     date: "March 7, 2026",
-    iso: "2026-03-07T07:12:49.000Z",
+    iso: "2026-03-07T08:45:19.000Z",
   },
   {
     slug: "gum-health-fresh-breath-halitosis-solutions",
@@ -5117,7 +6278,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1772799121/The_Link_Between_Gum_Health_and_Fresh_Breath_Halitosis_Solutions._h0jj2t.jpg",
     category: "Dental Health Tips",
     date: "March 7, 2026",
-    iso: "2026-03-07T07:12:49.000Z",
+    iso: "2026-03-07T08:45:19.000Z",
   },
   {
     slug: "fix-single-chipped-front-tooth-without-treating-rest",
@@ -5126,7 +6287,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1772785355/Can_You_Fix_a_Single_Chipped_Front_Tooth_Without_Treating_the_Rest_qebmcw.jpg",
     category: "General Dentistry",
     date: "March 7, 2026",
-    iso: "2026-03-07T07:12:49.000Z",
+    iso: "2026-03-07T08:45:19.000Z",
   },
   {
     slug: "face-shape-best-veneer-shape",
@@ -5135,7 +6296,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1772785562/Why_Your_Face_Shape_Dictates_the_Best_Shape_for_Your_Veneers._pp3jr4.jpg",
     category: "Cosmetic Dentistry",
     date: "March 7, 2026",
-    iso: "2026-03-07T07:12:49.000Z",
+    iso: "2026-03-07T08:45:19.000Z",
   },
   {
     slug: "composite-bonding-vs-porcelain-which-is-more-repairable",
@@ -5144,7 +6305,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1772785356/Composite_Bonding_vs._Porcelain_Which_is_More_Repairable_yoac9p.jpg",
     category: "Cosmetic Dentistry",
     date: "March 7, 2026",
-    iso: "2026-03-07T07:12:49.000Z",
+    iso: "2026-03-07T08:45:19.000Z",
   },
   {
     slug: "composite-bonding-for-peg-laterals",
@@ -5153,16 +6314,16 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1772785354/Composite_Bonding_for_Peg_Laterals_cuprqo.jpg",
     category: "Cosmetic Dentistry",
     date: "March 7, 2026",
-    iso: "2026-03-07T07:12:49.000Z",
+    iso: "2026-03-07T08:45:19.000Z",
   },
   {
     slug: "bleeding-gums-when-flossing-is-it-an-emergency",
-    title: "Bleeding Gums When Flossing â€“ Is It an Emergency?",
+    title: "Bleeding Gums When Flossing – Is It an Emergency?",
     excerpt: "Bleeding gums when you floss can signal more than sensitivity. Learn what causes it, when to be concerned, and how to restore healthy gums fast.",
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1772799175/Bleeding_Gums_When_Flossing_Is_It_an_Emergency_lpt3ff.jpg",
     category: "Dental Health Tips",
     date: "March 7, 2026",
-    iso: "2026-03-07T07:12:49.000Z",
+    iso: "2026-03-07T08:45:19.000Z",
   },
   {
     slug: "composite-bonding-gap-teeth",
@@ -5198,16 +6359,16 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1772478244/Laser_Root_Canal_Treatment_Does_Advanced_Technology_Justify_the_Price_Tag_ss7v73.jpg",
     category: "General Dentistry",
     date: "March 4, 2026",
-    iso: "2026-03-04T07:12:49.000Z",
+    iso: "2026-03-04T08:45:19.000Z",
   },
   {
     slug: "does-every-root-canal-need-a-crown",
     title: "Does Every Root Canal Need a Crown?",
-    excerpt: "After a root canal, some teeth need crowns â€” but not all. This guide explains when a crown is usually recommended, when a filling may be suitable, and how dentists decide what's best for each tooth.",
+    excerpt: "After a root canal, some teeth need crowns — but not all. This guide explains when a crown is usually recommended, when a filling may be suitable, and how dentists decide what's best for each tooth.",
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1772478244/Does_Every_Root_Canal_Need_a_Crown_rltwpb.jpg",
     category: "General Dentistry",
     date: "March 4, 2026",
-    iso: "2026-03-04T07:12:49.000Z",
+    iso: "2026-03-04T08:45:19.000Z",
   },
   {
     slug: "dental-finance-root-canal",
@@ -5216,12 +6377,12 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     image: "https://res.cloudinary.com/dzsbm6dxa/image/upload/v1772478244/0_Dental_Finance_for_Root_Canals_How_to_Spread_the_Cost_of_Your_Treatment_ylcg6b.jpg",
     category: "General Dentistry",
     date: "March 4, 2026",
-    iso: "2026-03-04T07:12:49.000Z",
+    iso: "2026-03-04T08:45:19.000Z",
   },
   {
     slug: "when-to-see-emergency-dentist-signs",
-    title: "When to See an Emergency Dentist â€” Signs You Shouldn't Ignore",
-    excerpt: "Dental pain isn't always an emergency â€” but some symptoms shouldn't be ignored. This guide explains when to see an emergency dentist and how urgent dental care is assessed.",
+    title: "When to See an Emergency Dentist — Signs You Shouldn't Ignore",
+    excerpt: "Dental pain isn't always an emergency — but some symptoms shouldn't be ignored. This guide explains when to see an emergency dentist and how urgent dental care is assessed.",
     image: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1772223010/7-signs-emergency-dentist-south-kensington_gbw1u1.jpg",
     category: "General Dentistry",
     date: "March 3, 2026",
@@ -5239,7 +6400,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
   {
     slug: "gum-health-longevity-dental-work",
     title: "How Gum Health Influences the Longevity of Dental Work",
-    excerpt: "Dental work doesn't exist in isolation â€” it relies on healthy gums for support. This guide explains how gum health affects the longevity of fillings, crowns, veneers, and implants, and what patients can do to protect their investment.",
+    excerpt: "Dental work doesn't exist in isolation — it relies on healthy gums for support. This guide explains how gum health affects the longevity of fillings, crowns, veneers, and implants, and what patients can do to protect their investment.",
     image: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1772222980/gum-health-and-longevity-connection_gezcaf.jpg",
     category: "Dental Health Tips",
     date: "March 3, 2026",
@@ -5247,7 +6408,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: "smile-makeover-costs-london",
-    title: "Smile Makeover Costs in London â€” What You're Really Paying For",
+    title: "Smile Makeover Costs in London — What You're Really Paying For",
     excerpt: "Smile makeover costs can vary widely depending on the treatments involved. This transparent guide explains what affects pricing, how plans are built, and how patients can budget realistically.",
     image: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1772222926/smile-makeover-cost-london-transparent-guide_dutm0d.jpg",
     category: "Cosmetic Dentistry",
@@ -5256,7 +6417,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: "mini-smile-makeover-busy-professionals",
-    title: "Mini Smile Makeover for Busy Professionals â€” What Does It Involve?",
+    title: "Mini Smile Makeover for Busy Professionals — What Does It Involve?",
     excerpt: "A mini smile makeover focuses on subtle, conservative dental improvements rather than dramatic changes. This guide explains what's involved, who it may suit, and how busy professionals plan treatment realistically.",
     image: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1772222952/mini-smile-makeover-south-kensington-professionals_lxc6uv.jpg",
     category: "Cosmetic Dentistry",
@@ -5301,7 +6462,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: "is-composite-bonding-worth-it-london",
-    title: "Is Composite Bonding Worth It? A Costâ€“Benefit Breakdown for London Patients",
+    title: "Is Composite Bonding Worth It? A Cost–Benefit Breakdown for London Patients",
     excerpt: "Composite bonding is often seen as a quick cosmetic solution, but is it good value long term? This guide breaks down costs, maintenance, and realistic outcomes to help London patients decide.",
     image: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1772222958/is-composite-bonding-worth-it-london-cost-benefit_drafzy.jpg",
     category: "Cosmetic Dentistry",
@@ -5311,7 +6472,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
   {
     slug: "signs-you-need-a-root-canal",
     title: "Signs You May Need a Root Canal: Symptoms to Take Seriously",
-    excerpt: "Persistent tooth pain and sensitivity shouldn't be ignored. This guide explains common symptoms that may indicate a root canal is needed â€” and why early dental assessment matters.",
+    excerpt: "Persistent tooth pain and sensitivity shouldn't be ignored. This guide explains common symptoms that may indicate a root canal is needed — and why early dental assessment matters.",
     image: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1772200837/Signs_You_Need_a_Root_Canal_Symptoms_You_Shouldn_t_Ignore_s1jbsp.jpg",
     category: "General Dentistry",
     date: "March 2, 2026",
@@ -5347,7 +6508,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
   {
     slug: "is-root-canal-treatment-painful",
     title: "Is Root Canal Treatment Painful? Myths vs Reality",
-    excerpt: "Root canal treatment has a reputation for being painful â€” but modern dentistry tells a different story. This guide explains what patients typically feel during and after treatment, and how myths compare to reality.",
+    excerpt: "Root canal treatment has a reputation for being painful — but modern dentistry tells a different story. This guide explains what patients typically feel during and after treatment, and how myths compare to reality.",
     image: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1772200804/Is_Root_Canal_Treatment_Painful_Myths_vs_Reality_y9tf25.jpg",
     category: "General Dentistry",
     date: "March 1, 2026",
@@ -5374,7 +6535,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
   {
     slug: "dental-implants-for-smokers",
     title: "Dental Implants and Smoking: Understanding Risks, Outcomes, and Expectations",
-    excerpt: "Smoking can affect healing and long-term implant success â€” but it doesn't automatically rule implants out. This guide explains the risks, what success rates really mean, and why careful planning matters.",
+    excerpt: "Smoking can affect healing and long-term implant success — but it doesn't automatically rule implants out. This guide explains the risks, what success rates really mean, and why careful planning matters.",
     image: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1772200774/Dental_Implants_for_Smokers_Risks_Success_Rates_didvn8.jpg",
     category: "General Dentistry",
     date: "March 1, 2026",
@@ -5427,8 +6588,8 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: "how-long-do-dental-implants-last",
-    title: "How Long Do Dental Implants Last? 10â€“20 Year Success Rates Explained",
-    excerpt: "Dental implants are often described as a long-term solution â€” but what does that really mean? This guide explains how long implants typically last, what 10â€“20 year success rates represent, and which factors influence longevity over time.",
+    title: "How Long Do Dental Implants Last? 10–20 Year Success Rates Explained",
+    excerpt: "Dental implants are often described as a long-term solution — but what does that really mean? This guide explains how long implants typically last, what 10–20 year success rates represent, and which factors influence longevity over time.",
     image: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1772200780/How_Long_Do_Dental_Implants_Last_10_20_Year_Success_Rates_Explained_lesxig.jpg",
     category: "General Dentistry",
     date: "February 28, 2026",
@@ -5437,7 +6598,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
   {
     slug: "are-dental-implants-painful-what-to-expect",
     title: "Are Dental Implants Painful? What to Expect During and After Surgery",
-    excerpt: "Dental implants often sound intimidating, especially when it comes to pain. This guide explains what patients typically feel during implant placement, what recovery is like, and how discomfort is usually managed â€” helping set realistic expectations without fear.",
+    excerpt: "Dental implants often sound intimidating, especially when it comes to pain. This guide explains what patients typically feel during implant placement, what recovery is like, and how discomfort is usually managed — helping set realistic expectations without fear.",
     image: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1772200955/What_Is_the_Dental_Implant_Process_Step_by_Step_mpdyzz.jpg",
     category: "General Dentistry",
     date: "February 28, 2026",
@@ -5446,7 +6607,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
   {
     slug: "are-teeth-whitening-results-permanent",
     title: "Do Teeth Whitening Results Last Forever? What You Should Know",
-    excerpt: "Teeth whitening can noticeably brighten your smile â€” but are the results permanent? This guide explains how whitening works, why colour can gradually change, and what realistic long-term maintenance looks like.",
+    excerpt: "Teeth whitening can noticeably brighten your smile — but are the results permanent? This guide explains how whitening works, why colour can gradually change, and what realistic long-term maintenance looks like.",
     image: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1772113630/Do_Teeth_Whitening_Results_Last_Forever_What_You_Should_Know_hd5epf.jpg",
     category: "Cosmetic Dentistry",
     date: "February 26, 2026",
@@ -5455,7 +6616,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
   {
     slug: "missed-day-whitening-trays-progress",
     title: "Missed a Whitening Session? What Skipping a Day Really Means for Results",
-    excerpt: "Life happens â€” and whitening routines aren't always perfect. This guide explains what typically happens if you miss a day of whitening trays, whether progress is lost, and how to continue safely without overdoing it.",
+    excerpt: "Life happens — and whitening routines aren't always perfect. This guide explains what typically happens if you miss a day of whitening trays, whether progress is lost, and how to continue safely without overdoing it.",
     image: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1772113631/Missed_a_Whitening_Session_What_Skipping_a_Day_Really_Means_for_Results_zvt6zb.jpg",
     category: "Cosmetic Dentistry",
     date: "February 26, 2026",
@@ -5464,7 +6625,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
   {
     slug: "teeth-whitening-with-receding-gums",
     title: "Teeth Whitening and Receding Gums: Is It Safe and What Should You Know?",
-    excerpt: "Gum recession can make teeth more sensitive â€” which raises questions about whitening safety. This guide explains whether teeth whitening may be suitable if you have receding gums, what risks to be aware of, and why professional guidance is important.",
+    excerpt: "Gum recession can make teeth more sensitive — which raises questions about whitening safety. This guide explains whether teeth whitening may be suitable if you have receding gums, what risks to be aware of, and why professional guidance is important.",
     image: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1772113635/Teeth_Whitening_and_Receding_Gums_Is_It_Safe_and_What_Should_You_Know_ecjnhp.jpg",
     category: "Cosmetic Dentistry",
     date: "February 26, 2026",
@@ -5482,7 +6643,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
   {
     slug: "coffee-after-teeth-whitening",
     title: "Drinking Coffee After Teeth Whitening: What Patients Should Know",
-    excerpt: "Coffee is part of daily life for many people â€” but it's also a common cause of staining. This guide explains whether you can drink coffee after teeth whitening, how it may affect results, and what realistic aftercare looks like.",
+    excerpt: "Coffee is part of daily life for many people — but it's also a common cause of staining. This guide explains whether you can drink coffee after teeth whitening, how it may affect results, and what realistic aftercare looks like.",
     image: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1772113630/Drinking_Coffee_After_Teeth_Whitening_What_Patients_Should_Know_rqaxqg.jpg",
     category: "Cosmetic Dentistry",
     date: "February 26, 2026",
@@ -5500,7 +6661,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
   {
     slug: "early-tooth-decay-small-cavities-white-fillings",
     title: "Early Tooth Decay: Why Small Cavities Should Not Be Ignored",
-    excerpt: "Small cavities can be easy to overlook â€” especially if they are not painful. This guide explains what early tooth decay looks like, why even minor cavities matter, and when a small white filling may be advised to protect the tooth.",
+    excerpt: "Small cavities can be easy to overlook — especially if they are not painful. This guide explains what early tooth decay looks like, why even minor cavities matter, and when a small white filling may be advised to protect the tooth.",
     image: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1772028923/Early_Tooth_Decay_Why_Small_Cavities_Shouldn_t_Be_Ignored_k0rgrr.jpg",
     category: "Dental Health Tips",
     date: "February 25, 2026",
@@ -5527,7 +6688,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
   {
     slug: "white-fillings-vs-bonding-vs-veneers-guide",
     title: "White Fillings, Bonding or Veneers: How to Choose the Right Option for Your Smile",
-    excerpt: "When improving damaged or uneven teeth, different treatments can achieve very different results. This guide explains the differences between white fillings, composite bonding, and veneers â€” helping London patients understand which option may suit their teeth and goals.",
+    excerpt: "When improving damaged or uneven teeth, different treatments can achieve very different results. This guide explains the differences between white fillings, composite bonding, and veneers — helping London patients understand which option may suit their teeth and goals.",
     image: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1772028925/White_Fillings_Bonding_or_Veneers_How_to_Choose_the_Right_Option_for_Your_Smile_zreol7.jpg",
     category: "Cosmetic Dentistry",
     date: "February 25, 2026",
@@ -5544,7 +6705,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: "how-long-do-composite-bonding-and-porcelain-veneers-last",
-    title: "How Long Do Composite Bonding and Porcelain Veneers Actually Last â€“ and What Shortens Their Lifespan?",
+    title: "How Long Do Composite Bonding and Porcelain Veneers Actually Last – and What Shortens Their Lifespan?",
     excerpt: "How long does composite bonding or porcelain veneers last? Learn typical lifespan ranges, the everyday habits that shorten them, and how to protect your cosmetic dental work.",
     image: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1771940880/How_Long_Do_Composite_Bonding_and_Porcelain_Veneers_Actually_Last_and_What_Shortens_Their_Lifespan_w5ul9r.jpg",
     category: "Cosmetic Dentistry",
@@ -5563,7 +6724,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
   {
     slug: "5-ways-composite-bonding-can-improve-your-smile",
     title: "5 Ways Composite Bonding Can Improve Your Smile",
-    excerpt: "Discover five practical, everyday ways composite bonding can enhance your smile â€” from repairing chips to closing small gaps â€” and learn when alternatives may be more appropriate.",
+    excerpt: "Discover five practical, everyday ways composite bonding can enhance your smile — from repairing chips to closing small gaps — and learn when alternatives may be more appropriate.",
     image: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1771940870/5_ways_composite_bonding_can_help_2_drdyjh.jpg",
     category: "Cosmetic Dentistry",
     date: "February 24, 2026",
@@ -5608,7 +6769,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
   {
     slug: "teeth-whitening-aftercare-keeping-smile-bright-london",
     title: "Teeth Whitening Aftercare: Keeping Your Smile Bright in London",
-    excerpt: "Practical aftercare tips for teeth whitening â€” from what to eat and drink in the first 48 hours to long-term habits, sensitivity management and when to consider top-ups.",
+    excerpt: "Practical aftercare tips for teeth whitening — from what to eat and drink in the first 48 hours to long-term habits, sensitivity management and when to consider top-ups.",
     image: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1765805811/teeth-whitening-hoome_xo3s4a.jpg",
     category: "Cosmetic Dentistry",
     date: "February 24, 2026",
@@ -5626,7 +6787,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
   {
     slug: "best-denture-options-london-clinics-patient-guide",
     title: "Best Denture Options Used in London Clinics: A Patient Guide",
-    excerpt: "A clear guide to the types of dentures commonly used in London clinics â€“ including full, partial, flexible and implant retained options â€“ to help you understand what might suit your needs.",
+    excerpt: "A clear guide to the types of dentures commonly used in London clinics – including full, partial, flexible and implant retained options – to help you understand what might suit your needs.",
     image: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1771837151/Best_Denture_Options_Used_in_London_Clinics_A_Patient_Guide_1_ta3r0c.jpg",
     category: "General Dentistry",
     date: "February 23, 2026",
@@ -5635,7 +6796,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
   {
     slug: "bleach-then-bond-blueprint-natural-looking-mini-smile-makeover",
     title: "Bleach Then Bond: The Blueprint for a Natural-Looking Mini Smile Makeover",
-    excerpt: "Many patients consider composite bonding to improve chips, edges, or uneven teeth â€” but don't realise that the order of treatment matters. This guide explains why professional teeth whitening is usually recommended before bonding, how shade matching works, and how a bleach then bond approach can support a more natural-looking result.",
+    excerpt: "Many patients consider composite bonding to improve chips, edges, or uneven teeth — but don't realise that the order of treatment matters. This guide explains why professional teeth whitening is usually recommended before bonding, how shade matching works, and how a bleach then bond approach can support a more natural-looking result.",
     image: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1771483697/The-Blueprint-for_a-Natural-Looking_Mini_Smile-Makeover_di47hk.jpg",
     category: "Cosmetic Dentistry",
     date: "February 19, 2026",
@@ -5653,7 +6814,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
   {
     slug: "minimal-smile-makeover-align-bleach-bond",
     title: "The \"Minimal Smile Makeover\": Why Alignment Is Just the First Step",
-    excerpt: "Many people assume straight teeth alone complete a smile enhancement. However, once alignment improves, minor chips, uneven edges, or subtle shade differences can become more noticeable. This guide explains the conservative \"Align, Bleach, and Bond\" workflow â€” how Pro Aligners, professional whitening, and composite bonding can complement each other when clinically appropriate.",
+    excerpt: "Many people assume straight teeth alone complete a smile enhancement. However, once alignment improves, minor chips, uneven edges, or subtle shade differences can become more noticeable. This guide explains the conservative \"Align, Bleach, and Bond\" workflow — how Pro Aligners, professional whitening, and composite bonding can complement each other when clinically appropriate.",
     image: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1771054639/The_Minimal_Smile_Makeover_Why_Alignment_Is_Just_the_First_Step_osjybj.jpg",
     category: "Cosmetic Dentistry",
     date: "February 14, 2026",
@@ -5662,7 +6823,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
   {
     slug: "ultimate-guide-emergency-dental-care-london",
     title: "The Ultimate Guide to Emergency Dental Care in London: Costs, Treatments, and What to Do Right Now",
-    excerpt: "When sudden dental pain or injury strikes, most people don't have time to search multiple websitesâ€”they need clear, reliable answers immediately. This comprehensive London-focused guide explains what qualifies as a dental emergency, what steps to take if you're in pain, common emergency dental treatments, and how costs are usually structured.",
+    excerpt: "When sudden dental pain or injury strikes, most people don't have time to search multiple websites—they need clear, reliable answers immediately. This comprehensive London-focused guide explains what qualifies as a dental emergency, what steps to take if you're in pain, common emergency dental treatments, and how costs are usually structured.",
     image: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1770385905/The_Ultimate_Guide_to_Emergency_Dental_Care_in_London_Costs_Treatments_and_What_to_Do_Right_Now_xd1z8b.jpg",
     category: "General Dentistry",
     date: "February 6, 2026",
@@ -5689,7 +6850,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
   {
     slug: "composite-bonding-explained",
     title: "Composite Bonding Explained: Types, Benefits, Process, and Aftercare",
-    excerpt: "Discover everything you need to know about composite bondingâ€”from how it works and who it's suitable for, to the different types available and essential aftercare advice.",
+    excerpt: "Discover everything you need to know about composite bonding—from how it works and who it's suitable for, to the different types available and essential aftercare advice.",
     image: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1768390078/composite-bonding-explained_dhjglt.webp",
     category: "Cosmetic Dentistry",
     date: "January 15, 2026",
@@ -5698,7 +6859,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
   {
     slug: "complete-guide-to-root-canal-treatment",
     title: "Complete Guide to Root Canal Treatment: What to Expect, Benefits, and Myths Explained",
-    excerpt: "Everything you need to know about root canal treatmentâ€”from understanding what it involves and why it's recommended, to debunking common myths and knowing what to expect during recovery.",
+    excerpt: "Everything you need to know about root canal treatment—from understanding what it involves and why it's recommended, to debunking common myths and knowing what to expect during recovery.",
     image: "https://res.cloudinary.com/da1zmp1ib/image/upload/v1768221468/complete-guide-to-root-canal-treatment_v0ghai.webp",
     category: "General Dentistry",
     date: "January 12, 2026",
