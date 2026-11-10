@@ -16,7 +16,7 @@ const POPULAR = [
   { label: "Smile Makeover", href: "/smile-makeover-london" },
 ];
 
-const HEADLINE = ["Fall in Love", "With Your", "Smile Again"];
+const HEADLINE = ["Smile Dentist:", "The New Standard for", "Cosmetic Dentistry"];
 const HEADLINE_GOLD = new Set([2]);
 
 function HeadlineLines({ lines, gold }: { lines: string[]; gold: Set<number> }) {
@@ -55,7 +55,7 @@ export default function Hero() {
               <span className="h-px w-5 bg-gold sm:hidden" aria-hidden />
             </motion.p>
 
-            <h1 className="display-xl mt-6 text-[2.15rem] min-[375px]:text-[2.5rem] sm:text-6xl lg:text-[3.9rem] xl:text-[4.5rem] 2xl:text-[5.6rem] lg:leading-[0.98]">
+            <h1 className="display-xl mt-6 text-[2.15rem] min-[375px]:text-[2.5rem] sm:text-6xl lg:text-[2.3rem] xl:text-[2.75rem] 2xl:text-[3.5rem] lg:leading-[1.02]">
               <HeadlineLines lines={HEADLINE} gold={HEADLINE_GOLD} />
             </h1>
 

@@ -11,8 +11,6 @@ import JsonLd from "@/components/JsonLd";
 import MobileActionBar from "@/components/MobileActionBar";
 import { THEME_INIT_SCRIPT } from "@/lib/theme";
 import {
-  OG_IMAGE,
-  OG_LOCALE,
   PAGE_SEO,
   SEO_KEYWORDS,
   SITE_JSONLD,
@@ -44,18 +42,11 @@ export const metadata: Metadata = {
   },
   description: home.description,
   keywords: SEO_KEYWORDS,
-  robots: { index: true, follow: true },
+  authors: [{ name: SITE_NAME }],
+  creator: SITE_NAME,
+  publisher: SITE_NAME,
+  formatDetection: { telephone: false, address: false, email: false },
   manifest: "/manifest.webmanifest",
-  openGraph: {
-    siteName: SITE_NAME,
-    locale: OG_LOCALE,
-    type: "website",
-    images: [OG_IMAGE],
-  },
-  twitter: {
-    card: "summary_large_image",
-    images: [OG_IMAGE],
-  },
 };
 
 export const viewport: Viewport = {

@@ -735,7 +735,7 @@ export const PAGE_JSONLD: Record<string, unknown[]> = {
           "name": "How much does a dental check-up cost in South Kensington?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A comprehensive dental examination costs £95 for non-members, or just £47.50 for members. This includes a full assessment of your teeth, gums, and oral health, plus oral cancer screening. X-rays are £20 each (£10 for members)."
+            "text": "A comprehensive dental examination costs £95 for non-members, or just £47.50 for members. This includes a full assessment of your teeth, gums, and oral health, plus oral cancer screening. Each X-ray is £20 (£10 for members)."
           }
         },
         {
@@ -12616,16 +12616,35 @@ export function canonicalUrl(path: string): string {
   return path === "/" ? SITE_URL : `${SITE_URL}${path}`;
 }
 
+/** Live serves these pages with only title/description/keywords (no robots, canonical or social tags). */
+const BARE_META_PATHS = new Set(["/complaints", "/membership-terms", "/privacy-policy", "/terms"]);
+
+export const GOOGLEBOT_INDEX = {
+  index: true,
+  follow: true,
+  "max-video-preview": -1,
+  "max-image-preview": "large",
+  "max-snippet": -1,
+} as const;
+
+export function ogImage(alt: string) {
+  return { url: OG_IMAGE, width: 1200, height: 630, alt };
+}
+
 export function buildMetadata(path: string, seo: PageSeo): Metadata {
   const url = canonicalUrl(path);
   const absoluteTitle = path === "/" ? seo.title : seo.title + TITLE_SUFFIX;
-  return {
+  const base: Metadata = {
     title: { absolute: absoluteTitle },
     description: seo.description,
     keywords: seo.keywords ?? SEO_KEYWORDS,
+  };
+  if (BARE_META_PATHS.has(path)) return base;
+  return {
+    ...base,
     robots: seo.noindex
       ? { index: false, follow: false }
-      : { index: true, follow: true },
+      : { index: true, follow: true, googleBot: GOOGLEBOT_INDEX },
     alternates: { canonical: url },
     openGraph: {
       title: { absolute: seo.title },
@@ -12634,7 +12653,7 @@ export function buildMetadata(path: string, seo: PageSeo): Metadata {
       siteName: SITE_NAME,
       locale: OG_LOCALE,
       type: "website",
-      images: [OG_IMAGE],
+      images: [ogImage(seo.title)],
     },
     twitter: {
       card: "summary_large_image",

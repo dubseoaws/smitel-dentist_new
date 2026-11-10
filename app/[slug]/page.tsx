@@ -191,7 +191,8 @@ function ClinicDetail({ slug }: { slug: string }) {
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <p className="eyebrow mb-3">Our Clinics</p>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl tracking-tight">
-            {clinic.name} Clinic
+            Dentist in {clinic.name === "City of London" ? "the " : ""}
+            {clinic.name}
           </h1>
           <p className="mt-5 max-w-2xl text-ink-soft leading-relaxed">
             {clinic.address.join(", ")} — {clinic.proximity}.

@@ -6,7 +6,7 @@ export default function FaqSection({
   items,
   eyebrow = "Common Questions",
   heading = "Frequently asked questions",
-  jsonLd = true,
+  jsonLd = false,
   className = "border-y border-ink/10",
 }: {
   items: FaqItem[];
