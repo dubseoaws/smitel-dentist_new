@@ -786,8 +786,8 @@ function PriceValue({ price }: { price: string }) {
 
 function HeroPrice({ standard }: { standard: string }) {
   return (
-    <div className="fade-up fade-up-2 max-sm:hidden flex w-fit max-w-full flex-col justify-center gap-2.5 border border-gold/50 bg-gradient-to-br from-gold/15 via-gold/5 to-transparent px-6 py-4 shadow-[0_18px_40px_-24px_rgba(185,140,85,0.6)] lg:px-7 lg:py-5">
-      <span className="font-label text-[10px] font-bold tracking-[0.24em] uppercase text-gold-bright">
+    <div className="fade-up fade-up-2 max-sm:hidden flex w-fit max-w-full flex-row flex-nowrap items-center gap-5 whitespace-nowrap border border-gold/50 bg-gradient-to-br from-gold/15 via-gold/5 to-transparent px-6 py-4 shadow-[0_18px_40px_-24px_rgba(185,140,85,0.6)] lg:px-7 lg:py-5">
+      <span className="border-r border-gold/30 pr-5 font-label text-[10px] font-bold tracking-[0.24em] uppercase text-gold-bright">
         Standard price
       </span>
       <PriceValue price={standard} />
